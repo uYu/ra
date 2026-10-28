@@ -1,0 +1,1061 @@
+{
+  "createdAt": "2026-10-28T01:36:39.316Z",
+  "method": "Within each player count, turn and auction CPU samples are pooled. Categories are disjoint nearest-recognized-frame estimates; inclusive functions overlap. Allocator owners are inferred from sampled caller stacks and cannot fully identify optimized inlined ownership.",
+  "limitations": "Representative deterministic public positions; not a tournament-frequency-weighted average. Concurrent tournament and unavailable priority reduction prevent isolated latency claims. Timed sampling reduces available simulation throughput; no speedup or playing-strength claim.",
+  "results": [
+    {
+      "directory": "artifacts/ai-perf-20261028",
+      "mode": "fixed",
+      "timeMs": null,
+      "positions": 24,
+      "samplesPerRoot": 128,
+      "repeats": 3,
+      "totalSamples": 41197,
+      "wasmSelfPercent": 99.76940068451586,
+      "verified": {
+        "identicalExecutableSections": true,
+        "identicalFixedBudgetReports": true,
+        "protectedSourcesUnchanged": true
+      },
+      "byCount": [
+        {
+          "count": 2,
+          "samples": 4060,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 33.12807881773399
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 28.76847290640394
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 10.689655172413794
+            },
+            {
+              "name": "state-copy",
+              "percent": 7.832512315270936
+            },
+            {
+              "name": "auction-plan",
+              "percent": 7.1182266009852215
+            },
+            {
+              "name": "other-wasm",
+              "percent": 5.394088669950739
+            },
+            {
+              "name": "other-policy",
+              "percent": 4.9507389162561575
+            },
+            {
+              "name": "rules",
+              "percent": 1.3300492610837438
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.7881773399014779
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 60.22167487684729
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 36.55172413793103
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 19.16256157635468
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 12.51231527093596
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 10.41871921182266
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 9.950738916256158
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "positionValues(State const&)",
+              "percent": 15.812807881773399
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 9.753694581280788
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 9.704433497536947
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 9.187192118226601
+            },
+            {
+              "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+              "percent": 6.280788177339901
+            },
+            {
+              "name": "exp",
+              "percent": 5.221674876847291
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 5.147783251231527
+            },
+            {
+              "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+              "percent": 4.753694581280788
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 4.679802955665025
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 4.236453201970443
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 3.9901477832512313
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 3.3251231527093594
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "samples": 9564,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 36.67921371810958
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 33.69928900041823
+            },
+            {
+              "name": "state-copy",
+              "percent": 9.859891258887496
+            },
+            {
+              "name": "auction-plan",
+              "percent": 8.814303638644919
+            },
+            {
+              "name": "other-policy",
+              "percent": 3.5968214136344625
+            },
+            {
+              "name": "other-wasm",
+              "percent": 3.3877038895859473
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 2.6557925554161437
+            },
+            {
+              "name": "rules",
+              "percent": 1.0351317440401506
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.27185278126306983
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 72.96110414052697
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 40.171476369719784
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 24.320368046842326
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 15.976578837306567
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 15.96612296110414
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 2.4884985361773317
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "positionValues(State const&)",
+              "percent": 13.184859891258888
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 12.400669176076955
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 10.853199498117942
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 10.68590547887913
+            },
+            {
+              "name": "exp",
+              "percent": 7.956921790046006
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 6.36762860727729
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 6.064408197406943
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 5.959849435382685
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 4.130071099958177
+            },
+            {
+              "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+              "percent": 3.8686741948975323
+            },
+            {
+              "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+              "percent": 3.795483061480552
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 3.481806775407779
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "samples": 10965,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 39.41632466940264
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 31.345189238486093
+            },
+            {
+              "name": "auction-plan",
+              "percent": 9.284085727314181
+            },
+            {
+              "name": "state-copy",
+              "percent": 9.15640674874601
+            },
+            {
+              "name": "other-wasm",
+              "percent": 3.5294117647058822
+            },
+            {
+              "name": "other-policy",
+              "percent": 3.429092567259462
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 2.85453716370269
+            },
+            {
+              "name": "rules",
+              "percent": 0.8299133606931145
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.15503875968992248
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 74.49156406748746
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 42.59005927952576
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 22.252621979024166
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 17.209302325581394
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 15.175558595531236
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 2.735978112175103
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "positionValues(State const&)",
+              "percent": 13.15093479252166
+            },
+            {
+              "name": "exp",
+              "percent": 12.895576835385317
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 11.41814865481076
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 10.269037847697218
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 9.813041495668035
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 6.155950752393981
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 5.873233014135887
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 4.7697218422252625
+            },
+            {
+              "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+              "percent": 4.277245782033744
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 4.149566803465572
+            },
+            {
+              "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+              "percent": 3.684450524395805
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 2.7998176014591882
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "samples": 16608,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 43.52119460500963
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 30.485308285163775
+            },
+            {
+              "name": "auction-plan",
+              "percent": 9.218448940269749
+            },
+            {
+              "name": "state-copy",
+              "percent": 8.152697495183045
+            },
+            {
+              "name": "other-policy",
+              "percent": 3.2333815028901736
+            },
+            {
+              "name": "other-wasm",
+              "percent": 2.8841522157996144
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 1.6799132947976878
+            },
+            {
+              "name": "rules",
+              "percent": 0.7044797687861272
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.12042389210019268
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 80.47326589595376
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 46.39932562620424
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 20.88150289017341
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 18.798169556840076
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 15.46242774566474
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 1.4751926782273603
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "exp",
+              "percent": 17.654142581888248
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 11.175337186897881
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 10.591281310211945
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 9.8747591522158
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 9.621868978805395
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 6.526974951830443
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 6.424614643545279
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 5.870664739884393
+            },
+            {
+              "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+              "percent": 5.27456647398844
+            },
+            {
+              "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+              "percent": 3.4561657032755297
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 2.8058766859344892
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 2.1013969171483624
+            }
+          ]
+        }
+      ],
+      "allocatorAndMemorySelfPercent": 31.61637983348302,
+      "memoryOwners": [
+        {
+          "name": "state-copy-or-destruction",
+          "percentOfAllSamples": 15.913780129621088,
+          "percentOfMemorySamples": 50.33397312859885
+        },
+        {
+          "name": "auction-plan-or-inlined-temporaries",
+          "percentOfAllSamples": 7.568512270310945,
+          "percentOfMemorySamples": 23.938579654510555
+        },
+        {
+          "name": "evaluation",
+          "percentOfAllSamples": 3.4905454280651504,
+          "percentOfMemorySamples": 11.040307101727446
+        },
+        {
+          "name": "other-policy",
+          "percentOfAllSamples": 2.140932592179042,
+          "percentOfMemorySamples": 6.771593090211132
+        },
+        {
+          "name": "tree-or-other-inlined-caller",
+          "percentOfAllSamples": 1.8350850790106075,
+          "percentOfMemorySamples": 5.8042226487524
+        },
+        {
+          "name": "rules",
+          "percentOfAllSamples": 0.6238318324149816,
+          "percentOfMemorySamples": 1.9731285988483684
+        },
+        {
+          "name": "observation-and-keys",
+          "percentOfAllSamples": 0.043692501881204944,
+          "percentOfMemorySamples": 0.1381957773512476
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/ai-perf-20261028-2s",
+      "mode": "time",
+      "timeMs": 2000,
+      "positions": 24,
+      "samplesPerRoot": 128,
+      "repeats": 1,
+      "totalSamples": 142163,
+      "wasmSelfPercent": 99.6285953447803,
+      "verified": {
+        "identicalExecutableSections": true,
+        "identicalFixedBudgetReports": true,
+        "protectedSourcesUnchanged": true
+      },
+      "byCount": [
+        {
+          "count": 2,
+          "samples": 20393,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 30.66248222429265
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 27.62712695532781
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 13.337910067179914
+            },
+            {
+              "name": "other-wasm",
+              "percent": 7.585936350708576
+            },
+            {
+              "name": "state-copy",
+              "percent": 7.301525033099593
+            },
+            {
+              "name": "auction-plan",
+              "percent": 6.54146030500662
+            },
+            {
+              "name": "other-policy",
+              "percent": 4.923257980679645
+            },
+            {
+              "name": "rules",
+              "percent": 1.1425489138429854
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.8777521698622076
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 55.0335899573383
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 33.90379051635365
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 18.241553474231353
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 12.999558672093366
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 11.459814642279213
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 10.15054185259648
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "positionValues(State const&)",
+              "percent": 15.289560143186387
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 9.650370225077232
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 9.194331388221448
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 8.762810768400922
+            },
+            {
+              "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+              "percent": 8.017456970529103
+            },
+            {
+              "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+              "percent": 6.036385034080322
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 4.609424802628353
+            },
+            {
+              "name": "exp",
+              "percent": 4.285784337762958
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 4.197518756436032
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 4.104349531702055
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 3.829745500907174
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 2.947089687637915
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "samples": 34193,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 34.4748925218612
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 34.150264674056096
+            },
+            {
+              "name": "state-copy",
+              "percent": 9.715438832509578
+            },
+            {
+              "name": "auction-plan",
+              "percent": 9.07495686251572
+            },
+            {
+              "name": "other-wasm",
+              "percent": 4.240634047904542
+            },
+            {
+              "name": "other-policy",
+              "percent": 3.6849647588687744
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 3.217032725996549
+            },
+            {
+              "name": "rules",
+              "percent": 0.9680343930044161
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.4737811832831281
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 71.04963004123651
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 37.437487204983476
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 24.84426637030971
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 16.246015266282573
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 13.148890123709531
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 3.07372854092943
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "attempt_allocate",
+              "percent": 12.27444213727956
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 12.008305793583482
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 11.078290878249934
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 10.867721463457432
+            },
+            {
+              "name": "exp",
+              "percent": 8.109847044716755
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 7.112566899657825
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 6.229345187611499
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 4.802152487351212
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 4.21723744626093
+            },
+            {
+              "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+              "percent": 4.006668031468429
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 3.1994852747638407
+            },
+            {
+              "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+              "percent": 2.965519258327728
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "samples": 43787,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 38.365268230296664
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 31.376892685043504
+            },
+            {
+              "name": "state-copy",
+              "percent": 9.500536688971613
+            },
+            {
+              "name": "auction-plan",
+              "percent": 8.137118322789869
+            },
+            {
+              "name": "other-wasm",
+              "percent": 4.334619864343298
+            },
+            {
+              "name": "other-policy",
+              "percent": 3.7431201041404982
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 3.382282412588211
+            },
+            {
+              "name": "rules",
+              "percent": 0.8975266631648663
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.26263502866147487
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 72.43474090483477
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 40.7609564482609
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 23.47500399662
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 16.176033982688924
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 13.789480896156393
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 3.2658094868339917
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "exp",
+              "percent": 12.704684038641606
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 12.652157032909312
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 11.307008929590975
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 10.169685066343892
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 10.028090529152488
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 6.344348779318063
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 6.248429899285176
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 4.9603763674149866
+            },
+            {
+              "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+              "percent": 3.733984972708795
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 3.5444309955009476
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 2.861579920981113
+            },
+            {
+              "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+              "percent": 2.811336698106744
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "samples": 43790,
+          "categories": [
+            {
+              "name": "evaluation",
+              "percent": 42.38867321306234
+            },
+            {
+              "name": "allocation-and-memory",
+              "percent": 30.60744462205983
+            },
+            {
+              "name": "auction-plan",
+              "percent": 9.056862297328157
+            },
+            {
+              "name": "state-copy",
+              "percent": 8.43799954327472
+            },
+            {
+              "name": "other-policy",
+              "percent": 3.6332496003653802
+            },
+            {
+              "name": "other-wasm",
+              "percent": 3.4619776204612926
+            },
+            {
+              "name": "observation-and-keys",
+              "percent": 1.5140443023521353
+            },
+            {
+              "name": "rules",
+              "percent": 0.7353277003882165
+            },
+            {
+              "name": "js-and-profiler",
+              "percent": 0.16442110070792418
+            }
+          ],
+          "inclusive": [
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 79.65745604019182
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 45.01255994519297
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 21.28568166248002
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 16.585978533911852
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 15.747887645581184
+            },
+            {
+              "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+              "percent": 1.3473395752454898
+            }
+          ],
+          "topSelf": [
+            {
+              "name": "exp",
+              "percent": 17.10664535282028
+            },
+            {
+              "name": "attempt_allocate",
+              "percent": 11.283398036081296
+            },
+            {
+              "name": "positionValues(State const&)",
+              "percent": 10.408769125371089
+            },
+            {
+              "name": "emmalloc_memalign",
+              "percent": 9.876684174469057
+            },
+            {
+              "name": "emmalloc_free",
+              "percent": 9.78305549212149
+            },
+            {
+              "name": "inventory(Player const&)",
+              "percent": 7.236812057547385
+            },
+            {
+              "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+              "percent": 6.037908198218771
+            },
+            {
+              "name": "Player::Player(Player const&)",
+              "percent": 5.9305777574788765
+            },
+            {
+              "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+              "percent": 5.181548298698333
+            },
+            {
+              "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+              "percent": 2.9732815711349625
+            },
+            {
+              "name": "auctionPlan(State const&, Model const&)",
+              "percent": 2.8111440968257595
+            },
+            {
+              "name": "State::State(State const&)",
+              "percent": 2.242521123544188
+            }
+          ]
+        }
+      ],
+      "allocatorAndMemorySelfPercent": 31.604566589056223,
+      "memoryOwners": [
+        {
+          "name": "state-copy-or-destruction",
+          "percentOfAllSamples": 16.435359411379896,
+          "percentOfMemorySamples": 52.00311595815713
+        },
+        {
+          "name": "auction-plan-or-inlined-temporaries",
+          "percentOfAllSamples": 7.15938746368605,
+          "percentOfMemorySamples": 22.653015802359224
+        },
+        {
+          "name": "evaluation",
+          "percentOfAllSamples": 3.090818286051926,
+          "percentOfMemorySamples": 9.779657244602715
+        },
+        {
+          "name": "other-policy",
+          "percentOfAllSamples": 2.280480856481644,
+          "percentOfMemorySamples": 7.215668818161585
+        },
+        {
+          "name": "tree-or-other-inlined-caller",
+          "percentOfAllSamples": 1.8380309925930094,
+          "percentOfMemorySamples": 5.815713331849544
+        },
+        {
+          "name": "rules",
+          "percentOfAllSamples": 0.7399956388089728,
+          "percentOfMemorySamples": 2.3414199866458936
+        },
+        {
+          "name": "observation-and-keys",
+          "percentOfAllSamples": 0.060493940054725914,
+          "percentOfMemorySamples": 0.19140885822390385
+        }
+      ]
+    }
+  ]
+}

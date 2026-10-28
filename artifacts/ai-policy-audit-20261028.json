@@ -1,0 +1,404 @@
+{
+  "createdAt": "2026-10-28T07:05:57.064Z",
+  "input": "artifacts/ai-version-2s-control.json",
+  "completedGames": 54,
+  "plannedGames": 84,
+  "actionsReplayed": 17732,
+  "method": "Read-only audit of completed stopped-run replays. Canonical legal actions deduplicate physical tile IDs of the same kind/variant. Compare actual MCTS choices against the balanced heuristic prior/reference; default rollouts use sampled costs/rivalry from the same policy family. No new simulations or games, no terminal confidence interval.",
+  "caveats": [
+    "Policy disagreement is evidence of model mismatch, not proof that either action is optimal.",
+    "This comparison does not estimate the predictive calibration of the entire sampled opponent-model mixture.",
+    "The 54 completed games were stopped on user request after viewing interim results; this is diagnostic data, not a completed confirmatory strength experiment.",
+    "Collapsed candidates may be equivalent under the current evaluator; exclusion alone does not establish a mistake."
+  ],
+  "groups": [
+    {
+      "side": "opponent",
+      "phase": "turn",
+      "decisions": 6584,
+      "nontrivialLegal": 6510,
+      "collapsedToOne": 0,
+      "searched": 6510,
+      "policyDisagreements": 1596,
+      "disagreementsAt75PercentVisits": 745,
+      "simulations": 79739845,
+      "nodes": 70823086,
+      "depthSum": 39310,
+      "godMoreThanThree": 82,
+      "policyDisagreementRate": 0.24516129032258063,
+      "meanMaxDepth": 6.038402457757297,
+      "nodesPerSimulation": 0.8881768706723722
+    },
+    {
+      "side": "candidate",
+      "phase": "turn",
+      "decisions": 2315,
+      "nontrivialLegal": 2288,
+      "collapsedToOne": 0,
+      "searched": 2288,
+      "policyDisagreements": 588,
+      "disagreementsAt75PercentVisits": 348,
+      "simulations": 92307009,
+      "nodes": 79495150,
+      "depthSum": 15870,
+      "godMoreThanThree": 41,
+      "policyDisagreementRate": 0.256993006993007,
+      "meanMaxDepth": 6.936188811188811,
+      "nodesPerSimulation": 0.8612038333947101
+    },
+    {
+      "side": "opponent",
+      "phase": "auction",
+      "decisions": 6293,
+      "nontrivialLegal": 5387,
+      "collapsedToOne": 0,
+      "searched": 5387,
+      "policyDisagreements": 1915,
+      "disagreementsAt75PercentVisits": 484,
+      "simulations": 41230427,
+      "nodes": 40768649,
+      "depthSum": 31030,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": 0.355485427881938,
+      "meanMaxDepth": 5.760163356227956,
+      "nodesPerSimulation": 0.9888000674841423
+    },
+    {
+      "side": "candidate",
+      "phase": "auction",
+      "decisions": 2074,
+      "nontrivialLegal": 1777,
+      "collapsedToOne": 0,
+      "searched": 1777,
+      "policyDisagreements": 667,
+      "disagreementsAt75PercentVisits": 262,
+      "simulations": 51603913,
+      "nodes": 48144972,
+      "depthSum": 11896,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": 0.37535171637591447,
+      "meanMaxDepth": 6.694428812605515,
+      "nodesPerSimulation": 0.9329713426964347
+    },
+    {
+      "side": "opponent",
+      "phase": "disaster",
+      "decisions": 180,
+      "nontrivialLegal": 56,
+      "collapsedToOne": 56,
+      "searched": 0,
+      "policyDisagreements": 0,
+      "disagreementsAt75PercentVisits": 0,
+      "simulations": 0,
+      "nodes": 0,
+      "depthSum": 0,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": null,
+      "meanMaxDepth": null,
+      "nodesPerSimulation": null
+    },
+    {
+      "side": "candidate",
+      "phase": "epoch",
+      "decisions": 33,
+      "nontrivialLegal": 0,
+      "collapsedToOne": 0,
+      "searched": 0,
+      "policyDisagreements": 0,
+      "disagreementsAt75PercentVisits": 0,
+      "simulations": 0,
+      "nodes": 0,
+      "depthSum": 0,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": null,
+      "meanMaxDepth": null,
+      "nodesPerSimulation": null
+    },
+    {
+      "side": "candidate",
+      "phase": "disaster",
+      "decisions": 83,
+      "nontrivialLegal": 24,
+      "collapsedToOne": 24,
+      "searched": 0,
+      "policyDisagreements": 0,
+      "disagreementsAt75PercentVisits": 0,
+      "simulations": 0,
+      "nodes": 0,
+      "depthSum": 0,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": null,
+      "meanMaxDepth": null,
+      "nodesPerSimulation": null
+    },
+    {
+      "side": "opponent",
+      "phase": "epoch",
+      "decisions": 75,
+      "nontrivialLegal": 0,
+      "collapsedToOne": 0,
+      "searched": 0,
+      "policyDisagreements": 0,
+      "disagreementsAt75PercentVisits": 0,
+      "simulations": 0,
+      "nodes": 0,
+      "depthSum": 0,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": null,
+      "meanMaxDepth": null,
+      "nodesPerSimulation": null
+    },
+    {
+      "side": "opponent",
+      "phase": "god",
+      "decisions": 62,
+      "nontrivialLegal": 5,
+      "collapsedToOne": 0,
+      "searched": 5,
+      "policyDisagreements": 3,
+      "disagreementsAt75PercentVisits": 0,
+      "simulations": 29310,
+      "nodes": 41168,
+      "depthSum": 33,
+      "godMoreThanThree": 0,
+      "policyDisagreementRate": 0.6,
+      "meanMaxDepth": 6.6,
+      "nodesPerSimulation": 1.4045718184919822
+    },
+    {
+      "side": "candidate",
+      "phase": "god",
+      "decisions": 33,
+      "nontrivialLegal": 4,
+      "collapsedToOne": 0,
+      "searched": 4,
+      "policyDisagreements": 2,
+      "disagreementsAt75PercentVisits": 1,
+      "simulations": 216520,
+      "nodes": 166885,
+      "depthSum": 39,
+      "godMoreThanThree": 1,
+      "policyDisagreementRate": 0.5,
+      "meanMaxDepth": 9.75,
+      "nodesPerSimulation": 0.7707602069092925
+    }
+  ],
+  "examples": [
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-2p-910001-seat0.json",
+      "seed": 910001,
+      "count": 2,
+      "step": 76,
+      "player": 0,
+      "phase": "disaster",
+      "epoch": 2,
+      "canonicalLegal": 5,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          26,
+          22
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-2p-910001-seat1.json",
+      "seed": 910001,
+      "count": 2,
+      "step": 76,
+      "player": 0,
+      "phase": "disaster",
+      "epoch": 2,
+      "canonicalLegal": 5,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          26,
+          22
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-3p-910001-seat0.json",
+      "seed": 910001,
+      "count": 3,
+      "step": 269,
+      "player": 1,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 18,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          0,
+          26
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-3p-910001-seat0.json",
+      "seed": 910001,
+      "count": 3,
+      "step": 279,
+      "player": 1,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 13,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          12,
+          30
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-3p-910001-seat1.json",
+      "seed": 910001,
+      "count": 3,
+      "step": 302,
+      "player": 0,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 22,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          4,
+          14
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-3p-910001-seat2.json",
+      "seed": 910001,
+      "count": 3,
+      "step": 263,
+      "player": 2,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 11,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          35,
+          36
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-3p-910001-seat2.json",
+      "seed": 910001,
+      "count": 3,
+      "step": 278,
+      "player": 0,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 20,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          34,
+          12
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-4p-910001-seat0.json",
+      "seed": 910001,
+      "count": 4,
+      "step": 261,
+      "player": 0,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 3,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          82,
+          91
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-4p-910001-seat1.json",
+      "seed": 910001,
+      "count": 4,
+      "step": 239,
+      "player": 0,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 3,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          82,
+          91
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-4p-910001-seat1.json",
+      "seed": 910001,
+      "count": 4,
+      "step": 326,
+      "player": 3,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 17,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          12,
+          21
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-4p-910001-seat2.json",
+      "seed": 910001,
+      "count": 4,
+      "step": 201,
+      "player": 1,
+      "phase": "disaster",
+      "epoch": 2,
+      "canonicalLegal": 15,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          35,
+          29
+        ]
+      }
+    },
+    {
+      "path": "artifacts/ai-version-2s-control.json.replays/uct-time-4p-910001-seat2.json",
+      "seed": 910001,
+      "count": 4,
+      "step": 335,
+      "player": 1,
+      "phase": "disaster",
+      "epoch": 3,
+      "canonicalLegal": 14,
+      "offered": 1,
+      "chosen": {
+        "type": "discard",
+        "ids": [
+          9,
+          7
+        ]
+      }
+    }
+  ]
+}

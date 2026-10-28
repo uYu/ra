@@ -1,0 +1,158 @@
+{
+  "status": "complete",
+  "input": "artifacts/ai-version-2s-smoke-final.json",
+  "identity": {
+    "config": {
+      "studyKind": "version-2s",
+      "engine": "current",
+      "reward": "relative",
+      "opponentVariant": "uct",
+      "horizon": "epoch",
+      "samples": 32,
+      "timeMs": 10,
+      "opponentTimeMs": 10,
+      "opponentFixed": false,
+      "candidateLabel": "当前版 2 秒",
+      "opponentLabel": "原始版 2 秒",
+      "replayDir": "artifacts/ai-version-2s-smoke-final.json.replays"
+    },
+    "planPath": "artifacts/ai-version-2s-smoke-final-plan.json",
+    "planSha256": "5e6c666f66c3e904883033eadab25b323a17cdb7cf04a054c010ef9da3f0aa80",
+    "seeds": 1,
+    "start": 990001,
+    "counts": [
+      2
+    ],
+    "variants": [
+      "uct"
+    ],
+    "modes": [
+      "time"
+    ],
+    "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+    "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+    "opponentSourceSha256": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "opponentWasmSha256": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+    "modelSha256": null,
+    "rolloutModelSha256": null
+  },
+  "games": 2,
+  "seedBlocks": 1,
+  "replayCount": 2,
+  "decisions": 368,
+  "primary": "Player counts weighted equally; normalized rank score (players-rank)/(players-1); 50% equal-strength reference",
+  "normalizedRankScore": 1,
+  "interval95": [
+    1,
+    1
+  ],
+  "byCount": [
+    {
+      "count": 2,
+      "games": 2,
+      "meanRank": 1,
+      "referenceMeanRank": 1.5,
+      "normalizedRankScore": 1,
+      "interval95": [
+        1,
+        1
+      ],
+      "firstPlaces": 2,
+      "referenceFirstPlaces": 1,
+      "meanMargin": 18
+    }
+  ],
+  "blocks": [
+    {
+      "seed": 990001,
+      "score": 1,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "timing": [
+    {
+      "sidePhase": "opponent/all",
+      "searched": 139,
+      "meanMs": 10.221492726618722,
+      "medianMs": 10.195832999999993,
+      "p95Ms": 10.33524999999986,
+      "maxMs": 12.216874999999987,
+      "meanSamples": 120.71942446043165,
+      "meanTransitions": 2318.5539568345325,
+      "meanNodes": 154.49640287769785,
+      "meanDepth": 3.9784172661870505,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "opponent/turn",
+      "searched": 95,
+      "meanMs": 10.223856505263186,
+      "medianMs": 10.179167000000234,
+      "p95Ms": 10.33524999999986,
+      "maxMs": 12.216874999999987,
+      "meanSamples": 123.72631578947369,
+      "meanTransitions": 2322.4736842105262,
+      "meanNodes": 162.73684210526315,
+      "meanDepth": 4,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/all",
+      "searched": 197,
+      "meanMs": 10.20856751269035,
+      "medianMs": 10.189374999999927,
+      "p95Ms": 10.311208999999963,
+      "maxMs": 11.921999999999997,
+      "meanSamples": 499.5939086294416,
+      "meanTransitions": 6856.248730964467,
+      "meanNodes": 525.3451776649746,
+      "meanDepth": 5.253807106598985,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/turn",
+      "searched": 144,
+      "meanMs": 10.207568868055537,
+      "medianMs": 10.185833000000002,
+      "p95Ms": 10.283833999999842,
+      "maxMs": 11.921999999999997,
+      "meanSamples": 545.5486111111111,
+      "meanTransitions": 6893.5,
+      "meanNodes": 557.6319444444445,
+      "meanDepth": 5.340277777777778,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "opponent/auction",
+      "searched": 44,
+      "meanMs": 10.216389113636344,
+      "medianMs": 10.202457999999979,
+      "p95Ms": 10.326207999999951,
+      "maxMs": 10.408541000000014,
+      "meanSamples": 114.22727272727273,
+      "meanTransitions": 2310.090909090909,
+      "meanNodes": 136.70454545454547,
+      "meanDepth": 3.9318181818181817,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/auction",
+      "searched": 53,
+      "meanMs": 10.21128081132079,
+      "medianMs": 10.198333999999932,
+      "p95Ms": 10.340416999999889,
+      "maxMs": 10.443708000000242,
+      "meanSamples": 374.7358490566038,
+      "meanTransitions": 6755.037735849057,
+      "meanNodes": 437.62264150943395,
+      "meanDepth": 5.018867924528302,
+      "truncated": 0
+    }
+  ],
+  "caveat": "Bootstrap resamples entire seed blocks. Six seeds give a preliminary diagnostic with limited power for small gains. Parallel timings and simulation ratios compare different encountered positions, not pure serial speed. An interval including 50% does not establish equivalence or prove a directional error."
+}

@@ -1,0 +1,79 @@
+{
+  "status": "verified",
+  "input": "artifacts/ai-opponent-100ms-smoke.json",
+  "planSha256": "4019156762c48212eac70dab4191933aac16b294d2776c62a5eb88b81cecc27b",
+  "frozenFiles": 32,
+  "games": 2,
+  "decisions": 306,
+  "rankScore": 0.5,
+  "reference": 0.5,
+  "interval95": [
+    0.5,
+    0.5
+  ],
+  "bootstrap": "100000 draws, resample whole paired seeds independently within each player count; equal weight counts",
+  "byCount": [
+    {
+      "count": 2,
+      "games": 2,
+      "meanRank": 1.5,
+      "referenceMeanRank": 1.5,
+      "rankScore": 0.5,
+      "wins": 1,
+      "pairs": [
+        {
+          "seed": 940001,
+          "score": 0.5
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "candidate": {
+      "opponentTreeSelections": 1833,
+      "opponentAuctionTreeSelections": 1833,
+      "decisions": 115,
+      "searched": 107,
+      "ms": 123.76129600000007,
+      "searchMs": 122.75187800000006,
+      "maxMs": 1.5038330000000144,
+      "overshootMs": 15.751878000000062,
+      "overrunCalls": 0,
+      "samples": 2677,
+      "transitions": 75265,
+      "nodes": 3917,
+      "depth": 7,
+      "outcomeReuses": 0,
+      "maxOutcomeBranches": 31,
+      "truncated": 0,
+      "meanMs": 1.1472138130841127,
+      "meanSamples": 25.018691588785046
+    },
+    "opponent": {
+      "opponentTreeSelections": 0,
+      "opponentAuctionTreeSelections": 0,
+      "decisions": 191,
+      "searched": 177,
+      "ms": 204.47353999999993,
+      "searchMs": 202.86087100000006,
+      "maxMs": 3.417082999999991,
+      "overshootMs": 25.86087100000006,
+      "overrunCalls": 0,
+      "samples": 9578,
+      "transitions": 125167,
+      "nodes": 10167,
+      "depth": 6,
+      "outcomeReuses": 0,
+      "maxOutcomeBranches": 38,
+      "truncated": 0,
+      "meanMs": 1.1461066158192095,
+      "meanSamples": 54.112994350282484
+    }
+  },
+  "caveats": [
+    "50 games at 100ms are a preliminary comparison, not a 2s strength verdict.",
+    "Each game has one candidate against legacy opponents. Tree leaves still use heuristic rollouts.",
+    "Candidate also uses the complete observation key needed for opponent nodes; mode3 key-only ablation is not tested here.",
+    "Different encountered positions and parallel contention mean samples ratio is not a pure speed ratio."
+  ]
+}

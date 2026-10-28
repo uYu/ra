@@ -5,11 +5,13 @@ export function Dialog({
   onClose,
   children,
   wide = false,
+  className = "",
 }: {
   title: string;
   onClose: () => void;
   children: React.ReactNode;
   wide?: boolean;
+  className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null),
     close = useRef(onClose),
@@ -66,7 +68,7 @@ export function Dialog({
         aria-modal="true"
         aria-labelledby={id}
         tabIndex={-1}
-        className={`dialog ${wide ? "wide" : ""}`}
+        className={`dialog ${wide ? "wide" : ""} ${className}`}
       >
         <header>
           <div>

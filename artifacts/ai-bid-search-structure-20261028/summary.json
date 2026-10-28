@@ -1,0 +1,496 @@
+{
+  "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "tree": [
+    {
+      "mode": 0,
+      "variant": "uct",
+      "timeMs": 2000,
+      "report": {
+        "samples": 8734,
+        "transitions": 848618,
+        "completed": 8734,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 14237,
+        "depth": 6,
+        "scenarios": 4414,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1155,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.004739465337559,
+            "error": 0.10270025454282873,
+            "visits": 4414
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.003518782691378,
+            "error": 0.10855280767137572,
+            "visits": 4206
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.5150877192982454,
+            "error": 0.49948724470918987,
+            "visits": 114
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 4206,
+          "mean": 7.003518782691378,
+          "utility": 0.30655014501501865
+        },
+        {
+          "sun": 4,
+          "visits": 4414,
+          "mean": 7.004739465337559,
+          "utility": 0.3084912479277764
+        },
+        {
+          "sun": 13,
+          "visits": 114,
+          "mean": -0.5150877192982454,
+          "utility": -0.024732783647796224
+        }
+      ]
+    },
+    {
+      "mode": 0,
+      "variant": "sh",
+      "timeMs": 2000,
+      "report": {
+        "samples": 8822,
+        "transitions": 857602,
+        "completed": 8822,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 14586,
+        "depth": 6,
+        "scenarios": 3781,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1081,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.041163713303359,
+            "error": 0.11324611534820143,
+            "visits": 3781
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.024702459666756,
+            "error": 0.11470542584309437,
+            "visits": 3781
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.00850793650793605,
+            "error": 0.15949521972923866,
+            "visits": 1260
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 3781,
+          "mean": 7.024702459666756,
+          "utility": 0.3074430336758744
+        },
+        {
+          "sun": 4,
+          "visits": 3781,
+          "mean": 7.041163713303359,
+          "utility": 0.30937137941745546
+        },
+        {
+          "sun": 13,
+          "visits": 1260,
+          "mean": -0.00850793650793605,
+          "utility": -0.00060878566077582
+        }
+      ]
+    },
+    {
+      "mode": 0,
+      "variant": "dpw",
+      "timeMs": 2000,
+      "report": {
+        "samples": 9375,
+        "transitions": 848973,
+        "completed": 9375,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 14396,
+        "depth": 6,
+        "scenarios": 5234,
+        "outcomeReuses": 12620,
+        "maxOutcomeBranches": 145,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 6.203148643484899,
+            "error": 0.10028638715711015,
+            "visits": 5234
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 6.030997493734312,
+            "error": 0.1175849509031182,
+            "visits": 3990
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.30834437086092703,
+            "error": 0.4658991318479267,
+            "visits": 151
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 3990,
+          "mean": 6.030997493734312,
+          "utility": 0.26357823758775845
+        },
+        {
+          "sun": 4,
+          "visits": 5234,
+          "mean": 6.203148643484899,
+          "utility": 0.27218354695608793
+        },
+        {
+          "sun": 13,
+          "visits": 151,
+          "mean": -0.30834437086092703,
+          "utility": -0.014267371780690114
+        }
+      ]
+    },
+    {
+      "mode": 1,
+      "variant": "uct",
+      "timeMs": 2000,
+      "report": {
+        "samples": 8937,
+        "transitions": 868828,
+        "completed": 8937,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 14563,
+        "depth": 6,
+        "scenarios": 4843,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1193,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.115069172000833,
+            "error": 0.10123084067283851,
+            "visits": 4843
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 6.979150424787613,
+            "error": 0.10821593622447705,
+            "visits": 4002
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.5365217391304344,
+            "error": 0.5138384232494964,
+            "visits": 92
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 4843,
+          "mean": 7.115069172000833,
+          "utility": 0.35575345860004315
+        },
+        {
+          "sun": 4,
+          "visits": 4002,
+          "mean": 6.979150424787613,
+          "utility": 0.348957521239381
+        },
+        {
+          "sun": 13,
+          "visits": 92,
+          "mean": -0.5365217391304344,
+          "utility": -0.02682608695652173
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "variant": "uct",
+      "timeMs": 2000,
+      "report": {
+        "samples": 9141,
+        "transitions": 900118,
+        "completed": 9141,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 2282,
+        "depth": 1,
+        "scenarios": 6540,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1363,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 8.95836085626913,
+            "error": 0.07700979705842287,
+            "visits": 6540
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 8.118122513922032,
+            "error": 0.12113425019934418,
+            "visits": 2514
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.2510344827586204,
+            "error": 0.5684985203997723,
+            "visits": 87
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 6540,
+          "mean": 8.95836085626913,
+          "utility": 0.39022107352201724
+        },
+        {
+          "sun": 4,
+          "visits": 2514,
+          "mean": 8.118122513922032,
+          "utility": 0.3579136037179628
+        },
+        {
+          "sun": 13,
+          "visits": 87,
+          "mean": -0.2510344827586204,
+          "utility": -0.011573956024869419
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "variant": "uct",
+      "timeMs": 2000,
+      "report": {
+        "samples": 9046,
+        "transitions": 880793,
+        "completed": 9046,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 8827,
+        "depth": 2,
+        "scenarios": 5005,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1207,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.759600399600415,
+            "error": 0.09488634986041394,
+            "visits": 5005
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.529076142131981,
+            "error": 0.10510688735721248,
+            "visits": 3940
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.4792079207920789,
+            "error": 0.5387445910650875,
+            "visits": 101
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 5005,
+          "mean": 7.759600399600415,
+          "utility": 0.3390848779302089
+        },
+        {
+          "sun": 4,
+          "visits": 3940,
+          "mean": 7.529076142131981,
+          "utility": 0.3310046672764255
+        },
+        {
+          "sun": 13,
+          "visits": 101,
+          "mean": -0.4792079207920789,
+          "utility": -0.02279906466130246
+        }
+      ]
+    },
+    {
+      "mode": 4,
+      "variant": "uct",
+      "timeMs": 2000,
+      "report": {
+        "samples": 9155,
+        "transitions": 902988,
+        "completed": 9155,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 2211,
+        "depth": 1,
+        "scenarios": 7036,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1401,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 8.980500284252448,
+            "error": 0.07434032737558215,
+            "visits": 7036
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 8.11305026842362,
+            "error": 0.13359645704700027,
+            "visits": 2049
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.17028571428571404,
+            "error": 0.6274944985994655,
+            "visits": 70
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 7036,
+          "mean": 8.980500284252448,
+          "utility": 0.4490250142126233
+        },
+        {
+          "sun": 4,
+          "visits": 2049,
+          "mean": 8.11305026842362,
+          "utility": 0.4056525134211804
+        },
+        {
+          "sun": 13,
+          "visits": 70,
+          "mean": -0.17028571428571404,
+          "utility": -0.008514285714285703
+        }
+      ]
+    }
+  ],
+  "productionChanged": false
+}

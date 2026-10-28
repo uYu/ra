@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-10-28T05:08:08.248507+00:00",
+  "kind": "10ms smoke only, excluded from formal 84 games",
+  "candidate": {
+    "root": ".",
+    "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+    "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+    "timeMs": 10
+  },
+  "opponent": {
+    "root": "artifacts/ai-uct2s-source-snapshot",
+    "sourceSha256": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "wasmSha256": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+    "timeMs": 10
+  },
+  "design": {
+    "start": 990001,
+    "seeds": 1,
+    "counts": [
+      2
+    ],
+    "games": 2,
+    "workers": 1
+  },
+  "output": "artifacts/ai-version-2s-smoke.json",
+  "evaluation": {
+    "primary": "smoke only"
+  },
+  "hashes": {
+    "scripts/benchmark-version-match.ts": "79133d4ec99c13182bc5e61f0673d1e1346babd4c786543903af18e8a64bd747",
+    "scripts/summarize-budget.ts": "b4f6d06e0c70374cd5ec8e68ce0fe10e414cc073b905465622618ab210a79ca3",
+    "scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "src/game/data.ts": "2629b59a63483b3dccf9c2b47170d869008d345e33362d3adb0bbd1f37e08a9e",
+    "src/game/ai/wasm.ts": "1c010492904da9bf08ad422186f9ebec215cec4291a1dbf13bc2f43ee03c2424"
+  }
+}

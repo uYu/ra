@@ -9,13 +9,33 @@ test("draw travels from bag to the revealed tile, or to Ra track", () => {
     action = { type: "draw" } as const,
     after = advance(before, action),
     out = journeys({ before, action, after });
-  assert.equal(out.length, 1);
+  assert.equal(out.length, after.lastTile!.kind === "ra" ? 2 : 1);
   assert.equal(out[0].from, "bag");
   assert.equal(
     out[0].to,
-    after.lastTile!.kind === "ra" ? "ra" : `tile-${after.lastTile!.id}`,
+    after.lastTile!.kind === "ra" ? "ra-reveal" : `tile-${after.lastTile!.id}`,
   );
   assert.equal(out[0].tile?.id, after.lastTile!.id);
+});
+test("a Ra draw is shown in the announcement before moving to the discard pile", () => {
+  const before = setup();
+  const index = before.bag.findIndex((tile) => tile.kind === "ra");
+  before.bag.push(...before.bag.splice(index, 1));
+  const action = { type: "draw" } as const;
+  const after = advance(before, action);
+  const out = journeys({ before, action, after });
+  assert.deepEqual(
+    out.map(({ from, to }) => [from, to]),
+    [
+      ["bag", "ra-reveal"],
+      ["ra-reveal", "discard"],
+    ],
+  );
+  assert.equal(out[0].tile?.kind, "ra");
+  assert.ok(
+    out[1].delay > 980,
+    "keep the revealed tile visible before discarding",
+  );
 });
 test("bid uses acting player disk and targets that player quotation", () => {
   let before = setup();

@@ -23,16 +23,17 @@ enum Act {
   Draw, Invoke, Bid, Exchange, Finish, Discard, Next
 };
 struct Tile {
-  int kind, variant;
+  uint8_t kind,variant,code;
 };
 std::array<Tile,180> catalog;
+void initRaceTables();
 void initTiles() {
   static bool done=false;
   if(done) return;
   done=true;
   int id=0;
   auto add=[&](int kind,int n,int variants=1) {
-    for(int v=0;v<variants;v++)for(int j=0;j<n;j++)catalog[id++]={kind,v};
+    for(int v=0;v<variants;v++)for(int j=0;j<n;j++)catalog[id++]={(uint8_t)kind,(uint8_t)v,(uint8_t)((kind<<3)|v)};
   };
   add(Monument,5,8);
   add(Pharaoh,25);
@@ -46,6 +47,7 @@ void initTiles() {
   add(Funeral,2);
   add(War,4);
   add(Drought,2);
+  initRaceTables();
 }
 bool disaster(int kind) {
   return kind>=Earthquake;
@@ -53,19 +55,113 @@ bool disaster(int kind) {
 struct Action {
   int type=Draw, arg=-1, second=-1, count=0;
 };
+// Small rule collections stay inside their owner. Oversized protocol inputs
+// retain vector growth semantics rather than relying on physical-deck bounds.
+uint64_t collectionRevision=0;
+template<class T,size_t N,bool Tracked=false>class InlineVector {
+  std::array<T,N> local;
+  vector<T> heap;
+  size_t length=0;
+  bool spilled=false;
+  uint64_t revision=0;
+  void changed(){if constexpr(Tracked)revision=++collectionRevision;}
+  T*raw(){return spilled?heap.data():local.data();}
+  const T*raw()const{return spilled?heap.data():local.data();}
+  void grow(size_t n) {
+    if(n<=N||spilled){if(spilled)heap.reserve(n);return;}
+    heap.reserve(std::max(n,N*2));
+    heap.assign(local.begin(),local.begin()+length);
+    spilled=true;
+  }
+  void copy(const T*first,size_t n) {
+    if(!n){clear();return;}
+    grow(n);
+    if(spilled)heap.assign(first,first+n);
+    else std::copy_n(first,n,local.begin());
+    length=n;
+    changed();
+  }
+ public:
+  InlineVector()=default;
+  InlineVector(std::initializer_list<T>v){copy(v.begin(),v.size());}
+  InlineVector(const vector<T>&v){copy(v.data(),v.size());}
+  InlineVector(const InlineVector&v){copy(v.raw(),v.length);revision=v.revision;}
+  InlineVector(InlineVector&&v)noexcept:heap(std::move(v.heap)),length(v.length),spilled(v.spilled),revision(v.revision) {
+    if(!spilled)std::copy_n(v.local.begin(),length,local.begin());
+    v.length=0;v.spilled=false;v.changed();
+  }
+  InlineVector&operator=(const InlineVector&v){if(this!=&v)copy(v.raw(),v.length);return *this;}
+  InlineVector&operator=(InlineVector&&v)noexcept {
+    if(this!=&v){
+      if(v.spilled){heap=std::move(v.heap);spilled=true;length=v.length;changed();}
+      else copy(v.raw(),v.length);
+      v.length=0;v.spilled=false;v.changed();
+    }
+    return *this;
+  }
+  InlineVector&operator=(const vector<T>&v){copy(v.data(),v.size());return *this;}
+  InlineVector&operator=(std::initializer_list<T>v){copy(v.begin(),v.size());return *this;}
+  size_t size()const{return length;}
+  bool empty()const{return length==0;}
+  uint64_t version()const{return revision;}
+  const T*begin()const{return raw();}
+  const T*end()const{return raw()+length;}
+  T*begin(){changed();return raw();}
+  T*end(){changed();return raw()+length;}
+  const T&operator[](size_t i)const{return raw()[i];}
+  T&operator[](size_t i){changed();return raw()[i];}
+  const T&front()const{return raw()[0];}
+  T&front(){changed();return raw()[0];}
+  const T&back()const{return raw()[length-1];}
+  T&back(){changed();return raw()[length-1];}
+  void reserve(size_t n){grow(n);}
+  void clear(){if(spilled)heap.clear();length=0;changed();}
+  void push_back(T v){grow(length+1);if(spilled)heap.push_back(v);else local[length]=v;length++;changed();}
+  void pop_back(){if(spilled)heap.pop_back();length--;changed();}
+  void resize(size_t n){grow(n);if(spilled)heap.resize(n);else if(n>length)std::fill(local.begin()+length,local.begin()+n,T{});length=n;changed();}
+  T*erase(const T*first,const T*last) {
+    size_t start=first-raw(),count=last-first;
+    if(spilled)heap.erase(heap.begin()+start,heap.begin()+start+count);
+    else std::move(local.begin()+start+count,local.begin()+length,local.begin()+start);
+    length-=count;changed();return raw()+start;
+  }
+  T*erase(const T*position){return erase(position,position+1);}
+  template<class It>T*insert(const T*position,It first,It last) {
+    size_t start=position-raw(),count=std::distance(first,last);
+    grow(length+count);
+    if(spilled)heap.insert(heap.begin()+start,first,last);
+    else {std::move_backward(local.begin()+start,local.begin()+length,local.begin()+length+count);std::copy(first,last,local.begin()+start);}
+    length+=count;changed();return raw()+start;
+  }
+};
+using TileIds=InlineVector<int,8>;
+struct Inventory {
+  std::array<int,8> m{};
+  std::array<int,5> c{};
+  int ph=0,nile=0,flood=0,gold=0,god=0,civ=0;
+  int monumentDifferent=0,monumentTwo=0,monumentScore=0;
+};
 struct Player {
-  vector<int> suns,used,tiles;
+  InlineVector<int,8> suns,used;
+  InlineVector<int,32,true> tiles;
+  mutable Inventory cachedInventory;
+  mutable uint64_t inventoryRevision=UINT64_MAX;
   int score=10;
 };
 struct AuctionState {
   int caller=0,reason=0,index=0,high=0,winner=-1;
-  vector<int> order;
-  vector<std::array<int,2>> bids;
+  InlineVector<int,5> order;
+  InlineVector<std::array<int,2>,5> bids;
 };
 struct State {
   int n=2,epoch=1,phase=Turn,current=0,center=1,ra=0,resume=Turn,next=0,steps=0,last=-1;
   std::array<Player,5> players;
-  vector<int> bag,market,pending,discarded;
+  InlineVector<int,180,true> bag;
+  TileIds market,pending;
+  vector<int> discarded;
+  bool recordDiscards=true;
+  mutable uint64_t bagRevision=UINT64_MAX;
+  mutable std::array<int,12> bagCounts{};
   bool hasAuction=false;
   AuctionState auction;
 };
@@ -79,17 +175,17 @@ int kind(int id) {
 int variant(int id) {
   return catalog[id].variant;
 }
-int sum(const vector<int>&v) {
+int sum(const auto&v) {
   int result=0;
   for(int i:v)result+=i;
   return result;
 }
-int countKind(const vector<int>&v,int k) {
+int countKind(const auto&v,int k) {
   int result=0;
   for(int id:v)result+=kind(id)==k;
   return result;
 }
-void eraseId(vector<int>&v,int id) {
+void eraseId(auto&v,int id) {
   v.erase(std::remove(v.begin(),v.end(),id),v.end());
 }
 int target(int k) {
@@ -104,19 +200,22 @@ int required(const State&s) {
   for(int id:s.players[s.current].tiles)n+=affected(id,kind(s.pending[0]));
   return std::min(2,n);
 }
-struct Inventory {
-  std::array<int,8> m{};
-  std::array<int,5> c{};
-  int ph=0,nile=0,flood=0,gold=0,god=0,civ=0;
-};
-Inventory inventory(const Player&p) {
+const Inventory&inventory(const Player&p) {
+  if(p.inventoryRevision==p.tiles.version())return p.cachedInventory;
   Inventory v;
+  uint32_t monumentMask=0,civilizationMask=0;
+  int extra=0;
   for(int id:p.tiles) {
     int k=kind(id),t=variant(id);
     switch(k) {
-      case Monument:v.m[t]++;
+      case Monument: {
+        int before=v.m[t]++;
+        monumentMask|=1u<<t;
+        if(before==1)v.monumentTwo++;
+        else if(before>=2){v.monumentTwo-=before==2;extra+=5;}
+      }
       break;
-      case Civilization:v.c[t]++;
+      case Civilization:v.c[t]++;civilizationMask|=1u<<t;
       break;
       case Pharaoh:v.ph++;
       break;
@@ -130,17 +229,24 @@ Inventory inventory(const Player&p) {
       break;
     }
   }
-  for(int n:v.c)v.civ+=n>0;
-  return v;
+  constexpr int diversityPoints[9]={0,1,2,3,4,5,6,10,15};
+  v.civ=__builtin_popcount(civilizationMask);
+  v.monumentDifferent=__builtin_popcount(monumentMask);
+  v.monumentScore=diversityPoints[v.monumentDifferent]+extra;
+  p.cachedInventory=v;
+  p.inventoryRevision=p.tiles.version();
+  return p.cachedInventory;
 }
-int monuments(const std::array<int,8>&m) {
-  int diff=0,extra=0;
-  for(int n:m) {
-    diff+=n>0;
-    if(n>=3)extra+=(n-2)*5;
+int bagCount(const State&s,int k) {
+  if(s.bagRevision!=s.bag.version()) {
+    s.bagCounts.fill(0);
+    for(int id:s.bag)s.bagCounts[kind(id)]++;
+    s.bagRevision=s.bag.version();
   }
-  return (diff==8?15:diff==7?10:diff)+extra;
+  return s.bagCounts[k];
 }
+void discardTile(State&s,int id){if(s.recordDiscards)s.discarded.push_back(id);}
+void discardTiles(State&s,const auto&ids){if(s.recordDiscards)s.discarded.insert(s.discarded.end(),ids.begin(),ids.end());}
 // Exact scoring and rule transitions, independent of search.
 Values epochScores(const State&s) {
   Values values{};
@@ -158,7 +264,7 @@ Values epochScores(const State&s) {
   for(int i=0;i<s.n;i++) {
     auto&p=all[i];
     values[i]=(phLo==phHi?0:p.ph==phHi?5:p.ph==phLo?-2:0)+(p.flood?p.flood+p.nile:0)+(p.civ==0?-5:p.civ>=3?(p.civ-2)*5:0)+p.gold*3+p.god*2;
-    if(s.epoch==3)values[i]+=monuments(p.m)+(sunLo==sunHi?0:suns[i]==sunHi?5:suns[i]==sunLo?-5:0);
+    if(s.epoch==3)values[i]+=p.monumentScore+(sunLo==sunHi?0:suns[i]==sunHi?5:suns[i]==sunLo?-5:0);
   }
   return values;
 }
@@ -198,13 +304,13 @@ void settle(State&s) {
       s.phase=Disaster;
       return;
     }
-    s.discarded.push_back(s.pending.front());
+    discardTile(s,s.pending.front());
     s.pending.erase(s.pending.begin());
   }
   if(s.resume==GodTurn)s.phase=GodTurn;
   else finishTurn(s,s.next);
 }
-void acquire(State&s,const vector<int>&tiles,int player,int resume,int from) {
+void acquire(State&s,const TileIds&tiles,int player,int resume,int from) {
   s.current=player;
   for(int id:tiles) {
     if(disaster(kind(id)))s.pending.push_back(id);
@@ -219,7 +325,7 @@ void resolveAuction(State&s) {
   s.hasAuction=false;
   if(a.winner<0) {
     if(a.reason==2) {
-      s.discarded.insert(s.discarded.end(),s.market.begin(),s.market.end());
+      discardTiles(s,s.market);
       s.market.clear();
     }
     finishTurn(s,a.caller);
@@ -242,7 +348,7 @@ void apply(State&s,const Action&a) {
       s.bag.pop_back();
       s.last=id;
       if(kind(id)==Ra) {
-        s.discarded.push_back(id);
+        discardTile(s,id);
         s.ra++;
         if(s.ra>=limit(s))endEpoch(s);
         else startAuction(s,0);
@@ -274,7 +380,7 @@ void apply(State&s,const Action&a) {
         break;
       }
       eraseId(p.tiles,god);
-      s.discarded.push_back(god);
+      discardTile(s,god);
       eraseId(s.market,a.arg);
       acquire(s,{a.arg},s.current,GodTurn,s.current);
       break;
@@ -288,15 +394,15 @@ void apply(State&s,const Action&a) {
       if(a.count==2)eraseId(p.tiles,a.second);
       int d=s.pending.front();
       s.pending.erase(s.pending.begin());
-      s.discarded.insert(s.discarded.end(),removed.begin(),removed.end());
-      s.discarded.push_back(d);
+      discardTiles(s,removed);
+      discardTile(s,d);
       settle(s);
       break;
     }
     case Next: {
       s.epoch++;
       s.ra=0;
-      s.discarded.insert(s.discarded.end(),s.market.begin(),s.market.end());
+      discardTiles(s,s.market);
       s.market.clear();
       int high=-1;
       for(int i=0;i<s.n;i++) {
@@ -305,7 +411,7 @@ void apply(State&s,const Action&a) {
         for(int id:q.tiles) {
           int k=kind(id);
           if(k==Monument||k==Pharaoh||k==Nile)keep.push_back(id);
-          else s.discarded.push_back(id);
+          else discardTile(s,id);
         }
         q.tiles=std::move(keep);
         q.suns.insert(q.suns.end(),q.used.begin(),q.used.end());
@@ -355,80 +461,115 @@ vector<Action> legal(const State&s) {
     if(s.market.size()<8&&!s.bag.empty())out.push_back({Draw});
     out.push_back({Invoke});
   }
-  if(countKind(p.tiles,God))for(int id:s.market)if(kind(id)!=God)out.push_back({Exchange,id});
+  if(inventory(p).god)for(int id:s.market)if(kind(id)!=God)out.push_back({Exchange,id});
   if(s.phase==GodTurn)out.push_back({Finish});
   return out;
 }
 // Public-information evaluation and auction policy.
 double drawsLeft(const State&s) {
-  double ra=countKind(s.bag,Ra);
+  double ra=bagCount(s,Ra);
   return std::min((double)s.bag.size(),(limit(s)-s.ra)*(s.bag.size()+1.0)/(ra+1));
+}
+struct RaceFactor { double most,least; };
+std::array<std::array<RaceFactor,51>,2>raceFactors;
+void initRaceTables() {
+  constexpr double widths[2]={1.5,2.1};
+  for(int w=0;w<2;w++)for(int delta=-25;delta<=25;delta++) {
+    double d=delta/widths[w];
+    raceFactors[w][delta+25]={1/(1+std::exp(-d)),1/(1+std::exp(d))};
+  }
 }
 double softRace(const std::array<int,5>&counts,int n,int i,double width) {
   double most=1,least=1;
+  int table=width==1.5?0:width==2.1?1:-1;
   for(int j=0;j<n;j++)if(j!=i) {
-    double d=(counts[i]-counts[j])/width;
-    most*=1/(1+std::exp(-d));
-    least*=1/(1+std::exp(d));
+    int delta=counts[i]-counts[j];
+    if(table>=0&&delta>=-25&&delta<=25) {
+      const auto&factor=raceFactors[table][delta+25];
+      most*=factor.most;
+      least*=factor.least;
+    } else {
+      double d=delta/width;
+      most*=1/(1+std::exp(-d));
+      least*=1/(1+std::exp(d));
+    }
   }
   return 5*most-2*least;
 }
-Values futureValues(const State&s,const std::array<Inventory,5>*cached=nullptr) {
+Values futureValues(const State&s,const std::array<Inventory,5>*cached=nullptr,const Values*cachedRace=nullptr) {
   Values values{};
   int years=3-s.epoch;
   if(!years)return values;
   std::array<Inventory,5>storage;
   std::array<int,5>ph{};
-  vector<int>disks;
+  std::array<int,17>diskCounts{},diskRanks{};
+  int diskCount=0;
   for(int i=0;i<s.n;i++) {
     if(!cached)storage[i]=inventory(s.players[i]);
     ph[i]=(cached?(*cached)[i]:storage[i]).ph;
-    disks.insert(disks.end(),s.players[i].suns.begin(),s.players[i].suns.end());
-    disks.insert(disks.end(),s.players[i].used.begin(),s.players[i].used.end());
+    for(int sun:s.players[i].suns){diskCounts[sun]++;diskCount++;}
+    for(int sun:s.players[i].used){diskCounts[sun]++;diskCount++;}
   }
+  int lower=0;
+  for(int sun=0;sun<=16;sun++){diskRanks[sun]=lower;lower+=diskCounts[sun];}
   for(int i=0;i<s.n;i++) {
     auto&p=cached?(*cached)[i]:storage[i];
     double disk=0;
     auto add=[&](int sun) {
-      int rank=0;
-      for(int d:disks)rank+=d<sun;
-      disk+=2.7*((double)rank/std::max(1,(int)disks.size()-1)-0.5);
+      disk+=2.7*((double)diskRanks[sun]/std::max(1,diskCount-1)-0.5);
     };
     for(int sun:s.players[i].suns)add(sun);
     for(int sun:s.players[i].used)add(sun);
-    int two=0,diff=0;
-    for(int n:p.m) {
-      two+=n==2;
-      diff+=n>0;
-    }
-    values[i]=monuments(p.m)+two*(1.35*years/2)+(diff==6?1.1*years/2:0)+years*(softRace(ph,s.n,i,2.1)+p.nile*0.63+disk);
+    values[i]=p.monumentScore+p.monumentTwo*(1.35*years/2)+(p.monumentDifferent==6?1.1*years/2:0)+years*((cachedRace?(*cachedRace)[i]:softRace(ph,s.n,i,2.1))+p.nile*0.63+disk);
   }
   return values;
 }
-Values positionValues(const State&s) {
+// Disk identity changes between bids, while collections and usable-disk counts
+// do not. Cache only those invariant terms, preserving arithmetic order below.
+struct PositionCache {
   std::array<Inventory,5>all;
-  std::array<int,5>ph{},suns{};
-  int lo=1000,hi=-1,sunLo=1000,sunHi=-1,active=0;
+  std::array<int,5>ph{};
+  Values race{},futureRace{},access{},river{};
+};
+PositionCache positionCache(const State&s) {
+  PositionCache c;
+  int active=0;
   for(int i=0;i<s.n;i++) {
-    all[i]=inventory(s.players[i]);
-    ph[i]=all[i].ph;
+    c.all[i]=inventory(s.players[i]);
+    c.ph[i]=c.all[i].ph;
+    active+=s.players[i].suns.size();
+  }
+  double draws=drawsLeft(s),floodLeft=bagCount(s,Flood);
+  for(int i=0;i<s.n;i++) {
+    double share=(double)s.players[i].suns.size()/std::max(1,active);
+    c.access[i]=std::min(1.0,draws*share/9);
+    c.river[i]=1-std::exp(-floodLeft*draws*share/std::max(1,(int)s.bag.size()));
+    c.race[i]=softRace(c.ph,s.n,i,1.5);
+    if(s.epoch<3)c.futureRace[i]=softRace(c.ph,s.n,i,2.1);
+  }
+  return c;
+}
+Values positionValues(const State&s,const PositionCache*cached=nullptr) {
+  PositionCache storage;
+  if(!cached){storage=positionCache(s);cached=&storage;}
+  const auto&all=cached->all;
+  const auto&ph=cached->ph;
+  std::array<int,5>suns{};
+  int lo=1000,hi=-1,sunLo=1000,sunHi=-1;
+  for(int i=0;i<s.n;i++) {
     lo=std::min(lo,ph[i]);
     hi=std::max(hi,ph[i]);
-    active+=s.players[i].suns.size();
     suns[i]=sum(s.players[i].suns)+sum(s.players[i].used);
     sunLo=std::min(sunLo,suns[i]);
     sunHi=std::max(sunHi,suns[i]);
   }
-  auto future=futureValues(s,&all);
+  auto future=futureValues(s,&all,&cached->futureRace);
   Values values{};
-  double draws=drawsLeft(s),floodLeft=countKind(s.bag,Flood);
   for(int i=0;i<s.n;i++) {
     auto&p=all[i];
-    double share=(double)s.players[i].suns.size()/std::max(1,active),access=std::min(1.0,draws*share/9),river=1-std::exp(-floodLeft*draws*share/std::max(1,(int)s.bag.size()));
-    int two=0;
-    for(int n:p.m)two+=n==2;
-    values[i]=(hi==lo?0:ph[i]==hi?5:ph[i]==lo?-2:0)+(p.flood?p.flood+p.nile:p.nile*river)+(p.civ==0?-5:p.civ>=3?(p.civ-2)*5:0)+(p.civ==1?1.0:p.civ==2?2.6:0)*access+p.gold*3+p.god*(2+0.65*access)+0.25*access*softRace(ph,s.n,i,1.5)+future[i];
-    if(s.epoch==3)values[i]+=monuments(p.m)+(sunHi==sunLo?0:suns[i]==sunHi?5:suns[i]==sunLo?-5:0)+two*(1.15*access);
+    double access=cached->access[i],river=cached->river[i];
+    values[i]=(hi==lo?0:ph[i]==hi?5:ph[i]==lo?-2:0)+(p.flood?p.flood+p.nile:p.nile*river)+(p.civ==0?-5:p.civ>=3?(p.civ-2)*5:0)+(p.civ==1?1.0:p.civ==2?2.6:0)*access+p.gold*3+p.god*(2+0.65*access)+0.25*access*cached->race[i]+future[i];
+    if(s.epoch==3)values[i]+=p.monumentScore+(sunHi==sunLo?0:suns[i]==sunHi?5:suns[i]==sunLo?-5:0)+p.monumentTwo*(1.15*access);
   }
   return values;
 }
@@ -447,7 +588,7 @@ double reserveCost(const State&s,int player,int sun,double scale) {
   return scale*(3.1+3.4*r)*availability*(s.players[player].suns.size()==1?1.1:1);
 }
 int tileCode(int id) {
-  return kind(id)*8+variant(id);
+  return catalog[id].code;
 }
 std::string actionKey(const Action&a) {
   if(a.type==Exchange)return "g"+std::to_string(tileCode(a.arg));
@@ -458,8 +599,7 @@ std::string actionKey(const Action&a) {
   }
   return std::to_string(a.type)+"/"+std::to_string(a.arg);
 }
-State collectionAfter(const State&s,int player,const vector<int>&lot) {
-  State c=s;
+void collectInto(State&c,int player,const TileIds&lot) {
   auto&p=c.players[player];
   for(int id:lot)if(!disaster(kind(id)))p.tiles.push_back(id);
   for(int d:lot)if(disaster(kind(d)))for(int n=0;n<2;n++) {
@@ -481,6 +621,10 @@ State collectionAfter(const State&s,int player,const vector<int>&lot) {
     }
     if(best>=0)eraseId(p.tiles,best);
   }
+}
+State collectionAfter(const State&s,int player,const TileIds&lot) {
+  State c=s;
+  collectInto(c,player,lot);
   return c;
 }
 struct Model {
@@ -496,18 +640,40 @@ Plan auctionPlan(const State&s,const Model&model=Model{}) {
   auto&a=s.auction;
   auto base=positionValues(s);
   std::array<std::array<Values,17>,5>outcomes{};
+  std::array<std::array<bool,17>,5>needed{};
+  if(a.winner>=0)needed[a.winner][a.high]=true;
+  for(int index=a.index;index<(int)a.order.size();index++) {
+    int i=a.order[index];
+    for(int sun:s.players[i].suns)if(sun>a.high)needed[i][sun]=true;
+  }
+  State won=s;
   for(int i=0;i<s.n;i++) {
-    if(s.players[i].suns.empty())continue;
-    auto won=collectionAfter(s,i,s.market);
+    bool any=false;
+    for(int sun:s.players[i].suns)any|=needed[i][sun];
+    if(!any)continue;
+    collectInto(won,i,s.market);
+    auto&player=won.players[i];
+    const auto suns=player.suns;
+    player.used.push_back(s.center);
+    PositionCache cache;
+    bool hasCache=false;
+    size_t cachedSuns=0;
     for(int sun:s.players[i].suns) {
-      State changed=won;
-      eraseId(changed.players[i].suns,sun);
-      changed.players[i].used.push_back(s.center);
-      changed.center=sun;
-      auto v=positionValues(changed);
+      if(!needed[i][sun])continue;
+      player.suns=suns;
+      eraseId(player.suns,sun);
+      won.center=sun;
+      if(!hasCache||cachedSuns!=player.suns.size()) {
+        cache=positionCache(won);
+        hasCache=true;
+        cachedSuns=player.suns.size();
+      }
+      auto v=positionValues(won,&cache);
       v[i]-=reserveCost(s,i,sun,model.cost[i]);
       outcomes[i][sun]=v;
     }
+    won.players[i]=s.players[i];
+    won.center=s.center;
   }
   auto search=[&](auto&&self,int index,int high,int winner)->Plan {
     if(index==(int)a.order.size()) {
@@ -519,14 +685,18 @@ Plan auctionPlan(const State&s,const Model&model=Model{}) {
     }
     int i=a.order[index];
     bool force=i==a.caller&&a.reason==1&&high==0;
-    vector<int>bids;
-    if(!force)bids.push_back(-1);
-    auto sorted=s.players[i].suns;
-    std::sort(sorted.begin(),sorted.end());
-    for(int sun:sorted)if(sun>high)bids.push_back(sun);
+    // Input permits 16 usable plus 16 used disks; an epoch reset can merge them.
+    std::array<int,33>bids;
+    std::array<int,32>sorted;
+    int bidCount=0,sunCount=s.players[i].suns.size();
+    if(!force)bids[bidCount++]=-1;
+    std::copy(s.players[i].suns.begin(),s.players[i].suns.end(),sorted.begin());
+    std::sort(sorted.begin(),sorted.begin()+sunCount);
+    for(int j=0;j<sunCount;j++)if(sorted[j]>high)bids[bidCount++]=sorted[j];
     Plan best;
     double value=-INF;
-    for(int sun:bids) {
+    for(int j=0;j<bidCount;j++) {
+      int sun=bids[j];
       auto child=self(self,index+1,sun<0?high:sun,sun<0?winner:i);
       double v=relative(child.values,s.n,i,model.rivalry);
       if(v>value+1e-8) {
@@ -622,24 +792,43 @@ struct Random {
     return (t^(t>>14))/4294967296.0;
   }
 };
-void shuffle(vector<int>&a,Random&r) {
+void shuffle(auto&a,Random&r) {
   for(int i=(int)a.size()-1;i>0;i--) {
     int j=(int)std::floor(r.next()*(i+1));
     std::swap(a[i],a[j]);
   }
 }
-void appendInt(std::string&key,int value) {
+void writeInt(char*&out,int value) {
   uint32_t v=(uint32_t)value;
-  for(int j=0;j<4;j++)key.push_back((char)(v>>(8*j)));
+  for(int j=0;j<4;j++)*out++=(char)(v>>(8*j));
 }
-void listKey(std::string&key,const vector<int>&v,bool tiles=false) {
-  vector<int>values=v;
-  if(tiles) {
-    for(int&i:values)i=tileCode(i);
-    std::sort(values.begin(),values.end());
+void appendInt(std::string&key,int value) {
+  char bytes[4];
+  char*out=bytes;
+  writeInt(out,value);
+  key.append(bytes,4);
+}
+void listKey(std::string&key,const auto&v,bool tiles=false) {
+  size_t start=key.size();
+  key.resize(start+4*(v.size()+1));
+  char*out=key.data()+start;
+  writeInt(out,v.size());
+  if(!tiles) {
+    for(int x:v)writeInt(out,x);
+    return;
   }
-  appendInt(key,values.size());
-  for(int x:values)appendInt(key,x);
+  std::array<uint16_t,96>counts{};
+  uint64_t present[2]={0,0};
+  for(int id:v) {
+    int code=tileCode(id);
+    counts[code]++;
+    present[code>>6]|=1ull<<(code&63);
+  }
+  for(int word=0;word<2;word++)while(present[word]) {
+    int code=word*64+__builtin_ctzll(present[word]);
+    present[word]&=present[word]-1;
+    for(int n=0;n<counts[code];n++)writeInt(out,code);
+  }
 }
 std::string observation(const State&s,int observer,bool complete=false) {
   std::string k;
@@ -760,7 +949,7 @@ vector<double> valueFeatures(const State&s,int player) {
   vector<double>x;
   for(int n=2;n<=5;n++)x.push_back(s.n==n);
   x.push_back(s.epoch==1);x.push_back(s.epoch==2);x.push_back(s.center/16.0);
-  for(int k=0;k<12;k++)x.push_back(countKind(s.bag,k)/40.0);
+  for(int k=0;k<12;k++)x.push_back(bagCount(s,k)/40.0);
   std::array<vector<double>,5> all;
   for(int i=0;i<s.n;i++)all[i]=valueHoldings(s,i);
   for(double v:all[player])x.push_back(v);
@@ -812,7 +1001,7 @@ vector<double>policyStateFeatures(const State&s) {
   for(int n=1;n<=3;n++)x.push_back(s.epoch==n);
   for(int n=0;n<6;n++)x.push_back(s.phase==n);
   x.push_back(s.ra/10.0);x.push_back(s.center/16.0);
-  for(int k=0;k<12;k++)x.push_back(countKind(s.bag,k)/40.0);
+  for(int k=0;k<12;k++)x.push_back(bagCount(s,k)/40.0);
   for(int k=0;k<12;k++)x.push_back(countKind(s.market,k)/8.0);
   for(int k=0;k<12;k++)x.push_back(countKind(s.pending,k)/2.0);
   auto&a=s.auction;
@@ -842,7 +1031,7 @@ vector<double>policyActionFeatures(const State&s,const Action&a) {
   vector<int>selected;
   if(a.type==Exchange)selected.push_back(a.arg);
   if(a.type==Discard){selected.push_back(a.arg);if(a.count==2)selected.push_back(a.second);}
-  if(a.type==Bid&&a.arg>=0)selected=s.market;
+  if(a.type==Bid&&a.arg>=0)selected.assign(s.market.begin(),s.market.end());
   for(int k=0;k<12;k++)x.push_back(countKind(selected,k)/8.0);
   auto own=inventory(s.players[s.current]);double mon=0,civ=0;
   for(int id:selected){if(kind(id)==Monument)mon+=own.m[variant(id)];if(kind(id)==Civilization)civ+=own.c[variant(id)];}
@@ -872,6 +1061,9 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
   Node root;
   bool timed=timeMs>0;
   double deadline=timed?emscripten_get_now()+timeMs:INF;
+  State searchState=s;
+  searchState.recordDiscards=false;
+  searchState.discarded.clear();
   auto bag=s.bag;
   std::sort(bag.begin(),bag.end());
   Random rng((uint32_t)(s.steps+1)*7919u^(uint32_t)(s.current+1)*104729u);
@@ -893,7 +1085,7 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
   };
   for(int k=0;k<iterations;k++) {
     if(k>=(int)rootActions.size()&&timed&&emscripten_get_now()>=deadline)break;
-    State next=s;
+    State next=searchState;
     next.bag=bag;
     for(int i=0;i<s.n;i++)next.players[i].score=100;
     Model model;
@@ -1113,7 +1305,7 @@ void put(double v) {
   }
   output[out++]=v;
 }
-void putList(const vector<int>&v) {
+void putList(const auto&v) {
   put(v.size());
   for(int x:v)put(x);
 }
@@ -1247,7 +1439,7 @@ extern "C" {
     if(op==0){reward=read();if(bad||reward<0||reward>1)return -6;}
     if((op==0||op==7||op==8)&&cursor!=length)return -6;
     if(op==0) {
-      if(samples<1||samples>512||s.phase==Over||horizon<0||horizon>2||variant<0||variant>2||!std::isfinite(timeMs)||timeMs<0||timeMs>1000)return -3;
+      if(samples<1||samples>512||s.phase==Over||horizon<0||horizon>2||variant<0||variant>2||!std::isfinite(timeMs)||timeMs<0||timeMs>2000)return -3;
       auto r=searchAction(s,samples,horizon,variant,timeMs,hasModel?&model:nullptr,hasRollout?&rolloutModel:nullptr,reward);
       for(int x: {
         r.samples,r.transitions,r.completed,r.truncated,r.epochAdvances,r.nodes,r.depth,r.scenarios,r.outcomeReuses,r.maxOutcomeBranches,(int)r.candidates.size()

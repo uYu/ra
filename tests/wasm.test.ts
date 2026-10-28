@@ -297,9 +297,26 @@ test("wall-time search covers every root action and returns legal finite estimat
         ),
       );
     }
-  for (const timeMs of [0, -1, NaN, Infinity, 1001]) {
+  for (const timeMs of [0, -1, NaN, Infinity, 2001]) {
     assert.throws(() => ai.search(s, { timeMs }), /思考时间/);
     assert.throws(() => searchAction(s, { timeMs }), /思考时间/);
+  }
+});
+
+test("TS and Wasm support a two-second search without changing the fixed-budget default", () => {
+  const s = newGame({ count: 3, humans: 0, difficulty: "hard", seed: 71 });
+  for (const backend of [ai.search.bind(ai), searchAction]) {
+    const before = performance.now();
+    const r = backend(observe(s), { timeMs: 2000 });
+    assert.ok(performance.now() - before >= 1900);
+    assert.ok(r.samples > 0 && r.samples < 1_000_000);
+    assert.ok(r.candidates.every((c) => c.visits >= 1));
+    assert.ok(
+      legalActions(s).some(
+        (a) => JSON.stringify(a) === JSON.stringify(r.action),
+      ),
+    );
+    assert.deepEqual(backend(observe(s)), backend(observe(s), { samples: 32 }));
   }
 });
 

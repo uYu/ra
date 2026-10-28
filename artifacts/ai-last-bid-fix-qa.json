@@ -1,0 +1,68 @@
+{
+  "status": "withdrawn",
+  "reportedGame": {
+    "seed": 633511533,
+    "step": 255,
+    "epoch": 3,
+    "actor": 3,
+    "availableDisks": [
+      1,
+      4,
+      13
+    ],
+    "priorBids": [
+      null,
+      null,
+      null
+    ],
+    "reason": "invoke",
+    "lastBidder": true,
+    "lot": [
+      "nile",
+      "pharaoh",
+      "monument5"
+    ]
+  },
+  "reproduction": {
+    "before": "artifacts/ai-user-bid4-before.json",
+    "runs": 3,
+    "allSelected4": true,
+    "priorHeuristicSelected1": true,
+    "after": "artifacts/ai-user-bid4-after.json",
+    "resolvedBid": 1
+  },
+  "scope": "Only epoch3 final bidder keeps pass if legal and minimum legal winning disk; same constraint in auction continuation and TS/C++ candidates; earlier epochs/bidders retain jump bids; legal engine unchanged.",
+  "tests": {
+    "lastBidAndPerformance": {
+      "passed": 9,
+      "command": "node --experimental-strip-types --test tests/last-bid.test.ts tests/performance.test.ts"
+    },
+    "referenceAndRules": {
+      "passed": 5,
+      "command": "node --experimental-strip-types --test --test-name-pattern='Wasm rules, legal|native MCTS preserves|next-epoch search|auction search jumps|hard search is deterministic' tests/wasm.test.ts tests/ai.test.ts"
+    },
+    "worker": {
+      "passed": 4,
+      "command": "node --experimental-strip-types --test tests/worker.test.ts",
+      "localhostPermissionGranted": true
+    },
+    "productionBuild": "passed",
+    "fullSuiteRerun": false,
+    "initialValidationNotes": [
+      "One frozen-equivalence assertion failed because final-epoch candidate pruning intentionally changes search; preserve pre-final-epoch exact legacy comparison and use updated independent TS reference for final epoch.",
+      "First selected native-MCTS run omitted the fixture-populating rules test; rerun with that prerequisite passed."
+    ]
+  },
+  "sourceSha256": "e728f51202d058adb72401e396a042890fe04a2dc230e50bc3f98e554e58c868",
+  "wasmSha256": "4610f9619bb5ba9f1f4a49344f25defe21b6eeb13cffbee1c88993d68f687b83",
+  "servedWasmHashVerified": true,
+  "crossEpochStudy": {
+    "status": "running",
+    "frozenHashesVerified": 31,
+    "configurationUnchanged": true,
+    "newTournamentStarted": false
+  },
+  "withdrawalReason": "User rejected last-epoch last-bid bespoke pruning; it suppressed the symptom without identifying search bias.",
+  "productionWasmRestored": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "originalTestsDescribeWithdrawnRevision": true
+}

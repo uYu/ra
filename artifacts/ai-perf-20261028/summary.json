@@ -1,0 +1,5534 @@
+{
+  "createdAt": "2026-10-28T01:33:54.287Z",
+  "method": "V8 inspector CPU stack sampling of an O3 Wasm build with function names retained. Raw sample counts estimate CPU occupancy; no per-function clock instrumentation.",
+  "caveats": [
+    "Separate single-process workload alongside the untouched six-worker tournament. The requested nice adjustment was denied by the sandbox; reduced priority is not claimed. Absolute timings are not isolated latency benchmarks.",
+    "Optimized inlined callees are attributed to the surviving caller. Inclusive function percentages overlap and must not be added.",
+    "Categories use the nearest recognized frame; allocation-and-memory includes recognizable allocator/memory routines, not all copying. Exact ownership of inlined work may require further isolated experiments.",
+    "Positions are deterministic normal-policy mid-epoch public states, one turn and one auction per player count and epoch, rather than a frequency-weighted sample of the ongoing tournament."
+  ],
+  "compiler": "/Users/franzyu/Documents/code/otello/.build/emsdk/upstream/emscripten/em++",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fno-exceptions",
+    "-fno-threadsafe-statics",
+    "--no-entry",
+    "-sSTANDALONE_WASM=1",
+    "-sFILESYSTEM=0",
+    "-sMALLOC=emmalloc",
+    "-sINITIAL_MEMORY=33554432",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sSTACK_SIZE=1048576",
+    "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\"]",
+    "--profiling-funcs"
+  ],
+  "intervalUs": 200,
+  "samplesPerRoot": 128,
+  "repeats": 3,
+  "positions": 24,
+  "identicalExecutableSections": true,
+  "identicalFixedBudgetReports": true,
+  "protectedSourcesUnchanged": true,
+  "productionSourceSha256": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+  "productionWasmSha256": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+  "profileWasmSha256": "ac6f27e27ad961b565bcf2aa877d4b0f5655c121242f02bb5e2c634fb345fb69",
+  "protectedHashes": {
+    "native/ra_ai.cpp": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "native/wasm-build.json": "78bf67706aee97fcfb27660942d5ba9ba836f1836e6ed66235222ee5801e1bc9",
+    "src/game/ai/ra-ai.wasm": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+    "src/game/ai.ts": "87eaea654fe80c4eae183a890d1cd06b2a84fae1f7f5ffcfb44242b9def56f95",
+    "src/game/ai/search.ts": "69d9e5820237622cadca9b44be85000dd85da0431ef05445c2eb14eaee0e29a3",
+    "src/game/ai/wasm.ts": "1c010492904da9bf08ad422186f9ebec215cec4291a1dbf13bc2f43ee03c2424",
+    "src/game/ai/policy.ts": "68ed44877e1056ab8edc8245a1f2f91025757208c422d586993a491ec24b0392",
+    "src/game/ai/evaluation.ts": "58fdd0afa3ef0f4016a653d3845e54e88f7ef2feb08e1f8707b6deb3c0e31cd9",
+    "src/game/ai/sampling.ts": "e7404d153e5e7eb1956cf24003bdac64e8ec936a8a3431ac9c068fcb9676b45e",
+    "src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "src/game/data.ts": "2629b59a63483b3dccf9c2b47170d869008d345e33362d3adb0bbd1f37e08a9e",
+    "scripts/benchmark-tree.ts": "d1e8b73c9c1f36aa5019f18dca29c25f5e2753f306a31848c3d1cee9b6a17278",
+    "scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "scripts/summarize-budget.ts": "036ef83ef1ab361e04986550c10811e217d449c8ab1f203cb632e63a3d263ce1"
+  },
+  "baselineRows": [
+    {
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 60.98920799999905,
+      "samples": 256,
+      "transitions": 7420
+    },
+    {
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 100.46183400000155,
+      "samples": 512,
+      "transitions": 16527
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 51.73491699999795,
+      "samples": 256,
+      "transitions": 7706
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 47.39466700000048,
+      "samples": 384,
+      "transitions": 9435
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 27.936874999999418,
+      "samples": 256,
+      "transitions": 5867
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 48.73870799999713,
+      "samples": 384,
+      "transitions": 11445
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 108.29283299999952,
+      "samples": 256,
+      "transitions": 13519
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 174.84720799999923,
+      "samples": 384,
+      "transitions": 21874
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 129.8013749999991,
+      "samples": 256,
+      "transitions": 13158
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 202.54979100000128,
+      "samples": 512,
+      "transitions": 25384
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 61.049582999999984,
+      "samples": 256,
+      "transitions": 10486
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 117.49012500000026,
+      "samples": 384,
+      "transitions": 19633
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 91.92216700000063,
+      "samples": 256,
+      "transitions": 10068
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 341.17204200000197,
+      "samples": 512,
+      "transitions": 34694
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 126.95220899999913,
+      "samples": 256,
+      "transitions": 14793
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 120.80870800000048,
+      "samples": 256,
+      "transitions": 15858
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 68.45595899999898,
+      "samples": 384,
+      "transitions": 12596
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 108.6662499999984,
+      "samples": 384,
+      "transitions": 21757
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 125.36700000000201,
+      "samples": 256,
+      "transitions": 11587
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 330.72645799999736,
+      "samples": 384,
+      "transitions": 29444
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 244.62112499999785,
+      "samples": 256,
+      "transitions": 16166
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 347.16079199999876,
+      "samples": 384,
+      "transitions": 23913
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 134.29612500000076,
+      "samples": 256,
+      "transitions": 15801
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 135.48574999999983,
+      "samples": 256,
+      "transitions": 15243
+    }
+  ],
+  "profileRows": [
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 46.450291000001016,
+      "samples": 256,
+      "transitions": 7420
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 50.68974999999773,
+      "samples": 256,
+      "transitions": 7706
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 28.36187499999869,
+      "samples": 256,
+      "transitions": 5867
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 40.80833300000086,
+      "samples": 256,
+      "transitions": 7420
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 53.145541999998386,
+      "samples": 256,
+      "transitions": 7706
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 25.149875000002794,
+      "samples": 256,
+      "transitions": 5867
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 44.28087500000038,
+      "samples": 256,
+      "transitions": 7420
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 43.79624999999942,
+      "samples": 256,
+      "transitions": 7706
+    },
+    {
+      "count": 2,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 34.453958000001876,
+      "samples": 256,
+      "transitions": 5867
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 148.955750000001,
+      "samples": 512,
+      "transitions": 16527
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 82.32408399999986,
+      "samples": 384,
+      "transitions": 9435
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 54.853250000000116,
+      "samples": 384,
+      "transitions": 11445
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 119.28933400000096,
+      "samples": 512,
+      "transitions": 16527
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 52.061666999998124,
+      "samples": 384,
+      "transitions": 9435
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 66.35450000000128,
+      "samples": 384,
+      "transitions": 11445
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 125.34108300000298,
+      "samples": 512,
+      "transitions": 16527
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 70.13008400000035,
+      "samples": 384,
+      "transitions": 9435
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 68.11320799999885,
+      "samples": 384,
+      "transitions": 11445
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 228.26104199999827,
+      "samples": 256,
+      "transitions": 13519
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 119.24408300000141,
+      "samples": 256,
+      "transitions": 13158
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 58.92704099999901,
+      "samples": 256,
+      "transitions": 10486
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 93.39474999999948,
+      "samples": 256,
+      "transitions": 13519
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 129.44841700000325,
+      "samples": 256,
+      "transitions": 13158
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 75.56329199999891,
+      "samples": 256,
+      "transitions": 10486
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 119.14070899999933,
+      "samples": 256,
+      "transitions": 13519
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 124.03416700000162,
+      "samples": 256,
+      "transitions": 13158
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 64.73400000000038,
+      "samples": 256,
+      "transitions": 10486
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 178.91112499999872,
+      "samples": 384,
+      "transitions": 21874
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 256.1967500000028,
+      "samples": 512,
+      "transitions": 25384
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 141.70933299999888,
+      "samples": 384,
+      "transitions": 19633
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 179.03220900000088,
+      "samples": 384,
+      "transitions": 21874
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 243.82683299999917,
+      "samples": 512,
+      "transitions": 25384
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 123.81195799999841,
+      "samples": 384,
+      "transitions": 19633
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 168.70958400000018,
+      "samples": 384,
+      "transitions": 21874
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 226.61570800000118,
+      "samples": 512,
+      "transitions": 25384
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 125.45725000000311,
+      "samples": 384,
+      "transitions": 19633
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 90.5470830000013,
+      "samples": 256,
+      "transitions": 10068
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 158.56645800000115,
+      "samples": 256,
+      "transitions": 14793
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 77.6874160000043,
+      "samples": 384,
+      "transitions": 12596
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 101.3703749999986,
+      "samples": 256,
+      "transitions": 10068
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 142.64545800000633,
+      "samples": 256,
+      "transitions": 14793
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 69.39783300000272,
+      "samples": 384,
+      "transitions": 12596
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 105.45179199999984,
+      "samples": 256,
+      "transitions": 10068
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 161.3523750000022,
+      "samples": 256,
+      "transitions": 14793
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 71.06970900000306,
+      "samples": 384,
+      "transitions": 12596
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 370.78433300000324,
+      "samples": 512,
+      "transitions": 34694
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 162.2015839999949,
+      "samples": 256,
+      "transitions": 15858
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 116.37841599999956,
+      "samples": 384,
+      "transitions": 21757
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 359.49349999999686,
+      "samples": 512,
+      "transitions": 34694
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 156.33591599999636,
+      "samples": 256,
+      "transitions": 15858
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 119.11791700000322,
+      "samples": 384,
+      "transitions": 21757
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 356.4249589999963,
+      "samples": 512,
+      "transitions": 34694
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 133.45183299999917,
+      "samples": 256,
+      "transitions": 15858
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 121.35154099999636,
+      "samples": 384,
+      "transitions": 21757
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 140.2950420000052,
+      "samples": 256,
+      "transitions": 11587
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 281.29779199999757,
+      "samples": 256,
+      "transitions": 16166
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 186.7841249999983,
+      "samples": 256,
+      "transitions": 15801
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 115.36262500000157,
+      "samples": 256,
+      "transitions": 11587
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 259.33616600000096,
+      "samples": 256,
+      "transitions": 16166
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 151.2085420000003,
+      "samples": 256,
+      "transitions": 15801
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 147.66049999999814,
+      "samples": 256,
+      "transitions": 11587
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 267.9386249999952,
+      "samples": 256,
+      "transitions": 16166
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 157.18458400000236,
+      "samples": 256,
+      "transitions": 15801
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 0,
+      "ms": 392.39808300000004,
+      "samples": 384,
+      "transitions": 29444
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 0,
+      "ms": 354.53758299999754,
+      "samples": 384,
+      "transitions": 23913
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 0,
+      "ms": 137.38824999999633,
+      "samples": 256,
+      "transitions": 15243
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 1,
+      "ms": 365.9771660000042,
+      "samples": 384,
+      "transitions": 29444
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 1,
+      "ms": 357.1007499999978,
+      "samples": 384,
+      "transitions": 23913
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 1,
+      "ms": 147.45058399999834,
+      "samples": 256,
+      "transitions": 15243
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 1,
+      "repeat": 2,
+      "ms": 366.1141669999997,
+      "samples": 384,
+      "transitions": 29444
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 2,
+      "repeat": 2,
+      "ms": 363.9773750000022,
+      "samples": 384,
+      "transitions": 23913
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "repeat": 2,
+      "ms": 159.26120800000353,
+      "samples": 256,
+      "transitions": 15243
+    }
+  ],
+  "groups": [
+    {
+      "count": 2,
+      "phase": "turn",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/2p-turn.cpuprofile",
+      "samples": 1428,
+      "wasmSamples": 1406,
+      "wasmPercent": 98.4593837535014,
+      "durationMs": 394.182,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 460,
+          "percent": 32.212885154061624
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 406,
+          "percent": 28.431372549019606
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 142,
+          "percent": 9.943977591036415
+        },
+        {
+          "name": "state-copy",
+          "hits": 110,
+          "percent": 7.703081232492997
+        },
+        {
+          "name": "auction-plan",
+          "hits": 98,
+          "percent": 6.862745098039215
+        },
+        {
+          "name": "other-policy",
+          "hits": 88,
+          "percent": 6.162464985994398
+        },
+        {
+          "name": "other-wasm",
+          "hits": 81,
+          "percent": 5.6722689075630255
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 22,
+          "percent": 1.5406162464985995
+        },
+        {
+          "name": "rules",
+          "hits": 21,
+          "percent": 1.4705882352941178
+        }
+      ],
+      "functions": [
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 220,
+          "inclusive": 504,
+          "selfPercent": 15.406162464985995,
+          "inclusivePercent": 35.294117647058826
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 151,
+          "inclusive": 151,
+          "selfPercent": 10.57422969187675,
+          "inclusivePercent": 10.57422969187675
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 137,
+          "inclusive": 280,
+          "selfPercent": 9.593837535014005,
+          "inclusivePercent": 19.607843137254903
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 116,
+          "inclusive": 116,
+          "selfPercent": 8.123249299719888,
+          "inclusivePercent": 8.123249299719888
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 81,
+          "inclusive": 81,
+          "selfPercent": 5.6722689075630255,
+          "inclusivePercent": 5.6722689075630255
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 72,
+          "inclusive": 72,
+          "selfPercent": 5.042016806722689,
+          "inclusivePercent": 5.042016806722689
+        },
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 69,
+          "inclusive": 69,
+          "selfPercent": 4.831932773109243,
+          "inclusivePercent": 4.831932773109243
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 59,
+          "inclusive": 78,
+          "selfPercent": 4.131652661064426,
+          "inclusivePercent": 5.46218487394958
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 55,
+          "inclusive": 859,
+          "selfPercent": 3.8515406162464987,
+          "inclusivePercent": 60.15406162464986
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 55,
+          "inclusive": 171,
+          "selfPercent": 3.8515406162464987,
+          "inclusivePercent": 11.974789915966387
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 55,
+          "inclusive": 139,
+          "selfPercent": 3.8515406162464987,
+          "inclusivePercent": 9.733893557422968
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 52,
+          "inclusive": 96,
+          "selfPercent": 3.641456582633053,
+          "inclusivePercent": 6.722689075630252
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 51,
+          "inclusive": 282,
+          "selfPercent": 3.5714285714285716,
+          "inclusivePercent": 19.747899159663866
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 37,
+          "inclusive": 68,
+          "selfPercent": 2.5910364145658265,
+          "inclusivePercent": 4.761904761904762
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 35,
+          "inclusive": 277,
+          "selfPercent": 2.450980392156863,
+          "inclusivePercent": 19.397759103641455
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 25,
+          "inclusive": 1371,
+          "selfPercent": 1.7507002801120448,
+          "inclusivePercent": 96.00840336134453
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 14,
+          "inclusive": 82,
+          "selfPercent": 0.9803921568627451,
+          "inclusivePercent": 5.742296918767507
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 14,
+          "inclusive": 25,
+          "selfPercent": 0.9803921568627451,
+          "inclusivePercent": 1.7507002801120448
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 885,
+          "selfPercent": 0.8403361344537815,
+          "inclusivePercent": 61.97478991596638
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 27,
+          "selfPercent": 0.8403361344537815,
+          "inclusivePercent": 1.8907563025210083
+        },
+        {
+          "name": "compileForInternalLoader",
+          "url": "node:internal/bootstrap/realm",
+          "self": 12,
+          "inclusive": 12,
+          "selfPercent": 0.8403361344537815,
+          "inclusivePercent": 0.8403361344537815
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 10,
+          "inclusive": 34,
+          "selfPercent": 0.7002801120448179,
+          "inclusivePercent": 2.380952380952381
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 10,
+          "inclusive": 10,
+          "selfPercent": 0.7002801120448179,
+          "inclusivePercent": 0.7002801120448179
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 9,
+          "inclusive": 136,
+          "selfPercent": 0.6302521008403361,
+          "inclusivePercent": 9.523809523809524
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 8,
+          "selfPercent": 0.5602240896358543,
+          "inclusivePercent": 0.5602240896358543
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.35014005602240894,
+          "inclusivePercent": 0.35014005602240894
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 14,
+          "selfPercent": 0.35014005602240894,
+          "inclusivePercent": 0.9803921568627451
+        },
+        {
+          "name": "memcmp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.35014005602240894,
+          "inclusivePercent": 0.35014005602240894
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 11,
+          "selfPercent": 0.2801120448179272,
+          "inclusivePercent": 0.7703081232492998
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 6,
+          "selfPercent": 0.2801120448179272,
+          "inclusivePercent": 0.42016806722689076
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.2801120448179272,
+          "inclusivePercent": 0.2801120448179272
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.2801120448179272,
+          "inclusivePercent": 0.2801120448179272
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 118,
+          "selfPercent": 0.21008403361344538,
+          "inclusivePercent": 8.263305322128852
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 34,
+          "selfPercent": 0.21008403361344538,
+          "inclusivePercent": 2.380952380952381
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 6,
+          "selfPercent": 0.21008403361344538,
+          "inclusivePercent": 0.42016806722689076
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 36,
+          "selfPercent": 0.1400560224089636,
+          "inclusivePercent": 2.5210084033613445
+        },
+        {
+          "name": "claim_more_memory",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.1400560224089636,
+          "inclusivePercent": 0.1400560224089636
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 1,
+          "inclusive": 1394,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 97.61904761904762
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 7,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.49019607843137253
+        },
+        {
+          "name": "void std::__2::__sort4[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "std::__2::vector<Action, std::__2::allocator<Action>>::push_back[abi:nn200100](Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.1400560224089636
+        },
+        {
+          "name": "isDeepStrictEqual",
+          "url": "node:internal/util/comparisons",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.1400560224089636
+        },
+        {
+          "name": "objEquiv",
+          "url": "node:internal/util/comparisons",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::insert(unsigned long, char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "std::__2::__next_prime(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "readList(int, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "expm1",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.0700280112044818,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 1428,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 0,
+          "inclusive": 5,
+          "selfPercent": 0,
+          "inclusivePercent": 0.35014005602240894
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 1378,
+          "selfPercent": 0,
+          "inclusivePercent": 96.49859943977592
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1372,
+          "selfPercent": 0,
+          "inclusivePercent": 96.07843137254902
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 1372,
+          "selfPercent": 0,
+          "inclusivePercent": 96.07843137254902
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 49,
+          "selfPercent": 0,
+          "inclusivePercent": 3.4313725490196076
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 18,
+          "selfPercent": 0,
+          "inclusivePercent": 1.2605042016806722
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 8,
+          "selfPercent": 0,
+          "inclusivePercent": 0.5602240896358543
+        },
+        {
+          "name": "requireBuiltin",
+          "url": "node:internal/bootstrap/realm",
+          "self": 0,
+          "inclusive": 12,
+          "selfPercent": 0,
+          "inclusivePercent": 0.8403361344537815
+        },
+        {
+          "name": "lazyLoadComparison",
+          "url": "node:assert",
+          "self": 0,
+          "inclusive": 12,
+          "selfPercent": 0,
+          "inclusivePercent": 0.8403361344537815
+        },
+        {
+          "name": "deepStrictEqual",
+          "url": "node:assert",
+          "self": 0,
+          "inclusive": 14,
+          "selfPercent": 0,
+          "inclusivePercent": 0.9803921568627451
+        },
+        {
+          "name": "keyCheck",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "objectComparisonStart",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "innerDeepEqual",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "detectCycles",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.0700280112044818
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.1400560224089636
+        },
+        {
+          "name": "std::__2::__hash_table<std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>, std::__2::__unordered_map_hasher<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>, std::__2::hash<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, std::__2::equal_to<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, true>, std::__2::__unordered_map_equal<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>, std::__2::equal_to<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, std::__2::hash<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, true>, std::__2::allocator<std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>>>::~__hash_table()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.21008403361344538
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.21008403361344538
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.1400560224089636
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "phase": "auction",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/2p-auction.cpuprofile",
+      "samples": 2632,
+      "wasmSamples": 2622,
+      "wasmPercent": 99.62006079027356,
+      "durationMs": 808.792,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 885,
+          "percent": 33.62462006079027
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 762,
+          "percent": 28.951367781155014
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 292,
+          "percent": 11.094224924012158
+        },
+        {
+          "name": "state-copy",
+          "hits": 208,
+          "percent": 7.90273556231003
+        },
+        {
+          "name": "auction-plan",
+          "hits": 191,
+          "percent": 7.256838905775076
+        },
+        {
+          "name": "other-wasm",
+          "hits": 138,
+          "percent": 5.243161094224924
+        },
+        {
+          "name": "other-policy",
+          "hits": 113,
+          "percent": 4.293313069908814
+        },
+        {
+          "name": "rules",
+          "hits": 33,
+          "percent": 1.2537993920972645
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 10,
+          "percent": 0.3799392097264438
+        }
+      ],
+      "functions": [
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 422,
+          "inclusive": 980,
+          "selfPercent": 16.033434650455927,
+          "inclusivePercent": 37.234042553191486
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 257,
+          "inclusive": 257,
+          "selfPercent": 9.764437689969604,
+          "inclusivePercent": 9.764437689969604
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 257,
+          "inclusive": 491,
+          "selfPercent": 9.764437689969604,
+          "inclusivePercent": 18.65501519756839
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 245,
+          "inclusive": 245,
+          "selfPercent": 9.308510638297872,
+          "inclusivePercent": 9.308510638297872
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 174,
+          "inclusive": 174,
+          "selfPercent": 6.6109422492401215,
+          "inclusivePercent": 6.6109422492401215
+        },
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 143,
+          "inclusive": 143,
+          "selfPercent": 5.433130699088146,
+          "inclusivePercent": 5.433130699088146
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 137,
+          "inclusive": 137,
+          "selfPercent": 5.2051671732522795,
+          "inclusivePercent": 5.2051671732522795
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 135,
+          "inclusive": 1586,
+          "selfPercent": 5.12917933130699,
+          "inclusivePercent": 60.25835866261398
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 134,
+          "inclusive": 162,
+          "selfPercent": 5.091185410334346,
+          "inclusivePercent": 6.155015197568389
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 117,
+          "inclusive": 265,
+          "selfPercent": 4.445288753799392,
+          "inclusivePercent": 10.06838905775076
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 107,
+          "inclusive": 337,
+          "selfPercent": 4.065349544072948,
+          "inclusivePercent": 12.803951367781155
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 84,
+          "inclusive": 496,
+          "selfPercent": 3.1914893617021276,
+          "inclusivePercent": 18.84498480243161
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 82,
+          "inclusive": 179,
+          "selfPercent": 3.115501519756839,
+          "inclusivePercent": 6.800911854103344
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 54,
+          "inclusive": 2571,
+          "selfPercent": 2.0516717325227964,
+          "inclusivePercent": 97.6823708206687
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 48,
+          "inclusive": 435,
+          "selfPercent": 1.8237082066869301,
+          "inclusivePercent": 16.527355623100306
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 43,
+          "inclusive": 108,
+          "selfPercent": 1.6337386018237081,
+          "inclusivePercent": 4.103343465045593
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 20,
+          "inclusive": 45,
+          "selfPercent": 0.7598784194528876,
+          "inclusivePercent": 1.709726443768997
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 19,
+          "inclusive": 19,
+          "selfPercent": 0.7218844984802432,
+          "inclusivePercent": 0.7218844984802432
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 16,
+          "inclusive": 33,
+          "selfPercent": 0.60790273556231,
+          "inclusivePercent": 1.2537993920972645
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 15,
+          "inclusive": 1565,
+          "selfPercent": 0.5699088145896657,
+          "inclusivePercent": 59.46048632218845
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 13,
+          "inclusive": 121,
+          "selfPercent": 0.4939209726443769,
+          "inclusivePercent": 4.59726443768997
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 287,
+          "selfPercent": 0.45592705167173253,
+          "inclusivePercent": 10.904255319148936
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 53,
+          "selfPercent": 0.45592705167173253,
+          "inclusivePercent": 2.013677811550152
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 10,
+          "inclusive": 15,
+          "selfPercent": 0.3799392097264438,
+          "inclusivePercent": 0.5699088145896657
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 22,
+          "selfPercent": 0.303951367781155,
+          "inclusivePercent": 0.8358662613981763
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 6,
+          "inclusive": 6,
+          "selfPercent": 0.22796352583586627,
+          "inclusivePercent": 0.22796352583586627
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 83,
+          "selfPercent": 0.1899696048632219,
+          "inclusivePercent": 3.153495440729483
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.1899696048632219,
+          "inclusivePercent": 0.1899696048632219
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 252,
+          "selfPercent": 0.1519756838905775,
+          "inclusivePercent": 9.574468085106384
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.1519756838905775,
+          "inclusivePercent": 0.1519756838905775
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.1519756838905775,
+          "inclusivePercent": 0.1519756838905775
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 88,
+          "selfPercent": 0.11398176291793313,
+          "inclusivePercent": 3.3434650455927053
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 17,
+          "selfPercent": 0.11398176291793313,
+          "inclusivePercent": 0.6458966565349544
+        },
+        {
+          "name": "memcmp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.11398176291793313,
+          "inclusivePercent": 0.11398176291793313
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.11398176291793313,
+          "inclusivePercent": 0.11398176291793313
+        },
+        {
+          "name": "bool std::__2::__cond_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.07598784194528875,
+          "inclusivePercent": 0.07598784194528875
+        },
+        {
+          "name": "claim_more_memory",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.07598784194528875,
+          "inclusivePercent": 0.07598784194528875
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 5,
+          "selfPercent": 0.07598784194528875,
+          "inclusivePercent": 0.1899696048632219
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 8,
+          "selfPercent": 0.07598784194528875,
+          "inclusivePercent": 0.303951367781155
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 9,
+          "selfPercent": 0.07598784194528875,
+          "inclusivePercent": 0.34194528875379937
+        },
+        {
+          "name": "expm1",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.07598784194528875,
+          "inclusivePercent": 0.07598784194528875
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "makeTiles",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/data.ts",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 1,
+          "inclusive": 8,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.303951367781155
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2575,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 97.83434650455926
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 32,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 1.21580547112462
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 95,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 3.6094224924012157
+        },
+        {
+          "name": "bool std::__2::__sort3[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.07598784194528875
+        },
+        {
+          "name": "std::__2::vector<Action, std::__2::allocator<Action>>::push_back[abi:nn200100](Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.07598784194528875
+        },
+        {
+          "name": "bool std::__2::__partially_sorted_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "void std::__2::__sort5[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 4,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.1519756838905775
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 4,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.1519756838905775
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "void std::__2::__stable_sort<std::__2::_ClassicAlgPolicy, godChoices(State const&)::$_0&, std::__2::__wrap_iter<GodChoice*>>(std::__2::__wrap_iter<GodChoice*>, std::__2::__wrap_iter<GodChoice*>, godChoices(State const&)::$_0&, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::difference_type, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::value_type*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.037993920972644375,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 2585,
+          "selfPercent": 0,
+          "inclusivePercent": 98.21428571428571
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 2632,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 2584,
+          "selfPercent": 0,
+          "inclusivePercent": 98.17629179331307
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 2575,
+          "selfPercent": 0,
+          "inclusivePercent": 97.83434650455926
+        },
+        {
+          "name": "void std::__2::__sort4[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.07598784194528875
+        },
+        {
+          "name": "std::__2::allocation_result<char*, unsigned long> std::__2::allocator_traits<std::__2::allocator<char>>::allocate_at_least[abi:nn200100]<std::__2::allocator<char>>(std::__2::allocator<char>&, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.037993920972644375
+        },
+        {
+          "name": "std::__2::__hash_table<std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>, std::__2::__unordered_map_hasher<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>, std::__2::hash<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, std::__2::equal_to<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, true>, std::__2::__unordered_map_equal<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>, std::__2::equal_to<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, std::__2::hash<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>, true>, std::__2::allocator<std::__2::__hash_value_type<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::unique_ptr<Node, std::__2::default_delete<Node>>>>>::~__hash_table()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.11398176291793313
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "phase": "turn",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/3p-turn.cpuprofile",
+      "samples": 3218,
+      "wasmSamples": 3208,
+      "wasmPercent": 99.68924798011187,
+      "durationMs": 1192.086,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 1178,
+          "percent": 36.606587942821626
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 1080,
+          "percent": 33.56121814791796
+        },
+        {
+          "name": "state-copy",
+          "hits": 321,
+          "percent": 9.97513983840895
+        },
+        {
+          "name": "auction-plan",
+          "hits": 291,
+          "percent": 9.042883778744562
+        },
+        {
+          "name": "other-policy",
+          "hits": 124,
+          "percent": 3.853325046612803
+        },
+        {
+          "name": "other-wasm",
+          "hits": 108,
+          "percent": 3.356121814791796
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 80,
+          "percent": 2.4860161591050343
+        },
+        {
+          "name": "rules",
+          "hits": 26,
+          "percent": 0.8079552517091361
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 10,
+          "percent": 0.3107520198881293
+        }
+      ],
+      "functions": [
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 415,
+          "inclusive": 1285,
+          "selfPercent": 12.896208825357364,
+          "inclusivePercent": 39.93163455562461
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 386,
+          "inclusive": 386,
+          "selfPercent": 11.99502796768179,
+          "inclusivePercent": 11.99502796768179
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 355,
+          "inclusive": 710,
+          "selfPercent": 11.031696706028589,
+          "inclusivePercent": 22.063393412057177
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 347,
+          "inclusive": 347,
+          "selfPercent": 10.783095090118087,
+          "inclusivePercent": 10.783095090118087
+        },
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 262,
+          "inclusive": 262,
+          "selfPercent": 8.141702921068987,
+          "inclusivePercent": 8.141702921068987
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 211,
+          "inclusive": 508,
+          "selfPercent": 6.556867619639528,
+          "inclusivePercent": 15.786202610316968
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 205,
+          "inclusive": 205,
+          "selfPercent": 6.37041640770665,
+          "inclusivePercent": 6.37041640770665
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 185,
+          "inclusive": 500,
+          "selfPercent": 5.748912367930392,
+          "inclusivePercent": 15.537600994406464
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 140,
+          "inclusive": 2341,
+          "selfPercent": 4.35052827843381,
+          "inclusivePercent": 72.74704785581106
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 135,
+          "inclusive": 241,
+          "selfPercent": 4.195152268489745,
+          "inclusivePercent": 7.4891236793039155
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 122,
+          "inclusive": 253,
+          "selfPercent": 3.7911746426351773,
+          "inclusivePercent": 7.86202610316967
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 105,
+          "inclusive": 764,
+          "selfPercent": 3.2628962088253575,
+          "inclusivePercent": 23.741454319453076
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 63,
+          "inclusive": 63,
+          "selfPercent": 1.9577377252952144,
+          "inclusivePercent": 1.9577377252952144
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 57,
+          "inclusive": 605,
+          "selfPercent": 1.7712865133623368,
+          "inclusivePercent": 18.80049720323182
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 42,
+          "inclusive": 52,
+          "selfPercent": 1.3051584835301429,
+          "inclusivePercent": 1.6159105034182721
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 24,
+          "inclusive": 3113,
+          "selfPercent": 0.7458048477315102,
+          "inclusivePercent": 96.73710379117465
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 19,
+          "inclusive": 147,
+          "selfPercent": 0.5904288377874456,
+          "inclusivePercent": 4.5680546923555
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 16,
+          "inclusive": 34,
+          "selfPercent": 0.49720323182100684,
+          "inclusivePercent": 1.0565568676196395
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 13,
+          "inclusive": 2292,
+          "selfPercent": 0.40397762585456803,
+          "inclusivePercent": 71.22436295835922
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 13,
+          "inclusive": 33,
+          "selfPercent": 0.40397762585456803,
+          "inclusivePercent": 1.0254816656308265
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 273,
+          "selfPercent": 0.3729024238657551,
+          "inclusivePercent": 8.483530142945929
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 11,
+          "inclusive": 31,
+          "selfPercent": 0.3418272218769422,
+          "inclusivePercent": 0.9633312616532007
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 10,
+          "inclusive": 157,
+          "selfPercent": 0.3107520198881293,
+          "inclusivePercent": 4.878806712243629
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 9,
+          "inclusive": 61,
+          "selfPercent": 0.27967681789931637,
+          "inclusivePercent": 1.8955873213175887
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 74,
+          "selfPercent": 0.24860161591050342,
+          "inclusivePercent": 2.2995649471721564
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 109,
+          "selfPercent": 0.15537600994406464,
+          "inclusivePercent": 3.387197016780609
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 24,
+          "selfPercent": 0.15537600994406464,
+          "inclusivePercent": 0.7458048477315102
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.15537600994406464,
+          "inclusivePercent": 0.15537600994406464
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 10,
+          "selfPercent": 0.12430080795525171,
+          "inclusivePercent": 0.3107520198881293
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.12430080795525171,
+          "inclusivePercent": 0.12430080795525171
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.12430080795525171,
+          "inclusivePercent": 0.12430080795525171
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.09322560596643878,
+          "inclusivePercent": 0.09322560596643878
+        },
+        {
+          "name": "void std::__2::__stable_sort<std::__2::_ClassicAlgPolicy, godChoices(State const&)::$_0&, std::__2::__wrap_iter<GodChoice*>>(std::__2::__wrap_iter<GodChoice*>, std::__2::__wrap_iter<GodChoice*>, godChoices(State const&)::$_0&, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::difference_type, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::value_type*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.09322560596643878,
+          "inclusivePercent": 0.09322560596643878
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 5,
+          "selfPercent": 0.09322560596643878,
+          "inclusivePercent": 0.15537600994406464
+        },
+        {
+          "name": "std::__2::__itoa::__append2[abi:nn200100](char*, unsigned int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.062150403977625855,
+          "inclusivePercent": 0.062150403977625855
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.062150403977625855,
+          "inclusivePercent": 0.062150403977625855
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 1,
+          "inclusive": 3123,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 97.04785581106277
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 3119,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 96.92355500310752
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 126,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 3.915475450590429
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 8,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.24860161591050342
+        },
+        {
+          "name": "std::__2::__next_prime(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "(program)",
+          "url": "",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 8,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.24860161591050342
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 8,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.24860161591050342
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "void std::__2::vector<int, std::__2::allocator<int>>::__assign_with_size[abi:nn200100]<int*, int*>(int*, int*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.062150403977625855
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "void std::__2::__sort4[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.031075201988812928,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.09322560596643878
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 3218,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 3114,
+          "selfPercent": 0,
+          "inclusivePercent": 96.76817899316346
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 3114,
+          "selfPercent": 0,
+          "inclusivePercent": 96.76817899316346
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 14,
+          "selfPercent": 0,
+          "inclusivePercent": 0.435052827843381
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 0,
+          "inclusive": 4,
+          "selfPercent": 0,
+          "inclusivePercent": 0.12430080795525171
+        },
+        {
+          "name": "std::__2::allocation_result<char*, unsigned long> std::__2::allocator_traits<std::__2::allocator<char>>::allocate_at_least[abi:nn200100]<std::__2::allocator<char>>(std::__2::allocator<char>&, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.031075201988812928
+        },
+        {
+          "name": "void std::__2::__sort<std::__2::__less<int, int>&, int*>(int*, int*, std::__2::__less<int, int>&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.031075201988812928
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "phase": "auction",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/3p-auction.cpuprofile",
+      "samples": 6346,
+      "wasmSamples": 6330,
+      "wasmPercent": 99.74787267570123,
+      "durationMs": 1673.676,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 2330,
+          "percent": 36.716041601008506
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 2143,
+          "percent": 33.76930349826662
+        },
+        {
+          "name": "state-copy",
+          "hits": 622,
+          "percent": 9.801449732114717
+        },
+        {
+          "name": "auction-plan",
+          "hits": 552,
+          "percent": 8.698392688307596
+        },
+        {
+          "name": "other-policy",
+          "hits": 220,
+          "percent": 3.4667507091080996
+        },
+        {
+          "name": "other-wasm",
+          "hits": 216,
+          "percent": 3.403718878033407
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 174,
+          "percent": 2.741884651749133
+        },
+        {
+          "name": "rules",
+          "hits": 73,
+          "percent": 1.1503309171131422
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 16,
+          "percent": 0.2521273242987709
+        }
+      ],
+      "functions": [
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 846,
+          "inclusive": 2557,
+          "selfPercent": 13.33123227229751,
+          "inclusivePercent": 40.29309801449732
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 800,
+          "inclusive": 800,
+          "selfPercent": 12.606366214938545,
+          "inclusivePercent": 12.606366214938545
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 683,
+          "inclusive": 1431,
+          "selfPercent": 10.762685156003782,
+          "inclusivePercent": 22.54963756697132
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 675,
+          "inclusive": 675,
+          "selfPercent": 10.636621493854397,
+          "inclusivePercent": 10.636621493854397
+        },
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 499,
+          "inclusive": 499,
+          "selfPercent": 7.863220926567917,
+          "inclusivePercent": 7.863220926567917
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 404,
+          "inclusive": 404,
+          "selfPercent": 6.366214938543965,
+          "inclusivePercent": 6.366214938543965
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 385,
+          "inclusive": 1028,
+          "selfPercent": 6.066813740939175,
+          "inclusivePercent": 16.19918058619603
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 369,
+          "inclusive": 1019,
+          "selfPercent": 5.814686416640403,
+          "inclusivePercent": 16.05735896627797
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 255,
+          "inclusive": 4637,
+          "selfPercent": 4.018279231011661,
+          "inclusivePercent": 73.06965017333754
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 248,
+          "inclusive": 527,
+          "selfPercent": 3.9079735266309488,
+          "inclusivePercent": 8.304443744090765
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 228,
+          "inclusive": 1562,
+          "selfPercent": 3.592814371257485,
+          "inclusivePercent": 24.613930034667508
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 228,
+          "inclusive": 452,
+          "selfPercent": 3.592814371257485,
+          "inclusivePercent": 7.122596911440278
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 141,
+          "inclusive": 141,
+          "selfPercent": 2.221872045382918,
+          "inclusivePercent": 2.221872045382918
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 90,
+          "inclusive": 111,
+          "selfPercent": 1.4182161991805862,
+          "inclusivePercent": 1.749133312322723
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 81,
+          "inclusive": 949,
+          "selfPercent": 1.2763945792625275,
+          "inclusivePercent": 14.954301922470847
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 52,
+          "inclusive": 6178,
+          "selfPercent": 0.8194138039710054,
+          "inclusivePercent": 97.3526630948629
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 47,
+          "inclusive": 281,
+          "selfPercent": 0.7406240151276394,
+          "inclusivePercent": 4.427986132997163
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 40,
+          "inclusive": 4506,
+          "selfPercent": 0.6303183107469272,
+          "inclusivePercent": 71.00535770564134
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 32,
+          "inclusive": 65,
+          "selfPercent": 0.5042546485975418,
+          "inclusivePercent": 1.0242672549637566
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 30,
+          "inclusive": 65,
+          "selfPercent": 0.4727387330601954,
+          "inclusivePercent": 1.0242672549637566
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 28,
+          "inclusive": 59,
+          "selfPercent": 0.44122281752284903,
+          "inclusivePercent": 0.9297195083517176
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 23,
+          "inclusive": 120,
+          "selfPercent": 0.3624330286794831,
+          "inclusivePercent": 1.8909549322407817
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 19,
+          "inclusive": 281,
+          "selfPercent": 0.2994011976047904,
+          "inclusivePercent": 4.427986132997163
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 17,
+          "inclusive": 42,
+          "selfPercent": 0.26788528206744405,
+          "inclusivePercent": 0.6618342262842736
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 16,
+          "inclusive": 16,
+          "selfPercent": 0.2521273242987709,
+          "inclusivePercent": 0.2521273242987709
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 13,
+          "inclusive": 164,
+          "selfPercent": 0.20485345099275135,
+          "inclusivePercent": 2.5843050740624016
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 530,
+          "selfPercent": 0.18909549322407815,
+          "inclusivePercent": 8.351717617396785
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 198,
+          "selfPercent": 0.12606366214938544,
+          "inclusivePercent": 3.1200756381972896
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 184,
+          "selfPercent": 0.11030570438071226,
+          "inclusivePercent": 2.899464229435865
+        },
+        {
+          "name": "memcmp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 7,
+          "selfPercent": 0.11030570438071226,
+          "inclusivePercent": 0.11030570438071226
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 9,
+          "selfPercent": 0.0787897888433659,
+          "inclusivePercent": 0.1418216199180586
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 13,
+          "selfPercent": 0.0787897888433659,
+          "inclusivePercent": 0.20485345099275135
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.0787897888433659,
+          "inclusivePercent": 0.0787897888433659
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 7,
+          "selfPercent": 0.0787897888433659,
+          "inclusivePercent": 0.11030570438071226
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 4,
+          "inclusive": 6,
+          "selfPercent": 0.06303183107469272,
+          "inclusivePercent": 0.09454774661203907
+        },
+        {
+          "name": "void std::__2::__stable_sort<std::__2::_ClassicAlgPolicy, godChoices(State const&)::$_0&, std::__2::__wrap_iter<GodChoice*>>(std::__2::__wrap_iter<GodChoice*>, std::__2::__wrap_iter<GodChoice*>, godChoices(State const&)::$_0&, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::difference_type, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::value_type*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.06303183107469272,
+          "inclusivePercent": 0.06303183107469272
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.04727387330601954,
+          "inclusivePercent": 0.04727387330601954
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 9,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.1418216199180586
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 5,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.0787897888433659
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 6,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.09454774661203907
+        },
+        {
+          "name": "structuredClone",
+          "url": "",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "encodeState",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "std::__2::__itoa::__append2[abi:nn200100](char*, unsigned int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "bool std::__2::__cond_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "keyCheck",
+          "url": "node:internal/util/comparisons",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "required(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "dispatch",
+          "url": "",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.03151591553734636,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 3,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.04727387330601954
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 1,
+          "inclusive": 7,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.11030570438071226
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 6194,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 97.60479041916167
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 6186,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 97.4787267570123
+        },
+        {
+          "name": "std::__2::allocation_result<char*, unsigned long> std::__2::allocator_traits<std::__2::allocator<char>>::allocate_at_least[abi:nn200100]<std::__2::allocator<char>>(std::__2::allocator<char>&, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 15,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.2363693665300977
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 25,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.3939489442168295
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.01575795776867318
+        },
+        {
+          "name": "bool std::__2::__partially_sorted_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.01575795776867318
+        },
+        {
+          "name": "void std::__2::__sort4[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.01575795776867318
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.01575795776867318,
+          "inclusivePercent": 0.01575795776867318
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 6199,
+          "selfPercent": 0,
+          "inclusivePercent": 97.68358020800504
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.04727387330601954
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 6346,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 6183,
+          "selfPercent": 0,
+          "inclusivePercent": 97.43145288370627
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "objectComparisonStart",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "innerDeepEqual",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "detectCycles",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "isDeepStrictEqual",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "deepStrictEqual",
+          "url": "node:assert",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03151591553734636
+        },
+        {
+          "name": "objEquiv",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.01575795776867318
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "phase": "turn",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/4p-turn.cpuprofile",
+      "samples": 3744,
+      "wasmSamples": 3736,
+      "wasmPercent": 99.78632478632478,
+      "durationMs": 997.823,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 1472,
+          "percent": 39.31623931623932
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 1171,
+          "percent": 31.2767094017094
+        },
+        {
+          "name": "state-copy",
+          "hits": 381,
+          "percent": 10.176282051282051
+        },
+        {
+          "name": "auction-plan",
+          "hits": 313,
+          "percent": 8.360042735042734
+        },
+        {
+          "name": "other-policy",
+          "hits": 144,
+          "percent": 3.8461538461538463
+        },
+        {
+          "name": "other-wasm",
+          "hits": 120,
+          "percent": 3.2051282051282053
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 103,
+          "percent": 2.751068376068376
+        },
+        {
+          "name": "rules",
+          "hits": 32,
+          "percent": 0.8547008547008547
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 8,
+          "percent": 0.21367521367521367
+        }
+      ],
+      "functions": [
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 480,
+          "inclusive": 480,
+          "selfPercent": 12.820512820512821,
+          "inclusivePercent": 12.820512820512821
+        },
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 458,
+          "inclusive": 1592,
+          "selfPercent": 12.232905982905983,
+          "inclusivePercent": 42.52136752136752
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 433,
+          "inclusive": 433,
+          "selfPercent": 11.56517094017094,
+          "inclusivePercent": 11.56517094017094
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 373,
+          "inclusive": 783,
+          "selfPercent": 9.962606837606838,
+          "inclusivePercent": 20.91346153846154
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 369,
+          "inclusive": 369,
+          "selfPercent": 9.85576923076923,
+          "inclusivePercent": 9.85576923076923
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 260,
+          "inclusive": 633,
+          "selfPercent": 6.944444444444445,
+          "inclusivePercent": 16.90705128205128
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 215,
+          "inclusive": 631,
+          "selfPercent": 5.742521367521367,
+          "inclusivePercent": 16.853632478632477
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 202,
+          "inclusive": 202,
+          "selfPercent": 5.395299145299146,
+          "inclusivePercent": 5.395299145299146
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 146,
+          "inclusive": 275,
+          "selfPercent": 3.8995726495726495,
+          "inclusivePercent": 7.34508547008547
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 141,
+          "inclusive": 262,
+          "selfPercent": 3.766025641025641,
+          "inclusivePercent": 6.997863247863248
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 140,
+          "inclusive": 2735,
+          "selfPercent": 3.7393162393162394,
+          "inclusivePercent": 73.05021367521367
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 114,
+          "inclusive": 902,
+          "selfPercent": 3.0448717948717947,
+          "inclusivePercent": 24.09188034188034
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 74,
+          "inclusive": 74,
+          "selfPercent": 1.9764957264957266,
+          "inclusivePercent": 1.9764957264957266
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 63,
+          "inclusive": 756,
+          "selfPercent": 1.6826923076923077,
+          "inclusivePercent": 20.192307692307693
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 59,
+          "inclusive": 68,
+          "selfPercent": 1.5758547008547008,
+          "inclusivePercent": 1.8162393162393162
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 34,
+          "inclusive": 3655,
+          "selfPercent": 0.9081196581196581,
+          "inclusivePercent": 97.62286324786325
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 24,
+          "inclusive": 2639,
+          "selfPercent": 0.6410256410256411,
+          "inclusivePercent": 70.48611111111111
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 20,
+          "inclusive": 36,
+          "selfPercent": 0.5341880341880342,
+          "inclusivePercent": 0.9615384615384616
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 17,
+          "inclusive": 133,
+          "selfPercent": 0.45405982905982906,
+          "inclusivePercent": 3.552350427350427
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 16,
+          "inclusive": 38,
+          "selfPercent": 0.42735042735042733,
+          "inclusivePercent": 1.014957264957265
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 13,
+          "inclusive": 38,
+          "selfPercent": 0.3472222222222222,
+          "inclusivePercent": 1.014957264957265
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 177,
+          "selfPercent": 0.32051282051282054,
+          "inclusivePercent": 4.727564102564102
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 9,
+          "inclusive": 17,
+          "selfPercent": 0.2403846153846154,
+          "inclusivePercent": 0.45405982905982906
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 98,
+          "selfPercent": 0.21367521367521367,
+          "inclusivePercent": 2.6175213675213675
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 6,
+          "inclusive": 6,
+          "selfPercent": 0.16025641025641027,
+          "inclusivePercent": 0.16025641025641027
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 6,
+          "inclusive": 63,
+          "selfPercent": 0.16025641025641027,
+          "inclusivePercent": 1.6826923076923077
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 6,
+          "inclusive": 6,
+          "selfPercent": 0.16025641025641027,
+          "inclusivePercent": 0.16025641025641027
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 270,
+          "selfPercent": 0.13354700854700854,
+          "inclusivePercent": 7.211538461538462
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 102,
+          "selfPercent": 0.13354700854700854,
+          "inclusivePercent": 2.7243589743589745
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 35,
+          "selfPercent": 0.13354700854700854,
+          "inclusivePercent": 0.9348290598290598
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.13354700854700854,
+          "inclusivePercent": 0.13354700854700854
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.10683760683760683,
+          "inclusivePercent": 0.10683760683760683
+        },
+        {
+          "name": "expm1",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.10683760683760683,
+          "inclusivePercent": 0.10683760683760683
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 5,
+          "selfPercent": 0.053418803418803416,
+          "inclusivePercent": 0.13354700854700854
+        },
+        {
+          "name": "bool std::__2::__partially_sorted_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.053418803418803416,
+          "inclusivePercent": 0.053418803418803416
+        },
+        {
+          "name": "void std::__2::__stable_sort<std::__2::_ClassicAlgPolicy, godChoices(State const&)::$_0&, std::__2::__wrap_iter<GodChoice*>>(std::__2::__wrap_iter<GodChoice*>, std::__2::__wrap_iter<GodChoice*>, godChoices(State const&)::$_0&, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::difference_type, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::value_type*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.053418803418803416,
+          "inclusivePercent": 0.053418803418803416
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.053418803418803416,
+          "inclusivePercent": 0.053418803418803416
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 1,
+          "inclusive": 3664,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 97.86324786324786
+        },
+        {
+          "name": "void std::__2::__sort5[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "bool std::__2::__cond_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "void std::__2::__sort<std::__2::__less<int, int>&, int*>(int*, int*, std::__2::__less<int, int>&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "memcmp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 3,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.08012820512820513
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "required(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.026709401709401708,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 3744,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 0,
+          "inclusive": 6,
+          "selfPercent": 0,
+          "inclusivePercent": 0.16025641025641027
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 3662,
+          "selfPercent": 0,
+          "inclusivePercent": 97.80982905982906
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 3656,
+          "selfPercent": 0,
+          "inclusivePercent": 97.64957264957265
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 3656,
+          "selfPercent": 0,
+          "inclusivePercent": 97.64957264957265
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 145,
+          "selfPercent": 0,
+          "inclusivePercent": 3.872863247863248
+        },
+        {
+          "name": "void std::__2::__sort4[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 5,
+          "selfPercent": 0,
+          "inclusivePercent": 0.13354700854700854
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 16,
+          "selfPercent": 0,
+          "inclusivePercent": 0.42735042735042733
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 4,
+          "selfPercent": 0,
+          "inclusivePercent": 0.10683760683760683
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.026709401709401708
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.026709401709401708
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "phase": "auction",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/4p-auction.cpuprofile",
+      "samples": 7221,
+      "wasmSamples": 7212,
+      "wasmPercent": 99.87536352305774,
+      "durationMs": 1928.092,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 2850,
+          "percent": 39.468217698379725
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 2266,
+          "percent": 31.380695194571388
+        },
+        {
+          "name": "auction-plan",
+          "hits": 705,
+          "percent": 9.763190693809722
+        },
+        {
+          "name": "state-copy",
+          "hits": 623,
+          "percent": 8.627613903891428
+        },
+        {
+          "name": "other-wasm",
+          "hits": 267,
+          "percent": 3.697548815953469
+        },
+        {
+          "name": "other-policy",
+          "hits": 232,
+          "percent": 3.21285140562249
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 210,
+          "percent": 2.9081844619858743
+        },
+        {
+          "name": "rules",
+          "hits": 59,
+          "percent": 0.8170613488436504
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 9,
+          "percent": 0.12463647694225176
+        }
+      ],
+      "functions": [
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 984,
+          "inclusive": 3078,
+          "selfPercent": 13.626921479019526,
+          "inclusivePercent": 42.62567511425011
+        },
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 934,
+          "inclusive": 934,
+          "selfPercent": 12.934496607118128,
+          "inclusivePercent": 12.934496607118128
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 819,
+          "inclusive": 819,
+          "selfPercent": 11.34191940174491,
+          "inclusivePercent": 11.34191940174491
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 757,
+          "inclusive": 757,
+          "selfPercent": 10.483312560587176,
+          "inclusivePercent": 10.483312560587176
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 703,
+          "inclusive": 1455,
+          "selfPercent": 9.735493698933666,
+          "inclusivePercent": 20.1495637723307
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 429,
+          "inclusive": 1256,
+          "selfPercent": 5.941005400914001,
+          "inclusivePercent": 17.393712782163135
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 415,
+          "inclusive": 1031,
+          "selfPercent": 5.747126436781609,
+          "inclusivePercent": 14.277800858606842
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 323,
+          "inclusive": 669,
+          "selfPercent": 4.473064672483035,
+          "inclusivePercent": 9.264644786040714
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 321,
+          "inclusive": 321,
+          "selfPercent": 4.4453676776069795,
+          "inclusivePercent": 4.4453676776069795
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 315,
+          "inclusive": 5433,
+          "selfPercent": 4.362276692978812,
+          "inclusivePercent": 75.23888658080598
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 263,
+          "inclusive": 487,
+          "selfPercent": 3.642154826201357,
+          "inclusivePercent": 6.744218252319623
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 193,
+          "inclusive": 1538,
+          "selfPercent": 2.672760005539399,
+          "inclusivePercent": 21.298989059687024
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 140,
+          "inclusive": 140,
+          "selfPercent": 1.9387896413239163,
+          "inclusivePercent": 1.9387896413239163
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 126,
+          "inclusive": 144,
+          "selfPercent": 1.7449106771915248,
+          "inclusivePercent": 1.9941836310760281
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 74,
+          "inclusive": 1135,
+          "selfPercent": 1.02478881041407,
+          "inclusivePercent": 15.71804459216175
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 53,
+          "inclusive": 6959,
+          "selfPercent": 0.7339703642154827,
+          "inclusivePercent": 96.37169367123667
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 49,
+          "inclusive": 314,
+          "selfPercent": 0.6785763744633707,
+          "inclusivePercent": 4.348428195540784
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 46,
+          "inclusive": 5007,
+          "selfPercent": 0.6370308821492868,
+          "inclusivePercent": 69.33942667220606
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 38,
+          "inclusive": 76,
+          "selfPercent": 0.526242902645063,
+          "inclusivePercent": 1.052485805290126
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 30,
+          "inclusive": 366,
+          "selfPercent": 0.4154549231408392,
+          "inclusivePercent": 5.068550062318239
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 30,
+          "inclusive": 63,
+          "selfPercent": 0.4154549231408392,
+          "inclusivePercent": 0.8724553385957624
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 24,
+          "inclusive": 52,
+          "selfPercent": 0.3323639385126714,
+          "inclusivePercent": 0.7201218667774546
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 18,
+          "inclusive": 110,
+          "selfPercent": 0.24927295388450352,
+          "inclusivePercent": 1.5233347181830772
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 16,
+          "inclusive": 198,
+          "selfPercent": 0.2215759590084476,
+          "inclusivePercent": 2.7420024927295388
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 15,
+          "inclusive": 246,
+          "selfPercent": 0.2077274615704196,
+          "inclusivePercent": 3.4067303697548814
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 15,
+          "inclusive": 46,
+          "selfPercent": 0.2077274615704196,
+          "inclusivePercent": 0.6370308821492868
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 15,
+          "inclusive": 15,
+          "selfPercent": 0.2077274615704196,
+          "inclusivePercent": 0.2077274615704196
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 10,
+          "selfPercent": 0.1107879795042238,
+          "inclusivePercent": 0.13848497438027974
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 236,
+          "selfPercent": 0.09693948206619582,
+          "inclusivePercent": 3.268245395374602
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 451,
+          "selfPercent": 0.09693948206619582,
+          "inclusivePercent": 6.245672344550616
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 17,
+          "selfPercent": 0.09693948206619582,
+          "inclusivePercent": 0.23542445644647556
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.06924248719013987,
+          "inclusivePercent": 0.06924248719013987
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 7,
+          "selfPercent": 0.06924248719013987,
+          "inclusivePercent": 0.09693948206619582
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 36,
+          "selfPercent": 0.0553939897521119,
+          "inclusivePercent": 0.49854590776900704
+        },
+        {
+          "name": "memcmp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.0553939897521119,
+          "inclusivePercent": 0.0553939897521119
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.04154549231408392,
+          "inclusivePercent": 0.04154549231408392
+        },
+        {
+          "name": "bool std::__2::__partially_sorted_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.04154549231408392,
+          "inclusivePercent": 0.04154549231408392
+        },
+        {
+          "name": "std::__2::__next_prime(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.04154549231408392,
+          "inclusivePercent": 0.04154549231408392
+        },
+        {
+          "name": "std::__2::__itoa::__append2[abi:nn200100](char*, unsigned int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.02769699487605595,
+          "inclusivePercent": 0.02769699487605595
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.02769699487605595,
+          "inclusivePercent": 0.02769699487605595
+        },
+        {
+          "name": "required(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.02769699487605595,
+          "inclusivePercent": 0.02769699487605595
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 6965,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 96.45478465586484
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 6,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.08309098462816784
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 14,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.19387896413239164
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 4,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.0553939897521119
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 13,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.18003046669436365
+        },
+        {
+          "name": "expm1",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "bool std::__2::__cond_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "Reader",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "(garbage collector)",
+          "url": "",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::insert(unsigned long, char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "void std::__2::vector<int, std::__2::allocator<int>>::__assign_with_size[abi:nn200100]<int*, int*>(int*, int*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.013848497438027975,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 6973,
+          "selfPercent": 0,
+          "inclusivePercent": 96.56557263536907
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 7221,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 0,
+          "inclusive": 5,
+          "selfPercent": 0,
+          "inclusivePercent": 0.06924248719013987
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 6972,
+          "selfPercent": 0,
+          "inclusivePercent": 96.55172413793103
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 6967,
+          "selfPercent": 0,
+          "inclusivePercent": 96.4824816507409
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 5,
+          "selfPercent": 0,
+          "inclusivePercent": 0.06924248719013987
+        },
+        {
+          "name": "encodeState",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.013848497438027975
+        },
+        {
+          "name": "void std::__2::__sort5[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.013848497438027975
+        }
+      ]
+    },
+    {
+      "count": 5,
+      "phase": "turn",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/5p-turn.cpuprofile",
+      "samples": 6571,
+      "wasmSamples": 6562,
+      "wasmPercent": 99.86303454573124,
+      "durationMs": 1726.682,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 2855,
+          "percent": 43.44848577081114
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 1975,
+          "percent": 30.056308020088267
+        },
+        {
+          "name": "auction-plan",
+          "hits": 647,
+          "percent": 9.846294323542839
+        },
+        {
+          "name": "state-copy",
+          "hits": 564,
+          "percent": 8.58316846750875
+        },
+        {
+          "name": "other-policy",
+          "hits": 231,
+          "percent": 3.515446659564754
+        },
+        {
+          "name": "other-wasm",
+          "hits": 171,
+          "percent": 2.6023436311063763
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 81,
+          "percent": 1.23268908841881
+        },
+        {
+          "name": "rules",
+          "hits": 38,
+          "percent": 0.5782985846903059
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 9,
+          "percent": 0.13696545426875667
+        }
+      ],
+      "functions": [
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1159,
+          "inclusive": 1159,
+          "selfPercent": 17.63810683305433,
+          "inclusivePercent": 17.63810683305433
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 715,
+          "inclusive": 715,
+          "selfPercent": 10.881144422462334,
+          "inclusivePercent": 10.881144422462334
+        },
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 680,
+          "inclusive": 3011,
+          "selfPercent": 10.348500989194948,
+          "inclusivePercent": 45.82255364480292
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 643,
+          "inclusive": 1305,
+          "selfPercent": 9.785420788312281,
+          "inclusivePercent": 19.859990868969714
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 620,
+          "inclusive": 620,
+          "selfPercent": 9.43539796073657,
+          "inclusivePercent": 9.43539796073657
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 480,
+          "inclusive": 480,
+          "selfPercent": 7.304824227667022,
+          "inclusivePercent": 7.304824227667022
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 401,
+          "inclusive": 1043,
+          "selfPercent": 6.102571906863491,
+          "inclusivePercent": 15.872774311368133
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 382,
+          "inclusive": 751,
+          "selfPercent": 5.8134226145183385,
+          "inclusivePercent": 11.429006239537362
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 378,
+          "inclusive": 1118,
+          "selfPercent": 5.75254907928778,
+          "inclusivePercent": 17.014153096941104
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 228,
+          "inclusive": 392,
+          "selfPercent": 3.469791508141835,
+          "inclusivePercent": 5.965606452594734
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 183,
+          "inclusive": 5377,
+          "selfPercent": 2.784964236798052,
+          "inclusivePercent": 81.82924973367828
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 153,
+          "inclusive": 1402,
+          "selfPercent": 2.328412722568863,
+          "inclusivePercent": 21.33617409831076
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 109,
+          "inclusive": 1511,
+          "selfPercent": 1.6588038350327194,
+          "inclusivePercent": 22.994977933343478
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 64,
+          "inclusive": 77,
+          "selfPercent": 0.9739765636889363,
+          "inclusivePercent": 1.1718155531882515
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 60,
+          "inclusive": 60,
+          "selfPercent": 0.9131030284583778,
+          "inclusivePercent": 0.9131030284583778
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 46,
+          "inclusive": 222,
+          "selfPercent": 0.7000456551514229,
+          "inclusivePercent": 3.3784812052959974
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 28,
+          "inclusive": 6384,
+          "selfPercent": 0.4261147466139096,
+          "inclusivePercent": 97.15416222797138
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 23,
+          "inclusive": 318,
+          "selfPercent": 0.35002282757571146,
+          "inclusivePercent": 4.839446050829402
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 21,
+          "inclusive": 67,
+          "selfPercent": 0.3195860599604322,
+          "inclusivePercent": 1.019631715111855
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 20,
+          "inclusive": 4691,
+          "selfPercent": 0.3043676761527926,
+          "inclusivePercent": 71.3894384416375
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 20,
+          "inclusive": 43,
+          "selfPercent": 0.3043676761527926,
+          "inclusivePercent": 0.654390503728504
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 18,
+          "inclusive": 39,
+          "selfPercent": 0.27393090853751334,
+          "inclusivePercent": 0.5935169684979456
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 16,
+          "inclusive": 31,
+          "selfPercent": 0.24349414092223406,
+          "inclusivePercent": 0.4717698980368285
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 14,
+          "inclusive": 173,
+          "selfPercent": 0.2130573733069548,
+          "inclusivePercent": 2.6327803987216556
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 11,
+          "inclusive": 345,
+          "selfPercent": 0.16740222188403592,
+          "inclusivePercent": 5.250342413635672
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 11,
+          "inclusive": 72,
+          "selfPercent": 0.16740222188403592,
+          "inclusivePercent": 1.0957236341500534
+        },
+        {
+          "name": "bool std::__2::__partially_sorted_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 10,
+          "inclusive": 10,
+          "selfPercent": 0.1521838380763963,
+          "inclusivePercent": 0.1521838380763963
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 9,
+          "inclusive": 66,
+          "selfPercent": 0.13696545426875667,
+          "inclusivePercent": 1.0044133313042154
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 20,
+          "selfPercent": 0.12174707046111703,
+          "inclusivePercent": 0.3043676761527926
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 7,
+          "selfPercent": 0.1065286866534774,
+          "inclusivePercent": 0.1065286866534774
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 6,
+          "inclusive": 185,
+          "selfPercent": 0.09131030284583777,
+          "inclusivePercent": 2.8154010044133315
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.07609191903819815,
+          "inclusivePercent": 0.07609191903819815
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 5,
+          "inclusive": 5,
+          "selfPercent": 0.07609191903819815,
+          "inclusivePercent": 0.07609191903819815
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 70,
+          "selfPercent": 0.060873535230558516,
+          "inclusivePercent": 1.0652868665347741
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 8,
+          "selfPercent": 0.060873535230558516,
+          "inclusivePercent": 0.12174707046111703
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 6,
+          "selfPercent": 0.045655151422918885,
+          "inclusivePercent": 0.09131030284583777
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 9,
+          "selfPercent": 0.045655151422918885,
+          "inclusivePercent": 0.13696545426875667
+        },
+        {
+          "name": "std::__2::__next_prime(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.045655151422918885,
+          "inclusivePercent": 0.045655151422918885
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.030436767615279258,
+          "inclusivePercent": 0.030436767615279258
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 4,
+          "selfPercent": 0.030436767615279258,
+          "inclusivePercent": 0.060873535230558516
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 7,
+          "selfPercent": 0.030436767615279258,
+          "inclusivePercent": 0.1065286866534774
+        },
+        {
+          "name": "std::__2::__itoa::__append2[abi:nn200100](char*, unsigned int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.030436767615279258,
+          "inclusivePercent": 0.030436767615279258
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 2,
+          "inclusive": 2,
+          "selfPercent": 0.030436767615279258,
+          "inclusivePercent": 0.030436767615279258
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 3,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.045655151422918885
+        },
+        {
+          "name": "",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.030436767615279258
+        },
+        {
+          "name": "bool std::__2::__cond_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "void std::__2::__stable_sort<std::__2::_ClassicAlgPolicy, godChoices(State const&)::$_0&, std::__2::__wrap_iter<GodChoice*>>(std::__2::__wrap_iter<GodChoice*>, std::__2::__wrap_iter<GodChoice*>, godChoices(State const&)::$_0&, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::difference_type, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::value_type*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "expm1",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "required(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "number",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "dispatch",
+          "url": "",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.015218383807639629,
+          "inclusivePercent": 0.015218383807639629
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 6393,
+          "selfPercent": 0,
+          "inclusivePercent": 97.29112768224014
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.045655151422918885
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 6571,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 0,
+          "inclusive": 5,
+          "selfPercent": 0,
+          "inclusivePercent": 0.07609191903819815
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 6390,
+          "selfPercent": 0,
+          "inclusivePercent": 97.24547253081722
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 6384,
+          "selfPercent": 0,
+          "inclusivePercent": 97.15416222797138
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 6384,
+          "selfPercent": 0,
+          "inclusivePercent": 97.15416222797138
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 3,
+          "selfPercent": 0,
+          "inclusivePercent": 0.045655151422918885
+        }
+      ]
+    },
+    {
+      "count": 5,
+      "phase": "auction",
+      "path": "/Users/franzyu/Documents/code/ra/artifacts/ai-perf-20261028/5p-auction.cpuprofile",
+      "samples": 10037,
+      "wasmSamples": 10026,
+      "wasmPercent": 99.8904054996513,
+      "durationMs": 2675.929,
+      "categories": [
+        {
+          "name": "evaluation",
+          "hits": 4373,
+          "percent": 43.5687954568098
+        },
+        {
+          "name": "allocation-and-memory",
+          "hits": 3088,
+          "percent": 30.766165188801434
+        },
+        {
+          "name": "auction-plan",
+          "hits": 884,
+          "percent": 8.80741257347813
+        },
+        {
+          "name": "state-copy",
+          "hits": 790,
+          "percent": 7.870877752316429
+        },
+        {
+          "name": "other-wasm",
+          "hits": 308,
+          "percent": 3.0686460097638735
+        },
+        {
+          "name": "other-policy",
+          "hits": 306,
+          "percent": 3.048719736973199
+        },
+        {
+          "name": "observation-and-keys",
+          "hits": 198,
+          "percent": 1.972701006276776
+        },
+        {
+          "name": "rules",
+          "hits": 79,
+          "percent": 0.787087775231643
+        },
+        {
+          "name": "js-and-profiler",
+          "hits": 11,
+          "percent": 0.10959450034870978
+        }
+      ],
+      "functions": [
+        {
+          "name": "exp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1773,
+          "inclusive": 1773,
+          "selfPercent": 17.66464082893295,
+          "inclusivePercent": 17.66464082893295
+        },
+        {
+          "name": "attempt_allocate",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1141,
+          "inclusive": 1141,
+          "selfPercent": 11.367938627079806,
+          "inclusivePercent": 11.367938627079806
+        },
+        {
+          "name": "positionValues(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1079,
+          "inclusive": 4695,
+          "selfPercent": 10.750224170568895,
+          "inclusivePercent": 46.7769253761084
+        },
+        {
+          "name": "emmalloc_memalign",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 997,
+          "inclusive": 2052,
+          "selfPercent": 9.933246986151241,
+          "inclusivePercent": 20.444355883232042
+        },
+        {
+          "name": "emmalloc_free",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 978,
+          "inclusive": 978,
+          "selfPercent": 9.743947394639832,
+          "inclusivePercent": 9.743947394639832
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 689,
+          "inclusive": 2004,
+          "selfPercent": 6.864600976387367,
+          "inclusivePercent": 19.966125336255853
+        },
+        {
+          "name": "inventory(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 604,
+          "inclusive": 604,
+          "selfPercent": 6.017734382783701,
+          "inclusivePercent": 6.017734382783701
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 574,
+          "inclusive": 1525,
+          "selfPercent": 5.718840290923583,
+          "inclusivePercent": 15.19378300288931
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 494,
+          "inclusive": 1045,
+          "selfPercent": 4.9217893792966025,
+          "inclusivePercent": 10.411477533127428
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int const*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 346,
+          "inclusive": 676,
+          "selfPercent": 3.4472451927866894,
+          "inclusivePercent": 6.735080203247983
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 283,
+          "inclusive": 7988,
+          "selfPercent": 2.8195675998804424,
+          "inclusivePercent": 79.58553352595398
+        },
+        {
+          "name": "State::State(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 196,
+          "inclusive": 2066,
+          "selfPercent": 1.9527747334861014,
+          "inclusivePercent": 20.583839792766764
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::push_back(char)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 144,
+          "inclusive": 144,
+          "selfPercent": 1.4346916409285644,
+          "inclusivePercent": 1.4346916409285644
+        },
+        {
+          "name": "collectionAfter(State const&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 131,
+          "inclusive": 2065,
+          "selfPercent": 1.30517086778918,
+          "inclusivePercent": 20.573876656371425
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 129,
+          "inclusive": 148,
+          "selfPercent": 1.2852445949985056,
+          "inclusivePercent": 1.4745441865099134
+        },
+        {
+          "name": "operator_new_impl(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 62,
+          "inclusive": 365,
+          "selfPercent": 0.6177144565109096,
+          "inclusivePercent": 3.636544784298097
+        },
+        {
+          "name": "run",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 55,
+          "inclusive": 9740,
+          "selfPercent": 0.5479725017435488,
+          "inclusivePercent": 97.04094849058484
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 44,
+          "inclusive": 82,
+          "selfPercent": 0.4383780013948391,
+          "inclusivePercent": 0.8169771844176547
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 39,
+          "inclusive": 87,
+          "selfPercent": 0.38856231941815284,
+          "inclusivePercent": 0.8667928663943409
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 35,
+          "inclusive": 69,
+          "selfPercent": 0.34870977383680385,
+          "inclusivePercent": 0.6874564112782704
+        },
+        {
+          "name": "std::__2::array<Player, 5ul>::~array()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 28,
+          "inclusive": 456,
+          "selfPercent": 0.27896781906944307,
+          "inclusivePercent": 4.543190196273787
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 27,
+          "inclusive": 6898,
+          "selfPercent": 0.2690046826741058,
+          "inclusivePercent": 68.72571485503637
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 27,
+          "inclusive": 125,
+          "selfPercent": 0.2690046826741058,
+          "inclusivePercent": 1.2453920494171564
+        },
+        {
+          "name": "legal(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 23,
+          "inclusive": 53,
+          "selfPercent": 0.2291521370927568,
+          "inclusivePercent": 0.5280462289528743
+        },
+        {
+          "name": "operator new(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 14,
+          "inclusive": 286,
+          "selfPercent": 0.13948390953472153,
+          "inclusivePercent": 2.849457009066454
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> std::__2::(anonymous namespace)::i_to_string<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, int>(int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 14,
+          "inclusive": 15,
+          "selfPercent": 0.13948390953472153,
+          "inclusivePercent": 0.14944704593005878
+        },
+        {
+          "name": "void std::__2::__swap_bitmap_pos[abi:nn200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 12,
+          "inclusive": 12,
+          "selfPercent": 0.11955763674404703,
+          "inclusivePercent": 0.11955763674404703
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 9,
+          "inclusive": 173,
+          "selfPercent": 0.08966822755803527,
+          "inclusivePercent": 1.7236225963933447
+        },
+        {
+          "name": "State::~State()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 285,
+          "selfPercent": 0.07970509116269801,
+          "inclusivePercent": 2.8394938726711167
+        },
+        {
+          "name": "wmemchr",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 8,
+          "selfPercent": 0.07970509116269801,
+          "inclusivePercent": 0.07970509116269801
+        },
+        {
+          "name": "bool std::__2::__partially_sorted_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 8,
+          "inclusive": 8,
+          "selfPercent": 0.07970509116269801,
+          "inclusivePercent": 0.07970509116269801
+        },
+        {
+          "name": "godChoices(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 588,
+          "selfPercent": 0.06974195476736077,
+          "inclusivePercent": 5.858324200458305
+        },
+        {
+          "name": "bestDiscard(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 99,
+          "selfPercent": 0.06974195476736077,
+          "inclusivePercent": 0.986350503138388
+        },
+        {
+          "name": "actionKey(Action const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 7,
+          "inclusive": 28,
+          "selfPercent": 0.06974195476736077,
+          "inclusivePercent": 0.27896781906944307
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 6,
+          "inclusive": 15,
+          "selfPercent": 0.059778818372023514,
+          "inclusivePercent": 0.14944704593005878
+        },
+        {
+          "name": "structuredClone",
+          "url": "node:internal/worker/js_transferable",
+          "self": 6,
+          "inclusive": 6,
+          "selfPercent": 0.059778818372023514,
+          "inclusivePercent": 0.059778818372023514
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 6,
+          "inclusive": 6,
+          "selfPercent": 0.059778818372023514,
+          "inclusivePercent": 0.059778818372023514
+        },
+        {
+          "name": "expm1",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 4,
+          "inclusive": 4,
+          "selfPercent": 0.03985254558134901,
+          "inclusivePercent": 0.03985254558134901
+        },
+        {
+          "name": "epochScores(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.029889409186011757,
+          "inclusivePercent": 0.029889409186011757
+        },
+        {
+          "name": "std::__2::vector<std::__2::array<int, 2ul>, std::__2::allocator<std::__2::array<int, 2ul>>>::push_back[abi:nn200100](std::__2::array<int, 2ul>&&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 5,
+          "selfPercent": 0.029889409186011757,
+          "inclusivePercent": 0.04981568197668626
+        },
+        {
+          "name": "std::__2::__next_prime(unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 3,
+          "inclusive": 3,
+          "selfPercent": 0.029889409186011757,
+          "inclusivePercent": 0.029889409186011757
+        },
+        {
+          "name": "post",
+          "url": "node:inspector",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "search",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 1,
+          "inclusive": 9754,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 97.18043240011956
+        },
+        {
+          "name": "bool std::__2::__insertion_sort_incomplete[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "void std::__2::__stable_sort<std::__2::_ClassicAlgPolicy, godChoices(State const&)::$_0&, std::__2::__wrap_iter<GodChoice*>>(std::__2::__wrap_iter<GodChoice*>, std::__2::__wrap_iter<GodChoice*>, godChoices(State const&)::$_0&, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::difference_type, std::__2::iterator_traits<std::__2::__wrap_iter<GodChoice*>>::value_type*, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "memcmp",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "bool std::__2::__cond_swap[abi:nn200100]<std::__2::ranges::less, int*>(int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "objEquiv",
+          "url": "node:internal/util/comparisons",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "keyCheck",
+          "url": "node:internal/util/comparisons",
+          "self": 1,
+          "inclusive": 2,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "std::__2::__wrap_iter<int*> std::__2::vector<int, std::__2::allocator<int>>::__insert_with_size[abi:nn200100]<std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>>(std::__2::__wrap_iter<int const*>, std::__2::__wrap_iter<int*>, std::__2::__wrap_iter<int*>, long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "settle(State&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::insert(unsigned long, char const*, unsigned long)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "std::__2::__itoa::__append2[abi:nn200100](char*, unsigned int)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "dispatch",
+          "url": "",
+          "self": 1,
+          "inclusive": 1,
+          "selfPercent": 0.009963136395337252,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 9758,
+          "selfPercent": 0,
+          "inclusivePercent": 97.22028494570091
+        },
+        {
+          "name": "post",
+          "url": "file:///Users/franzyu/Documents/code/ra/scripts/profile-ai.ts",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "(root)",
+          "url": "",
+          "self": 0,
+          "inclusive": 10037,
+          "selfPercent": 0,
+          "inclusivePercent": 100
+        },
+        {
+          "name": "js-to-wasm::i",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 9747,
+          "selfPercent": 0,
+          "inclusivePercent": 97.11069044535219
+        },
+        {
+          "name": "call",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai/wasm.ts",
+          "self": 0,
+          "inclusive": 9747,
+          "selfPercent": 0,
+          "inclusivePercent": 97.11069044535219
+        },
+        {
+          "name": "candidates(State const&)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 16,
+          "selfPercent": 0,
+          "inclusivePercent": 0.15941018232539603
+        },
+        {
+          "name": "bool std::__2::__sort3[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "observe",
+          "url": "file:///Users/franzyu/Documents/code/ra/src/game/ai.ts",
+          "self": 0,
+          "inclusive": 6,
+          "selfPercent": 0,
+          "inclusivePercent": 0.059778818372023514
+        },
+        {
+          "name": "Node::~Node()",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 4,
+          "selfPercent": 0,
+          "inclusivePercent": 0.03985254558134901
+        },
+        {
+          "name": "void std::__2::__sort5[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "void std::__2::__sort4[abi:nn200100]<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, 0>(int*, int*, int*, int*, std::__2::ranges::less)",
+          "url": "wasm://wasm/ra-ai-profile.wasm-0009046a",
+          "self": 0,
+          "inclusive": 1,
+          "selfPercent": 0,
+          "inclusivePercent": 0.009963136395337252
+        },
+        {
+          "name": "objectComparisonStart",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "innerDeepEqual",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "detectCycles",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "isDeepStrictEqual",
+          "url": "node:internal/util/comparisons",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.019926272790674503
+        },
+        {
+          "name": "deepStrictEqual",
+          "url": "node:assert",
+          "self": 0,
+          "inclusive": 2,
+          "selfPercent": 0,
+          "inclusivePercent": 0.019926272790674503
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "desktop": {
+    "before": {
+      ".public-board": {
+        "y": 53,
+        "height": 400
+      },
+      ".pb-market": {
+        "y": 264.5,
+        "height": 136
+      },
+      ".action-panel": {
+        "y": 461,
+        "height": 144
+      },
+      ".player-mat": {
+        "y": 613,
+        "height": 345.5
+      }
+    },
+    "draw": {
+      ".public-board": {
+        "y": 53,
+        "height": 400
+      },
+      ".pb-market": {
+        "y": 264.5,
+        "height": 136
+      },
+      ".action-panel": {
+        "y": 461,
+        "height": 144
+      },
+      ".player-mat": {
+        "y": 613,
+        "height": 345.5
+      }
+    },
+    "invoke": {
+      ".public-board": {
+        "y": 53,
+        "height": 400
+      },
+      ".pb-market": {
+        "y": 264.5,
+        "height": 136
+      },
+      ".action-panel": {
+        "y": 461,
+        "height": 144
+      },
+      ".player-mat": {
+        "y": 613,
+        "height": 345.5
+      }
+    },
+    "full": {
+      ".public-board": {
+        "y": 53,
+        "height": 400
+      },
+      ".pb-market": {
+        "y": 264.5,
+        "height": 136
+      },
+      ".action-panel": {
+        "y": 461,
+        "height": 144
+      },
+      ".player-mat": {
+        "y": 613,
+        "height": 345.5
+      }
+    }
+  },
+  "mobile": {
+    "before": {
+      ".public-board": {
+        "y": 90,
+        "height": 611.5
+      },
+      ".pb-market": {
+        "y": 268.5,
+        "height": 267
+      },
+      ".action-panel": {
+        "y": 709.5,
+        "height": 220
+      },
+      ".player-mat": {
+        "y": 937.5,
+        "height": 394
+      }
+    },
+    "draw": {
+      ".public-board": {
+        "y": 90,
+        "height": 611.5
+      },
+      ".pb-market": {
+        "y": 268.5,
+        "height": 267
+      },
+      ".action-panel": {
+        "y": 709.5,
+        "height": 220
+      },
+      ".player-mat": {
+        "y": 937.5,
+        "height": 394
+      }
+    },
+    "invoke": {
+      ".public-board": {
+        "y": 90,
+        "height": 611.5
+      },
+      ".pb-market": {
+        "y": 268.5,
+        "height": 267
+      },
+      ".action-panel": {
+        "y": 709.5,
+        "height": 220
+      },
+      ".player-mat": {
+        "y": 937.5,
+        "height": 394
+      }
+    },
+    "full": {
+      ".public-board": {
+        "y": 90,
+        "height": 611.5
+      },
+      ".pb-market": {
+        "y": 268.5,
+        "height": 267
+      },
+      ".action-panel": {
+        "y": 709.5,
+        "height": 220
+      },
+      ".player-mat": {
+        "y": 937.5,
+        "height": 394
+      }
+    }
+  }
+}

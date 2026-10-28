@@ -1,6 +1,28 @@
 import type { Action, Save, State, Tile } from "./types.ts";
 import { advance, newGame } from "./engine.ts";
-import { tileLabel as tileName } from "./data.ts";
+import { RA_LIMIT, tileLabel as tileName } from "./data.ts";
+export function auctionNotice(state: State, latest?: Move) {
+  const auction = state.auction;
+  const finalRa =
+    latest?.kind === "draw" &&
+    latest.tiles.some((tile) => tile.kind === "ra") &&
+    (state.phase === "epoch" || state.phase === "over");
+  if (!auction && !finalRa) return null;
+  const actor = auction?.caller ?? latest!.actor;
+  const drawn = !auction || auction.reason === "draw";
+  const name = state.players[actor].name;
+  return {
+    actor,
+    kind: drawn ? ("ra" as const) : ("invoke" as const),
+    title: drawn ? `${name}抽到太阳神` : `${name}呼唤 RA · 发起拍卖`,
+    detail: finalRa
+      ? "太阳船到达终点，本纪元立即结算，不再拍卖。太阳神牌已弃置。"
+      : drawn
+        ? `太阳船前进至 ${state.ra} / ${RA_LIMIT[state.config.count]}，触发拍卖。太阳神牌已弃置，不进入拍卖轨。`
+        : `${auction!.reason === "full" ? "拍卖轨已满，发起整批拍卖" : "主动发起整批拍卖"}；太阳船不前进，没有抽取太阳神牌。`,
+    status: finalRa ? "纪元结束 · 不拍卖" : "拍卖进行中",
+  };
+}
 export type Move = {
   step: number;
   actor: number;
@@ -42,8 +64,8 @@ export function describeMove(
       move.detail =
         t.kind === "ra"
           ? after.phase === "epoch" || after.phase === "over"
-            ? "太阳船到达终点：本纪元立即结算，不再拍卖。"
-            : `太阳船前进至 ${after.ra} 格，开始竞价。`
+            ? "太阳船到达终点：本纪元立即结算，不再拍卖。太阳神牌已弃置，不进入拍卖轨。"
+            : `太阳船前进至 ${after.ra} 格，开始竞价。太阳神牌已弃置，不进入拍卖轨。`
           : `放入第 ${after.market.length} 个拍卖位；当前整批 ${after.market.length} 块。`;
       break;
     }

@@ -1,0 +1,69 @@
+{
+  "status": "stopped",
+  "formalPlan": "artifacts/ai-opponent-2s-50-plan.json",
+  "formalOutput": "artifacts/ai-opponent-2s-50.json",
+  "prototypeChecks": "artifacts/ai-opponent-tree-release-20261028/summary.json",
+  "smokeSummary": "artifacts/ai-opponent-2s-smoke-summary.json",
+  "smokeExcluded": true,
+  "productionCoreUnchanged": true,
+  "noFullSuiteRerun": true,
+  "old54GameStudyNotResumed": true,
+  "summary": null,
+  "reportRejectionChecks": "artifacts/ai-opponent-100ms-report-checks.json",
+  "decisions": null,
+  "automationId": "ra-2-50",
+  "monitor": "http://127.0.0.1:8790/",
+  "frozenHashChecks": 32,
+  "runningVerified": {
+    "status": "running",
+    "finished": 0,
+    "active": 6,
+    "actualSearchMeanMs": [
+      {
+        "count": 2,
+        "seat": 0,
+        "candidate": 2022.630469096774,
+        "opponent": 2008.975911833333
+      },
+      {
+        "count": 2,
+        "seat": 1,
+        "candidate": 2019.8461077083327,
+        "opponent": 2014.7750765599997
+      },
+      {
+        "count": 3,
+        "seat": 0,
+        "candidate": 2004.8435147058806,
+        "opponent": 2004.2215363125013
+      },
+      {
+        "count": 3,
+        "seat": 1,
+        "candidate": 2004.210880187501,
+        "opponent": 2005.3227651515142
+      },
+      {
+        "count": 4,
+        "seat": 0,
+        "candidate": 2003.5137337692308,
+        "opponent": 2003.154186305556
+      },
+      {
+        "count": 4,
+        "seat": 1,
+        "candidate": 2003.0895319230772,
+        "opponent": 2004.0640867500001
+      }
+    ],
+    "lastProgressAt": "2026-10-28T07:57:10.007Z"
+  },
+  "finishedGames": 32,
+  "plannedGames": 50,
+  "cancelledGames": 6,
+  "stopRecord": "artifacts/ai-opponent-2s-stop-record.json",
+  "runnerGone": true,
+  "automationDeleted": true,
+  "finalSummaryGenerated": false,
+  "stopHashChecks": 32
+}

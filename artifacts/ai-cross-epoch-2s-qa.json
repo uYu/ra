@@ -1,0 +1,99 @@
+{
+  "status": "stopped",
+  "plan": "artifacts/ai-cross-epoch-2s-50-plan.json",
+  "output": "artifacts/ai-cross-epoch-2s-50.json",
+  "frozenHashChecks": 31,
+  "planSha256": "8592f09fa74cebf7deb819b3e28f1852aac606de9c74ab2b0f0b63925caaf9c2",
+  "smoke": {
+    "games": 6,
+    "timeMs": 1,
+    "counts": [
+      2,
+      3,
+      4
+    ],
+    "summary": "artifacts/ai-cross-epoch-2s-smoke-summary.json",
+    "completeReplayAndStatsVerified": true,
+    "excludedFromFormal": true
+  },
+  "reportRejectionChecks": "artifacts/ai-cross-epoch-2s-report-checks.json",
+  "automationId": "ra-2-2-4-50",
+  "monitor": "http://127.0.0.1:8791/",
+  "monitorPresentationOverride": {
+    "reason": "2\u20134-player grid, legend/filter and horizon label; game execution unchanged",
+    "liveFiles": {
+      "scripts/monitor-horizon.mjs": "663a07b89c4aa7e49c1601f1f1e95c3492bf1de911646707507894e2fea94081",
+      "scripts/monitor-horizon.html": "921b6eb84b5a724ac2b25dffdd0fa513e8af236bf454589ebea250e54032ec44"
+    },
+    "frozenFilesUnchanged": true
+  },
+  "fullSuiteRerun": false,
+  "oldExperimentsNotResumed": {
+    "opponent2s": 32,
+    "version2s": 54
+  },
+  "firstProgress": {
+    "status": "running",
+    "finished": 0,
+    "active": 6,
+    "lastProgressAt": "2026-10-28T08:59:49.876Z",
+    "timing": [
+      {
+        "count": 2,
+        "seat": 0,
+        "candidateMs": 2005.4128604999994,
+        "opponentMs": 2017.3001388888904,
+        "candidateEpochAdvances": 266894,
+        "opponentEpochAdvances": 0
+      },
+      {
+        "count": 2,
+        "seat": 1,
+        "candidateMs": 2003.9656886874998,
+        "opponentMs": 2014.863079166666,
+        "candidateEpochAdvances": 340851,
+        "opponentEpochAdvances": 0
+      },
+      {
+        "count": 3,
+        "seat": 0,
+        "candidateMs": 2001.950633047619,
+        "opponentMs": 2007.2918241707312,
+        "candidateEpochAdvances": 100652,
+        "opponentEpochAdvances": 0
+      },
+      {
+        "count": 3,
+        "seat": 1,
+        "candidateMs": 2005.8355040476176,
+        "opponentMs": 2005.224569195121,
+        "candidateEpochAdvances": 98979,
+        "opponentEpochAdvances": 0
+      },
+      {
+        "count": 4,
+        "seat": 0,
+        "candidateMs": 2002.1077327647076,
+        "opponentMs": 2006.0206472444452,
+        "candidateEpochAdvances": 64404,
+        "opponentEpochAdvances": 0
+      },
+      {
+        "count": 4,
+        "seat": 1,
+        "candidateMs": 2003.3160051250006,
+        "opponentMs": 2005.1864963478263,
+        "candidateEpochAdvances": 57658,
+        "opponentEpochAdvances": 0
+      }
+    ]
+  },
+  "finishedGames": 36,
+  "plannedGames": 50,
+  "cancelledGames": 6,
+  "runnerGone": true,
+  "automationDeleted": true,
+  "stopRecord": "artifacts/ai-cross-epoch-2s-stop-record.json",
+  "finalSummaryGenerated": false,
+  "stopHashChecks": 31
+}

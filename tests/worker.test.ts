@@ -83,6 +83,12 @@ async function run(
       action: unknown;
       backend: string;
       elapsed: number;
+      searchElapsed?: number;
+      samples?: number;
+      horizon?: string;
+      epochAdvances?: number;
+      completed?: number;
+      truncated?: number;
       fallback?: string;
     }>((resolve, reject) => {
       const timer = setTimeout(
@@ -116,6 +122,15 @@ test("production hard Worker fetches its hashed Wasm asset and returns a legal n
   assert.equal(result.fallback, undefined);
   assert.ok(wasmRequests > before);
   assert.ok(result.elapsed > 0);
+  assert.ok(
+    result.searchElapsed! >= 1900,
+    "hard AI must spend its two-second search budget",
+  );
+  assert.ok(result.samples! > 0);
+  assert.equal(result.horizon, "next-epoch");
+  assert.equal(result.epochAdvances, result.samples);
+  assert.equal(result.completed, 0, "epoch-one search stops after epoch two");
+  assert.equal(result.truncated, 0);
   const s = newGame({ count: 3, humans: 0, difficulty: "hard", seed: 155 });
   assert.ok(
     legalActions(s).some(
@@ -127,6 +142,7 @@ test("unavailable Wasm falls back to the existing TS search and reports its back
   const result = await run("hard", true);
   assert.equal(result.backend, "typescript");
   assert.match(result.fallback!, /503/);
+  assert.equal(result.horizon, "next-epoch");
   const s = newGame({ count: 3, humans: 0, difficulty: "hard", seed: 155 });
   assert.deepEqual(result.action, chooseAction(s, "hard"));
 });

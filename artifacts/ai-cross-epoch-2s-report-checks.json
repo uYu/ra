@@ -1,0 +1,14 @@
+[
+  {
+    "name": "wrong-horizon",
+    "rejected": true
+  },
+  {
+    "name": "no-epoch-crossing",
+    "rejected": true
+  },
+  {
+    "name": "wrong-tree-mode",
+    "rejected": true
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "status": "complete",
+  "identity": {
+    "config": {
+      "studyKind": "version-2s",
+      "engine": "current",
+      "reward": "relative",
+      "opponentVariant": "uct",
+      "horizon": "epoch",
+      "samples": 32,
+      "timeMs": 10,
+      "opponentTimeMs": 10,
+      "opponentFixed": false,
+      "candidateLabel": "当前版 2 秒",
+      "opponentLabel": "原始版 2 秒",
+      "replayDir": "artifacts/ai-version-2s-smoke.json.replays"
+    },
+    "planPath": "artifacts/ai-version-2s-smoke-plan.json",
+    "planSha256": "d5ad9bcc363427c0c885c2ddcc40ba23945bb838d354a30008bd9a1dc3b88d8f",
+    "seeds": 1,
+    "start": 990001,
+    "counts": [
+      2
+    ],
+    "variants": [
+      "uct"
+    ],
+    "modes": [
+      "time"
+    ],
+    "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+    "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+    "opponentSourceSha256": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "opponentWasmSha256": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+    "modelSha256": null,
+    "rolloutModelSha256": null
+  },
+  "workers": 1,
+  "processId": 96914,
+  "plannedGames": 2,
+  "finishedGames": 2,
+  "startedAt": "2026-10-28T05:08:08.383Z",
+  "lastProgressAt": "2026-10-28T05:08:11.801Z",
+  "updatedAt": "2026-10-28T05:08:11.802Z",
+  "seconds": 3.414837292,
+  "failure": null,
+  "evaluation": {
+    "primary": "smoke only"
+  },
+  "inProgress": [],
+  "games": [
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 990001,
+      "count": 2,
+      "seat": 0,
+      "rank": 2,
+      "score": 34,
+      "margin": -34,
+      "steps": 181,
+      "stats": {
+        "candidate": {
+          "decisions": 83,
+          "searched": 76,
+          "ms": 793.1046650000003,
+          "searchMs": 792.0789560000003,
+          "maxMs": 13.483208000000104,
+          "overshootMs": 32.07895600000023,
+          "overrunCalls": 0,
+          "samples": 35651,
+          "transitions": 468176,
+          "nodes": 28753,
+          "depth": 7,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 405,
+          "truncated": 0
+        },
+        "opponent": {
+          "decisions": 98,
+          "searched": 85,
+          "ms": 892.2326639999998,
+          "searchMs": 875.9764949999998,
+          "maxMs": 14.375792000000047,
+          "overshootMs": 25.976494999999744,
+          "overrunCalls": 0,
+          "samples": 11939,
+          "transitions": 184312,
+          "nodes": 13462,
+          "depth": 6,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 234,
+          "truncated": 0
+        }
+      },
+      "replayPath": "artifacts/ai-version-2s-smoke.json.replays/uct-time-2p-990001-seat0.json"
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 990001,
+      "count": 2,
+      "seat": 1,
+      "rank": 2,
+      "score": 26,
+      "margin": -44,
+      "steps": 173,
+      "stats": {
+        "candidate": {
+          "decisions": 68,
+          "searched": 65,
+          "ms": 663.7080420000007,
+          "searchMs": 663.3786670000004,
+          "maxMs": 10.847124999999778,
+          "overshootMs": 13.378667000000405,
+          "overrunCalls": 0,
+          "samples": 21057,
+          "transitions": 434503,
+          "nodes": 27508,
+          "depth": 7,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 320,
+          "truncated": 0
+        },
+        "opponent": {
+          "decisions": 105,
+          "searched": 91,
+          "ms": 932.304208999999,
+          "searchMs": 930.5913339999988,
+          "maxMs": 10.994583000000148,
+          "overshootMs": 20.591333999998824,
+          "overrunCalls": 0,
+          "samples": 15213,
+          "transitions": 214292,
+          "nodes": 17229,
+          "depth": 7,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 91,
+          "truncated": 0
+        }
+      },
+      "replayPath": "artifacts/ai-version-2s-smoke.json.replays/uct-time-2p-990001-seat1.json"
+    }
+  ],
+  "caveat": "One current-version seat vs original-version opponents, everyone 2000ms; all seeds/seats predeclared. Parallel load affects throughput; timings compare different encountered positions. No outcome-dependent stopping."
+}

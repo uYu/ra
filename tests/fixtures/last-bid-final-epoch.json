@@ -1,0 +1,1011 @@
+{
+  "config": {
+    "count": 4,
+    "humans": 1,
+    "difficulty": "hard",
+    "seed": 0
+  },
+  "epoch": 3,
+  "phase": "auction",
+  "players": [
+    {
+      "name": "你",
+      "human": true,
+      "suns": [
+        5,
+        6,
+        9
+      ],
+      "used": [],
+      "tiles": [
+        {
+          "id": 27,
+          "kind": "monument",
+          "variant": 5
+        },
+        {
+          "id": 63,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 24,
+          "kind": "monument",
+          "variant": 4
+        },
+        {
+          "id": 23,
+          "kind": "monument",
+          "variant": 4
+        },
+        {
+          "id": 123,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 113,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 30,
+          "kind": "monument",
+          "variant": 6
+        },
+        {
+          "id": 64,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 109,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 108,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 55,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 60,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 10,
+          "kind": "monument",
+          "variant": 2
+        }
+      ],
+      "score": 10
+    },
+    {
+      "name": "拉美西斯",
+      "human": false,
+      "suns": [
+        2,
+        7,
+        10
+      ],
+      "used": [],
+      "tiles": [
+        {
+          "id": 119,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 35,
+          "kind": "monument",
+          "variant": 7
+        },
+        {
+          "id": 118,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 37,
+          "kind": "monument",
+          "variant": 7
+        },
+        {
+          "id": 2,
+          "kind": "monument",
+          "variant": 0
+        },
+        {
+          "id": 14,
+          "kind": "monument",
+          "variant": 2
+        },
+        {
+          "id": 28,
+          "kind": "monument",
+          "variant": 5
+        },
+        {
+          "id": 16,
+          "kind": "monument",
+          "variant": 3
+        },
+        {
+          "id": 1,
+          "kind": "monument",
+          "variant": 0
+        },
+        {
+          "id": 104,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 114,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 126,
+          "kind": "nile",
+          "variant": 0
+        }
+      ],
+      "score": 10
+    },
+    {
+      "name": "哈特谢普苏特",
+      "human": false,
+      "suns": [
+        8,
+        11,
+        12
+      ],
+      "used": [],
+      "tiles": [
+        {
+          "id": 19,
+          "kind": "monument",
+          "variant": 3
+        },
+        {
+          "id": 5,
+          "kind": "monument",
+          "variant": 1
+        },
+        {
+          "id": 125,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 127,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 57,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 117,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 47,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 48,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 12,
+          "kind": "monument",
+          "variant": 2
+        }
+      ],
+      "score": 10
+    },
+    {
+      "name": "图特摩斯",
+      "human": false,
+      "suns": [
+        1,
+        4,
+        13
+      ],
+      "used": [],
+      "tiles": [
+        {
+          "id": 56,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 62,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 61,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 0,
+          "kind": "monument",
+          "variant": 0
+        },
+        {
+          "id": 25,
+          "kind": "monument",
+          "variant": 5
+        },
+        {
+          "id": 116,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 9,
+          "kind": "monument",
+          "variant": 1
+        },
+        {
+          "id": 105,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 103,
+          "kind": "nile",
+          "variant": 0
+        },
+        {
+          "id": 21,
+          "kind": "monument",
+          "variant": 4
+        },
+        {
+          "id": 45,
+          "kind": "pharaoh",
+          "variant": 0
+        },
+        {
+          "id": 31,
+          "kind": "monument",
+          "variant": 6
+        },
+        {
+          "id": 39,
+          "kind": "monument",
+          "variant": 7
+        },
+        {
+          "id": 38,
+          "kind": "monument",
+          "variant": 7
+        },
+        {
+          "id": 17,
+          "kind": "monument",
+          "variant": 3
+        },
+        {
+          "id": 112,
+          "kind": "nile",
+          "variant": 0
+        }
+      ],
+      "score": 27
+    }
+  ],
+  "current": 3,
+  "bag": [
+    {
+      "id": 3,
+      "kind": "monument",
+      "variant": 0
+    },
+    {
+      "id": 4,
+      "kind": "monument",
+      "variant": 0
+    },
+    {
+      "id": 6,
+      "kind": "monument",
+      "variant": 1
+    },
+    {
+      "id": 7,
+      "kind": "monument",
+      "variant": 1
+    },
+    {
+      "id": 8,
+      "kind": "monument",
+      "variant": 1
+    },
+    {
+      "id": 11,
+      "kind": "monument",
+      "variant": 2
+    },
+    {
+      "id": 13,
+      "kind": "monument",
+      "variant": 2
+    },
+    {
+      "id": 15,
+      "kind": "monument",
+      "variant": 3
+    },
+    {
+      "id": 18,
+      "kind": "monument",
+      "variant": 3
+    },
+    {
+      "id": 20,
+      "kind": "monument",
+      "variant": 4
+    },
+    {
+      "id": 22,
+      "kind": "monument",
+      "variant": 4
+    },
+    {
+      "id": 29,
+      "kind": "monument",
+      "variant": 5
+    },
+    {
+      "id": 32,
+      "kind": "monument",
+      "variant": 6
+    },
+    {
+      "id": 33,
+      "kind": "monument",
+      "variant": 6
+    },
+    {
+      "id": 34,
+      "kind": "monument",
+      "variant": 6
+    },
+    {
+      "id": 36,
+      "kind": "monument",
+      "variant": 7
+    },
+    {
+      "id": 40,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 42,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 43,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 44,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 46,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 49,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 50,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 51,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 52,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 53,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 54,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 59,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 68,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 69,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 71,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 73,
+      "kind": "gold",
+      "variant": 0
+    },
+    {
+      "id": 75,
+      "kind": "gold",
+      "variant": 0
+    },
+    {
+      "id": 76,
+      "kind": "gold",
+      "variant": 0
+    },
+    {
+      "id": 82,
+      "kind": "civilization",
+      "variant": 0
+    },
+    {
+      "id": 83,
+      "kind": "civilization",
+      "variant": 1
+    },
+    {
+      "id": 84,
+      "kind": "civilization",
+      "variant": 1
+    },
+    {
+      "id": 85,
+      "kind": "civilization",
+      "variant": 1
+    },
+    {
+      "id": 86,
+      "kind": "civilization",
+      "variant": 1
+    },
+    {
+      "id": 89,
+      "kind": "civilization",
+      "variant": 2
+    },
+    {
+      "id": 90,
+      "kind": "civilization",
+      "variant": 2
+    },
+    {
+      "id": 93,
+      "kind": "civilization",
+      "variant": 3
+    },
+    {
+      "id": 95,
+      "kind": "civilization",
+      "variant": 3
+    },
+    {
+      "id": 98,
+      "kind": "civilization",
+      "variant": 4
+    },
+    {
+      "id": 99,
+      "kind": "civilization",
+      "variant": 4
+    },
+    {
+      "id": 102,
+      "kind": "civilization",
+      "variant": 4
+    },
+    {
+      "id": 106,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 107,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 110,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 111,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 120,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 121,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 133,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 134,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 137,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 138,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 139,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 141,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 143,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 146,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 148,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 150,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 152,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 154,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 155,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 157,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 161,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 163,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 165,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 167,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 169,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 170,
+      "kind": "earthquake",
+      "variant": 0
+    },
+    {
+      "id": 171,
+      "kind": "earthquake",
+      "variant": 0
+    },
+    {
+      "id": 172,
+      "kind": "funeral",
+      "variant": 0
+    },
+    {
+      "id": 176,
+      "kind": "war",
+      "variant": 0
+    },
+    {
+      "id": 177,
+      "kind": "war",
+      "variant": 0
+    },
+    {
+      "id": 178,
+      "kind": "drought",
+      "variant": 0
+    }
+  ],
+  "market": [
+    {
+      "id": 124,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 41,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 26,
+      "kind": "monument",
+      "variant": 5
+    }
+  ],
+  "discarded": [
+    {
+      "id": 58,
+      "kind": "pharaoh",
+      "variant": 0
+    },
+    {
+      "id": 173,
+      "kind": "funeral",
+      "variant": 0
+    },
+    {
+      "id": 142,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 145,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 153,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 151,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 156,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 174,
+      "kind": "war",
+      "variant": 0
+    },
+    {
+      "id": 72,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 164,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 66,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 115,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 122,
+      "kind": "nile",
+      "variant": 0
+    },
+    {
+      "id": 179,
+      "kind": "drought",
+      "variant": 0
+    },
+    {
+      "id": 65,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 144,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 160,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 78,
+      "kind": "civilization",
+      "variant": 0
+    },
+    {
+      "id": 130,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 132,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 135,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 96,
+      "kind": "civilization",
+      "variant": 3
+    },
+    {
+      "id": 128,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 88,
+      "kind": "civilization",
+      "variant": 2
+    },
+    {
+      "id": 79,
+      "kind": "civilization",
+      "variant": 0
+    },
+    {
+      "id": 92,
+      "kind": "civilization",
+      "variant": 2
+    },
+    {
+      "id": 147,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 168,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 140,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 162,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 166,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 158,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 67,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 100,
+      "kind": "civilization",
+      "variant": 4
+    },
+    {
+      "id": 175,
+      "kind": "war",
+      "variant": 0
+    },
+    {
+      "id": 159,
+      "kind": "ra",
+      "variant": 0
+    },
+    {
+      "id": 81,
+      "kind": "civilization",
+      "variant": 0
+    },
+    {
+      "id": 136,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 77,
+      "kind": "gold",
+      "variant": 0
+    },
+    {
+      "id": 131,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 74,
+      "kind": "gold",
+      "variant": 0
+    },
+    {
+      "id": 94,
+      "kind": "civilization",
+      "variant": 3
+    },
+    {
+      "id": 87,
+      "kind": "civilization",
+      "variant": 1
+    },
+    {
+      "id": 129,
+      "kind": "flood",
+      "variant": 0
+    },
+    {
+      "id": 91,
+      "kind": "civilization",
+      "variant": 2
+    },
+    {
+      "id": 97,
+      "kind": "civilization",
+      "variant": 3
+    },
+    {
+      "id": 101,
+      "kind": "civilization",
+      "variant": 4
+    },
+    {
+      "id": 70,
+      "kind": "god",
+      "variant": 0
+    },
+    {
+      "id": 80,
+      "kind": "civilization",
+      "variant": 0
+    },
+    {
+      "id": 149,
+      "kind": "ra",
+      "variant": 0
+    }
+  ],
+  "center": 3,
+  "ra": 1,
+  "auction": {
+    "caller": 3,
+    "reason": "invoke",
+    "order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "index": 3,
+    "high": 0,
+    "winner": -1,
+    "bids": [
+      {
+        "player": 0,
+        "sun": null
+      },
+      {
+        "player": 1,
+        "sun": null
+      },
+      {
+        "player": 2,
+        "sun": null
+      }
+    ]
+  },
+  "pending": [],
+  "resume": "turn",
+  "next": 3,
+  "history": [],
+  "log": [],
+  "lastTile": {
+    "id": 149,
+    "kind": "ra",
+    "variant": 0
+  },
+  "steps": 254
+}

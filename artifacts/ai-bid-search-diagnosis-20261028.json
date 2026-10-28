@@ -1,0 +1,44 @@
+{
+  "status": "diagnosis, no validated general repair yet",
+  "bespokePruningWithdrawn": true,
+  "productionWasmRestored": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "recordedCase": "tests/fixtures/last-bid-final-epoch.json",
+  "flatAudit": "artifacts/ai-bid-search-audit-20261028/summary.json",
+  "structuralAblations": "artifacts/ai-bid-search-structure-20261028/summary.json",
+  "independentReference": "artifacts/ai-bid-search-audit-20261028/reference-checks.json",
+  "findings": [
+    {
+      "finding": "Reported raw mean and optimized utility are different objectives",
+      "evidence": "In the first instrumented2s tree, bid1 raw mean7.0050 exceeds bid4 6.9845, but average tanh utilities .306466 vs .307439 reverse order; UCT and visits follow transformed utility.",
+      "limit": "The tanh transform is deliberate risk shaping, not proof of an arithmetic/backprop bug. Changing it also changes UCB relative scaling."
+    },
+    {
+      "finding": "Continuation estimates depend heavily on tree expansion",
+      "evidence": "Paired4096-scene policy-only rollout means bid1=8.9615 vs bid4=7.9730, paired difference .98845 with standard error .13055. Full tree2s picks4; root-only and two-decision-layer probes pick1.",
+      "limit": "Different tree depths induce different continuation policies. No full-game optimality oracle for this real4p position; this does not establish which tree statistic causes the bias."
+    },
+    {
+      "finding": "The symptom persists across UCT, SH and DPW in this fixture",
+      "evidence": "All three2s probes choose4 under original utility; isolated linear utility2s chooses1.",
+      "limit": "Single case and one timing per setting are diagnostic, not held-out strength validation."
+    }
+  ],
+  "rollbackValidation": {
+    "targetedTestsPassed": 7,
+    "build": "passed",
+    "independentTSTrajectories": 48,
+    "actionsMatched": 4754,
+    "probeBaselineFixedReportEqual": true,
+    "servedWasmRestorationVerified": true,
+    "fullSuiteRerun": false
+  },
+  "stoppedStudy": {
+    "finished": 36,
+    "planned": 50,
+    "cancelled": 6,
+    "automationDeleted": true,
+    "frozenHashesVerified": 31
+  },
+  "productionRewardOrTreeDepthChanged": false,
+  "noNewTournament": true
+}

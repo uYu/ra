@@ -1,0 +1,18 @@
+[
+  {
+    "name": "duplicate-game",
+    "rejected": true
+  },
+  {
+    "name": "wrong-rank",
+    "rejected": true
+  },
+  {
+    "name": "wrong-mode",
+    "rejected": true
+  },
+  {
+    "name": "unspent-budget",
+    "rejected": true
+  }
+]

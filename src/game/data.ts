@@ -127,7 +127,8 @@ export function shuffle<T>(items: T[], rng: () => number) {
 }
 
 export function tileLabel(t: Tile) {
-  return ["monument", "civilization"].includes(t.kind)
+  if (t.kind === "monument") return `古迹 ${t.variant + 1}·${tileName(t)}`;
+  return t.kind === "civilization"
     ? `${LABEL[t.kind]}·${tileName(t)}`
     : tileName(t);
 }

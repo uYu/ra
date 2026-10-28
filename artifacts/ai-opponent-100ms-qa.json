@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "formalPlan": "artifacts/ai-opponent-100ms-50-plan.json",
+  "formalOutput": "artifacts/ai-opponent-100ms-50.json",
+  "prototypeChecks": "artifacts/ai-opponent-tree-release-20261028/summary.json",
+  "smokeSummary": "artifacts/ai-opponent-100ms-smoke-summary.json",
+  "smokeExcluded": true,
+  "productionCoreUnchanged": true,
+  "noFullSuiteRerun": true,
+  "old54GameStudyNotResumed": true,
+  "summary": "artifacts/ai-opponent-100ms-50-summary.json",
+  "reportRejectionChecks": "artifacts/ai-opponent-100ms-report-checks.json",
+  "decisions": 15028
+}

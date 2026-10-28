@@ -1,0 +1,693 @@
+{
+  "design": {
+    "start": 970001,
+    "seeds": 25,
+    "counts": [
+      2,
+      3,
+      4
+    ],
+    "games": 50,
+    "workers": 6
+  },
+  "candidate": {
+    "root": "artifacts/ai-cross-epoch-2s-source-snapshot",
+    "timeMs": 2000,
+    "treeMode": 1,
+    "wasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "sourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "horizon": "next-epoch"
+  },
+  "opponent": {
+    "root": "artifacts/ai-cross-epoch-2s-source-snapshot",
+    "timeMs": 2000,
+    "treeMode": 1,
+    "wasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "sourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "horizon": "epoch"
+  },
+  "jobs": [
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970001,
+      "count": 2,
+      "seat": 0,
+      "pair": 0
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970001,
+      "count": 2,
+      "seat": 1,
+      "pair": 0
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970002,
+      "count": 3,
+      "seat": 0,
+      "pair": 1
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970002,
+      "count": 3,
+      "seat": 1,
+      "pair": 1
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970003,
+      "count": 4,
+      "seat": 0,
+      "pair": 2
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970003,
+      "count": 4,
+      "seat": 1,
+      "pair": 2
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970004,
+      "count": 2,
+      "seat": 0,
+      "pair": 3
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970004,
+      "count": 2,
+      "seat": 1,
+      "pair": 3
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970005,
+      "count": 3,
+      "seat": 2,
+      "pair": 4
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970005,
+      "count": 3,
+      "seat": 0,
+      "pair": 4
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970006,
+      "count": 4,
+      "seat": 2,
+      "pair": 5
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970006,
+      "count": 4,
+      "seat": 3,
+      "pair": 5
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970007,
+      "count": 2,
+      "seat": 0,
+      "pair": 6
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970007,
+      "count": 2,
+      "seat": 1,
+      "pair": 6
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970008,
+      "count": 3,
+      "seat": 1,
+      "pair": 7
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970008,
+      "count": 3,
+      "seat": 2,
+      "pair": 7
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970009,
+      "count": 4,
+      "seat": 0,
+      "pair": 8
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970009,
+      "count": 4,
+      "seat": 1,
+      "pair": 8
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970010,
+      "count": 2,
+      "seat": 0,
+      "pair": 9
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970010,
+      "count": 2,
+      "seat": 1,
+      "pair": 9
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970011,
+      "count": 3,
+      "seat": 0,
+      "pair": 10
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970011,
+      "count": 3,
+      "seat": 1,
+      "pair": 10
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970012,
+      "count": 4,
+      "seat": 2,
+      "pair": 11
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970012,
+      "count": 4,
+      "seat": 3,
+      "pair": 11
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970013,
+      "count": 2,
+      "seat": 0,
+      "pair": 12
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970013,
+      "count": 2,
+      "seat": 1,
+      "pair": 12
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970014,
+      "count": 3,
+      "seat": 2,
+      "pair": 13
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970014,
+      "count": 3,
+      "seat": 0,
+      "pair": 13
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970015,
+      "count": 4,
+      "seat": 0,
+      "pair": 14
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970015,
+      "count": 4,
+      "seat": 1,
+      "pair": 14
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970016,
+      "count": 2,
+      "seat": 0,
+      "pair": 15
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970016,
+      "count": 2,
+      "seat": 1,
+      "pair": 15
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970017,
+      "count": 3,
+      "seat": 1,
+      "pair": 16
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970017,
+      "count": 3,
+      "seat": 2,
+      "pair": 16
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970018,
+      "count": 4,
+      "seat": 2,
+      "pair": 17
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970018,
+      "count": 4,
+      "seat": 3,
+      "pair": 17
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970019,
+      "count": 2,
+      "seat": 0,
+      "pair": 18
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970019,
+      "count": 2,
+      "seat": 1,
+      "pair": 18
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970020,
+      "count": 3,
+      "seat": 0,
+      "pair": 19
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970020,
+      "count": 3,
+      "seat": 1,
+      "pair": 19
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970021,
+      "count": 4,
+      "seat": 0,
+      "pair": 20
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970021,
+      "count": 4,
+      "seat": 1,
+      "pair": 20
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970022,
+      "count": 2,
+      "seat": 0,
+      "pair": 21
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970022,
+      "count": 2,
+      "seat": 1,
+      "pair": 21
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970023,
+      "count": 3,
+      "seat": 2,
+      "pair": 22
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970023,
+      "count": 3,
+      "seat": 0,
+      "pair": 22
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970024,
+      "count": 4,
+      "seat": 2,
+      "pair": 23
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970024,
+      "count": 4,
+      "seat": 3,
+      "pair": 23
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970025,
+      "count": 3,
+      "seat": 1,
+      "pair": 24
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 970025,
+      "count": 3,
+      "seat": 2,
+      "pair": 24
+    }
+  ],
+  "seedPairs": [
+    {
+      "pair": 0,
+      "seed": 970001,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 1,
+      "seed": 970002,
+      "count": 3,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 2,
+      "seed": 970003,
+      "count": 4,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 3,
+      "seed": 970004,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 4,
+      "seed": 970005,
+      "count": 3,
+      "seats": [
+        2,
+        0
+      ]
+    },
+    {
+      "pair": 5,
+      "seed": 970006,
+      "count": 4,
+      "seats": [
+        2,
+        3
+      ]
+    },
+    {
+      "pair": 6,
+      "seed": 970007,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 7,
+      "seed": 970008,
+      "count": 3,
+      "seats": [
+        1,
+        2
+      ]
+    },
+    {
+      "pair": 8,
+      "seed": 970009,
+      "count": 4,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 9,
+      "seed": 970010,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 10,
+      "seed": 970011,
+      "count": 3,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 11,
+      "seed": 970012,
+      "count": 4,
+      "seats": [
+        2,
+        3
+      ]
+    },
+    {
+      "pair": 12,
+      "seed": 970013,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 13,
+      "seed": 970014,
+      "count": 3,
+      "seats": [
+        2,
+        0
+      ]
+    },
+    {
+      "pair": 14,
+      "seed": 970015,
+      "count": 4,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 15,
+      "seed": 970016,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 16,
+      "seed": 970017,
+      "count": 3,
+      "seats": [
+        1,
+        2
+      ]
+    },
+    {
+      "pair": 17,
+      "seed": 970018,
+      "count": 4,
+      "seats": [
+        2,
+        3
+      ]
+    },
+    {
+      "pair": 18,
+      "seed": 970019,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 19,
+      "seed": 970020,
+      "count": 3,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 20,
+      "seed": 970021,
+      "count": 4,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 21,
+      "seed": 970022,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    {
+      "pair": 22,
+      "seed": 970023,
+      "count": 3,
+      "seats": [
+        2,
+        0
+      ]
+    },
+    {
+      "pair": 23,
+      "seed": 970024,
+      "count": 4,
+      "seats": [
+        2,
+        3
+      ]
+    },
+    {
+      "pair": 24,
+      "seed": 970025,
+      "count": 3,
+      "seats": [
+        1,
+        2
+      ]
+    }
+  ],
+  "hashes": {
+    "artifacts/ai-cross-epoch-2s-source-snapshot/native/ra_ai.cpp": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/native/wasm-build.json": "b0de1cdbc28d1c7f8348e0da190da6429ace00b2dd7d4c50ec5e398c045846b0",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/scripts/benchmark-horizon-match.ts": "3bbfaa94401447256ab90c6d8915f2fb5dcd02425e4dbc73720beddd2fafc427",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/scripts/monitor-horizon.html": "d1b9d1ef22dbacf96518048aa14e143acbaf0ade521c04b8916c9887209e296c",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/scripts/monitor-horizon.mjs": "663a07b89c4aa7e49c1601f1f1e95c3492bf1de911646707507894e2fea94081",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/scripts/summarize-horizon-match.ts": "f32b35caf4949f32f9f5f878c3ae76b967230e7acd93326e9cb7ef632a321191",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai.ts": "a082f16bd7f144d324e3fb27f9c70525faffc83a0576512b85e4cfb2bce8c675",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai.worker.ts": "5986032b0735d325ecd5d0653525fce86072c62459a729cba8a2eecd37751045",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/evaluation.ts": "58fdd0afa3ef0f4016a653d3845e54e88f7ef2feb08e1f8707b6deb3c0e31cd9",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/halving.ts": "fef323cf8fbf900cf128f554c3e785bea427d00e96b4148f876edd060194c7ff",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/policy.ts": "68ed44877e1056ab8edc8245a1f2f91025757208c422d586993a491ec24b0392",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/ra-ai.wasm": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/rollout.ts": "889fd1dd95455e46619edabf74b1161ddaba84437fbec43f64375ec03969c90b",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/sampling.ts": "e7404d153e5e7eb1956cf24003bdac64e8ec936a8a3431ac9c068fcb9676b45e",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/search.ts": "69d9e5820237622cadca9b44be85000dd85da0431ef05445c2eb14eaee0e29a3",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/value.ts": "62ef8acb7e3377bbcec2638534e1eb509a9a2940f13521ee979564a1c06140b8",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/wasm-frozen-uct3.ts": "291c61110a3c8bac035e8df098d835d9e6445d8e6d8e320d42c39d8aefa2d8c1",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/wasm-frozen-uct4.ts": "3dff1ae4f94792bab3cdf8edfdd48878c36e1e642708f54e7f6e0ac5ca8a3a03",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/wasm-frozen-uct5.ts": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/ai/wasm.ts": "1c010492904da9bf08ad422186f9ebec215cec4291a1dbf13bc2f43ee03c2424",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/data.ts": "ec78c14ed0bc5f880e111e8a9429bd8a5150f768349cb5141e8a73d245dd3462",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/motion.ts": "b98125ded17e8d04e9ac0c1b5fa53c2eb6e588e08e89257443b56bb1d7720d41",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/preferences.ts": "6d5a5be7b3833a14d4929ef258d07c0b59296ec2f7255fbf90b6c168b1516c5e",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/presentation.ts": "67b1801bc28e267b31b8d7996e5743b5e23db0c7721f05c1d1365699474800ac",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/scoring-presentation.ts": "9bae82f86fe1b1b297d8c3e8dbd595edc5a50f0b325fdcee4cc5db4a401e4ed1",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/storage.ts": "fbe63bdaecd843ac5e882e75ea32b8374904af8d08dbc7faa626f9300a344641",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/tile-guide.ts": "a87ef1eb01c42dc52678015f1424c3641e3e5788b738343aa7347f0d6fc8cd98",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/types.ts": "e49a56903aa0db237bfd6e629a759dfd5849beac66fc3a20bac53a0ee9d06659",
+    "artifacts/ai-cross-epoch-2s-source-snapshot/src/game/visibility.ts": "d0cc797b59e1d832e085b39c1309bc561066aead1e988f09314a8d0982094805"
+  },
+  "output": "artifacts/ai-cross-epoch-2s-50.json",
+  "evaluation": "Fixed50 games,16/18/16 for2/3/4p; one next-epoch seat vs epoch opponents, both mode1 same O3 binary. Relative reward,no learned models. Equal player-count rank score and stratified complete paired-seed100000 bootstrap; no outcome-dependent stopping or extension."
+}

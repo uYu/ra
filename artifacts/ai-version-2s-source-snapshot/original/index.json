@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-28T01:10:16.798Z",
+  "description": "Source, runtime binary and measurement scripts frozen for the UCT 2000ms versus default-budget experiment",
+  "hashes": {
+    "native/ra_ai.cpp": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "native/wasm-build.json": "78bf67706aee97fcfb27660942d5ba9ba836f1836e6ed66235222ee5801e1bc9",
+    "src/game/ai/ra-ai.wasm": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+    "src/game/ai.ts": "87eaea654fe80c4eae183a890d1cd06b2a84fae1f7f5ffcfb44242b9def56f95",
+    "src/game/ai/search.ts": "69d9e5820237622cadca9b44be85000dd85da0431ef05445c2eb14eaee0e29a3",
+    "src/game/ai/wasm.ts": "1c010492904da9bf08ad422186f9ebec215cec4291a1dbf13bc2f43ee03c2424",
+    "src/game/ai/policy.ts": "68ed44877e1056ab8edc8245a1f2f91025757208c422d586993a491ec24b0392",
+    "src/game/ai/evaluation.ts": "58fdd0afa3ef0f4016a653d3845e54e88f7ef2feb08e1f8707b6deb3c0e31cd9",
+    "src/game/ai/sampling.ts": "e7404d153e5e7eb1956cf24003bdac64e8ec936a8a3431ac9c068fcb9676b45e",
+    "src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "src/game/data.ts": "2629b59a63483b3dccf9c2b47170d869008d345e33362d3adb0bbd1f37e08a9e",
+    "scripts/benchmark-tree.ts": "d1e8b73c9c1f36aa5019f18dca29c25f5e2753f306a31848c3d1cee9b6a17278",
+    "scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "scripts/summarize-budget.ts": "036ef83ef1ab361e04986550c10811e217d449c8ab1f203cb632e63a3d263ce1"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "playable hard Worker and TS fallback use explicit next-epoch; low-level historical defaults retained",
+  "targetedTests": {
+    "passed": 3,
+    "command": "node --experimental-strip-types --test --test-name-pattern='next-epoch search|hard search is deterministic|a voluntary invoker' tests/wasm.test.ts tests/ai.test.ts"
+  },
+  "workerTests": {
+    "passed": 4,
+    "command": "node --experimental-strip-types --test tests/worker.test.ts",
+    "localPortPermissionGranted": true,
+    "actualEpochAdvancePerSampleVerified": true
+  },
+  "productionBuild": "passed",
+  "fullSuiteRerun": false,
+  "nativeSourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "changedSources": {
+    "src/game/ai.ts": "a082f16bd7f144d324e3fb27f9c70525faffc83a0576512b85e4cfb2bce8c675",
+    "src/game/ai.worker.ts": "5986032b0735d325ecd5d0653525fce86072c62459a729cba8a2eecd37751045",
+    "tests/worker.test.ts": "158bb03d036b1bc9fc429c41d4f2af245114a1d6dc4ceaa7dc5ab48d8ef2cfa4",
+    "scripts/check-play-horizon.ts": "e7cc180dbed134053a5cba5bb86a53bd078e2a72bbfec5842a9f5f1f0d156306"
+  },
+  "timing": "artifacts/ai-play-cross-epoch-20261028.json",
+  "historicalSnapshotChecks": {
+    "opponent2s": 32,
+    "version2s": 45
+  },
+  "stoppedStudyPreserved": {
+    "status": "stopped",
+    "finished": 32
+  },
+  "newTournamentStarted": false,
+  "opponentTreeMergedIntoProduction": false
+}

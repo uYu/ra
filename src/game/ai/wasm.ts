@@ -229,9 +229,9 @@ export class WasmAi {
     const timeMs = options.timeMs ?? 0;
     if (
       options.timeMs !== undefined &&
-      (!Number.isFinite(timeMs) || timeMs < 1 || timeMs > 1000)
+      (!Number.isFinite(timeMs) || timeMs < 1 || timeMs > 2000)
     )
-      throw new Error("思考时间应为 1–1000 毫秒");
+      throw new Error("思考时间应为 1–2000 毫秒");
     // Sanitize all public callers, including callers outside the Worker.
     const s = observe(state);
     s.players.forEach((p) => {

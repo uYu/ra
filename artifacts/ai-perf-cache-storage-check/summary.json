@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-28T02:51:04.954Z",
+  "checks": 30012,
+  "sanitizer": "undefined behavior traps",
+  "sourceSha256": "b8893e0423b82dcbd11862048e54615f7c8a3985f26bf8882f6945863c84b3db",
+  "productionWasmSha256": "f85f597277ca27374427a85a97e5e8e215cb38ddabb4bc6cb10c6e598920341f",
+  "description": "20,000 vector differential operations, 10,000 cache invalidation/ownership cases, 12 inline/heap boundary sizes"
+}

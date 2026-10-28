@@ -27,10 +27,12 @@ export function journeys(
     const t = after.lastTile!;
     out.push({
       from: "bag",
-      to: t.kind === "ra" ? "ra" : `tile-${t.id}`,
+      to: t.kind === "ra" ? "ra-reveal" : `tile-${t.id}`,
       tile: t,
       delay: 0,
     });
+    if (t.kind === "ra")
+      out.push({ from: "ra-reveal", to: "discard", tile: t, delay: 1350 });
   }
   if (action.type === "bid" && action.sun !== null && move.kind !== "win")
     out.push({
@@ -76,6 +78,6 @@ export function journeys(
       out.push({ from: owned(t), to: "discard", tile: t, delay: i * 90 }),
     );
   if (action.type === "invoke")
-    out.push({ from: `player-${who}`, to: "ra", sun: 0, delay: 0 });
+    out.push({ from: `player-${who}`, to: "auction-notice", sun: 0, delay: 0 });
   return out;
 }

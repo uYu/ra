@@ -1,0 +1,343 @@
+{
+  "status": "complete",
+  "input": "artifacts/ai-uct2s-control.json",
+  "identity": {
+    "config": {
+      "engine": "current",
+      "reward": "relative",
+      "opponentVariant": "uct",
+      "replayDir": "artifacts/ai-uct2s-control.json.replays",
+      "samples": 32,
+      "timeMs": 2000,
+      "opponentFixed": true
+    },
+    "rolloutModelSha256": null,
+    "modelSha256": null,
+    "seeds": 6,
+    "start": 910001,
+    "counts": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "variants": [
+      "uct"
+    ],
+    "modes": [
+      "time"
+    ],
+    "costSource": null,
+    "sourceSha256": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "wasmSha256": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72"
+  },
+  "games": 84,
+  "seedBlocks": 6,
+  "replayCount": 84,
+  "decisions": 28346,
+  "primary": "Player counts weighted equally; normalized rank score (players-rank)/(players-1); 50% equal-strength reference",
+  "normalizedRankScore": 0.5583333333333333,
+  "interval95": [
+    0.4868055555555555,
+    0.6326388888888889
+  ],
+  "byCount": [
+    {
+      "count": 2,
+      "games": 12,
+      "meanRank": 1.5833333333333333,
+      "referenceMeanRank": 1.5,
+      "normalizedRankScore": 0.4166666666666667,
+      "interval95": [
+        0.16666666666666666,
+        0.6666666666666666
+      ],
+      "firstPlaces": 5,
+      "referenceFirstPlaces": 6,
+      "meanMargin": -2.8333333333333335
+    },
+    {
+      "count": 3,
+      "games": 18,
+      "meanRank": 1.6111111111111112,
+      "referenceMeanRank": 2,
+      "normalizedRankScore": 0.6944444444444444,
+      "interval95": [
+        0.611111111111111,
+        0.7777777777777778
+      ],
+      "firstPlaces": 9,
+      "referenceFirstPlaces": 6,
+      "meanMargin": 1.7222222222222223
+    },
+    {
+      "count": 4,
+      "games": 24,
+      "meanRank": 2.3333333333333335,
+      "referenceMeanRank": 2.5,
+      "normalizedRankScore": 0.5555555555555555,
+      "interval95": [
+        0.4166666666666667,
+        0.6805555555555555
+      ],
+      "firstPlaces": 8,
+      "referenceFirstPlaces": 6,
+      "meanMargin": -5.625
+    },
+    {
+      "count": 5,
+      "games": 30,
+      "meanRank": 2.7333333333333334,
+      "referenceMeanRank": 3,
+      "normalizedRankScore": 0.5666666666666667,
+      "interval95": [
+        0.5083333333333333,
+        0.625
+      ],
+      "firstPlaces": 13,
+      "referenceFirstPlaces": 6,
+      "meanMargin": -6
+    }
+  ],
+  "blocks": [
+    {
+      "seed": 910001,
+      "score": 0.6833333333333333,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 0.5
+        },
+        {
+          "count": 3,
+          "score": 0.8333333333333334
+        },
+        {
+          "count": 4,
+          "score": 0.75
+        },
+        {
+          "count": 5,
+          "score": 0.65
+        }
+      ]
+    },
+    {
+      "seed": 910002,
+      "score": 0.6625,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 0.5
+        },
+        {
+          "count": 3,
+          "score": 0.8333333333333334
+        },
+        {
+          "count": 4,
+          "score": 0.6666666666666666
+        },
+        {
+          "count": 5,
+          "score": 0.65
+        }
+      ]
+    },
+    {
+      "seed": 910003,
+      "score": 0.575,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 1
+        },
+        {
+          "count": 3,
+          "score": 0.5
+        },
+        {
+          "count": 4,
+          "score": 0.25
+        },
+        {
+          "count": 5,
+          "score": 0.55
+        }
+      ]
+    },
+    {
+      "seed": 910004,
+      "score": 0.44166666666666665,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 0
+        },
+        {
+          "count": 3,
+          "score": 0.6666666666666666
+        },
+        {
+          "count": 4,
+          "score": 0.49999999999999994
+        },
+        {
+          "count": 5,
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "seed": 910005,
+      "score": 0.4583333333333333,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 0
+        },
+        {
+          "count": 3,
+          "score": 0.6666666666666666
+        },
+        {
+          "count": 4,
+          "score": 0.6666666666666666
+        },
+        {
+          "count": 5,
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "seed": 910006,
+      "score": 0.5291666666666667,
+      "byCount": [
+        {
+          "count": 2,
+          "score": 0.5
+        },
+        {
+          "count": 3,
+          "score": 0.6666666666666666
+        },
+        {
+          "count": 4,
+          "score": 0.49999999999999994
+        },
+        {
+          "count": 5,
+          "score": 0.45
+        }
+      ]
+    }
+  ],
+  "timing": [
+    {
+      "sidePhase": "opponent/all",
+      "searched": 19081,
+      "meanMs": 60.42929018662506,
+      "medianMs": 41.56766699999571,
+      "p95Ms": 182.37750000017695,
+      "maxMs": 1609.3904580001254,
+      "meanSamples": 80.8594937372255,
+      "meanTransitions": 5321.760704365599,
+      "meanNodes": 132.19212829516272,
+      "meanDepth": 3.512551753052775,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "opponent/turn",
+      "searched": 10428,
+      "meanMs": 43.27765487533464,
+      "medianMs": 31.095750000036787,
+      "p95Ms": 125.88649999990594,
+      "maxMs": 584.9022500000428,
+      "meanSamples": 68.66436517069428,
+      "meanTransitions": 3927.0707710011507,
+      "meanNodes": 112.11862293824319,
+      "meanDepth": 3.4814921365554277,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/all",
+      "searched": 6318,
+      "meanMs": 2003.227176250077,
+      "medianMs": 2001.983167000115,
+      "p95Ms": 2007.6637079999782,
+      "maxMs": 2267.7932499998715,
+      "meanSamples": 9909.577081354859,
+      "meanTransitions": 241046.5280151947,
+      "meanNodes": 9883.718265273821,
+      "meanDepth": 6.007597340930674,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/turn",
+      "searched": 3554,
+      "meanMs": 2003.58634131655,
+      "medianMs": 2002.1916249999776,
+      "p95Ms": 2008.5899169999975,
+      "maxMs": 2267.7932499998715,
+      "meanSamples": 11860.51547552054,
+      "meanTransitions": 248061.2343837929,
+      "meanNodes": 11239.313168261115,
+      "meanDepth": 6.111705120990433,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "opponent/auction",
+      "searched": 8647,
+      "meanMs": 81.10089416965495,
+      "medianMs": 59.04320899999948,
+      "p95Ms": 236.50641699999687,
+      "maxMs": 1609.3904580001254,
+      "meanSamples": 95.55221464091592,
+      "meanTransitions": 7002.597548282642,
+      "meanNodes": 156.37157395628543,
+      "meanDepth": 3.549323464785475,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/auction",
+      "searched": 2759,
+      "meanMs": 2002.7653251359204,
+      "medianMs": 2001.7784160000738,
+      "p95Ms": 2006.2564169999678,
+      "maxMs": 2167.265582999913,
+      "meanSamples": 7385.137006161653,
+      "meanTransitions": 231859.0775643349,
+      "meanNodes": 8123.997462848858,
+      "meanDepth": 5.870967741935484,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "candidate/god",
+      "searched": 5,
+      "meanMs": 2002.7820918000245,
+      "medianMs": 2002.4762919999193,
+      "p95Ms": 2004.0725420000963,
+      "maxMs": 2004.0725420000963,
+      "meanSamples": 16168.6,
+      "meanTransitions": 324628.4,
+      "meanNodes": 17340.8,
+      "meanDepth": 7.4,
+      "truncated": 0
+    },
+    {
+      "sidePhase": "opponent/god",
+      "searched": 6,
+      "meanMs": 78.74485433328664,
+      "medianMs": 79.65254199993797,
+      "p95Ms": 200.18275000003632,
+      "maxMs": 200.18275000003632,
+      "meanSamples": 101.33333333333333,
+      "meanTransitions": 6926.833333333333,
+      "meanNodes": 173.33333333333334,
+      "meanDepth": 4.5,
+      "truncated": 0
+    }
+  ],
+  "caveat": "Bootstrap resamples entire seed blocks. Six seeds give a preliminary diagnostic with limited power for small gains. Parallel timings and simulation ratios compare different encountered positions, not pure serial speed. An interval including 50% does not establish equivalence or prove a directional error."
+}

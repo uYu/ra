@@ -1,0 +1,1695 @@
+{
+  "createdAt": "2026-10-28T07:01:15.253Z",
+  "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "method": "Exact chance enumeration and adversarial two-player backward induction in synthetic final-epoch puzzles. 2-3 unknown bag tiles, known equal public initial scores 100, 1-2 usable disks per player, all canonical legal actions. Draw probabilities use the public remaining multiset; no future-order peeking. Each objective is solved separately, with a 100000-node cap; capped cases excluded from exact conclusions.",
+  "caveats": [
+    "Synthetic fully specified two-player endgames, not full-game Ra playing-strength evidence.",
+    "Opponent scores are deliberately public and equal in these fixtures; no real hidden score is used.",
+    "Policy regret is relative to the stated win or margin objective, not proof of an error in historical games.",
+    "The current MCTS itself is not benchmarked here; its restricted candidate set and heuristic policy are audited."
+  ],
+  "referenceChecks": 6,
+  "margin": {
+    "cases": 20,
+    "policySuboptimal": 1,
+    "pruningSuboptimal": 0,
+    "cappedCases": 0,
+    "maxPolicyRegret": 0.5,
+    "maxPruningRegret": 0
+  },
+  "win": {
+    "cases": 20,
+    "policySuboptimal": 0,
+    "pruningSuboptimal": 0,
+    "cappedCases": 0,
+    "maxPolicyRegret": 0,
+    "maxPruningRegret": 0
+  },
+  "results": [
+    {
+      "index": 1,
+      "phase": "auction",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "flood/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "bid",
+        "sun": null
+      },
+      "objectives": {
+        "margin": {
+          "best": 3.333333333333333,
+          "limitedBest": 3.333333333333333,
+          "policyValue": 3.333333333333333,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 2
+              },
+              "value": -6
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 3.333333333333333
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 2
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 2,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "nile/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": 11,
+          "limitedBest": 11,
+          "policyValue": 11,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 11
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 9
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 3,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "gold/0",
+        "war/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": -5,
+          "limitedBest": -5,
+          "policyValue": -5,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 142,
+          "cacheHits": 6,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": -5
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -11
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 142,
+          "cacheHits": 6,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 5,
+      "phase": "auction",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "pharaoh/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "bid",
+        "sun": null
+      },
+      "objectives": {
+        "margin": {
+          "best": 9,
+          "limitedBest": 9,
+          "policyValue": 9,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 0,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 3
+              },
+              "value": -4.333333333333333
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 9
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 0,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 3
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 6,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "monument/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": -1,
+          "limitedBest": -1,
+          "policyValue": -1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": -1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -5
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 7,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "nile/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": -6,
+          "limitedBest": -6,
+          "policyValue": -6,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 621,
+          "cacheHits": 88,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": -6
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -13
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 621,
+          "cacheHits": 88,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 8,
+      "phase": "disaster",
+      "legal": 6,
+      "offered": 1,
+      "bag": [
+        "ra/0",
+        "nile/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "objectives": {
+        "margin": {
+          "best": 4,
+          "limitedBest": 4,
+          "policyValue": 4,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 456,
+          "cacheHits": 132,
+          "actions": [
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  10,
+                  25
+                ]
+              },
+              "value": 4
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  10,
+                  20
+                ]
+              },
+              "value": 4
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  10,
+                  5
+                ]
+              },
+              "value": 4
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  25,
+                  20
+                ]
+              },
+              "value": 4
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  25,
+                  5
+                ]
+              },
+              "value": 4
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  20,
+                  5
+                ]
+              },
+              "value": 4
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 456,
+          "cacheHits": 132,
+          "actions": [
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  10,
+                  25
+                ]
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  10,
+                  20
+                ]
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  10,
+                  5
+                ]
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  25,
+                  20
+                ]
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  25,
+                  5
+                ]
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  20,
+                  5
+                ]
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 9,
+      "phase": "auction",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "monument/0",
+        "war/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "bid",
+        "sun": null
+      },
+      "objectives": {
+        "margin": {
+          "best": 6,
+          "limitedBest": 6,
+          "policyValue": 6,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 44,
+          "cacheHits": 2,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 3
+              },
+              "value": -7.333333333333333
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 6
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 44,
+          "cacheHits": 2,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 3
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 10,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "nile/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": -13.5,
+          "limitedBest": -13.5,
+          "policyValue": -13.5,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": -13.5
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -14
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 11,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "flood/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": 12,
+          "limitedBest": 12,
+          "policyValue": 12,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 33,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 12
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 4
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 33,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0.6666666666666666
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 13,
+      "phase": "auction",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "civilization/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "bid",
+        "sun": null
+      },
+      "objectives": {
+        "margin": {
+          "best": 5.666666666666666,
+          "limitedBest": 5.666666666666666,
+          "policyValue": 5.666666666666666,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 2
+              },
+              "value": -5
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 5.666666666666666
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 2
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 14,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "gold/0"
+      ],
+      "suns": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": 5,
+          "limitedBest": 5,
+          "policyValue": 5,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 1705,
+          "cacheHits": 813,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 5
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 5
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 1705,
+          "cacheHits": 813,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 15,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "flood/0",
+        "war/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": -6.999999999999999,
+          "limitedBest": -6.999999999999999,
+          "policyValue": -6.999999999999999,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 112,
+          "cacheHits": 7,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": -6.999999999999999
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -13.333333333333332
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 112,
+          "cacheHits": 7,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 16,
+      "phase": "disaster",
+      "legal": 3,
+      "offered": 1,
+      "bag": [
+        "ra/0",
+        "pharaoh/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "objectives": {
+        "margin": {
+          "best": -7,
+          "limitedBest": -7,
+          "policyValue": -7,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 228,
+          "cacheHits": 66,
+          "actions": [
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  0,
+                  35
+                ]
+              },
+              "value": -7
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  0,
+                  20
+                ]
+              },
+              "value": -7
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  35,
+                  20
+                ]
+              },
+              "value": -7
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 228,
+          "cacheHits": 66,
+          "actions": [
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  0,
+                  35
+                ]
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  0,
+                  20
+                ]
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "discard",
+                "ids": [
+                  35,
+                  20
+                ]
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 17,
+      "phase": "auction",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "nile/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "bid",
+        "sun": null
+      },
+      "objectives": {
+        "margin": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 2
+              },
+              "value": -9
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 1
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 18,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 2
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 18,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "monument/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": -5,
+          "limitedBest": -5,
+          "policyValue": -5,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": -5
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -6
+            }
+          ]
+        },
+        "win": {
+          "best": 0,
+          "limitedBest": 0,
+          "policyValue": 0,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 19,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "monument/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": 6,
+          "limitedBest": 6,
+          "policyValue": 6,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 33,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 6
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -1.3333333333333333
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 33,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 21,
+      "phase": "auction",
+      "legal": 3,
+      "offered": 3,
+      "bag": [
+        "ra/0",
+        "pharaoh/0",
+        "war/0"
+      ],
+      "suns": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "bid",
+        "sun": null
+      },
+      "objectives": {
+        "margin": {
+          "best": 2.6666666666666665,
+          "limitedBest": 2.6666666666666665,
+          "policyValue": 2.6666666666666665,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 2017,
+          "cacheHits": 310,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 3
+              },
+              "value": -8
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": 4
+              },
+              "value": -10.333333333333332
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 2.6666666666666665
+            }
+          ]
+        },
+        "win": {
+          "best": 0.6666666666666666,
+          "limitedBest": 0.6666666666666666,
+          "policyValue": 0.6666666666666666,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 2017,
+          "cacheHits": 310,
+          "actions": [
+            {
+              "action": {
+                "type": "bid",
+                "sun": 3
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": 4
+              },
+              "value": 0
+            },
+            {
+              "action": {
+                "type": "bid",
+                "sun": null
+              },
+              "value": 0.6666666666666666
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 22,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "gold/0"
+      ],
+      "suns": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": 8,
+          "limitedBest": 8,
+          "policyValue": 7.5,
+          "policyRegret": 0.5,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 7.5
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 8
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 75,
+          "cacheHits": 22,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 23,
+      "phase": "turn",
+      "legal": 2,
+      "offered": 2,
+      "bag": [
+        "ra/0",
+        "nile/0",
+        "ra/0"
+      ],
+      "suns": [
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "publicScores": [
+        100,
+        100
+      ],
+      "policy": {
+        "type": "draw"
+      },
+      "objectives": {
+        "margin": {
+          "best": 3,
+          "limitedBest": 3,
+          "policyValue": 3,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 33,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 3
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": -3.333333333333333
+            }
+          ]
+        },
+        "win": {
+          "best": 1,
+          "limitedBest": 1,
+          "policyValue": 1,
+          "policyRegret": 0,
+          "pruningRegret": 0,
+          "nodes": 33,
+          "cacheHits": 1,
+          "actions": [
+            {
+              "action": {
+                "type": "draw"
+              },
+              "value": 1
+            },
+            {
+              "action": {
+                "type": "invoke"
+              },
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "supersededBy": "artifacts/ai-endgame-oracle-legal-deck-20261028.json",
+  "fixtureLimitation": "V1 shortened-deck fixtures do not satisfy the standard two-player remaining-Ra constraint. These validate the generic rule-tree prototype only; the 0.5 expected-margin discrepancy is not evidence of an error in a reachable standard Ra game."
+}

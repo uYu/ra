@@ -1,0 +1,107 @@
+{
+  "method": "Counted diagnostic builds replay identical simulation counts; all transitions match. Counts and cumulative requested bytes are not time or peak memory.",
+  "baselineWasmSha256": "922360a3afda4939ee2dd5d002a4d745a0e1aa87c80518f2c0df81286ac61e93",
+  "optimizedWasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "rows": [
+    {
+      "count": 2,
+      "before": {
+        "samples": 172227,
+        "transitions": 4810273,
+        "allocations": 140274997,
+        "requestedBytes": 8822796168,
+        "inventoryTileItems": 609697271,
+        "bagItems": 5995327422
+      },
+      "after": {
+        "samples": 172227,
+        "transitions": 4810273,
+        "allocations": 34096049,
+        "requestedBytes": 2020077812,
+        "inventoryTileItems": 196272505,
+        "bagItems": 308573209
+      },
+      "reductions": {
+        "allocations": 0.7569342382520243,
+        "requestedBytes": 0.7710388210795623,
+        "inventoryTileItems": 0.6780820345840124,
+        "bagItems": 0.9485310497192058
+      }
+    },
+    {
+      "count": 3,
+      "before": {
+        "samples": 84807,
+        "transitions": 4211043,
+        "allocations": 143606533,
+        "requestedBytes": 7479357424,
+        "inventoryTileItems": 839792653,
+        "bagItems": 4704011454
+      },
+      "after": {
+        "samples": 84807,
+        "transitions": 4211043,
+        "allocations": 23392260,
+        "requestedBytes": 965905236,
+        "inventoryTileItems": 210072996,
+        "bagItems": 184956368
+      },
+      "reductions": {
+        "allocations": 0.8371086641302036,
+        "requestedBytes": 0.870857189830162,
+        "inventoryTileItems": 0.7498513528910332,
+        "bagItems": 0.9606811399571052
+      }
+    },
+    {
+      "count": 4,
+      "before": {
+        "samples": 81984,
+        "transitions": 3988527,
+        "allocations": 141214712,
+        "requestedBytes": 6320690080,
+        "inventoryTileItems": 762848019,
+        "bagItems": 4494877534
+      },
+      "after": {
+        "samples": 81984,
+        "transitions": 3988527,
+        "allocations": 22368455,
+        "requestedBytes": 905919556,
+        "inventoryTileItems": 148615877,
+        "bagItems": 170168480
+      },
+      "reductions": {
+        "allocations": 0.8415996840329214,
+        "requestedBytes": 0.856673947854757,
+        "inventoryTileItems": 0.8051828499275424,
+        "bagItems": 0.9621416871287778
+      }
+    },
+    {
+      "count": 5,
+      "before": {
+        "samples": 53579,
+        "transitions": 3196666,
+        "allocations": 127500623,
+        "requestedBytes": 5051829944,
+        "inventoryTileItems": 1073116623,
+        "bagItems": 3335487901
+      },
+      "after": {
+        "samples": 53579,
+        "transitions": 3196666,
+        "allocations": 22890243,
+        "requestedBytes": 716304952,
+        "inventoryTileItems": 210163820,
+        "bagItems": 97033432
+      },
+      "reductions": {
+        "allocations": 0.8204695595879559,
+        "requestedBytes": 0.8582088154311791,
+        "inventoryTileItems": 0.8041556569942352,
+        "bagItems": 0.9709087741044095
+      }
+    }
+  ]
+}

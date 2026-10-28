@@ -1,0 +1,309 @@
+{
+  "method": "Unlimited exact scenario memoization: root actions share the world with visit ordinal k; only total root visits minus largest action visit count can reuse earlier worlds. A bounded cache may reuse fewer.",
+  "byCount": [
+    {
+      "count": 2,
+      "samples": 4096,
+      "idealReusable": 1885,
+      "fraction": 0.460205078125
+    },
+    {
+      "count": 3,
+      "samples": 4096,
+      "idealReusable": 1479,
+      "fraction": 0.361083984375
+    },
+    {
+      "count": 4,
+      "samples": 4096,
+      "idealReusable": 1805,
+      "fraction": 0.440673828125
+    },
+    {
+      "count": 5,
+      "samples": 3584,
+      "idealReusable": 1699,
+      "fraction": 0.4740513392857143
+    }
+  ],
+  "rows": [
+    {
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        282,
+        230
+      ],
+      "idealReusableScenarios": 230
+    },
+    {
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "samples": 1024,
+      "visits": [
+        484,
+        434,
+        55,
+        51
+      ],
+      "idealReusableScenarios": 540
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        464,
+        48
+      ],
+      "idealReusableScenarios": 48
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        269,
+        266,
+        233
+      ],
+      "idealReusableScenarios": 499
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        327,
+        185
+      ],
+      "idealReusableScenarios": 185
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        385,
+        192,
+        191
+      ],
+      "idealReusableScenarios": 383
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        462,
+        50
+      ],
+      "idealReusableScenarios": 50
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        444,
+        196,
+        128
+      ],
+      "idealReusableScenarios": 324
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        439,
+        73
+      ],
+      "idealReusableScenarios": 73
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "samples": 1024,
+      "visits": [
+        519,
+        170,
+        168,
+        167
+      ],
+      "idealReusableScenarios": 505
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        342,
+        170
+      ],
+      "idealReusableScenarios": 170
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        411,
+        263,
+        94
+      ],
+      "idealReusableScenarios": 357
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        411,
+        101
+      ],
+      "idealReusableScenarios": 101
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "samples": 1024,
+      "visits": [
+        324,
+        311,
+        286,
+        103
+      ],
+      "idealReusableScenarios": 700
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        288,
+        224
+      ],
+      "idealReusableScenarios": 224
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "samples": 512,
+      "visits": [
+        260,
+        252
+      ],
+      "idealReusableScenarios": 252
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "samples": 768,
+      "visits": [
+        541,
+        165,
+        62
+      ],
+      "idealReusableScenarios": 227
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        467,
+        189,
+        112
+      ],
+      "idealReusableScenarios": 301
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        414,
+        98
+      ],
+      "idealReusableScenarios": 98
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        292,
+        256,
+        220
+      ],
+      "idealReusableScenarios": 476
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        268,
+        244
+      ],
+      "idealReusableScenarios": 244
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "samples": 768,
+      "visits": [
+        269,
+        267,
+        232
+      ],
+      "idealReusableScenarios": 499
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "samples": 512,
+      "visits": [
+        307,
+        205
+      ],
+      "idealReusableScenarios": 205
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "samples": 512,
+      "visits": [
+        335,
+        177
+      ],
+      "idealReusableScenarios": 177
+    }
+  ]
+}

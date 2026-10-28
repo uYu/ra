@@ -52,7 +52,10 @@ const hash = (path) =>
   createHash("sha256")
     .update(readFileSync(resolve(root, path)))
     .digest("hex");
-const version = spawnSync(compiler, ["--version"], { encoding: "utf8" });
+const version = spawnSync(compiler, ["--version"], { encoding: "utf8", env });
+if (version.error) throw version.error;
+if (version.status !== 0 || !version.stdout.trim())
+  throw new Error("Unable to record the Wasm compiler version");
 writeFileSync(
   resolve(root, "native/wasm-build.json"),
   JSON.stringify(

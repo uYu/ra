@@ -1,0 +1,153 @@
+{
+  "status": "complete",
+  "identity": {
+    "config": {
+      "studyKind": "version-2s",
+      "engine": "current",
+      "reward": "relative",
+      "opponentVariant": "uct",
+      "horizon": "epoch",
+      "samples": 32,
+      "timeMs": 10,
+      "opponentTimeMs": 10,
+      "opponentFixed": false,
+      "candidateLabel": "当前版 2 秒",
+      "opponentLabel": "原始版 2 秒",
+      "replayDir": "artifacts/ai-version-2s-smoke-final.json.replays"
+    },
+    "planPath": "artifacts/ai-version-2s-smoke-final-plan.json",
+    "planSha256": "5e6c666f66c3e904883033eadab25b323a17cdb7cf04a054c010ef9da3f0aa80",
+    "seeds": 1,
+    "start": 990001,
+    "counts": [
+      2
+    ],
+    "variants": [
+      "uct"
+    ],
+    "modes": [
+      "time"
+    ],
+    "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+    "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+    "opponentSourceSha256": "0b5a7744007b56f70e6d1e2b205890f7d49d527364cdca6b32610593cf5f637d",
+    "opponentWasmSha256": "c0eb669cee48401fa6b16ba9f0983515b8e3fd445d0bf01cfbf3466364d6ea72",
+    "modelSha256": null,
+    "rolloutModelSha256": null
+  },
+  "workers": 1,
+  "processId": 97082,
+  "plannedGames": 2,
+  "finishedGames": 2,
+  "startedAt": "2026-10-28T05:09:49.840Z",
+  "lastProgressAt": "2026-10-28T05:09:53.409Z",
+  "updatedAt": "2026-10-28T05:09:53.411Z",
+  "seconds": 3.5685005,
+  "failure": null,
+  "evaluation": {
+    "primary": "Player-count-equal normalized rank score (players-rank)/(players-1); equal-strength reference 0.5",
+    "secondary": [
+      "mean rank by player count",
+      "first places",
+      "score margin",
+      "actual elapsed search time and simulations by side and phase"
+    ],
+    "uncertainty": "100000 bootstrap resamples of whole seed blocks after all 84 games finish. No benefit does not prove equivalence or an incorrect algorithm direction."
+  },
+  "inProgress": [],
+  "games": [
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 990001,
+      "count": 2,
+      "seat": 0,
+      "rank": 1,
+      "score": 76,
+      "margin": 33,
+      "steps": 185,
+      "stats": {
+        "candidate": {
+          "decisions": 117,
+          "searched": 105,
+          "ms": 1073.7302120000004,
+          "searchMs": 1072.2984210000004,
+          "maxMs": 11.921999999999997,
+          "overshootMs": 22.298421000000474,
+          "overrunCalls": 0,
+          "samples": 61103,
+          "transitions": 718792,
+          "nodes": 58300,
+          "depth": 7,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 321,
+          "truncated": 0
+        },
+        "opponent": {
+          "decisions": 68,
+          "searched": 64,
+          "ms": 657.1597850000007,
+          "searchMs": 656.6773260000009,
+          "maxMs": 12.216874999999987,
+          "overshootMs": 16.67732600000096,
+          "overrunCalls": 0,
+          "samples": 5723,
+          "transitions": 153958,
+          "nodes": 8135,
+          "depth": 5,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 200,
+          "truncated": 0
+        }
+      },
+      "replayPath": "artifacts/ai-version-2s-smoke-final.json.replays/uct-time-2p-990001-seat0.json"
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 990001,
+      "count": 2,
+      "seat": 1,
+      "rank": 1,
+      "score": 62,
+      "margin": 3,
+      "steps": 183,
+      "stats": {
+        "candidate": {
+          "decisions": 98,
+          "searched": 92,
+          "ms": 939.4948369999984,
+          "searchMs": 938.7893789999985,
+          "maxMs": 10.443708000000242,
+          "overshootMs": 18.789378999998462,
+          "overrunCalls": 0,
+          "samples": 37317,
+          "transitions": 631889,
+          "nodes": 45211,
+          "depth": 8,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 313,
+          "truncated": 0
+        },
+        "opponent": {
+          "decisions": 85,
+          "searched": 75,
+          "ms": 765.4747450000002,
+          "searchMs": 764.110163000001,
+          "maxMs": 10.33524999999986,
+          "overshootMs": 14.110163000000966,
+          "overrunCalls": 0,
+          "samples": 11057,
+          "transitions": 168321,
+          "nodes": 13354,
+          "depth": 7,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 88,
+          "truncated": 0
+        }
+      },
+      "replayPath": "artifacts/ai-version-2s-smoke-final.json.replays/uct-time-2p-990001-seat1.json"
+    }
+  ],
+  "caveat": "One current-version seat vs original-version opponents, everyone 2000ms; all seeds/seats predeclared. Parallel load affects throughput; timings compare different encountered positions. No outcome-dependent stopping."
+}

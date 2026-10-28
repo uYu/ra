@@ -47,6 +47,8 @@ export type SearchReport = {
   maxOutcomeBranches: number;
   candidates: {
     action: Action;
+    /** Raw reward mean. UCT uses mean transformed utilities (tanh for relative)
+     * and recommends by visits; this diagnostic value is not that utility. */
     value: number;
     error: number;
     visits: number;
@@ -113,9 +115,9 @@ export function searchAction(
     timed &&
     (!Number.isFinite(options.timeMs) ||
       options.timeMs! < 1 ||
-      options.timeMs! > 1000)
+      options.timeMs! > 2000)
   )
-    throw new Error("思考时间应为 1–1000 毫秒");
+    throw new Error("思考时间应为 1–2000 毫秒");
   const deadline = timed ? performance.now() + options.timeMs! : Infinity;
   if (candidates.length === 1)
     return {

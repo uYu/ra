@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-28T05:14:20.610811+00:00",
+  "status": "startup-checks-passed; study later stopped at user request",
+  "planSha256": "f60a51570fe116add1ef144be9958b460842511c17d66ebbb9d113877da40500",
+  "frozenFilesVerified": 45,
+  "smoke": {
+    "finalFrozenRunner": true,
+    "budgetMsEach": 10,
+    "games": 2,
+    "actionsReplayed": 368,
+    "report": "artifacts/ai-version-2s-smoke-final-summary.json",
+    "excludedFromFormalStudy": true
+  },
+  "legacyReportRegression": {
+    "games": 84,
+    "actionsReplayed": 28346,
+    "rankIntervalsTimingUnchanged": true,
+    "output": "artifacts/ai-uct2s-control-summary-regression-final.json"
+  },
+  "typechecks": "benchmark-version-match.ts and summarize-budget.ts passed",
+  "monitor": {
+    "url": "http://127.0.0.1:8788",
+    "apiVerified": true,
+    "browserVerified": true,
+    "refreshSeconds": 3,
+    "actualActiveGameProgress": true,
+    "includesActiveSearchTimings": true,
+    "old8787Preserved": true
+  },
+  "heartbeat": {
+    "automationId": "ra-2",
+    "intervalMinutes": 5,
+    "normalProgressSilent": true,
+    "completionOrFailureNotification": true,
+    "deletedAtUserRequest": true
+  },
+  "formal": {
+    "status": "stopped",
+    "plannedGames": 84,
+    "workers": 6,
+    "candidateTimeMs": 2000,
+    "opponentTimeMs": 2000,
+    "runnerProcessId": 97134,
+    "monitorProcessId": 97140,
+    "finishedAtCheck": 0,
+    "lastProgressAtCheck": "2026-10-28T05:14:18.632Z",
+    "finishedAtStop": 54,
+    "stopRecord": "artifacts/ai-version-2s-stop-record.json"
+  },
+  "noRepeatedFullTestSuite": true,
+  "productionWasmUnchanged": true
+}

@@ -1,0 +1,233 @@
+{
+  "createdAt": "2026-10-28T08:53:21.221Z",
+  "horizon": "next-epoch",
+  "timeMs": 2000,
+  "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "results": [
+    {
+      "count": 2,
+      "epoch": {
+        "elapsedMs": 2014.449042,
+        "samples": 48831,
+        "transitions": 1410935,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "invoke"
+        }
+      },
+      "steps": 30,
+      "next-epoch": {
+        "elapsedMs": 2003.2750419999998,
+        "samples": 15963,
+        "transitions": 1397109,
+        "epochAdvances": 15963,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "invoke"
+        }
+      },
+      "rootEpoch": 1
+    },
+    {
+      "count": 2,
+      "epoch": {
+        "elapsedMs": 2012.052584,
+        "samples": 44240,
+        "transitions": 1403615,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "steps": 91,
+      "next-epoch": {
+        "elapsedMs": 2003.5747919999994,
+        "samples": 16286,
+        "transitions": 1455228,
+        "epochAdvances": 16286,
+        "completed": 16286,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "rootEpoch": 2
+    },
+    {
+      "count": 3,
+      "epoch": {
+        "elapsedMs": 2005.478583000001,
+        "samples": 24414,
+        "transitions": 1266105,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "steps": 53,
+      "next-epoch": {
+        "elapsedMs": 2001.6817499999997,
+        "samples": 7472,
+        "transitions": 1053881,
+        "epochAdvances": 7472,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "rootEpoch": 1
+    },
+    {
+      "count": 3,
+      "epoch": {
+        "elapsedMs": 2004.4110409999994,
+        "samples": 21206,
+        "transitions": 1091530,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "steps": 160,
+      "next-epoch": {
+        "elapsedMs": 2001.9762090000004,
+        "samples": 8784,
+        "transitions": 1235542,
+        "epochAdvances": 8784,
+        "completed": 8784,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "rootEpoch": 2
+    },
+    {
+      "count": 4,
+      "epoch": {
+        "elapsedMs": 2007.3886669999993,
+        "samples": 28084,
+        "transitions": 1123402,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "steps": 49,
+      "next-epoch": {
+        "elapsedMs": 2001.5195409999978,
+        "samples": 5405,
+        "transitions": 855926,
+        "epochAdvances": 5405,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "rootEpoch": 1
+    },
+    {
+      "count": 4,
+      "epoch": {
+        "elapsedMs": 2004.6502500000024,
+        "samples": 19600,
+        "transitions": 1114744,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "invoke"
+        }
+      },
+      "steps": 161,
+      "next-epoch": {
+        "elapsedMs": 2001.4877080000006,
+        "samples": 6033,
+        "transitions": 1046543,
+        "epochAdvances": 6033,
+        "completed": 6033,
+        "truncated": 0,
+        "action": {
+          "type": "invoke"
+        }
+      },
+      "rootEpoch": 2
+    },
+    {
+      "count": 5,
+      "epoch": {
+        "elapsedMs": 2005.639750000002,
+        "samples": 20167,
+        "transitions": 910105,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "steps": 87,
+      "next-epoch": {
+        "elapsedMs": 2001.273083,
+        "samples": 3448,
+        "transitions": 638427,
+        "epochAdvances": 3448,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "draw"
+        }
+      },
+      "rootEpoch": 1
+    },
+    {
+      "count": 5,
+      "epoch": {
+        "elapsedMs": 2002.6182090000002,
+        "samples": 11215,
+        "transitions": 719090,
+        "epochAdvances": 0,
+        "completed": 0,
+        "truncated": 0,
+        "action": {
+          "type": "invoke"
+        }
+      },
+      "steps": 209,
+      "next-epoch": {
+        "elapsedMs": 2001.234459000003,
+        "samples": 3850,
+        "transitions": 721201,
+        "epochAdvances": 3850,
+        "completed": 3850,
+        "truncated": 0,
+        "action": {
+          "type": "invoke"
+        }
+      },
+      "rootEpoch": 2
+    }
+  ],
+  "summary": {
+    "positions": 8,
+    "epochMeanSamples": 27219.625,
+    "nextEpochMeanSamples": 8405.125,
+    "epochMeanMs": 2007.0860157500006,
+    "nextEpochMeanMs": 2002.002823,
+    "nextEpochTruncated": 0
+  },
+  "caveat": "Same-position horizon diagnostic on eight saved turn positions, one timing per configuration; not a playing-strength comparison or a representative average. Low-level historical API default remains epoch; playable hard AI explicitly selects next-epoch."
+}

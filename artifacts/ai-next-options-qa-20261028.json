@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-28T07:13:21.387985+00:00",
+  "studyStoppedAtUserRequest": true,
+  "completedGamesRetained": 54,
+  "cancelledGamesRetained": 6,
+  "automationDeleted": true,
+  "frozenExperimentFilesUnchanged": 45,
+  "auditActionsReplayed": 17732,
+  "exactOracleFixtures": 20,
+  "independentTSOracleComparisons": 40,
+  "oracleCandidateRestrictionCases": 2,
+  "oracleGodExchangeCases": 0,
+  "oracleNodeCapHit": false,
+  "v1ShortenedDeckSuperseded": true,
+  "productionWasmUnchanged": true,
+  "scriptTypechecksPassed": true,
+  "newTournamentStarted": false,
+  "productionAlgorithmModified": false,
+  "gameAndDashboardHTTPVerified": true,
+  "newMethodsStatus": "proposed, not yet validated or applied"
+}

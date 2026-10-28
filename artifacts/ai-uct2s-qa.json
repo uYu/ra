@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-28T01:14:51.678Z",
+  "tests": {
+    "nonWorker": {
+      "passed": 64,
+      "failed": 0,
+      "note": "Full npm test initially ran before npm ci; only the Worker file failed to import missing Vite, all 64 other tests passed."
+    },
+    "worker": {
+      "passed": 4,
+      "failed": 0,
+      "command": "node --experimental-strip-types --test tests/worker.test.ts",
+      "note": "Re-run after npm ci with loopback-server permission; all 4 Worker tests passed."
+    },
+    "twoSecondAndFrozenDefault": {
+      "passed": 3,
+      "failed": 0,
+      "note": "Additional focused checks passed for two-second timing, time validation and exact frozen ABI5 default behavior."
+    }
+  },
+  "build": {
+    "production": "passed",
+    "typescriptExperimentScripts": "passed",
+    "wasmSourceAndBinaryHashes": "passed",
+    "compilerVersion": "recorded"
+  },
+  "monitor": {
+    "url": "http://127.0.0.1:8787",
+    "httpPage": 200,
+    "httpStatusApi": 200,
+    "scriptSyntax": "passed",
+    "browserRendering": "verified",
+    "autoRefresh": "verified",
+    "playerCountFilter": "verified",
+    "note": "Loopback-only read server; no writes or experiment controls exposed."
+  },
+  "finalAudit": {
+    "checkedAt": "2026-10-28T01:50:11.881Z",
+    "status": "complete",
+    "verifiedPlanFiles": 14,
+    "currentAndFrozenHashesMatch": true,
+    "replaysVerified": 84,
+    "decisionsVerified": 28346,
+    "seedBlocks": 6,
+    "allSeatsAndBudgetsVerified": true,
+    "summarySha256": "bab5982d165ecfc0677f04011a9e28c9677e07e254b33e9071531be2bb421205",
+    "command": "npm run report:budget -- artifacts/ai-uct2s-control.json",
+    "noAdditionalGamesStarted": true
+  }
+}

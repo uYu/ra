@@ -1,0 +1,3218 @@
+{
+  "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "tree": [
+    {
+      "timeMs": 100,
+      "report": {
+        "samples": 414,
+        "transitions": 40706,
+        "completed": 414,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 763,
+        "depth": 4,
+        "scenarios": 213,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 153,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.728450704225355,
+            "error": 0.48760126687033545,
+            "visits": 213
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.075582822085892,
+            "error": 0.5555326351343435,
+            "visits": 163
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": 0.4073684210526318,
+            "error": 0.806220765684467,
+            "visits": 38
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 213,
+          "mean": 7.728450704225355,
+          "utility": 0.3363591340858107
+        },
+        {
+          "sun": 4,
+          "visits": 163,
+          "mean": 7.075582822085892,
+          "utility": 0.30858905916777263
+        },
+        {
+          "sun": 13,
+          "visits": 38,
+          "mean": 0.4073684210526318,
+          "utility": 0.0159967489994943
+        }
+      ]
+    },
+    {
+      "timeMs": 500,
+      "report": {
+        "samples": 2227,
+        "transitions": 218011,
+        "completed": 2227,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 3900,
+        "depth": 5,
+        "scenarios": 1095,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 518,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.203689497716904,
+            "error": 0.20778386502089963,
+            "visits": 1095
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.116473933649293,
+            "error": 0.20602481058440986,
+            "visits": 1055
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.24571428571428564,
+            "error": 0.609399900263033,
+            "visits": 77
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 1095,
+          "mean": 7.203689497716904,
+          "utility": 0.3156906321829299
+        },
+        {
+          "sun": 4,
+          "visits": 1055,
+          "mean": 7.116473933649293,
+          "utility": 0.31453632050595237
+        },
+        {
+          "sun": 13,
+          "visits": 77,
+          "mean": -0.24571428571428564,
+          "utility": -0.011701797099949755
+        }
+      ]
+    },
+    {
+      "timeMs": 2000,
+      "report": {
+        "samples": 9108,
+        "transitions": 884995,
+        "completed": 9108,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 14818,
+        "depth": 6,
+        "scenarios": 4576,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1170,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 6.984484265734261,
+            "error": 0.10135074772409881,
+            "visits": 4576
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.005037372593421,
+            "error": 0.10627111359856944,
+            "visits": 4415
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.5025641025641024,
+            "error": 0.4933567608478334,
+            "visits": 117
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "visits": 4415,
+          "mean": 7.005037372593421,
+          "utility": 0.30646552924276305
+        },
+        {
+          "sun": 4,
+          "visits": 4576,
+          "mean": 6.984484265734261,
+          "utility": 0.3074385152879211
+        },
+        {
+          "sun": 13,
+          "visits": 117,
+          "mean": -0.5025641025641024,
+          "utility": -0.024145128463507748
+        }
+      ]
+    }
+  ],
+  "flat": [
+    {
+      "mode": 0,
+      "samples": 4096,
+      "roots": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 1
+          },
+          "mean": 8.96148437500002,
+          "stderr": 0.09757125224793206,
+          "utility": 0.3900890168495344,
+          "ownScore": 17.90576171875,
+          "diskTotal": 17.912353515625,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 4
+          },
+          "mean": 7.973037109375006,
+          "stderr": 0.09525051910102496,
+          "utility": 0.3517067408663204,
+          "ownScore": 17.401123046875,
+          "diskTotal": 13.470947265625,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 13
+          },
+          "mean": -0.20591796874999993,
+          "stderr": 0.09009109249834535,
+          "utility": -0.009255915376578197,
+          "ownScore": 10.78369140625,
+          "diskTotal": 15.405029296875,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.9884472656249987,
+          "stderr": 0.13055331122973377,
+          "utilityDifference": 0.03838227598321284,
+          "wins": 2214,
+          "losses": 1824
+        },
+        {
+          "meanDifference": 9.167402343749991,
+          "stderr": 0.12734225284209705,
+          "utilityDifference": 0.39934493222611295,
+          "wins": 3535,
+          "losses": 537
+        }
+      ]
+    },
+    {
+      "mode": 1,
+      "samples": 4096,
+      "roots": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 1
+          },
+          "mean": 8.745712890624977,
+          "stderr": 0.0945371114374446,
+          "utility": 0.383171320341809,
+          "ownScore": 17.784912109375,
+          "diskTotal": 18.230712890625,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 4
+          },
+          "mean": 8.29533203124997,
+          "stderr": 0.09312079719316056,
+          "utility": 0.365948742339948,
+          "ownScore": 17.7578125,
+          "diskTotal": 13.41943359375,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 13
+          },
+          "mean": -0.30974609374999923,
+          "stderr": 0.09029872529732327,
+          "utility": -0.0141460534016463,
+          "ownScore": 10.80859375,
+          "diskTotal": 14.905517578125,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.45038085937500066,
+          "stderr": 0.12759374767125495,
+          "utilityDifference": 0.017222578001860736,
+          "wins": 2107,
+          "losses": 1949
+        },
+        {
+          "meanDifference": 9.055458984374994,
+          "stderr": 0.12815166259632751,
+          "utilityDifference": 0.39731737374345494,
+          "wins": 3532,
+          "losses": 555
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "samples": 4096,
+      "roots": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 1
+          },
+          "mean": 9.61517578124999,
+          "stderr": 0.08256916292488775,
+          "utility": 0.42375247299099555,
+          "ownScore": 16.56591796875,
+          "diskTotal": 15.611083984375,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 4
+          },
+          "mean": 6.758095703125006,
+          "stderr": 0.08510881063110141,
+          "utility": 0.3055116946727286,
+          "ownScore": 15.085205078125,
+          "diskTotal": 13.402099609375,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 13
+          },
+          "mean": 2.020957031249999,
+          "stderr": 0.07494930693887679,
+          "utility": 0.09588322741890512,
+          "ownScore": 11.04345703125,
+          "diskTotal": 13.984375,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 2.857080078125004,
+          "stderr": 0.11376565769860325,
+          "utilityDifference": 0.118240778318266,
+          "wins": 2641,
+          "losses": 1392
+        },
+        {
+          "meanDifference": 7.594218749999988,
+          "stderr": 0.11088625578639755,
+          "utilityDifference": 0.32786924557208946,
+          "wins": 3535,
+          "losses": 549
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "samples": 4096,
+      "roots": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 1
+          },
+          "mean": 6.576816406250002,
+          "stderr": 0.08663593361605604,
+          "utility": 0.2962152939544965,
+          "ownScore": 8.88623046875,
+          "diskTotal": 15.461669921875,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 4
+          },
+          "mean": 6.657011718749988,
+          "stderr": 0.0856015779744465,
+          "utility": 0.30022732174507916,
+          "ownScore": 8.93115234375,
+          "diskTotal": 16.083984375,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 13
+          },
+          "mean": 6.068486328125001,
+          "stderr": 0.08337733561120977,
+          "utility": 0.2755605987797542,
+          "ownScore": 8.476806640625,
+          "diskTotal": 14.244140625,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": -0.08019531249999982,
+          "stderr": 0.06193768795715841,
+          "utilityDifference": -0.004012027790582793,
+          "wins": 849,
+          "losses": 941
+        },
+        {
+          "meanDifference": 0.5083300781250019,
+          "stderr": 0.11125606064354043,
+          "utilityDifference": 0.020654695174743314,
+          "wins": 1972,
+          "losses": 1771
+        }
+      ]
+    },
+    {
+      "mode": 4,
+      "samples": 4096,
+      "roots": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 1
+          },
+          "mean": -3.848085937499997,
+          "stderr": 0.10343406492728399,
+          "utility": -0.17642156610874113,
+          "ownScore": 7.08837890625,
+          "diskTotal": 14.043212890625,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 4
+          },
+          "mean": -3.8731835937499954,
+          "stderr": 0.10547785743271061,
+          "utility": -0.17755244959702976,
+          "ownScore": 7.01904296875,
+          "diskTotal": 14.710205078125,
+          "truncated": 0
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 13
+          },
+          "mean": -6.021220703125011,
+          "stderr": 0.08764184092053218,
+          "utility": -0.2750880735819693,
+          "ownScore": 5.246826171875,
+          "diskTotal": 16.36572265625,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.025097656249999992,
+          "stderr": 0.1155830271963802,
+          "utilityDifference": 0.001130883488288854,
+          "wins": 1924,
+          "losses": 1928
+        },
+        {
+          "meanDifference": 2.1731347656249986,
+          "stderr": 0.12250292145632212,
+          "utilityDifference": 0.09866650747322947,
+          "wins": 2421,
+          "losses": 1615
+        }
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "mode": 0,
+      "scenario": 3,
+      "rows": [
+        {
+          "index": 0,
+          "actions": [
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 1
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 7
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 8
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 13
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 10
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 11
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  19,
+                  5
+                ]
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 5
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "god",
+                "tileId": 133
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "finish"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 4
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  99,
+                  90
+                ]
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  25,
+                  9
+                ]
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 10
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 12
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 8
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 9
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 6
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 10
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            }
+          ],
+          "scores": [
+            15,
+            17,
+            21,
+            17
+          ]
+        },
+        {
+          "index": 1,
+          "actions": [
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 4
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 8
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 11
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 13
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 5
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  27,
+                  24
+                ]
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "god",
+                "tileId": 98
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "finish"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 6
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 7
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 1
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  89,
+                  83
+                ]
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  35,
+                  2
+                ]
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 11
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "god",
+                "tileId": 13
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "finish"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 10
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 12
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 1
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  56,
+                  62
+                ]
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  99
+                ]
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 6
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  123,
+                  113
+                ]
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 9
+              }
+            }
+          ],
+          "scores": [
+            19,
+            22,
+            6,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "scenario": 4,
+      "rows": [
+        {
+          "index": 0,
+          "actions": [
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 1
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 13
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 8
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 11
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  138,
+                  137
+                ]
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 12
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 5
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 7
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 10
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 6
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 9
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            }
+          ],
+          "scores": [
+            13,
+            19,
+            9,
+            13
+          ]
+        },
+        {
+          "index": 1,
+          "actions": [
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 4
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 13
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 8
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 11
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "discard",
+                "ids": [
+                  138,
+                  137
+                ]
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 2,
+              "action": {
+                "type": "bid",
+                "sun": 12
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 2
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 5
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 7
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 1,
+              "action": {
+                "type": "bid",
+                "sun": 10
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 6
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 0,
+              "action": {
+                "type": "bid",
+                "sun": 9
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": null
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "draw"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "invoke"
+              }
+            },
+            {
+              "player": 3,
+              "action": {
+                "type": "bid",
+                "sun": 1
+              }
+            }
+          ],
+          "scores": [
+            6,
+            19,
+            9,
+            19
+          ]
+        }
+      ]
+    }
+  ],
+  "productionChanged": false
+}

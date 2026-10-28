@@ -46,7 +46,9 @@ export function Tile({
         disabled={!!onClick && disabled}
         aria-pressed={onClick ? selected : undefined}
         aria-label={
-          onClick ? `选择${tileName(tile)}` : `查看${tileName(tile)}的功能`
+          onClick
+            ? `选择${tile.kind === "monument" ? tileLabel(tile) : tileName(tile)}`
+            : `查看${tile.kind === "monument" ? tileLabel(tile) : tileName(tile)}的功能`
         }
       >
         <span className="tile-type">
@@ -90,7 +92,7 @@ export function Tile({
         <button
           className="tile-help"
           onClick={() => inspect(tile)}
-          aria-label={`查看${tileName(tile)}的功能详情`}
+          aria-label={`查看${tile.kind === "monument" ? tileLabel(tile) : tileName(tile)}的功能详情`}
           title="查看功能和计分示例"
         >
           <Info size={15} />

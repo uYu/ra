@@ -1,0 +1,5820 @@
+{
+  "createdAt": "2026-10-28T07:41:55.423Z",
+  "modes": {
+    "0": "legacy observer-only tree",
+    "1": "opponent auction nodes in tree",
+    "2": "all actors in tree",
+    "3": "observer-only tree with complete-key control"
+  },
+  "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "productionWasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "prototypeSourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+  "prototypeWasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+  "sanitizer": "none (O3 release)",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fno-exceptions",
+    "-fno-threadsafe-statics",
+    "--no-entry",
+    "-sSTANDALONE_WASM=1",
+    "-sFILESYSTEM=0",
+    "-sMALLOC=emmalloc",
+    "-sINITIAL_MEMORY=33554432",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sSTACK_SIZE=1048576",
+    "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\",\"_set_opponent_tree\",\"_tree_stats\",\"_check_actor_utilities\"]"
+  ],
+  "actorUtilityChecks": 4,
+  "legacyChecks": 216,
+  "referenceChecks": 864,
+  "privacyChecks": 16,
+  "actorCoverage": [
+    {
+      "mode": 0,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        60,
+        50,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        92,
+        87,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        48,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        107,
+        64,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        32,
+        55,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        92,
+        120,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        65,
+        91,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        9,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        97,
+        146,
+        123,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        79,
+        51,
+        68,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        94,
+        131,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        11,
+        61,
+        58,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        68,
+        143,
+        101,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        16,
+        21,
+        18,
+        25,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        145,
+        153,
+        78,
+        129,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        88,
+        100,
+        26,
+        55,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        62,
+        96,
+        32,
+        98,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        63,
+        76,
+        70,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        226,
+        90,
+        90,
+        0
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        21,
+        14,
+        0,
+        46,
+        44
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        42,
+        192,
+        21,
+        150,
+        84
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        75,
+        70,
+        67,
+        75,
+        44
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        9,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        66,
+        72,
+        57,
+        69
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        48,
+        49,
+        39,
+        49,
+        49
+      ]
+    },
+    {
+      "mode": 0,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 3,
+      "treeByActor": [
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "policyByActor": [
+        43,
+        50,
+        58,
+        40,
+        32
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        60,
+        50,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        92,
+        87,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        48,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        107,
+        64,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        32,
+        55,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        92,
+        120,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        65,
+        91,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        9,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        97,
+        146,
+        123,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        79,
+        51,
+        68,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        94,
+        131,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        11,
+        61,
+        58,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        68,
+        143,
+        101,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        16,
+        21,
+        18,
+        25,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        145,
+        153,
+        78,
+        129,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        88,
+        100,
+        26,
+        55,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        62,
+        96,
+        32,
+        98,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        63,
+        76,
+        70,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        226,
+        90,
+        90,
+        0
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        21,
+        14,
+        0,
+        46,
+        44
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        42,
+        192,
+        21,
+        150,
+        84
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        75,
+        70,
+        67,
+        75,
+        44
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        9,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        66,
+        72,
+        57,
+        69
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        48,
+        49,
+        39,
+        49,
+        49
+      ]
+    },
+    {
+      "mode": 3,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 3,
+      "treeByActor": [
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "policyByActor": [
+        43,
+        50,
+        58,
+        40,
+        32
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        59,
+        51,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        9,
+        4,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        1,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        92,
+        80,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        48,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        129,
+        33,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        33,
+        54,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        95,
+        117,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        5,
+        0,
+        1,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        66,
+        91,
+        63,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        117,
+        149,
+        122,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        78,
+        52,
+        68,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        8,
+        0,
+        4,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        0,
+        4,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        98,
+        131,
+        124,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        12,
+        60,
+        58,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        3,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        3,
+        0,
+        6,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        64,
+        136,
+        112,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        16,
+        21,
+        21,
+        22,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        149,
+        149,
+        78,
+        129,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        5,
+        1,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        88,
+        100,
+        27,
+        54,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        62,
+        96,
+        34,
+        96,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        8,
+        1,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        63,
+        77,
+        69,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        3,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        6,
+        3,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        231,
+        88,
+        94,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        4,
+        0,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        21,
+        16,
+        0,
+        44,
+        44
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        45,
+        189,
+        21,
+        150,
+        84
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        1,
+        4,
+        1,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        79,
+        74,
+        65,
+        77,
+        51
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        69,
+        69,
+        57,
+        69
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        1,
+        1
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        48,
+        49,
+        41,
+        48,
+        48
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 3,
+      "treeByActor": [
+        1,
+        0,
+        0,
+        5,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        4,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "policyByActor": [
+        42,
+        50,
+        58,
+        41,
+        32
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        2,
+        4,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        58,
+        52,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        8,
+        5,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        1,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        93,
+        79,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        2,
+        4,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        71,
+        45,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        129,
+        33,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        34,
+        53,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        95,
+        117,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        60,
+        93,
+        72,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        117,
+        149,
+        122,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        4,
+        2,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        79,
+        53,
+        66,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        98,
+        127,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 0,
+      "treeByActor": [
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        13,
+        59,
+        58,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        3,
+        0,
+        6,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        3,
+        0,
+        6,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        64,
+        136,
+        112,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        16,
+        21,
+        21,
+        22,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        8,
+        4,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        149,
+        149,
+        78,
+        129,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        88,
+        100,
+        28,
+        53,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        62,
+        96,
+        34,
+        96,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        7,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        63,
+        78,
+        68,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        6,
+        3,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        6,
+        3,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "policyByActor": [
+        0,
+        231,
+        88,
+        94,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        4,
+        0,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "uctByActor": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        21,
+        16,
+        0,
+        44,
+        44
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "observer": 0,
+      "treeByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        45,
+        189,
+        21,
+        150,
+        84
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        79,
+        75,
+        65,
+        76,
+        51
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "observer": 1,
+      "treeByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        6,
+        3,
+        0,
+        0
+      ],
+      "uctByActor": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        72,
+        69,
+        69,
+        57,
+        69
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "observer": 2,
+      "treeByActor": [
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "policyByActor": [
+        48,
+        49,
+        41,
+        47,
+        49
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "observer": 3,
+      "treeByActor": [
+        0,
+        0,
+        0,
+        4,
+        2
+      ],
+      "auctionByActor": [
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      "uctByActor": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "policyByActor": [
+        43,
+        50,
+        58,
+        42,
+        30
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 2,
+      "observer": 0,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        539,
+        287,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        277,
+        287,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        392,
+        242,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        2271,
+        1450,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 2,
+      "observer": 0,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        454,
+        390,
+        0,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        256,
+        277,
+        0,
+        0,
+        0
+      ],
+      "uctByActor": [
+        391,
+        261,
+        0,
+        0,
+        0
+      ],
+      "policyByActor": [
+        2416,
+        1235,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 3,
+      "observer": 0,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        492,
+        7,
+        65,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        340,
+        7,
+        65,
+        0,
+        0
+      ],
+      "uctByActor": [
+        264,
+        0,
+        44,
+        0,
+        0
+      ],
+      "policyByActor": [
+        3486,
+        3859,
+        4339,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 3,
+      "observer": 0,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        392,
+        312,
+        254,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        387,
+        60,
+        155,
+        0,
+        0
+      ],
+      "uctByActor": [
+        312,
+        254,
+        136,
+        0,
+        0
+      ],
+      "policyByActor": [
+        3782,
+        3731,
+        4226,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 4,
+      "observer": 2,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        126,
+        8,
+        230,
+        137,
+        0
+      ],
+      "auctionByActor": [
+        126,
+        8,
+        150,
+        137,
+        0
+      ],
+      "uctByActor": [
+        109,
+        0,
+        142,
+        122,
+        0
+      ],
+      "policyByActor": [
+        2069,
+        2562,
+        639,
+        2190,
+        0
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 4,
+      "observer": 2,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        136,
+        109,
+        201,
+        163,
+        0
+      ],
+      "auctionByActor": [
+        136,
+        0,
+        172,
+        158,
+        0
+      ],
+      "uctByActor": [
+        109,
+        83,
+        153,
+        136,
+        0
+      ],
+      "policyByActor": [
+        2036,
+        2472,
+        667,
+        2094,
+        0
+      ]
+    },
+    {
+      "mode": 1,
+      "count": 5,
+      "observer": 1,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        155,
+        359,
+        252,
+        219,
+        184
+      ],
+      "auctionByActor": [
+        155,
+        203,
+        252,
+        219,
+        184
+      ],
+      "uctByActor": [
+        122,
+        318,
+        211,
+        176,
+        150
+      ],
+      "policyByActor": [
+        2508,
+        1991,
+        2397,
+        2364,
+        1850
+      ]
+    },
+    {
+      "mode": 2,
+      "count": 5,
+      "observer": 1,
+      "samplesPerRoot": 64,
+      "treeByActor": [
+        214,
+        334,
+        299,
+        207,
+        179
+      ],
+      "auctionByActor": [
+        149,
+        192,
+        245,
+        206,
+        173
+      ],
+      "uctByActor": [
+        181,
+        310,
+        224,
+        173,
+        153
+      ],
+      "policyByActor": [
+        2465,
+        2015,
+        2355,
+        2412,
+        1829
+      ]
+    }
+  ],
+  "qualitySummary": [
+    {
+      "mode": 0,
+      "samples": 32,
+      "cases": 20,
+      "marginRegretCases": 0,
+      "winRegretCases": 0,
+      "totalMarginRegret": 0,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "cases": 20,
+      "marginRegretCases": 0,
+      "winRegretCases": 0,
+      "totalMarginRegret": 0,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "cases": 20,
+      "marginRegretCases": 0,
+      "winRegretCases": 0,
+      "totalMarginRegret": 0,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "cases": 20,
+      "marginRegretCases": 0,
+      "winRegretCases": 0,
+      "totalMarginRegret": 0,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "cases": 20,
+      "marginRegretCases": 1,
+      "winRegretCases": 0,
+      "totalMarginRegret": 2.1333333333333333,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "cases": 20,
+      "marginRegretCases": 0,
+      "winRegretCases": 0,
+      "totalMarginRegret": 0,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "cases": 20,
+      "marginRegretCases": 1,
+      "winRegretCases": 0,
+      "totalMarginRegret": 2.1333333333333333,
+      "totalWinRegret": 0
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "cases": 20,
+      "marginRegretCases": 1,
+      "winRegretCases": 0,
+      "totalMarginRegret": 2.1333333333333333,
+      "totalWinRegret": 0
+    }
+  ],
+  "quality": [
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 22,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 32,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 22,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 0,
+      "samples": 128,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 22,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 32,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 22,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 3,
+      "samples": 128,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 22,
+      "action": {
+        "type": "invoke"
+      },
+      "loss": {
+        "margin": 2.1333333333333333,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 32,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 22,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 1,
+      "samples": 128,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 22,
+      "action": {
+        "type": "invoke"
+      },
+      "loss": {
+        "margin": 2.1333333333333333,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 32,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 1,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 2,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 3,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 5,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 6,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 7,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 8,
+      "action": {
+        "type": "discard",
+        "ids": [
+          10,
+          25
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 9,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 10,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 11,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 13,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 14,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 15,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 16,
+      "action": {
+        "type": "discard",
+        "ids": [
+          0,
+          35
+        ]
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 17,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 18,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 19,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 21,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 22,
+      "action": {
+        "type": "invoke"
+      },
+      "loss": {
+        "margin": 2.1333333333333333,
+        "win": 0
+      }
+    },
+    {
+      "mode": 2,
+      "samples": 128,
+      "index": 23,
+      "action": {
+        "type": "draw"
+      },
+      "loss": {
+        "margin": 0,
+        "win": 0
+      }
+    }
+  ],
+  "timed": {
+    "samples": 22525,
+    "elapsedMs": 2005.418375000001,
+    "actorCoverage": {
+      "treeByActor": [
+        17144,
+        75650,
+        38871,
+        0,
+        0
+      ],
+      "auctionByActor": [
+        17144,
+        39718,
+        38871,
+        0,
+        0
+      ],
+      "uctByActor": [
+        13797,
+        58403,
+        36940,
+        0,
+        0
+      ],
+      "policyByActor": [
+        382879,
+        369992,
+        374612,
+        0,
+        0
+      ]
+    }
+  },
+  "productionFilesUnchanged": true,
+  "noTournamentGames": true,
+  "caveats": [
+    "This is an isolated algorithm prototype, not a verified playing-strength improvement.",
+    "The 20 synthetic final-epoch fixtures are narrow and only two restrict discard candidates; hidden score and multi-player quality are not established.",
+    "Tree nodes use the acting player's own utility. Leaf rollouts remain policy-based; a complete-information key adds only simulated public score deltas, never true hidden totals.",
+    "Instrumentation and sanitizer overhead make this unsuitable as a production throughput benchmark."
+  ]
+}

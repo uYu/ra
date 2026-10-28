@@ -26,6 +26,9 @@
     "benchmark:policy": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-tree.ts --variants uct --modes time --rollout-model artifacts/ai-rollout-model.json",
     "report:policy": "node --experimental-strip-types scripts/summarize-policy.ts",
     "report:rankings": "node --experimental-strip-types scripts/summarize-rankings.ts",
+    "report:budget": "node --experimental-strip-types scripts/summarize-budget.ts",
+    "monitor:budget": "node scripts/monitor-budget.mjs",
+    "benchmark:throughput": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-throughput.ts",
     "benchmark:sh-study": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/run-sh-study.ts",
     "report:sh-study": "node --experimental-strip-types scripts/summarize-sh-study.ts"
   },

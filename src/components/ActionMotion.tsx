@@ -2,8 +2,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { Box, Motion, Journey } from "../game/motion.ts";
 import { journeys } from "../game/motion.ts";
 export type { Motion } from "../game/motion.ts";
-import { describeMove } from "../game/presentation.ts";
+import { auctionNotice, describeMove } from "../game/presentation.ts";
 import { TileArt } from "./TileArt.tsx";
+import { Glyph } from "./Art.tsx";
 export function captureAnchors(): Record<string, Box> {
   const out: Record<string, Box> = {};
   document.querySelectorAll<HTMLElement>("[data-motion]").forEach((el) => {
@@ -32,6 +33,13 @@ export function ActionMotion({
     root = useRef<HTMLDivElement>(null),
     animations = useRef<Animation[]>([]),
     done = useRef(onDone);
+  const notice =
+    motion.action.type === "draw" || motion.action.type === "invoke"
+      ? auctionNotice(
+          motion.after,
+          describeMove(motion.before, motion.action, motion.after),
+        )
+      : null;
   done.current = onDone;
   useLayoutEffect(() => {
     const destinations = captureAnchors();
@@ -49,6 +57,7 @@ export function ActionMotion({
         trip,
         from:
           motion.origins[trip.from] ??
+          destinations[trip.from] ??
           motion.origins[`player-${primary.actor}`] ??
           fallback,
         to: destinations[trip.to] ?? target,
@@ -93,6 +102,20 @@ export function ActionMotion({
         },
       );
     });
+    const announcement =
+      root.current.querySelector<HTMLElement>(".major-event-toast");
+    if (announcement)
+      running.push(
+        announcement.animate(
+          [
+            { opacity: 0 },
+            { opacity: 1, offset: 0.08 },
+            { opacity: 1, offset: 0.88 },
+            { opacity: 0 },
+          ],
+          { duration: reduced ? 1 : 2400, fill: "both" },
+        ),
+      );
     animations.current = running;
     if (paused) running.forEach((a) => a.pause());
     let alive = true;
@@ -112,6 +135,17 @@ export function ActionMotion({
   }, [paused]);
   return (
     <div className="action-motion-layer" ref={root} aria-hidden="true">
+      {notice && (
+        <div className={`major-event-toast trigger-${notice.kind}`}>
+          <div className="major-event-picture">
+            {notice.kind === "ra" ? <TileArt kind="ra" /> : <Glyph kind="ra" />}
+          </div>
+          <div>
+            <strong>{notice.title}</strong>
+            <p>{notice.detail}</p>
+          </div>
+        </div>
+      )}
       {flights.map((f, i) => (
         <div
           key={i}

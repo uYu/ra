@@ -2,9 +2,9 @@
   "abi": 6,
   "source": "native/ra_ai.cpp",
   "target": "src/game/ai/ra-ai.wasm",
-  "sourceSha256": "15adac9a6abb39113956cfde487b1d60b612048404053804e3c12fe43be637a5",
-  "wasmSha256": "c13f8ef47394bd4555e605e2014355b80c6a7f32eed1cd08ae905bbb395c3818",
-  "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9-git",
+  "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.18 (fae107463db4d20a276a27ede393048deaeebf76)",
   "flags": [
     "-std=c++20",
     "-O3",

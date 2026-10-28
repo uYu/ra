@@ -230,7 +230,7 @@ if (!isMainThread) {
       `${args.get("--out") ?? "artifacts/ai-tree-validation.json"}.replays`,
     ...(modelText ? { valueModel: JSON.parse(modelText) as ValueModel } : {}),
     samples: integer("--samples", 32, 512),
-    timeMs: integer("--time-ms", 200, 1000),
+    timeMs: integer("--time-ms", 200, engine === "current" ? 2000 : 1000),
     ...(args.get("--opponent-fixed") === "yes" ? { opponentFixed: true } : {}),
   };
   const seeds = integer("--seeds", 6, 100),

@@ -1,0 +1,4727 @@
+{
+  "createdAt": "2026-10-28T02:39:54.535Z",
+  "sourceSha256": "dea66e83bb1e48ff57e87f302d37da14af883cf2a0df55ccb77a281cd6f0ccbe",
+  "productionWasmSha256": "922360a3afda4939ee2dd5d002a4d745a0e1aa87c80518f2c0df81286ac61e93",
+  "counterWasmSha256": "037de30a7f64c4775dcbedb2efa864b09668fc75fedaaf099b490e340bbc1882",
+  "method": "Separate counted build replays each production CPU-profile position with exactly its first repetition simulation count; transitions match. Full fixed-128 reports also match production. Counts and logical requested bytes are diagnostic work measures, not timing measurements or peak memory. No production files changed.",
+  "contexts": [
+    "other",
+    "decode",
+    "search",
+    "policy",
+    "auction",
+    "collection",
+    "god",
+    "candidates",
+    "evaluation",
+    "positionCache",
+    "future",
+    "inventory",
+    "reserve",
+    "race",
+    "draws",
+    "observation",
+    "keys",
+    "actionKey",
+    "rules",
+    "sampling",
+    "stateCopy"
+  ],
+  "work": [
+    "inventoryTiles",
+    "bagRaItems",
+    "bagFloodItems",
+    "riverExp",
+    "riverUnused",
+    "racePairs",
+    "raceTable",
+    "raceFallbackExp",
+    "auctionNodes",
+    "auctionLeaves",
+    "outcomeValues",
+    "turnProbes",
+    "directAuctions",
+    "treeAuctions",
+    "rolloutAuctions",
+    "unusedAuctionBase",
+    "godEmpty",
+    "godTargets",
+    "keyInputItems",
+    "keyOutputBytes",
+    "tileTrialCopies",
+    "tileTrialItems",
+    "uctEdges",
+    "rewardTanh",
+    "copyBagItems",
+    "copyDiscardItems",
+    "copyHoldingItems",
+    "copyDiskItems",
+    "copyOtherItems"
+  ],
+  "copies": [
+    "root",
+    "turnProbe",
+    "auctionWorkspace",
+    "collection",
+    "god",
+    "discard"
+  ],
+  "rows": [
+    {
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 28999,
+      "transitions": 839642,
+      "depth": 10,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 10
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 9,
+          "requestedBytes": 752,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 992511,
+          "requestedBytes": 56545412,
+          "frees": 1578804
+        },
+        "policy": {
+          "calls": 491297,
+          "allocations": 1070352,
+          "requestedBytes": 31208328,
+          "frees": 5016530
+        },
+        "auction": {
+          "calls": 580104,
+          "allocations": 1943219,
+          "requestedBytes": 25260376,
+          "frees": 7451370
+        },
+        "collection": {
+          "calls": 1297829,
+          "allocations": 2276309,
+          "requestedBytes": 58377992,
+          "frees": 2387742
+        },
+        "god": {
+          "calls": 508408,
+          "allocations": 1694725,
+          "requestedBytes": 42916772,
+          "frees": 5089853
+        },
+        "candidates": {
+          "calls": 122966,
+          "allocations": 361138,
+          "requestedBytes": 9091888,
+          "frees": 238805
+        },
+        "evaluation": {
+          "calls": 3484518,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2996384,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3513517,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 6108764,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1455962,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 12043534,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4865294,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 151964,
+          "allocations": 151964,
+          "requestedBytes": 183572512,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 1367676,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 329198,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1252590,
+          "allocations": 2049040,
+          "requestedBytes": 20985000,
+          "frees": 2405295
+        },
+        "sampling": {
+          "calls": 28999,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1359397,
+          "allocations": 13629142,
+          "requestedBytes": 1041886392,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 35936701,
+        "bagRaItems": 773186671,
+        "bagFloodItems": 474607720,
+        "riverExp": 5992768,
+        "riverUnused": 2960887,
+        "racePairs": 12043534,
+        "raceTable": 12043534,
+        "raceFallbackExp": 0,
+        "auctionNodes": 3525177,
+        "auctionLeaves": 1964222,
+        "outcomeValues": 1455962,
+        "turnProbes": 412948,
+        "directAuctions": 4791,
+        "treeAuctions": 70041,
+        "rolloutAuctions": 92324,
+        "unusedAuctionBase": 525104,
+        "godEmpty": 429988,
+        "godTargets": 163156,
+        "keyInputItems": 27549966,
+        "keyOutputBytes": 121307920,
+        "tileTrialCopies": 352906,
+        "tileTrialItems": 2887300,
+        "uctEdges": 229019,
+        "rewardTanh": 303928,
+        "copyBagItems": 215568540,
+        "copyDiscardItems": 11105562,
+        "copyHoldingItems": 14913827,
+        "copyDiskItems": 10875176,
+        "copyOtherItems": 8008493
+      },
+      "copies": {
+        "root": {
+          "copies": 28999,
+          "vectorItems": 5451812
+        },
+        "turnProbe": {
+          "copies": 412948,
+          "vectorItems": 79890350
+        },
+        "auctionWorkspace": {
+          "copies": 580104,
+          "vectorItems": 110089616
+        },
+        "collection": {
+          "copies": 163156,
+          "vectorItems": 31372078
+        },
+        "god": {
+          "copies": 163156,
+          "vectorItems": 31535234
+        },
+        "discard": {
+          "copies": 11034,
+          "vectorItems": 2132508
+        }
+      }
+    },
+    {
+      "count": 2,
+      "epoch": 1,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 20291,
+      "transitions": 650764,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 11
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 10,
+          "requestedBytes": 760,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 776998,
+          "requestedBytes": 43014704,
+          "frees": 1172139
+        },
+        "policy": {
+          "calls": 393400,
+          "allocations": 867331,
+          "requestedBytes": 23640632,
+          "frees": 4019213
+        },
+        "auction": {
+          "calls": 449606,
+          "allocations": 1620089,
+          "requestedBytes": 20235708,
+          "frees": 5965993
+        },
+        "collection": {
+          "calls": 1088683,
+          "allocations": 2230581,
+          "requestedBytes": 53465592,
+          "frees": 2321409
+        },
+        "god": {
+          "calls": 398492,
+          "allocations": 1375222,
+          "requestedBytes": 35003608,
+          "frees": 4350008
+        },
+        "candidates": {
+          "calls": 71382,
+          "allocations": 309899,
+          "requestedBytes": 10390112,
+          "frees": 261502
+        },
+        "evaluation": {
+          "calls": 3020029,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2489978,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3040320,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 5061120,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1336918,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 10000494,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4152577,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 91672,
+          "allocations": 91672,
+          "requestedBytes": 110739776,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 825048,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 310100,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 976445,
+          "allocations": 1698895,
+          "requestedBytes": 17417484,
+          "frees": 1995398
+        },
+        "sampling": {
+          "calls": 20291,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1083421,
+          "allocations": 11114976,
+          "requestedBytes": 832029672,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 29112651,
+        "bagRaItems": 660757737,
+        "bagFloodItems": 395181018,
+        "riverExp": 4979956,
+        "riverUnused": 2740276,
+        "racePairs": 10000494,
+        "raceTable": 10000494,
+        "raceFallbackExp": 0,
+        "auctionNodes": 3231387,
+        "auctionLeaves": 1871364,
+        "outcomeValues": 1336918,
+        "turnProbes": 325681,
+        "directAuctions": 3437,
+        "treeAuctions": 39981,
+        "rolloutAuctions": 80507,
+        "unusedAuctionBase": 411213,
+        "godEmpty": 330902,
+        "godTargets": 139508,
+        "keyInputItems": 16629042,
+        "keyOutputBytes": 72810096,
+        "tileTrialCopies": 360997,
+        "tileTrialItems": 2836618,
+        "uctEdges": 216485,
+        "rewardTanh": 183344,
+        "copyBagItems": 172052723,
+        "copyDiscardItems": 8827261,
+        "copyHoldingItems": 11526677,
+        "copyDiskItems": 8667368,
+        "copyOtherItems": 6933389
+      },
+      "copies": {
+        "root": {
+          "copies": 20291,
+          "vectorItems": 3855290
+        },
+        "turnProbe": {
+          "copies": 325681,
+          "vectorItems": 63095501
+        },
+        "auctionWorkspace": {
+          "copies": 449606,
+          "vectorItems": 85403676
+        },
+        "collection": {
+          "copies": 139508,
+          "vectorItems": 26903123
+        },
+        "god": {
+          "copies": 139508,
+          "vectorItems": 27042631
+        },
+        "discard": {
+          "copies": 8827,
+          "vectorItems": 1707197
+        }
+      }
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 23916,
+      "transitions": 754638,
+      "depth": 8,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 9
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 8,
+          "requestedBytes": 752,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 724923,
+          "requestedBytes": 44496064,
+          "frees": 1134251
+        },
+        "policy": {
+          "calls": 473862,
+          "allocations": 1048069,
+          "requestedBytes": 34627092,
+          "frees": 5179497
+        },
+        "auction": {
+          "calls": 593033,
+          "allocations": 1874655,
+          "requestedBytes": 25169920,
+          "frees": 7480366
+        },
+        "collection": {
+          "calls": 1081848,
+          "allocations": 3817651,
+          "requestedBytes": 191758968,
+          "frees": 4396717
+        },
+        "god": {
+          "calls": 485351,
+          "allocations": 1257720,
+          "requestedBytes": 31963692,
+          "frees": 2708201
+        },
+        "candidates": {
+          "calls": 65378,
+          "allocations": 230240,
+          "requestedBytes": 6195664,
+          "frees": 165366
+        },
+        "evaluation": {
+          "calls": 3797382,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3371329,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3821298,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 6838322,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1356689,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 13533148,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5165472,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 89293,
+          "allocations": 89293,
+          "requestedBytes": 107865944,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 803637,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 399517,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1192092,
+          "allocations": 1857910,
+          "requestedBytes": 22996252,
+          "frees": 2152830
+        },
+        "sampling": {
+          "calls": 23916,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1251832,
+          "allocations": 12316768,
+          "requestedBytes": 957184828,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 114213282,
+        "bagRaItems": 636483813,
+        "bagFloodItems": 413552144,
+        "riverExp": 6742658,
+        "riverUnused": 6742658,
+        "racePairs": 13533148,
+        "raceTable": 13533148,
+        "raceFallbackExp": 0,
+        "auctionNodes": 3204053,
+        "auctionLeaves": 1776481,
+        "outcomeValues": 1356689,
+        "turnProbes": 437454,
+        "directAuctions": 4317,
+        "treeAuctions": 34617,
+        "rolloutAuctions": 116645,
+        "unusedAuctionBase": 517821,
+        "godEmpty": 456636,
+        "godTargets": 70222,
+        "keyInputItems": 15029912,
+        "keyOutputBytes": 66522540,
+        "tileTrialCopies": 797648,
+        "tileTrialItems": 14685328,
+        "uctEdges": 142503,
+        "rewardTanh": 178586,
+        "copyBagItems": 153284065,
+        "copyDiscardItems": 27646107,
+        "copyHoldingItems": 41337445,
+        "copyDiskItems": 10014656,
+        "copyOtherItems": 7013934
+      },
+      "copies": {
+        "root": {
+          "copies": 23916,
+          "vectorItems": 4496208
+        },
+        "turnProbe": {
+          "copies": 437454,
+          "vectorItems": 84298041
+        },
+        "auctionWorkspace": {
+          "copies": 593033,
+          "vectorItems": 112479886
+        },
+        "collection": {
+          "copies": 70222,
+          "vectorItems": 13470070
+        },
+        "god": {
+          "copies": 70222,
+          "vectorItems": 13540292
+        },
+        "discard": {
+          "copies": 56985,
+          "vectorItems": 11011710
+        }
+      }
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 32046,
+      "transitions": 792745,
+      "depth": 10,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 11
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 10,
+          "requestedBytes": 760,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 1166097,
+          "requestedBytes": 63106788,
+          "frees": 1780032
+        },
+        "policy": {
+          "calls": 440257,
+          "allocations": 963178,
+          "requestedBytes": 31086520,
+          "frees": 4744228
+        },
+        "auction": {
+          "calls": 598446,
+          "allocations": 1744218,
+          "requestedBytes": 24076668,
+          "frees": 7377126
+        },
+        "collection": {
+          "calls": 960287,
+          "allocations": 3543714,
+          "requestedBytes": 176858216,
+          "frees": 4054071
+        },
+        "god": {
+          "calls": 499091,
+          "allocations": 1169553,
+          "requestedBytes": 29161992,
+          "frees": 2022408
+        },
+        "candidates": {
+          "calls": 123629,
+          "allocations": 436028,
+          "requestedBytes": 11156992,
+          "frees": 313078
+        },
+        "evaluation": {
+          "calls": 3427716,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3203644,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3459762,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 6535472,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1089469,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 12878668,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4700378,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 155674,
+          "allocations": 155674,
+          "requestedBytes": 188054192,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 1401066,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 551723,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1200010,
+          "allocations": 1895507,
+          "requestedBytes": 26197244,
+          "frees": 2288599
+        },
+        "sampling": {
+          "calls": 32046,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1174022,
+          "allocations": 11505574,
+          "requestedBytes": 897464512,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 109584799,
+        "bagRaItems": 580601544,
+        "bagFloodItems": 394569282,
+        "riverExp": 6407288,
+        "riverUnused": 6407288,
+        "racePairs": 12878668,
+        "raceTable": 12878668,
+        "raceFallbackExp": 0,
+        "auctionNodes": 2520409,
+        "auctionLeaves": 1369057,
+        "outcomeValues": 1089469,
+        "turnProbes": 407265,
+        "directAuctions": 5608,
+        "treeAuctions": 75391,
+        "rolloutAuctions": 110182,
+        "unusedAuctionBase": 522785,
+        "godEmpty": 482062,
+        "godTargets": 41940,
+        "keyInputItems": 26231996,
+        "keyOutputBytes": 115845340,
+        "tileTrialCopies": 739120,
+        "tileTrialItems": 13635661,
+        "uctEdges": 288431,
+        "rewardTanh": 311348,
+        "copyBagItems": 144477741,
+        "copyDiscardItems": 25202046,
+        "copyHoldingItems": 38773964,
+        "copyDiskItems": 9392176,
+        "copyOtherItems": 6520201
+      },
+      "copies": {
+        "root": {
+          "copies": 32046,
+          "vectorItems": 6088740
+        },
+        "turnProbe": {
+          "copies": 407265,
+          "vectorItems": 78586083
+        },
+        "auctionWorkspace": {
+          "copies": 598446,
+          "vectorItems": 113503650
+        },
+        "collection": {
+          "copies": 41940,
+          "vectorItems": 8023131
+        },
+        "god": {
+          "copies": 41940,
+          "vectorItems": 8065071
+        },
+        "discard": {
+          "copies": 52385,
+          "vectorItems": 10099453
+        }
+      }
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 36858,
+      "transitions": 854386,
+      "depth": 8,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 10
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 9,
+          "requestedBytes": 752,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 1093683,
+          "requestedBytes": 59399700,
+          "frees": 1774185
+        },
+        "policy": {
+          "calls": 509372,
+          "allocations": 1102223,
+          "requestedBytes": 38133532,
+          "frees": 5412536
+        },
+        "auction": {
+          "calls": 645046,
+          "allocations": 1932351,
+          "requestedBytes": 27277200,
+          "frees": 7998440
+        },
+        "collection": {
+          "calls": 1042518,
+          "allocations": 4582317,
+          "requestedBytes": 307239880,
+          "frees": 5126868
+        },
+        "god": {
+          "calls": 529150,
+          "allocations": 1183113,
+          "requestedBytes": 29146740,
+          "frees": 1849998
+        },
+        "candidates": {
+          "calls": 115244,
+          "allocations": 352325,
+          "requestedBytes": 9116928,
+          "frees": 238361
+        },
+        "evaluation": {
+          "calls": 3814645,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3706584,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3851503,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 7486884,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1069937,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 7413168,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5239305,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 152101,
+          "allocations": 152101,
+          "requestedBytes": 183738008,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 1368909,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 611711,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1317170,
+          "allocations": 2025971,
+          "requestedBytes": 38294472,
+          "frees": 2332811
+        },
+        "sampling": {
+          "calls": 36858,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1264388,
+          "allocations": 12309116,
+          "requestedBytes": 966062688,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 171530308,
+        "bagRaItems": 470513946,
+        "bagFloodItems": 332391680,
+        "riverExp": 7413168,
+        "riverUnused": 3745810,
+        "racePairs": 7413168,
+        "raceTable": 7413168,
+        "raceFallbackExp": 0,
+        "auctionNodes": 2676393,
+        "auctionLeaves": 1364181,
+        "outcomeValues": 1069937,
+        "turnProbes": 462784,
+        "directAuctions": 5954,
+        "treeAuctions": 73341,
+        "rolloutAuctions": 102967,
+        "unusedAuctionBase": 544969,
+        "godEmpty": 515231,
+        "godTargets": 31950,
+        "keyInputItems": 22469383,
+        "keyOutputBytes": 100852256,
+        "tileTrialCopies": 1019978,
+        "tileTrialItems": 29520576,
+        "uctEdges": 244373,
+        "rewardTanh": 304202,
+        "copyBagItems": 112834949,
+        "copyDiscardItems": 53782482,
+        "copyHoldingItems": 57204669,
+        "copyDiskItems": 10115104,
+        "copyOtherItems": 7578468
+      },
+      "copies": {
+        "root": {
+          "copies": 36858,
+          "vectorItems": 6929304
+        },
+        "turnProbe": {
+          "copies": 462784,
+          "vectorItems": 89206877
+        },
+        "auctionWorkspace": {
+          "copies": 645046,
+          "vectorItems": 122307313
+        },
+        "collection": {
+          "copies": 31950,
+          "vectorItems": 6141648
+        },
+        "god": {
+          "copies": 31950,
+          "vectorItems": 6173598
+        },
+        "discard": {
+          "copies": 55800,
+          "vectorItems": 10756932
+        }
+      }
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 30117,
+      "transitions": 918098,
+      "depth": 8,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 11
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 10,
+          "requestedBytes": 760,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 1040293,
+          "requestedBytes": 50950368,
+          "frees": 1616722
+        },
+        "policy": {
+          "calls": 549263,
+          "allocations": 1166284,
+          "requestedBytes": 37825548,
+          "frees": 5853351
+        },
+        "auction": {
+          "calls": 706295,
+          "allocations": 2042442,
+          "requestedBytes": 27644316,
+          "frees": 8695371
+        },
+        "collection": {
+          "calls": 1149367,
+          "allocations": 3428075,
+          "requestedBytes": 240869656,
+          "frees": 3794197
+        },
+        "god": {
+          "calls": 581973,
+          "allocations": 1419207,
+          "requestedBytes": 35738884,
+          "frees": 2688595
+        },
+        "candidates": {
+          "calls": 111896,
+          "allocations": 378412,
+          "requestedBytes": 9759776,
+          "frees": 266976
+        },
+        "evaluation": {
+          "calls": 3985989,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3603067,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 4016106,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 7266368,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1399562,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 7206134,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5506154,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 142012,
+          "allocations": 142012,
+          "requestedBytes": 171550496,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 1278108,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 542651,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1421623,
+          "allocations": 2093520,
+          "requestedBytes": 33346720,
+          "frees": 2575693
+        },
+        "sampling": {
+          "calls": 30117,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1401684,
+          "allocations": 13780661,
+          "requestedBytes": 1071493212,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 149319530,
+        "bagRaItems": 522999399,
+        "bagFloodItems": 340482468,
+        "riverExp": 7206134,
+        "riverUnused": 2847140,
+        "racePairs": 7206134,
+        "raceTable": 7206134,
+        "raceFallbackExp": 0,
+        "auctionNodes": 3212793,
+        "auctionLeaves": 1796624,
+        "outcomeValues": 1399562,
+        "turnProbes": 503525,
+        "directAuctions": 5003,
+        "treeAuctions": 105158,
+        "rolloutAuctions": 92609,
+        "unusedAuctionBase": 585768,
+        "godEmpty": 556399,
+        "godTargets": 62419,
+        "keyInputItems": 21042154,
+        "keyOutputBytes": 94229404,
+        "tileTrialCopies": 695306,
+        "tileTrialItems": 17057020,
+        "uctEdges": 274464,
+        "rewardTanh": 284024,
+        "copyBagItems": 132318981,
+        "copyDiscardItems": 59364587,
+        "copyHoldingItems": 56373055,
+        "copyDiskItems": 11213472,
+        "copyOtherItems": 8603208
+      },
+      "copies": {
+        "root": {
+          "copies": 30117,
+          "vectorItems": 5722230
+        },
+        "turnProbe": {
+          "copies": 503525,
+          "vectorItems": 97143817
+        },
+        "auctionWorkspace": {
+          "copies": 706295,
+          "vectorItems": 133955915
+        },
+        "collection": {
+          "copies": 62419,
+          "vectorItems": 11940988
+        },
+        "god": {
+          "copies": 62419,
+          "vectorItems": 12003407
+        },
+        "discard": {
+          "copies": 36909,
+          "vectorItems": 7106946
+        }
+      }
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 13119,
+      "transitions": 679703,
+      "depth": 8,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 13
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 12,
+          "requestedBytes": 768,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 376704,
+          "requestedBytes": 25283292,
+          "frees": 639377
+        },
+        "policy": {
+          "calls": 396270,
+          "allocations": 853348,
+          "requestedBytes": 22828252,
+          "frees": 5226277
+        },
+        "auction": {
+          "calls": 483171,
+          "allocations": 2269717,
+          "requestedBytes": 30102168,
+          "frees": 8186198
+        },
+        "collection": {
+          "calls": 1265357,
+          "allocations": 3593288,
+          "requestedBytes": 101201660,
+          "frees": 3776447
+        },
+        "god": {
+          "calls": 374744,
+          "allocations": 1003742,
+          "requestedBytes": 25707396,
+          "frees": 2634161
+        },
+        "candidates": {
+          "calls": 31042,
+          "allocations": 97206,
+          "requestedBytes": 2813296,
+          "frees": 66286
+        },
+        "evaluation": {
+          "calls": 3487027,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3052751,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3500146,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 9236967,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1566109,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 18355863,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4977037,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 44160,
+          "allocations": 44160,
+          "requestedBytes": 53345280,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 529920,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 138178,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1037880,
+          "allocations": 1963056,
+          "requestedBytes": 25040548,
+          "frees": 2254241
+        },
+        "sampling": {
+          "calls": 13119,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 994036,
+          "allocations": 12581767,
+          "requestedBytes": 782454796,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 74151750,
+        "bagRaItems": 713097502,
+        "bagFloodItems": 435731979,
+        "riverExp": 9158253,
+        "riverUnused": 7297151,
+        "racePairs": 36711726,
+        "raceTable": 36711726,
+        "raceFallbackExp": 0,
+        "auctionNodes": 5237561,
+        "auctionLeaves": 2601778,
+        "outcomeValues": 1566109,
+        "turnProbes": 358177,
+        "directAuctions": 4753,
+        "treeAuctions": 28846,
+        "rolloutAuctions": 91395,
+        "unusedAuctionBase": 415076,
+        "godEmpty": 350017,
+        "godTargets": 62781,
+        "keyInputItems": 8142473,
+        "keyOutputBytes": 36363252,
+        "tileTrialCopies": 628038,
+        "tileTrialItems": 6328584,
+        "uctEdges": 68446,
+        "rewardTanh": 132480,
+        "copyBagItems": 140101905,
+        "copyDiscardItems": 11901909,
+        "copyHoldingItems": 24110398,
+        "copyDiskItems": 11928432,
+        "copyOtherItems": 7571055
+      },
+      "copies": {
+        "root": {
+          "copies": 13119,
+          "vectorItems": 2518848
+        },
+        "turnProbe": {
+          "copies": 358177,
+          "vectorItems": 71372313
+        },
+        "auctionWorkspace": {
+          "copies": 483171,
+          "vectorItems": 93983752
+        },
+        "collection": {
+          "copies": 62781,
+          "vectorItems": 12439128
+        },
+        "god": {
+          "copies": 62781,
+          "vectorItems": 12501909
+        },
+        "discard": {
+          "copies": 14007,
+          "vectorItems": 2797749
+        }
+      }
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 11835,
+      "transitions": 669750,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 15
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 14,
+          "requestedBytes": 788,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 378780,
+          "requestedBytes": 25410084,
+          "frees": 624056
+        },
+        "policy": {
+          "calls": 395243,
+          "allocations": 861261,
+          "requestedBytes": 25003836,
+          "frees": 5160124
+        },
+        "auction": {
+          "calls": 466326,
+          "allocations": 2238525,
+          "requestedBytes": 29506752,
+          "frees": 7970646
+        },
+        "collection": {
+          "calls": 1355024,
+          "allocations": 2879722,
+          "requestedBytes": 87146860,
+          "frees": 2990497
+        },
+        "god": {
+          "calls": 385101,
+          "allocations": 1250149,
+          "requestedBytes": 32740560,
+          "frees": 4406225
+        },
+        "candidates": {
+          "calls": 31763,
+          "allocations": 109965,
+          "requestedBytes": 2893360,
+          "frees": 78346
+        },
+        "evaluation": {
+          "calls": 3357077,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2898922,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3368912,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 8767776,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1573278,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 17429037,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4821222,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 43597,
+          "allocations": 43597,
+          "requestedBytes": 52665176,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 523164,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 131640,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1018772,
+          "allocations": 1927782,
+          "requestedBytes": 24395192,
+          "frees": 2272577
+        },
+        "sampling": {
+          "calls": 11835,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1072145,
+          "allocations": 13812691,
+          "requestedBytes": 846887548,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 66580004,
+        "bagRaItems": 709514598,
+        "bagFloodItems": 424129613,
+        "riverExp": 8696766,
+        "riverUnused": 5813708,
+        "racePairs": 34858074,
+        "raceTable": 34858074,
+        "raceFallbackExp": 0,
+        "auctionNodes": 5317722,
+        "auctionLeaves": 2679340,
+        "outcomeValues": 1573278,
+        "turnProbes": 349022,
+        "directAuctions": 2531,
+        "treeAuctions": 31010,
+        "rolloutAuctions": 83763,
+        "unusedAuctionBase": 406534,
+        "godEmpty": 337289,
+        "godTargets": 118144,
+        "keyInputItems": 8116795,
+        "keyOutputBytes": 36114012,
+        "tileTrialCopies": 456532,
+        "tileTrialItems": 4561296,
+        "uctEdges": 78870,
+        "rewardTanh": 130791,
+        "copyBagItems": 156366447,
+        "copyDiscardItems": 9947762,
+        "copyHoldingItems": 23721662,
+        "copyDiskItems": 12865740,
+        "copyOtherItems": 8820276
+      },
+      "copies": {
+        "root": {
+          "copies": 11835,
+          "vectorItems": 2331495
+        },
+        "turnProbe": {
+          "copies": 349022,
+          "vectorItems": 69756567
+        },
+        "auctionWorkspace": {
+          "copies": 466326,
+          "vectorItems": 90755258
+        },
+        "collection": {
+          "copies": 118144,
+          "vectorItems": 23516087
+        },
+        "god": {
+          "copies": 118144,
+          "vectorItems": 23634231
+        },
+        "discard": {
+          "copies": 8674,
+          "vectorItems": 1728249
+        }
+      }
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 12165,
+      "transitions": 626410,
+      "depth": 8,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 13
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 12,
+          "requestedBytes": 768,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 346901,
+          "requestedBytes": 21078604,
+          "frees": 594011
+        },
+        "policy": {
+          "calls": 355394,
+          "allocations": 775575,
+          "requestedBytes": 20679104,
+          "frees": 4708111
+        },
+        "auction": {
+          "calls": 425763,
+          "allocations": 2158737,
+          "requestedBytes": 26009332,
+          "frees": 7434654
+        },
+        "collection": {
+          "calls": 1189874,
+          "allocations": 3715149,
+          "requestedBytes": 177764964,
+          "frees": 4047875
+        },
+        "god": {
+          "calls": 338061,
+          "allocations": 890665,
+          "requestedBytes": 22229712,
+          "frees": 2238186
+        },
+        "candidates": {
+          "calls": 29192,
+          "allocations": 89323,
+          "requestedBytes": 2538592,
+          "frees": 60246
+        },
+        "evaluation": {
+          "calls": 4061849,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2974623,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 4074014,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 8996859,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 2164526,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 17884233,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5456951,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 41356,
+          "allocations": 41356,
+          "requestedBytes": 49958048,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 496272,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 136894,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 944212,
+          "allocations": 1830489,
+          "requestedBytes": 26276936,
+          "frees": 2074834
+        },
+        "sampling": {
+          "calls": 12165,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 881710,
+          "allocations": 11309723,
+          "requestedBytes": 694928396,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 137833014,
+        "bagRaItems": 506505947,
+        "bagFloodItems": 275998281,
+        "riverExp": 8923869,
+        "riverUnused": 4182240,
+        "racePairs": 35768466,
+        "raceTable": 35768466,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7756818,
+        "auctionLeaves": 4314275,
+        "outcomeValues": 2164526,
+        "turnProbes": 317802,
+        "directAuctions": 4640,
+        "treeAuctions": 23128,
+        "rolloutAuctions": 80193,
+        "unusedAuctionBase": 370236,
+        "godEmpty": 313280,
+        "godTargets": 50990,
+        "keyInputItems": 6428362,
+        "keyOutputBytes": 29244784,
+        "tileTrialCopies": 740707,
+        "tileTrialItems": 12559483,
+        "uctEdges": 62634,
+        "rewardTanh": 124068,
+        "copyBagItems": 79553279,
+        "copyDiscardItems": 35797119,
+        "copyHoldingItems": 41265491,
+        "copyDiskItems": 10580520,
+        "copyOtherItems": 6535690
+      },
+      "copies": {
+        "root": {
+          "copies": 12165,
+          "vectorItems": 2335680
+        },
+        "turnProbe": {
+          "copies": 317802,
+          "vectorItems": 63382407
+        },
+        "auctionWorkspace": {
+          "copies": 425763,
+          "vectorItems": 82884265
+        },
+        "collection": {
+          "copies": 50990,
+          "vectorItems": 10129981
+        },
+        "god": {
+          "copies": 50990,
+          "vectorItems": 10180971
+        },
+        "discard": {
+          "copies": 24000,
+          "vectorItems": 4818795
+        }
+      }
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 12769,
+      "transitions": 663244,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 14
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 14,
+          "requestedBytes": 804,
+          "frees": 1
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 413075,
+          "requestedBytes": 24934032,
+          "frees": 667212
+        },
+        "policy": {
+          "calls": 377147,
+          "allocations": 805616,
+          "requestedBytes": 21862212,
+          "frees": 5148958
+        },
+        "auction": {
+          "calls": 462080,
+          "allocations": 2396206,
+          "requestedBytes": 29436768,
+          "frees": 8138727
+        },
+        "collection": {
+          "calls": 1318472,
+          "allocations": 2278335,
+          "requestedBytes": 147223492,
+          "frees": 2397155
+        },
+        "god": {
+          "calls": 374970,
+          "allocations": 998003,
+          "requestedBytes": 25150872,
+          "frees": 2583772
+        },
+        "candidates": {
+          "calls": 31530,
+          "allocations": 110934,
+          "requestedBytes": 3193648,
+          "frees": 79597
+        },
+        "evaluation": {
+          "calls": 3871063,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2793678,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3883832,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 8457648,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 2272764,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 16800375,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5416160,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 44298,
+          "allocations": 44298,
+          "requestedBytes": 53511984,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 531576,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 164082,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1012962,
+          "allocations": 2007766,
+          "requestedBytes": 29025704,
+          "frees": 2345171
+        },
+        "sampling": {
+          "calls": 12769,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 952780,
+          "allocations": 12306360,
+          "requestedBytes": 752483404,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 132164836,
+        "bagRaItems": 514262943,
+        "bagFloodItems": 262189698,
+        "riverExp": 8381034,
+        "riverUnused": 4042296,
+        "racePairs": 33600750,
+        "raceTable": 33600750,
+        "raceFallbackExp": 0,
+        "auctionNodes": 8424639,
+        "auctionLeaves": 4566094,
+        "outcomeValues": 2272764,
+        "turnProbes": 349718,
+        "directAuctions": 4058,
+        "treeAuctions": 23338,
+        "rolloutAuctions": 84966,
+        "unusedAuctionBase": 404943,
+        "godEmpty": 347967,
+        "godTargets": 59638,
+        "keyInputItems": 6925101,
+        "keyOutputBytes": 31472452,
+        "tileTrialCopies": 342956,
+        "tileTrialItems": 6287278,
+        "uctEdges": 100694,
+        "rewardTanh": 132894,
+        "copyBagItems": 88687584,
+        "copyDiscardItems": 36330559,
+        "copyHoldingItems": 44390856,
+        "copyDiskItems": 11433360,
+        "copyOtherItems": 7278492
+      },
+      "copies": {
+        "root": {
+          "copies": 12769,
+          "vectorItems": 2541031
+        },
+        "turnProbe": {
+          "copies": 349718,
+          "vectorItems": 70025955
+        },
+        "auctionWorkspace": {
+          "copies": 462080,
+          "vectorItems": 89987434
+        },
+        "collection": {
+          "copies": 59638,
+          "vectorItems": 11859209
+        },
+        "god": {
+          "copies": 59638,
+          "vectorItems": 11918847
+        },
+        "discard": {
+          "copies": 8937,
+          "vectorItems": 1788375
+        }
+      }
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 18966,
+      "transitions": 767570,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 11
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 10,
+          "requestedBytes": 768,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 406649,
+          "requestedBytes": 23691504,
+          "frees": 760992
+        },
+        "policy": {
+          "calls": 460955,
+          "allocations": 1084390,
+          "requestedBytes": 35791316,
+          "frees": 5957282
+        },
+        "auction": {
+          "calls": 542642,
+          "allocations": 2373360,
+          "requestedBytes": 29197704,
+          "frees": 8753148
+        },
+        "collection": {
+          "calls": 1687283,
+          "allocations": 1853635,
+          "requestedBytes": 221215588,
+          "frees": 1901870
+        },
+        "god": {
+          "calls": 445393,
+          "allocations": 1944174,
+          "requestedBytes": 50963368,
+          "frees": 8238856
+        },
+        "candidates": {
+          "calls": 36120,
+          "allocations": 96552,
+          "requestedBytes": 2270160,
+          "frees": 60432
+        },
+        "evaluation": {
+          "calls": 4246797,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3000324,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 4265763,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 9057870,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 2429993,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 9000972,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5836469,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 55085,
+          "allocations": 55085,
+          "requestedBytes": 66542680,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 661020,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 139938,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1173722,
+          "allocations": 2091479,
+          "requestedBytes": 35426828,
+          "frees": 2366784
+        },
+        "sampling": {
+          "calls": 18966,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1471523,
+          "allocations": 18134041,
+          "requestedBytes": 1156811700,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 213721928,
+        "bagRaItems": 286928060,
+        "bagFloodItems": 145026950,
+        "riverExp": 9000972,
+        "riverUnused": 7116179,
+        "racePairs": 18001944,
+        "raceTable": 18001944,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7440763,
+        "auctionLeaves": 4419547,
+        "outcomeValues": 2429993,
+        "turnProbes": 406152,
+        "directAuctions": 3317,
+        "treeAuctions": 84564,
+        "rolloutAuctions": 48609,
+        "unusedAuctionBase": 480699,
+        "godEmpty": 323867,
+        "godTargets": 250036,
+        "keyInputItems": 7342907,
+        "keyOutputBytes": 34074828,
+        "tileTrialCopies": 168890,
+        "tileTrialItems": 4088833,
+        "uctEdges": 84855,
+        "rewardTanh": 165255,
+        "copyBagItems": 70409512,
+        "copyDiscardItems": 87567218,
+        "copyHoldingItems": 103227003,
+        "copyDiskItems": 17658276,
+        "copyOtherItems": 10340916
+      },
+      "copies": {
+        "root": {
+          "copies": 18966,
+          "vectorItems": 3641472
+        },
+        "turnProbe": {
+          "copies": 406152,
+          "vectorItems": 80557518
+        },
+        "auctionWorkspace": {
+          "copies": 542642,
+          "vectorItems": 105449092
+        },
+        "collection": {
+          "copies": 250036,
+          "vectorItems": 49284989
+        },
+        "god": {
+          "copies": 250036,
+          "vectorItems": 49535025
+        },
+        "discard": {
+          "copies": 3691,
+          "vectorItems": 734829
+        }
+      }
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 15953,
+      "transitions": 804366,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 13
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 12,
+          "requestedBytes": 780,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 537710,
+          "requestedBytes": 26661168,
+          "frees": 865721
+        },
+        "policy": {
+          "calls": 442947,
+          "allocations": 994137,
+          "requestedBytes": 30647696,
+          "frees": 5758182
+        },
+        "auction": {
+          "calls": 548649,
+          "allocations": 2527935,
+          "requestedBytes": 31990032,
+          "frees": 9031937
+        },
+        "collection": {
+          "calls": 1636665,
+          "allocations": 1876296,
+          "requestedBytes": 227310768,
+          "frees": 1921326
+        },
+        "god": {
+          "calls": 446504,
+          "allocations": 1674096,
+          "requestedBytes": 44047280,
+          "frees": 6470380
+        },
+        "candidates": {
+          "calls": 45464,
+          "allocations": 187526,
+          "requestedBytes": 6559424,
+          "frees": 152861
+        },
+        "evaluation": {
+          "calls": 4079313,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3015711,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 4095266,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 9094992,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 2324508,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 9047133,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5738505,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 61416,
+          "allocations": 61416,
+          "requestedBytes": 74190528,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 736992,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 202685,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1202652,
+          "allocations": 2194125,
+          "requestedBytes": 36830276,
+          "frees": 2562715
+        },
+        "sampling": {
+          "calls": 15953,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1338647,
+          "allocations": 16709882,
+          "requestedBytes": 1055492868,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 215341121,
+        "bagRaItems": 283942009,
+        "bagFloodItems": 146683874,
+        "riverExp": 9047133,
+        "riverUnused": 7053147,
+        "racePairs": 18094266,
+        "raceTable": 18094266,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7739127,
+        "auctionLeaves": 4356641,
+        "outcomeValues": 2324508,
+        "turnProbes": 398286,
+        "directAuctions": 2654,
+        "treeAuctions": 48744,
+        "rolloutAuctions": 98965,
+        "unusedAuctionBase": 480069,
+        "godEmpty": 360928,
+        "godTargets": 186177,
+        "keyInputItems": 8307817,
+        "keyOutputBytes": 38324284,
+        "tileTrialCopies": 171784,
+        "tileTrialItems": 4265360,
+        "uctEdges": 120027,
+        "rewardTanh": 184248,
+        "copyBagItems": 64045390,
+        "copyDiscardItems": 79110934,
+        "copyHoldingItems": 94493411,
+        "copyDiskItems": 16063764,
+        "copyOtherItems": 10159718
+      },
+      "copies": {
+        "root": {
+          "copies": 15953,
+          "vectorItems": 3110835
+        },
+        "turnProbe": {
+          "copies": 398286,
+          "vectorItems": 79372641
+        },
+        "auctionWorkspace": {
+          "copies": 548649,
+          "vectorItems": 106695621
+        },
+        "collection": {
+          "copies": 186177,
+          "vectorItems": 36914478
+        },
+        "god": {
+          "copies": 186177,
+          "vectorItems": 37100655
+        },
+        "discard": {
+          "copies": 3405,
+          "vectorItems": 678987
+        }
+      }
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 15623,
+      "transitions": 624715,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 15
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 14,
+          "requestedBytes": 768,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 408577,
+          "requestedBytes": 30800340,
+          "frees": 745436
+        },
+        "policy": {
+          "calls": 331274,
+          "allocations": 687324,
+          "requestedBytes": 17464512,
+          "frees": 5215671
+        },
+        "auction": {
+          "calls": 413148,
+          "allocations": 2558534,
+          "requestedBytes": 23669180,
+          "frees": 8754159
+        },
+        "collection": {
+          "calls": 1331142,
+          "allocations": 2686390,
+          "requestedBytes": 62164536,
+          "frees": 2680570
+        },
+        "god": {
+          "calls": 324371,
+          "allocations": 756886,
+          "requestedBytes": 18787904,
+          "frees": 1579033
+        },
+        "candidates": {
+          "calls": 27802,
+          "allocations": 90586,
+          "requestedBytes": 2611584,
+          "frees": 62897
+        },
+        "evaluation": {
+          "calls": 3191125,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2715296,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3206748,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 10986168,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1752204,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 21784860,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4776036,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 43424,
+          "allocations": 43424,
+          "requestedBytes": 52456192,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 651360,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 120194,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 933251,
+          "allocations": 1849727,
+          "requestedBytes": 23257940,
+          "frees": 2046661
+        },
+        "sampling": {
+          "calls": 15623,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 795779,
+          "allocations": 12002980,
+          "requestedBytes": 630207108,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 54063212,
+        "bagRaItems": 719674755,
+        "bagFloodItems": 407404998,
+        "riverExp": 10861184,
+        "riverUnused": 5296740,
+        "racePairs": 65354580,
+        "raceTable": 65354580,
+        "raceFallbackExp": 0,
+        "auctionNodes": 8047167,
+        "auctionLeaves": 3684890,
+        "outcomeValues": 1752204,
+        "turnProbes": 308536,
+        "directAuctions": 3840,
+        "treeAuctions": 33346,
+        "rolloutAuctions": 67426,
+        "unusedAuctionBase": 376495,
+        "godEmpty": 313311,
+        "godTargets": 26200,
+        "keyInputItems": 8005181,
+        "keyOutputBytes": 36343276,
+        "tileTrialCopies": 360594,
+        "tileTrialItems": 2697449,
+        "uctEdges": 63147,
+        "rewardTanh": 173696,
+        "copyBagItems": 118886671,
+        "copyDiscardItems": 7257363,
+        "copyHoldingItems": 15337084,
+        "copyDiskItems": 9549348,
+        "copyOtherItems": 6521311
+      },
+      "copies": {
+        "root": {
+          "copies": 15623,
+          "vectorItems": 2999616
+        },
+        "turnProbe": {
+          "copies": 308536,
+          "vectorItems": 62043729
+        },
+        "auctionWorkspace": {
+          "copies": 413148,
+          "vectorItems": 80747737
+        },
+        "collection": {
+          "copies": 26200,
+          "vectorItems": 5255315
+        },
+        "god": {
+          "copies": 26200,
+          "vectorItems": 5281515
+        },
+        "discard": {
+          "copies": 6072,
+          "vectorItems": 1223865
+        }
+      }
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 7736,
+      "transitions": 518147,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 13
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 12,
+          "requestedBytes": 792,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 251120,
+          "requestedBytes": 17695516,
+          "frees": 431884
+        },
+        "policy": {
+          "calls": 273339,
+          "allocations": 575054,
+          "requestedBytes": 15162220,
+          "frees": 4096058
+        },
+        "auction": {
+          "calls": 336625,
+          "allocations": 2065588,
+          "requestedBytes": 18399636,
+          "frees": 6868877
+        },
+        "collection": {
+          "calls": 1103294,
+          "allocations": 2371958,
+          "requestedBytes": 49279484,
+          "frees": 2321596
+        },
+        "god": {
+          "calls": 267749,
+          "allocations": 680103,
+          "requestedBytes": 17164256,
+          "frees": 1758673
+        },
+        "candidates": {
+          "calls": 19124,
+          "allocations": 66461,
+          "requestedBytes": 1856320,
+          "frees": 47390
+        },
+        "evaluation": {
+          "calls": 2954401,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2247980,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 2962137,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 9053808,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1736965,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 18014784,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4237306,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 26859,
+          "allocations": 26859,
+          "requestedBytes": 32445672,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 402885,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 95444,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 770508,
+          "allocations": 1557064,
+          "requestedBytes": 19302344,
+          "frees": 1767475
+        },
+        "sampling": {
+          "calls": 7736,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 673491,
+          "allocations": 9697747,
+          "requestedBytes": 534588604,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 41012165,
+        "bagRaItems": 650142617,
+        "bagFloodItems": 341999560,
+        "riverExp": 8991920,
+        "riverUnused": 4110519,
+        "racePairs": 54044352,
+        "raceTable": 54044352,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7756061,
+        "auctionLeaves": 3810672,
+        "outcomeValues": 1736965,
+        "turnProbes": 252361,
+        "directAuctions": 3302,
+        "treeAuctions": 21115,
+        "rolloutAuctions": 59847,
+        "unusedAuctionBase": 299504,
+        "godEmpty": 253172,
+        "godTargets": 35350,
+        "keyInputItems": 5008040,
+        "keyOutputBytes": 22640152,
+        "tileTrialCopies": 319282,
+        "tileTrialItems": 2340664,
+        "uctEdges": 58123,
+        "rewardTanh": 107436,
+        "copyBagItems": 101556744,
+        "copyDiscardItems": 5843360,
+        "copyHoldingItems": 12221543,
+        "copyDiskItems": 8081892,
+        "copyOtherItems": 5943612
+      },
+      "copies": {
+        "root": {
+          "copies": 7736,
+          "vectorItems": 1531728
+        },
+        "turnProbe": {
+          "copies": 252361,
+          "vectorItems": 50969904
+        },
+        "auctionWorkspace": {
+          "copies": 336625,
+          "vectorItems": 65761724
+        },
+        "collection": {
+          "copies": 35350,
+          "vectorItems": 7063889
+        },
+        "god": {
+          "copies": 35350,
+          "vectorItems": 7099239
+        },
+        "discard": {
+          "copies": 6069,
+          "vectorItems": 1220667
+        }
+      }
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 11159,
+      "transitions": 634104,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 16
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 15,
+          "requestedBytes": 768,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 285235,
+          "requestedBytes": 19098104,
+          "frees": 541070
+        },
+        "policy": {
+          "calls": 348682,
+          "allocations": 748902,
+          "requestedBytes": 20312036,
+          "frees": 5488815
+        },
+        "auction": {
+          "calls": 432986,
+          "allocations": 2377082,
+          "requestedBytes": 22620116,
+          "frees": 8717020
+        },
+        "collection": {
+          "calls": 1259869,
+          "allocations": 3063715,
+          "requestedBytes": 131485200,
+          "frees": 3343198
+        },
+        "god": {
+          "calls": 339058,
+          "allocations": 822680,
+          "requestedBytes": 20653176,
+          "frees": 1894960
+        },
+        "candidates": {
+          "calls": 27469,
+          "allocations": 65398,
+          "requestedBytes": 1496976,
+          "frees": 37929
+        },
+        "evaluation": {
+          "calls": 3279339,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2872520,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3290498,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 11579352,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1588647,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 23024796,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4787047,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 38627,
+          "allocations": 38627,
+          "requestedBytes": 46661416,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 579405,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 125374,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 959984,
+          "allocations": 1818353,
+          "requestedBytes": 25844228,
+          "frees": 2109530
+        },
+        "sampling": {
+          "calls": 11159,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 859990,
+          "allocations": 12912531,
+          "requestedBytes": 679817492,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 133604042,
+        "bagRaItems": 469364937,
+        "bagFloodItems": 279085392,
+        "riverExp": 11490080,
+        "riverUnused": 4546857,
+        "racePairs": 69074388,
+        "raceTable": 69074388,
+        "raceFallbackExp": 0,
+        "auctionNodes": 6702192,
+        "auctionLeaves": 3146068,
+        "outcomeValues": 1588647,
+        "turnProbes": 325880,
+        "directAuctions": 2357,
+        "treeAuctions": 44890,
+        "rolloutAuctions": 59859,
+        "unusedAuctionBase": 384318,
+        "godEmpty": 325098,
+        "godTargets": 35697,
+        "keyInputItems": 6142396,
+        "keyOutputBytes": 28428940,
+        "tileTrialCopies": 538500,
+        "tileTrialItems": 7927372,
+        "uctEdges": 48444,
+        "rewardTanh": 154508,
+        "copyBagItems": 82403783,
+        "copyDiscardItems": 30514859,
+        "copyHoldingItems": 39652379,
+        "copyDiskItems": 10319880,
+        "copyOtherItems": 7063472
+      },
+      "copies": {
+        "root": {
+          "copies": 11159,
+          "vectorItems": 2142528
+        },
+        "turnProbe": {
+          "copies": 325880,
+          "vectorItems": 65483238
+        },
+        "auctionWorkspace": {
+          "copies": 432986,
+          "vectorItems": 84411155
+        },
+        "collection": {
+          "copies": 35697,
+          "vectorItems": 7080948
+        },
+        "god": {
+          "copies": 35697,
+          "vectorItems": 7116645
+        },
+        "discard": {
+          "copies": 18571,
+          "vectorItems": 3719859
+        }
+      }
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 10389,
+      "transitions": 632781,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 17
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 16,
+          "requestedBytes": 792,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 272360,
+          "requestedBytes": 18212484,
+          "frees": 508806
+        },
+        "policy": {
+          "calls": 346633,
+          "allocations": 742507,
+          "requestedBytes": 20026620,
+          "frees": 5459631
+        },
+        "auction": {
+          "calls": 428019,
+          "allocations": 2428567,
+          "requestedBytes": 22582232,
+          "frees": 8742194
+        },
+        "collection": {
+          "calls": 1287030,
+          "allocations": 3054111,
+          "requestedBytes": 122528560,
+          "frees": 3323882
+        },
+        "god": {
+          "calls": 340391,
+          "allocations": 829336,
+          "requestedBytes": 20788092,
+          "frees": 1944752
+        },
+        "candidates": {
+          "calls": 24443,
+          "allocations": 75511,
+          "requestedBytes": 1798560,
+          "frees": 51068
+        },
+        "evaluation": {
+          "calls": 3418655,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2884771,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3429044,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 11622196,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1741608,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 23119724,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4948240,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 34831,
+          "allocations": 34831,
+          "requestedBytes": 42075848,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 522465,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 119620,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 954642,
+          "allocations": 1824128,
+          "requestedBytes": 26192352,
+          "frees": 2135040
+        },
+        "sampling": {
+          "calls": 10389,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 850647,
+          "allocations": 12904023,
+          "requestedBytes": 673906048,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 122205877,
+        "bagRaItems": 505466563,
+        "bagFloodItems": 291832087,
+        "riverExp": 11539084,
+        "riverUnused": 4813784,
+        "racePairs": 69359172,
+        "raceTable": 69359172,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7397606,
+        "auctionLeaves": 3574778,
+        "outcomeValues": 1741608,
+        "turnProbes": 321861,
+        "directAuctions": 3351,
+        "treeAuctions": 50205,
+        "rolloutAuctions": 52602,
+        "unusedAuctionBase": 382742,
+        "godEmpty": 325609,
+        "godTargets": 36465,
+        "keyInputItems": 5532947,
+        "keyOutputBytes": 25484496,
+        "tileTrialCopies": 532863,
+        "tileTrialItems": 7222450,
+        "uctEdges": 51227,
+        "rewardTanh": 139324,
+        "copyBagItems": 84961135,
+        "copyDiscardItems": 30269709,
+        "copyHoldingItems": 35766520,
+        "copyDiskItems": 10207764,
+        "copyOtherItems": 7271384
+      },
+      "copies": {
+        "root": {
+          "copies": 10389,
+          "vectorItems": 2057022
+        },
+        "turnProbe": {
+          "copies": 321861,
+          "vectorItems": 64834566
+        },
+        "auctionWorkspace": {
+          "copies": 428019,
+          "vectorItems": 83519734
+        },
+        "collection": {
+          "copies": 36465,
+          "vectorItems": 7261005
+        },
+        "god": {
+          "copies": 36465,
+          "vectorItems": 7297470
+        },
+        "discard": {
+          "copies": 17448,
+          "vectorItems": 3506715
+        }
+      }
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 22663,
+      "transitions": 750564,
+      "depth": 8,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 15
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 14,
+          "requestedBytes": 768,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 683344,
+          "requestedBytes": 35985472,
+          "frees": 1160303
+        },
+        "policy": {
+          "calls": 471617,
+          "allocations": 1009106,
+          "requestedBytes": 31868584,
+          "frees": 6881341
+        },
+        "auction": {
+          "calls": 564925,
+          "allocations": 2088113,
+          "requestedBytes": 21147820,
+          "frees": 9879181
+        },
+        "collection": {
+          "calls": 1288099,
+          "allocations": 3976227,
+          "requestedBytes": 200362804,
+          "frees": 4832946
+        },
+        "god": {
+          "calls": 467156,
+          "allocations": 1408930,
+          "requestedBytes": 37569868,
+          "frees": 4870013
+        },
+        "candidates": {
+          "calls": 51834,
+          "allocations": 225429,
+          "requestedBytes": 10519488,
+          "frees": 193509
+        },
+        "evaluation": {
+          "calls": 3464562,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3464562,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3487225,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 13948900,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1041642,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 13858248,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4933351,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 74496,
+          "allocations": 74496,
+          "requestedBytes": 89991168,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 1117440,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 384488,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1177711,
+          "allocations": 1928370,
+          "requestedBytes": 36634168,
+          "frees": 2199701
+        },
+        "sampling": {
+          "calls": 22663,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1314373,
+          "allocations": 18622980,
+          "requestedBytes": 1028241432,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 210303038,
+        "bagRaItems": 224667822,
+        "bagFloodItems": 157095947,
+        "riverExp": 13858248,
+        "riverUnused": 10122033,
+        "racePairs": 41574744,
+        "raceTable": 41574744,
+        "raceFallbackExp": 0,
+        "auctionNodes": 3251000,
+        "auctionLeaves": 1522895,
+        "outcomeValues": 1041642,
+        "turnProbes": 427147,
+        "directAuctions": 3694,
+        "treeAuctions": 44339,
+        "rolloutAuctions": 89745,
+        "unusedAuctionBase": 481468,
+        "godEmpty": 426869,
+        "godTargets": 119326,
+        "keyInputItems": 9074703,
+        "keyOutputBytes": 43368340,
+        "tileTrialCopies": 783380,
+        "tileTrialItems": 14155181,
+        "uctEdges": 158586,
+        "rewardTanh": 297984,
+        "copyBagItems": 59736583,
+        "copyDiscardItems": 94853396,
+        "copyHoldingItems": 77951773,
+        "copyDiskItems": 15772476,
+        "copyOtherItems": 8746130
+      },
+      "copies": {
+        "root": {
+          "copies": 22663,
+          "vectorItems": 4351296
+        },
+        "turnProbe": {
+          "copies": 427147,
+          "vectorItems": 84340119
+        },
+        "auctionWorkspace": {
+          "copies": 564925,
+          "vectorItems": 109583566
+        },
+        "collection": {
+          "copies": 119326,
+          "vectorItems": 23295365
+        },
+        "god": {
+          "copies": 119326,
+          "vectorItems": 23414691
+        },
+        "discard": {
+          "copies": 60986,
+          "vectorItems": 12075321
+        }
+      }
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 14414,
+      "transitions": 828216,
+      "depth": 9,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 16
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 15,
+          "requestedBytes": 788,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 578235,
+          "requestedBytes": 26433976,
+          "frees": 935654
+        },
+        "policy": {
+          "calls": 464276,
+          "allocations": 989671,
+          "requestedBytes": 28548064,
+          "frees": 7047835
+        },
+        "auction": {
+          "calls": 607431,
+          "allocations": 2512909,
+          "requestedBytes": 24195392,
+          "frees": 10989892
+        },
+        "collection": {
+          "calls": 1374901,
+          "allocations": 3324481,
+          "requestedBytes": 156402528,
+          "frees": 3828320
+        },
+        "god": {
+          "calls": 468802,
+          "allocations": 1167741,
+          "requestedBytes": 29948348,
+          "frees": 2861346
+        },
+        "candidates": {
+          "calls": 58994,
+          "allocations": 200769,
+          "requestedBytes": 5737424,
+          "frees": 141856
+        },
+        "evaluation": {
+          "calls": 3800064,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3466185,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3814478,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 13922396,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1586817,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 13864740,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5489099,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 73407,
+          "allocations": 73407,
+          "requestedBytes": 88675656,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 1101105,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 273225,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 1264313,
+          "allocations": 2291160,
+          "requestedBytes": 35006032,
+          "frees": 2718448
+        },
+        "sampling": {
+          "calls": 14414,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 1208636,
+          "allocations": 17384979,
+          "requestedBytes": 950004292,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 201659685,
+        "bagRaItems": 276807065,
+        "bagFloodItems": 171335791,
+        "riverExp": 13864740,
+        "riverUnused": 9979181,
+        "racePairs": 41594220,
+        "raceTable": 41594220,
+        "raceFallbackExp": 0,
+        "auctionNodes": 5187002,
+        "auctionLeaves": 2572123,
+        "outcomeValues": 1586817,
+        "turnProbes": 436097,
+        "directAuctions": 4519,
+        "treeAuctions": 57323,
+        "rolloutAuctions": 109492,
+        "unusedAuctionBase": 523755,
+        "godEmpty": 448917,
+        "godTargets": 57985,
+        "keyInputItems": 9138899,
+        "keyOutputBytes": 43744412,
+        "tileTrialCopies": 608208,
+        "tileTrialItems": 9836632,
+        "uctEdges": 152672,
+        "rewardTanh": 293628,
+        "copyBagItems": 58161959,
+        "copyDiscardItems": 86399415,
+        "copyHoldingItems": 69700809,
+        "copyDiskItems": 14503632,
+        "copyOtherItems": 8735258
+      },
+      "copies": {
+        "root": {
+          "copies": 14414,
+          "vectorItems": 2839558
+        },
+        "turnProbe": {
+          "copies": 436097,
+          "vectorItems": 86777106
+        },
+        "auctionWorkspace": {
+          "copies": 607431,
+          "vectorItems": 118083193
+        },
+        "collection": {
+          "copies": 57985,
+          "vectorItems": 11418188
+        },
+        "god": {
+          "copies": 57985,
+          "vectorItems": 11476173
+        },
+        "discard": {
+          "copies": 34724,
+          "vectorItems": 6906855
+        }
+      }
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 12628,
+      "transitions": 569511,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 18
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 17,
+          "requestedBytes": 780,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 263924,
+          "requestedBytes": 21110140,
+          "frees": 554477
+        },
+        "policy": {
+          "calls": 316884,
+          "allocations": 668720,
+          "requestedBytes": 17293004,
+          "frees": 5556888
+        },
+        "auction": {
+          "calls": 385779,
+          "allocations": 2189527,
+          "requestedBytes": 19937848,
+          "frees": 8642122
+        },
+        "collection": {
+          "calls": 1143561,
+          "allocations": 3014591,
+          "requestedBytes": 78738912,
+          "frees": 3309527
+        },
+        "god": {
+          "calls": 303305,
+          "allocations": 708436,
+          "requestedBytes": 17527992,
+          "frees": 1563579
+        },
+        "candidates": {
+          "calls": 18223,
+          "allocations": 47250,
+          "requestedBytes": 1126160,
+          "frees": 29027
+        },
+        "evaluation": {
+          "calls": 3180023,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2651461,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3192651,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 13383585,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1617526,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 26577750,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4562843,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 30850,
+          "allocations": 30850,
+          "requestedBytes": 37266800,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 555300,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 96908,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 863367,
+          "allocations": 1690598,
+          "requestedBytes": 21919260,
+          "frees": 1901307
+        },
+        "sampling": {
+          "calls": 12628,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 758391,
+          "allocations": 12943032,
+          "requestedBytes": 608081404,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 96917862,
+        "bagRaItems": 598626133,
+        "bagFloodItems": 345802600,
+        "riverExp": 13257305,
+        "riverUnused": 10436637,
+        "racePairs": 106311000,
+        "raceTable": 106311000,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7288257,
+        "auctionLeaves": 3594178,
+        "outcomeValues": 1617526,
+        "turnProbes": 293856,
+        "directAuctions": 2863,
+        "treeAuctions": 49092,
+        "rolloutAuctions": 39968,
+        "unusedAuctionBase": 342150,
+        "godEmpty": 292564,
+        "godTargets": 24665,
+        "keyInputItems": 5686050,
+        "keyOutputBytes": 26160660,
+        "tileTrialCopies": 538094,
+        "tileTrialItems": 4685831,
+        "uctEdges": 42985,
+        "rewardTanh": 154250,
+        "copyBagItems": 98348363,
+        "copyDiscardItems": 9110453,
+        "copyHoldingItems": 27262442,
+        "copyDiskItems": 11375865,
+        "copyOtherItems": 5923228
+      },
+      "copies": {
+        "root": {
+          "copies": 12628,
+          "vectorItems": 2462460
+        },
+        "turnProbe": {
+          "copies": 293856,
+          "vectorItems": 59736525
+        },
+        "auctionWorkspace": {
+          "copies": 385779,
+          "vectorItems": 76395594
+        },
+        "collection": {
+          "copies": 24665,
+          "vectorItems": 4986850
+        },
+        "god": {
+          "copies": 24665,
+          "vectorItems": 5011515
+        },
+        "discard": {
+          "copies": 16798,
+          "vectorItems": 3427407
+        }
+      }
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 7213,
+      "transitions": 545203,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 20
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 19,
+          "requestedBytes": 800,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 226951,
+          "requestedBytes": 16518972,
+          "frees": 415927
+        },
+        "policy": {
+          "calls": 273318,
+          "allocations": 599072,
+          "requestedBytes": 17289496,
+          "frees": 4802785
+        },
+        "auction": {
+          "calls": 323989,
+          "allocations": 2254695,
+          "requestedBytes": 20930928,
+          "frees": 7896023
+        },
+        "collection": {
+          "calls": 1263249,
+          "allocations": 3145120,
+          "requestedBytes": 79630844,
+          "frees": 3383729
+        },
+        "god": {
+          "calls": 262702,
+          "allocations": 807419,
+          "requestedBytes": 21060980,
+          "frees": 3350715
+        },
+        "candidates": {
+          "calls": 17882,
+          "allocations": 60974,
+          "requestedBytes": 1597840,
+          "frees": 43098
+        },
+        "evaluation": {
+          "calls": 3008151,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2584608,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3015364,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 12995170,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1545917,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 25882145,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4372731,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 25094,
+          "allocations": 25094,
+          "requestedBytes": 30313552,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 451692,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 89055,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 787409,
+          "allocations": 1552387,
+          "requestedBytes": 23723724,
+          "frees": 1785639
+        },
+        "sampling": {
+          "calls": 7213,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 723559,
+          "allocations": 13006205,
+          "requestedBytes": 587271720,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 83108292,
+        "bagRaItems": 598490163,
+        "bagFloodItems": 351624624,
+        "riverExp": 12923040,
+        "riverUnused": 8128508,
+        "racePairs": 103528580,
+        "raceTable": 103528580,
+        "raceFallbackExp": 0,
+        "auctionNodes": 9369861,
+        "auctionLeaves": 4263839,
+        "outcomeValues": 1545917,
+        "turnProbes": 242206,
+        "directAuctions": 2552,
+        "treeAuctions": 23529,
+        "rolloutAuctions": 55702,
+        "unusedAuctionBase": 279851,
+        "godEmpty": 234028,
+        "godTargets": 68459,
+        "keyInputItems": 4723246,
+        "keyOutputBytes": 21617844,
+        "tileTrialCopies": 551645,
+        "tileTrialItems": 4663541,
+        "uctEdges": 44137,
+        "rewardTanh": 125470,
+        "copyBagItems": 97618398,
+        "copyDiscardItems": 7678768,
+        "copyHoldingItems": 23032376,
+        "copyDiskItems": 10853385,
+        "copyOtherItems": 7635003
+      },
+      "copies": {
+        "root": {
+          "copies": 7213,
+          "vectorItems": 1442600
+        },
+        "turnProbe": {
+          "copies": 242206,
+          "vectorItems": 49983600
+        },
+        "auctionWorkspace": {
+          "copies": 323989,
+          "vectorItems": 64398309
+        },
+        "collection": {
+          "copies": 68459,
+          "vectorItems": 14100823
+        },
+        "god": {
+          "copies": 68459,
+          "vectorItems": 14169282
+        },
+        "discard": {
+          "copies": 13233,
+          "vectorItems": 2723316
+        }
+      }
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 7446,
+      "transitions": 476704,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 16
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 15,
+          "requestedBytes": 780,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 208062,
+          "requestedBytes": 13850588,
+          "frees": 400147
+        },
+        "policy": {
+          "calls": 211876,
+          "allocations": 508907,
+          "requestedBytes": 17067616,
+          "frees": 3691956
+        },
+        "auction": {
+          "calls": 250997,
+          "allocations": 2265937,
+          "requestedBytes": 20429500,
+          "frees": 6575628
+        },
+        "collection": {
+          "calls": 1235746,
+          "allocations": 3153252,
+          "requestedBytes": 132464912,
+          "frees": 3704473
+        },
+        "god": {
+          "calls": 193872,
+          "allocations": 592614,
+          "requestedBytes": 15241812,
+          "frees": 2396350
+        },
+        "candidates": {
+          "calls": 16718,
+          "allocations": 41854,
+          "requestedBytes": 1317360,
+          "frees": 25738
+        },
+        "evaluation": {
+          "calls": 3384311,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2438358,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3391757,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 12266250,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 2072394,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 24420810,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4694906,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 24163,
+          "allocations": 24163,
+          "requestedBytes": 29188904,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 434934,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 162720,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 660858,
+          "allocations": 1427825,
+          "requestedBytes": 27563360,
+          "frees": 1561864
+        },
+        "sampling": {
+          "calls": 7446,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 570939,
+          "allocations": 10133543,
+          "requestedBytes": 467432980,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 142366954,
+        "bagRaItems": 343280618,
+        "bagFloodItems": 177067506,
+        "riverExp": 12191790,
+        "riverUnused": 6066092,
+        "racePairs": 97683240,
+        "raceTable": 97683240,
+        "raceFallbackExp": 0,
+        "auctionNodes": 15398441,
+        "auctionLeaves": 7073920,
+        "outcomeValues": 2072394,
+        "turnProbes": 184154,
+        "directAuctions": 2625,
+        "treeAuctions": 20791,
+        "rolloutAuctions": 43427,
+        "unusedAuctionBase": 217523,
+        "godEmpty": 171766,
+        "godTargets": 49199,
+        "keyInputItems": 3632059,
+        "keyOutputBytes": 17262316,
+        "tileTrialCopies": 603751,
+        "tileTrialItems": 8247806,
+        "uctEdges": 31503,
+        "rewardTanh": 120815,
+        "copyBagItems": 41122259,
+        "copyDiscardItems": 27500983,
+        "copyHoldingItems": 32878918,
+        "copyDiskItems": 8564085,
+        "copyOtherItems": 6792000
+      },
+      "copies": {
+        "root": {
+          "copies": 7446,
+          "vectorItems": 1451970
+        },
+        "turnProbe": {
+          "copies": 184154,
+          "vectorItems": 38432445
+        },
+        "auctionWorkspace": {
+          "copies": 250997,
+          "vectorItems": 50150259
+        },
+        "collection": {
+          "copies": 49199,
+          "vectorItems": 10253857
+        },
+        "god": {
+          "copies": 49199,
+          "vectorItems": 10303056
+        },
+        "discard": {
+          "copies": 29944,
+          "vectorItems": 6266658
+        }
+      }
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 7971,
+      "transitions": 503817,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 17
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 16,
+          "requestedBytes": 800,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 254647,
+          "requestedBytes": 15752324,
+          "frees": 465230
+        },
+        "policy": {
+          "calls": 217948,
+          "allocations": 545412,
+          "requestedBytes": 22988688,
+          "frees": 3721615
+        },
+        "auction": {
+          "calls": 256986,
+          "allocations": 2232237,
+          "requestedBytes": 20227280,
+          "frees": 6651378
+        },
+        "collection": {
+          "calls": 1208905,
+          "allocations": 3125022,
+          "requestedBytes": 142114728,
+          "frees": 3651440
+        },
+        "god": {
+          "calls": 204454,
+          "allocations": 592092,
+          "requestedBytes": 15210140,
+          "frees": 2206802
+        },
+        "candidates": {
+          "calls": 20334,
+          "allocations": 69518,
+          "requestedBytes": 1856272,
+          "frees": 49204
+        },
+        "evaluation": {
+          "calls": 3331109,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 2425017,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3339080,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 12204795,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 2014452,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 24290025,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 4623474,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 28304,
+          "allocations": 28304,
+          "requestedBytes": 34191232,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 509472,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 295983,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 687822,
+          "allocations": 1437885,
+          "requestedBytes": 27677972,
+          "frees": 1587480
+        },
+        "sampling": {
+          "calls": 7971,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 566172,
+          "allocations": 10048033,
+          "requestedBytes": 463335836,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 147702450,
+        "bagRaItems": 324641465,
+        "bagFloodItems": 169155674,
+        "riverExp": 12125085,
+        "riverUnused": 5884165,
+        "racePairs": 97160100,
+        "raceTable": 97160100,
+        "raceFallbackExp": 0,
+        "auctionNodes": 14225522,
+        "auctionLeaves": 6609605,
+        "outcomeValues": 2014452,
+        "turnProbes": 184005,
+        "directAuctions": 2729,
+        "treeAuctions": 26795,
+        "rolloutAuctions": 43457,
+        "unusedAuctionBase": 219032,
+        "godEmpty": 185678,
+        "godTargets": 44299,
+        "keyInputItems": 4218566,
+        "keyOutputBytes": 19958144,
+        "tileTrialCopies": 598301,
+        "tileTrialItems": 8520297,
+        "uctEdges": 51286,
+        "rewardTanh": 141520,
+        "copyBagItems": 39378266,
+        "copyDiscardItems": 27388349,
+        "copyHoldingItems": 33880871,
+        "copyDiskItems": 8492580,
+        "copyOtherItems": 6693893
+      },
+      "copies": {
+        "root": {
+          "copies": 7971,
+          "vectorItems": 1594200
+        },
+        "turnProbe": {
+          "copies": 184005,
+          "vectorItems": 38422560
+        },
+        "auctionWorkspace": {
+          "copies": 256986,
+          "vectorItems": 51341730
+        },
+        "collection": {
+          "copies": 44299,
+          "vectorItems": 9226676
+        },
+        "god": {
+          "copies": 44299,
+          "vectorItems": 9270975
+        },
+        "discard": {
+          "copies": 28612,
+          "vectorItems": 5977818
+        }
+      }
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "phase": "turn",
+      "productionProfileRepeat": 0,
+      "samples": 8700,
+      "transitions": 540393,
+      "depth": 6,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 19
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 18,
+          "requestedBytes": 780,
+          "frees": 0
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 246647,
+          "requestedBytes": 14008632,
+          "frees": 474526
+        },
+        "policy": {
+          "calls": 234783,
+          "allocations": 542664,
+          "requestedBytes": 20523576,
+          "frees": 4136704
+        },
+        "auction": {
+          "calls": 294810,
+          "allocations": 2229554,
+          "requestedBytes": 22612776,
+          "frees": 7427752
+        },
+        "collection": {
+          "calls": 1200012,
+          "allocations": 5932456,
+          "requestedBytes": 275796300,
+          "frees": 7073858
+        },
+        "god": {
+          "calls": 218126,
+          "allocations": 625226,
+          "requestedBytes": 16017980,
+          "frees": 2338196
+        },
+        "candidates": {
+          "calls": 21337,
+          "allocations": 55919,
+          "requestedBytes": 1629632,
+          "frees": 34595
+        },
+        "evaluation": {
+          "calls": 3722568,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3458680,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3731268,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 17336900,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1366188,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 17293400,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5029664,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 30036,
+          "allocations": 30036,
+          "requestedBytes": 36283488,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 540648,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 225035,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 745189,
+          "allocations": 1506009,
+          "requestedBytes": 30244584,
+          "frees": 1685356
+        },
+        "sampling": {
+          "calls": 8700,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 661209,
+          "allocations": 12002477,
+          "requestedBytes": 537919868,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 293220180,
+        "bagRaItems": 126366299,
+        "bagFloodItems": 85108440,
+        "riverExp": 17293400,
+        "riverUnused": 8439455,
+        "racePairs": 69173600,
+        "raceTable": 69173600,
+        "raceFallbackExp": 0,
+        "auctionNodes": 8609725,
+        "auctionLeaves": 3734213,
+        "outcomeValues": 1366188,
+        "turnProbes": 204796,
+        "directAuctions": 2758,
+        "treeAuctions": 37673,
+        "rolloutAuctions": 49583,
+        "unusedAuctionBase": 245730,
+        "godEmpty": 198206,
+        "godTargets": 45376,
+        "keyInputItems": 3865219,
+        "keyOutputBytes": 18895316,
+        "tileTrialCopies": 1531121,
+        "tileTrialItems": 28200169,
+        "uctEdges": 47334,
+        "rewardTanh": 150180,
+        "copyBagItems": 16084445,
+        "copyDiscardItems": 45783267,
+        "copyHoldingItems": 55769704,
+        "copyDiskItems": 9918135,
+        "copyOtherItems": 6924416
+      },
+      "copies": {
+        "root": {
+          "copies": 8700,
+          "vectorItems": 1696500
+        },
+        "turnProbe": {
+          "copies": 204796,
+          "vectorItems": 42387276
+        },
+        "auctionWorkspace": {
+          "copies": 294810,
+          "vectorItems": 58707744
+        },
+        "collection": {
+          "copies": 45376,
+          "vectorItems": 9376739
+        },
+        "god": {
+          "copies": 45376,
+          "vectorItems": 9422115
+        },
+        "discard": {
+          "copies": 62151,
+          "vectorItems": 12889593
+        }
+      }
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "productionProfileRepeat": 0,
+      "samples": 9621,
+      "transitions": 561038,
+      "depth": 7,
+      "calls": {
+        "other": {
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 21
+        },
+        "decode": {
+          "calls": 1,
+          "allocations": 22,
+          "requestedBytes": 856,
+          "frees": 2
+        },
+        "search": {
+          "calls": 1,
+          "allocations": 195617,
+          "requestedBytes": 11516880,
+          "frees": 433520
+        },
+        "policy": {
+          "calls": 257633,
+          "allocations": 591987,
+          "requestedBytes": 22412080,
+          "frees": 4483844
+        },
+        "auction": {
+          "calls": 320737,
+          "allocations": 2243480,
+          "requestedBytes": 23034868,
+          "frees": 7793553
+        },
+        "collection": {
+          "calls": 1208540,
+          "allocations": 6135387,
+          "requestedBytes": 282480440,
+          "frees": 7481444
+        },
+        "god": {
+          "calls": 239676,
+          "allocations": 673537,
+          "requestedBytes": 16991312,
+          "frees": 2389884
+        },
+        "candidates": {
+          "calls": 16745,
+          "allocations": 38429,
+          "requestedBytes": 927120,
+          "frees": 21685
+        },
+        "evaluation": {
+          "calls": 3852293,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "positionCache": {
+          "calls": 3630186,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "future": {
+          "calls": 3861914,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "inventory": {
+          "calls": 18199035,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "reserve": {
+          "calls": 1330947,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "race": {
+          "calls": 18150930,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "draws": {
+          "calls": 5186582,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "observation": {
+          "calls": 26365,
+          "allocations": 26365,
+          "requestedBytes": 31848920,
+          "frees": 0
+        },
+        "keys": {
+          "calls": 474570,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "actionKey": {
+          "calls": 225620,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "rules": {
+          "calls": 786487,
+          "allocations": 1578370,
+          "requestedBytes": 30925352,
+          "frees": 1801445
+        },
+        "sampling": {
+          "calls": 9621,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        "stateCopy": {
+          "calls": 722858,
+          "allocations": 12922204,
+          "requestedBytes": 587400260,
+          "frees": 0
+        }
+      },
+      "counts": {
+        "inventoryTiles": 309800885,
+        "bagRaItems": 127808765,
+        "bagFloodItems": 87515614,
+        "riverExp": 18150930,
+        "riverUnused": 8924552,
+        "racePairs": 72603720,
+        "raceTable": 72603720,
+        "raceFallbackExp": 0,
+        "auctionNodes": 7930478,
+        "auctionLeaves": 3429223,
+        "outcomeValues": 1330947,
+        "turnProbes": 225449,
+        "directAuctions": 1214,
+        "treeAuctions": 65846,
+        "rolloutAuctions": 28228,
+        "unusedAuctionBase": 268534,
+        "godEmpty": 217201,
+        "godTargets": 46132,
+        "keyInputItems": 3357560,
+        "keyOutputBytes": 16379880,
+        "tileTrialCopies": 1614565,
+        "tileTrialItems": 30435453,
+        "uctEdges": 40721,
+        "rewardTanh": 131825,
+        "copyBagItems": 17299209,
+        "copyDiscardItems": 49966526,
+        "copyHoldingItems": 61422280,
+        "copyDiskItems": 10842870,
+        "copyOtherItems": 7319180
+      },
+      "copies": {
+        "root": {
+          "copies": 9621,
+          "vectorItems": 2001168
+        },
+        "turnProbe": {
+          "copies": 225449,
+          "vectorItems": 46545732
+        },
+        "auctionWorkspace": {
+          "copies": 320737,
+          "vectorItems": 63794331
+        },
+        "collection": {
+          "copies": 46132,
+          "vectorItems": 9512705
+        },
+        "god": {
+          "copies": 46132,
+          "vectorItems": 9558837
+        },
+        "discard": {
+          "copies": 74787,
+          "vectorItems": 15437292
+        }
+      }
+    }
+  ]
+}

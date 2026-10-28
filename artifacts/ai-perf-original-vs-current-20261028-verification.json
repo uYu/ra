@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-28T03:25:20.460585+00:00",
+  "originalSnapshotHashesVerified": 14,
+  "productionFilesUnchanged": true,
+  "fixedReportsIdentical": true,
+  "fixedComparisons": 72,
+  "timedPairs": 48,
+  "sourceSha256": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+  "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "noTournamentGames": true
+}

@@ -51,11 +51,13 @@ import { PublicBoard } from "./components/PublicBoard.tsx";
 import { GameNavigation } from "./components/GameNavigation.tsx";
 import { Dialog } from "./components/Dialog.tsx";
 import { Rules } from "./components/Rules.tsx";
+import { ScoreBoard } from "./components/ScoreBoard.tsx";
+import { AuctionCallerBadge } from "./components/AuctionCallerBadge.tsx";
 
 const DIFFICULTIES: Record<Difficulty, string> = {
   easy: "入门 · 神庙学徒",
   normal: "标准 · 王朝顾问",
-  hard: "进阶 · 大祭司",
+  hard: "进阶 · 大祭司 · 2 秒思考",
 };
 function initial() {
   try {
@@ -702,7 +704,7 @@ function App() {
                             </span>
                           </button>
                           <button
-                            className={`secondary ${godMode ? "chosen" : ""}`}
+                            className={`secondary god-action ${godMode ? "chosen" : ""}`}
                             disabled={
                               !active ||
                               !available.some((a) => a.type === "god")
@@ -718,6 +720,13 @@ function App() {
                               <small>换取指定拍品</small>
                             </span>
                           </button>
+                        </div>
+                      )}
+                      {viewed.phase === "turn" && !godMode && (
+                        <div className="turn-action-hint">
+                          {available.some((a) => a.type === "god")
+                            ? "持有神祇：点击“使用神祇”后，选择一块非神祇拍品交换。"
+                            : "抽牌增加拍品，或呼唤 RA 发起整批拍卖。"}
                         </div>
                       )}
                       {(viewed.phase === "god" || godMode) && (
@@ -925,9 +934,10 @@ function App() {
                       <button
                         key={i}
                         data-motion={`player-${i}`}
-                        className={`player-summary ${viewed.current === i ? "current" : ""} ${inspect === i ? "inspected" : ""} ${(latestMove?.winner ?? latestMove?.actor) === i ? "just-acted" : ""}`}
+                        className={`player-summary ${viewed.current === i ? "current" : ""} ${inspect === i ? "inspected" : ""} ${(latestMove?.winner ?? latestMove?.actor) === i ? "just-acted" : ""} ${viewed.auction?.caller === i ? "is-auction-caller" : ""}`}
                         onClick={() => viewPlayer(i)}
                       >
+                        <AuctionCallerBadge state={viewed} player={i} />
                         <span className={`avatar avatar-${i}`}>
                           <Glyph kind="pharaoh" />
                         </span>
@@ -967,8 +977,19 @@ function App() {
                               className="used"
                               key={n}
                               data-motion={`sun-${i}-${n}`}
+                              role="img"
+                              aria-label={
+                                viewed.phase === "over"
+                                  ? `太阳圆盘 ${n}`
+                                  : "暗扣圆盘，本纪元不可用"
+                              }
+                              title={
+                                viewed.phase === "over"
+                                  ? `太阳圆盘 ${n}`
+                                  : "暗扣圆盘；自己的可到玩家板点击查看"
+                              }
                             >
-                              {n}
+                              {viewed.phase === "over" ? n : "☼"}
                             </span>
                           ))}
                         </div>
@@ -1140,7 +1161,8 @@ function App() {
                 ))}
               </select>
               <span className="field-note">
-                入门适合熟悉规则；标准推演整轮拍卖；进阶模拟后续局势，适合有经验的玩家。
+                入门适合熟悉规则；标准推演整轮拍卖；进阶每次决策思考约 2
+                秒，模拟后续局势。
               </span>
             </label>
             {save && (
@@ -1258,11 +1280,12 @@ function App() {
         <Dialog
           title={
             viewed.phase === "over"
-              ? "荣耀，归于新的太阳之子。"
+              ? "终局排名 · 最终结算"
               : `第 ${viewed.epoch} 纪元 · 王朝结算`
           }
           onClose={() => setResultDismissed(resultKey)}
           wide
+          className="result-dialog"
         >
           <div className="result-intro">
             <Sun />
@@ -1270,7 +1293,8 @@ function App() {
               <>
                 <span className="eyebrow">THE SUN HAS CHOSEN</span>
                 <h3>
-                  {viewed.players[ranking(viewed)[0].player].name}赢得了这段历史
+                  {viewed.players[ranking(viewed)[0].player].name}以{" "}
+                  {ranking(viewed)[0].score} 分获得冠军
                 </h3>
                 <p>最终同分时，以持有的最大太阳圆盘决胜。</p>
               </>
@@ -1278,45 +1302,7 @@ function App() {
               <p>太阳落下，文明留下了自己的印记。</p>
             )}
           </div>
-          <div className="result-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>统治者</th>
-                  {Object.keys(viewed.history.at(-1)![0].parts).map((k) => (
-                    <th key={k}>{k}</th>
-                  ))}
-                  <th>本纪元</th>
-                  <th>总分</th>
-                </tr>
-              </thead>
-              <tbody>
-                {viewed.history.at(-1)!.map((r, i) => (
-                  <tr key={i}>
-                    <th>{r.name}</th>
-                    {Object.values(r.parts).map((v, j) => (
-                      <td key={j} className={v < 0 ? "negative" : ""}>
-                        {v > 0 ? "+" : ""}
-                        {v}
-                      </td>
-                    ))}
-                    <td>
-                      <b>
-                        {r.delta > 0 ? "+" : ""}
-                        {r.delta}
-                      </b>
-                    </td>
-                    <td>
-                      {viewed.phase === "over" ||
-                      (viewed.config.humans === 1 && i === 0)
-                        ? r.total
-                        : "隐藏"}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ScoreBoard state={viewed} player={inspect} onPlayer={viewPlayer} />
           <p className="muted">
             {viewed.phase === "over"
               ? "三个纪元已结束。可以导出存档或回放这场王朝竞逐。"

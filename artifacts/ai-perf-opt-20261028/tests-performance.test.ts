@@ -1,0 +1,96 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { createWasmAi } from "../src/game/ai/wasm.ts";
+import { createWasmAi as createFrozen } from "../src/game/ai/wasm-frozen-uct5.ts";
+import { newGame } from "../src/game/engine.ts";
+import { auctionPlan } from "../src/game/ai/policy.ts";
+import type { Kind, State } from "../src/game/types.ts";
+
+const current = await createWasmAi(await readFile("src/game/ai/ra-ai.wasm"));
+const frozen = await createFrozen(
+  await readFile("artifacts/frozen-uct5/ra-ai.wasm"),
+);
+function take(s: State, kind: Kind, variant = 0) {
+  const i = s.bag.findIndex((t) => t.kind === kind && t.variant === variant);
+  assert.ok(i >= 0);
+  return s.bag.splice(i, 1)[0];
+}
+function auction(count: number, epoch: number, forced: boolean) {
+  const s = newGame({
+    count,
+    humans: 0,
+    difficulty: "hard",
+    seed: 72000 + count,
+  });
+  s.epoch = epoch;
+  for (let i = 0; i < count; i++) {
+    s.players[i].tiles.push(
+      take(s, "pharaoh"),
+      take(s, "nile"),
+      take(s, "monument", i),
+      take(s, "monument", i),
+      take(s, "civilization", i % 5),
+    );
+  }
+  s.players[0].tiles.push(take(s, "flood"));
+  s.market = [
+    take(s, "gold"),
+    take(s, "monument", 7),
+    take(s, "flood"),
+    take(s, "drought"),
+    take(s, "earthquake"),
+    take(s, "war"),
+    take(s, "funeral"),
+  ];
+  s.phase = "auction";
+  s.current = forced ? count - 1 : 1;
+  const high = forced ? 0 : s.players[0].suns[0];
+  s.auction = {
+    caller: count - 1,
+    reason: forced ? "invoke" : "draw",
+    order: Array.from({ length: count }, (_, i) => i),
+    index: s.current,
+    high,
+    winner: forced ? -1 : 0,
+    bids: Array.from({ length: s.current }, (_, i) => ({
+      player: i,
+      sun: forced ? null : high,
+    })),
+  };
+  return s;
+}
+
+test("optimized auction workspace preserves partial winners, forced bids and disaster outcomes", () => {
+  for (const count of [2, 3, 4, 5])
+    for (const epoch of [1, 2, 3])
+      for (const forced of [false, true]) {
+        const s = auction(count, epoch, forced),
+          before = structuredClone(s);
+        const actual = current.auction(s);
+        assert.deepEqual(actual, frozen.auction(s));
+        const expected = auctionPlan(s);
+        assert.deepEqual(actual.actions, expected.actions);
+        assert.equal(actual.winner, expected.winner);
+        assert.equal(actual.sun, expected.sun);
+        actual.values.forEach((v, i) =>
+          assert.ok(Math.abs(v - expected.values[i]) < 1e-9),
+        );
+        assert.deepEqual(
+          current.search(s, { samples: 4 }),
+          frozen.search(s, { samples: 4 }),
+        );
+        assert.deepEqual(s, before);
+      }
+});
+
+test("auction caches are local to an award and cannot survive a later call", () => {
+  const a = auction(5, 1, false),
+    b = auction(3, 3, true);
+  const expected = current.auction(a);
+  current.auction(b);
+  assert.deepEqual(current.auction(a), expected);
+  a.players[0].tiles.push(take(a, "pharaoh"));
+  a.players[1].used.push(a.players[1].suns.pop()!);
+  assert.deepEqual(current.auction(a), frozen.auction(a));
+});

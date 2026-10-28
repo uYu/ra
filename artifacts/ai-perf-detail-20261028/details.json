@@ -1,0 +1,2017 @@
+{
+  "createdAt": "2026-10-28T02:43:31.918Z",
+  "sourceSha256": "dea66e83bb1e48ff57e87f302d37da14af883cf2a0df55ccb77a281cd6f0ccbe",
+  "wasmSha256": "922360a3afda4939ee2dd5d002a4d745a0e1aa87c80518f2c0df81286ac61e93",
+  "method": "CPU occupancy sampled from unchanged O3 executable sections, 24 public positions, two 2s repetitions. Separate diagnostic counters replay exactly the first CPU-profile repetition simulation counts and match transitions; full fixed-128 reports match production. CPU mechanisms and purposes are separate non-overlapping partitions; function inclusive percentages overlap.",
+  "caveats": [
+    "Inlined work belongs to the surviving caller; position-cache-other and search-or-inlined-other cannot be precisely subdivided from this sample.",
+    "Logical work and requested C++ new bytes are not timing measurements or peak memory. The counted build performance is not used as production throughput.",
+    "Representative positions are not tournament-frequency weighted. Runtime phase is not always recoverable from stack names: policy-auction-solving includes turn probes and auction priors."
+  ],
+  "byCount": [
+    {
+      "count": 2,
+      "cpuSamples": 93342,
+      "mechanisms": [
+        {
+          "name": "allocator",
+          "hits": 21584,
+          "percent": 23.12356709734096
+        },
+        {
+          "name": "position-cache-other",
+          "hits": 18925,
+          "percent": 20.274903044717277
+        },
+        {
+          "name": "inventory-scan",
+          "hits": 8317,
+          "percent": 8.9102440487669
+        },
+        {
+          "name": "auction-outcome-setup",
+          "hits": 8010,
+          "percent": 8.58134601786977
+        },
+        {
+          "name": "state-player-copy",
+          "hits": 5104,
+          "percent": 5.468063679801161
+        },
+        {
+          "name": "search-or-inlined-other",
+          "hits": 4875,
+          "percent": 5.2227293179919005
+        },
+        {
+          "name": "score-assembly",
+          "hits": 4404,
+          "percent": 4.718133316192068
+        },
+        {
+          "name": "future-value",
+          "hits": 3981,
+          "percent": 4.264961110754001
+        },
+        {
+          "name": "collection-disaster",
+          "hits": 3919,
+          "percent": 4.198538707120053
+        },
+        {
+          "name": "public-key",
+          "hits": 3836,
+          "percent": 4.109618392577832
+        },
+        {
+          "name": "auction-backward-induction",
+          "hits": 2223,
+          "percent": 2.381564569004307
+        },
+        {
+          "name": "policy-other",
+          "hits": 2150,
+          "percent": 2.303357545370787
+        },
+        {
+          "name": "rules",
+          "hits": 1561,
+          "percent": 1.6723447108482783
+        },
+        {
+          "name": "math-exp",
+          "hits": 1494,
+          "percent": 1.6005656617599795
+        },
+        {
+          "name": "god-choice-other",
+          "hits": 819,
+          "percent": 0.8774185254226393
+        },
+        {
+          "name": "hash-containers",
+          "hits": 815,
+          "percent": 0.8731332090591588
+        },
+        {
+          "name": "action-key",
+          "hits": 793,
+          "percent": 0.8495639690600159
+        },
+        {
+          "name": "js-runtime",
+          "hits": 354,
+          "percent": 0.37925049816802725
+        },
+        {
+          "name": "candidate-generation",
+          "hits": 178,
+          "percent": 0.19069657817488375
+        }
+      ],
+      "purposes": [
+        {
+          "name": "policy-auction-solving",
+          "hits": 36656,
+          "percent": 39.270639154935616
+        },
+        {
+          "name": "simulation-auction-solving",
+          "hits": 14925,
+          "percent": 15.989586681236743
+        },
+        {
+          "name": "policy-other",
+          "hits": 13399,
+          "percent": 14.354738488568918
+        },
+        {
+          "name": "tree-rules-sampling-other",
+          "hits": 11977,
+          "percent": 12.83130852135159
+        },
+        {
+          "name": "god-choice-check",
+          "hits": 10996,
+          "percent": 11.780334683207988
+        },
+        {
+          "name": "public-key",
+          "hits": 3836,
+          "percent": 4.109618392577832
+        },
+        {
+          "name": "other-collection-disaster",
+          "hits": 1553,
+          "percent": 1.6637740781213173
+        }
+      ],
+      "topFunctions": [
+        {
+          "name": "positionCache(State const&)",
+          "selfPercent": 20.274903044717277,
+          "inclusivePercent": 30.34218251162392
+        },
+        {
+          "name": "emmalloc_memalign",
+          "selfPercent": 9.673030361466436,
+          "inclusivePercent": 15.125024104904545
+        },
+        {
+          "name": "inventory(Player const&)",
+          "selfPercent": 8.9102440487669,
+          "inclusivePercent": 8.9102440487669
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "selfPercent": 6.923999914293673,
+          "inclusivePercent": 55.26022583617235
+        },
+        {
+          "name": "emmalloc_free",
+          "selfPercent": 6.825437637933621,
+          "inclusivePercent": 6.825437637933621
+        },
+        {
+          "name": "attempt_allocate",
+          "selfPercent": 6.289773092498554,
+          "inclusivePercent": 6.289773092498554
+        },
+        {
+          "name": "positionValues(State const&, PositionCache const*)",
+          "selfPercent": 4.718133316192068,
+          "inclusivePercent": 29.93186346982066
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*, std::__2::array<double, 5ul> const*)",
+          "selfPercent": 4.264961110754001,
+          "inclusivePercent": 4.318527565297508
+        },
+        {
+          "name": "run",
+          "selfPercent": 3.323262839879154,
+          "inclusivePercent": 97.11276810010499
+        },
+        {
+          "name": "collectInto(State&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "selfPercent": 3.2161299307921407,
+          "inclusivePercent": 15.464635426710377
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "selfPercent": 2.9729382271646205,
+          "inclusivePercent": 4.109618392577832
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "selfPercent": 2.9654389235285294,
+          "inclusivePercent": 7.2914657924621284
+        },
+        {
+          "name": "State::State(State const&)",
+          "selfPercent": 2.4447729853656446,
+          "inclusivePercent": 13.931563497675215
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "selfPercent": 2.2272931799190077,
+          "inclusivePercent": 2.381564569004307
+        },
+        {
+          "name": "exp",
+          "selfPercent": 1.6005656617599795,
+          "inclusivePercent": 1.6005656617599795
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "selfPercent": 1.4420089563111997,
+          "inclusivePercent": 65.58355295579696
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(unsigned long, char)",
+          "selfPercent": 1.3209487690428745,
+          "inclusivePercent": 1.3209487690428745
+        },
+        {
+          "name": "legal(State const&)",
+          "selfPercent": 1.2748816181354587,
+          "inclusivePercent": 2.769385699899295
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "selfPercent": 1.244884403591095,
+          "inclusivePercent": 2.9654389235285294
+        },
+        {
+          "name": "void std::__2::vector<int, std::__2::allocator<int>>::__assign_with_size[abi:nn200100]<int*, int*>(int*, int*, long)",
+          "selfPercent": 1.116324912686679,
+          "inclusivePercent": 1.1248955454136402
+        },
+        {
+          "name": "memcmp",
+          "selfPercent": 0.8088534636069508,
+          "inclusivePercent": 0.8088534636069508
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "selfPercent": 0.6867219472477556,
+          "inclusivePercent": 2.897945190803711
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "selfPercent": 0.6320841636133787,
+          "inclusivePercent": 0.6320841636133787
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "selfPercent": 0.5206659381628849,
+          "inclusivePercent": 1.7226971781191747
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "selfPercent": 0.4745987872554691,
+          "inclusivePercent": 1.0541878254162114
+        }
+      ],
+      "replayedProfileDecisions": 6,
+      "simulations": 172227,
+      "transitions": 4810273,
+      "perDecision": {
+        "simulations": 28704.5,
+        "transitions": 801712.1666666666,
+        "allocations": 23379166.166666668,
+        "requestedMiB": 1402.3456840515137
+      },
+      "perSimulation": {
+        "transitions": 27.92984259146359,
+        "auctions": 20.743147125595872,
+        "allocations": 814.4773874015108,
+        "requestedBytes": 51227.717883955476,
+        "inventoryTiles": 3540.079493923717,
+        "bagItems": 34810.612865578565,
+        "stateCopies": 43.74891277209729
+      },
+      "fractions": {
+        "turnProbesOfAuctionCalls": 0.7136838598976076,
+        "unusedAuctionBase": 0.8698765300781239,
+        "emptyGodChecks": 0.9229809506522141,
+        "unusedRiverExp": 0.656756940508862
+      },
+      "contexts": [
+        {
+          "name": "stateCopy",
+          "calls": 7534744,
+          "allocations": 74656237,
+          "requestedBytes": 5766121304,
+          "frees": 0
+        },
+        {
+          "name": "collection",
+          "calls": 6620532,
+          "allocations": 19878647,
+          "requestedBytes": 1028570304,
+          "frees": 22081004
+        },
+        {
+          "name": "rules",
+          "calls": 7359930,
+          "allocations": 11620843,
+          "requestedBytes": 159237172,
+          "frees": 13750626
+        },
+        {
+          "name": "auction",
+          "calls": 3572530,
+          "allocations": 11156974,
+          "requestedBytes": 149664188,
+          "frees": 44968666
+        },
+        {
+          "name": "god",
+          "calls": 3002465,
+          "allocations": 8099540,
+          "requestedBytes": 203931688,
+          "frees": 18709063
+        },
+        {
+          "name": "policy",
+          "calls": 2857451,
+          "allocations": 6217437,
+          "requestedBytes": 196521652,
+          "frees": 30225355
+        },
+        {
+          "name": "search",
+          "calls": 6,
+          "allocations": 5794505,
+          "requestedBytes": 317513036,
+          "frees": 9056133
+        },
+        {
+          "name": "candidates",
+          "calls": 610495,
+          "allocations": 2068042,
+          "requestedBytes": 55711360,
+          "frees": 1484088
+        },
+        {
+          "name": "observation",
+          "calls": 782716,
+          "allocations": 782716,
+          "requestedBytes": 945520928,
+          "frees": 0
+        },
+        {
+          "name": "decode",
+          "calls": 6,
+          "allocations": 56,
+          "requestedBytes": 4536,
+          "frees": 0
+        },
+        {
+          "name": "other",
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 62
+        },
+        {
+          "name": "evaluation",
+          "calls": 21530279,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "positionCache",
+          "calls": 19370986,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "future",
+          "calls": 21702506,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "inventory",
+          "calls": 39296930,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "reserve",
+          "calls": 7708537,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "race",
+          "calls": 63075146,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "draws",
+          "calls": 29629180,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "keys",
+          "calls": 7044444,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "actionKey",
+          "calls": 2744900,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "sampling",
+          "calls": 172227,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        }
+      ],
+      "work": {
+        "inventoryTiles": 609697271,
+        "bagRaItems": 3644543110,
+        "bagFloodItems": 2350784312,
+        "riverExp": 38741972,
+        "riverUnused": 25444059,
+        "racePairs": 63075146,
+        "raceTable": 63075146,
+        "raceFallbackExp": 0,
+        "auctionNodes": 18370212,
+        "auctionLeaves": 10141929,
+        "outcomeValues": 7708537,
+        "turnProbes": 2549657,
+        "directAuctions": 29110,
+        "treeAuctions": 398529,
+        "rolloutAuctions": 595234,
+        "unusedAuctionBase": 3107660,
+        "godEmpty": 2771218,
+        "godTargets": 509195,
+        "keyInputItems": 128952453,
+        "keyOutputBytes": 571567556,
+        "tileTrialCopies": 3965955,
+        "tileTrialItems": 80622503,
+        "uctEdges": 1395275,
+        "rewardTanh": 1565432,
+        "copyBagItems": 930536999,
+        "copyDiscardItems": 185928045,
+        "copyHoldingItems": 220129637,
+        "copyDiskItems": 60277952,
+        "copyOtherItems": 44657693
+      },
+      "copies": [
+        {
+          "name": "root",
+          "copies": 172227,
+          "vectorItems": 32543584
+        },
+        {
+          "name": "turnProbe",
+          "copies": 2549657,
+          "vectorItems": 492220669
+        },
+        {
+          "name": "auctionWorkspace",
+          "copies": 3572530,
+          "vectorItems": 677740056
+        },
+        {
+          "name": "collection",
+          "copies": 509195,
+          "vectorItems": 97851038
+        },
+        {
+          "name": "god",
+          "copies": 509195,
+          "vectorItems": 98360233
+        },
+        {
+          "name": "discard",
+          "copies": 221940,
+          "vectorItems": 42814746
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "cpuSamples": 94454,
+      "mechanisms": [
+        {
+          "name": "allocator",
+          "hits": 22139,
+          "percent": 23.438922650178924
+        },
+        {
+          "name": "position-cache-other",
+          "hits": 15504,
+          "percent": 16.414339255087132
+        },
+        {
+          "name": "inventory-scan",
+          "hits": 11460,
+          "percent": 12.132890084062083
+        },
+        {
+          "name": "auction-outcome-setup",
+          "hits": 10213,
+          "percent": 10.81267071802147
+        },
+        {
+          "name": "score-assembly",
+          "hits": 5888,
+          "percent": 6.233722235162089
+        },
+        {
+          "name": "state-player-copy",
+          "hits": 5623,
+          "percent": 5.9531623859233065
+        },
+        {
+          "name": "auction-backward-induction",
+          "hits": 5293,
+          "percent": 5.603785969890105
+        },
+        {
+          "name": "future-value",
+          "hits": 4489,
+          "percent": 4.75257797446376
+        },
+        {
+          "name": "collection-disaster",
+          "hits": 3293,
+          "percent": 3.486353145446461
+        },
+        {
+          "name": "search-or-inlined-other",
+          "hits": 2198,
+          "percent": 2.3270586740635655
+        },
+        {
+          "name": "policy-other",
+          "hits": 1802,
+          "percent": 1.9078069748237236
+        },
+        {
+          "name": "math-exp",
+          "hits": 1774,
+          "percent": 1.8781629152815127
+        },
+        {
+          "name": "rules",
+          "hits": 1496,
+          "percent": 1.5838397526838461
+        },
+        {
+          "name": "public-key",
+          "hits": 1348,
+          "percent": 1.4271497236750164
+        },
+        {
+          "name": "god-choice-other",
+          "hits": 913,
+          "percent": 0.9666080843585237
+        },
+        {
+          "name": "hash-containers",
+          "hits": 520,
+          "percent": 0.5505325343553475
+        },
+        {
+          "name": "action-key",
+          "hits": 318,
+          "percent": 0.3366718190865395
+        },
+        {
+          "name": "js-runtime",
+          "hits": 129,
+          "percent": 0.13657441717661506
+        },
+        {
+          "name": "candidate-generation",
+          "hits": 54,
+          "percent": 0.057170686259978405
+        }
+      ],
+      "purposes": [
+        {
+          "name": "policy-auction-solving",
+          "hits": 43653,
+          "percent": 46.216147542719206
+        },
+        {
+          "name": "simulation-auction-solving",
+          "hits": 15158,
+          "percent": 16.04802337645838
+        },
+        {
+          "name": "policy-other",
+          "hits": 13473,
+          "percent": 14.264086221864611
+        },
+        {
+          "name": "god-choice-check",
+          "hits": 12511,
+          "percent": 13.245601033307219
+        },
+        {
+          "name": "tree-rules-sampling-other",
+          "hits": 7753,
+          "percent": 8.208228343955788
+        },
+        {
+          "name": "public-key",
+          "hits": 1348,
+          "percent": 1.4271497236750164
+        },
+        {
+          "name": "other-collection-disaster",
+          "hits": 558,
+          "percent": 0.5907637580197769
+        }
+      ],
+      "topFunctions": [
+        {
+          "name": "positionCache(State const&)",
+          "selfPercent": 16.414339255087132,
+          "inclusivePercent": 29.88650560060982
+        },
+        {
+          "name": "inventory(Player const&)",
+          "selfPercent": 12.132890084062083,
+          "inclusivePercent": 12.132890084062083
+        },
+        {
+          "name": "emmalloc_memalign",
+          "selfPercent": 9.70207720160078,
+          "inclusivePercent": 15.42549812607195
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "selfPercent": 8.920744489381075,
+          "inclusivePercent": 62.26417091917759
+        },
+        {
+          "name": "emmalloc_free",
+          "selfPercent": 6.876363097380736,
+          "inclusivePercent": 6.876363097380736
+        },
+        {
+          "name": "attempt_allocate",
+          "selfPercent": 6.596861964554175,
+          "inclusivePercent": 6.596861964554175
+        },
+        {
+          "name": "positionValues(State const&, PositionCache const*)",
+          "selfPercent": 6.233722235162089,
+          "inclusivePercent": 28.32278145975819
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "selfPercent": 5.29252334469689,
+          "inclusivePercent": 5.603785969890105
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*, std::__2::array<double, 5ul> const*)",
+          "selfPercent": 4.75257797446376,
+          "inclusivePercent": 4.785398183242637
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "selfPercent": 3.586931204607534,
+          "inclusivePercent": 9.447985262667542
+        },
+        {
+          "name": "collectInto(State&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "selfPercent": 2.6256167023101193,
+          "inclusivePercent": 11.807864145509983
+        },
+        {
+          "name": "State::State(State const&)",
+          "selfPercent": 2.3090604950557942,
+          "inclusivePercent": 15.637241408516315
+        },
+        {
+          "name": "exp",
+          "selfPercent": 1.8781629152815127,
+          "inclusivePercent": 1.8781629152815127
+        },
+        {
+          "name": "void std::__2::vector<int, std::__2::allocator<int>>::__assign_with_size[abi:nn200100]<int*, int*>(int*, int*, long)",
+          "selfPercent": 1.4292671564994601,
+          "inclusivePercent": 1.4387956042094565
+        },
+        {
+          "name": "run",
+          "selfPercent": 1.4070341118428018,
+          "inclusivePercent": 96.91807652402227
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "selfPercent": 1.3922120820716963,
+          "inclusivePercent": 3.312723653842082
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "selfPercent": 1.148707307260677,
+          "inclusivePercent": 73.73324581277659
+        },
+        {
+          "name": "legal(State const&)",
+          "selfPercent": 1.1021237851229169,
+          "inclusivePercent": 2.1576640481080736
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "selfPercent": 1.0153090393207276,
+          "inclusivePercent": 1.4271497236750164
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "selfPercent": 0.5949986236686641,
+          "inclusivePercent": 1.3763313358883689
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "selfPercent": 0.5547674000042349,
+          "inclusivePercent": 2.971816969106655
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(unsigned long, char)",
+          "selfPercent": 0.49653799733203463,
+          "inclusivePercent": 0.49653799733203463
+        },
+        {
+          "name": "godChoices(State const&)",
+          "selfPercent": 0.3853727740487433,
+          "inclusivePercent": 13.245601033307219
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "selfPercent": 0.35890486374319774,
+          "inclusivePercent": 0.38643149046096514
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "selfPercent": 0.34937641603320135,
+          "inclusivePercent": 1.1105935164206915
+        }
+      ],
+      "replayedProfileDecisions": 6,
+      "simulations": 84807,
+      "transitions": 4211043,
+      "perDecision": {
+        "simulations": 14134.5,
+        "transitions": 701840.5,
+        "allocations": 23934422.166666668,
+        "requestedMiB": 1188.811846415202
+      },
+      "perSimulation": {
+        "transitions": 49.654427110969614,
+        "auctions": 34.5328923320009,
+        "allocations": 1693.3334866225666,
+        "requestedBytes": 88192.6895657198,
+        "inventoryTiles": 9902.397832726072,
+        "bagItems": 55467.25451908451,
+        "stateCopies": 79.1307439244402
+      },
+      "fractions": {
+        "turnProbesOfAuctionCalls": 0.7440872544202394,
+        "unusedAuctionBase": 0.8732943822557365,
+        "emptyGodChecks": 0.8598491271678085,
+        "unusedRiverExp": 0.6672812919749872
+      },
+      "contexts": [
+        {
+          "name": "stateCopy",
+          "calls": 6710841,
+          "allocations": 84854464,
+          "requestedBytes": 5289058712,
+          "frees": 0
+        },
+        {
+          "name": "collection",
+          "calls": 8452675,
+          "allocations": 16196425,
+          "requestedBytes": 961863332,
+          "frees": 17035170
+        },
+        {
+          "name": "auction",
+          "calls": 2928631,
+          "allocations": 13964480,
+          "requestedBytes": 176242756,
+          "frees": 49515310
+        },
+        {
+          "name": "rules",
+          "calls": 6390200,
+          "allocations": 12014697,
+          "requestedBytes": 176995484,
+          "frees": 13876322
+        },
+        {
+          "name": "god",
+          "calls": 2364773,
+          "allocations": 7760829,
+          "requestedBytes": 200839188,
+          "frees": 26571580
+        },
+        {
+          "name": "policy",
+          "calls": 2427956,
+          "allocations": 5374327,
+          "requestedBytes": 156812416,
+          "frees": 31958934
+        },
+        {
+          "name": "search",
+          "calls": 6,
+          "allocations": 2459819,
+          "requestedBytes": 147058684,
+          "frees": 4151369
+        },
+        {
+          "name": "candidates",
+          "calls": 205111,
+          "allocations": 691506,
+          "requestedBytes": 20268480,
+          "frees": 497768
+        },
+        {
+          "name": "observation",
+          "calls": 289912,
+          "allocations": 289912,
+          "requestedBytes": 350213696,
+          "frees": 0
+        },
+        {
+          "name": "decode",
+          "calls": 6,
+          "allocations": 74,
+          "requestedBytes": 4676,
+          "frees": 1
+        },
+        {
+          "name": "other",
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 79
+        },
+        {
+          "name": "evaluation",
+          "calls": 23103126,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "positionCache",
+          "calls": 17736009,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "future",
+          "calls": 23187933,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "inventory",
+          "calls": 53612112,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "reserve",
+          "calls": 12331178,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "race",
+          "calls": 88517613,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "draws",
+          "calls": 32246344,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "keys",
+          "calls": 3478944,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "actionKey",
+          "calls": 913417,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "sampling",
+          "calls": 84807,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        }
+      ],
+      "work": {
+        "inventoryTiles": 839792653,
+        "bagRaItems": 3014251059,
+        "bagFloodItems": 1689760395,
+        "riverExp": 53208027,
+        "riverUnused": 35504721,
+        "racePairs": 177035226,
+        "raceTable": 177035226,
+        "raceFallbackExp": 0,
+        "auctionNodes": 41916630,
+        "auctionLeaves": 22937675,
+        "outcomeValues": 12331178,
+        "turnProbes": 2179157,
+        "directAuctions": 21953,
+        "treeAuctions": 239630,
+        "rolloutAuctions": 487891,
+        "unusedAuctionBase": 2557557,
+        "godEmpty": 2033348,
+        "godTargets": 727766,
+        "keyInputItems": 45263455,
+        "keyOutputBytes": 205593612,
+        "tileTrialCopies": 2508907,
+        "tileTrialItems": 38090834,
+        "uctEdges": 515526,
+        "rewardTanh": 869736,
+        "copyBagItems": 599164117,
+        "copyDiscardItems": 260655501,
+        "copyHoldingItems": 331208821,
+        "copyDiskItems": 80530092,
+        "copyOtherItems": 50706147
+      },
+      "copies": [
+        {
+          "name": "root",
+          "copies": 84807,
+          "vectorItems": 16479361
+        },
+        {
+          "name": "turnProbe",
+          "copies": 2179157,
+          "vectorItems": 434467401
+        },
+        {
+          "name": "auctionWorkspace",
+          "copies": 2928631,
+          "vectorItems": 569755422
+        },
+        {
+          "name": "collection",
+          "copies": 727766,
+          "vectorItems": 144143872
+        },
+        {
+          "name": "god",
+          "copies": 727766,
+          "vectorItems": 144871638
+        },
+        {
+          "name": "discard",
+          "copies": 62714,
+          "vectorItems": 12546984
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "cpuSamples": 93455,
+      "mechanisms": [
+        {
+          "name": "allocator",
+          "hits": 20701,
+          "percent": 22.150767749184098
+        },
+        {
+          "name": "position-cache-other",
+          "hits": 16940,
+          "percent": 18.12637098068589
+        },
+        {
+          "name": "inventory-scan",
+          "hits": 10864,
+          "percent": 11.624846182654753
+        },
+        {
+          "name": "auction-outcome-setup",
+          "hits": 8937,
+          "percent": 9.56289123107378
+        },
+        {
+          "name": "score-assembly",
+          "hits": 6070,
+          "percent": 6.495104595794768
+        },
+        {
+          "name": "auction-backward-induction",
+          "hits": 5554,
+          "percent": 5.942967203466909
+        },
+        {
+          "name": "state-player-copy",
+          "hits": 5449,
+          "percent": 5.830613664330427
+        },
+        {
+          "name": "future-value",
+          "hits": 4277,
+          "percent": 4.576534160826066
+        },
+        {
+          "name": "collection-disaster",
+          "hits": 3679,
+          "percent": 3.936654004601145
+        },
+        {
+          "name": "math-exp",
+          "hits": 2293,
+          "percent": 2.453587287999572
+        },
+        {
+          "name": "search-or-inlined-other",
+          "hits": 2256,
+          "percent": 2.4139960408752876
+        },
+        {
+          "name": "policy-other",
+          "hits": 1692,
+          "percent": 1.8104970306564656
+        },
+        {
+          "name": "rules",
+          "hits": 1633,
+          "percent": 1.747365041998823
+        },
+        {
+          "name": "public-key",
+          "hits": 1384,
+          "percent": 1.4809266491894495
+        },
+        {
+          "name": "god-choice-other",
+          "hits": 583,
+          "percent": 0.623829650633995
+        },
+        {
+          "name": "hash-containers",
+          "hits": 568,
+          "percent": 0.6077791450430688
+        },
+        {
+          "name": "action-key",
+          "hits": 384,
+          "percent": 0.4108929431277085
+        },
+        {
+          "name": "js-runtime",
+          "hits": 124,
+          "percent": 0.13268417955165587
+        },
+        {
+          "name": "candidate-generation",
+          "hits": 67,
+          "percent": 0.07169225830613664
+        }
+      ],
+      "purposes": [
+        {
+          "name": "policy-auction-solving",
+          "hits": 45051,
+          "percent": 48.20608849178749
+        },
+        {
+          "name": "simulation-auction-solving",
+          "hits": 15477,
+          "percent": 16.560911668717566
+        },
+        {
+          "name": "policy-other",
+          "hits": 13703,
+          "percent": 14.662671874164037
+        },
+        {
+          "name": "god-choice-check",
+          "hits": 8590,
+          "percent": 9.191589535070355
+        },
+        {
+          "name": "tree-rules-sampling-other",
+          "hits": 8051,
+          "percent": 8.614841367503077
+        },
+        {
+          "name": "public-key",
+          "hits": 1384,
+          "percent": 1.4809266491894495
+        },
+        {
+          "name": "other-collection-disaster",
+          "hits": 1199,
+          "percent": 1.2829704135680273
+        }
+      ],
+      "topFunctions": [
+        {
+          "name": "positionCache(State const&)",
+          "selfPercent": 18.12637098068589,
+          "inclusivePercent": 31.471831362687926
+        },
+        {
+          "name": "inventory(Player const&)",
+          "selfPercent": 11.624846182654753,
+          "inclusivePercent": 11.624846182654753
+        },
+        {
+          "name": "emmalloc_memalign",
+          "selfPercent": 9.1819592317158,
+          "inclusivePercent": 14.4315445936547
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "selfPercent": 7.806965919426462,
+          "inclusivePercent": 64.76700016050506
+        },
+        {
+          "name": "emmalloc_free",
+          "selfPercent": 6.677010325825264,
+          "inclusivePercent": 6.677010325825264
+        },
+        {
+          "name": "positionValues(State const&, PositionCache const*)",
+          "selfPercent": 6.495104595794768,
+          "inclusivePercent": 28.822427906479053
+        },
+        {
+          "name": "attempt_allocate",
+          "selfPercent": 6.070301214488256,
+          "inclusivePercent": 6.070301214488256
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "selfPercent": 5.6005564175271525,
+          "inclusivePercent": 5.942967203466909
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*, std::__2::array<double, 5ul> const*)",
+          "selfPercent": 4.576534160826066,
+          "inclusivePercent": 4.632175913541277
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "selfPercent": 3.704456690385747,
+          "inclusivePercent": 9.553260927719224
+        },
+        {
+          "name": "collectInto(State&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "selfPercent": 2.9597132309667753,
+          "inclusivePercent": 14.069873201005832
+        },
+        {
+          "name": "exp",
+          "selfPercent": 2.453587287999572,
+          "inclusivePercent": 2.453587287999572
+        },
+        {
+          "name": "State::State(State const&)",
+          "selfPercent": 2.072655288641592,
+          "inclusivePercent": 14.645551334867049
+        },
+        {
+          "name": "run",
+          "selfPercent": 1.4670162110106468,
+          "inclusivePercent": 96.8059493874057
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "selfPercent": 1.4103044245893746,
+          "inclusivePercent": 3.338505162912632
+        },
+        {
+          "name": "void std::__2::vector<int, std::__2::allocator<int>>::__assign_with_size[abi:nn200100]<int*, int*>(int*, int*, long)",
+          "selfPercent": 1.2947407843347065,
+          "inclusivePercent": 1.3033010539832004
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "selfPercent": 1.1299555936011985,
+          "inclusivePercent": 72.34925900165855
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "selfPercent": 1.0999946498314697,
+          "inclusivePercent": 1.4809266491894495
+        },
+        {
+          "name": "legal(State const&)",
+          "selfPercent": 0.9319993579797764,
+          "inclusivePercent": 1.8415280081322563
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "selfPercent": 0.6987320100583169,
+          "inclusivePercent": 1.4220747953560537
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "selfPercent": 0.5981488416885132,
+          "inclusivePercent": 3.061366433042641
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(unsigned long, char)",
+          "selfPercent": 0.5018458081429565,
+          "inclusivePercent": 0.5018458081429565
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "selfPercent": 0.4001926060670911,
+          "inclusivePercent": 0.4001926060670911
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "selfPercent": 0.3680915948852389,
+          "inclusivePercent": 1.2979508854528918
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(char const*, unsigned long)",
+          "selfPercent": 0.2610882242790648,
+          "inclusivePercent": 0.2610882242790648
+        }
+      ],
+      "replayedProfileDecisions": 6,
+      "simulations": 81984,
+      "transitions": 3988527,
+      "perDecision": {
+        "simulations": 13664,
+        "transitions": 664754.5,
+        "allocations": 23535785.333333332,
+        "requestedMiB": 1004.6466318766276
+      },
+      "perSimulation": {
+        "transitions": 48.65006586651054,
+        "auctions": 33.947282396565186,
+        "allocations": 1722.466725214676,
+        "requestedBytes": 77096.62958626074,
+        "inventoryTiles": 9304.840200526933,
+        "bagItems": 54826.2774931694,
+        "stateCopies": 69.56132903981265
+      },
+      "fractions": {
+        "turnProbesOfAuctionCalls": 0.7444420570479179,
+        "unusedAuctionBase": 0.8796852756640535,
+        "emptyGodChecks": 0.9481089019522752,
+        "unusedRiverExp": 0.5505130382927866
+      },
+      "contexts": [
+        {
+          "name": "stateCopy",
+          "calls": 5702916,
+          "allocations": 83525240,
+          "requestedBytes": 4496764976,
+          "frees": 0
+        },
+        {
+          "name": "collection",
+          "calls": 7644335,
+          "allocations": 18476882,
+          "requestedBytes": 722223112,
+          "frees": 20330512
+        },
+        {
+          "name": "auction",
+          "calls": 2783134,
+          "allocations": 14030793,
+          "requestedBytes": 132614376,
+          "frees": 53951323
+        },
+        {
+          "name": "rules",
+          "calls": 6060409,
+          "allocations": 11268802,
+          "requestedBytes": 166237064,
+          "frees": 12976855
+        },
+        {
+          "name": "god",
+          "calls": 2207527,
+          "allocations": 5665676,
+          "requestedBytes": 144911644,
+          "frees": 14908777
+        },
+        {
+          "name": "policy",
+          "calls": 2235821,
+          "allocations": 4752564,
+          "requestedBytes": 133382036,
+          "frees": 34189351
+        },
+        {
+          "name": "search",
+          "calls": 6,
+          "allocations": 2478871,
+          "requestedBytes": 148225892,
+          "frees": 4323153
+        },
+        {
+          "name": "candidates",
+          "calls": 209666,
+          "allocations": 724154,
+          "requestedBytes": 24020352,
+          "frees": 534649
+        },
+        {
+          "name": "observation",
+          "calls": 291644,
+          "allocations": 291644,
+          "requestedBytes": 352305952,
+          "frees": 0
+        },
+        {
+          "name": "decode",
+          "calls": 6,
+          "allocations": 86,
+          "requestedBytes": 4676,
+          "frees": 0
+        },
+        {
+          "name": "other",
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 92
+        },
+        {
+          "name": "evaluation",
+          "calls": 20108146,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "positionCache",
+          "calls": 17651314,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "future",
+          "calls": 20190130,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "inventory",
+          "calls": 71112820,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "reserve",
+          "calls": 9447883,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "race",
+          "calls": 113667152,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "draws",
+          "calls": 29171079,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "keys",
+          "calls": 4374660,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "actionKey",
+          "calls": 1118345,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "sampling",
+          "calls": 81984,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        }
+      ],
+      "work": {
+        "inventoryTiles": 762848019,
+        "bagRaItems": 2846123759,
+        "bagFloodItems": 1648753775,
+        "riverExp": 70605256,
+        "riverUnused": 38869114,
+        "racePairs": 341001456,
+        "raceTable": 341001456,
+        "raceFallbackExp": 0,
+        "auctionNodes": 38341028,
+        "auctionLeaves": 18311426,
+        "outcomeValues": 9447883,
+        "turnProbes": 2071882,
+        "directAuctions": 21063,
+        "treeAuctions": 251218,
+        "rolloutAuctions": 438971,
+        "unusedAuctionBase": 2448282,
+        "godEmpty": 2092976,
+        "godTargets": 311023,
+        "keyInputItems": 42902166,
+        "keyOutputBytes": 200009616,
+        "tileTrialCopies": 3142827,
+        "tileTrialItems": 44179748,
+        "uctEdges": 532199,
+        "rewardTanh": 1166576,
+        "copyBagItems": 505706875,
+        "copyDiscardItems": 255138102,
+        "copyHoldingItems": 250630108,
+        "copyDiskItems": 68434992,
+        "copyOtherItems": 44281167
+      },
+      "copies": [
+        {
+          "name": "root",
+          "copies": 81984,
+          "vectorItems": 15921748
+        },
+        {
+          "name": "turnProbe",
+          "copies": 2071882,
+          "vectorItems": 414448662
+        },
+        {
+          "name": "auctionWorkspace",
+          "copies": 2783134,
+          "vectorItems": 542107109
+        },
+        {
+          "name": "collection",
+          "copies": 311023,
+          "vectorItems": 61374710
+        },
+        {
+          "name": "god",
+          "copies": 311023,
+          "vectorItems": 61685733
+        },
+        {
+          "name": "discard",
+          "copies": 143870,
+          "vectorItems": 28653282
+        }
+      ]
+    },
+    {
+      "count": 5,
+      "cpuSamples": 94538,
+      "mechanisms": [
+        {
+          "name": "allocator",
+          "hits": 18249,
+          "percent": 19.30334891789545
+        },
+        {
+          "name": "position-cache-other",
+          "hits": 15068,
+          "percent": 15.938564386807421
+        },
+        {
+          "name": "inventory-scan",
+          "hits": 14978,
+          "percent": 15.843364572975947
+        },
+        {
+          "name": "auction-backward-induction",
+          "hits": 9108,
+          "percent": 9.634221159745287
+        },
+        {
+          "name": "auction-outcome-setup",
+          "hits": 8246,
+          "percent": 8.722418498381604
+        },
+        {
+          "name": "score-assembly",
+          "hits": 6771,
+          "percent": 7.162199327254649
+        },
+        {
+          "name": "future-value",
+          "hits": 4519,
+          "percent": 4.780088430049292
+        },
+        {
+          "name": "collection-disaster",
+          "hits": 4410,
+          "percent": 4.664790877742283
+        },
+        {
+          "name": "state-player-copy",
+          "hits": 4368,
+          "percent": 4.620364297954262
+        },
+        {
+          "name": "math-exp",
+          "hits": 2295,
+          "percent": 2.427595252702617
+        },
+        {
+          "name": "search-or-inlined-other",
+          "hits": 1441,
+          "percent": 1.5242547970128415
+        },
+        {
+          "name": "rules",
+          "hits": 1253,
+          "percent": 1.3253929636759822
+        },
+        {
+          "name": "policy-other",
+          "hits": 1222,
+          "percent": 1.2926019166895852
+        },
+        {
+          "name": "hash-containers",
+          "hits": 934,
+          "percent": 0.9879625124288646
+        },
+        {
+          "name": "public-key",
+          "hits": 780,
+          "percent": 0.8250650532061182
+        },
+        {
+          "name": "god-choice-other",
+          "hits": 457,
+          "percent": 0.48340349912204617
+        },
+        {
+          "name": "action-key",
+          "hits": 343,
+          "percent": 0.3628170682688443
+        },
+        {
+          "name": "js-runtime",
+          "hits": 73,
+          "percent": 0.07721762677441875
+        },
+        {
+          "name": "candidate-generation",
+          "hits": 23,
+          "percent": 0.0243288413124881
+        }
+      ],
+      "purposes": [
+        {
+          "name": "policy-auction-solving",
+          "hits": 49747,
+          "percent": 52.621168207493284
+        },
+        {
+          "name": "simulation-auction-solving",
+          "hits": 18211,
+          "percent": 19.263153440944382
+        },
+        {
+          "name": "policy-other",
+          "hits": 10247,
+          "percent": 10.839027692568068
+        },
+        {
+          "name": "god-choice-check",
+          "hits": 7422,
+          "percent": 7.850811313968986
+        },
+        {
+          "name": "tree-rules-sampling-other",
+          "hits": 6109,
+          "percent": 6.4619518077386875
+        },
+        {
+          "name": "other-collection-disaster",
+          "hits": 2022,
+          "percent": 2.1388224840804755
+        },
+        {
+          "name": "public-key",
+          "hits": 780,
+          "percent": 0.8250650532061182
+        }
+      ],
+      "topFunctions": [
+        {
+          "name": "positionCache(State const&)",
+          "selfPercent": 15.938564386807421,
+          "inclusivePercent": 33.43629016903256
+        },
+        {
+          "name": "inventory(Player const&)",
+          "selfPercent": 15.843364572975947,
+          "inclusivePercent": 15.843364572975947
+        },
+        {
+          "name": "_ZZ11auctionPlanRK5StateRK5ModelENK3$_0clIRS5_EE4PlanOT_iii",
+          "selfPercent": 9.092639996615118,
+          "inclusivePercent": 9.634221159745287
+        },
+        {
+          "name": "emmalloc_memalign",
+          "selfPercent": 8.007362118936301,
+          "inclusivePercent": 12.609744229833506
+        },
+        {
+          "name": "positionValues(State const&, PositionCache const*)",
+          "selfPercent": 7.162199327254649,
+          "inclusivePercent": 31.571431593644885
+        },
+        {
+          "name": "auctionPlan(State const&, Model const&)",
+          "selfPercent": 6.954875288243881,
+          "inclusivePercent": 71.88432164843766
+        },
+        {
+          "name": "emmalloc_free",
+          "selfPercent": 5.78074425098902,
+          "inclusivePercent": 5.78074425098902
+        },
+        {
+          "name": "attempt_allocate",
+          "selfPercent": 5.380905032896824,
+          "inclusivePercent": 5.380905032896824
+        },
+        {
+          "name": "futureValues(State const&, std::__2::array<Inventory, 5ul> const*, std::__2::array<double, 5ul> const*)",
+          "selfPercent": 4.780088430049292,
+          "inclusivePercent": 4.8255727855465524
+        },
+        {
+          "name": "collectInto(State&, int, std::__2::vector<int, std::__2::allocator<int>> const&)",
+          "selfPercent": 3.7709704034356557,
+          "inclusivePercent": 21.468615794706892
+        },
+        {
+          "name": "Player::Player(Player const&)",
+          "selfPercent": 3.1733271277158392,
+          "inclusivePercent": 8.350081448729611
+        },
+        {
+          "name": "exp",
+          "selfPercent": 2.427595252702617,
+          "inclusivePercent": 2.427595252702617
+        },
+        {
+          "name": "State::State(State const&)",
+          "selfPercent": 1.4163616746705028,
+          "inclusivePercent": 11.79737248513825
+        },
+        {
+          "name": "void std::__2::vector<int, std::__2::allocator<int>>::__assign_with_size[abi:nn200100]<int*, int*>(int*, int*, long)",
+          "selfPercent": 1.3602995620808565,
+          "inclusivePercent": 1.378281749137913
+        },
+        {
+          "name": "std::__2::vector<int, std::__2::allocator<int>>::push_back[abi:nn200100](int const&)",
+          "selfPercent": 1.145571093105418,
+          "inclusivePercent": 2.733292432672576
+        },
+        {
+          "name": "run",
+          "selfPercent": 0.8716071844126172,
+          "inclusivePercent": 96.96524149019442
+        },
+        {
+          "name": "policyAction(State const&, Model const&)",
+          "selfPercent": 0.7552518563963697,
+          "inclusivePercent": 73.23721678055385
+        },
+        {
+          "name": "legal(State const&)",
+          "selfPercent": 0.7034208466436777,
+          "inclusivePercent": 1.314815206583596
+        },
+        {
+          "name": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, int*, true>(int*, int*, std::__2::ranges::less, std::__2::iterator_traits<int*>::difference_type, bool)",
+          "selfPercent": 0.650532061181747,
+          "inclusivePercent": 0.650532061181747
+        },
+        {
+          "name": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<int, void*>*>, bool> std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__emplace_unique_key_args<int, int>(int const&, int&&)",
+          "selfPercent": 0.6029321542660094,
+          "inclusivePercent": 2.0869914743277835
+        },
+        {
+          "name": "startAuction(State&, int)",
+          "selfPercent": 0.5955277243013392,
+          "inclusivePercent": 1.2270198227167912
+        },
+        {
+          "name": "listKey(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>&, std::__2::vector<int, std::__2::allocator<int>> const&, bool)",
+          "selfPercent": 0.5764877615350441,
+          "inclusivePercent": 0.8250650532061182
+        },
+        {
+          "name": "apply(State&, Action const&)",
+          "selfPercent": 0.39560811525524125,
+          "inclusivePercent": 2.458270748270537
+        },
+        {
+          "name": "void std::__2::__hash_table<int, std::__2::hash<int>, std::__2::equal_to<int>, std::__2::allocator<int>>::__do_rehash<true>(unsigned long)",
+          "selfPercent": 0.34483488121178785,
+          "inclusivePercent": 0.795447333347437
+        },
+        {
+          "name": "std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>::append(unsigned long, char)",
+          "selfPercent": 0.32896824557320864,
+          "inclusivePercent": 0.32896824557320864
+        }
+      ],
+      "replayedProfileDecisions": 6,
+      "simulations": 53579,
+      "transitions": 3196666,
+      "perDecision": {
+        "simulations": 8929.833333333334,
+        "transitions": 532777.6666666666,
+        "allocations": 21250103.833333332,
+        "requestedMiB": 802.9667447408041
+      },
+      "perSimulation": {
+        "transitions": 59.662666343156836,
+        "auctions": 34.216726702626026,
+        "allocations": 2379.675301890666,
+        "requestedBytes": 94287.49965471547,
+        "inventoryTiles": 20028.679575953265,
+        "bagItems": 62253.64230388772,
+        "stateCopies": 74.71449635118236
+      },
+      "fractions": {
+        "turnProbesOfAuctionCalls": 0.7279045741608838,
+        "unusedAuctionBase": 0.8579183526082502,
+        "emptyGodChecks": 0.9137268965323264,
+        "unusedRiverExp": 0.5571159584624666
+      },
+      "contexts": [
+        {
+          "name": "stateCopy",
+          "calls": 4003128,
+          "allocations": 71055494,
+          "requestedBytes": 3251442068,
+          "frees": 0
+        },
+        {
+          "name": "collection",
+          "calls": 7260013,
+          "allocations": 24505828,
+          "requestedBytes": 991226136,
+          "frees": 28604471
+        },
+        {
+          "name": "auction",
+          "calls": 1833298,
+          "allocations": 13415430,
+          "requestedBytes": 127173200,
+          "frees": 44986456
+        },
+        {
+          "name": "rules",
+          "calls": 4531132,
+          "allocations": 9193074,
+          "requestedBytes": 162054252,
+          "frees": 10323091
+        },
+        {
+          "name": "god",
+          "calls": 1422135,
+          "allocations": 3999324,
+          "requestedBytes": 102050216,
+          "frees": 14245526
+        },
+        {
+          "name": "policy",
+          "calls": 1512442,
+          "allocations": 3456762,
+          "requestedBytes": 117574460,
+          "frees": 26393792
+        },
+        {
+          "name": "search",
+          "calls": 6,
+          "allocations": 1395848,
+          "requestedBytes": 92757536,
+          "frees": 2743827
+        },
+        {
+          "name": "candidates",
+          "calls": 111239,
+          "allocations": 313944,
+          "requestedBytes": 8454384,
+          "frees": 203347
+        },
+        {
+          "name": "observation",
+          "calls": 164812,
+          "allocations": 164812,
+          "requestedBytes": 199092896,
+          "frees": 0
+        },
+        {
+          "name": "decode",
+          "calls": 6,
+          "allocations": 107,
+          "requestedBytes": 4796,
+          "frees": 2
+        },
+        {
+          "name": "other",
+          "calls": 0,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 111
+        },
+        {
+          "name": "evaluation",
+          "calls": 20478455,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "positionCache",
+          "calls": 17188310,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "future",
+          "calls": 20532034,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "inventory",
+          "calls": 86385735,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "reserve",
+          "calls": 9947424,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "race",
+          "calls": 136615060,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "draws",
+          "calls": 28470200,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "keys",
+          "calls": 2966616,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "actionKey",
+          "calls": 1095321,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        },
+        {
+          "name": "sampling",
+          "calls": 53579,
+          "allocations": 0,
+          "requestedBytes": 0,
+          "frees": 0
+        }
+      ],
+      "work": {
+        "inventoryTiles": 1073116623,
+        "bagRaItems": 2119213443,
+        "bagFloodItems": 1216274458,
+        "riverExp": 85941550,
+        "riverUnused": 47879409,
+        "racePairs": 546460240,
+        "raceTable": 546460240,
+        "raceFallbackExp": 0,
+        "auctionNodes": 62822284,
+        "auctionLeaves": 28704978,
+        "outcomeValues": 9947424,
+        "turnProbes": 1334466,
+        "directAuctions": 14741,
+        "treeAuctions": 223726,
+        "rolloutAuctions": 260365,
+        "unusedAuctionBase": 1572820,
+        "godEmpty": 1299443,
+        "godTargets": 278130,
+        "keyInputItems": 25482700,
+        "keyOutputBytes": 120274160,
+        "tileTrialCopies": 5437477,
+        "tileTrialItems": 84753097,
+        "uctEdges": 257966,
+        "rewardTanh": 824060,
+        "copyBagItems": 309850940,
+        "copyDiscardItems": 167428346,
+        "copyHoldingItems": 234246591,
+        "copyDiskItems": 60046920,
+        "copyOtherItems": 41287720
+      },
+      "copies": [
+        {
+          "name": "root",
+          "copies": 53579,
+          "vectorItems": 10648898
+        },
+        {
+          "name": "turnProbe",
+          "copies": 1334466,
+          "vectorItems": 275508138
+        },
+        {
+          "name": "auctionWorkspace",
+          "copies": 1833298,
+          "vectorItems": 364787967
+        },
+        {
+          "name": "collection",
+          "copies": 278130,
+          "vectorItems": 57457650
+        },
+        {
+          "name": "god",
+          "copies": 278130,
+          "vectorItems": 57735780
+        },
+        {
+          "name": "discard",
+          "copies": 225525,
+          "vectorItems": 46722084
+        }
+      ]
+    }
+  ]
+}

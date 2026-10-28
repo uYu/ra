@@ -1,0 +1,110 @@
+{
+  "2": {
+    "before": {
+      "samples": 172227,
+      "transitions": 4810273,
+      "allocations": 140274997,
+      "bytes": 8822796168,
+      "inventoryTiles": 609697271,
+      "bagItems": 5995327422,
+      "copyDiscards": 185928045
+    },
+    "after": {
+      "samples": 172227,
+      "transitions": 4810273,
+      "allocations": 34096049,
+      "bytes": 2020077812,
+      "inventoryTiles": 196272505,
+      "bagItems": 308573209,
+      "copyDiscards": 0
+    },
+    "ratios": {
+      "allocations": 0.24306576174797564,
+      "bytes": 0.22896117892043769,
+      "inventoryTiles": 0.32191796541598755,
+      "bagItems": 0.051468950280794186,
+      "copyDiscards": 0
+    }
+  },
+  "3": {
+    "before": {
+      "samples": 84807,
+      "transitions": 4211043,
+      "allocations": 143606533,
+      "bytes": 7479357424,
+      "inventoryTiles": 839792653,
+      "bagItems": 4704011454,
+      "copyDiscards": 260655501
+    },
+    "after": {
+      "samples": 84807,
+      "transitions": 4211043,
+      "allocations": 23392260,
+      "bytes": 965905236,
+      "inventoryTiles": 210072996,
+      "bagItems": 184956368,
+      "copyDiscards": 0
+    },
+    "ratios": {
+      "allocations": 0.1628913358697964,
+      "bytes": 0.12914281016983792,
+      "inventoryTiles": 0.2501486471089668,
+      "bagItems": 0.03931886004289478,
+      "copyDiscards": 0
+    }
+  },
+  "4": {
+    "before": {
+      "samples": 81984,
+      "transitions": 3988527,
+      "allocations": 141214712,
+      "bytes": 6320690080,
+      "inventoryTiles": 762848019,
+      "bagItems": 4494877534,
+      "copyDiscards": 255138102
+    },
+    "after": {
+      "samples": 81984,
+      "transitions": 3988527,
+      "allocations": 22368455,
+      "bytes": 905919556,
+      "inventoryTiles": 148615877,
+      "bagItems": 170168480,
+      "copyDiscards": 138
+    },
+    "ratios": {
+      "allocations": 0.15840031596707857,
+      "bytes": 0.14332605214524297,
+      "inventoryTiles": 0.19481715007245762,
+      "bagItems": 0.037858312871222266,
+      "copyDiscards": 5.408835407892154e-7
+    }
+  },
+  "5": {
+    "before": {
+      "samples": 53579,
+      "transitions": 3196666,
+      "allocations": 127500623,
+      "bytes": 5051829944,
+      "inventoryTiles": 1073116623,
+      "bagItems": 3335487901,
+      "copyDiscards": 167428346
+    },
+    "after": {
+      "samples": 53579,
+      "transitions": 3196666,
+      "allocations": 22890243,
+      "bytes": 716304952,
+      "inventoryTiles": 210163820,
+      "bagItems": 97033432,
+      "copyDiscards": 0
+    },
+    "ratios": {
+      "allocations": 0.1795304404120441,
+      "bytes": 0.14179118456882087,
+      "inventoryTiles": 0.1958443430057648,
+      "bagItems": 0.0290912258955905,
+      "copyDiscards": 0
+    }
+  }
+}

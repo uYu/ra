@@ -1,0 +1,115 @@
+{
+  "status": "verified",
+  "input": "artifacts/ai-cross-epoch-2s-smoke.json",
+  "planSha256": "a0982ffb3a8f5cd29982c5b2ed8c3cc1404c1d773cb2e0f4a12216886cd7b8e1",
+  "frozenFiles": 31,
+  "games": 6,
+  "decisions": 1483,
+  "timeMs": 1,
+  "candidateHorizon": "next-epoch",
+  "opponentHorizon": "epoch",
+  "treeMode": 1,
+  "rankScore": 0,
+  "reference": 0.5,
+  "interval95": [
+    0,
+    0
+  ],
+  "bootstrap": "100000 draws, resample whole paired seeds independently within each player count; equal weight counts",
+  "byCount": [
+    {
+      "count": 2,
+      "games": 2,
+      "meanRank": 2,
+      "referenceMeanRank": 1.5,
+      "rankScore": 0,
+      "wins": 0,
+      "pairs": [
+        {
+          "seed": 980001,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "games": 2,
+      "meanRank": 3,
+      "referenceMeanRank": 2,
+      "rankScore": 0,
+      "wins": 0,
+      "pairs": [
+        {
+          "seed": 980002,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "games": 2,
+      "meanRank": 4,
+      "referenceMeanRank": 2.5,
+      "rankScore": 0,
+      "wins": 0,
+      "pairs": [
+        {
+          "seed": 980003,
+          "score": 0
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "candidate": {
+      "opponentTreeSelections": 1284,
+      "opponentAuctionTreeSelections": 1284,
+      "decisions": 388,
+      "searched": 357,
+      "ms": 642.944598000001,
+      "searchMs": 636.756682000001,
+      "maxMs": 15.416958000000022,
+      "overshootMs": 279.756682000001,
+      "overrunCalls": 1,
+      "samples": 3090,
+      "transitions": 165203,
+      "nodes": 4366,
+      "depth": 6,
+      "outcomeReuses": 0,
+      "maxOutcomeBranches": 41,
+      "truncated": 0,
+      "epochAdvances": 831,
+      "completed": 2846,
+      "meanMs": 1.7836321624649887,
+      "meanSamples": 8.655462184873949
+    },
+    "opponent": {
+      "opponentTreeSelections": 7671,
+      "opponentAuctionTreeSelections": 7671,
+      "decisions": 1095,
+      "searched": 1010,
+      "ms": 1415.17765,
+      "searchMs": 1397.3755270000001,
+      "maxMs": 11.637541999999996,
+      "overshootMs": 387.3755270000002,
+      "overrunCalls": 1,
+      "samples": 28668,
+      "transitions": 451430,
+      "nodes": 30404,
+      "depth": 7,
+      "outcomeReuses": 0,
+      "maxOutcomeBranches": 41,
+      "truncated": 0,
+      "epochAdvances": 0,
+      "completed": 10608,
+      "meanMs": 1.3835401257425743,
+      "meanSamples": 28.384158415841583
+    }
+  },
+  "caveats": [
+    "A 50-game paired-seat comparison is limited evidence; interpret uncertainty and player-count breakdowns.",
+    "Each game has one next-epoch seat vs epoch opponents; both use mode1 opponent auction nodes. Tree leaves still use heuristic rollouts.",
+    "Both sides use identical complete observation keys and the same release binary; only the search horizon differs.",
+    "Different encountered positions and parallel contention mean samples ratio is not a pure speed ratio."
+  ]
+}

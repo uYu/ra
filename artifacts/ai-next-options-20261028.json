@@ -1,0 +1,124 @@
+{
+  "createdAt": "2026-10-28T07:07:00.874223+00:00",
+  "status": "all tournaments stopped; bespoke pruning withdrawn; generic reward/tree estimation audit complete, repair not yet validated",
+  "stoppedStudy": {
+    "finished": 54,
+    "planned": 84,
+    "automationDeleted": true,
+    "stopRecord": "artifacts/ai-version-2s-stop-record.json"
+  },
+  "audit": {
+    "games": 54,
+    "actions": 17732,
+    "auctionDecisions": 7164,
+    "balancedHeuristicDisagreements": 2582,
+    "disagreementRate": 0.36041317699609154,
+    "nontrivialDisastersCollapsedToOne": 80,
+    "godTop3LimitTriggered": 124,
+    "report": "artifacts/ai-policy-audit-20261028.json",
+    "caveat": "Balanced-prior disagreement is not optimality error and does not measure the whole sampled opponent mixture."
+  },
+  "oracle": {
+    "syntheticFinalEpoch2PlayerCases": 20,
+    "separateObjectives": [
+      "expected final score margin",
+      "win probability"
+    ],
+    "publicKnownInitialScores": [
+      100,
+      100
+    ],
+    "independentTSReferenceChecks": 40,
+    "margin": {
+      "cases": 20,
+      "policySuboptimal": 0,
+      "pruningSuboptimal": 0,
+      "cappedCases": 0,
+      "maxPolicyRegret": 0,
+      "maxPruningRegret": 0
+    },
+    "win": {
+      "cases": 20,
+      "policySuboptimal": 0,
+      "pruningSuboptimal": 0,
+      "cappedCases": 0,
+      "maxPolicyRegret": 0,
+      "maxPruningRegret": 0
+    },
+    "report": "artifacts/ai-endgame-oracle-legal-deck-20261028.json",
+    "caveat": "Synthetic known-score two-player fixtures check deck/Ra counts but not complete historical reachability. They audit policy/candidate restriction, not full MCTS strength.",
+    "physicalBagTiles": 15,
+    "remainingRa": "13-14",
+    "v1Correction": "Earlier 2-3-tile fixtures were superseded because their Ra inventory was not consistent with a standard two-player game.",
+    "candidateRestrictionCases": 2,
+    "godChoiceCases": 0
+  },
+  "priorities": [
+    {
+      "priority": 1,
+      "proposal": "Opponent critical auction nodes enter search",
+      "evidence": "Current native loop advances non-observer players using policy/auction heuristics, not UCT; balanced reference differs from recorded search bids in about 36%.",
+      "firstValidation": "Ablate only opponents auction decisions on independent exact fixtures; preserve each actor own utility and information boundaries. Measure action regret and nodes, not just samples.",
+      "status": "prototype retained; 100ms50 regressed; 2s50 user-stopped at32/50, no full-study strength conclusion",
+      "prototype": "artifacts/ai-opponent-tree-release-20261028/summary.json",
+      "study": "artifacts/ai-opponent-2s-50-plan.json",
+      "shortBudgetSummary": "artifacts/ai-opponent-100ms-50-summary.json",
+      "stopRecord": "artifacts/ai-opponent-2s-stop-record.json"
+    },
+    {
+      "priority": 2,
+      "proposal": "Calibrate action differences and ranking at auction and epoch boundary",
+      "evidence": "Historical value model greatly reduced absolute MSE but centered error and playing strength barely improved; historical controversial decision changes ordering under rollout policy changes.",
+      "firstValidation": "Use paired counterfactual continuations with multiple opponent policies and oracle-labelled cases; evaluate held-out action ordering/regret; keep leaf-only and rollout-pricing changes separate.",
+      "status": "proposed, not applied"
+    },
+    {
+      "priority": 3,
+      "proposal": "Event-triggered cross-epoch extension",
+      "evidence": "Default horizon stops this epoch and permanent holdings/suns use residual estimates; globally longer horizons were already inconclusive.",
+      "firstValidation": "Extend only last usable disk / near epoch boundary / high permanent-holding swing positions; hold utility target and total budget constant.",
+      "status": "proposed, not applied"
+    },
+    {
+      "priority": 4,
+      "proposal": "Relax discard and god candidate pruning when warranted",
+      "evidence": "80 recorded disaster choices collapsed to one; only two exact fixtures exercise restricted candidates and neither shows regret. No god-exchange oracle fixtures yet.",
+      "firstValidation": "Expand canonical alternative coverage in diagnostics, then prove action regret before changing production.",
+      "status": "diagnostic candidate, lower priority"
+    }
+  ],
+  "literature": [
+    {
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/11028",
+      "title": "An Analysis of Monte Carlo Tree Search",
+      "relevance": "Knowledge-heavy rollouts are not automatically better; action ordering under the continuation policy matters."
+    },
+    {
+      "url": "https://webdocs.cs.ualberta.ca/~nathanst/papers/mpuct_icga.pdf",
+      "title": "An Analysis of UCT in Multi-Player Games",
+      "relevance": "Multi-player opponent choice and backup rules are separate modeling decisions, not a guaranteed improvement."
+    }
+  ],
+  "playableHorizon": {
+    "status": "user-requested next-epoch enabled for hard AI and TS fallback",
+    "timeMs": 2000,
+    "diagnostic": "artifacts/ai-play-cross-epoch-20261028.json",
+    "qa": "artifacts/ai-play-cross-epoch-qa.json",
+    "strengthVerified": false,
+    "selectiveExtensionImplemented": false
+  },
+  "lastBidFix": {
+    "status": "withdrawn",
+    "scope": "epoch3 final bidder only",
+    "qa": "artifacts/ai-last-bid-fix-qa.json",
+    "wasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+    "ongoingHorizonExperimentUnchanged": true,
+    "diagnosis": "artifacts/ai-bid-search-diagnosis-20261028.json"
+  },
+  "crossEpochStudy": {
+    "status": "user-stopped",
+    "finished": 36,
+    "planned": 50,
+    "stopRecord": "artifacts/ai-cross-epoch-2s-stop-record.json"
+  }
+}

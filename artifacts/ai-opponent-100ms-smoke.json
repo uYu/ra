@@ -1,0 +1,185 @@
+{
+  "status": "complete",
+  "identity": {
+    "config": {
+      "studyKind": "opponent-tree",
+      "engine": "current",
+      "reward": "relative",
+      "opponentVariant": "uct",
+      "horizon": "epoch",
+      "samples": 32,
+      "timeMs": 1,
+      "opponentTimeMs": 1,
+      "opponentFixed": false,
+      "candidateLabel": "对手竞价入树",
+      "opponentLabel": "旧模型",
+      "replayDir": "artifacts/ai-opponent-100ms-smoke.json.replays"
+    },
+    "schedule": [
+      {
+        "variant": "uct",
+        "mode": "time",
+        "seed": 940001,
+        "count": 2,
+        "seat": 0,
+        "pair": 0
+      },
+      {
+        "variant": "uct",
+        "mode": "time",
+        "seed": 940001,
+        "count": 2,
+        "seat": 1,
+        "pair": 0
+      }
+    ],
+    "seedPairs": [
+      {
+        "pair": 0,
+        "seed": 940001,
+        "count": 2,
+        "seats": [
+          0,
+          1
+        ]
+      }
+    ],
+    "planPath": "artifacts/ai-opponent-100ms-smoke-plan.json",
+    "planSha256": "4019156762c48212eac70dab4191933aac16b294d2776c62a5eb88b81cecc27b",
+    "seeds": 1,
+    "start": 940001,
+    "counts": [
+      2
+    ],
+    "variants": [
+      "uct"
+    ],
+    "modes": [
+      "time"
+    ],
+    "sourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "wasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "opponentSourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "opponentWasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "candidateTreeMode": 1,
+    "opponentTreeMode": 0,
+    "modelSha256": null,
+    "rolloutModelSha256": null
+  },
+  "workers": 2,
+  "processId": 66609,
+  "plannedGames": 2,
+  "finishedGames": 2,
+  "startedAt": "2026-10-28T07:42:43.732Z",
+  "lastProgressAt": "2026-10-28T07:42:44.008Z",
+  "updatedAt": "2026-10-28T07:42:44.008Z",
+  "seconds": 0.27450041700000005,
+  "failure": null,
+  "evaluation": "Equal player-count normalized rank; stratified whole paired-seed bootstrap,100000 draws; fixed50 games, no outcome-dependent stopping. Candidate includes complete keys; leaves remain heuristic.",
+  "inProgress": [],
+  "games": [
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 940001,
+      "count": 2,
+      "seat": 0,
+      "pair": 0,
+      "rank": 2,
+      "score": 22,
+      "margin": -22,
+      "steps": 162,
+      "stats": {
+        "candidate": {
+          "opponentTreeSelections": 415,
+          "opponentAuctionTreeSelections": 415,
+          "decisions": 48,
+          "searched": 46,
+          "ms": 53.04520999999991,
+          "searchMs": 52.840709999999916,
+          "maxMs": 1.3199170000000038,
+          "overshootMs": 6.840709999999916,
+          "overrunCalls": 0,
+          "samples": 825,
+          "transitions": 30916,
+          "nodes": 1255,
+          "depth": 5,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 16,
+          "truncated": 0
+        },
+        "opponent": {
+          "opponentTreeSelections": 0,
+          "opponentAuctionTreeSelections": 0,
+          "decisions": 114,
+          "searched": 106,
+          "ms": 123.11458400000004,
+          "searchMs": 122.14316700000006,
+          "maxMs": 3.417082999999991,
+          "overshootMs": 16.143167000000062,
+          "overrunCalls": 0,
+          "samples": 6148,
+          "transitions": 74180,
+          "nodes": 6258,
+          "depth": 5,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 23,
+          "truncated": 0
+        }
+      },
+      "replayPath": "artifacts/ai-opponent-100ms-smoke.json.replays/uct-time-2p-940001-seat0.json"
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 940001,
+      "count": 2,
+      "seat": 1,
+      "pair": 0,
+      "rank": 1,
+      "score": 36,
+      "margin": 9,
+      "steps": 144,
+      "stats": {
+        "candidate": {
+          "opponentTreeSelections": 1418,
+          "opponentAuctionTreeSelections": 1418,
+          "decisions": 67,
+          "searched": 61,
+          "ms": 70.71608600000016,
+          "searchMs": 69.91116800000015,
+          "maxMs": 1.5038330000000144,
+          "overshootMs": 8.911168000000146,
+          "overrunCalls": 0,
+          "samples": 1852,
+          "transitions": 44349,
+          "nodes": 2662,
+          "depth": 7,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 31,
+          "truncated": 0
+        },
+        "opponent": {
+          "opponentTreeSelections": 0,
+          "opponentAuctionTreeSelections": 0,
+          "decisions": 77,
+          "searched": 71,
+          "ms": 81.35895599999989,
+          "searchMs": 80.717704,
+          "maxMs": 1.3213330000000099,
+          "overshootMs": 9.717703999999998,
+          "overrunCalls": 0,
+          "samples": 3430,
+          "transitions": 50987,
+          "nodes": 3909,
+          "depth": 6,
+          "outcomeReuses": 0,
+          "maxOutcomeBranches": 38,
+          "truncated": 0
+        }
+      },
+      "replayPath": "artifacts/ai-opponent-100ms-smoke.json.replays/uct-time-2p-940001-seat1.json"
+    }
+  ],
+  "caveat": "One opponent-auction-tree seat vs observer-only opponents; same release binary, equal time. Predeclared paired seeds; no outcome-dependent stopping. Parallel timings encounter different positions."
+}

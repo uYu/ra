@@ -1,0 +1,42 @@
+{
+  "before": {
+    "buttons": [
+      {
+        "font": "14px",
+        "height": 70,
+        "width": 271.6640625
+      },
+      {
+        "font": "14px",
+        "height": 70,
+        "width": 271.6640625
+      },
+      {
+        "font": "14px",
+        "height": 70,
+        "width": 271.6640625
+      }
+    ],
+    "panel": 144
+  },
+  "after": {
+    "buttons": [
+      {
+        "font": "14px",
+        "height": 70,
+        "width": 271.6640625
+      },
+      {
+        "font": "14px",
+        "height": 70,
+        "width": 271.6640625
+      },
+      {
+        "font": "14px",
+        "height": 70,
+        "width": 271.6640625
+      }
+    ],
+    "panel": 144
+  }
+}

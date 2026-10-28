@@ -1,0 +1,90 @@
+{
+  "design": {
+    "start": 960001,
+    "seeds": 1,
+    "counts": [
+      2
+    ],
+    "games": 2,
+    "workers": 2
+  },
+  "candidate": {
+    "root": "artifacts/ai-opponent-2s-source-snapshot",
+    "wasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "sourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "timeMs": 1,
+    "treeMode": 1
+  },
+  "opponent": {
+    "root": "artifacts/ai-opponent-2s-source-snapshot",
+    "wasmSha256": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "sourceSha256": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "timeMs": 1,
+    "treeMode": 0
+  },
+  "jobs": [
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 960001,
+      "count": 2,
+      "seat": 0,
+      "pair": 0
+    },
+    {
+      "variant": "uct",
+      "mode": "time",
+      "seed": 960001,
+      "count": 2,
+      "seat": 1,
+      "pair": 0
+    }
+  ],
+  "seedPairs": [
+    {
+      "pair": 0,
+      "seed": 960001,
+      "count": 2,
+      "seats": [
+        0,
+        1
+      ]
+    }
+  ],
+  "hashes": {
+    "artifacts/ai-opponent-2s-source-snapshot/native/ra_ai.cpp": "0b66b8347c1cead453fe77799cf285cfb1a8329bdbdf8c56c7fdcacdf3cfa139",
+    "artifacts/ai-opponent-2s-source-snapshot/native/wasm-build.json": "b0de1cdbc28d1c7f8348e0da190da6429ace00b2dd7d4c50ec5e398c045846b0",
+    "artifacts/ai-opponent-2s-source-snapshot/scripts/benchmark-opponent-tree.ts": "c9e2b55f1c9bcbcad0d6e9fe7899d456e21131fabcd9930fd22e1dcf9dfacbbb",
+    "artifacts/ai-opponent-2s-source-snapshot/scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "artifacts/ai-opponent-2s-source-snapshot/scripts/monitor-opponent-tree.html": "e92ef5401ec3b0f1058e2f86829bdf12645db206d727095fba613948e58c6c0e",
+    "artifacts/ai-opponent-2s-source-snapshot/scripts/monitor-opponent-tree.mjs": "a3cdfd103475fc18acf5d657de030f51f6c5615acfa70c03d32372e5ff7719b7",
+    "artifacts/ai-opponent-2s-source-snapshot/scripts/probe-opponent-tree.ts": "ea0a9f69a4feb1fb213a0000253c1ed1c605940827a44d47c37f87d0b2e734f5",
+    "artifacts/ai-opponent-2s-source-snapshot/scripts/summarize-opponent-tree.ts": "8ac214987200d29fd36228c8bbcfd48db7c3d76829188cc980c2ff16128442c1",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai.ts": "87eaea654fe80c4eae183a890d1cd06b2a84fae1f7f5ffcfb44242b9def56f95",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai.worker.ts": "6838cd9e79d58d8dae30830e161748fde8ebf1ff7e0e70d60d3247a9a8840e2f",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/evaluation.ts": "58fdd0afa3ef0f4016a653d3845e54e88f7ef2feb08e1f8707b6deb3c0e31cd9",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/halving.ts": "fef323cf8fbf900cf128f554c3e785bea427d00e96b4148f876edd060194c7ff",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/policy.ts": "68ed44877e1056ab8edc8245a1f2f91025757208c422d586993a491ec24b0392",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/ra-ai.wasm": "e6f9fcb4f78cb6dc2ddf3a3adabdad32ff9abd080742138886ff7b7df6e1f635",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/rollout.ts": "889fd1dd95455e46619edabf74b1161ddaba84437fbec43f64375ec03969c90b",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/sampling.ts": "e7404d153e5e7eb1956cf24003bdac64e8ec936a8a3431ac9c068fcb9676b45e",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/search.ts": "69d9e5820237622cadca9b44be85000dd85da0431ef05445c2eb14eaee0e29a3",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/value.ts": "62ef8acb7e3377bbcec2638534e1eb509a9a2940f13521ee979564a1c06140b8",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/wasm-frozen-uct3.ts": "291c61110a3c8bac035e8df098d835d9e6445d8e6d8e320d42c39d8aefa2d8c1",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/wasm-frozen-uct4.ts": "3dff1ae4f94792bab3cdf8edfdd48878c36e1e642708f54e7f6e0ac5ca8a3a03",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/wasm-frozen-uct5.ts": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/ai/wasm.ts": "1c010492904da9bf08ad422186f9ebec215cec4291a1dbf13bc2f43ee03c2424",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/data.ts": "ec78c14ed0bc5f880e111e8a9429bd8a5150f768349cb5141e8a73d245dd3462",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/motion.ts": "b98125ded17e8d04e9ac0c1b5fa53c2eb6e588e08e89257443b56bb1d7720d41",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/preferences.ts": "6d5a5be7b3833a14d4929ef258d07c0b59296ec2f7255fbf90b6c168b1516c5e",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/presentation.ts": "67b1801bc28e267b31b8d7996e5743b5e23db0c7721f05c1d1365699474800ac",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/scoring-presentation.ts": "9bae82f86fe1b1b297d8c3e8dbd595edc5a50f0b325fdcee4cc5db4a401e4ed1",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/storage.ts": "fbe63bdaecd843ac5e882e75ea32b8374904af8d08dbc7faa626f9300a344641",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/tile-guide.ts": "a87ef1eb01c42dc52678015f1424c3641e3e5788b738343aa7347f0d6fc8cd98",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/types.ts": "e49a56903aa0db237bfd6e629a759dfd5849beac66fc3a20bac53a0ee9d06659",
+    "artifacts/ai-opponent-2s-source-snapshot/src/game/visibility.ts": "d0cc797b59e1d832e085b39c1309bc561066aead1e988f09314a8d0982094805"
+  },
+  "output": "artifacts/ai-opponent-2s-smoke.json",
+  "evaluation": "Equal player-count normalized rank; stratified whole paired-seed bootstrap,100000 draws; fixed50 games, no outcome-dependent stopping. Candidate includes complete keys; leaves remain heuristic. Independent seeds950001-950025, both2000ms; do not combine with100ms results."
+}

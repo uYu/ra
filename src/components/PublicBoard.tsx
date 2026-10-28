@@ -1,9 +1,11 @@
 import type { State } from "../game/types.ts";
 import type { Move } from "../game/presentation.ts";
+import { auctionNotice } from "../game/presentation.ts";
 import { RA_LIMIT, tileLabel } from "../game/data.ts";
 import { legalActions } from "../game/engine.ts";
 import { Glyph } from "./Art.tsx";
 import { Tile } from "./Tile.tsx";
+import { TileArt } from "./TileArt.tsx";
 import "./PublicBoard.css";
 
 export function PublicBoard({
@@ -21,6 +23,7 @@ export function PublicBoard({
   selected: number[];
   onSelect: (id: number) => void;
 }) {
+  const notice = auctionNotice(state, latest);
   const exchangeIds = new Set(
     canExchange
       ? legalActions(state).flatMap((a) => (a.type === "god" ? [a.tileId] : []))
@@ -30,20 +33,75 @@ export function PublicBoard({
     <section className="public-board" aria-label="公共版图">
       <div className="pb-sky">
         <header className="pb-heading">
-          <b>太阳轨道 · 抽到 RA 才前进</b>
-          <div className="pb-stars" aria-hidden="true">
-            ✶ ✶ ✶ ✶ ✶ ✶ ✶ ✶ ✶ ✶ ✶ ✶
+          <div className="pb-journey-heading">
+            <div className="pb-journey-title">
+              <Glyph kind="ra" />
+              <b>太阳之旅</b>
+              <span className="pb-progress-count">
+                {state.ra} / {RA_LIMIT[state.config.count]} 格
+              </span>
+              <span className="pb-remaining">
+                {state.ra === RA_LIMIT[state.config.count]
+                  ? "纪元结束"
+                  : `距结算还差 ${RA_LIMIT[state.config.count] - state.ra} 格`}
+              </span>
+            </div>
+            <div
+              className={`pb-track-context ${notice ? "pb-auction-context" : ""}`}
+              role={notice ? "status" : undefined}
+              aria-live="polite"
+              aria-atomic="true"
+              title={
+                notice
+                  ? `${notice.title}。${notice.detail} ${notice.status}`
+                  : "抽到太阳神，太阳船前进；抵达终点立即结算。"
+              }
+            >
+              {notice ? (
+                <>
+                  <span
+                    className="pb-heading-symbol"
+                    data-motion={
+                      notice.kind === "ra" ? "ra-reveal" : "auction-notice"
+                    }
+                  >
+                    {notice.kind === "ra" ? (
+                      <TileArt kind="ra" />
+                    ) : (
+                      <Glyph kind="ra" />
+                    )}
+                  </span>
+                  <span>
+                    {notice.kind === "ra"
+                      ? notice.title
+                      : `${state.players[notice.actor].name}发起拍卖`}
+                  </span>
+                </>
+              ) : (
+                <span>抽到太阳神才前进 · 抵达终点立即结算</span>
+              )}
+            </div>
           </div>
-          <div className="pb-epochs" aria-label={`第 ${state.epoch} 纪元`}>
+          <div
+            className="pb-epochs"
+            aria-label={`当前第 ${state.epoch} 纪元，共 3 个纪元`}
+          >
             {[1, 2, 3].map((e) => (
               <span
                 key={e}
+                aria-current={e === state.epoch ? "step" : undefined}
                 className={
                   e === state.epoch ? "current" : e < state.epoch ? "past" : ""
                 }
               >
-                {["I", "II", "III"][e - 1]}
-                <small>纪元</small>
+                <b>{["I", "II", "III"][e - 1]}</b>
+                <small>
+                  {e === state.epoch
+                    ? "当前纪元"
+                    : e < state.epoch
+                      ? "已结束"
+                      : `第 ${e} 纪元`}
+                </small>
               </span>
             ))}
           </div>
@@ -51,12 +109,13 @@ export function PublicBoard({
         <div
           className="pb-track"
           data-motion="ra"
-          aria-label={`太阳轨道 ${state.ra} / ${RA_LIMIT[state.config.count]}`}
+          role="progressbar"
+          aria-label="太阳船进度"
+          aria-valuemin={0}
+          aria-valuemax={RA_LIMIT[state.config.count]}
+          aria-valuenow={state.ra}
+          aria-valuetext={`第 ${state.epoch} 纪元，太阳船位于第 ${state.ra} 格，距结算还差 ${RA_LIMIT[state.config.count] - state.ra} 格`}
         >
-          <div className="pb-track-label">
-            <Glyph kind="ra" />
-            <span>太阳之旅</span>
-          </div>
           <div className="pb-track-spaces">
             {Array.from(
               { length: RA_LIMIT[state.config.count] + 1 },
@@ -65,12 +124,25 @@ export function PublicBoard({
                   key={i}
                   className={`pb-track-space ${i < state.ra ? "passed" : ""} ${i === state.ra ? "boat" : ""} ${i === RA_LIMIT[state.config.count] ? "last" : ""}`}
                 >
-                  <span>
-                    {i === state.ra
-                      ? "𓊝"
-                      : i === RA_LIMIT[state.config.count]
-                        ? "𓂀"
-                        : i || "起"}
+                  <div className="pb-marker-slot">
+                    <span className="pb-track-marker">
+                      {i === state.ra ? (
+                        <SunBoat />
+                      ) : i === RA_LIMIT[state.config.count] ? (
+                        <Glyph kind="ra" />
+                      ) : (
+                        i || "起"
+                      )}
+                    </span>
+                  </div>
+                  <span className="pb-track-caption">
+                    {i === RA_LIMIT[state.config.count]
+                      ? "纪元结算"
+                      : i === state.ra
+                        ? i
+                          ? `第 ${i} 格`
+                          : "起点"
+                        : ""}
                   </span>
                 </div>
               ),
@@ -166,11 +238,23 @@ export function PublicBoard({
             </span>
             <span data-motion="discard">弃置 {state.discarded.length}</span>
           </div>
-          <div className="pb-last">
-            <span>上次抽取</span>
-            <b title={state.lastTile ? tileLabel(state.lastTile) : undefined}>
-              {state.lastTile ? tileLabel(state.lastTile) : "尚未抽牌"}
-            </b>
+          <div
+            className={`pb-last ${state.lastTile?.kind === "ra" ? "ra-discarded" : ""}`}
+          >
+            {state.lastTile?.kind === "ra" && (
+              <div className="pb-last-ra">
+                <TileArt kind="ra" />
+              </div>
+            )}
+            <div>
+              <span>上次抽取</span>
+              <b title={state.lastTile ? tileLabel(state.lastTile) : undefined}>
+                {state.lastTile ? tileLabel(state.lastTile) : "尚未抽牌"}
+              </b>
+              {state.lastTile?.kind === "ra" && (
+                <small>已弃置 · 不计入拍品</small>
+              )}
+            </div>
           </div>
           <div
             className={`pb-event ${latest ? `kind-${latest.kind}` : "empty"}`}
@@ -186,5 +270,26 @@ export function PublicBoard({
         </aside>
       </div>
     </section>
+  );
+}
+
+function SunBoat() {
+  return (
+    <svg
+      className="pb-boat-art"
+      viewBox="0 0 64 54"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 37q27 15 54 0l-8 12H14z" fill="#d29b38" />
+      <path d="M32 5v33M32 9 13 33h19z" fill="#fff0b8" />
+      <path d="M37 9q20 5 17 21l-17 5z" fill="#f7d278" />
+      <path d="M9 40 5 31m50 9 4-9M17 49h32M10 52h43" />
+      <circle cx="47" cy="8" r="5" fill="#f5cb66" strokeWidth="1.8" />
+    </svg>
   );
 }

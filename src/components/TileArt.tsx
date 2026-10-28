@@ -203,6 +203,30 @@ export function TileArt({
           />
         </>
       )}
+      {kind === "monument" && (
+        <g className="monument-number">
+          <rect
+            x="5"
+            y="5"
+            width="25"
+            height="22"
+            rx="3"
+            fill="#f3d997"
+            stroke="#b18b43"
+          />
+          <text
+            x="17.5"
+            y="22"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="19"
+            fontWeight="bold"
+            fill="#273e58"
+          >
+            {variant + 1}
+          </text>
+        </g>
+      )}
       {disaster && (
         <>
           <path d="m9 17 79 54M91 17 12 71" stroke="#e0ad63" strokeWidth="7" />

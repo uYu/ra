@@ -2,6 +2,9 @@ import type { Move } from "../game/presentation.ts";
 import type { State } from "../game/types.ts";
 import { TileArt } from "./TileArt.tsx";
 import { tileName } from "../game/data.ts";
+const isMajorEvent = (move?: Move) =>
+  move?.kind === "invoke" ||
+  (move?.kind === "draw" && move.tiles.some((tile) => tile.kind === "ra"));
 export function ActionFeed({
   moves,
   state,
@@ -35,7 +38,7 @@ export function ActionFeed({
         </button>
       </header>
       <div
-        className={`latest-move ${latest?.kind === "win" ? "won" : ""}`}
+        className={`latest-move ${latest?.kind === "win" ? "won" : ""} ${isMajorEvent(latest) ? "major-event" : ""}`}
         key={latest?.step ?? 0}
         aria-live="polite"
       >
@@ -71,7 +74,7 @@ export function ActionFeed({
           .slice(0, 7)
           .map((m) => (
             <button
-              className={`move-row kind-${m.kind}`}
+              className={`move-row kind-${m.kind} ${isMajorEvent(m) ? "major-event" : ""}`}
               key={m.step}
               onClick={() => onInspect(m)}
               aria-label={`查看第${m.step}步：${m.title}`}
@@ -81,6 +84,13 @@ export function ActionFeed({
                 <b>{m.title}</b>
                 {m.kind === "win" && (
                   <small>取得 {m.tiles.length} 块拍品</small>
+                )}
+                {isMajorEvent(m) && (
+                  <small>
+                    {m.kind === "invoke"
+                      ? "发起拍卖 · 太阳船不前进"
+                      : "太阳神 · 推进太阳船"}
+                  </small>
                 )}
               </div>
             </button>

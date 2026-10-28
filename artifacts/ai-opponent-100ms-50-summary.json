@@ -1,0 +1,205 @@
+{
+  "status": "verified",
+  "input": "artifacts/ai-opponent-100ms-50.json",
+  "planSha256": "69ff257eb3766854a95d85c13bd84efdacc7101bd59e88a979dd870d3cf9a45c",
+  "frozenFiles": 32,
+  "games": 50,
+  "decisions": 15028,
+  "rankScore": 0.3286210317460317,
+  "reference": 0.5,
+  "interval95": [
+    0.22023809523809523,
+    0.435515873015873
+  ],
+  "bootstrap": "100000 draws, resample whole paired seeds independently within each player count; equal weight counts",
+  "byCount": [
+    {
+      "count": 2,
+      "games": 14,
+      "meanRank": 1.4285714285714286,
+      "referenceMeanRank": 1.5,
+      "rankScore": 0.5714285714285714,
+      "wins": 8,
+      "pairs": [
+        {
+          "seed": 930001,
+          "score": 1
+        },
+        {
+          "seed": 930005,
+          "score": 0
+        },
+        {
+          "seed": 930009,
+          "score": 0
+        },
+        {
+          "seed": 930013,
+          "score": 1
+        },
+        {
+          "seed": 930017,
+          "score": 0.5
+        },
+        {
+          "seed": 930021,
+          "score": 0.5
+        },
+        {
+          "seed": 930025,
+          "score": 1
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "games": 12,
+      "meanRank": 2.3333333333333335,
+      "referenceMeanRank": 2,
+      "rankScore": 0.3333333333333333,
+      "wins": 2,
+      "pairs": [
+        {
+          "seed": 930002,
+          "score": 0
+        },
+        {
+          "seed": 930006,
+          "score": 0.5
+        },
+        {
+          "seed": 930010,
+          "score": 0.25
+        },
+        {
+          "seed": 930014,
+          "score": 0
+        },
+        {
+          "seed": 930018,
+          "score": 0.5
+        },
+        {
+          "seed": 930022,
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "games": 12,
+      "meanRank": 2.8333333333333335,
+      "referenceMeanRank": 2.5,
+      "rankScore": 0.3888888888888889,
+      "wins": 2,
+      "pairs": [
+        {
+          "seed": 930003,
+          "score": 0.5
+        },
+        {
+          "seed": 930007,
+          "score": 0.3333333333333333
+        },
+        {
+          "seed": 930011,
+          "score": 0.8333333333333333
+        },
+        {
+          "seed": 930015,
+          "score": 0.3333333333333333
+        },
+        {
+          "seed": 930019,
+          "score": 0
+        },
+        {
+          "seed": 930023,
+          "score": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "count": 5,
+      "games": 12,
+      "meanRank": 4.916666666666667,
+      "referenceMeanRank": 3,
+      "rankScore": 0.020833333333333332,
+      "wins": 0,
+      "pairs": [
+        {
+          "seed": 930004,
+          "score": 0
+        },
+        {
+          "seed": 930008,
+          "score": 0
+        },
+        {
+          "seed": 930012,
+          "score": 0.125
+        },
+        {
+          "seed": 930016,
+          "score": 0
+        },
+        {
+          "seed": 930020,
+          "score": 0
+        },
+        {
+          "seed": 930024,
+          "score": 0
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "candidate": {
+      "opponentTreeSelections": 5414436,
+      "opponentAuctionTreeSelections": 5414436,
+      "decisions": 3898,
+      "searched": 3542,
+      "ms": 356755.18176999997,
+      "searchMs": 356685.98149599996,
+      "maxMs": 123.71612500000629,
+      "overshootMs": 2485.9814959999135,
+      "overrunCalls": 10,
+      "samples": 6853530,
+      "transitions": 150587904,
+      "nodes": 7161883,
+      "depth": 13,
+      "outcomeReuses": 0,
+      "maxOutcomeBranches": 4775,
+      "truncated": 0,
+      "meanMs": 100.70185812987012,
+      "meanSamples": 1934.9322416713721
+    },
+    "opponent": {
+      "opponentTreeSelections": 0,
+      "opponentAuctionTreeSelections": 0,
+      "decisions": 11130,
+      "searched": 10065,
+      "ms": 1013753.5534179993,
+      "searchMs": 1013507.5767399991,
+      "maxMs": 166.27216699998826,
+      "overshootMs": 7007.576739999175,
+      "overrunCalls": 41,
+      "samples": 19134484,
+      "transitions": 411953005,
+      "nodes": 18548048,
+      "depth": 11,
+      "outcomeReuses": 0,
+      "maxOutcomeBranches": 6690,
+      "truncated": 0,
+      "meanMs": 100.69623216492788,
+      "meanSamples": 1901.0913065077
+    }
+  },
+  "caveats": [
+    "50 games at 100ms are a preliminary comparison, not a 2s strength verdict.",
+    "Each game has one candidate against legacy opponents. Tree leaves still use heuristic rollouts.",
+    "Candidate also uses the complete observation key needed for opponent nodes; mode3 key-only ablation is not tested here.",
+    "Different encountered positions and parallel contention mean samples ratio is not a pure speed ratio."
+  ]
+}

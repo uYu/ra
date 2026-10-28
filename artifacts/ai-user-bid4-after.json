@@ -1,0 +1,68 @@
+{
+  "native": {
+    "samples": 0,
+    "transitions": 0,
+    "completed": 0,
+    "truncated": 0,
+    "epochAdvances": 0,
+    "nodes": 1,
+    "depth": 0,
+    "scenarios": 0,
+    "outcomeReuses": 0,
+    "maxOutcomeBranches": 0,
+    "action": {
+      "type": "bid",
+      "sun": 1
+    },
+    "candidates": [
+      {
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "value": 0,
+        "error": 0,
+        "visits": 0
+      }
+    ]
+  },
+  "reference": {
+    "action": {
+      "type": "bid",
+      "sun": 1
+    },
+    "samples": 0,
+    "transitions": 0,
+    "completed": 0,
+    "truncated": 0,
+    "epochAdvances": 0,
+    "nodes": 1,
+    "depth": 0,
+    "scenarios": 0,
+    "outcomeReuses": 0,
+    "maxOutcomeBranches": 0,
+    "candidates": [
+      {
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "value": 0,
+        "error": 0,
+        "visits": 0
+      }
+    ]
+  },
+  "policy": {
+    "type": "bid",
+    "sun": 1
+  },
+  "candidates": [
+    {
+      "type": "bid",
+      "sun": 1
+    }
+  ],
+  "withdrawnExperimentalPatch": true,
+  "wasmSha256": "4610f9619bb5ba9f1f4a49344f25defe21b6eeb13cffbee1c88993d68f687b83"
+}

@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-10-28T02:28:24.156Z",
+  "hashes": {
+    "native/ra_ai.cpp": "dea66e83bb1e48ff57e87f302d37da14af883cf2a0df55ccb77a281cd6f0ccbe",
+    "native/wasm-build.json": "6a758ed7a0df5f004ffb1608792a2e876ae776cd97642381a6b8fb4780363cf6",
+    "src/game/ai/ra-ai.wasm": "922360a3afda4939ee2dd5d002a4d745a0e1aa87c80518f2c0df81286ac61e93",
+    "scripts/benchmark-throughput.ts": "5ee0b82143a3fcf5c292356ed100aaf356e0f3ff8dfd1582ecb560f032358242",
+    "scripts/check-native-optimization.ts": "3eb03edec8c18f999a75afc87fdf55d0b7665806328eba5c239de54dbbf00f42",
+    "tests/performance.test.ts": "136e97dcd723182c3677d13a6e2f862b695a908d7e0df1945cceae3674fc3e7e"
+  }
+}

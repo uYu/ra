@@ -2,7 +2,23 @@
 
 本目录的报告、实验方案、小型原始统计、测试模型与冻结基线进入仓库；完整棋谱、教师对局、训练数据集和大体积筛查数据只保留在本地，不提交。最新结论以 [当前进展](../PROGRESS.md) 为准，避免将历史正向信号当作已经确认的提升。运行日志在本地保留但不纳入 Git。
 
-## 最近一轮：已停止
+## 2026-10-28 当前交接
+
+| 资料 | 状态与结论 |
+|---|---|
+| [预算对照](ai-uct2s-control-summary.json) | 84/84完成；人数等权55.8%，95%区间48.7%–63.3%，未确认稳定优势 |
+| [原始/当前同局面性能](ai-perf-original-vs-current-20261028.json) | 2秒平均模拟9483→29756，约3.14倍；固定预算报告一致 |
+| [性能版对原版](ai-version-2s-control.json) | 用户停止54/84；[停止记录](ai-version-2s-stop-record.json) |
+| [对手入树100ms](ai-opponent-100ms-50-summary.json) | 50/50完成；32.9%，95%区间22.0%–43.6% |
+| [对手入树2秒](ai-opponent-2s-50.json) | 用户停止32/50；[停止记录](ai-opponent-2s-stop-record.json) |
+| [双方入树、跨纪元对本纪元](ai-cross-epoch-2s-50.json) | 仅2–4人，用户停止36/50；[停止记录](ai-cross-epoch-2s-stop-record.json) |
+| [真实出价局面诊断](ai-bid-search-diagnosis-20261028.json) | 定制裁剪已撤回，收益变换与树结构敏感性待解；尚无验证过的通用修复 |
+
+计划与 `*-source-snapshot/` 一起保留，核验计划哈希和冻结文件，不能要求后续工作区与历史快照相同。各实验原始数据指向的 `.replays/` 在本地；中断实验不生成完整样本的最终区间，不追加样本拼成确认性结论。所有完成监控已删除，既有看板与游戏进程不因本次提交而关闭。
+
+`ai-bid-search-audit-20261028/` 保存配对续局、轨迹及48条独立TS交叉检查；`ai-bid-search-structure-20261028/` 保存收益/树深/算法消融。`ai-last-bid-fix-qa.json` 是已撤回裁剪的历史记录，不代表生产修复完成。公开局面夹具在 `tests/fixtures/last-bid-final-epoch.json`；完整玩家存档与真实牌袋状态不提交。
+
+## 历史 SH 复测：已停止
 
 - [停止报告](ai-sh-study-report.md)：SH200 完成 280 局，排名奖励 120 局后中止，500ms 未运行；共 400 局完整棋谱。
 - [停止汇总](ai-sh-study-stopped-summary.json)、[SH 完整统计](ai-sh-sh200-summary.json)、[方案](ai-sh-confirmation-methods.md)、[运行清单](ai-sh-study-manifest.json)、[QA](ai-sh-study-qa.json)。
@@ -35,6 +51,6 @@
 
 ## Git 排除范围
 
-`.gitignore` 排除 `*.replays/`、`policy-teacher/`、`decision-replays/`、`*-dataset.json`、`decision-screen.json`、运行日志与停止前备份。目录中的索引或逐局统计可能引用这些仅在本地存在的路径；这是数据保留策略，不意味着仓库包含完整原始对局。
+`.gitignore` 排除 `*.replays/`、`policy-teacher/`、`decision-replays/`、`*-dataset.json`、`decision-screen.json`、运行日志、PID、原始CPU剖析、未脱敏玩家存档、可再生成的原型TS参考副本与停止前备份。目录中的索引或逐局统计可能引用这些仅在本地存在的路径；这是数据保留策略，不意味着仓库包含完整原始对局。
 
 普通安装、构建和测试只依赖已提交的小模型与冻结基线。`report:value`、`report:policy`、决策复盘及完整SH研究汇总等命令需要对应本地数据；它们不能仅凭源码克隆还原此前计时搜索的历史轨迹。
