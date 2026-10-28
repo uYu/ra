@@ -1,0 +1,181 @@
+{
+  "opponent": "mcts",
+  "candidate": "search",
+  "seeds": 1,
+  "start": 8201,
+  "samples": 32,
+  "allSeats": true,
+  "summary": [
+    {
+      "count": 2,
+      "games": 2,
+      "wins": 2,
+      "winRate": 1,
+      "chance": 0.5,
+      "score": 50.5,
+      "margin": 25
+    },
+    {
+      "count": 3,
+      "games": 3,
+      "wins": 1,
+      "winRate": 0.3333333333333333,
+      "chance": 0.3333333333333333,
+      "score": 43.666666666666664,
+      "margin": -4.666666666666667
+    },
+    {
+      "count": 4,
+      "games": 4,
+      "wins": 2,
+      "winRate": 0.5,
+      "chance": 0.25,
+      "score": 29.75,
+      "margin": -1.5
+    },
+    {
+      "count": 5,
+      "games": 5,
+      "wins": 4,
+      "winRate": 0.8,
+      "chance": 0.2,
+      "score": 42.4,
+      "margin": 7
+    }
+  ],
+  "timing": {
+    "decisions": 1299,
+    "medianMs": 59.66799999997602,
+    "p95Ms": 370.0258749999339,
+    "maxMs": 759.5842080000148,
+    "seconds": 589.11856175
+  },
+  "games": [
+    {
+      "count": 2,
+      "seed": 8201,
+      "seat": 0,
+      "rank": 1,
+      "score": 46,
+      "margin": 13,
+      "steps": 179
+    },
+    {
+      "count": 2,
+      "seed": 8201,
+      "seat": 1,
+      "rank": 1,
+      "score": 55,
+      "margin": 37,
+      "steps": 176
+    },
+    {
+      "count": 3,
+      "seed": 8201,
+      "seat": 0,
+      "rank": 3,
+      "score": 29,
+      "margin": -28,
+      "steps": 297
+    },
+    {
+      "count": 3,
+      "seed": 8201,
+      "seat": 1,
+      "rank": 2,
+      "score": 44,
+      "margin": -5,
+      "steps": 278
+    },
+    {
+      "count": 3,
+      "seed": 8201,
+      "seat": 2,
+      "rank": 1,
+      "score": 58,
+      "margin": 19,
+      "steps": 288
+    },
+    {
+      "count": 4,
+      "seed": 8201,
+      "seat": 0,
+      "rank": 3,
+      "score": 23,
+      "margin": -9,
+      "steps": 333
+    },
+    {
+      "count": 4,
+      "seed": 8201,
+      "seat": 1,
+      "rank": 3,
+      "score": 27,
+      "margin": -9,
+      "steps": 317
+    },
+    {
+      "count": 4,
+      "seed": 8201,
+      "seat": 2,
+      "rank": 1,
+      "score": 40,
+      "margin": 9,
+      "steps": 314
+    },
+    {
+      "count": 4,
+      "seed": 8201,
+      "seat": 3,
+      "rank": 1,
+      "score": 29,
+      "margin": 3,
+      "steps": 292
+    },
+    {
+      "count": 5,
+      "seed": 8201,
+      "seat": 0,
+      "rank": 1,
+      "score": 40,
+      "margin": 8,
+      "steps": 468
+    },
+    {
+      "count": 5,
+      "seed": 8201,
+      "seat": 1,
+      "rank": 1,
+      "score": 54,
+      "margin": 17,
+      "steps": 416
+    },
+    {
+      "count": 5,
+      "seed": 8201,
+      "seat": 2,
+      "rank": 1,
+      "score": 52,
+      "margin": 17,
+      "steps": 462
+    },
+    {
+      "count": 5,
+      "seed": 8201,
+      "seat": 3,
+      "rank": 1,
+      "score": 30,
+      "margin": 1,
+      "steps": 430
+    },
+    {
+      "count": 5,
+      "seed": 8201,
+      "seat": 4,
+      "rank": 2,
+      "score": 36,
+      "margin": -8,
+      "steps": 416
+    }
+  ]
+}

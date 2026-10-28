@@ -1,0 +1,1951 @@
+{
+  "description": "Retrospective rank reanalysis; raw experiment results untouched. Rank score=(players-rank)/(players-1), equal-strength50%. Primary aggregate averages player counts equally; game-weighted alternative also reported. Whole-seed percentile bootstrap, six seeds. Family9 interval uses alpha=.05/9 as sensitivity only; does not undo post-hoc metric selection.",
+  "primary": [
+    {
+      "label": "跨纪元×32 vs 本纪元×32",
+      "file": "ai-next-epoch-validation.json",
+      "sourceSha256": "eb0f5395e6fc16c64dca1f97e2299896338dc307d3b661caa48d940c6acb2964",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        12001,
+        12002,
+        12003,
+        12004,
+        12005,
+        12006
+      ],
+      "firstPlaces": 22,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.4047619047619047,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.4618055555555556,
+      "gameWeightedRankScore": 0.4861111111111112,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.6666666666666667,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            4,
+            8
+          ],
+          "normalizedRankScore": 0.3333333333333333,
+          "firstPlaces": 4,
+          "meanMargin": -9.5
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 2.1666666666666665,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            3,
+            9,
+            6
+          ],
+          "normalizedRankScore": 0.4166666666666667,
+          "firstPlaces": 3,
+          "meanMargin": -13.444444444444445
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.2083333333333335,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            10,
+            3,
+            7,
+            4
+          ],
+          "normalizedRankScore": 0.5972222222222223,
+          "firstPlaces": 10,
+          "meanMargin": -9.291666666666666
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 3,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            5,
+            8,
+            5,
+            6,
+            6
+          ],
+          "normalizedRankScore": 0.5,
+          "firstPlaces": 5,
+          "meanMargin": -9.166666666666666
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 12001,
+          "balancedRankScore": 0.425,
+          "gameWeightedRankScore": 0.5,
+          "rankImprovement": 0.21428571428571427
+        },
+        {
+          "seed": 12002,
+          "balancedRankScore": 0.42916666666666664,
+          "gameWeightedRankScore": 0.4166666666666667,
+          "rankImprovement": -0.2857142857142857
+        },
+        {
+          "seed": 12003,
+          "balancedRankScore": 0.5458333333333334,
+          "gameWeightedRankScore": 0.5595238095238095,
+          "rankImprovement": 0.21428571428571427
+        },
+        {
+          "seed": 12004,
+          "balancedRankScore": 0.4583333333333333,
+          "gameWeightedRankScore": 0.47619047619047616,
+          "rankImprovement": 0
+        },
+        {
+          "seed": 12005,
+          "balancedRankScore": 0.5208333333333334,
+          "gameWeightedRankScore": 0.5238095238095238,
+          "rankImprovement": 0.07142857142857142
+        },
+        {
+          "seed": 12006,
+          "balancedRankScore": 0.3916666666666666,
+          "gameWeightedRankScore": 0.4404761904761904,
+          "rankImprovement": -0.07142857142857142
+        }
+      ],
+      "interval95": [
+        0.42013888888888884,
+        0.5069444444444445
+      ],
+      "intervalFamily9": [
+        0.4090277777777777,
+        0.5229166666666668
+      ],
+      "rankImprovement95": [
+        -0.11904761904761903,
+        0.15476190476190477
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "跨纪元×32 vs 本纪元×64",
+      "file": "ai-next-epoch-budget-control.json",
+      "sourceSha256": "a936117982df9286e72773dd372d7d2f78b609baf2c1aea199a6b0940436c83d",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        12001,
+        12002,
+        12003,
+        12004,
+        12005,
+        12006
+      ],
+      "firstPlaces": 9,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.9642857142857144,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.2916666666666667,
+      "gameWeightedRankScore": 0.3025793650793651,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.75,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            3,
+            9
+          ],
+          "normalizedRankScore": 0.25,
+          "firstPlaces": 3,
+          "meanMargin": -9.5
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 2.5555555555555554,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            1,
+            6,
+            11
+          ],
+          "normalizedRankScore": 0.2222222222222222,
+          "firstPlaces": 1,
+          "meanMargin": -15.722222222222221
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.7916666666666665,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            4,
+            7,
+            3,
+            10
+          ],
+          "normalizedRankScore": 0.40277777777777773,
+          "firstPlaces": 4,
+          "meanMargin": -13.625
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 3.8333333333333335,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            1,
+            5,
+            2,
+            12,
+            10
+          ],
+          "normalizedRankScore": 0.2916666666666667,
+          "firstPlaces": 1,
+          "meanMargin": -13.4
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 12001,
+          "balancedRankScore": 0.19166666666666665,
+          "gameWeightedRankScore": 0.24404761904761904,
+          "rankImprovement": -0.5714285714285714
+        },
+        {
+          "seed": 12002,
+          "balancedRankScore": 0.3625,
+          "gameWeightedRankScore": 0.42261904761904756,
+          "rankImprovement": -0.07142857142857142
+        },
+        {
+          "seed": 12003,
+          "balancedRankScore": 0.3625,
+          "gameWeightedRankScore": 0.3333333333333333,
+          "rankImprovement": -0.5714285714285714
+        },
+        {
+          "seed": 12004,
+          "balancedRankScore": 0.3333333333333333,
+          "gameWeightedRankScore": 0.3154761904761904,
+          "rankImprovement": -0.5714285714285714
+        },
+        {
+          "seed": 12005,
+          "balancedRankScore": 0.12083333333333333,
+          "gameWeightedRankScore": 0.16666666666666666,
+          "rankImprovement": -0.7857142857142857
+        },
+        {
+          "seed": 12006,
+          "balancedRankScore": 0.37916666666666665,
+          "gameWeightedRankScore": 0.3333333333333333,
+          "rankImprovement": -0.6428571428571429
+        }
+      ],
+      "interval95": [
+        0.20833333333333334,
+        0.36319444444444443
+      ],
+      "intervalFamily9": [
+        0.1729166666666667,
+        0.37083333333333335
+      ],
+      "rankImprovement95": [
+        -0.6785714285714285,
+        -0.3333333333333333
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "SH / 双方固定×32",
+      "file": "ai-tree-validation.json",
+      "sourceSha256": "aa784b097ca14bedbfaf001dd7ed95397ff53716b0dc06b2ca5db8f6c69ec047",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        14001,
+        14002,
+        14003,
+        14004,
+        14005,
+        14006
+      ],
+      "firstPlaces": 22,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.5357142857142856,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.4486111111111111,
+      "gameWeightedRankScore": 0.4563492063492063,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.5833333333333333,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            5,
+            7
+          ],
+          "normalizedRankScore": 0.4166666666666667,
+          "firstPlaces": 5,
+          "meanMargin": -9.416666666666666
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 2.2222222222222223,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            5,
+            4,
+            9
+          ],
+          "normalizedRankScore": 0.3888888888888889,
+          "firstPlaces": 5,
+          "meanMargin": -7.5
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.3333333333333335,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            9,
+            3,
+            7,
+            5
+          ],
+          "normalizedRankScore": 0.5555555555555557,
+          "firstPlaces": 9,
+          "meanMargin": -8.291666666666666
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 3.2666666666666666,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            3,
+            6,
+            8,
+            6,
+            7
+          ],
+          "normalizedRankScore": 0.43333333333333335,
+          "firstPlaces": 3,
+          "meanMargin": -12.6
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 14001,
+          "balancedRankScore": 0.5375,
+          "gameWeightedRankScore": 0.5238095238095238,
+          "rankImprovement": 0
+        },
+        {
+          "seed": 14002,
+          "balancedRankScore": 0.425,
+          "gameWeightedRankScore": 0.47023809523809523,
+          "rankImprovement": 0
+        },
+        {
+          "seed": 14003,
+          "balancedRankScore": 0.5875,
+          "gameWeightedRankScore": 0.6071428571428571,
+          "rankImprovement": 0.35714285714285715
+        },
+        {
+          "seed": 14004,
+          "balancedRankScore": 0.3,
+          "gameWeightedRankScore": 0.27380952380952384,
+          "rankImprovement": -0.7142857142857143
+        },
+        {
+          "seed": 14005,
+          "balancedRankScore": 0.375,
+          "gameWeightedRankScore": 0.380952380952381,
+          "rankImprovement": -0.2857142857142857
+        },
+        {
+          "seed": 14006,
+          "balancedRankScore": 0.4666666666666666,
+          "gameWeightedRankScore": 0.48214285714285715,
+          "rankImprovement": 0
+        }
+      ],
+      "interval95": [
+        0.3729166666666666,
+        0.5236111111111111
+      ],
+      "intervalFamily9": [
+        0.3416666666666666,
+        0.5520833333333333
+      ],
+      "rankImprovement95": [
+        -0.39285714285714285,
+        0.13095238095238096
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "Anytime SH / 双方200 ms",
+      "file": "ai-tree-validation.json",
+      "sourceSha256": "aa784b097ca14bedbfaf001dd7ed95397ff53716b0dc06b2ca5db8f6c69ec047",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        14001,
+        14002,
+        14003,
+        14004,
+        14005,
+        14006
+      ],
+      "firstPlaces": 27,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.2142857142857144,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.5840277777777778,
+      "gameWeightedRankScore": 0.5793650793650795,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.4166666666666667,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            7,
+            5
+          ],
+          "normalizedRankScore": 0.5833333333333334,
+          "firstPlaces": 7,
+          "meanMargin": 5.25
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 1.6666666666666667,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            8,
+            8,
+            2
+          ],
+          "normalizedRankScore": 0.6666666666666666,
+          "firstPlaces": 8,
+          "meanMargin": -0.05555555555555555
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.5416666666666665,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            5,
+            7,
+            6,
+            6
+          ],
+          "normalizedRankScore": 0.48611111111111116,
+          "firstPlaces": 5,
+          "meanMargin": -8.75
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 2.6,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            7,
+            7,
+            9,
+            5,
+            2
+          ],
+          "normalizedRankScore": 0.6,
+          "firstPlaces": 7,
+          "meanMargin": -7.933333333333334
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 14001,
+          "balancedRankScore": 0.525,
+          "gameWeightedRankScore": 0.5357142857142857,
+          "rankImprovement": 0.14285714285714285
+        },
+        {
+          "seed": 14002,
+          "balancedRankScore": 0.5416666666666667,
+          "gameWeightedRankScore": 0.5238095238095238,
+          "rankImprovement": 0
+        },
+        {
+          "seed": 14003,
+          "balancedRankScore": 0.7124999999999999,
+          "gameWeightedRankScore": 0.755952380952381,
+          "rankImprovement": 0.8571428571428571
+        },
+        {
+          "seed": 14004,
+          "balancedRankScore": 0.5125,
+          "gameWeightedRankScore": 0.5059523809523809,
+          "rankImprovement": 0
+        },
+        {
+          "seed": 14005,
+          "balancedRankScore": 0.475,
+          "gameWeightedRankScore": 0.4642857142857143,
+          "rankImprovement": -0.14285714285714285
+        },
+        {
+          "seed": 14006,
+          "balancedRankScore": 0.7375,
+          "gameWeightedRankScore": 0.6904761904761905,
+          "rankImprovement": 0.42857142857142855
+        }
+      ],
+      "interval95": [
+        0.5083333333333333,
+        0.6638888888888889
+      ],
+      "intervalFamily9": [
+        0.4944444444444444,
+        0.6979166666666666
+      ],
+      "rankImprovement95": [
+        -0.023809523809523808,
+        0.5
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "DPW / 双方固定×32",
+      "file": "ai-tree-validation.json",
+      "sourceSha256": "aa784b097ca14bedbfaf001dd7ed95397ff53716b0dc06b2ca5db8f6c69ec047",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        14001,
+        14002,
+        14003,
+        14004,
+        14005,
+        14006
+      ],
+      "firstPlaces": 23,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.5238095238095237,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.47638888888888886,
+      "gameWeightedRankScore": 0.47519841269841256,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.5833333333333333,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            5,
+            7
+          ],
+          "normalizedRankScore": 0.4166666666666667,
+          "firstPlaces": 5,
+          "meanMargin": -1.5
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 1.9444444444444444,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            6,
+            7,
+            5
+          ],
+          "normalizedRankScore": 0.5277777777777778,
+          "firstPlaces": 6,
+          "meanMargin": -7.777777777777778
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.2916666666666665,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            9,
+            6,
+            2,
+            7
+          ],
+          "normalizedRankScore": 0.5694444444444444,
+          "firstPlaces": 9,
+          "meanMargin": -6.5
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 3.433333333333333,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            3,
+            5,
+            7,
+            6,
+            9
+          ],
+          "normalizedRankScore": 0.39166666666666666,
+          "firstPlaces": 3,
+          "meanMargin": -12.266666666666667
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 14001,
+          "balancedRankScore": 0.4541666666666666,
+          "gameWeightedRankScore": 0.3630952380952381,
+          "rankImprovement": -0.6428571428571429
+        },
+        {
+          "seed": 14002,
+          "balancedRankScore": 0.6,
+          "gameWeightedRankScore": 0.5952380952380951,
+          "rankImprovement": 0.21428571428571427
+        },
+        {
+          "seed": 14003,
+          "balancedRankScore": 0.6041666666666666,
+          "gameWeightedRankScore": 0.6071428571428571,
+          "rankImprovement": 0.2857142857142857
+        },
+        {
+          "seed": 14004,
+          "balancedRankScore": 0.5541666666666667,
+          "gameWeightedRankScore": 0.5535714285714286,
+          "rankImprovement": 0.14285714285714285
+        },
+        {
+          "seed": 14005,
+          "balancedRankScore": 0.3958333333333333,
+          "gameWeightedRankScore": 0.4345238095238095,
+          "rankImprovement": -0.14285714285714285
+        },
+        {
+          "seed": 14006,
+          "balancedRankScore": 0.25,
+          "gameWeightedRankScore": 0.29761904761904756,
+          "rankImprovement": -0.42857142857142855
+        }
+      ],
+      "interval95": [
+        0.3673611111111111,
+        0.5694444444444444
+      ],
+      "intervalFamily9": [
+        0.325,
+        0.5944444444444444
+      ],
+      "rankImprovement95": [
+        -0.38095238095238093,
+        0.16666666666666666
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "DPW / 双方200 ms",
+      "file": "ai-tree-validation.json",
+      "sourceSha256": "aa784b097ca14bedbfaf001dd7ed95397ff53716b0dc06b2ca5db8f6c69ec047",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        14001,
+        14002,
+        14003,
+        14004,
+        14005,
+        14006
+      ],
+      "firstPlaces": 25,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.4761904761904763,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.5180555555555556,
+      "gameWeightedRankScore": 0.5,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.4166666666666667,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            7,
+            5
+          ],
+          "normalizedRankScore": 0.5833333333333334,
+          "firstPlaces": 7,
+          "meanMargin": 8.5
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 1.7222222222222223,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            9,
+            5,
+            4
+          ],
+          "normalizedRankScore": 0.6388888888888888,
+          "firstPlaces": 9,
+          "meanMargin": -2.8333333333333335
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 3,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            3,
+            4,
+            7,
+            10
+          ],
+          "normalizedRankScore": 0.3333333333333333,
+          "firstPlaces": 3,
+          "meanMargin": -14.75
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 2.933333333333333,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            6,
+            6,
+            9,
+            2,
+            7
+          ],
+          "normalizedRankScore": 0.5166666666666667,
+          "firstPlaces": 6,
+          "meanMargin": -8.566666666666666
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 14001,
+          "balancedRankScore": 0.6291666666666667,
+          "gameWeightedRankScore": 0.6607142857142857,
+          "rankImprovement": 0.5714285714285714
+        },
+        {
+          "seed": 14002,
+          "balancedRankScore": 0.4625,
+          "gameWeightedRankScore": 0.4761904761904762,
+          "rankImprovement": 0
+        },
+        {
+          "seed": 14003,
+          "balancedRankScore": 0.6458333333333333,
+          "gameWeightedRankScore": 0.5833333333333334,
+          "rankImprovement": 0.07142857142857142
+        },
+        {
+          "seed": 14004,
+          "balancedRankScore": 0.4708333333333333,
+          "gameWeightedRankScore": 0.45833333333333337,
+          "rankImprovement": -0.14285714285714285
+        },
+        {
+          "seed": 14005,
+          "balancedRankScore": 0.4583333333333333,
+          "gameWeightedRankScore": 0.4404761904761904,
+          "rankImprovement": -0.21428571428571427
+        },
+        {
+          "seed": 14006,
+          "balancedRankScore": 0.4416666666666667,
+          "gameWeightedRankScore": 0.380952380952381,
+          "rankImprovement": -0.5714285714285714
+        }
+      ],
+      "interval95": [
+        0.45625,
+        0.5826388888888889
+      ],
+      "intervalFamily9": [
+        0.45,
+        0.6124999999999999
+      ],
+      "rankImprovement95": [
+        -0.3095238095238095,
+        0.2380952380952381
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "UCT200 ms vs UCT固定×32",
+      "file": "ai-uct200-control.json",
+      "sourceSha256": "6cac34220c5c95e32d819e2b90d1f764f2a2a67cf8fadfeb66b652febd045ba4",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        15001,
+        15002,
+        15003,
+        15004,
+        15005,
+        15006
+      ],
+      "firstPlaces": 27,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.357142857142857,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.4722222222222222,
+      "gameWeightedRankScore": 0.5009920634920635,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.75,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            3,
+            9
+          ],
+          "normalizedRankScore": 0.25,
+          "firstPlaces": 3,
+          "meanMargin": -6.75
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 1.8333333333333333,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            8,
+            5,
+            5
+          ],
+          "normalizedRankScore": 0.5833333333333334,
+          "firstPlaces": 8,
+          "meanMargin": -4.055555555555555
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.4583333333333335,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            8,
+            4,
+            5,
+            7
+          ],
+          "normalizedRankScore": 0.513888888888889,
+          "firstPlaces": 8,
+          "meanMargin": -6.083333333333333
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 2.8333333333333335,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            8,
+            7,
+            3,
+            6,
+            6
+          ],
+          "normalizedRankScore": 0.5416666666666666,
+          "firstPlaces": 8,
+          "meanMargin": -8.3
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 15001,
+          "balancedRankScore": 0.4708333333333333,
+          "gameWeightedRankScore": 0.4702380952380953,
+          "rankImprovement": -0.07142857142857142
+        },
+        {
+          "seed": 15002,
+          "balancedRankScore": 0.6291666666666667,
+          "gameWeightedRankScore": 0.6428571428571429,
+          "rankImprovement": 0.42857142857142855
+        },
+        {
+          "seed": 15003,
+          "balancedRankScore": 0.525,
+          "gameWeightedRankScore": 0.5476190476190477,
+          "rankImprovement": 0.21428571428571427
+        },
+        {
+          "seed": 15004,
+          "balancedRankScore": 0.49583333333333335,
+          "gameWeightedRankScore": 0.5952380952380952,
+          "rankImprovement": 0.5714285714285714
+        },
+        {
+          "seed": 15005,
+          "balancedRankScore": 0.2833333333333334,
+          "gameWeightedRankScore": 0.26785714285714285,
+          "rankImprovement": -0.7857142857142857
+        },
+        {
+          "seed": 15006,
+          "balancedRankScore": 0.42916666666666664,
+          "gameWeightedRankScore": 0.48214285714285715,
+          "rankImprovement": 0.07142857142857142
+        }
+      ],
+      "interval95": [
+        0.3854166666666667,
+        0.5520833333333333
+      ],
+      "intervalFamily9": [
+        0.3479166666666667,
+        0.5805555555555556
+      ],
+      "rankImprovement95": [
+        -0.3095238095238095,
+        0.38095238095238093
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "学习估值 vs 原估值 / 双方200 ms",
+      "file": "ai-value-validation.json",
+      "sourceSha256": "1d6d864c2dc33713c585d5363c5bf7a5292c2fb3e40d9a4802ff046685dc89d1",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        40001,
+        40002,
+        40003,
+        40004,
+        40005,
+        40006
+      ],
+      "firstPlaces": 23,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.3333333333333335,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.47847222222222224,
+      "gameWeightedRankScore": 0.5079365079365081,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.75,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            3,
+            9
+          ],
+          "normalizedRankScore": 0.25,
+          "firstPlaces": 3,
+          "meanMargin": -5.75
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 1.7777777777777777,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            7,
+            8,
+            3
+          ],
+          "normalizedRankScore": 0.6111111111111112,
+          "firstPlaces": 7,
+          "meanMargin": -8.61111111111111
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.5416666666666665,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            6,
+            6,
+            5,
+            7
+          ],
+          "normalizedRankScore": 0.48611111111111116,
+          "firstPlaces": 6,
+          "meanMargin": -9.375
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 2.7333333333333334,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            7,
+            7,
+            6,
+            7,
+            3
+          ],
+          "normalizedRankScore": 0.5666666666666667,
+          "firstPlaces": 7,
+          "meanMargin": -7.933333333333334
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 40001,
+          "balancedRankScore": 0.6875,
+          "gameWeightedRankScore": 0.7083333333333334,
+          "rankImprovement": 0.6428571428571429
+        },
+        {
+          "seed": 40002,
+          "balancedRankScore": 0.5416666666666666,
+          "gameWeightedRankScore": 0.5476190476190477,
+          "rankImprovement": 0.14285714285714285
+        },
+        {
+          "seed": 40003,
+          "balancedRankScore": 0.6125,
+          "gameWeightedRankScore": 0.6011904761904763,
+          "rankImprovement": 0.21428571428571427
+        },
+        {
+          "seed": 40004,
+          "balancedRankScore": 0.32916666666666666,
+          "gameWeightedRankScore": 0.369047619047619,
+          "rankImprovement": -0.2857142857142857
+        },
+        {
+          "seed": 40005,
+          "balancedRankScore": 0.4166666666666667,
+          "gameWeightedRankScore": 0.45238095238095244,
+          "rankImprovement": -0.07142857142857142
+        },
+        {
+          "seed": 40006,
+          "balancedRankScore": 0.2833333333333333,
+          "gameWeightedRankScore": 0.369047619047619,
+          "rankImprovement": -0.07142857142857142
+        }
+      ],
+      "interval95": [
+        0.3638888888888889,
+        0.5937499999999999
+      ],
+      "intervalFamily9": [
+        0.3208333333333333,
+        0.6381944444444444
+      ],
+      "rankImprovement95": [
+        -0.10714285714285714,
+        0.3333333333333334
+      ],
+      "completeReplays": 0
+    },
+    {
+      "label": "学习续局 vs 原续局 / 双方200 ms",
+      "file": "ai-policy-validation.json",
+      "sourceSha256": "8cf210e28b9ff41d2143788c596742dd0da0e9c5f1a56bfbf422777eb3d6405e",
+      "games": 84,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        71001,
+        71002,
+        71003,
+        71004,
+        71005,
+        71006
+      ],
+      "firstPlaces": 27,
+      "referenceFirstPlaces": 24,
+      "meanRank": 2.3333333333333335,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.5409722222222222,
+      "gameWeightedRankScore": 0.538690476190476,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 12,
+          "meanRank": 1.5,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            6,
+            6
+          ],
+          "normalizedRankScore": 0.5,
+          "firstPlaces": 6,
+          "meanMargin": -3.4166666666666665
+        },
+        {
+          "count": 3,
+          "games": 18,
+          "meanRank": 1.7222222222222223,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            9,
+            5,
+            4
+          ],
+          "normalizedRankScore": 0.6388888888888888,
+          "firstPlaces": 9,
+          "meanMargin": -4
+        },
+        {
+          "count": 4,
+          "games": 24,
+          "meanRank": 2.5,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "normalizedRankScore": 0.49999999999999994,
+          "firstPlaces": 6,
+          "meanMargin": -7.458333333333333
+        },
+        {
+          "count": 5,
+          "games": 30,
+          "meanRank": 2.9,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            6,
+            6,
+            7,
+            7,
+            4
+          ],
+          "normalizedRankScore": 0.525,
+          "firstPlaces": 6,
+          "meanMargin": -8.933333333333334
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 71001,
+          "balancedRankScore": 0.7333333333333334,
+          "gameWeightedRankScore": 0.6488095238095237,
+          "rankImprovement": 0.14285714285714285
+        },
+        {
+          "seed": 71002,
+          "balancedRankScore": 0.5166666666666666,
+          "gameWeightedRankScore": 0.5773809523809524,
+          "rankImprovement": 0.35714285714285715
+        },
+        {
+          "seed": 71003,
+          "balancedRankScore": 0.6291666666666667,
+          "gameWeightedRankScore": 0.6309523809523808,
+          "rankImprovement": 0.35714285714285715
+        },
+        {
+          "seed": 71004,
+          "balancedRankScore": 0.4125,
+          "gameWeightedRankScore": 0.40476190476190477,
+          "rankImprovement": -0.2857142857142857
+        },
+        {
+          "seed": 71005,
+          "balancedRankScore": 0.375,
+          "gameWeightedRankScore": 0.42857142857142855,
+          "rankImprovement": -0.07142857142857142
+        },
+        {
+          "seed": 71006,
+          "balancedRankScore": 0.5791666666666666,
+          "gameWeightedRankScore": 0.5416666666666666,
+          "rankImprovement": 0.07142857142857142
+        }
+      ],
+      "interval95": [
+        0.4451388888888889,
+        0.6388888888888888
+      ],
+      "intervalFamily9": [
+        0.41111111111111115,
+        0.6798611111111111
+      ],
+      "rankImprovement95": [
+        -0.08333333333333333,
+        0.27380952380952384
+      ],
+      "completeReplays": 84
+    }
+  ],
+  "archive": [
+    {
+      "label": "早期策略引导MCTS vs 当时MCTS",
+      "file": "ai-guided-mcts-vs-mcts.json",
+      "sourceSha256": "054e7990d19b99877ddc1042a8d6f472813825f49639dbba444ad73310631a47",
+      "games": 14,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        8201
+      ],
+      "firstPlaces": 9,
+      "referenceFirstPlaces": 4,
+      "meanRank": 1.5714285714285714,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.7791666666666666,
+      "gameWeightedRankScore": 0.7797619047619049,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 2,
+          "meanRank": 1,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            2,
+            0
+          ],
+          "normalizedRankScore": 1,
+          "firstPlaces": 2,
+          "meanMargin": 25
+        },
+        {
+          "count": 3,
+          "games": 3,
+          "meanRank": 2,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            1,
+            1,
+            1
+          ],
+          "normalizedRankScore": 0.5,
+          "firstPlaces": 1,
+          "meanMargin": -4.666666666666667
+        },
+        {
+          "count": 4,
+          "games": 4,
+          "meanRank": 2,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            2,
+            0,
+            2,
+            0
+          ],
+          "normalizedRankScore": 0.6666666666666666,
+          "firstPlaces": 2,
+          "meanMargin": -1.5
+        },
+        {
+          "count": 5,
+          "games": 5,
+          "meanRank": 1.2,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            4,
+            1,
+            0,
+            0,
+            0
+          ],
+          "normalizedRankScore": 0.95,
+          "firstPlaces": 4,
+          "meanMargin": 7
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 8201,
+          "balancedRankScore": 0.7791666666666666,
+          "gameWeightedRankScore": 0.7797619047619049,
+          "rankImprovement": 0.8571428571428571
+        }
+      ],
+      "interval95": null,
+      "intervalFamily9": null,
+      "rankImprovement95": null,
+      "completeReplays": 0
+    },
+    {
+      "label": "早期MCTS vs previous",
+      "file": "ai-mcts-vs-previous.json",
+      "sourceSha256": "56dbb695b44f13dc51b6ce8c96c24d99c7d9d7cff6d2021beec9bfe311db3e16",
+      "games": 14,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        7401
+      ],
+      "firstPlaces": 6,
+      "referenceFirstPlaces": 4,
+      "meanRank": 2.2857142857142856,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.6166666666666667,
+      "gameWeightedRankScore": 0.5773809523809523,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 2,
+          "meanRank": 1,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            2,
+            0
+          ],
+          "normalizedRankScore": 1,
+          "firstPlaces": 2,
+          "meanMargin": 21
+        },
+        {
+          "count": 3,
+          "games": 3,
+          "meanRank": 2.3333333333333335,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            0,
+            2,
+            1
+          ],
+          "normalizedRankScore": 0.3333333333333333,
+          "firstPlaces": 0,
+          "meanMargin": -22.333333333333332
+        },
+        {
+          "count": 4,
+          "games": 4,
+          "meanRank": 2.25,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            2,
+            0,
+            1,
+            1
+          ],
+          "normalizedRankScore": 0.5833333333333333,
+          "firstPlaces": 2,
+          "meanMargin": -2.5
+        },
+        {
+          "count": 5,
+          "games": 5,
+          "meanRank": 2.8,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            2,
+            0,
+            0,
+            3,
+            0
+          ],
+          "normalizedRankScore": 0.55,
+          "firstPlaces": 2,
+          "meanMargin": -7.2
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 7401,
+          "balancedRankScore": 0.6166666666666667,
+          "gameWeightedRankScore": 0.5773809523809523,
+          "rankImprovement": 0.14285714285714285
+        }
+      ],
+      "interval95": null,
+      "intervalFamily9": null,
+      "rankImprovement95": null,
+      "completeReplays": 0
+    },
+    {
+      "label": "早期标准策略 vs legacy",
+      "file": "ai-standard-vs-legacy.json",
+      "sourceSha256": "87f09a4caaf4e0654af8f2717fc3e0d9bbb2bab41fbf41030fd157e57946f45b",
+      "games": 56,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        4001,
+        4002,
+        4003,
+        4004
+      ],
+      "firstPlaces": 28,
+      "referenceFirstPlaces": 16,
+      "meanRank": 1.9642857142857142,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.70625,
+      "gameWeightedRankScore": 0.6875,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 8,
+          "meanRank": 1.25,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            6,
+            2
+          ],
+          "normalizedRankScore": 0.75,
+          "firstPlaces": 6,
+          "meanMargin": 11
+        },
+        {
+          "count": 3,
+          "games": 12,
+          "meanRank": 1.5,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            8,
+            2,
+            2
+          ],
+          "normalizedRankScore": 0.75,
+          "firstPlaces": 8,
+          "meanMargin": 7.166666666666667
+        },
+        {
+          "count": 4,
+          "games": 16,
+          "meanRank": 1.75,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            8,
+            4,
+            4,
+            0
+          ],
+          "normalizedRankScore": 0.75,
+          "firstPlaces": 8,
+          "meanMargin": -0.5625
+        },
+        {
+          "count": 5,
+          "games": 20,
+          "meanRank": 2.7,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            6,
+            4,
+            3,
+            4,
+            3
+          ],
+          "normalizedRankScore": 0.575,
+          "firstPlaces": 6,
+          "meanMargin": -8.15
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 4001,
+          "balancedRankScore": 0.6375,
+          "gameWeightedRankScore": 0.6785714285714286,
+          "rankImprovement": 0.6428571428571429
+        },
+        {
+          "seed": 4002,
+          "balancedRankScore": 0.7583333333333334,
+          "gameWeightedRankScore": 0.6964285714285714,
+          "rankImprovement": 0.35714285714285715
+        },
+        {
+          "seed": 4003,
+          "balancedRankScore": 0.5874999999999999,
+          "gameWeightedRankScore": 0.5773809523809524,
+          "rankImprovement": 0.14285714285714285
+        },
+        {
+          "seed": 4004,
+          "balancedRankScore": 0.8416666666666666,
+          "gameWeightedRankScore": 0.7976190476190476,
+          "rankImprovement": 0.7142857142857143
+        }
+      ],
+      "interval95": null,
+      "intervalFamily9": null,
+      "rankImprovement95": null,
+      "completeReplays": 0
+    },
+    {
+      "label": "早期候选（文件未标版本）vs legacy",
+      "file": "ai-vs-legacy.json",
+      "sourceSha256": "295201d9e6b9dc52b346454ede2840443dcad07e6ee803f8ef9b5e079881ef69",
+      "games": 56,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "firstPlaces": 44,
+      "referenceFirstPlaces": 16,
+      "meanRank": 1.2678571428571428,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.8333333333333334,
+      "gameWeightedRankScore": 0.8705357142857143,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 8,
+          "meanRank": 1.375,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            5,
+            3
+          ],
+          "normalizedRankScore": 0.625,
+          "firstPlaces": 5,
+          "meanMargin": 10.5
+        },
+        {
+          "count": 3,
+          "games": 12,
+          "meanRank": 1.3333333333333333,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            9,
+            2,
+            1
+          ],
+          "normalizedRankScore": 0.8333333333333334,
+          "firstPlaces": 9,
+          "meanMargin": 18.833333333333332
+        },
+        {
+          "count": 4,
+          "games": 16,
+          "meanRank": 1.1875,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            13,
+            3,
+            0,
+            0
+          ],
+          "normalizedRankScore": 0.9374999999999999,
+          "firstPlaces": 13,
+          "meanMargin": 13.3125
+        },
+        {
+          "count": 5,
+          "games": 20,
+          "meanRank": 1.25,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            17,
+            2,
+            0,
+            1,
+            0
+          ],
+          "normalizedRankScore": 0.9375,
+          "firstPlaces": 17,
+          "meanMargin": 14.7
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 2001,
+          "balancedRankScore": 0.9791666666666666,
+          "gameWeightedRankScore": 0.9761904761904763,
+          "rankImprovement": 1.3571428571428572
+        },
+        {
+          "seed": 2002,
+          "balancedRankScore": 0.5916666666666666,
+          "gameWeightedRankScore": 0.7083333333333334,
+          "rankImprovement": 0.9285714285714286
+        },
+        {
+          "seed": 2003,
+          "balancedRankScore": 0.7833333333333334,
+          "gameWeightedRankScore": 0.8214285714285714,
+          "rankImprovement": 1
+        },
+        {
+          "seed": 2004,
+          "balancedRankScore": 0.9791666666666666,
+          "gameWeightedRankScore": 0.9761904761904763,
+          "rankImprovement": 1.3571428571428572
+        }
+      ],
+      "interval95": null,
+      "intervalFamily9": null,
+      "rankImprovement95": null,
+      "completeReplays": 0
+    },
+    {
+      "label": "早期候选（文件未标版本）vs policy",
+      "file": "ai-vs-policy.json",
+      "sourceSha256": "93c76507cecef2457cd00ea1650cbf5f0be919900262bf4a0b5a675ef2b000fa",
+      "games": 28,
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        3001,
+        3002
+      ],
+      "firstPlaces": 22,
+      "referenceFirstPlaces": 8,
+      "meanRank": 1.25,
+      "referenceMeanRank": 2.4285714285714284,
+      "balancedRankScore": 0.9520833333333333,
+      "gameWeightedRankScore": 0.9345238095238094,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 4,
+          "meanRank": 1,
+          "referenceMeanRank": 1.5,
+          "rankDistribution": [
+            4,
+            0
+          ],
+          "normalizedRankScore": 1,
+          "firstPlaces": 4,
+          "meanMargin": 33.75
+        },
+        {
+          "count": 3,
+          "games": 6,
+          "meanRank": 1,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            6,
+            0,
+            0
+          ],
+          "normalizedRankScore": 1,
+          "firstPlaces": 6,
+          "meanMargin": 31.5
+        },
+        {
+          "count": 4,
+          "games": 8,
+          "meanRank": 1.125,
+          "referenceMeanRank": 2.5,
+          "rankDistribution": [
+            7,
+            1,
+            0,
+            0
+          ],
+          "normalizedRankScore": 0.9583333333333333,
+          "firstPlaces": 7,
+          "meanMargin": 17
+        },
+        {
+          "count": 5,
+          "games": 10,
+          "meanRank": 1.6,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            5,
+            4,
+            1,
+            0,
+            0
+          ],
+          "normalizedRankScore": 0.85,
+          "firstPlaces": 5,
+          "meanMargin": 5.4
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 3001,
+          "balancedRankScore": 0.9666666666666666,
+          "gameWeightedRankScore": 0.9583333333333334,
+          "rankImprovement": 1.2857142857142858
+        },
+        {
+          "seed": 3002,
+          "balancedRankScore": 0.9375,
+          "gameWeightedRankScore": 0.9107142857142857,
+          "rankImprovement": 1.0714285714285714
+        }
+      ],
+      "interval95": null,
+      "intervalFamily9": null,
+      "rankImprovement95": null,
+      "completeReplays": 0
+    },
+    {
+      "label": "Wasm×96 vs Wasm×32（仅3/5人）",
+      "file": "ai-wasm-search-budget.json",
+      "sourceSha256": "fe42b18b6aae76b286fdcd9313b55f9f1186282446294123c05d4ea4d489de2c",
+      "games": 16,
+      "counts": [
+        3,
+        5
+      ],
+      "seeds": [
+        10401,
+        10402
+      ],
+      "firstPlaces": 7,
+      "referenceFirstPlaces": 4,
+      "meanRank": 2.125,
+      "referenceMeanRank": 2.625,
+      "balancedRankScore": 0.6583333333333333,
+      "gameWeightedRankScore": 0.65625,
+      "byCount": [
+        {
+          "count": 3,
+          "games": 6,
+          "meanRank": 1.6666666666666667,
+          "referenceMeanRank": 2,
+          "rankDistribution": [
+            3,
+            2,
+            1
+          ],
+          "normalizedRankScore": 0.6666666666666666,
+          "firstPlaces": 3,
+          "meanMargin": 1
+        },
+        {
+          "count": 5,
+          "games": 10,
+          "meanRank": 2.4,
+          "referenceMeanRank": 3,
+          "rankDistribution": [
+            4,
+            1,
+            3,
+            1,
+            1
+          ],
+          "normalizedRankScore": 0.65,
+          "firstPlaces": 4,
+          "meanMargin": -8
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 10401,
+          "balancedRankScore": 0.625,
+          "gameWeightedRankScore": 0.65625,
+          "rankImprovement": 0.625
+        },
+        {
+          "seed": 10402,
+          "balancedRankScore": 0.6916666666666667,
+          "gameWeightedRankScore": 0.65625,
+          "rankImprovement": 0.375
+        }
+      ],
+      "interval95": null,
+      "intervalFamily9": null,
+      "rankImprovement95": null,
+      "completeReplays": 0
+    }
+  ],
+  "excluded": [
+    {
+      "file": "ai-tree-40ms-stopped.json",
+      "games": 58,
+      "reason": "中途停止，58局不构成完整均衡组",
+      "sha256": "4fb9355963d53912a02a3dce6002e77c9958e1826203e8a6173d6cdd31f3d977"
+    },
+    {
+      "file": "ai-guided-mcts-pilot.json",
+      "games": 8,
+      "reason": "调试/先导样本，不作为独立最终验证",
+      "sha256": "29d87a8349b0e158722ff4d5624068df212157df504f06fd25392c45a4359115"
+    },
+    {
+      "file": "ai-pilot.json",
+      "games": 4,
+      "reason": "先导样本，且未轮换全部座位",
+      "sha256": "89ae9158ff1a40355d92e1eaa8baf94bd0561fb55dcb1e7add36927d011669b1"
+    }
+  ],
+  "inventory": [
+    {
+      "file": "ai-next-epoch-validation.json",
+      "games": 84,
+      "status": "complete",
+      "sha256": "eb0f5395e6fc16c64dca1f97e2299896338dc307d3b661caa48d940c6acb2964",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-next-epoch-budget-control.json",
+      "games": 84,
+      "status": "complete",
+      "sha256": "a936117982df9286e72773dd372d7d2f78b609baf2c1aea199a6b0940436c83d",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-tree-validation.json",
+      "games": 336,
+      "status": "complete",
+      "sha256": "aa784b097ca14bedbfaf001dd7ed95397ff53716b0dc06b2ca5db8f6c69ec047",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-uct200-control.json",
+      "games": 84,
+      "status": "complete",
+      "sha256": "6cac34220c5c95e32d819e2b90d1f764f2a2a67cf8fadfeb66b652febd045ba4",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-value-validation.json",
+      "games": 84,
+      "status": "complete",
+      "sha256": "1d6d864c2dc33713c585d5363c5bf7a5292c2fb3e40d9a4802ff046685dc89d1",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-policy-validation.json",
+      "games": 84,
+      "status": "complete",
+      "sha256": "8cf210e28b9ff41d2143788c596742dd0da0e9c5f1a56bfbf422777eb3d6405e",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-guided-mcts-vs-mcts.json",
+      "games": 14,
+      "status": "legacy record",
+      "sha256": "054e7990d19b99877ddc1042a8d6f472813825f49639dbba444ad73310631a47",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-mcts-vs-previous.json",
+      "games": 14,
+      "status": "legacy record",
+      "sha256": "56dbb695b44f13dc51b6ce8c96c24d99c7d9d7cff6d2021beec9bfe311db3e16",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-standard-vs-legacy.json",
+      "games": 56,
+      "status": "legacy record",
+      "sha256": "87f09a4caaf4e0654af8f2717fc3e0d9bbb2bab41fbf41030fd157e57946f45b",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-vs-legacy.json",
+      "games": 56,
+      "status": "legacy record",
+      "sha256": "295201d9e6b9dc52b346454ede2840443dcad07e6ee803f8ef9b5e079881ef69",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-vs-policy.json",
+      "games": 28,
+      "status": "legacy record",
+      "sha256": "93c76507cecef2457cd00ea1650cbf5f0be919900262bf4a0b5a675ef2b000fa",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-wasm-search-budget.json",
+      "games": 16,
+      "status": "legacy record",
+      "sha256": "fe42b18b6aae76b286fdcd9313b55f9f1186282446294123c05d4ea4d489de2c",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-tree-40ms-stopped.json",
+      "games": 58,
+      "status": "stopped",
+      "sha256": "4fb9355963d53912a02a3dce6002e77c9958e1826203e8a6173d6cdd31f3d977",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-guided-mcts-pilot.json",
+      "games": 8,
+      "status": "legacy record",
+      "sha256": "29d87a8349b0e158722ff4d5624068df212157df504f06fd25392c45a4359115",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    },
+    {
+      "file": "ai-pilot.json",
+      "games": 4,
+      "status": "legacy record",
+      "sha256": "89ae9158ff1a40355d92e1eaa8baf94bd0561fb55dcb1e7add36927d011669b1",
+      "fields": "count,seed,seat,rank,score,margin; some newer files also contain stats/replayPath"
+    }
+  ]
+}

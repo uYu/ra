@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-26",
+  "fullSuite": {
+    "command": "npm test",
+    "passed": 57,
+    "failed": 0,
+    "durationMs": 703768.2035
+  },
+  "trainedModelChecks": {
+    "command": "node --experimental-strip-types --test tests/value.test.ts",
+    "passed": 4,
+    "failed": 0
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true
+  },
+  "scriptTypecheck": {
+    "passed": true
+  },
+  "independentGames": {
+    "budgetControl": 84,
+    "learnedValue": 84
+  },
+  "default": {
+    "algorithm": "uct",
+    "samplesPerRootCandidate": 32,
+    "horizon": "epoch",
+    "valueModel": false
+  },
+  "notes": "Full suite and targeted trained-model checks passed. The targeted run includes the trained 24-unit network and hidden-state search invariance checks added while the full run was in progress."
+}

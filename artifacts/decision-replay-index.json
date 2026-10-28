@@ -1,0 +1,123 @@
+{
+  "selection": "Targeted reruns of four worst-margin examples; not original timed action histories.",
+  "results": [
+    {
+      "study": "value",
+      "count": 2,
+      "seed": 40001,
+      "seat": 1,
+      "originalRank": 2,
+      "originalMargin": -42,
+      "path": "artifacts/decision-replays/value-2p-40001-seat1.json",
+      "ranking": [
+        {
+          "player": 0,
+          "score": 41,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 17,
+          "sun": 8
+        }
+      ],
+      "steps": 164
+    },
+    {
+      "study": "budget",
+      "count": 2,
+      "seed": 15004,
+      "seat": 0,
+      "originalRank": 2,
+      "originalMargin": -40,
+      "path": "artifacts/decision-replays/budget-2p-15004-seat0.json",
+      "ranking": [
+        {
+          "player": 0,
+          "score": 36,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 26,
+          "sun": 6
+        }
+      ],
+      "steps": 131
+    },
+    {
+      "study": "budget",
+      "count": 5,
+      "seed": 15002,
+      "seat": 2,
+      "originalRank": 4,
+      "originalMargin": -32,
+      "path": "artifacts/decision-replays/budget-5p-15002-seat2.json",
+      "ranking": [
+        {
+          "player": 1,
+          "score": 70,
+          "sun": 14
+        },
+        {
+          "player": 0,
+          "score": 39,
+          "sun": 13
+        },
+        {
+          "player": 4,
+          "score": 36,
+          "sun": 16
+        },
+        {
+          "player": 2,
+          "score": 27,
+          "sun": 8
+        },
+        {
+          "player": 3,
+          "score": 10,
+          "sun": 10
+        }
+      ],
+      "steps": 428
+    },
+    {
+      "study": "value",
+      "count": 5,
+      "seed": 40004,
+      "seat": 1,
+      "originalRank": 4,
+      "originalMargin": -23,
+      "path": "artifacts/decision-replays/value-5p-40004-seat1.json",
+      "ranking": [
+        {
+          "player": 0,
+          "score": 37,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 35,
+          "sun": 16
+        },
+        {
+          "player": 3,
+          "score": 35,
+          "sun": 14
+        },
+        {
+          "player": 2,
+          "score": 26,
+          "sun": 12
+        },
+        {
+          "player": 4,
+          "score": 19,
+          "sun": 10
+        }
+      ],
+      "steps": 452
+    }
+  ]
+}

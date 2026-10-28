@@ -1,0 +1,487 @@
+{
+  "description": "All decisions from complete frozen UCT200 games, every seat, no win/loss filtering, game-level train/dev split; final evaluation71001..71006 untouched.",
+  "planned": 80,
+  "complete": 80,
+  "jobs": [
+    {
+      "split": "train",
+      "seed": 500001,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500001.json"
+    },
+    {
+      "split": "train",
+      "seed": 500002,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500002.json"
+    },
+    {
+      "split": "train",
+      "seed": 500003,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500003.json"
+    },
+    {
+      "split": "train",
+      "seed": 500004,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500004.json"
+    },
+    {
+      "split": "train",
+      "seed": 500005,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500005.json"
+    },
+    {
+      "split": "train",
+      "seed": 500006,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500006.json"
+    },
+    {
+      "split": "train",
+      "seed": 500007,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500007.json"
+    },
+    {
+      "split": "train",
+      "seed": 500008,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500008.json"
+    },
+    {
+      "split": "train",
+      "seed": 500009,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500009.json"
+    },
+    {
+      "split": "train",
+      "seed": 500010,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500010.json"
+    },
+    {
+      "split": "train",
+      "seed": 500011,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500011.json"
+    },
+    {
+      "split": "train",
+      "seed": 500012,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500012.json"
+    },
+    {
+      "split": "train",
+      "seed": 500013,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500013.json"
+    },
+    {
+      "split": "train",
+      "seed": 500014,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500014.json"
+    },
+    {
+      "split": "train",
+      "seed": 500015,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500015.json"
+    },
+    {
+      "split": "train",
+      "seed": 500016,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500016.json"
+    },
+    {
+      "split": "train",
+      "seed": 500017,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500017.json"
+    },
+    {
+      "split": "train",
+      "seed": 500018,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500018.json"
+    },
+    {
+      "split": "train",
+      "seed": 500019,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500019.json"
+    },
+    {
+      "split": "train",
+      "seed": 500020,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500020.json"
+    },
+    {
+      "split": "train",
+      "seed": 500021,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500021.json"
+    },
+    {
+      "split": "train",
+      "seed": 500022,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500022.json"
+    },
+    {
+      "split": "train",
+      "seed": 500023,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500023.json"
+    },
+    {
+      "split": "train",
+      "seed": 500024,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500024.json"
+    },
+    {
+      "split": "train",
+      "seed": 500025,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500025.json"
+    },
+    {
+      "split": "train",
+      "seed": 500026,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500026.json"
+    },
+    {
+      "split": "train",
+      "seed": 500027,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500027.json"
+    },
+    {
+      "split": "train",
+      "seed": 500028,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500028.json"
+    },
+    {
+      "split": "train",
+      "seed": 500029,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500029.json"
+    },
+    {
+      "split": "train",
+      "seed": 500030,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500030.json"
+    },
+    {
+      "split": "train",
+      "seed": 500031,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500031.json"
+    },
+    {
+      "split": "train",
+      "seed": 500032,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500032.json"
+    },
+    {
+      "split": "train",
+      "seed": 500033,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500033.json"
+    },
+    {
+      "split": "train",
+      "seed": 500034,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500034.json"
+    },
+    {
+      "split": "train",
+      "seed": 500035,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500035.json"
+    },
+    {
+      "split": "train",
+      "seed": 500036,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500036.json"
+    },
+    {
+      "split": "train",
+      "seed": 500037,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500037.json"
+    },
+    {
+      "split": "train",
+      "seed": 500038,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500038.json"
+    },
+    {
+      "split": "train",
+      "seed": 500039,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500039.json"
+    },
+    {
+      "split": "train",
+      "seed": 500040,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500040.json"
+    },
+    {
+      "split": "train",
+      "seed": 500041,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500041.json"
+    },
+    {
+      "split": "train",
+      "seed": 500042,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500042.json"
+    },
+    {
+      "split": "train",
+      "seed": 500043,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500043.json"
+    },
+    {
+      "split": "train",
+      "seed": 500044,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500044.json"
+    },
+    {
+      "split": "train",
+      "seed": 500045,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500045.json"
+    },
+    {
+      "split": "train",
+      "seed": 500046,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500046.json"
+    },
+    {
+      "split": "train",
+      "seed": 500047,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500047.json"
+    },
+    {
+      "split": "train",
+      "seed": 500048,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500048.json"
+    },
+    {
+      "split": "train",
+      "seed": 500049,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500049.json"
+    },
+    {
+      "split": "train",
+      "seed": 500050,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500050.json"
+    },
+    {
+      "split": "train",
+      "seed": 500051,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500051.json"
+    },
+    {
+      "split": "train",
+      "seed": 500052,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500052.json"
+    },
+    {
+      "split": "train",
+      "seed": 500053,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500053.json"
+    },
+    {
+      "split": "train",
+      "seed": 500054,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500054.json"
+    },
+    {
+      "split": "train",
+      "seed": 500055,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500055.json"
+    },
+    {
+      "split": "train",
+      "seed": 500056,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500056.json"
+    },
+    {
+      "split": "train",
+      "seed": 500057,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500057.json"
+    },
+    {
+      "split": "train",
+      "seed": 500058,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500058.json"
+    },
+    {
+      "split": "train",
+      "seed": 500059,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500059.json"
+    },
+    {
+      "split": "train",
+      "seed": 500060,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500060.json"
+    },
+    {
+      "split": "train",
+      "seed": 500061,
+      "count": 2,
+      "path": "artifacts/policy-teacher/train-2p-500061.json"
+    },
+    {
+      "split": "train",
+      "seed": 500062,
+      "count": 3,
+      "path": "artifacts/policy-teacher/train-3p-500062.json"
+    },
+    {
+      "split": "train",
+      "seed": 500063,
+      "count": 4,
+      "path": "artifacts/policy-teacher/train-4p-500063.json"
+    },
+    {
+      "split": "train",
+      "seed": 500064,
+      "count": 5,
+      "path": "artifacts/policy-teacher/train-5p-500064.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600001,
+      "count": 2,
+      "path": "artifacts/policy-teacher/dev-2p-600001.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600002,
+      "count": 3,
+      "path": "artifacts/policy-teacher/dev-3p-600002.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600003,
+      "count": 4,
+      "path": "artifacts/policy-teacher/dev-4p-600003.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600004,
+      "count": 5,
+      "path": "artifacts/policy-teacher/dev-5p-600004.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600005,
+      "count": 2,
+      "path": "artifacts/policy-teacher/dev-2p-600005.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600006,
+      "count": 3,
+      "path": "artifacts/policy-teacher/dev-3p-600006.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600007,
+      "count": 4,
+      "path": "artifacts/policy-teacher/dev-4p-600007.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600008,
+      "count": 5,
+      "path": "artifacts/policy-teacher/dev-5p-600008.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600009,
+      "count": 2,
+      "path": "artifacts/policy-teacher/dev-2p-600009.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600010,
+      "count": 3,
+      "path": "artifacts/policy-teacher/dev-3p-600010.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600011,
+      "count": 4,
+      "path": "artifacts/policy-teacher/dev-4p-600011.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600012,
+      "count": 5,
+      "path": "artifacts/policy-teacher/dev-5p-600012.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600013,
+      "count": 2,
+      "path": "artifacts/policy-teacher/dev-2p-600013.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600014,
+      "count": 3,
+      "path": "artifacts/policy-teacher/dev-3p-600014.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600015,
+      "count": 4,
+      "path": "artifacts/policy-teacher/dev-4p-600015.json"
+    },
+    {
+      "split": "dev",
+      "seed": 600016,
+      "count": 5,
+      "path": "artifacts/policy-teacher/dev-5p-600016.json"
+    }
+  ]
+}

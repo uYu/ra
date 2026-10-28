@@ -1,0 +1,80 @@
+{
+  "wins": 27,
+  "games": 84,
+  "referenceWins": 24,
+  "bySeed": [
+    7,
+    5,
+    6,
+    2,
+    1,
+    6
+  ],
+  "interval": [
+    0.19047619047619047,
+    0.44047619047619047
+  ],
+  "byCount": [
+    {
+      "count": 2,
+      "games": 12,
+      "wins": 6,
+      "meanRank": 1.5,
+      "meanMargin": -3.4166666666666665
+    },
+    {
+      "count": 3,
+      "games": 18,
+      "wins": 9,
+      "meanRank": 1.7222222222222223,
+      "meanMargin": -4
+    },
+    {
+      "count": 4,
+      "games": 24,
+      "wins": 6,
+      "meanRank": 2.5,
+      "meanMargin": -7.458333333333333
+    },
+    {
+      "count": 5,
+      "games": 30,
+      "wins": 6,
+      "meanRank": 2.9,
+      "meanMargin": -8.933333333333334
+    }
+  ],
+  "sides": [
+    {
+      "side": "candidate",
+      "searched": 6467,
+      "meanSearchMs": 201.0572877450133,
+      "samplesPerSearch": 1074.6825421370033,
+      "transitionsPerSearch": 23026.89253131282,
+      "truncated": 0,
+      "over210ms": 7
+    },
+    {
+      "side": "opponent",
+      "searched": 18678,
+      "meanSearchMs": 200.96686055460938,
+      "samplesPerSearch": 1147.4136952564515,
+      "transitionsPerSearch": 22179.641182139414,
+      "truncated": 0,
+      "over210ms": 12
+    }
+  ],
+  "verifiedTeacherGames": 80,
+  "verifiedValidationReplays": 84,
+  "savedValidationDecisions": 28290,
+  "development": {
+    "n": 4410,
+    "crossEntropy": 0.8101950313299063,
+    "kl": 0.05098678670911432,
+    "accuracy": 0.7723356009070295,
+    "baselineAccuracy": 0.7170068027210884,
+    "teacherVisitMassOfSelected": 0.5843002060352672
+  },
+  "modelSha256": "c29124039d3350b6f44dd8163cdd7f76640154679cc1c39abf16a5e52c3bae19",
+  "defaultChanged": false
+}

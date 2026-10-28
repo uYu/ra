@@ -1,0 +1,161 @@
+.game-shell {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 8px 12px 0;
+}
+.game-shell > .game-screen.table-fit {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+.game-navigation {
+  position: sticky;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: min(570px, calc(100dvh - 16px));
+  max-height: calc(100dvh - 16px);
+  overflow-y: auto;
+  padding: 10px 6px;
+  border: 1px solid #c9b887;
+  border-radius: 6px;
+  background: #eee5cf;
+  color: #294852;
+}
+.game-navigation-brand {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  padding: 2px 0 12px;
+}
+.game-navigation-brand .sun-emblem {
+  width: 30px;
+  height: 30px;
+}
+.game-navigation-brand b {
+  font:
+    24px/26px Georgia,
+    serif;
+  letter-spacing: 3px;
+}
+.game-navigation-brand > span {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.game-navigation-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.game-navigation-links > button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 51px;
+  padding: 7px 2px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 15px;
+  white-space: nowrap;
+  color: #34515a;
+  background: #f8f2e3;
+}
+.game-navigation-links > button svg {
+  width: 19px;
+  height: 19px;
+}
+.game-navigation-links > .nav-home {
+  background: #eacb80;
+  border-color: #bea05b;
+  color: #5e4727;
+  font-weight: 600;
+}
+.game-navigation-links > button:hover {
+  background: #f5dfa7;
+  border-color: #c3a667;
+}
+.game-navigation-links > button:focus-visible {
+  outline: 2px solid #285b6a;
+  outline-offset: 2px;
+}
+.game-navigation-links > button[aria-pressed="true"] {
+  background: #d8e7dd;
+  border-color: #82a792;
+}
+.game-navigation-divider {
+  height: 1px;
+  margin: 5px 4px;
+  background: #cbbb94;
+}
+.game-navigation-save {
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  color: #78836d;
+  white-space: nowrap;
+}
+.game-navigation-save i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #59856c;
+}
+.game-shell .table-fit .table-heading {
+  margin-bottom: 5px;
+}
+.game-shell .table-fit .table-main {
+  gap: 6px;
+}
+.game-shell .table-fit .mat-board {
+  row-gap: 3px;
+}
+@media (max-width: 650px) {
+  .game-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 6px;
+  }
+  .game-navigation {
+    position: static;
+    width: 100%;
+    min-height: 0;
+    max-height: none;
+    padding: 5px;
+    overflow: visible;
+  }
+  .game-navigation-brand,
+  .game-navigation-save,
+  .game-navigation-divider {
+    display: none;
+  }
+  .game-navigation-links {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 3px;
+  }
+  .game-navigation-links > button {
+    min-height: 48px;
+    padding: 4px 1px;
+    font-size: 9px;
+    gap: 4px;
+  }
+  .game-navigation-links > button svg {
+    width: 17px;
+    height: 17px;
+  }
+}

@@ -1,0 +1,2975 @@
+{
+  "status": "complete",
+  "split": "validation",
+  "candidate": {
+    "horizon": "next-epoch",
+    "samples": 32
+  },
+  "opponent": {
+    "horizon": "epoch",
+    "samples": 32
+  },
+  "seedStart": 12001,
+  "seeds": 6,
+  "counts": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "allSeats": true,
+  "plannedGames": 84,
+  "finishedGames": 84,
+  "workers": 3,
+  "sourceSha256": "ddd5ea55b96d10ce501e8e2119338e27adcf36714880c0cd4240b34f26ab2832",
+  "wasmSha256": "d79bae1c690cdc94afa6c67648aac170dd6eea6a3207b0b5a0e7036463ef7e80",
+  "summary": [
+    {
+      "count": 2,
+      "games": 12,
+      "wins": 4,
+      "winRate": 0.3333333333333333,
+      "equalStrengthReference": 0.5,
+      "meanRank": 1.6666666666666667,
+      "meanMargin": -9.5
+    },
+    {
+      "count": 3,
+      "games": 18,
+      "wins": 3,
+      "winRate": 0.16666666666666666,
+      "equalStrengthReference": 0.3333333333333333,
+      "meanRank": 2.1666666666666665,
+      "meanMargin": -13.444444444444445
+    },
+    {
+      "count": 4,
+      "games": 24,
+      "wins": 10,
+      "winRate": 0.4166666666666667,
+      "equalStrengthReference": 0.25,
+      "meanRank": 2.2083333333333335,
+      "meanMargin": -9.291666666666666
+    },
+    {
+      "count": 5,
+      "games": 30,
+      "wins": 5,
+      "winRate": 0.16666666666666666,
+      "equalStrengthReference": 0.2,
+      "meanRank": 3,
+      "meanMargin": -9.166666666666666
+    }
+  ],
+  "bySeed": [
+    {
+      "seed": 12001,
+      "games": 14,
+      "wins": 3
+    },
+    {
+      "seed": 12002,
+      "games": 14,
+      "wins": 3
+    },
+    {
+      "seed": 12003,
+      "games": 14,
+      "wins": 5
+    },
+    {
+      "seed": 12004,
+      "games": 14,
+      "wins": 3
+    },
+    {
+      "seed": 12005,
+      "games": 14,
+      "wins": 5
+    },
+    {
+      "seed": 12006,
+      "games": 14,
+      "wins": 3
+    }
+  ],
+  "costSummary": [
+    {
+      "variant": "epoch32",
+      "positions": 24,
+      "totalMs": 1297.9051230000005,
+      "medianMs": 37.55833399999983,
+      "p95Ms": 116.74091600000065,
+      "simulations": 1920,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "positions": 24,
+      "totalMs": 2222.4580019999994,
+      "medianMs": 72.9442499999999,
+      "p95Ms": 203.3698330000002,
+      "simulations": 1920,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "positions": 24,
+      "totalMs": 2579.0991269999995,
+      "medianMs": 75.8337919999999,
+      "p95Ms": 234.7882499999996,
+      "simulations": 3840,
+      "truncated": 0
+    }
+  ],
+  "costs": [
+    {
+      "variant": "epoch32",
+      "position": 0,
+      "ms": 15.35283299999999,
+      "samples": 64,
+      "transitions": 3401,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 0,
+      "ms": 32.835125000000005,
+      "samples": 64,
+      "transitions": 7197,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 0,
+      "ms": 29.904291999999998,
+      "samples": 128,
+      "transitions": 6888,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 1,
+      "ms": 28.471666999999997,
+      "samples": 64,
+      "transitions": 6411,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 1,
+      "ms": 21.608041000000014,
+      "samples": 128,
+      "transitions": 5280,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 1,
+      "ms": 10.668416999999977,
+      "samples": 64,
+      "transitions": 2638,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 2,
+      "ms": 34.32662499999998,
+      "samples": 128,
+      "transitions": 7612,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 2,
+      "ms": 16.84566699999999,
+      "samples": 64,
+      "transitions": 3800,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 2,
+      "ms": 30.746542000000034,
+      "samples": 64,
+      "transitions": 7842,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 3,
+      "ms": 31.734666000000004,
+      "samples": 160,
+      "transitions": 7344,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 3,
+      "ms": 67.04725000000002,
+      "samples": 160,
+      "transitions": 17594,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 3,
+      "ms": 62.27249999999998,
+      "samples": 320,
+      "transitions": 14486,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 4,
+      "ms": 19.001999999999953,
+      "samples": 96,
+      "transitions": 5950,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 4,
+      "ms": 36.82375000000002,
+      "samples": 192,
+      "transitions": 11695,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 4,
+      "ms": 19.077541999999994,
+      "samples": 96,
+      "transitions": 5950,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 5,
+      "ms": 21.485584000000017,
+      "samples": 128,
+      "transitions": 7019,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 5,
+      "ms": 10.144874999999956,
+      "samples": 64,
+      "transitions": 3381,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 5,
+      "ms": 10.253582999999935,
+      "samples": 64,
+      "transitions": 3381,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 6,
+      "ms": 38.25483399999996,
+      "samples": 64,
+      "transitions": 5787,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 6,
+      "ms": 82.720958,
+      "samples": 64,
+      "transitions": 11982,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 6,
+      "ms": 75.8337919999999,
+      "samples": 128,
+      "transitions": 11478,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 7,
+      "ms": 72.9442499999999,
+      "samples": 64,
+      "transitions": 10897,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 7,
+      "ms": 61.730083000000036,
+      "samples": 128,
+      "transitions": 10032,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 7,
+      "ms": 31.26683300000002,
+      "samples": 64,
+      "transitions": 4933,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 8,
+      "ms": 71.39924999999994,
+      "samples": 128,
+      "transitions": 10856,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 8,
+      "ms": 35.04774999999995,
+      "samples": 64,
+      "transitions": 5318,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 8,
+      "ms": 65.64087500000005,
+      "samples": 64,
+      "transitions": 11557,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 9,
+      "ms": 35.25504100000012,
+      "samples": 64,
+      "transitions": 5314,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 9,
+      "ms": 62.255292000000054,
+      "samples": 64,
+      "transitions": 11157,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 9,
+      "ms": 66.86300000000006,
+      "samples": 128,
+      "transitions": 10411,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 10,
+      "ms": 25.747250000000122,
+      "samples": 64,
+      "transitions": 5451,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 10,
+      "ms": 51.13149999999996,
+      "samples": 128,
+      "transitions": 10939,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 10,
+      "ms": 25.95245799999998,
+      "samples": 64,
+      "transitions": 5451,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 11,
+      "ms": 48.16583300000002,
+      "samples": 128,
+      "transitions": 9808,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 11,
+      "ms": 24.24345799999992,
+      "samples": 64,
+      "transitions": 5075,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 11,
+      "ms": 24.99929199999997,
+      "samples": 64,
+      "transitions": 5075,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 12,
+      "ms": 47.27191600000015,
+      "samples": 64,
+      "transitions": 6470,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 12,
+      "ms": 102.40158400000018,
+      "samples": 64,
+      "transitions": 13689,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 12,
+      "ms": 95.04387500000007,
+      "samples": 128,
+      "transitions": 13178,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 13,
+      "ms": 203.3698330000002,
+      "samples": 128,
+      "transitions": 27129,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 13,
+      "ms": 191.12408400000004,
+      "samples": 256,
+      "transitions": 26694,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 13,
+      "ms": 97.73512500000015,
+      "samples": 128,
+      "transitions": 13644,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 14,
+      "ms": 119.49337500000001,
+      "samples": 128,
+      "transitions": 14733,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 14,
+      "ms": 61.005707999999686,
+      "samples": 64,
+      "transitions": 7538,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 14,
+      "ms": 103.81595800000014,
+      "samples": 64,
+      "transitions": 14875,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 15,
+      "ms": 55.60070900000028,
+      "samples": 64,
+      "transitions": 6959,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 15,
+      "ms": 99.86649999999963,
+      "samples": 64,
+      "transitions": 14366,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 15,
+      "ms": 109.24770899999976,
+      "samples": 128,
+      "transitions": 14041,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 16,
+      "ms": 38.48770799999966,
+      "samples": 64,
+      "transitions": 6901,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 16,
+      "ms": 76.18812500000013,
+      "samples": 128,
+      "transitions": 13765,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 16,
+      "ms": 37.55833399999983,
+      "samples": 64,
+      "transitions": 6901,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 17,
+      "ms": 60.3641249999996,
+      "samples": 128,
+      "transitions": 12359,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 17,
+      "ms": 30.702999999999975,
+      "samples": 64,
+      "transitions": 6089,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 17,
+      "ms": 30.756333999999697,
+      "samples": 64,
+      "transitions": 6089,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 18,
+      "ms": 91.98250000000007,
+      "samples": 64,
+      "transitions": 8781,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 18,
+      "ms": 195.00774999999976,
+      "samples": 64,
+      "transitions": 18021,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 18,
+      "ms": 180.7917080000002,
+      "samples": 128,
+      "transitions": 17622,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 19,
+      "ms": 376.06737499999963,
+      "samples": 128,
+      "transitions": 34677,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 19,
+      "ms": 346.8607920000004,
+      "samples": 256,
+      "transitions": 33277,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 19,
+      "ms": 171.58237499999996,
+      "samples": 128,
+      "transitions": 16784,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 20,
+      "ms": 198.91141699999935,
+      "samples": 128,
+      "transitions": 18789,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 20,
+      "ms": 98.84679099999994,
+      "samples": 64,
+      "transitions": 9365,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 20,
+      "ms": 169.59937499999978,
+      "samples": 64,
+      "transitions": 18683,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 21,
+      "ms": 85.72520799999984,
+      "samples": 64,
+      "transitions": 8943,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 21,
+      "ms": 153.78779200000008,
+      "samples": 64,
+      "transitions": 18152,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 21,
+      "ms": 172.97962499999994,
+      "samples": 128,
+      "transitions": 17928,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 22,
+      "ms": 117.46150000000034,
+      "samples": 128,
+      "transitions": 15292,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 22,
+      "ms": 234.7882499999996,
+      "samples": 256,
+      "transitions": 30708,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 22,
+      "ms": 116.74091600000065,
+      "samples": 128,
+      "transitions": 15292,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch64",
+      "position": 23,
+      "ms": 211.76179200000024,
+      "samples": 256,
+      "transitions": 27943,
+      "truncated": 0
+    },
+    {
+      "variant": "epoch32",
+      "position": 23,
+      "ms": 109.30816700000014,
+      "samples": 128,
+      "transitions": 14085,
+      "truncated": 0
+    },
+    {
+      "variant": "next32",
+      "position": 23,
+      "ms": 109.1722090000003,
+      "samples": 128,
+      "transitions": 14085,
+      "truncated": 0
+    }
+  ],
+  "games": [
+    {
+      "count": 2,
+      "seed": 12001,
+      "seat": 0,
+      "rank": 2,
+      "score": 23,
+      "margin": -5,
+      "steps": 144,
+      "stats": {
+        "candidate": {
+          "ms": 899.0983319999987,
+          "decisions": 60,
+          "samples": 4064,
+          "transitions": 219302,
+          "truncated": 0,
+          "epochAdvances": 1376
+        },
+        "opponent": {
+          "ms": 711.7968729999975,
+          "decisions": 84,
+          "samples": 6496,
+          "transitions": 182000,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12001,
+      "seat": 1,
+      "rank": 2,
+      "score": 18,
+      "margin": -27,
+      "steps": 146,
+      "stats": {
+        "candidate": {
+          "ms": 1510.2728300000008,
+          "decisions": 59,
+          "samples": 4416,
+          "transitions": 351142,
+          "truncated": 0,
+          "epochAdvances": 3136
+        },
+        "opponent": {
+          "ms": 681.6606669999974,
+          "decisions": 87,
+          "samples": 6208,
+          "transitions": 169382,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12001,
+      "seat": 0,
+      "rank": 2,
+      "score": 30,
+      "margin": -19,
+      "steps": 235,
+      "stats": {
+        "candidate": {
+          "ms": 4208.7522480000025,
+          "decisions": 73,
+          "samples": 5664,
+          "transitions": 705722,
+          "truncated": 0,
+          "epochAdvances": 3584
+        },
+        "opponent": {
+          "ms": 4528.526420000005,
+          "decisions": 162,
+          "samples": 13344,
+          "transitions": 757146,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12001,
+      "seat": 1,
+      "rank": 1,
+      "score": 34,
+      "margin": 1,
+      "steps": 235,
+      "stats": {
+        "candidate": {
+          "ms": 4559.678372999998,
+          "decisions": 75,
+          "samples": 5504,
+          "transitions": 771390,
+          "truncated": 0,
+          "epochAdvances": 4160
+        },
+        "opponent": {
+          "ms": 3974.6394570000057,
+          "decisions": 160,
+          "samples": 12672,
+          "transitions": 706903,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12001,
+      "seat": 2,
+      "rank": 3,
+      "score": 10,
+      "margin": -30,
+      "steps": 239,
+      "stats": {
+        "candidate": {
+          "ms": 5458.012255000003,
+          "decisions": 77,
+          "samples": 7232,
+          "transitions": 931851,
+          "truncated": 0,
+          "epochAdvances": 4960
+        },
+        "opponent": {
+          "ms": 4357.3029510000015,
+          "decisions": 162,
+          "samples": 13248,
+          "transitions": 757243,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12001,
+      "seat": 0,
+      "rank": 3,
+      "score": 26,
+      "margin": -20,
+      "steps": 322,
+      "stats": {
+        "candidate": {
+          "ms": 4762.68641900002,
+          "decisions": 78,
+          "samples": 5536,
+          "transitions": 725035,
+          "truncated": 0,
+          "epochAdvances": 2976
+        },
+        "opponent": {
+          "ms": 6648.741714000027,
+          "decisions": 244,
+          "samples": 16256,
+          "transitions": 1044669,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12001,
+      "seat": 1,
+      "rank": 1,
+      "score": 41,
+      "margin": 2,
+      "steps": 316,
+      "stats": {
+        "candidate": {
+          "ms": 5491.536585000009,
+          "decisions": 72,
+          "samples": 5536,
+          "transitions": 864704,
+          "truncated": 0,
+          "epochAdvances": 4352
+        },
+        "opponent": {
+          "ms": 6265.947960999991,
+          "decisions": 244,
+          "samples": 17152,
+          "transitions": 1026818,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12001,
+      "seat": 2,
+      "rank": 2,
+      "score": 33,
+      "margin": -10,
+      "steps": 350,
+      "stats": {
+        "candidate": {
+          "ms": 7385.408705999973,
+          "decisions": 117,
+          "samples": 9248,
+          "transitions": 1158039,
+          "truncated": 0,
+          "epochAdvances": 5824
+        },
+        "opponent": {
+          "ms": 6882.071461000029,
+          "decisions": 233,
+          "samples": 16096,
+          "transitions": 1102821,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12001,
+      "seat": 3,
+      "rank": 4,
+      "score": 22,
+      "margin": -21,
+      "steps": 336,
+      "stats": {
+        "candidate": {
+          "ms": 6120.22262199999,
+          "decisions": 83,
+          "samples": 5984,
+          "transitions": 832358,
+          "truncated": 0,
+          "epochAdvances": 3584
+        },
+        "opponent": {
+          "ms": 8214.682539000085,
+          "decisions": 253,
+          "samples": 17760,
+          "transitions": 1169947,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12001,
+      "seat": 0,
+      "rank": 1,
+      "score": 37,
+      "margin": 0,
+      "steps": 398,
+      "stats": {
+        "candidate": {
+          "ms": 10272.615038999982,
+          "decisions": 63,
+          "samples": 5056,
+          "transitions": 1007982,
+          "truncated": 0,
+          "epochAdvances": 3328
+        },
+        "opponent": {
+          "ms": 18061.153786999985,
+          "decisions": 335,
+          "samples": 23456,
+          "transitions": 1938235,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12001,
+      "seat": 1,
+      "rank": 2,
+      "score": 36,
+      "margin": -11,
+      "steps": 395,
+      "stats": {
+        "candidate": {
+          "ms": 9322.012499999997,
+          "decisions": 71,
+          "samples": 4672,
+          "transitions": 907973,
+          "truncated": 0,
+          "epochAdvances": 3008
+        },
+        "opponent": {
+          "ms": 18474.36708099993,
+          "decisions": 324,
+          "samples": 24192,
+          "transitions": 1988682,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12001,
+      "seat": 2,
+      "rank": 4,
+      "score": 26,
+      "margin": -5,
+      "steps": 405,
+      "stats": {
+        "candidate": {
+          "ms": 11171.445415000002,
+          "decisions": 64,
+          "samples": 4768,
+          "transitions": 1028977,
+          "truncated": 0,
+          "epochAdvances": 3744
+        },
+        "opponent": {
+          "ms": 20141.791999000096,
+          "decisions": 341,
+          "samples": 25856,
+          "transitions": 2123017,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12001,
+      "seat": 3,
+      "rank": 2,
+      "score": 36,
+      "margin": -9,
+      "steps": 420,
+      "stats": {
+        "candidate": {
+          "ms": 8779.044459999932,
+          "decisions": 52,
+          "samples": 3776,
+          "transitions": 813225,
+          "truncated": 0,
+          "epochAdvances": 2752
+        },
+        "opponent": {
+          "ms": 19400.050674000166,
+          "decisions": 368,
+          "samples": 25984,
+          "transitions": 2109358,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12001,
+      "seat": 4,
+      "rank": 2,
+      "score": 30,
+      "margin": -5,
+      "steps": 421,
+      "stats": {
+        "candidate": {
+          "ms": 9285.929625000026,
+          "decisions": 62,
+          "samples": 4576,
+          "transitions": 900282,
+          "truncated": 0,
+          "epochAdvances": 2944
+        },
+        "opponent": {
+          "ms": 18637.213204000036,
+          "decisions": 359,
+          "samples": 25152,
+          "transitions": 2049908,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12002,
+      "seat": 0,
+      "rank": 1,
+      "score": 62,
+      "margin": 6,
+      "steps": 184,
+      "stats": {
+        "candidate": {
+          "ms": 2198.945752000014,
+          "decisions": 93,
+          "samples": 6176,
+          "transitions": 453711,
+          "truncated": 0,
+          "epochAdvances": 4288
+        },
+        "opponent": {
+          "ms": 1179.786499999842,
+          "decisions": 91,
+          "samples": 7552,
+          "transitions": 251682,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12002,
+      "seat": 1,
+      "rank": 2,
+      "score": 51,
+      "margin": -18,
+      "steps": 179,
+      "stats": {
+        "candidate": {
+          "ms": 1704.6977500000212,
+          "decisions": 56,
+          "samples": 4576,
+          "transitions": 366936,
+          "truncated": 0,
+          "epochAdvances": 3008
+        },
+        "opponent": {
+          "ms": 974.1137540000054,
+          "decisions": 123,
+          "samples": 9216,
+          "transitions": 222137,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12002,
+      "seat": 0,
+      "rank": 3,
+      "score": 39,
+      "margin": -12,
+      "steps": 290,
+      "stats": {
+        "candidate": {
+          "ms": 5618.844999000037,
+          "decisions": 96,
+          "samples": 7744,
+          "transitions": 859504,
+          "truncated": 0,
+          "epochAdvances": 4512
+        },
+        "opponent": {
+          "ms": 5366.777831000014,
+          "decisions": 194,
+          "samples": 15552,
+          "transitions": 852101,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12002,
+      "seat": 1,
+      "rank": 2,
+      "score": 36,
+      "margin": -9,
+      "steps": 267,
+      "stats": {
+        "candidate": {
+          "ms": 4292.0572509999765,
+          "decisions": 61,
+          "samples": 4704,
+          "transitions": 647359,
+          "truncated": 0,
+          "epochAdvances": 3232
+        },
+        "opponent": {
+          "ms": 5038.234335000205,
+          "decisions": 206,
+          "samples": 16128,
+          "transitions": 817293,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12002,
+      "seat": 2,
+      "rank": 2,
+      "score": 34,
+      "margin": -25,
+      "steps": 289,
+      "stats": {
+        "candidate": {
+          "ms": 5683.554044999968,
+          "decisions": 78,
+          "samples": 6464,
+          "transitions": 798874,
+          "truncated": 0,
+          "epochAdvances": 3872
+        },
+        "opponent": {
+          "ms": 6149.280927000073,
+          "decisions": 211,
+          "samples": 17088,
+          "transitions": 872232,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12002,
+      "seat": 0,
+      "rank": 3,
+      "score": 27,
+      "margin": -16,
+      "steps": 323,
+      "stats": {
+        "candidate": {
+          "ms": 4476.108708999993,
+          "decisions": 54,
+          "samples": 4320,
+          "transitions": 559956,
+          "truncated": 0,
+          "epochAdvances": 2144
+        },
+        "opponent": {
+          "ms": 8990.640423000063,
+          "decisions": 269,
+          "samples": 19552,
+          "transitions": 1164778,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12002,
+      "seat": 1,
+      "rank": 4,
+      "score": 13,
+      "margin": -36,
+      "steps": 312,
+      "stats": {
+        "candidate": {
+          "ms": 7183.381412999966,
+          "decisions": 81,
+          "samples": 5760,
+          "transitions": 776907,
+          "truncated": 0,
+          "epochAdvances": 3776
+        },
+        "opponent": {
+          "ms": 8905.690754999916,
+          "decisions": 231,
+          "samples": 16928,
+          "transitions": 1035374,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12002,
+      "seat": 2,
+      "rank": 1,
+      "score": 38,
+      "margin": 4,
+      "steps": 309,
+      "stats": {
+        "candidate": {
+          "ms": 8697.755126000004,
+          "decisions": 80,
+          "samples": 6688,
+          "transitions": 937613,
+          "truncated": 0,
+          "epochAdvances": 4672
+        },
+        "opponent": {
+          "ms": 8508.84204399999,
+          "decisions": 229,
+          "samples": 15648,
+          "transitions": 975723,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12002,
+      "seat": 3,
+      "rank": 1,
+      "score": 40,
+      "margin": 8,
+      "steps": 334,
+      "stats": {
+        "candidate": {
+          "ms": 8715.150248000034,
+          "decisions": 88,
+          "samples": 6784,
+          "transitions": 916066,
+          "truncated": 0,
+          "epochAdvances": 4448
+        },
+        "opponent": {
+          "ms": 9805.25416500005,
+          "decisions": 246,
+          "samples": 18112,
+          "transitions": 1121779,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12002,
+      "seat": 0,
+      "rank": 4,
+      "score": 29,
+      "margin": -10,
+      "steps": 435,
+      "stats": {
+        "candidate": {
+          "ms": 11079.014666999909,
+          "decisions": 70,
+          "samples": 5184,
+          "transitions": 869301,
+          "truncated": 0,
+          "epochAdvances": 2688
+        },
+        "opponent": {
+          "ms": 24425.96628400004,
+          "decisions": 365,
+          "samples": 26368,
+          "transitions": 2118460,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12002,
+      "seat": 1,
+      "rank": 5,
+      "score": 22,
+      "margin": -20,
+      "steps": 435,
+      "stats": {
+        "candidate": {
+          "ms": 15802.01124200008,
+          "decisions": 86,
+          "samples": 6336,
+          "transitions": 1192600,
+          "truncated": 0,
+          "epochAdvances": 4736
+        },
+        "opponent": {
+          "ms": 21320.342587000225,
+          "decisions": 349,
+          "samples": 24000,
+          "transitions": 1877951,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12002,
+      "seat": 2,
+      "rank": 4,
+      "score": 27,
+      "margin": -15,
+      "steps": 446,
+      "stats": {
+        "candidate": {
+          "ms": 14977.635541000127,
+          "decisions": 110,
+          "samples": 7712,
+          "transitions": 1176859,
+          "truncated": 0,
+          "epochAdvances": 4096
+        },
+        "opponent": {
+          "ms": 24391.59104399987,
+          "decisions": 336,
+          "samples": 25408,
+          "transitions": 2145607,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12002,
+      "seat": 3,
+      "rank": 3,
+      "score": 28,
+      "margin": -9,
+      "steps": 442,
+      "stats": {
+        "candidate": {
+          "ms": 12807.139874999993,
+          "decisions": 83,
+          "samples": 5952,
+          "transitions": 1037828,
+          "truncated": 0,
+          "epochAdvances": 3360
+        },
+        "opponent": {
+          "ms": 23719.23262099971,
+          "decisions": 359,
+          "samples": 25408,
+          "transitions": 2120420,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12002,
+      "seat": 4,
+      "rank": 3,
+      "score": 31,
+      "margin": -16,
+      "steps": 444,
+      "stats": {
+        "candidate": {
+          "ms": 12145.172332000075,
+          "decisions": 92,
+          "samples": 6272,
+          "transitions": 956049,
+          "truncated": 0,
+          "epochAdvances": 3232
+        },
+        "opponent": {
+          "ms": 23658.983001000364,
+          "decisions": 352,
+          "samples": 26400,
+          "transitions": 2141030,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12003,
+      "seat": 0,
+      "rank": 1,
+      "score": 56,
+      "margin": 35,
+      "steps": 165,
+      "stats": {
+        "candidate": {
+          "ms": 2542.4173740000406,
+          "decisions": 105,
+          "samples": 7968,
+          "transitions": 442694,
+          "truncated": 0,
+          "epochAdvances": 3968
+        },
+        "opponent": {
+          "ms": 913.9500419998367,
+          "decisions": 60,
+          "samples": 4640,
+          "transitions": 168195,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12003,
+      "seat": 1,
+      "rank": 2,
+      "score": 28,
+      "margin": -24,
+      "steps": 163,
+      "stats": {
+        "candidate": {
+          "ms": 2562.2802929998434,
+          "decisions": 76,
+          "samples": 6368,
+          "transitions": 431392,
+          "truncated": 0,
+          "epochAdvances": 3840
+        },
+        "opponent": {
+          "ms": 977.5848739998182,
+          "decisions": 87,
+          "samples": 5696,
+          "transitions": 169275,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12003,
+      "seat": 0,
+      "rank": 3,
+      "score": 25,
+      "margin": -32,
+      "steps": 269,
+      "stats": {
+        "candidate": {
+          "ms": 5173.725541999971,
+          "decisions": 67,
+          "samples": 5152,
+          "transitions": 626022,
+          "truncated": 0,
+          "epochAdvances": 3552
+        },
+        "opponent": {
+          "ms": 4591.739961999905,
+          "decisions": 202,
+          "samples": 14176,
+          "transitions": 625956,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12003,
+      "seat": 1,
+      "rank": 2,
+      "score": 42,
+      "margin": -15,
+      "steps": 279,
+      "stats": {
+        "candidate": {
+          "ms": 5628.414667999808,
+          "decisions": 84,
+          "samples": 6336,
+          "transitions": 696107,
+          "truncated": 0,
+          "epochAdvances": 3776
+        },
+        "opponent": {
+          "ms": 4847.897755000216,
+          "decisions": 195,
+          "samples": 13760,
+          "transitions": 631993,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12003,
+      "seat": 2,
+      "rank": 1,
+      "score": 44,
+      "margin": 11,
+      "steps": 286,
+      "stats": {
+        "candidate": {
+          "ms": 6694.162333000073,
+          "decisions": 101,
+          "samples": 7744,
+          "transitions": 814326,
+          "truncated": 0,
+          "epochAdvances": 4736
+        },
+        "opponent": {
+          "ms": 4961.713421999797,
+          "decisions": 185,
+          "samples": 13504,
+          "transitions": 669429,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12003,
+      "seat": 0,
+      "rank": 4,
+      "score": 25,
+      "margin": -17,
+      "steps": 341,
+      "stats": {
+        "candidate": {
+          "ms": 7004.371291000047,
+          "decisions": 72,
+          "samples": 4992,
+          "transitions": 766768,
+          "truncated": 0,
+          "epochAdvances": 3424
+        },
+        "opponent": {
+          "ms": 9895.305376000091,
+          "decisions": 269,
+          "samples": 18272,
+          "transitions": 1144255,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12003,
+      "seat": 1,
+      "rank": 1,
+      "score": 42,
+      "margin": 8,
+      "steps": 341,
+      "stats": {
+        "candidate": {
+          "ms": 8070.456456999993,
+          "decisions": 93,
+          "samples": 6656,
+          "transitions": 906911,
+          "truncated": 0,
+          "epochAdvances": 4352
+        },
+        "opponent": {
+          "ms": 8794.8939639999,
+          "decisions": 248,
+          "samples": 16736,
+          "transitions": 1031411,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12003,
+      "seat": 2,
+      "rank": 1,
+      "score": 44,
+      "margin": 11,
+      "steps": 345,
+      "stats": {
+        "candidate": {
+          "ms": 7342.945462000032,
+          "decisions": 80,
+          "samples": 5600,
+          "transitions": 756718,
+          "truncated": 0,
+          "epochAdvances": 3712
+        },
+        "opponent": {
+          "ms": 9279.249910999904,
+          "decisions": 265,
+          "samples": 19232,
+          "transitions": 1071076,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12003,
+      "seat": 3,
+      "rank": 3,
+      "score": 24,
+      "margin": -31,
+      "steps": 344,
+      "stats": {
+        "candidate": {
+          "ms": 7460.271374999924,
+          "decisions": 79,
+          "samples": 5888,
+          "transitions": 783453,
+          "truncated": 0,
+          "epochAdvances": 3712
+        },
+        "opponent": {
+          "ms": 9574.250921000028,
+          "decisions": 265,
+          "samples": 18752,
+          "transitions": 1057500,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12003,
+      "seat": 0,
+      "rank": 3,
+      "score": 31,
+      "margin": -17,
+      "steps": 451,
+      "stats": {
+        "candidate": {
+          "ms": 10482.10349399998,
+          "decisions": 67,
+          "samples": 4480,
+          "transitions": 823817,
+          "truncated": 0,
+          "epochAdvances": 2848
+        },
+        "opponent": {
+          "ms": 25336.068092000496,
+          "decisions": 384,
+          "samples": 28192,
+          "transitions": 2190005,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12003,
+      "seat": 1,
+      "rank": 1,
+      "score": 52,
+      "margin": 12,
+      "steps": 433,
+      "stats": {
+        "candidate": {
+          "ms": 15686.31821399997,
+          "decisions": 108,
+          "samples": 6976,
+          "transitions": 1158447,
+          "truncated": 0,
+          "epochAdvances": 4864
+        },
+        "opponent": {
+          "ms": 21127.918956000154,
+          "decisions": 325,
+          "samples": 22528,
+          "transitions": 1863595,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12003,
+      "seat": 2,
+      "rank": 2,
+      "score": 40,
+      "margin": -2,
+      "steps": 428,
+      "stats": {
+        "candidate": {
+          "ms": 11221.532548000105,
+          "decisions": 80,
+          "samples": 5376,
+          "transitions": 899578,
+          "truncated": 0,
+          "epochAdvances": 3232
+        },
+        "opponent": {
+          "ms": 21587.695128999912,
+          "decisions": 348,
+          "samples": 24640,
+          "transitions": 1886911,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12003,
+      "seat": 3,
+      "rank": 5,
+      "score": 23,
+      "margin": -16,
+      "steps": 415,
+      "stats": {
+        "candidate": {
+          "ms": 9915.015293000062,
+          "decisions": 52,
+          "samples": 3840,
+          "transitions": 799959,
+          "truncated": 0,
+          "epochAdvances": 3200
+        },
+        "opponent": {
+          "ms": 21220.594547999703,
+          "decisions": 363,
+          "samples": 26048,
+          "transitions": 1953054,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12003,
+      "seat": 4,
+      "rank": 2,
+      "score": 36,
+      "margin": -5,
+      "steps": 472,
+      "stats": {
+        "candidate": {
+          "ms": 11226.938704999484,
+          "decisions": 71,
+          "samples": 5312,
+          "transitions": 910200,
+          "truncated": 0,
+          "epochAdvances": 3072
+        },
+        "opponent": {
+          "ms": 23622.874619000562,
+          "decisions": 401,
+          "samples": 27616,
+          "transitions": 2106240,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12004,
+      "seat": 0,
+      "rank": 1,
+      "score": 45,
+      "margin": 4,
+      "steps": 162,
+      "stats": {
+        "candidate": {
+          "ms": 2860.0953730000474,
+          "decisions": 87,
+          "samples": 6336,
+          "transitions": 460449,
+          "truncated": 0,
+          "epochAdvances": 4736
+        },
+        "opponent": {
+          "ms": 1083.14662400019,
+          "decisions": 75,
+          "samples": 5440,
+          "transitions": 184231,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12004,
+      "seat": 1,
+      "rank": 2,
+      "score": 35,
+      "margin": -24,
+      "steps": 164,
+      "stats": {
+        "candidate": {
+          "ms": 2304.7104570000374,
+          "decisions": 73,
+          "samples": 5088,
+          "transitions": 380282,
+          "truncated": 0,
+          "epochAdvances": 3680
+        },
+        "opponent": {
+          "ms": 1057.7815830000618,
+          "decisions": 91,
+          "samples": 7040,
+          "transitions": 185532,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12004,
+      "seat": 0,
+      "rank": 3,
+      "score": 31,
+      "margin": -23,
+      "steps": 310,
+      "stats": {
+        "candidate": {
+          "ms": 6527.866422999708,
+          "decisions": 71,
+          "samples": 5280,
+          "transitions": 742465,
+          "truncated": 0,
+          "epochAdvances": 4096
+        },
+        "opponent": {
+          "ms": 6638.893995999941,
+          "decisions": 239,
+          "samples": 18720,
+          "transitions": 861335,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12004,
+      "seat": 1,
+      "rank": 3,
+      "score": 35,
+      "margin": -32,
+      "steps": 312,
+      "stats": {
+        "candidate": {
+          "ms": 7084.987293999759,
+          "decisions": 113,
+          "samples": 7840,
+          "transitions": 818938,
+          "truncated": 0,
+          "epochAdvances": 4480
+        },
+        "opponent": {
+          "ms": 5946.249875999871,
+          "decisions": 199,
+          "samples": 14912,
+          "transitions": 773403,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12004,
+      "seat": 2,
+      "rank": 2,
+      "score": 46,
+      "margin": -5,
+      "steps": 306,
+      "stats": {
+        "candidate": {
+          "ms": 6975.211576000205,
+          "decisions": 131,
+          "samples": 9312,
+          "transitions": 842296,
+          "truncated": 0,
+          "epochAdvances": 4352
+        },
+        "opponent": {
+          "ms": 6063.950876999472,
+          "decisions": 175,
+          "samples": 13856,
+          "transitions": 771899,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12004,
+      "seat": 0,
+      "rank": 3,
+      "score": 35,
+      "margin": -22,
+      "steps": 335,
+      "stats": {
+        "candidate": {
+          "ms": 6279.031960999884,
+          "decisions": 76,
+          "samples": 5280,
+          "transitions": 647304,
+          "truncated": 0,
+          "epochAdvances": 2912
+        },
+        "opponent": {
+          "ms": 8115.56041400024,
+          "decisions": 259,
+          "samples": 16640,
+          "transitions": 963848,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12004,
+      "seat": 1,
+      "rank": 2,
+      "score": 45,
+      "margin": -9,
+      "steps": 348,
+      "stats": {
+        "candidate": {
+          "ms": 8191.07000099984,
+          "decisions": 87,
+          "samples": 6272,
+          "transitions": 886403,
+          "truncated": 0,
+          "epochAdvances": 4256
+        },
+        "opponent": {
+          "ms": 8678.737583000213,
+          "decisions": 261,
+          "samples": 16544,
+          "transitions": 987911,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12004,
+      "seat": 2,
+      "rank": 2,
+      "score": 38,
+      "margin": -7,
+      "steps": 348,
+      "stats": {
+        "candidate": {
+          "ms": 8552.917204999889,
+          "decisions": 98,
+          "samples": 6720,
+          "transitions": 882408,
+          "truncated": 0,
+          "epochAdvances": 4320
+        },
+        "opponent": {
+          "ms": 9033.53479799931,
+          "decisions": 250,
+          "samples": 16576,
+          "transitions": 1016301,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12004,
+      "seat": 3,
+      "rank": 1,
+      "score": 44,
+      "margin": 5,
+      "steps": 329,
+      "stats": {
+        "candidate": {
+          "ms": 8133.145205000008,
+          "decisions": 83,
+          "samples": 6304,
+          "transitions": 855276,
+          "truncated": 0,
+          "epochAdvances": 4064
+        },
+        "opponent": {
+          "ms": 8715.972747000575,
+          "decisions": 246,
+          "samples": 17888,
+          "transitions": 1011293,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12004,
+      "seat": 0,
+      "rank": 2,
+      "score": 40,
+      "margin": -19,
+      "steps": 446,
+      "stats": {
+        "candidate": {
+          "ms": 9667.4384959999,
+          "decisions": 65,
+          "samples": 4128,
+          "transitions": 775457,
+          "truncated": 0,
+          "epochAdvances": 2720
+        },
+        "opponent": {
+          "ms": 21262.08475300047,
+          "decisions": 381,
+          "samples": 27808,
+          "transitions": 1967858,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12004,
+      "seat": 1,
+      "rank": 4,
+      "score": 28,
+      "margin": -22,
+      "steps": 455,
+      "stats": {
+        "candidate": {
+          "ms": 13462.946708000149,
+          "decisions": 98,
+          "samples": 6272,
+          "transitions": 1081826,
+          "truncated": 0,
+          "epochAdvances": 4384
+        },
+        "opponent": {
+          "ms": 19809.433833000134,
+          "decisions": 357,
+          "samples": 24992,
+          "transitions": 1834962,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12004,
+      "seat": 2,
+      "rank": 5,
+      "score": 27,
+      "margin": -20,
+      "steps": 440,
+      "stats": {
+        "candidate": {
+          "ms": 8213.069124999864,
+          "decisions": 50,
+          "samples": 3648,
+          "transitions": 666235,
+          "truncated": 0,
+          "epochAdvances": 2016
+        },
+        "opponent": {
+          "ms": 22096.43309200037,
+          "decisions": 390,
+          "samples": 27584,
+          "transitions": 2015226,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12004,
+      "seat": 3,
+      "rank": 3,
+      "score": 32,
+      "margin": -9,
+      "steps": 429,
+      "stats": {
+        "candidate": {
+          "ms": 12636.944501000165,
+          "decisions": 73,
+          "samples": 5728,
+          "transitions": 994673,
+          "truncated": 0,
+          "epochAdvances": 3552
+        },
+        "opponent": {
+          "ms": 21077.35829400015,
+          "decisions": 356,
+          "samples": 23712,
+          "transitions": 1827644,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12004,
+      "seat": 4,
+      "rank": 1,
+      "score": 53,
+      "margin": 17,
+      "steps": 432,
+      "stats": {
+        "candidate": {
+          "ms": 13510.848502999928,
+          "decisions": 92,
+          "samples": 6304,
+          "transitions": 1031442,
+          "truncated": 0,
+          "epochAdvances": 4096
+        },
+        "opponent": {
+          "ms": 20249.837351000577,
+          "decisions": 340,
+          "samples": 22688,
+          "transitions": 1720511,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12005,
+      "seat": 0,
+      "rank": 1,
+      "score": 41,
+      "margin": 2,
+      "steps": 175,
+      "stats": {
+        "candidate": {
+          "ms": 1929.9719169999007,
+          "decisions": 78,
+          "samples": 5888,
+          "transitions": 340671,
+          "truncated": 0,
+          "epochAdvances": 2912
+        },
+        "opponent": {
+          "ms": 1001.8720420002937,
+          "decisions": 97,
+          "samples": 7936,
+          "transitions": 190848,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12005,
+      "seat": 1,
+      "rank": 2,
+      "score": 29,
+      "margin": -32,
+      "steps": 182,
+      "stats": {
+        "candidate": {
+          "ms": 2522.2862140000216,
+          "decisions": 83,
+          "samples": 6400,
+          "transitions": 411529,
+          "truncated": 0,
+          "epochAdvances": 3840
+        },
+        "opponent": {
+          "ms": 1132.4382570000598,
+          "decisions": 99,
+          "samples": 7296,
+          "transitions": 195275,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12005,
+      "seat": 0,
+      "rank": 3,
+      "score": 34,
+      "margin": -18,
+      "steps": 276,
+      "stats": {
+        "candidate": {
+          "ms": 6378.8503239998245,
+          "decisions": 92,
+          "samples": 6944,
+          "transitions": 773146,
+          "truncated": 0,
+          "epochAdvances": 4096
+        },
+        "opponent": {
+          "ms": 5730.874038999958,
+          "decisions": 184,
+          "samples": 14048,
+          "transitions": 707786,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12005,
+      "seat": 1,
+      "rank": 1,
+      "score": 46,
+      "margin": 3,
+      "steps": 294,
+      "stats": {
+        "candidate": {
+          "ms": 7908.399711000151,
+          "decisions": 119,
+          "samples": 8736,
+          "transitions": 959929,
+          "truncated": 0,
+          "epochAdvances": 5792
+        },
+        "opponent": {
+          "ms": 6386.136621999845,
+          "decisions": 175,
+          "samples": 14016,
+          "transitions": 793397,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12005,
+      "seat": 2,
+      "rank": 2,
+      "score": 42,
+      "margin": -12,
+      "steps": 280,
+      "stats": {
+        "candidate": {
+          "ms": 6292.072543999355,
+          "decisions": 77,
+          "samples": 5824,
+          "transitions": 753550,
+          "truncated": 0,
+          "epochAdvances": 3936
+        },
+        "opponent": {
+          "ms": 6440.6968780001625,
+          "decisions": 203,
+          "samples": 16352,
+          "transitions": 825982,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12005,
+      "seat": 0,
+      "rank": 1,
+      "score": 44,
+      "margin": 1,
+      "steps": 350,
+      "stats": {
+        "candidate": {
+          "ms": 6331.855249000073,
+          "decisions": 59,
+          "samples": 4448,
+          "transitions": 675563,
+          "truncated": 0,
+          "epochAdvances": 3392
+        },
+        "opponent": {
+          "ms": 8748.857661999064,
+          "decisions": 291,
+          "samples": 20000,
+          "transitions": 1039498,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12005,
+      "seat": 1,
+      "rank": 4,
+      "score": 19,
+      "margin": -25,
+      "steps": 346,
+      "stats": {
+        "candidate": {
+          "ms": 4757.66037600016,
+          "decisions": 46,
+          "samples": 4000,
+          "transitions": 506127,
+          "truncated": 0,
+          "epochAdvances": 1920
+        },
+        "opponent": {
+          "ms": 8780.98138599965,
+          "decisions": 300,
+          "samples": 20672,
+          "transitions": 1074084,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12005,
+      "seat": 2,
+      "rank": 1,
+      "score": 39,
+      "margin": 3,
+      "steps": 340,
+      "stats": {
+        "candidate": {
+          "ms": 8250.632167999982,
+          "decisions": 105,
+          "samples": 7104,
+          "transitions": 899911,
+          "truncated": 0,
+          "epochAdvances": 5152
+        },
+        "opponent": {
+          "ms": 7780.874213999719,
+          "decisions": 235,
+          "samples": 15904,
+          "transitions": 926057,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12005,
+      "seat": 3,
+      "rank": 3,
+      "score": 29,
+      "margin": -22,
+      "steps": 341,
+      "stats": {
+        "candidate": {
+          "ms": 6633.166083999968,
+          "decisions": 71,
+          "samples": 5600,
+          "transitions": 768859,
+          "truncated": 0,
+          "epochAdvances": 4128
+        },
+        "opponent": {
+          "ms": 8375.530914000119,
+          "decisions": 270,
+          "samples": 18080,
+          "transitions": 978386,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12005,
+      "seat": 0,
+      "rank": 3,
+      "score": 30,
+      "margin": -8,
+      "steps": 413,
+      "stats": {
+        "candidate": {
+          "ms": 12685.8200810001,
+          "decisions": 99,
+          "samples": 6080,
+          "transitions": 1012272,
+          "truncated": 0,
+          "epochAdvances": 3968
+        },
+        "opponent": {
+          "ms": 21589.56025300012,
+          "decisions": 314,
+          "samples": 23872,
+          "transitions": 1935406,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12005,
+      "seat": 1,
+      "rank": 1,
+      "score": 35,
+      "margin": 1,
+      "steps": 425,
+      "stats": {
+        "candidate": {
+          "ms": 13559.65025200008,
+          "decisions": 100,
+          "samples": 7328,
+          "transitions": 1134661,
+          "truncated": 0,
+          "epochAdvances": 4032
+        },
+        "opponent": {
+          "ms": 21095.562627000152,
+          "decisions": 325,
+          "samples": 22848,
+          "transitions": 1897663,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12005,
+      "seat": 2,
+      "rank": 2,
+      "score": 34,
+      "margin": -17,
+      "steps": 447,
+      "stats": {
+        "candidate": {
+          "ms": 14779.199498999864,
+          "decisions": 85,
+          "samples": 6752,
+          "transitions": 1249624,
+          "truncated": 0,
+          "epochAdvances": 4704
+        },
+        "opponent": {
+          "ms": 21238.916332000575,
+          "decisions": 362,
+          "samples": 25152,
+          "transitions": 1953900,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12005,
+      "seat": 3,
+      "rank": 5,
+      "score": 29,
+      "margin": -14,
+      "steps": 414,
+      "stats": {
+        "candidate": {
+          "ms": 9868.636915000156,
+          "decisions": 63,
+          "samples": 4416,
+          "transitions": 822603,
+          "truncated": 0,
+          "epochAdvances": 2816
+        },
+        "opponent": {
+          "ms": 20879.203965999885,
+          "decisions": 351,
+          "samples": 25248,
+          "transitions": 1892156,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12005,
+      "seat": 4,
+      "rank": 4,
+      "score": 24,
+      "margin": -11,
+      "steps": 451,
+      "stats": {
+        "candidate": {
+          "ms": 13723.34720800008,
+          "decisions": 77,
+          "samples": 6208,
+          "transitions": 1129734,
+          "truncated": 0,
+          "epochAdvances": 4192
+        },
+        "opponent": {
+          "ms": 22847.639338000386,
+          "decisions": 374,
+          "samples": 27072,
+          "transitions": 2035657,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12006,
+      "seat": 0,
+      "rank": 2,
+      "score": 23,
+      "margin": -18,
+      "steps": 151,
+      "stats": {
+        "candidate": {
+          "ms": 1904.488164999697,
+          "decisions": 59,
+          "samples": 4128,
+          "transitions": 325115,
+          "truncated": 0,
+          "epochAdvances": 2720
+        },
+        "opponent": {
+          "ms": 1113.1428759999108,
+          "decisions": 92,
+          "samples": 7424,
+          "transitions": 206587,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 2,
+      "seed": 12006,
+      "seat": 1,
+      "rank": 2,
+      "score": 26,
+      "margin": -13,
+      "steps": 164,
+      "stats": {
+        "candidate": {
+          "ms": 2608.3446639998583,
+          "decisions": 81,
+          "samples": 5664,
+          "transitions": 458963,
+          "truncated": 0,
+          "epochAdvances": 4288
+        },
+        "opponent": {
+          "ms": 1079.283709000505,
+          "decisions": 83,
+          "samples": 6304,
+          "transitions": 205013,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12006,
+      "seat": 0,
+      "rank": 2,
+      "score": 33,
+      "margin": -3,
+      "steps": 302,
+      "stats": {
+        "candidate": {
+          "ms": 5708.5192500001285,
+          "decisions": 83,
+          "samples": 6560,
+          "transitions": 680928,
+          "truncated": 0,
+          "epochAdvances": 3168
+        },
+        "opponent": {
+          "ms": 6421.149029000371,
+          "decisions": 219,
+          "samples": 17120,
+          "transitions": 821551,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12006,
+      "seat": 1,
+      "rank": 2,
+      "score": 40,
+      "margin": -13,
+      "steps": 301,
+      "stats": {
+        "candidate": {
+          "ms": 6586.055923000153,
+          "decisions": 110,
+          "samples": 7712,
+          "transitions": 793475,
+          "truncated": 0,
+          "epochAdvances": 4544
+        },
+        "opponent": {
+          "ms": 6030.501700000139,
+          "decisions": 191,
+          "samples": 14560,
+          "transitions": 760044,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 3,
+      "seed": 12006,
+      "seat": 2,
+      "rank": 2,
+      "score": 36,
+      "margin": -9,
+      "steps": 293,
+      "stats": {
+        "candidate": {
+          "ms": 7110.189336000185,
+          "decisions": 105,
+          "samples": 8096,
+          "transitions": 854366,
+          "truncated": 0,
+          "epochAdvances": 4768
+        },
+        "opponent": {
+          "ms": 5600.512876000081,
+          "decisions": 188,
+          "samples": 13920,
+          "transitions": 731260,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12006,
+      "seat": 0,
+      "rank": 3,
+      "score": 23,
+      "margin": -17,
+      "steps": 367,
+      "stats": {
+        "candidate": {
+          "ms": 6716.366372000135,
+          "decisions": 76,
+          "samples": 5408,
+          "transitions": 700324,
+          "truncated": 0,
+          "epochAdvances": 3072
+        },
+        "opponent": {
+          "ms": 9296.761376000766,
+          "decisions": 291,
+          "samples": 20192,
+          "transitions": 1091737,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12006,
+      "seat": 1,
+      "rank": 1,
+      "score": 37,
+      "margin": 5,
+      "steps": 352,
+      "stats": {
+        "candidate": {
+          "ms": 6782.919666999951,
+          "decisions": 66,
+          "samples": 4256,
+          "transitions": 697974,
+          "truncated": 0,
+          "epochAdvances": 3520
+        },
+        "opponent": {
+          "ms": 9408.155256000056,
+          "decisions": 286,
+          "samples": 19104,
+          "transitions": 1112012,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12006,
+      "seat": 2,
+      "rank": 1,
+      "score": 44,
+      "margin": 2,
+      "steps": 368,
+      "stats": {
+        "candidate": {
+          "ms": 8346.564123000251,
+          "decisions": 87,
+          "samples": 6016,
+          "transitions": 859829,
+          "truncated": 0,
+          "epochAdvances": 4064
+        },
+        "opponent": {
+          "ms": 9496.359830000496,
+          "decisions": 281,
+          "samples": 19584,
+          "transitions": 1084548,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 4,
+      "seed": 12006,
+      "seat": 3,
+      "rank": 3,
+      "score": 32,
+      "margin": -19,
+      "steps": 365,
+      "stats": {
+        "candidate": {
+          "ms": 7730.941217000189,
+          "decisions": 75,
+          "samples": 5152,
+          "transitions": 765804,
+          "truncated": 0,
+          "epochAdvances": 3712
+        },
+        "opponent": {
+          "ms": 9980.514834999456,
+          "decisions": 290,
+          "samples": 20640,
+          "transitions": 1132282,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12006,
+      "seat": 0,
+      "rank": 5,
+      "score": 25,
+      "margin": -18,
+      "steps": 432,
+      "stats": {
+        "candidate": {
+          "ms": 13210.9939499998,
+          "decisions": 81,
+          "samples": 5792,
+          "transitions": 981349,
+          "truncated": 0,
+          "epochAdvances": 3872
+        },
+        "opponent": {
+          "ms": 21593.341865999857,
+          "decisions": 351,
+          "samples": 25824,
+          "transitions": 1839432,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12006,
+      "seat": 1,
+      "rank": 5,
+      "score": 20,
+      "margin": -20,
+      "steps": 405,
+      "stats": {
+        "candidate": {
+          "ms": 11399.777127999987,
+          "decisions": 56,
+          "samples": 4064,
+          "transitions": 841572,
+          "truncated": 0,
+          "epochAdvances": 3296
+        },
+        "opponent": {
+          "ms": 20428.156879999384,
+          "decisions": 349,
+          "samples": 23808,
+          "transitions": 1707485,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12006,
+      "seat": 2,
+      "rank": 1,
+      "score": 34,
+      "margin": 1,
+      "steps": 432,
+      "stats": {
+        "candidate": {
+          "ms": 11228.942085999763,
+          "decisions": 79,
+          "samples": 5920,
+          "transitions": 897972,
+          "truncated": 0,
+          "epochAdvances": 3168
+        },
+        "opponent": {
+          "ms": 22291.74304199929,
+          "decisions": 353,
+          "samples": 25184,
+          "transitions": 1790292,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12006,
+      "seat": 3,
+      "rank": 4,
+      "score": 35,
+      "margin": -4,
+      "steps": 464,
+      "stats": {
+        "candidate": {
+          "ms": 11850.423336000007,
+          "decisions": 79,
+          "samples": 5312,
+          "transitions": 960102,
+          "truncated": 0,
+          "epochAdvances": 3680
+        },
+        "opponent": {
+          "ms": 20799.690205000166,
+          "decisions": 385,
+          "samples": 26368,
+          "transitions": 1867810,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    },
+    {
+      "count": 5,
+      "seed": 12006,
+      "seat": 4,
+      "rank": 2,
+      "score": 39,
+      "margin": -4,
+      "steps": 441,
+      "stats": {
+        "candidate": {
+          "ms": 15183.543712999905,
+          "decisions": 92,
+          "samples": 6752,
+          "transitions": 1222886,
+          "truncated": 0,
+          "epochAdvances": 4992
+        },
+        "opponent": {
+          "ms": 19868.105133999255,
+          "decisions": 349,
+          "samples": 23808,
+          "transitions": 1722441,
+          "truncated": 0,
+          "epochAdvances": 0
+        }
+      }
+    }
+  ],
+  "seconds": 556.475064667,
+  "caveat": "Fixed simulation budgets, not equal wall time. Only serial cost measurements are latency comparisons. Seat rotations share a seed; do not treat them as independent statistical trials. Pilot and validation seeds are disjoint."
+}

@@ -1,0 +1,90 @@
+{
+  "opponent": "legacy",
+  "seeds": 1,
+  "start": 1001,
+  "samples": 24,
+  "allSeats": false,
+  "summary": [
+    {
+      "count": 2,
+      "games": 1,
+      "wins": 1,
+      "winRate": 1,
+      "chance": 0.5,
+      "score": 45,
+      "margin": 22
+    },
+    {
+      "count": 3,
+      "games": 1,
+      "wins": 0,
+      "winRate": 0,
+      "chance": 0.3333333333333333,
+      "score": 48,
+      "margin": -3
+    },
+    {
+      "count": 4,
+      "games": 1,
+      "wins": 1,
+      "winRate": 1,
+      "chance": 0.25,
+      "score": 54,
+      "margin": 22
+    },
+    {
+      "count": 5,
+      "games": 1,
+      "wins": 1,
+      "winRate": 1,
+      "chance": 0.2,
+      "score": 45,
+      "margin": 13
+    }
+  ],
+  "timing": {
+    "decisions": 306,
+    "medianMs": 45.609916,
+    "p95Ms": 258.8808749999989,
+    "maxMs": 509.1521670000002,
+    "seconds": 23.335769792
+  },
+  "games": [
+    {
+      "count": 2,
+      "seed": 1001,
+      "seat": 0,
+      "rank": 1,
+      "score": 45,
+      "margin": 22,
+      "steps": 163
+    },
+    {
+      "count": 3,
+      "seed": 1001,
+      "seat": 0,
+      "rank": 2,
+      "score": 48,
+      "margin": -3,
+      "steps": 270
+    },
+    {
+      "count": 4,
+      "seed": 1001,
+      "seat": 0,
+      "rank": 1,
+      "score": 54,
+      "margin": 22,
+      "steps": 341
+    },
+    {
+      "count": 5,
+      "seed": 1001,
+      "seat": 0,
+      "rank": 1,
+      "score": 45,
+      "margin": 13,
+      "steps": 413
+    }
+  ]
+}

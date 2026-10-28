@@ -1,0 +1,110 @@
+{
+  "group": "sh200",
+  "status": "complete",
+  "games": 280,
+  "rankScore": 0.5108333333333334,
+  "interval95": [
+    0.4666666666666666,
+    0.5525
+  ],
+  "intervalFamily2": [
+    0.4602083333333334,
+    0.5579166666666666
+  ],
+  "byCount": [
+    {
+      "variant": "sh",
+      "mode": "time",
+      "count": 2,
+      "games": 40,
+      "referenceMeanRank": 1.5,
+      "normalizedRankScore": 0.475,
+      "rankDistribution": [
+        19,
+        21
+      ],
+      "wins": 19,
+      "referenceWins": 20,
+      "meanRank": 1.525,
+      "meanMargin": 1.225
+    },
+    {
+      "variant": "sh",
+      "mode": "time",
+      "count": 3,
+      "games": 60,
+      "referenceMeanRank": 2,
+      "normalizedRankScore": 0.5833333333333334,
+      "rankDistribution": [
+        26,
+        18,
+        16
+      ],
+      "wins": 26,
+      "referenceWins": 20,
+      "meanRank": 1.8333333333333333,
+      "meanMargin": -0.4
+    },
+    {
+      "variant": "sh",
+      "mode": "time",
+      "count": 4,
+      "games": 80,
+      "referenceMeanRank": 2.5,
+      "normalizedRankScore": 0.4750000000000002,
+      "rankDistribution": [
+        19,
+        19,
+        19,
+        23
+      ],
+      "wins": 19,
+      "referenceWins": 20,
+      "meanRank": 2.575,
+      "meanMargin": -8.175
+    },
+    {
+      "variant": "sh",
+      "mode": "time",
+      "count": 5,
+      "games": 100,
+      "referenceMeanRank": 3,
+      "normalizedRankScore": 0.51,
+      "rankDistribution": [
+        22,
+        20,
+        19,
+        18,
+        21
+      ],
+      "wins": 22,
+      "referenceWins": 20,
+      "meanRank": 2.96,
+      "meanMargin": -8.81
+    }
+  ],
+  "bySeed": [
+    0.5666666666666667,
+    0.4041666666666666,
+    0.5916666666666667,
+    0.5791666666666666,
+    0.5583333333333333,
+    0.4333333333333333,
+    0.5083333333333333,
+    0.6,
+    0.3458333333333333,
+    0.5833333333333333,
+    0.575,
+    0.44166666666666665,
+    0.49166666666666664,
+    0.5541666666666667,
+    0.2916666666666667,
+    0.6583333333333334,
+    0.6375,
+    0.4625,
+    0.5541666666666667,
+    0.37916666666666665
+  ],
+  "firstPlaces": 86,
+  "sourceSha256": "45bc73931608fd711150465ac330d0769996723064be9619e4291d6d899cca1a"
+}

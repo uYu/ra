@@ -1,0 +1,26 @@
+{
+  "abi": 6,
+  "source": "native/ra_ai.cpp",
+  "target": "src/game/ai/ra-ai.wasm",
+  "sourceSha256": "15adac9a6abb39113956cfde487b1d60b612048404053804e3c12fe43be637a5",
+  "wasmSha256": "c13f8ef47394bd4555e605e2014355b80c6a7f32eed1cd08ae905bbb395c3818",
+  "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9-git",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fno-exceptions",
+    "-fno-threadsafe-statics",
+    "--no-entry",
+    "-sSTANDALONE_WASM=1",
+    "-sFILESYSTEM=0",
+    "-sMALLOC=emmalloc",
+    "-sINITIAL_MEMORY=33554432",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sSTACK_SIZE=1048576",
+    "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\"]"
+  ]
+}

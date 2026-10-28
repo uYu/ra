@@ -1,0 +1,764 @@
+{
+  "wasmBytes": 90923,
+  "instantiateMs": 0.31683400000000006,
+  "samplesPerRootAction": 32,
+  "summary": [
+    {
+      "backend": "typescript",
+      "positions": 24,
+      "samples": 1920,
+      "totalMs": 4327.365000999998,
+      "medianMs": 127.58345899999995,
+      "p95Ms": 350.1504160000004
+    },
+    {
+      "backend": "wasm",
+      "positions": 24,
+      "samples": 1920,
+      "totalMs": 1330.7934530000016,
+      "medianMs": 39.571750000000065,
+      "p95Ms": 120.03445800000009
+    }
+  ],
+  "speedup": 3.251717981663375,
+  "identicalActions": true,
+  "identicalTreeCounts": true,
+  "rows": [
+    {
+      "backend": "wasm",
+      "position": 0,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 16.110208,
+      "samples": 64,
+      "transitions": 3401,
+      "nodes": 111,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 0,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 80.56562500000001,
+      "samples": 64,
+      "transitions": 3401,
+      "nodes": 111,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 1,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 54.25524999999999,
+      "samples": 64,
+      "transitions": 2638,
+      "nodes": 108,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 1,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 11.53733299999999,
+      "samples": 64,
+      "transitions": 2638,
+      "nodes": 108,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 2,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 17.972916999999995,
+      "samples": 64,
+      "transitions": 3800,
+      "nodes": 111,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 2,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 76.49491699999999,
+      "samples": 64,
+      "transitions": 3800,
+      "nodes": 111,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 3,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 120.61229099999997,
+      "samples": 160,
+      "transitions": 7344,
+      "nodes": 256,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 3,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 33.62008300000002,
+      "samples": 160,
+      "transitions": 7344,
+      "nodes": 256,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 4,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 20.020458000000076,
+      "samples": 96,
+      "transitions": 5950,
+      "nodes": 154,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 4,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 61.50524999999993,
+      "samples": 96,
+      "transitions": 5950,
+      "nodes": 154,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 5,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 31.116957999999954,
+      "samples": 64,
+      "transitions": 3381,
+      "nodes": 111,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 5,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 10.669208000000026,
+      "samples": 64,
+      "transitions": 3381,
+      "nodes": 111,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 6,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 39.573582999999985,
+      "samples": 64,
+      "transitions": 5787,
+      "nodes": 118,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 6,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 131.88245799999993,
+      "samples": 64,
+      "transitions": 5787,
+      "nodes": 118,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 7,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 109.833708,
+      "samples": 64,
+      "transitions": 4933,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 7,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 32.864374999999995,
+      "samples": 64,
+      "transitions": 4933,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 8,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 36.81762500000002,
+      "samples": 64,
+      "transitions": 5318,
+      "nodes": 113,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 8,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 127.58345899999995,
+      "samples": 64,
+      "transitions": 5318,
+      "nodes": 113,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 9,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 122.04304200000001,
+      "samples": 64,
+      "transitions": 5314,
+      "nodes": 116,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 9,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 36.09500000000003,
+      "samples": 64,
+      "transitions": 5314,
+      "nodes": 116,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 10,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 26.88650000000007,
+      "samples": 64,
+      "transitions": 5451,
+      "nodes": 112,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 10,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 81.47845800000005,
+      "samples": 64,
+      "transitions": 5451,
+      "nodes": 112,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 11,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 74.25437499999998,
+      "samples": 64,
+      "transitions": 5075,
+      "nodes": 105,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 11,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 25.62937500000021,
+      "samples": 64,
+      "transitions": 5075,
+      "nodes": 105,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 12,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 47.64637499999981,
+      "samples": 64,
+      "transitions": 6470,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 12,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 150.59995800000002,
+      "samples": 64,
+      "transitions": 6470,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 13,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 313.42829200000006,
+      "samples": 128,
+      "transitions": 13644,
+      "nodes": 229,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": 9
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 13,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 97.92529100000002,
+      "samples": 128,
+      "transitions": 13644,
+      "nodes": 229,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": 9
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 14,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 62.852499999999964,
+      "samples": 64,
+      "transitions": 7538,
+      "nodes": 123,
+      "depth": 3,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 14,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 205.8890409999999,
+      "samples": 64,
+      "transitions": 7538,
+      "nodes": 123,
+      "depth": 3,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 15,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 187.43654199999992,
+      "samples": 64,
+      "transitions": 6959,
+      "nodes": 116,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 15,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 56.01783299999988,
+      "samples": 64,
+      "transitions": 6959,
+      "nodes": 116,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 16,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 39.571750000000065,
+      "samples": 64,
+      "transitions": 6901,
+      "nodes": 109,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 16,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 117.45083400000021,
+      "samples": 64,
+      "transitions": 6901,
+      "nodes": 109,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 17,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 90.1534999999999,
+      "samples": 64,
+      "transitions": 6089,
+      "nodes": 115,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 17,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 31.13962500000025,
+      "samples": 64,
+      "transitions": 6089,
+      "nodes": 115,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 18,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 92.03520800000024,
+      "samples": 64,
+      "transitions": 8781,
+      "nodes": 119,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 18,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 292.6043749999999,
+      "samples": 64,
+      "transitions": 8781,
+      "nodes": 119,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 19,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 627.9081249999999,
+      "samples": 128,
+      "transitions": 16784,
+      "nodes": 236,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 19,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 176.14920800000027,
+      "samples": 128,
+      "transitions": 16784,
+      "nodes": 236,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 20,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 101.93304100000023,
+      "samples": 64,
+      "transitions": 9365,
+      "nodes": 120,
+      "depth": 3,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 20,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 330.11045899999954,
+      "samples": 64,
+      "transitions": 9365,
+      "nodes": 120,
+      "depth": 3,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 21,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 279.2482089999994,
+      "samples": 64,
+      "transitions": 8943,
+      "nodes": 105,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 21,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 88.0097910000004,
+      "samples": 64,
+      "transitions": 8943,
+      "nodes": 105,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 22,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 120.03445800000009,
+      "samples": 128,
+      "transitions": 15292,
+      "nodes": 234,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 22,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 350.1504160000004,
+      "samples": 128,
+      "transitions": 15292,
+      "nodes": 234,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "typescript",
+      "position": 23,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 310.7594589999999,
+      "samples": 128,
+      "transitions": 14085,
+      "nodes": 211,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      }
+    },
+    {
+      "backend": "wasm",
+      "position": 23,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 109.68170800000007,
+      "samples": 128,
+      "transitions": 14085,
+      "nodes": 211,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      }
+    }
+  ]
+}

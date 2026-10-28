@@ -1,0 +1,1827 @@
+{
+  "case": {
+    "path": "artifacts/decision-replays/value-2p-40001-seat1.json",
+    "step": 98,
+    "chosen": {
+      "type": "bid",
+      "sun": 3
+    },
+    "alternative": {
+      "type": "bid",
+      "sun": null
+    }
+  },
+  "description": "128 paired unseen worlds per continuation profile, range30000..30127, fixed UCT32 all seats. Profilefalse uses original evaluator for everyone; profiletrue uses learned evaluator only for the focal player. Alternative-minus-actual relative final score; public root and normalized100 scores; first32 original-profile worlds exactly reproduce preliminary diagnostic.",
+  "summaries": [
+    {
+      "useModel": false,
+      "n": 128,
+      "mean": -1.5625,
+      "se": 1.4649258097094051,
+      "low95": -4.433754587030434,
+      "high95": 1.308754587030434
+    },
+    {
+      "useModel": true,
+      "n": 128,
+      "mean": -1.3515625,
+      "se": 1.4159780468642604,
+      "low95": -4.12687947185395,
+      "high95": 1.4237544718539503
+    }
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "useModel": false,
+      "actual": -19,
+      "alternative": -21,
+      "difference": -2
+    },
+    {
+      "index": 1,
+      "useModel": false,
+      "actual": -20,
+      "alternative": -21,
+      "difference": -1
+    },
+    {
+      "index": 2,
+      "useModel": false,
+      "actual": -10,
+      "alternative": 6,
+      "difference": 16
+    },
+    {
+      "index": 3,
+      "useModel": false,
+      "actual": -10,
+      "alternative": -13,
+      "difference": -3
+    },
+    {
+      "index": 4,
+      "useModel": false,
+      "actual": -16,
+      "alternative": 9,
+      "difference": 25
+    },
+    {
+      "index": 5,
+      "useModel": false,
+      "actual": -6,
+      "alternative": -24,
+      "difference": -18
+    },
+    {
+      "index": 6,
+      "useModel": false,
+      "actual": 1,
+      "alternative": -1,
+      "difference": -2
+    },
+    {
+      "index": 7,
+      "useModel": false,
+      "actual": -16,
+      "alternative": -12,
+      "difference": 4
+    },
+    {
+      "index": 8,
+      "useModel": false,
+      "actual": -24,
+      "alternative": -18,
+      "difference": 6
+    },
+    {
+      "index": 9,
+      "useModel": false,
+      "actual": -12,
+      "alternative": -22,
+      "difference": -10
+    },
+    {
+      "index": 10,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -10,
+      "difference": 1
+    },
+    {
+      "index": 11,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -13,
+      "difference": -2
+    },
+    {
+      "index": 12,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -2,
+      "difference": 9
+    },
+    {
+      "index": 13,
+      "useModel": false,
+      "actual": 5,
+      "alternative": -26,
+      "difference": -31
+    },
+    {
+      "index": 14,
+      "useModel": false,
+      "actual": -2,
+      "alternative": -18,
+      "difference": -16
+    },
+    {
+      "index": 15,
+      "useModel": false,
+      "actual": -23,
+      "alternative": -15,
+      "difference": 8
+    },
+    {
+      "index": 16,
+      "useModel": false,
+      "actual": 1,
+      "alternative": 13,
+      "difference": 12
+    },
+    {
+      "index": 17,
+      "useModel": false,
+      "actual": -6,
+      "alternative": -2,
+      "difference": 4
+    },
+    {
+      "index": 18,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -3,
+      "difference": 14
+    },
+    {
+      "index": 19,
+      "useModel": false,
+      "actual": -15,
+      "alternative": -20,
+      "difference": -5
+    },
+    {
+      "index": 20,
+      "useModel": false,
+      "actual": -6,
+      "alternative": -22,
+      "difference": -16
+    },
+    {
+      "index": 21,
+      "useModel": false,
+      "actual": -10,
+      "alternative": -10,
+      "difference": 0
+    },
+    {
+      "index": 22,
+      "useModel": false,
+      "actual": -29,
+      "alternative": -19,
+      "difference": 10
+    },
+    {
+      "index": 23,
+      "useModel": false,
+      "actual": 5,
+      "alternative": 0,
+      "difference": -5
+    },
+    {
+      "index": 24,
+      "useModel": false,
+      "actual": -10,
+      "alternative": -36,
+      "difference": -26
+    },
+    {
+      "index": 25,
+      "useModel": false,
+      "actual": -21,
+      "alternative": -10,
+      "difference": 11
+    },
+    {
+      "index": 26,
+      "useModel": false,
+      "actual": -1,
+      "alternative": -26,
+      "difference": -25
+    },
+    {
+      "index": 27,
+      "useModel": false,
+      "actual": -14,
+      "alternative": -21,
+      "difference": -7
+    },
+    {
+      "index": 28,
+      "useModel": false,
+      "actual": -12,
+      "alternative": -25,
+      "difference": -13
+    },
+    {
+      "index": 29,
+      "useModel": false,
+      "actual": -5,
+      "alternative": -16,
+      "difference": -11
+    },
+    {
+      "index": 30,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -14,
+      "difference": -3
+    },
+    {
+      "index": 31,
+      "useModel": false,
+      "actual": -29,
+      "alternative": 1,
+      "difference": 30
+    },
+    {
+      "index": 32,
+      "useModel": false,
+      "actual": -25,
+      "alternative": -9,
+      "difference": 16
+    },
+    {
+      "index": 33,
+      "useModel": false,
+      "actual": -7,
+      "alternative": -35,
+      "difference": -28
+    },
+    {
+      "index": 34,
+      "useModel": false,
+      "actual": -19,
+      "alternative": -20,
+      "difference": -1
+    },
+    {
+      "index": 35,
+      "useModel": false,
+      "actual": -32,
+      "alternative": -24,
+      "difference": 8
+    },
+    {
+      "index": 36,
+      "useModel": false,
+      "actual": -31,
+      "alternative": -17,
+      "difference": 14
+    },
+    {
+      "index": 37,
+      "useModel": false,
+      "actual": 17,
+      "alternative": -33,
+      "difference": -50
+    },
+    {
+      "index": 38,
+      "useModel": false,
+      "actual": -23,
+      "alternative": -30,
+      "difference": -7
+    },
+    {
+      "index": 39,
+      "useModel": false,
+      "actual": -6,
+      "alternative": -9,
+      "difference": -3
+    },
+    {
+      "index": 40,
+      "useModel": false,
+      "actual": -13,
+      "alternative": -23,
+      "difference": -10
+    },
+    {
+      "index": 41,
+      "useModel": false,
+      "actual": -22,
+      "alternative": -17,
+      "difference": 5
+    },
+    {
+      "index": 42,
+      "useModel": false,
+      "actual": -10,
+      "alternative": -3,
+      "difference": 7
+    },
+    {
+      "index": 43,
+      "useModel": false,
+      "actual": -29,
+      "alternative": -24,
+      "difference": 5
+    },
+    {
+      "index": 44,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -4,
+      "difference": 13
+    },
+    {
+      "index": 45,
+      "useModel": false,
+      "actual": -13,
+      "alternative": -30,
+      "difference": -17
+    },
+    {
+      "index": 46,
+      "useModel": false,
+      "actual": -8,
+      "alternative": -23,
+      "difference": -15
+    },
+    {
+      "index": 47,
+      "useModel": false,
+      "actual": -3,
+      "alternative": -15,
+      "difference": -12
+    },
+    {
+      "index": 48,
+      "useModel": false,
+      "actual": 6,
+      "alternative": -23,
+      "difference": -29
+    },
+    {
+      "index": 49,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -18,
+      "difference": -7
+    },
+    {
+      "index": 50,
+      "useModel": false,
+      "actual": -14,
+      "alternative": 0,
+      "difference": 14
+    },
+    {
+      "index": 51,
+      "useModel": false,
+      "actual": -28,
+      "alternative": -12,
+      "difference": 16
+    },
+    {
+      "index": 52,
+      "useModel": false,
+      "actual": -3,
+      "alternative": -9,
+      "difference": -6
+    },
+    {
+      "index": 53,
+      "useModel": false,
+      "actual": -2,
+      "alternative": -28,
+      "difference": -26
+    },
+    {
+      "index": 54,
+      "useModel": false,
+      "actual": -21,
+      "alternative": -8,
+      "difference": 13
+    },
+    {
+      "index": 55,
+      "useModel": false,
+      "actual": -2,
+      "alternative": -4,
+      "difference": -2
+    },
+    {
+      "index": 56,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -8,
+      "difference": 9
+    },
+    {
+      "index": 57,
+      "useModel": false,
+      "actual": -22,
+      "alternative": -39,
+      "difference": -17
+    },
+    {
+      "index": 58,
+      "useModel": false,
+      "actual": -16,
+      "alternative": -8,
+      "difference": 8
+    },
+    {
+      "index": 59,
+      "useModel": false,
+      "actual": -24,
+      "alternative": -9,
+      "difference": 15
+    },
+    {
+      "index": 60,
+      "useModel": false,
+      "actual": -34,
+      "alternative": -26,
+      "difference": 8
+    },
+    {
+      "index": 61,
+      "useModel": false,
+      "actual": 4,
+      "alternative": -6,
+      "difference": -10
+    },
+    {
+      "index": 62,
+      "useModel": false,
+      "actual": 4,
+      "alternative": 5,
+      "difference": 1
+    },
+    {
+      "index": 63,
+      "useModel": false,
+      "actual": 22,
+      "alternative": -23,
+      "difference": -45
+    },
+    {
+      "index": 64,
+      "useModel": false,
+      "actual": 15,
+      "alternative": 2,
+      "difference": -13
+    },
+    {
+      "index": 65,
+      "useModel": false,
+      "actual": -13,
+      "alternative": 2,
+      "difference": 15
+    },
+    {
+      "index": 66,
+      "useModel": false,
+      "actual": -20,
+      "alternative": -27,
+      "difference": -7
+    },
+    {
+      "index": 67,
+      "useModel": false,
+      "actual": 1,
+      "alternative": -31,
+      "difference": -32
+    },
+    {
+      "index": 68,
+      "useModel": false,
+      "actual": -19,
+      "alternative": -11,
+      "difference": 8
+    },
+    {
+      "index": 69,
+      "useModel": false,
+      "actual": -16,
+      "alternative": -18,
+      "difference": -2
+    },
+    {
+      "index": 70,
+      "useModel": false,
+      "actual": -21,
+      "alternative": 8,
+      "difference": 29
+    },
+    {
+      "index": 71,
+      "useModel": false,
+      "actual": -15,
+      "alternative": -16,
+      "difference": -1
+    },
+    {
+      "index": 72,
+      "useModel": false,
+      "actual": -8,
+      "alternative": 2,
+      "difference": 10
+    },
+    {
+      "index": 73,
+      "useModel": false,
+      "actual": -44,
+      "alternative": -8,
+      "difference": 36
+    },
+    {
+      "index": 74,
+      "useModel": false,
+      "actual": -20,
+      "alternative": -14,
+      "difference": 6
+    },
+    {
+      "index": 75,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -32,
+      "difference": -15
+    },
+    {
+      "index": 76,
+      "useModel": false,
+      "actual": 5,
+      "alternative": -31,
+      "difference": -36
+    },
+    {
+      "index": 77,
+      "useModel": false,
+      "actual": -18,
+      "alternative": -17,
+      "difference": 1
+    },
+    {
+      "index": 78,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -15,
+      "difference": 2
+    },
+    {
+      "index": 79,
+      "useModel": false,
+      "actual": -30,
+      "alternative": -34,
+      "difference": -4
+    },
+    {
+      "index": 80,
+      "useModel": false,
+      "actual": -2,
+      "alternative": -13,
+      "difference": -11
+    },
+    {
+      "index": 81,
+      "useModel": false,
+      "actual": -5,
+      "alternative": -8,
+      "difference": -3
+    },
+    {
+      "index": 82,
+      "useModel": false,
+      "actual": -13,
+      "alternative": 8,
+      "difference": 21
+    },
+    {
+      "index": 83,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -18,
+      "difference": -1
+    },
+    {
+      "index": 84,
+      "useModel": false,
+      "actual": -34,
+      "alternative": -12,
+      "difference": 22
+    },
+    {
+      "index": 85,
+      "useModel": false,
+      "actual": -9,
+      "alternative": -31,
+      "difference": -22
+    },
+    {
+      "index": 86,
+      "useModel": false,
+      "actual": -14,
+      "alternative": -16,
+      "difference": -2
+    },
+    {
+      "index": 87,
+      "useModel": false,
+      "actual": -13,
+      "alternative": -25,
+      "difference": -12
+    },
+    {
+      "index": 88,
+      "useModel": false,
+      "actual": -22,
+      "alternative": -3,
+      "difference": 19
+    },
+    {
+      "index": 89,
+      "useModel": false,
+      "actual": -29,
+      "alternative": -10,
+      "difference": 19
+    },
+    {
+      "index": 90,
+      "useModel": false,
+      "actual": -22,
+      "alternative": 11,
+      "difference": 33
+    },
+    {
+      "index": 91,
+      "useModel": false,
+      "actual": -5,
+      "alternative": -28,
+      "difference": -23
+    },
+    {
+      "index": 92,
+      "useModel": false,
+      "actual": -19,
+      "alternative": -29,
+      "difference": -10
+    },
+    {
+      "index": 93,
+      "useModel": false,
+      "actual": -21,
+      "alternative": -26,
+      "difference": -5
+    },
+    {
+      "index": 94,
+      "useModel": false,
+      "actual": -25,
+      "alternative": -26,
+      "difference": -1
+    },
+    {
+      "index": 95,
+      "useModel": false,
+      "actual": 1,
+      "alternative": 1,
+      "difference": 0
+    },
+    {
+      "index": 96,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -15,
+      "difference": -4
+    },
+    {
+      "index": 97,
+      "useModel": false,
+      "actual": -42,
+      "alternative": -21,
+      "difference": 21
+    },
+    {
+      "index": 98,
+      "useModel": false,
+      "actual": 21,
+      "alternative": -23,
+      "difference": -44
+    },
+    {
+      "index": 99,
+      "useModel": false,
+      "actual": -30,
+      "alternative": -21,
+      "difference": 9
+    },
+    {
+      "index": 100,
+      "useModel": false,
+      "actual": -40,
+      "alternative": -3,
+      "difference": 37
+    },
+    {
+      "index": 101,
+      "useModel": false,
+      "actual": -20,
+      "alternative": -18,
+      "difference": 2
+    },
+    {
+      "index": 102,
+      "useModel": false,
+      "actual": -15,
+      "alternative": -15,
+      "difference": 0
+    },
+    {
+      "index": 103,
+      "useModel": false,
+      "actual": -31,
+      "alternative": -21,
+      "difference": 10
+    },
+    {
+      "index": 104,
+      "useModel": false,
+      "actual": -11,
+      "alternative": -20,
+      "difference": -9
+    },
+    {
+      "index": 105,
+      "useModel": false,
+      "actual": -10,
+      "alternative": -9,
+      "difference": 1
+    },
+    {
+      "index": 106,
+      "useModel": false,
+      "actual": -28,
+      "alternative": -17,
+      "difference": 11
+    },
+    {
+      "index": 107,
+      "useModel": false,
+      "actual": -13,
+      "alternative": -29,
+      "difference": -16
+    },
+    {
+      "index": 108,
+      "useModel": false,
+      "actual": 2,
+      "alternative": -21,
+      "difference": -23
+    },
+    {
+      "index": 109,
+      "useModel": false,
+      "actual": -10,
+      "alternative": -14,
+      "difference": -4
+    },
+    {
+      "index": 110,
+      "useModel": false,
+      "actual": -25,
+      "alternative": -11,
+      "difference": 14
+    },
+    {
+      "index": 111,
+      "useModel": false,
+      "actual": 5,
+      "alternative": 2,
+      "difference": -3
+    },
+    {
+      "index": 112,
+      "useModel": false,
+      "actual": 1,
+      "alternative": -29,
+      "difference": -30
+    },
+    {
+      "index": 113,
+      "useModel": false,
+      "actual": -7,
+      "alternative": -8,
+      "difference": -1
+    },
+    {
+      "index": 114,
+      "useModel": false,
+      "actual": -17,
+      "alternative": -14,
+      "difference": 3
+    },
+    {
+      "index": 115,
+      "useModel": false,
+      "actual": -26,
+      "alternative": -20,
+      "difference": 6
+    },
+    {
+      "index": 116,
+      "useModel": false,
+      "actual": -24,
+      "alternative": -12,
+      "difference": 12
+    },
+    {
+      "index": 117,
+      "useModel": false,
+      "actual": -8,
+      "alternative": -4,
+      "difference": 4
+    },
+    {
+      "index": 118,
+      "useModel": false,
+      "actual": 5,
+      "alternative": -20,
+      "difference": -25
+    },
+    {
+      "index": 119,
+      "useModel": false,
+      "actual": -27,
+      "alternative": -15,
+      "difference": 12
+    },
+    {
+      "index": 120,
+      "useModel": false,
+      "actual": -15,
+      "alternative": -14,
+      "difference": 1
+    },
+    {
+      "index": 121,
+      "useModel": false,
+      "actual": -36,
+      "alternative": -3,
+      "difference": 33
+    },
+    {
+      "index": 122,
+      "useModel": false,
+      "actual": -21,
+      "alternative": -20,
+      "difference": 1
+    },
+    {
+      "index": 123,
+      "useModel": false,
+      "actual": -18,
+      "alternative": -19,
+      "difference": -1
+    },
+    {
+      "index": 124,
+      "useModel": false,
+      "actual": -13,
+      "alternative": -12,
+      "difference": 1
+    },
+    {
+      "index": 125,
+      "useModel": false,
+      "actual": 11,
+      "alternative": -18,
+      "difference": -29
+    },
+    {
+      "index": 126,
+      "useModel": false,
+      "actual": 4,
+      "alternative": -19,
+      "difference": -23
+    },
+    {
+      "index": 127,
+      "useModel": false,
+      "actual": -3,
+      "alternative": -11,
+      "difference": -8
+    },
+    {
+      "index": 0,
+      "useModel": true,
+      "actual": -19,
+      "alternative": -21,
+      "difference": -2
+    },
+    {
+      "index": 1,
+      "useModel": true,
+      "actual": -20,
+      "alternative": -21,
+      "difference": -1
+    },
+    {
+      "index": 2,
+      "useModel": true,
+      "actual": -10,
+      "alternative": 6,
+      "difference": 16
+    },
+    {
+      "index": 3,
+      "useModel": true,
+      "actual": -10,
+      "alternative": -13,
+      "difference": -3
+    },
+    {
+      "index": 4,
+      "useModel": true,
+      "actual": -16,
+      "alternative": 9,
+      "difference": 25
+    },
+    {
+      "index": 5,
+      "useModel": true,
+      "actual": -6,
+      "alternative": -16,
+      "difference": -10
+    },
+    {
+      "index": 6,
+      "useModel": true,
+      "actual": 1,
+      "alternative": 9,
+      "difference": 8
+    },
+    {
+      "index": 7,
+      "useModel": true,
+      "actual": -16,
+      "alternative": -12,
+      "difference": 4
+    },
+    {
+      "index": 8,
+      "useModel": true,
+      "actual": -24,
+      "alternative": -18,
+      "difference": 6
+    },
+    {
+      "index": 9,
+      "useModel": true,
+      "actual": -12,
+      "alternative": -20,
+      "difference": -8
+    },
+    {
+      "index": 10,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -22,
+      "difference": -11
+    },
+    {
+      "index": 11,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -13,
+      "difference": -2
+    },
+    {
+      "index": 12,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -2,
+      "difference": 9
+    },
+    {
+      "index": 13,
+      "useModel": true,
+      "actual": 5,
+      "alternative": -26,
+      "difference": -31
+    },
+    {
+      "index": 14,
+      "useModel": true,
+      "actual": -2,
+      "alternative": -18,
+      "difference": -16
+    },
+    {
+      "index": 15,
+      "useModel": true,
+      "actual": -23,
+      "alternative": -15,
+      "difference": 8
+    },
+    {
+      "index": 16,
+      "useModel": true,
+      "actual": 1,
+      "alternative": 13,
+      "difference": 12
+    },
+    {
+      "index": 17,
+      "useModel": true,
+      "actual": -6,
+      "alternative": -2,
+      "difference": 4
+    },
+    {
+      "index": 18,
+      "useModel": true,
+      "actual": -17,
+      "alternative": -3,
+      "difference": 14
+    },
+    {
+      "index": 19,
+      "useModel": true,
+      "actual": -15,
+      "alternative": -20,
+      "difference": -5
+    },
+    {
+      "index": 20,
+      "useModel": true,
+      "actual": -6,
+      "alternative": -22,
+      "difference": -16
+    },
+    {
+      "index": 21,
+      "useModel": true,
+      "actual": -10,
+      "alternative": -10,
+      "difference": 0
+    },
+    {
+      "index": 22,
+      "useModel": true,
+      "actual": -29,
+      "alternative": -19,
+      "difference": 10
+    },
+    {
+      "index": 23,
+      "useModel": true,
+      "actual": 5,
+      "alternative": 0,
+      "difference": -5
+    },
+    {
+      "index": 24,
+      "useModel": true,
+      "actual": -10,
+      "alternative": -36,
+      "difference": -26
+    },
+    {
+      "index": 25,
+      "useModel": true,
+      "actual": -21,
+      "alternative": -10,
+      "difference": 11
+    },
+    {
+      "index": 26,
+      "useModel": true,
+      "actual": -1,
+      "alternative": -26,
+      "difference": -25
+    },
+    {
+      "index": 27,
+      "useModel": true,
+      "actual": -14,
+      "alternative": -21,
+      "difference": -7
+    },
+    {
+      "index": 28,
+      "useModel": true,
+      "actual": -12,
+      "alternative": -25,
+      "difference": -13
+    },
+    {
+      "index": 29,
+      "useModel": true,
+      "actual": -5,
+      "alternative": -16,
+      "difference": -11
+    },
+    {
+      "index": 30,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -14,
+      "difference": -3
+    },
+    {
+      "index": 31,
+      "useModel": true,
+      "actual": -29,
+      "alternative": 1,
+      "difference": 30
+    },
+    {
+      "index": 32,
+      "useModel": true,
+      "actual": -25,
+      "alternative": -16,
+      "difference": 9
+    },
+    {
+      "index": 33,
+      "useModel": true,
+      "actual": -7,
+      "alternative": -6,
+      "difference": 1
+    },
+    {
+      "index": 34,
+      "useModel": true,
+      "actual": -19,
+      "alternative": -20,
+      "difference": -1
+    },
+    {
+      "index": 35,
+      "useModel": true,
+      "actual": -32,
+      "alternative": -24,
+      "difference": 8
+    },
+    {
+      "index": 36,
+      "useModel": true,
+      "actual": -31,
+      "alternative": -17,
+      "difference": 14
+    },
+    {
+      "index": 37,
+      "useModel": true,
+      "actual": 17,
+      "alternative": -33,
+      "difference": -50
+    },
+    {
+      "index": 38,
+      "useModel": true,
+      "actual": -23,
+      "alternative": -30,
+      "difference": -7
+    },
+    {
+      "index": 39,
+      "useModel": true,
+      "actual": -6,
+      "alternative": -9,
+      "difference": -3
+    },
+    {
+      "index": 40,
+      "useModel": true,
+      "actual": -13,
+      "alternative": -23,
+      "difference": -10
+    },
+    {
+      "index": 41,
+      "useModel": true,
+      "actual": -22,
+      "alternative": -17,
+      "difference": 5
+    },
+    {
+      "index": 42,
+      "useModel": true,
+      "actual": -10,
+      "alternative": -3,
+      "difference": 7
+    },
+    {
+      "index": 43,
+      "useModel": true,
+      "actual": -29,
+      "alternative": -24,
+      "difference": 5
+    },
+    {
+      "index": 44,
+      "useModel": true,
+      "actual": -17,
+      "alternative": -4,
+      "difference": 13
+    },
+    {
+      "index": 45,
+      "useModel": true,
+      "actual": -13,
+      "alternative": -30,
+      "difference": -17
+    },
+    {
+      "index": 46,
+      "useModel": true,
+      "actual": -8,
+      "alternative": -23,
+      "difference": -15
+    },
+    {
+      "index": 47,
+      "useModel": true,
+      "actual": -3,
+      "alternative": -15,
+      "difference": -12
+    },
+    {
+      "index": 48,
+      "useModel": true,
+      "actual": 6,
+      "alternative": -23,
+      "difference": -29
+    },
+    {
+      "index": 49,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -18,
+      "difference": -7
+    },
+    {
+      "index": 50,
+      "useModel": true,
+      "actual": -14,
+      "alternative": 0,
+      "difference": 14
+    },
+    {
+      "index": 51,
+      "useModel": true,
+      "actual": -28,
+      "alternative": -12,
+      "difference": 16
+    },
+    {
+      "index": 52,
+      "useModel": true,
+      "actual": -3,
+      "alternative": -9,
+      "difference": -6
+    },
+    {
+      "index": 53,
+      "useModel": true,
+      "actual": -2,
+      "alternative": -28,
+      "difference": -26
+    },
+    {
+      "index": 54,
+      "useModel": true,
+      "actual": -21,
+      "alternative": -8,
+      "difference": 13
+    },
+    {
+      "index": 55,
+      "useModel": true,
+      "actual": -2,
+      "alternative": -4,
+      "difference": -2
+    },
+    {
+      "index": 56,
+      "useModel": true,
+      "actual": -17,
+      "alternative": -8,
+      "difference": 9
+    },
+    {
+      "index": 57,
+      "useModel": true,
+      "actual": -22,
+      "alternative": -39,
+      "difference": -17
+    },
+    {
+      "index": 58,
+      "useModel": true,
+      "actual": -16,
+      "alternative": -8,
+      "difference": 8
+    },
+    {
+      "index": 59,
+      "useModel": true,
+      "actual": -24,
+      "alternative": -7,
+      "difference": 17
+    },
+    {
+      "index": 60,
+      "useModel": true,
+      "actual": -34,
+      "alternative": -26,
+      "difference": 8
+    },
+    {
+      "index": 61,
+      "useModel": true,
+      "actual": 4,
+      "alternative": -6,
+      "difference": -10
+    },
+    {
+      "index": 62,
+      "useModel": true,
+      "actual": 4,
+      "alternative": 5,
+      "difference": 1
+    },
+    {
+      "index": 63,
+      "useModel": true,
+      "actual": 22,
+      "alternative": -23,
+      "difference": -45
+    },
+    {
+      "index": 64,
+      "useModel": true,
+      "actual": 15,
+      "alternative": 2,
+      "difference": -13
+    },
+    {
+      "index": 65,
+      "useModel": true,
+      "actual": -13,
+      "alternative": 2,
+      "difference": 15
+    },
+    {
+      "index": 66,
+      "useModel": true,
+      "actual": -20,
+      "alternative": -27,
+      "difference": -7
+    },
+    {
+      "index": 67,
+      "useModel": true,
+      "actual": 1,
+      "alternative": -31,
+      "difference": -32
+    },
+    {
+      "index": 68,
+      "useModel": true,
+      "actual": -19,
+      "alternative": -11,
+      "difference": 8
+    },
+    {
+      "index": 69,
+      "useModel": true,
+      "actual": -16,
+      "alternative": -18,
+      "difference": -2
+    },
+    {
+      "index": 70,
+      "useModel": true,
+      "actual": -21,
+      "alternative": 8,
+      "difference": 29
+    },
+    {
+      "index": 71,
+      "useModel": true,
+      "actual": -15,
+      "alternative": -16,
+      "difference": -1
+    },
+    {
+      "index": 72,
+      "useModel": true,
+      "actual": -8,
+      "alternative": 2,
+      "difference": 10
+    },
+    {
+      "index": 73,
+      "useModel": true,
+      "actual": -44,
+      "alternative": -24,
+      "difference": 20
+    },
+    {
+      "index": 74,
+      "useModel": true,
+      "actual": -20,
+      "alternative": -14,
+      "difference": 6
+    },
+    {
+      "index": 75,
+      "useModel": true,
+      "actual": -17,
+      "alternative": -32,
+      "difference": -15
+    },
+    {
+      "index": 76,
+      "useModel": true,
+      "actual": 5,
+      "alternative": -31,
+      "difference": -36
+    },
+    {
+      "index": 77,
+      "useModel": true,
+      "actual": -18,
+      "alternative": -17,
+      "difference": 1
+    },
+    {
+      "index": 78,
+      "useModel": true,
+      "actual": -17,
+      "alternative": -15,
+      "difference": 2
+    },
+    {
+      "index": 79,
+      "useModel": true,
+      "actual": -30,
+      "alternative": -34,
+      "difference": -4
+    },
+    {
+      "index": 80,
+      "useModel": true,
+      "actual": -2,
+      "alternative": -13,
+      "difference": -11
+    },
+    {
+      "index": 81,
+      "useModel": true,
+      "actual": -5,
+      "alternative": -8,
+      "difference": -3
+    },
+    {
+      "index": 82,
+      "useModel": true,
+      "actual": -13,
+      "alternative": 8,
+      "difference": 21
+    },
+    {
+      "index": 83,
+      "useModel": true,
+      "actual": -17,
+      "alternative": 1,
+      "difference": 18
+    },
+    {
+      "index": 84,
+      "useModel": true,
+      "actual": -34,
+      "alternative": -12,
+      "difference": 22
+    },
+    {
+      "index": 85,
+      "useModel": true,
+      "actual": -9,
+      "alternative": -31,
+      "difference": -22
+    },
+    {
+      "index": 86,
+      "useModel": true,
+      "actual": -14,
+      "alternative": -16,
+      "difference": -2
+    },
+    {
+      "index": 87,
+      "useModel": true,
+      "actual": -13,
+      "alternative": -25,
+      "difference": -12
+    },
+    {
+      "index": 88,
+      "useModel": true,
+      "actual": -22,
+      "alternative": -3,
+      "difference": 19
+    },
+    {
+      "index": 89,
+      "useModel": true,
+      "actual": -29,
+      "alternative": -10,
+      "difference": 19
+    },
+    {
+      "index": 90,
+      "useModel": true,
+      "actual": -22,
+      "alternative": -15,
+      "difference": 7
+    },
+    {
+      "index": 91,
+      "useModel": true,
+      "actual": -5,
+      "alternative": -28,
+      "difference": -23
+    },
+    {
+      "index": 92,
+      "useModel": true,
+      "actual": -19,
+      "alternative": -29,
+      "difference": -10
+    },
+    {
+      "index": 93,
+      "useModel": true,
+      "actual": -21,
+      "alternative": -26,
+      "difference": -5
+    },
+    {
+      "index": 94,
+      "useModel": true,
+      "actual": -25,
+      "alternative": -26,
+      "difference": -1
+    },
+    {
+      "index": 95,
+      "useModel": true,
+      "actual": 1,
+      "alternative": 1,
+      "difference": 0
+    },
+    {
+      "index": 96,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -15,
+      "difference": -4
+    },
+    {
+      "index": 97,
+      "useModel": true,
+      "actual": -42,
+      "alternative": -21,
+      "difference": 21
+    },
+    {
+      "index": 98,
+      "useModel": true,
+      "actual": 21,
+      "alternative": -23,
+      "difference": -44
+    },
+    {
+      "index": 99,
+      "useModel": true,
+      "actual": -30,
+      "alternative": -21,
+      "difference": 9
+    },
+    {
+      "index": 100,
+      "useModel": true,
+      "actual": -40,
+      "alternative": -3,
+      "difference": 37
+    },
+    {
+      "index": 101,
+      "useModel": true,
+      "actual": -20,
+      "alternative": -18,
+      "difference": 2
+    },
+    {
+      "index": 102,
+      "useModel": true,
+      "actual": -15,
+      "alternative": 0,
+      "difference": 15
+    },
+    {
+      "index": 103,
+      "useModel": true,
+      "actual": -31,
+      "alternative": -21,
+      "difference": 10
+    },
+    {
+      "index": 104,
+      "useModel": true,
+      "actual": -11,
+      "alternative": -20,
+      "difference": -9
+    },
+    {
+      "index": 105,
+      "useModel": true,
+      "actual": -10,
+      "alternative": -9,
+      "difference": 1
+    },
+    {
+      "index": 106,
+      "useModel": true,
+      "actual": -28,
+      "alternative": -17,
+      "difference": 11
+    },
+    {
+      "index": 107,
+      "useModel": true,
+      "actual": -13,
+      "alternative": -29,
+      "difference": -16
+    },
+    {
+      "index": 108,
+      "useModel": true,
+      "actual": 2,
+      "alternative": -21,
+      "difference": -23
+    },
+    {
+      "index": 109,
+      "useModel": true,
+      "actual": -10,
+      "alternative": -14,
+      "difference": -4
+    },
+    {
+      "index": 110,
+      "useModel": true,
+      "actual": -25,
+      "alternative": -11,
+      "difference": 14
+    },
+    {
+      "index": 111,
+      "useModel": true,
+      "actual": 5,
+      "alternative": 5,
+      "difference": 0
+    },
+    {
+      "index": 112,
+      "useModel": true,
+      "actual": 1,
+      "alternative": -29,
+      "difference": -30
+    },
+    {
+      "index": 113,
+      "useModel": true,
+      "actual": -7,
+      "alternative": -8,
+      "difference": -1
+    },
+    {
+      "index": 114,
+      "useModel": true,
+      "actual": -17,
+      "alternative": -14,
+      "difference": 3
+    },
+    {
+      "index": 115,
+      "useModel": true,
+      "actual": -26,
+      "alternative": -20,
+      "difference": 6
+    },
+    {
+      "index": 116,
+      "useModel": true,
+      "actual": -24,
+      "alternative": -12,
+      "difference": 12
+    },
+    {
+      "index": 117,
+      "useModel": true,
+      "actual": -8,
+      "alternative": -4,
+      "difference": 4
+    },
+    {
+      "index": 118,
+      "useModel": true,
+      "actual": 5,
+      "alternative": -20,
+      "difference": -25
+    },
+    {
+      "index": 119,
+      "useModel": true,
+      "actual": -27,
+      "alternative": -15,
+      "difference": 12
+    },
+    {
+      "index": 120,
+      "useModel": true,
+      "actual": -15,
+      "alternative": -14,
+      "difference": 1
+    },
+    {
+      "index": 121,
+      "useModel": true,
+      "actual": -36,
+      "alternative": -3,
+      "difference": 33
+    },
+    {
+      "index": 122,
+      "useModel": true,
+      "actual": -21,
+      "alternative": -20,
+      "difference": 1
+    },
+    {
+      "index": 123,
+      "useModel": true,
+      "actual": -18,
+      "alternative": -19,
+      "difference": -1
+    },
+    {
+      "index": 124,
+      "useModel": true,
+      "actual": -13,
+      "alternative": -12,
+      "difference": 1
+    },
+    {
+      "index": 125,
+      "useModel": true,
+      "actual": 11,
+      "alternative": -18,
+      "difference": -29
+    },
+    {
+      "index": 126,
+      "useModel": true,
+      "actual": 4,
+      "alternative": -19,
+      "difference": -23
+    },
+    {
+      "index": 127,
+      "useModel": true,
+      "actual": -3,
+      "alternative": -11,
+      "difference": -8
+    }
+  ]
+}

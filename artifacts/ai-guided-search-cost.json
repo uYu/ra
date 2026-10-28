@@ -1,0 +1,761 @@
+{
+  "samplesPerRootAction": 32,
+  "summary": [
+    {
+      "variant": "before",
+      "positions": 24,
+      "samples": 2016,
+      "medianMs": 149.7337090000001,
+      "p95Ms": 362.22950000000037,
+      "totalMs": 4902.711959000001
+    },
+    {
+      "variant": "after",
+      "positions": 24,
+      "samples": 2016,
+      "medianMs": 139.31895799999984,
+      "p95Ms": 320.39087500000005,
+      "totalMs": 4234.140124000001
+    }
+  ],
+  "rows": [
+    {
+      "variant": "after",
+      "position": 0,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 80.773125,
+      "samples": 64,
+      "transitions": 3452,
+      "nodes": 107,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 0,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 87.48854200000002,
+      "samples": 64,
+      "transitions": 3379,
+      "nodes": 114,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 1,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 55.89262500000001,
+      "samples": 64,
+      "transitions": 2837,
+      "nodes": 101,
+      "depth": 4,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 1,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 53.94666599999999,
+      "samples": 64,
+      "transitions": 2927,
+      "nodes": 104,
+      "depth": 4,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 2,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 76.67754100000002,
+      "samples": 64,
+      "transitions": 3187,
+      "nodes": 111,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 2,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 73.634208,
+      "samples": 64,
+      "transitions": 3127,
+      "nodes": 116,
+      "depth": 4,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 3,
+      "count": 2,
+      "phase": "auction",
+      "epoch": 2,
+      "ms": 55.34216600000002,
+      "samples": 64,
+      "transitions": 2426,
+      "nodes": 97,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 9
+      }
+    },
+    {
+      "variant": "after",
+      "position": 3,
+      "count": 2,
+      "phase": "auction",
+      "epoch": 2,
+      "ms": 50.99295899999993,
+      "samples": 64,
+      "transitions": 2833,
+      "nodes": 98,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 9
+      }
+    },
+    {
+      "variant": "after",
+      "position": 4,
+      "count": 2,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 123.55262500000003,
+      "samples": 160,
+      "transitions": 8308,
+      "nodes": 248,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "before",
+      "position": 4,
+      "count": 2,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 103.33954200000005,
+      "samples": 160,
+      "transitions": 8023,
+      "nodes": 243,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "before",
+      "position": 5,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 35.62583300000006,
+      "samples": 64,
+      "transitions": 2736,
+      "nodes": 115,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 5,
+      "count": 2,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 33.54441699999995,
+      "samples": 64,
+      "transitions": 2407,
+      "nodes": 108,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 6,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 132.54970900000012,
+      "samples": 64,
+      "transitions": 5592,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 6,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 149.7337090000001,
+      "samples": 64,
+      "transitions": 5962,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 7,
+      "count": 3,
+      "phase": "auction",
+      "epoch": 1,
+      "ms": 336.724833,
+      "samples": 160,
+      "transitions": 14314,
+      "nodes": 257,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 10
+      }
+    },
+    {
+      "variant": "after",
+      "position": 7,
+      "count": 3,
+      "phase": "auction",
+      "epoch": 1,
+      "ms": 320.39087500000005,
+      "samples": 160,
+      "transitions": 15037,
+      "nodes": 266,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "after",
+      "position": 8,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 128.249458,
+      "samples": 64,
+      "transitions": 4946,
+      "nodes": 113,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 8,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 145.85283400000003,
+      "samples": 64,
+      "transitions": 4940,
+      "nodes": 111,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 9,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 131.21354199999996,
+      "samples": 64,
+      "transitions": 4448,
+      "nodes": 106,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 9,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 102.65966600000002,
+      "samples": 64,
+      "transitions": 4251,
+      "nodes": 111,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 10,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 70.99991699999964,
+      "samples": 64,
+      "transitions": 5163,
+      "nodes": 111,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 10,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 72.19358300000022,
+      "samples": 64,
+      "transitions": 5422,
+      "nodes": 105,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 11,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 67.7977920000003,
+      "samples": 64,
+      "transitions": 4936,
+      "nodes": 118,
+      "depth": 3,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 11,
+      "count": 3,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 68.69879200000014,
+      "samples": 64,
+      "transitions": 4884,
+      "nodes": 118,
+      "depth": 4,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 12,
+      "count": 4,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 158.2937079999997,
+      "samples": 64,
+      "transitions": 6659,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 12,
+      "count": 4,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 176.77191700000003,
+      "samples": 64,
+      "transitions": 6466,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 13,
+      "count": 4,
+      "phase": "auction",
+      "epoch": 1,
+      "ms": 332.698167,
+      "samples": 128,
+      "transitions": 12223,
+      "nodes": 238,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "after",
+      "position": 13,
+      "count": 4,
+      "phase": "auction",
+      "epoch": 1,
+      "ms": 297.06487500000003,
+      "samples": 128,
+      "transitions": 12396,
+      "nodes": 237,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      }
+    },
+    {
+      "variant": "after",
+      "position": 14,
+      "count": 4,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 185.5,
+      "samples": 64,
+      "transitions": 7007,
+      "nodes": 113,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 14,
+      "count": 4,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 225.1863330000001,
+      "samples": 64,
+      "transitions": 7092,
+      "nodes": 115,
+      "depth": 4,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 15,
+      "count": 4,
+      "phase": "auction",
+      "epoch": 2,
+      "ms": 199.61379199999965,
+      "samples": 64,
+      "transitions": 6488,
+      "nodes": 116,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "after",
+      "position": 15,
+      "count": 4,
+      "phase": "auction",
+      "epoch": 2,
+      "ms": 162.9546250000003,
+      "samples": 64,
+      "transitions": 6346,
+      "nodes": 116,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "after",
+      "position": 16,
+      "count": 4,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 116.90962500000023,
+      "samples": 64,
+      "transitions": 7220,
+      "nodes": 115,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 16,
+      "count": 4,
+      "phase": "turn",
+      "epoch": 3,
+      "ms": 120.05662499999926,
+      "samples": 64,
+      "transitions": 6978,
+      "nodes": 118,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 17,
+      "count": 4,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 144.18237500000032,
+      "samples": 96,
+      "transitions": 9261,
+      "nodes": 159,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 1
+      }
+    },
+    {
+      "variant": "after",
+      "position": 17,
+      "count": 4,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 139.31895799999984,
+      "samples": 96,
+      "transitions": 9369,
+      "nodes": 163,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "after",
+      "position": 18,
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 272.8807080000006,
+      "samples": 64,
+      "transitions": 8492,
+      "nodes": 119,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 18,
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 356.1693329999998,
+      "samples": 64,
+      "transitions": 8801,
+      "nodes": 117,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "before",
+      "position": 19,
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 362.22950000000037,
+      "samples": 64,
+      "transitions": 8635,
+      "nodes": 121,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 19,
+      "count": 5,
+      "phase": "turn",
+      "epoch": 1,
+      "ms": 272.8369580000008,
+      "samples": 64,
+      "transitions": 8144,
+      "nodes": 119,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 20,
+      "count": 5,
+      "phase": "auction",
+      "epoch": 2,
+      "ms": 570.0350000000008,
+      "samples": 128,
+      "transitions": 17189,
+      "nodes": 216,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 7
+      }
+    },
+    {
+      "variant": "before",
+      "position": 20,
+      "count": 5,
+      "phase": "auction",
+      "epoch": 2,
+      "ms": 758.7449160000006,
+      "samples": 128,
+      "transitions": 17675,
+      "nodes": 211,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": 2
+      }
+    },
+    {
+      "variant": "before",
+      "position": 21,
+      "count": 5,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 352.1814169999998,
+      "samples": 64,
+      "transitions": 8335,
+      "nodes": 119,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 21,
+      "count": 5,
+      "phase": "turn",
+      "epoch": 2,
+      "ms": 276.68445900000006,
+      "samples": 64,
+      "transitions": 8488,
+      "nodes": 116,
+      "depth": 3,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "variant": "after",
+      "position": 22,
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 278.0944159999999,
+      "samples": 128,
+      "transitions": 12976,
+      "nodes": 182,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "before",
+      "position": 22,
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 285.8346249999995,
+      "samples": 128,
+      "transitions": 12991,
+      "nodes": 185,
+      "depth": 4,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "before",
+      "position": 23,
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 274.2037500000006,
+      "samples": 128,
+      "transitions": 11746,
+      "nodes": 222,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "variant": "after",
+      "position": 23,
+      "count": 5,
+      "phase": "auction",
+      "epoch": 3,
+      "ms": 260.5310419999987,
+      "samples": 128,
+      "transitions": 11802,
+      "nodes": 217,
+      "depth": 3,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    }
+  ]
+}

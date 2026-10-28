@@ -1,0 +1,849 @@
+{
+  "candidateSamples": 96,
+  "opponentSamples": 32,
+  "seeds": [
+    10401,
+    10402
+  ],
+  "allSeats": true,
+  "costSummary": [
+    {
+      "backend": "ts32",
+      "totalMs": 4225.189623999999,
+      "medianMs": 125.851833,
+      "p95Ms": 343.760166,
+      "simulations": 1920
+    },
+    {
+      "backend": "wasm96",
+      "totalMs": 3912.2492060000004,
+      "medianMs": 113.168,
+      "p95Ms": 360.3394580000004,
+      "simulations": 5760
+    }
+  ],
+  "summary": [
+    {
+      "count": 3,
+      "games": 6,
+      "wins": 3,
+      "winRate": 0.5,
+      "chance": 0.3333333333333333,
+      "margin": 1
+    },
+    {
+      "count": 5,
+      "games": 10,
+      "wins": 4,
+      "winRate": 0.4,
+      "chance": 0.2,
+      "margin": -8
+    }
+  ],
+  "games": [
+    {
+      "count": 3,
+      "seed": 10401,
+      "seat": 0,
+      "rank": 2,
+      "score": 41,
+      "margin": -3,
+      "steps": 252,
+      "candidateMs": 4782.62974600001,
+      "opponentMs": 3244.128168000003,
+      "candidateDecisions": 69,
+      "opponentDecisions": 183
+    },
+    {
+      "count": 3,
+      "seed": 10401,
+      "seat": 1,
+      "rank": 1,
+      "score": 41,
+      "margin": 7,
+      "steps": 249,
+      "candidateMs": 4778.624623999984,
+      "opponentMs": 3061.172756000018,
+      "candidateDecisions": 65,
+      "opponentDecisions": 184
+    },
+    {
+      "count": 3,
+      "seed": 10401,
+      "seat": 2,
+      "rank": 3,
+      "score": 22,
+      "margin": -22,
+      "steps": 238,
+      "candidateMs": 3814.6618760000056,
+      "opponentMs": 3227.7452999999914,
+      "candidateDecisions": 87,
+      "opponentDecisions": 151
+    },
+    {
+      "count": 3,
+      "seed": 10402,
+      "seat": 0,
+      "rank": 1,
+      "score": 64,
+      "margin": 23,
+      "steps": 295,
+      "candidateMs": 6495.259494999977,
+      "opponentMs": 4321.70454699999,
+      "candidateDecisions": 122,
+      "opponentDecisions": 173
+    },
+    {
+      "count": 3,
+      "seed": 10402,
+      "seat": 1,
+      "rank": 2,
+      "score": 38,
+      "margin": -5,
+      "steps": 312,
+      "candidateMs": 6327.131536000023,
+      "opponentMs": 4789.938752999951,
+      "candidateDecisions": 86,
+      "opponentDecisions": 226
+    },
+    {
+      "count": 3,
+      "seed": 10402,
+      "seat": 2,
+      "rank": 1,
+      "score": 53,
+      "margin": 6,
+      "steps": 289,
+      "candidateMs": 5479.1889130000345,
+      "opponentMs": 3988.7348349999666,
+      "candidateDecisions": 121,
+      "opponentDecisions": 168
+    },
+    {
+      "count": 5,
+      "seed": 10401,
+      "seat": 0,
+      "rank": 1,
+      "score": 44,
+      "margin": 13,
+      "steps": 429,
+      "candidateMs": 11262.955292999912,
+      "opponentMs": 14992.403493000078,
+      "candidateDecisions": 93,
+      "opponentDecisions": 336
+    },
+    {
+      "count": 5,
+      "seed": 10401,
+      "seat": 1,
+      "rank": 2,
+      "score": 32,
+      "margin": -5,
+      "steps": 416,
+      "candidateMs": 10409.007793000084,
+      "opponentMs": 15714.861837000048,
+      "candidateDecisions": 107,
+      "opponentDecisions": 309
+    },
+    {
+      "count": 5,
+      "seed": 10401,
+      "seat": 2,
+      "rank": 3,
+      "score": 27,
+      "margin": -17,
+      "steps": 432,
+      "candidateMs": 13128.672541000022,
+      "opponentMs": 16663.917421999897,
+      "candidateDecisions": 97,
+      "opponentDecisions": 335
+    },
+    {
+      "count": 5,
+      "seed": 10401,
+      "seat": 3,
+      "rank": 3,
+      "score": 27,
+      "margin": -4,
+      "steps": 432,
+      "candidateMs": 11564.698543000093,
+      "opponentMs": 14775.06638400018,
+      "candidateDecisions": 89,
+      "opponentDecisions": 343
+    },
+    {
+      "count": 5,
+      "seed": 10401,
+      "seat": 4,
+      "rank": 1,
+      "score": 42,
+      "margin": 5,
+      "steps": 424,
+      "candidateMs": 9903.517742999975,
+      "opponentMs": 14901.917821999872,
+      "candidateDecisions": 84,
+      "opponentDecisions": 340
+    },
+    {
+      "count": 5,
+      "seed": 10402,
+      "seat": 0,
+      "rank": 3,
+      "score": 30,
+      "margin": -23,
+      "steps": 428,
+      "candidateMs": 12883.87341799977,
+      "opponentMs": 15180.4109950001,
+      "candidateDecisions": 81,
+      "opponentDecisions": 347
+    },
+    {
+      "count": 5,
+      "seed": 10402,
+      "seat": 1,
+      "rank": 1,
+      "score": 44,
+      "margin": 9,
+      "steps": 409,
+      "candidateMs": 11620.943461000192,
+      "opponentMs": 15343.04213000019,
+      "candidateDecisions": 93,
+      "opponentDecisions": 316
+    },
+    {
+      "count": 5,
+      "seed": 10402,
+      "seat": 2,
+      "rank": 5,
+      "score": 13,
+      "margin": -38,
+      "steps": 427,
+      "candidateMs": 13480.435084000026,
+      "opponentMs": 16370.156722000247,
+      "candidateDecisions": 94,
+      "opponentDecisions": 333
+    },
+    {
+      "count": 5,
+      "seed": 10402,
+      "seat": 3,
+      "rank": 1,
+      "score": 38,
+      "margin": 2,
+      "steps": 428,
+      "candidateMs": 13551.703837000416,
+      "opponentMs": 16485.00351200055,
+      "candidateDecisions": 118,
+      "opponentDecisions": 310
+    },
+    {
+      "count": 5,
+      "seed": 10402,
+      "seat": 4,
+      "rank": 4,
+      "score": 26,
+      "margin": -22,
+      "steps": 441,
+      "candidateMs": 10422.136083000165,
+      "opponentMs": 15842.734460999374,
+      "candidateDecisions": 68,
+      "opponentDecisions": 373
+    }
+  ],
+  "costs": [
+    {
+      "backend": "wasm96",
+      "position": 0,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 45.656082999999995,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 0,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 79.87433400000003,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 1,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 52.89325000000002,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 1,
+      "count": 2,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 32.92391700000002,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 2,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 50.84279099999998,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 2,
+      "count": 2,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 75.132792,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 3,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 125.851833,
+      "samples": 160,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 3,
+      "count": 2,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 94.709833,
+      "samples": 480,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 4,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 55.23483299999998,
+      "samples": 288,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 4,
+      "count": 2,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 61.30783299999996,
+      "samples": 96,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 5,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 30.407790999999975,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 5,
+      "count": 2,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 33.10587499999997,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 6,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 113.168,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 6,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 131.66374999999994,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 7,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 102.00375000000008,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 7,
+      "count": 3,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 96.20066700000007,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 8,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 111.13633299999992,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 8,
+      "count": 3,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 125.56045799999993,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 9,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 121.43308400000001,
+      "samples": 64,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 9,
+      "count": 3,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 102.84708300000011,
+      "samples": 192,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 10,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 78.95641599999999,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 10,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 79.85791700000004,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 11,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 72.02424999999994,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 11,
+      "count": 3,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 73.93229199999996,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 12,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 145.33300000000008,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 12,
+      "count": 4,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 153.92258300000003,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 13,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 313.173542,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": 9
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 13,
+      "count": 4,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 277.55433300000004,
+      "samples": 384,
+      "action": {
+        "type": "bid",
+        "sun": 10
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 14,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 181.05695800000012,
+      "samples": 192,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 14,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 205.09129200000007,
+      "samples": 64,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 15,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 184.44999999999982,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 15,
+      "count": 4,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 165.8101670000001,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 16,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 116.78920799999969,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 16,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 116.03141600000026,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 17,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 88.42670799999996,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 17,
+      "count": 4,
+      "epoch": 3,
+      "phase": "turn",
+      "ms": 91.42904200000021,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 18,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 274.76991700000053,
+      "samples": 192,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 18,
+      "count": 5,
+      "epoch": 1,
+      "phase": "turn",
+      "ms": 295.59387499999957,
+      "samples": 64,
+      "action": {
+        "type": "draw"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 19,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 552.7519579999998,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 19,
+      "count": 5,
+      "epoch": 1,
+      "phase": "auction",
+      "ms": 513.9315420000003,
+      "samples": 384,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 20,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 301.3171249999996,
+      "samples": 192,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 20,
+      "count": 5,
+      "epoch": 2,
+      "phase": "turn",
+      "ms": 324.0589170000003,
+      "samples": 64,
+      "action": {
+        "type": "invoke"
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 21,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 275.67774999999983,
+      "samples": 64,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 21,
+      "count": 5,
+      "epoch": 2,
+      "phase": "auction",
+      "ms": 268.1387909999994,
+      "samples": 192,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 22,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 360.3394580000004,
+      "samples": 384,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 22,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 343.760166,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": null
+      }
+    },
+    {
+      "backend": "ts32",
+      "position": 23,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 314.2403749999994,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      }
+    },
+    {
+      "backend": "wasm96",
+      "position": 23,
+      "count": 5,
+      "epoch": 3,
+      "phase": "auction",
+      "ms": 327.0655420000003,
+      "samples": 384,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      }
+    }
+  ],
+  "seconds": 337.68113529199996,
+  "caveat": "Both tournament sides use the same Wasm core at different sample budgets; not a strict equal-wall-time TS-vs-Wasm tournament."
+}

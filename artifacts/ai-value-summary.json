@@ -1,0 +1,994 @@
+{
+  "training": {
+    "trainGames": 2000,
+    "devGames": 400,
+    "trainRows": 14000,
+    "devRows": 2800,
+    "features": 91,
+    "hidden": 24,
+    "baselineDevMse": 206.51656820549073,
+    "bestDevMse": 64.71535825264077,
+    "baselineDevCenteredMse": 45.27510953612235,
+    "bestDevCenteredMse": 43.95827915090491,
+    "selectedEpoch": 97,
+    "history": [
+      {
+        "epoch": 0,
+        "trainMse": 88.0480646174153,
+        "devMse": 84.22260920682035,
+        "devCenteredMse": 53.13736109163074
+      },
+      {
+        "epoch": 1,
+        "trainMse": 78.58608118921903,
+        "devMse": 75.87729486301588,
+        "devCenteredMse": 47.89741622125515
+      },
+      {
+        "epoch": 2,
+        "trainMse": 75.57253357761897,
+        "devMse": 73.18751637534996,
+        "devCenteredMse": 46.26120144808909
+      },
+      {
+        "epoch": 3,
+        "trainMse": 79.86735664563241,
+        "devMse": 78.44424324149895,
+        "devCenteredMse": 46.065933956957416
+      },
+      {
+        "epoch": 4,
+        "trainMse": 73.20691117283712,
+        "devMse": 71.14518112890796,
+        "devCenteredMse": 45.641003663803055
+      },
+      {
+        "epoch": 5,
+        "trainMse": 73.0956001256436,
+        "devMse": 71.00103543737488,
+        "devCenteredMse": 45.59788682894738
+      },
+      {
+        "epoch": 6,
+        "trainMse": 72.5949107074573,
+        "devMse": 70.69362399587874,
+        "devCenteredMse": 45.58595824663655
+      },
+      {
+        "epoch": 7,
+        "trainMse": 71.664261493269,
+        "devMse": 69.82654618808702,
+        "devCenteredMse": 45.65135524158197
+      },
+      {
+        "epoch": 8,
+        "trainMse": 71.34362901527666,
+        "devMse": 69.4180019702187,
+        "devCenteredMse": 45.445321939860534
+      },
+      {
+        "epoch": 9,
+        "trainMse": 71.56027427696182,
+        "devMse": 69.84830731403125,
+        "devCenteredMse": 45.411591248992785
+      },
+      {
+        "epoch": 10,
+        "trainMse": 72.77622943764551,
+        "devMse": 70.57916385586493,
+        "devCenteredMse": 45.190818727751854
+      },
+      {
+        "epoch": 11,
+        "trainMse": 71.35111244494767,
+        "devMse": 69.09719268157207,
+        "devCenteredMse": 44.91924303081344
+      },
+      {
+        "epoch": 12,
+        "trainMse": 72.5916353555814,
+        "devMse": 70.92049149039936,
+        "devCenteredMse": 45.49031783976293
+      },
+      {
+        "epoch": 13,
+        "trainMse": 74.41129728359722,
+        "devMse": 73.13718114317876,
+        "devCenteredMse": 45.31812650677654
+      },
+      {
+        "epoch": 14,
+        "trainMse": 71.29803996470375,
+        "devMse": 69.16879138624917,
+        "devCenteredMse": 45.05819178093731
+      },
+      {
+        "epoch": 15,
+        "trainMse": 70.21835462919132,
+        "devMse": 67.99061865243091,
+        "devCenteredMse": 44.723712144563564
+      },
+      {
+        "epoch": 16,
+        "trainMse": 69.55517154013883,
+        "devMse": 68.03217232079419,
+        "devCenteredMse": 45.077169488583905
+      },
+      {
+        "epoch": 17,
+        "trainMse": 69.18435150444961,
+        "devMse": 67.37759541643663,
+        "devCenteredMse": 44.961615343900284
+      },
+      {
+        "epoch": 18,
+        "trainMse": 71.28986364146334,
+        "devMse": 69.20466896677578,
+        "devCenteredMse": 45.142723655861964
+      },
+      {
+        "epoch": 19,
+        "trainMse": 69.80877349607647,
+        "devMse": 67.90471468560803,
+        "devCenteredMse": 45.01444075840113
+      },
+      {
+        "epoch": 20,
+        "trainMse": 68.9692749190897,
+        "devMse": 66.78389946609194,
+        "devCenteredMse": 44.62088093057014
+      },
+      {
+        "epoch": 21,
+        "trainMse": 74.30089450889868,
+        "devMse": 73.16407177947825,
+        "devCenteredMse": 45.11753183799024
+      },
+      {
+        "epoch": 22,
+        "trainMse": 68.48197340660118,
+        "devMse": 67.01253284676402,
+        "devCenteredMse": 45.243679370073544
+      },
+      {
+        "epoch": 23,
+        "trainMse": 70.11496867710363,
+        "devMse": 68.50117584037943,
+        "devCenteredMse": 45.02397238599386
+      },
+      {
+        "epoch": 24,
+        "trainMse": 69.12026105403795,
+        "devMse": 67.29834988616992,
+        "devCenteredMse": 45.176431139637266
+      },
+      {
+        "epoch": 25,
+        "trainMse": 69.63751191745656,
+        "devMse": 68.04284667869823,
+        "devCenteredMse": 45.166922488222404
+      },
+      {
+        "epoch": 26,
+        "trainMse": 68.84762638369259,
+        "devMse": 67.4989362589402,
+        "devCenteredMse": 45.27876751460198
+      },
+      {
+        "epoch": 27,
+        "trainMse": 68.04488040697285,
+        "devMse": 66.29295458906213,
+        "devCenteredMse": 44.99182761442163
+      },
+      {
+        "epoch": 28,
+        "trainMse": 69.40322761774276,
+        "devMse": 67.89791436839705,
+        "devCenteredMse": 44.80334167838681
+      },
+      {
+        "epoch": 29,
+        "trainMse": 68.05323568719149,
+        "devMse": 66.57811657398216,
+        "devCenteredMse": 44.88696230703574
+      },
+      {
+        "epoch": 30,
+        "trainMse": 67.94685183795636,
+        "devMse": 66.93528125062316,
+        "devCenteredMse": 45.342435949027994
+      },
+      {
+        "epoch": 31,
+        "trainMse": 67.77608609624824,
+        "devMse": 66.55637393850442,
+        "devCenteredMse": 45.1151006902792
+      },
+      {
+        "epoch": 32,
+        "trainMse": 70.77214530234725,
+        "devMse": 69.01460688993892,
+        "devCenteredMse": 44.53646831874907
+      },
+      {
+        "epoch": 33,
+        "trainMse": 71.31698351939913,
+        "devMse": 69.43093881587295,
+        "devCenteredMse": 44.58136419858123
+      },
+      {
+        "epoch": 34,
+        "trainMse": 68.26283009770583,
+        "devMse": 66.5121254080656,
+        "devCenteredMse": 44.70191385377849
+      },
+      {
+        "epoch": 35,
+        "trainMse": 67.67944624411389,
+        "devMse": 66.13138715058096,
+        "devCenteredMse": 44.60769390138795
+      },
+      {
+        "epoch": 36,
+        "trainMse": 67.33701290122893,
+        "devMse": 65.77323140528826,
+        "devCenteredMse": 44.81127479431709
+      },
+      {
+        "epoch": 37,
+        "trainMse": 69.19679326990179,
+        "devMse": 67.9909933231269,
+        "devCenteredMse": 45.063508846809846
+      },
+      {
+        "epoch": 38,
+        "trainMse": 68.56170593536619,
+        "devMse": 67.67070091894472,
+        "devCenteredMse": 45.12416092531721
+      },
+      {
+        "epoch": 39,
+        "trainMse": 67.8927652781661,
+        "devMse": 66.55570855215716,
+        "devCenteredMse": 44.65321903792106
+      },
+      {
+        "epoch": 40,
+        "trainMse": 67.62551497353738,
+        "devMse": 66.12519407426801,
+        "devCenteredMse": 44.72661809692182
+      },
+      {
+        "epoch": 41,
+        "trainMse": 67.16932816638361,
+        "devMse": 65.537490015616,
+        "devCenteredMse": 44.51306070431906
+      },
+      {
+        "epoch": 42,
+        "trainMse": 67.10725131445784,
+        "devMse": 65.60686672944446,
+        "devCenteredMse": 44.447583800506656
+      },
+      {
+        "epoch": 43,
+        "trainMse": 67.49750266206209,
+        "devMse": 66.2292793424758,
+        "devCenteredMse": 44.96614153120059
+      },
+      {
+        "epoch": 44,
+        "trainMse": 67.5314969470421,
+        "devMse": 65.93188881078595,
+        "devCenteredMse": 44.59600888782116
+      },
+      {
+        "epoch": 45,
+        "trainMse": 74.96704913953172,
+        "devMse": 74.29884811524977,
+        "devCenteredMse": 44.950011606175885
+      },
+      {
+        "epoch": 46,
+        "trainMse": 66.87786539872295,
+        "devMse": 65.64453140589252,
+        "devCenteredMse": 44.742030502673444
+      },
+      {
+        "epoch": 47,
+        "trainMse": 70.00923269408177,
+        "devMse": 69.04102335245743,
+        "devCenteredMse": 45.26261865092621
+      },
+      {
+        "epoch": 48,
+        "trainMse": 67.86885829809647,
+        "devMse": 66.52391791530073,
+        "devCenteredMse": 44.855836529228924
+      },
+      {
+        "epoch": 49,
+        "trainMse": 66.930265880589,
+        "devMse": 65.73388277844471,
+        "devCenteredMse": 44.72908021346816
+      },
+      {
+        "epoch": 50,
+        "trainMse": 66.71663049794371,
+        "devMse": 65.51678479664776,
+        "devCenteredMse": 44.64488272874809
+      },
+      {
+        "epoch": 51,
+        "trainMse": 67.01780061229968,
+        "devMse": 65.71596963058877,
+        "devCenteredMse": 44.536734427352535
+      },
+      {
+        "epoch": 52,
+        "trainMse": 67.3835724642904,
+        "devMse": 66.26719469816595,
+        "devCenteredMse": 44.92651322678828
+      },
+      {
+        "epoch": 53,
+        "trainMse": 67.97065478261506,
+        "devMse": 67.47874849634026,
+        "devCenteredMse": 45.340382233231416
+      },
+      {
+        "epoch": 54,
+        "trainMse": 67.34145684374116,
+        "devMse": 66.03036886118593,
+        "devCenteredMse": 45.150630127375976
+      },
+      {
+        "epoch": 55,
+        "trainMse": 66.68804633006403,
+        "devMse": 65.27137344824013,
+        "devCenteredMse": 44.504416741156064
+      },
+      {
+        "epoch": 56,
+        "trainMse": 69.14613590188108,
+        "devMse": 68.37637279291863,
+        "devCenteredMse": 45.16070681983253
+      },
+      {
+        "epoch": 57,
+        "trainMse": 66.71729462350032,
+        "devMse": 65.43998108168019,
+        "devCenteredMse": 44.55149688762766
+      },
+      {
+        "epoch": 58,
+        "trainMse": 66.60438331528631,
+        "devMse": 65.73766544692448,
+        "devCenteredMse": 44.762181167709585
+      },
+      {
+        "epoch": 59,
+        "trainMse": 67.42031313271855,
+        "devMse": 66.56824369867586,
+        "devCenteredMse": 44.768277432298845
+      },
+      {
+        "epoch": 60,
+        "trainMse": 68.02541496150867,
+        "devMse": 67.09235654278035,
+        "devCenteredMse": 44.66180333961385
+      },
+      {
+        "epoch": 61,
+        "trainMse": 67.41167678014527,
+        "devMse": 66.31632596634546,
+        "devCenteredMse": 44.63043175370043
+      },
+      {
+        "epoch": 62,
+        "trainMse": 68.00620278223697,
+        "devMse": 66.94781226501543,
+        "devCenteredMse": 44.89475911557771
+      },
+      {
+        "epoch": 63,
+        "trainMse": 68.23297635741758,
+        "devMse": 67.11657807113599,
+        "devCenteredMse": 44.55126544063096
+      },
+      {
+        "epoch": 64,
+        "trainMse": 67.5509885698269,
+        "devMse": 66.72881268913859,
+        "devCenteredMse": 44.52538238617469
+      },
+      {
+        "epoch": 65,
+        "trainMse": 66.51176569406698,
+        "devMse": 65.26083199586037,
+        "devCenteredMse": 44.155801964709575
+      },
+      {
+        "epoch": 66,
+        "trainMse": 67.03189412501378,
+        "devMse": 65.9018597742354,
+        "devCenteredMse": 44.568287389203455
+      },
+      {
+        "epoch": 67,
+        "trainMse": 67.22400568604007,
+        "devMse": 66.44613079953915,
+        "devCenteredMse": 44.50139144947435
+      },
+      {
+        "epoch": 68,
+        "trainMse": 70.28389342373936,
+        "devMse": 69.15001017726117,
+        "devCenteredMse": 44.53901102805535
+      },
+      {
+        "epoch": 69,
+        "trainMse": 67.35683606545375,
+        "devMse": 66.08312254558035,
+        "devCenteredMse": 44.29072239064043
+      },
+      {
+        "epoch": 70,
+        "trainMse": 66.19194815394907,
+        "devMse": 65.50174246740598,
+        "devCenteredMse": 44.803957383620364
+      },
+      {
+        "epoch": 71,
+        "trainMse": 66.05673239507205,
+        "devMse": 65.04654805486369,
+        "devCenteredMse": 44.23450483446871
+      },
+      {
+        "epoch": 72,
+        "trainMse": 66.65719851341491,
+        "devMse": 66.07069964798637,
+        "devCenteredMse": 44.929400268894746
+      },
+      {
+        "epoch": 73,
+        "trainMse": 67.07308040204317,
+        "devMse": 66.44740808877349,
+        "devCenteredMse": 44.87444516973931
+      },
+      {
+        "epoch": 74,
+        "trainMse": 67.01619220478581,
+        "devMse": 66.36811994179499,
+        "devCenteredMse": 44.688092849440885
+      },
+      {
+        "epoch": 75,
+        "trainMse": 66.83358461584014,
+        "devMse": 66.05836976573129,
+        "devCenteredMse": 44.46444819899718
+      },
+      {
+        "epoch": 76,
+        "trainMse": 67.52255216956858,
+        "devMse": 66.54527847590121,
+        "devCenteredMse": 44.37730421542092
+      },
+      {
+        "epoch": 77,
+        "trainMse": 66.39807409804519,
+        "devMse": 65.56711428781638,
+        "devCenteredMse": 44.37269879349073
+      },
+      {
+        "epoch": 78,
+        "trainMse": 67.15425115959903,
+        "devMse": 66.22697434279542,
+        "devCenteredMse": 44.351299500120604
+      },
+      {
+        "epoch": 79,
+        "trainMse": 66.2990472397582,
+        "devMse": 65.68512563378408,
+        "devCenteredMse": 44.677128656152966
+      },
+      {
+        "epoch": 80,
+        "trainMse": 75.16651401660128,
+        "devMse": 74.77065495246278,
+        "devCenteredMse": 44.67503800497481
+      },
+      {
+        "epoch": 81,
+        "trainMse": 67.07825849499675,
+        "devMse": 66.02447548035057,
+        "devCenteredMse": 44.416426934685134
+      },
+      {
+        "epoch": 82,
+        "trainMse": 66.22958396709936,
+        "devMse": 65.79803351728904,
+        "devCenteredMse": 44.71825717348697
+      },
+      {
+        "epoch": 83,
+        "trainMse": 67.37740966255917,
+        "devMse": 66.2936949204967,
+        "devCenteredMse": 44.197063454951824
+      },
+      {
+        "epoch": 84,
+        "trainMse": 68.15489848533983,
+        "devMse": 67.05545918368654,
+        "devCenteredMse": 44.40956655088182
+      },
+      {
+        "epoch": 85,
+        "trainMse": 66.44067374357238,
+        "devMse": 66.01530870736931,
+        "devCenteredMse": 44.74772242150993
+      },
+      {
+        "epoch": 86,
+        "trainMse": 67.38185521674181,
+        "devMse": 66.57410910656806,
+        "devCenteredMse": 44.24653254000208
+      },
+      {
+        "epoch": 87,
+        "trainMse": 66.48151439514076,
+        "devMse": 65.9737510844301,
+        "devCenteredMse": 44.316881257975815
+      },
+      {
+        "epoch": 88,
+        "trainMse": 66.28045892941451,
+        "devMse": 65.90176454064824,
+        "devCenteredMse": 44.92130483103296
+      },
+      {
+        "epoch": 89,
+        "trainMse": 65.75388210123617,
+        "devMse": 65.03362963204997,
+        "devCenteredMse": 44.21098381665991
+      },
+      {
+        "epoch": 90,
+        "trainMse": 67.63524152517613,
+        "devMse": 67.11261492168794,
+        "devCenteredMse": 44.451990470955984
+      },
+      {
+        "epoch": 91,
+        "trainMse": 66.1202174283798,
+        "devMse": 65.84086090249438,
+        "devCenteredMse": 44.835208183316404
+      },
+      {
+        "epoch": 92,
+        "trainMse": 66.2292894430436,
+        "devMse": 65.53638217158904,
+        "devCenteredMse": 44.428974997801596
+      },
+      {
+        "epoch": 93,
+        "trainMse": 66.17735114145988,
+        "devMse": 66.10553830456567,
+        "devCenteredMse": 44.84235129270152
+      },
+      {
+        "epoch": 94,
+        "trainMse": 66.67011896847862,
+        "devMse": 66.08267170549095,
+        "devCenteredMse": 44.38490996020549
+      },
+      {
+        "epoch": 95,
+        "trainMse": 66.05168755166132,
+        "devMse": 65.56314771109845,
+        "devCenteredMse": 44.44289507964465
+      },
+      {
+        "epoch": 96,
+        "trainMse": 65.83070579467733,
+        "devMse": 65.60738242104155,
+        "devCenteredMse": 44.57592727718889
+      },
+      {
+        "epoch": 97,
+        "trainMse": 65.71031510310176,
+        "devMse": 64.71535825264077,
+        "devCenteredMse": 43.95827915090491
+      },
+      {
+        "epoch": 98,
+        "trainMse": 66.45856131377009,
+        "devMse": 65.52611280498235,
+        "devCenteredMse": 44.07053573173749
+      },
+      {
+        "epoch": 99,
+        "trainMse": 65.67403172842715,
+        "devMse": 65.03859452344761,
+        "devCenteredMse": 44.40053831582129
+      },
+      {
+        "epoch": 100,
+        "trainMse": 65.85300960373053,
+        "devMse": 65.22553806522487,
+        "devCenteredMse": 44.18433298611947
+      },
+      {
+        "epoch": 101,
+        "trainMse": 66.19241596561038,
+        "devMse": 65.80877907999174,
+        "devCenteredMse": 44.680913183399454
+      },
+      {
+        "epoch": 102,
+        "trainMse": 65.47791864265334,
+        "devMse": 64.84222680538544,
+        "devCenteredMse": 44.29664492882983
+      },
+      {
+        "epoch": 103,
+        "trainMse": 68.23464733371519,
+        "devMse": 67.6428868349381,
+        "devCenteredMse": 44.60554891953171
+      },
+      {
+        "epoch": 104,
+        "trainMse": 66.43189161244877,
+        "devMse": 66.28823829040137,
+        "devCenteredMse": 44.462432056669066
+      },
+      {
+        "epoch": 105,
+        "trainMse": 69.63461399609359,
+        "devMse": 69.43609147445288,
+        "devCenteredMse": 45.11069258956813
+      },
+      {
+        "epoch": 106,
+        "trainMse": 65.55996174806388,
+        "devMse": 65.40385150519113,
+        "devCenteredMse": 44.46143492375654
+      },
+      {
+        "epoch": 107,
+        "trainMse": 66.89064043800373,
+        "devMse": 66.44407035251879,
+        "devCenteredMse": 44.64116038929528
+      },
+      {
+        "epoch": 108,
+        "trainMse": 66.78701531421851,
+        "devMse": 66.2448714137371,
+        "devCenteredMse": 44.344370238942766
+      },
+      {
+        "epoch": 109,
+        "trainMse": 66.12469527861796,
+        "devMse": 65.74442797639206,
+        "devCenteredMse": 44.46442698026185
+      },
+      {
+        "epoch": 110,
+        "trainMse": 72.02381349508386,
+        "devMse": 70.95944282066765,
+        "devCenteredMse": 44.34103189243113
+      },
+      {
+        "epoch": 111,
+        "trainMse": 65.6626841710892,
+        "devMse": 65.6962623815622,
+        "devCenteredMse": 44.765746664520975
+      },
+      {
+        "epoch": 112,
+        "trainMse": 69.27323106961664,
+        "devMse": 69.5732535796353,
+        "devCenteredMse": 44.943615520181055
+      },
+      {
+        "epoch": 113,
+        "trainMse": 65.50330265989255,
+        "devMse": 65.17459585333413,
+        "devCenteredMse": 44.50498311725428
+      },
+      {
+        "epoch": 114,
+        "trainMse": 65.91955960409115,
+        "devMse": 65.40615769151132,
+        "devCenteredMse": 44.21495152492009
+      },
+      {
+        "epoch": 115,
+        "trainMse": 66.25222555348944,
+        "devMse": 66.0242801951854,
+        "devCenteredMse": 44.11241054207491
+      },
+      {
+        "epoch": 116,
+        "trainMse": 65.52600806907196,
+        "devMse": 65.30800779220137,
+        "devCenteredMse": 44.54797665313954
+      },
+      {
+        "epoch": 117,
+        "trainMse": 65.11998019850735,
+        "devMse": 64.71199209284549,
+        "devCenteredMse": 44.21751950911749
+      },
+      {
+        "epoch": 118,
+        "trainMse": 65.17991307501107,
+        "devMse": 64.62236137445241,
+        "devCenteredMse": 44.087603644757486
+      },
+      {
+        "epoch": 119,
+        "trainMse": 65.38168810678123,
+        "devMse": 64.96014391902725,
+        "devCenteredMse": 44.253750425303565
+      },
+      {
+        "epoch": 120,
+        "trainMse": 67.92063991954566,
+        "devMse": 67.54886889859395,
+        "devCenteredMse": 44.18162049099199
+      },
+      {
+        "epoch": 121,
+        "trainMse": 74.00511753491091,
+        "devMse": 74.07072724847987,
+        "devCenteredMse": 44.22175654784848
+      },
+      {
+        "epoch": 122,
+        "trainMse": 66.07412667110334,
+        "devMse": 65.63514817335093,
+        "devCenteredMse": 44.48102347884553
+      },
+      {
+        "epoch": 123,
+        "trainMse": 65.81063178247736,
+        "devMse": 65.60192098437061,
+        "devCenteredMse": 44.27679308458044
+      },
+      {
+        "epoch": 124,
+        "trainMse": 65.17781045983541,
+        "devMse": 65.12818874319106,
+        "devCenteredMse": 44.54644686641677
+      },
+      {
+        "epoch": 125,
+        "trainMse": 65.99664779759075,
+        "devMse": 65.79468368566111,
+        "devCenteredMse": 44.554153585627276
+      },
+      {
+        "epoch": 126,
+        "trainMse": 65.3735539061288,
+        "devMse": 65.29263037126881,
+        "devCenteredMse": 44.50572543340121
+      },
+      {
+        "epoch": 127,
+        "trainMse": 66.2613743192005,
+        "devMse": 66.38855957309018,
+        "devCenteredMse": 44.67966546105876
+      },
+      {
+        "epoch": 128,
+        "trainMse": 65.14173014676534,
+        "devMse": 65.37999805355038,
+        "devCenteredMse": 44.77637453211575
+      },
+      {
+        "epoch": 129,
+        "trainMse": 65.25410468333088,
+        "devMse": 65.00437609218872,
+        "devCenteredMse": 44.28622567582544
+      },
+      {
+        "epoch": 130,
+        "trainMse": 65.72175353083308,
+        "devMse": 65.60190240127108,
+        "devCenteredMse": 44.29924413450723
+      },
+      {
+        "epoch": 131,
+        "trainMse": 69.33154452485518,
+        "devMse": 69.45916335135544,
+        "devCenteredMse": 44.37607447274177
+      },
+      {
+        "epoch": 132,
+        "trainMse": 65.36546606199964,
+        "devMse": 65.24695141798658,
+        "devCenteredMse": 44.14661274754598
+      },
+      {
+        "epoch": 133,
+        "trainMse": 65.36304239144263,
+        "devMse": 65.393681043111,
+        "devCenteredMse": 44.46846578567729
+      },
+      {
+        "epoch": 134,
+        "trainMse": 65.18396009963993,
+        "devMse": 65.63817830987465,
+        "devCenteredMse": 44.80254531212444
+      },
+      {
+        "epoch": 135,
+        "trainMse": 64.9624896317222,
+        "devMse": 65.10567220970206,
+        "devCenteredMse": 44.59241661304889
+      },
+      {
+        "epoch": 136,
+        "trainMse": 67.20461013050176,
+        "devMse": 66.86799943995699,
+        "devCenteredMse": 44.2406795084499
+      },
+      {
+        "epoch": 137,
+        "trainMse": 67.23820419201449,
+        "devMse": 66.94222656451223,
+        "devCenteredMse": 44.11336617087211
+      },
+      {
+        "epoch": 138,
+        "trainMse": 65.06636758846653,
+        "devMse": 65.0897329318401,
+        "devCenteredMse": 44.399536239355996
+      },
+      {
+        "epoch": 139,
+        "trainMse": 65.99646111111137,
+        "devMse": 65.57845097505266,
+        "devCenteredMse": 44.25665234021853
+      }
+    ],
+    "training": "Adam, MSE / 40², 140 epochs, batch64, lr0.001, L2=0.0001; choose checkpoint using centered MSE on dev games only; init/shuffle seed625004",
+    "frozenSourceSha256": "c731de6c73a67249d53441e89046d3f1e54da063f761c77601b7afb1f83eaa3c",
+    "frozenWasmSha256": "d45b4ad0bc19230181ae23468d0023692577edbfc5c8ef3a569fae9f99c74db8",
+    "datasetSha256": "b2639e2094f6e8baa389ce6a69ad9dcbcc832a08ebc070762390587d90c9fc61",
+    "modelSha256": "8e5b7b656b58030091e521956071633bd0eb5714d4e608aa543b47b59c3ef28b",
+    "trainSeedRange": [
+      200001,
+      202000
+    ],
+    "devSeedRange": [
+      300001,
+      300400
+    ]
+  },
+  "summaries": [
+    {
+      "label": "UCT 200 ms vs UCT ×32",
+      "wins": 27,
+      "games": 84,
+      "bySeed": [
+        3,
+        6,
+        5,
+        6,
+        3,
+        4
+      ],
+      "interval": [
+        0.25,
+        0.39285714285714285
+      ],
+      "sides": [
+        {
+          "side": "candidate",
+          "searched": 6266,
+          "meanSearchMs": 200.9127252428983,
+          "samplesPerSearch": 1086.4803702521544,
+          "transitionsPerSearch": 21778.15304819662,
+          "over210": 4,
+          "truncated": 0
+        },
+        {
+          "side": "opponent",
+          "searched": 18747,
+          "meanSearchMs": 69.38911373115705,
+          "samplesPerSearch": 80.76385555022136,
+          "transitionsPerSearch": 5266.199125193364,
+          "over210": 0,
+          "truncated": 0
+        }
+      ],
+      "meanRank": 2.357142857142857,
+      "meanMargin": -6.535714285714286,
+      "byCount": [
+        {
+          "count": 2,
+          "wins": 3,
+          "games": 12
+        },
+        {
+          "count": 3,
+          "wins": 8,
+          "games": 18
+        },
+        {
+          "count": 4,
+          "wins": 8,
+          "games": 24
+        },
+        {
+          "count": 5,
+          "wins": 8,
+          "games": 30
+        }
+      ]
+    },
+    {
+      "label": "学习估值 200 ms vs 原估值 200 ms",
+      "wins": 23,
+      "games": 84,
+      "bySeed": [
+        7,
+        5,
+        5,
+        1,
+        2,
+        3
+      ],
+      "interval": [
+        0.15476190476190477,
+        0.39285714285714285
+      ],
+      "sides": [
+        {
+          "side": "candidate",
+          "searched": 6106,
+          "meanSearchMs": 201.13978984654406,
+          "samplesPerSearch": 819.3209957418932,
+          "transitionsPerSearch": 20008.780216180807,
+          "over210": 8,
+          "truncated": 0
+        },
+        {
+          "side": "opponent",
+          "searched": 19048,
+          "meanSearchMs": 201.13199781641111,
+          "samplesPerSearch": 982.4735405291894,
+          "transitionsPerSearch": 19692.71934061319,
+          "over210": 39,
+          "truncated": 0
+        }
+      ],
+      "meanRank": 2.3333333333333335,
+      "meanMargin": -8.178571428571429,
+      "byCount": [
+        {
+          "count": 2,
+          "wins": 3,
+          "games": 12
+        },
+        {
+          "count": 3,
+          "wins": 7,
+          "games": 18
+        },
+        {
+          "count": 4,
+          "wins": 6,
+          "games": 24
+        },
+        {
+          "count": 5,
+          "wins": 7,
+          "games": 30
+        }
+      ]
+    }
+  ]
+}

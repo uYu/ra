@@ -1,0 +1,109 @@
+{
+  "opponent": "mcts",
+  "candidate": "search",
+  "seeds": 1,
+  "start": 8101,
+  "samples": 32,
+  "allSeats": true,
+  "summary": [
+    {
+      "count": 3,
+      "games": 3,
+      "wins": 0,
+      "winRate": 0,
+      "chance": 0.3333333333333333,
+      "score": 45.333333333333336,
+      "margin": -3.6666666666666665
+    },
+    {
+      "count": 5,
+      "games": 5,
+      "wins": 2,
+      "winRate": 0.4,
+      "chance": 0.2,
+      "score": 41.8,
+      "margin": 3
+    }
+  ],
+  "timing": {
+    "decisions": 725,
+    "medianMs": 85.72429199999897,
+    "p95Ms": 445.8839999999618,
+    "maxMs": 863.5641670000041,
+    "seconds": 475.86318912499996
+  },
+  "games": [
+    {
+      "count": 3,
+      "seed": 8101,
+      "seat": 0,
+      "rank": 2,
+      "score": 50,
+      "margin": -6,
+      "steps": 272
+    },
+    {
+      "count": 3,
+      "seed": 8101,
+      "seat": 1,
+      "rank": 2,
+      "score": 42,
+      "margin": -2,
+      "steps": 268
+    },
+    {
+      "count": 3,
+      "seed": 8101,
+      "seat": 2,
+      "rank": 2,
+      "score": 44,
+      "margin": -3,
+      "steps": 277
+    },
+    {
+      "count": 5,
+      "seed": 8101,
+      "seat": 0,
+      "rank": 1,
+      "score": 49,
+      "margin": 8,
+      "steps": 424
+    },
+    {
+      "count": 5,
+      "seed": 8101,
+      "seat": 1,
+      "rank": 2,
+      "score": 42,
+      "margin": -7,
+      "steps": 456
+    },
+    {
+      "count": 5,
+      "seed": 8101,
+      "seat": 2,
+      "rank": 1,
+      "score": 51,
+      "margin": 18,
+      "steps": 457
+    },
+    {
+      "count": 5,
+      "seed": 8101,
+      "seat": 3,
+      "rank": 2,
+      "score": 32,
+      "margin": -3,
+      "steps": 471
+    },
+    {
+      "count": 5,
+      "seed": 8101,
+      "seat": 4,
+      "rank": 2,
+      "score": 35,
+      "margin": -1,
+      "steps": 428
+    }
+  ]
+}

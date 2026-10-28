@@ -1,0 +1,1106 @@
+{
+  "description": "Targeted reruns, not reconstruction of original 168 games. Public-information root; unseen bag re-sampled, all scores normalized100. Compare a single alternative followed by fixed-policy play to actual terminal scores. Policy-continuation sensitivity, not optimal-action proof.",
+  "sourceSha256": "91a29f797cb311605d0a6961e0b00f6588b308e45956f761d0221d8e5afeeff2",
+  "wasmSha256": "0148c7a2a8c1d563cbbfc8714876f43f3c46b92c23cdf6308013eb8aac4857a2",
+  "screenedDecisions": 267,
+  "screenSamples": 12,
+  "selection": "Two largest screen gaps per game; independent confirmation192 + aggressive96 + conservative96 worlds; world ranges disjoint. Paired mean confidence intervals, family threshold z2.74 for 8 selected cases.",
+  "cases": [
+    {
+      "job": {
+        "path": "artifacts/decision-replays/value-2p-40001-seat1.json",
+        "step": 98,
+        "player": 1,
+        "chosen": {
+          "type": "bid",
+          "sun": 3
+        },
+        "alternatives": [
+          {
+            "type": "bid",
+            "sun": null
+          }
+        ],
+        "study": "value",
+        "count": 2,
+        "seed": 40001
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": 9.828125,
+        "se": 1.3733562295528159,
+        "low95": 7.13634679007648,
+        "high95": 12.51990320992352,
+        "lowFamily": 6.065128931025284
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": 12.885416666666666,
+        "se": 1.7112802860638465,
+        "low95": 9.531307305981526,
+        "high95": 16.239526027351804,
+        "lowFamily": 8.196508682851725
+      },
+      "conservative": {
+        "n": 96,
+        "mean": 4.645833333333333,
+        "se": 1.9456980868885172,
+        "low95": 0.8322650830318392,
+        "high95": 8.459401583634827,
+        "lowFamily": -0.6853794247412042
+      },
+      "context": {
+        "epoch": 2,
+        "phase": "auction",
+        "ra": 5,
+        "center": 7,
+        "market": [
+          "尼罗河",
+          "圣祠"
+        ],
+        "player": "拉美西斯",
+        "suns": [
+          3
+        ],
+        "used": [
+          2,
+          8,
+          9
+        ],
+        "holdings": [
+          "尼罗河",
+          "农业",
+          "阶梯金字塔",
+          "雕像"
+        ],
+        "auction": {
+          "caller": 0,
+          "reason": "invoke",
+          "order": [
+            1,
+            0
+          ],
+          "index": 0,
+          "high": 0,
+          "winner": -1,
+          "bids": []
+        },
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              1
+            ],
+            "used": [
+              6,
+              4,
+              5
+            ],
+            "holdings": [
+              "阶梯金字塔",
+              "法老",
+              "法老",
+              "方尖碑",
+              "法老",
+              "法老",
+              "尼罗河",
+              "尼罗河",
+              "法老",
+              "尼罗河",
+              "艺术",
+              "尼罗河",
+              "法老"
+            ]
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              3
+            ],
+            "used": [
+              2,
+              8,
+              9
+            ],
+            "holdings": [
+              "尼罗河",
+              "农业",
+              "阶梯金字塔",
+              "雕像"
+            ]
+          }
+        ]
+      },
+      "robustWithinReviewers": true
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/budget-2p-15004-seat0.json",
+        "step": 16,
+        "player": 0,
+        "chosen": {
+          "type": "bid",
+          "sun": 3
+        },
+        "alternatives": [
+          {
+            "type": "bid",
+            "sun": 4
+          }
+        ],
+        "study": "budget",
+        "count": 2,
+        "seed": 15004
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": 3.6927083333333335,
+        "se": 1.6322321093533763,
+        "low95": 0.49353339900071624,
+        "high95": 6.891883267665951,
+        "lowFamily": -0.779607646294918
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": -1.6354166666666667,
+        "se": 2.0522302690292538,
+        "low95": -5.657787993964004,
+        "high95": 2.3869546606306704,
+        "lowFamily": -7.258527603806822
+      },
+      "conservative": {
+        "n": 96,
+        "mean": 4.135416666666667,
+        "se": 2.103183666078699,
+        "low95": 0.013176681152417657,
+        "high95": 8.257656652180916,
+        "lowFamily": -1.6273065783889686
+      },
+      "context": {
+        "epoch": 1,
+        "phase": "auction",
+        "ra": 3,
+        "center": 8,
+        "market": [
+          "洪水"
+        ],
+        "player": "奈芙蒂蒂",
+        "suns": [
+          3,
+          4,
+          7
+        ],
+        "used": [
+          1
+        ],
+        "holdings": [
+          "神祇",
+          "神庙",
+          "法老",
+          "方尖碑"
+        ],
+        "auction": {
+          "caller": 1,
+          "reason": "draw",
+          "order": [
+            0,
+            1
+          ],
+          "index": 0,
+          "high": 0,
+          "winner": -1,
+          "bids": []
+        },
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              3,
+              4,
+              7
+            ],
+            "used": [
+              1
+            ],
+            "holdings": [
+              "神祇",
+              "神庙",
+              "法老",
+              "方尖碑"
+            ]
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              2,
+              5,
+              6,
+              9
+            ],
+            "used": [],
+            "holdings": []
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/value-5p-40004-seat1.json",
+        "step": 36,
+        "player": 1,
+        "chosen": {
+          "type": "draw"
+        },
+        "alternatives": [
+          {
+            "type": "invoke"
+          }
+        ],
+        "study": "value",
+        "count": 5,
+        "seed": 40004
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": 2.6087500000000006,
+        "se": 1.236129356453316,
+        "low95": 0.18593646135150133,
+        "high95": 5.0315635386485,
+        "lowFamily": -0.7782444366820855
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": 2.540833333333334,
+        "se": 1.4380646691613206,
+        "low95": -0.2777734182228544,
+        "high95": 5.359440084889522,
+        "lowFamily": -1.3994638601686846
+      },
+      "conservative": {
+        "n": 96,
+        "mean": -1.0477083333333332,
+        "se": 1.5944830149830524,
+        "low95": -4.172895042700116,
+        "high95": 2.07747837603345,
+        "lowFamily": -5.416591794386897
+      },
+      "context": {
+        "epoch": 1,
+        "phase": "turn",
+        "ra": 4,
+        "center": 10,
+        "market": [],
+        "player": "拉美西斯",
+        "suns": [
+          2,
+          7,
+          16
+        ],
+        "used": [],
+        "holdings": [],
+        "auction": null,
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              6,
+              11,
+              12
+            ],
+            "used": [],
+            "holdings": []
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              2,
+              7,
+              16
+            ],
+            "used": [],
+            "holdings": []
+          },
+          {
+            "i": 2,
+            "name": "哈特谢普苏特",
+            "suns": [
+              4,
+              9,
+              14
+            ],
+            "used": [],
+            "holdings": []
+          },
+          {
+            "i": 3,
+            "name": "图特摩斯",
+            "suns": [
+              8,
+              15
+            ],
+            "used": [
+              1
+            ],
+            "holdings": [
+              "尼罗河",
+              "尼罗河"
+            ]
+          },
+          {
+            "i": 4,
+            "name": "伊姆霍特普",
+            "suns": [
+              5,
+              13
+            ],
+            "used": [
+              3
+            ],
+            "holdings": [
+              "方尖碑",
+              "法老",
+              "狮身人面像"
+            ]
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/budget-5p-15002-seat2.json",
+        "step": 126,
+        "player": 2,
+        "chosen": {
+          "type": "bid",
+          "sun": 13
+        },
+        "alternatives": [
+          {
+            "type": "bid",
+            "sun": null
+          }
+        ],
+        "study": "budget",
+        "count": 5,
+        "seed": 15002
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": -0.5178124999999993,
+        "se": 1.0515605907798213,
+        "low95": -2.578871257928449,
+        "high95": 1.5432462579284505,
+        "lowFamily": -3.39908851873671
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": -2.7118749999999996,
+        "se": 1.1747479602071949,
+        "low95": -5.014381002006101,
+        "high95": -0.4093689979938979,
+        "lowFamily": -5.930684410967714
+      },
+      "conservative": {
+        "n": 96,
+        "mean": 0.9727083333333327,
+        "se": 1.4033013743847562,
+        "low95": -1.7777623604607893,
+        "high95": 3.723179027127455,
+        "lowFamily": -2.8723374324808995
+      },
+      "context": {
+        "epoch": 1,
+        "phase": "auction",
+        "ra": 9,
+        "center": 4,
+        "market": [
+          "洪水",
+          "金字塔",
+          "艺术"
+        ],
+        "player": "哈特谢普苏特",
+        "suns": [
+          5,
+          13
+        ],
+        "used": [
+          12
+        ],
+        "holdings": [
+          "金字塔",
+          "尼罗河",
+          "洪水"
+        ],
+        "auction": {
+          "caller": 2,
+          "reason": "draw",
+          "order": [
+            3,
+            2
+          ],
+          "index": 1,
+          "high": 8,
+          "winner": 3,
+          "bids": [
+            {
+              "player": 3,
+              "sun": 8
+            }
+          ]
+        },
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [],
+            "used": [
+              16,
+              15,
+              14
+            ],
+            "holdings": [
+              "洪水",
+              "神庙",
+              "文字",
+              "法老",
+              "农业",
+              "尼罗河"
+            ]
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [],
+            "used": [
+              1,
+              7,
+              6
+            ],
+            "holdings": [
+              "尼罗河",
+              "尼罗河",
+              "雕像",
+              "圣祠",
+              "艺术",
+              "法老",
+              "天文",
+              "文字",
+              "尼罗河",
+              "黄金",
+              "洪水",
+              "法老"
+            ]
+          },
+          {
+            "i": 2,
+            "name": "哈特谢普苏特",
+            "suns": [
+              5,
+              13
+            ],
+            "used": [
+              12
+            ],
+            "holdings": [
+              "金字塔",
+              "尼罗河",
+              "洪水"
+            ]
+          },
+          {
+            "i": 3,
+            "name": "图特摩斯",
+            "suns": [
+              3,
+              8
+            ],
+            "used": [
+              2
+            ],
+            "holdings": [
+              "黄金",
+              "法老",
+              "法老"
+            ]
+          },
+          {
+            "i": 4,
+            "name": "伊姆霍特普",
+            "suns": [],
+            "used": [
+              9,
+              10,
+              11
+            ],
+            "holdings": [
+              "洪水",
+              "黄金",
+              "农业",
+              "法老"
+            ]
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/value-5p-40004-seat1.json",
+        "step": 137,
+        "player": 1,
+        "chosen": {
+          "type": "bid",
+          "sun": 8
+        },
+        "alternatives": [
+          {
+            "type": "bid",
+            "sun": null
+          }
+        ],
+        "study": "value",
+        "count": 5,
+        "seed": 40004
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": -1.2665624999999994,
+        "se": 0.8922851441373075,
+        "low95": -3.015441382509122,
+        "high95": 0.48231638250912345,
+        "lowFamily": -3.7114237949362225
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": -1.0968749999999996,
+        "se": 1.152019254229819,
+        "low95": -3.354832738290445,
+        "high95": 1.1610827382904458,
+        "lowFamily": -4.253407756589704
+      },
+      "conservative": {
+        "n": 96,
+        "mean": -0.5843750000000001,
+        "se": 1.2884047733236812,
+        "low95": -3.1096483557144152,
+        "high95": 1.940898355714415,
+        "lowFamily": -4.114604078906886
+      },
+      "context": {
+        "epoch": 2,
+        "phase": "auction",
+        "ra": 1,
+        "center": 14,
+        "market": [
+          "神祇"
+        ],
+        "player": "拉美西斯",
+        "suns": [
+          8,
+          11,
+          12
+        ],
+        "used": [],
+        "holdings": [
+          "尼罗河",
+          "法老",
+          "狮身人面像",
+          "法老"
+        ],
+        "auction": {
+          "caller": 3,
+          "reason": "draw",
+          "order": [
+            4,
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 2,
+          "high": 6,
+          "winner": 0,
+          "bids": [
+            {
+              "player": 4,
+              "sun": 3
+            },
+            {
+              "player": 0,
+              "sun": 6
+            }
+          ]
+        },
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              6,
+              9,
+              15
+            ],
+            "used": [],
+            "holdings": [
+              "圣祠",
+              "雕像"
+            ]
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              8,
+              11,
+              12
+            ],
+            "used": [],
+            "holdings": [
+              "尼罗河",
+              "法老",
+              "狮身人面像",
+              "法老"
+            ]
+          },
+          {
+            "i": 2,
+            "name": "哈特谢普苏特",
+            "suns": [
+              4,
+              13,
+              16
+            ],
+            "used": [],
+            "holdings": [
+              "狮身人面像",
+              "尼罗河"
+            ]
+          },
+          {
+            "i": 3,
+            "name": "图特摩斯",
+            "suns": [
+              1,
+              5,
+              10
+            ],
+            "used": [],
+            "holdings": [
+              "尼罗河",
+              "尼罗河",
+              "阶梯金字塔",
+              "圣祠",
+              "法老",
+              "法老"
+            ]
+          },
+          {
+            "i": 4,
+            "name": "伊姆霍特普",
+            "suns": [
+              2,
+              3,
+              7
+            ],
+            "used": [],
+            "holdings": [
+              "方尖碑",
+              "法老",
+              "狮身人面像"
+            ]
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/value-2p-40001-seat1.json",
+        "step": 24,
+        "player": 1,
+        "chosen": {
+          "type": "bid",
+          "sun": null
+        },
+        "alternatives": [
+          {
+            "type": "bid",
+            "sun": 4
+          }
+        ],
+        "study": "value",
+        "count": 2,
+        "seed": 40001
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": -1.4010416666666667,
+        "se": 1.580398099572469,
+        "low95": -4.498621941828706,
+        "high95": 1.6965386084953724,
+        "lowFamily": -5.731332459495232
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": -2.3645833333333335,
+        "se": 2.3424533450233573,
+        "low95": -6.955791889579114,
+        "high95": 2.2266252229124466,
+        "lowFamily": -8.782905498697334
+      },
+      "conservative": {
+        "n": 96,
+        "mean": -4.947916666666667,
+        "se": 2.4334281009994774,
+        "low95": -9.717435744625643,
+        "high95": -0.17839758870769096,
+        "lowFamily": -11.615509663405234
+      },
+      "context": {
+        "epoch": 1,
+        "phase": "auction",
+        "ra": 1,
+        "center": 5,
+        "market": [
+          "方尖碑",
+          "农业"
+        ],
+        "player": "拉美西斯",
+        "suns": [
+          3,
+          4,
+          7
+        ],
+        "used": [
+          9
+        ],
+        "holdings": [
+          "农业",
+          "尼罗河"
+        ],
+        "auction": {
+          "caller": 0,
+          "reason": "invoke",
+          "order": [
+            1,
+            0
+          ],
+          "index": 0,
+          "high": 0,
+          "winner": -1,
+          "bids": []
+        },
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              2,
+              6
+            ],
+            "used": [
+              1,
+              8
+            ],
+            "holdings": [
+              "神祇",
+              "黄金",
+              "黄金",
+              "阶梯金字塔",
+              "法老",
+              "法老"
+            ]
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              3,
+              4,
+              7
+            ],
+            "used": [
+              9
+            ],
+            "holdings": [
+              "农业",
+              "尼罗河"
+            ]
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/budget-5p-15002-seat2.json",
+        "step": 69,
+        "player": 2,
+        "chosen": {
+          "type": "draw"
+        },
+        "alternatives": [
+          {
+            "type": "invoke"
+          }
+        ],
+        "study": "budget",
+        "count": 5,
+        "seed": 15002
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": -2.965624999999999,
+        "se": 1.1052139480623158,
+        "low95": -5.1318443382021375,
+        "high95": -0.7994056617978598,
+        "lowFamily": -5.993911217690744
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": 0.45500000000000074,
+        "se": 1.5527668287806136,
+        "low95": -2.588422984410002,
+        "high95": 3.498422984410003,
+        "lowFamily": -3.79958111085888
+      },
+      "conservative": {
+        "n": 96,
+        "mean": -1.501666666666667,
+        "se": 1.774946198015014,
+        "low95": -4.9805612147760945,
+        "high95": 1.9772278814427606,
+        "lowFamily": -6.365019249227806
+      },
+      "context": {
+        "epoch": 1,
+        "phase": "turn",
+        "ra": 5,
+        "center": 10,
+        "market": [],
+        "player": "哈特谢普苏特",
+        "suns": [
+          5,
+          13
+        ],
+        "used": [
+          12
+        ],
+        "holdings": [
+          "金字塔",
+          "尼罗河",
+          "洪水"
+        ],
+        "auction": null,
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              4,
+              14
+            ],
+            "used": [
+              16
+            ],
+            "holdings": []
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              2
+            ],
+            "used": [
+              1,
+              7
+            ],
+            "holdings": [
+              "尼罗河",
+              "尼罗河",
+              "雕像",
+              "圣祠",
+              "艺术",
+              "法老",
+              "法老",
+              "法老",
+              "天文",
+              "文字",
+              "尼罗河",
+              "黄金"
+            ]
+          },
+          {
+            "i": 2,
+            "name": "哈特谢普苏特",
+            "suns": [
+              5,
+              13
+            ],
+            "used": [
+              12
+            ],
+            "holdings": [
+              "金字塔",
+              "尼罗河",
+              "洪水"
+            ]
+          },
+          {
+            "i": 3,
+            "name": "图特摩斯",
+            "suns": [
+              3,
+              8,
+              15
+            ],
+            "used": [],
+            "holdings": []
+          },
+          {
+            "i": 4,
+            "name": "伊姆霍特普",
+            "suns": [
+              6,
+              11
+            ],
+            "used": [
+              9
+            ],
+            "holdings": [
+              "洪水",
+              "黄金"
+            ]
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    },
+    {
+      "job": {
+        "path": "artifacts/decision-replays/budget-2p-15004-seat0.json",
+        "step": 14,
+        "player": 0,
+        "chosen": {
+          "type": "bid",
+          "sun": null
+        },
+        "alternatives": [
+          {
+            "type": "bid",
+            "sun": 7
+          }
+        ],
+        "study": "budget",
+        "count": 2,
+        "seed": 15004
+      },
+      "confirmation": {
+        "n": 192,
+        "mean": -4.5,
+        "se": 1.5050634433758556,
+        "low95": -7.449924349016677,
+        "high95": -1.550075650983323,
+        "lowFamily": -8.623873834849846
+      },
+      "aggressive": {
+        "n": 96,
+        "mean": -6.28125,
+        "se": 2.0186467981876706,
+        "low95": -10.237797724447834,
+        "high95": -2.324702275552166,
+        "lowFamily": -11.812342227034218
+      },
+      "conservative": {
+        "n": 96,
+        "mean": -3.7916666666666665,
+        "se": 2.5173048743466406,
+        "low95": -8.725584220386082,
+        "high95": 1.1422508870527488,
+        "lowFamily": -10.689082022376462
+      },
+      "context": {
+        "epoch": 1,
+        "phase": "auction",
+        "ra": 2,
+        "center": 8,
+        "market": [
+          "洪水"
+        ],
+        "player": "奈芙蒂蒂",
+        "suns": [
+          3,
+          4,
+          7
+        ],
+        "used": [
+          1
+        ],
+        "holdings": [
+          "神祇",
+          "神庙",
+          "法老",
+          "方尖碑"
+        ],
+        "auction": {
+          "caller": 0,
+          "reason": "draw",
+          "order": [
+            1,
+            0
+          ],
+          "index": 1,
+          "high": 0,
+          "winner": -1,
+          "bids": [
+            {
+              "player": 1,
+              "sun": null
+            }
+          ]
+        },
+        "otherPlayers": [
+          {
+            "i": 0,
+            "name": "奈芙蒂蒂",
+            "suns": [
+              3,
+              4,
+              7
+            ],
+            "used": [
+              1
+            ],
+            "holdings": [
+              "神祇",
+              "神庙",
+              "法老",
+              "方尖碑"
+            ]
+          },
+          {
+            "i": 1,
+            "name": "拉美西斯",
+            "suns": [
+              2,
+              5,
+              6,
+              9
+            ],
+            "used": [],
+            "holdings": []
+          }
+        ]
+      },
+      "robustWithinReviewers": false
+    }
+  ]
+}

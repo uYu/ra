@@ -1,0 +1,62 @@
+{
+  "status": "stopped-user",
+  "studyManifest": "artifacts/ai-sh-study-manifest.json",
+  "regression": {
+    "command": "npm test",
+    "tests": 67,
+    "passed": 67,
+    "failed": 0,
+    "durationMs": 385065.310625
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true,
+    "abi": 6
+  },
+  "targetedRankTests": {
+    "passed": 4,
+    "covers": [
+      "TS/C++ parity",
+      "hidden-information isolation",
+      "frozen ABI5 default preservation",
+      "invalid options"
+    ]
+  },
+  "smoke": {
+    "frozen5Games": 2,
+    "rank6Games": 2,
+    "allFourImportReplayRankChecks": true,
+    "excludedFromFormalResults": true
+  },
+  "studySourceHashes": {
+    "artifacts/ai-sh-confirmation-methods.md": "8d9dc8ea6887eb0c76057d595e22c4b1f73e4bb17440cbb00b2bb32e52565e78",
+    "scripts/benchmark-tree.ts": "03dd7db41d879f2cff61d8910657ba6d031f88b4e58a605814510a2c39fad705",
+    "scripts/run-sh-study.ts": "f0dd9459ccb32ed3fa28532bc0f2c717ae18a7c34b77951613d6d96b68c1e56d",
+    "scripts/summarize-sh-study.ts": "11d1bb7c7ee1370a5a314a1a73b28950c1dc9c3d637d96abcc9b89a3c3386b0e",
+    "scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "src/game/ai/wasm.ts": "a2ab14655237fd4ae44421a3e37d6e63032f664247a604c278669b387a9a9d42",
+    "src/game/ai/wasm-frozen-uct5.ts": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2",
+    "src/game/ai/search.ts": "0a0066614205e51833abb3e18ce8eb7218ecf0ab293118251629027baa56e4da",
+    "src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "src/game/data.ts": "2629b59a63483b3dccf9c2b47170d869008d345e33362d3adb0bbd1f37e08a9e",
+    "src/game/ai.ts": "87eaea654fe80c4eae183a890d1cd06b2a84fae1f7f5ffcfb44242b9def56f95",
+    "native/ra_ai.cpp": "15adac9a6abb39113956cfde487b1d60b612048404053804e3c12fe43be637a5",
+    "src/game/ai/ra-ai.wasm": "c13f8ef47394bd4555e605e2014355b80c6a7f32eed1cd08ae905bbb395c3818",
+    "artifacts/frozen-uct5/ra_ai.cpp": "48d791de430b76648bbf3414b3671d692f07df385e866e1903e1df57db568a52",
+    "artifacts/frozen-uct5/ra-ai.wasm": "395efeaf03e65b91e41b4b003f39c45058a62dad3baee66ff6258565ec5529db"
+  },
+  "amendment": {
+    "request": "先不跑500ms",
+    "cancelledGroup": "sh500",
+    "cancelledBeforeStart": true,
+    "retainedCompletedSh200Games": 40,
+    "resumedUnchanged200msGroups": true,
+    "initialPlanArchive": "artifacts/ai-sh-study-initial-plan"
+  },
+  "stoppedAt": "2026-10-27T14:28:58.955Z",
+  "retainedGames": 400,
+  "sh200Complete": true,
+  "rank200Complete": false,
+  "partialReplayFilesAndActionHashesVerified": 120,
+  "sourceSnapshotIndex": "artifacts/ai-sh-study-source-snapshot/index.json"
+}

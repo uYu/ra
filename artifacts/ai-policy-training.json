@@ -1,0 +1,696 @@
+{
+  "trainGames": 64,
+  "devGames": 16,
+  "trainDecisions": 17316,
+  "devDecisions": 4410,
+  "trainSeeds": [
+    500001,
+    500064
+  ],
+  "devSeeds": [
+    600001,
+    600016
+  ],
+  "finalValidationSeeds": [
+    71001,
+    71006
+  ],
+  "inputs": 287,
+  "hidden": 16,
+  "parameters": 4625,
+  "selectedEpoch": 13,
+  "modelSha256": "c29124039d3350b6f44dd8163cdd7f76640154679cc1c39abf16a5e52c3bae19",
+  "datasetSha256": "94e93a924c27291dc5fb50fc0d0ed5a81c0a5f5ae8753208bf4256f6a3fd3851",
+  "teacher": {
+    "abi": 4,
+    "source": "native/ra_ai.cpp",
+    "target": "src/game/ai/ra-ai.wasm",
+    "sourceSha256": "91a29f797cb311605d0a6961e0b00f6588b308e45956f761d0221d8e5afeeff2",
+    "wasmSha256": "0148c7a2a8c1d563cbbfc8714876f43f3c46b92c23cdf6308013eb8aac4857a2",
+    "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9-git",
+    "flags": [
+      "-std=c++20",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-fno-exceptions",
+      "-fno-threadsafe-statics",
+      "--no-entry",
+      "-sSTANDALONE_WASM=1",
+      "-sFILESYSTEM=0",
+      "-sMALLOC=emmalloc",
+      "-sINITIAL_MEMORY=33554432",
+      "-sALLOW_MEMORY_GROWTH=1",
+      "-sSTACK_SIZE=1048576",
+      "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\"]"
+    ]
+  },
+  "train": {
+    "n": 17316,
+    "crossEntropy": 0.789811015777807,
+    "kl": 0.04032432236443506,
+    "accuracy": 0.7932547932547932,
+    "baselineAccuracy": 0.7271887271887272,
+    "teacherVisitMassOfSelected": 0.5974020046343687
+  },
+  "dev": {
+    "n": 4410,
+    "crossEntropy": 0.8101950313299063,
+    "kl": 0.05098678670911432,
+    "accuracy": 0.7723356009070295,
+    "baselineAccuracy": 0.7170068027210884,
+    "teacherVisitMassOfSelected": 0.5843002060352672
+  },
+  "byCount": [
+    {
+      "count": 2,
+      "n": 617,
+      "crossEntropy": 0.8214738992148357,
+      "kl": 0.08636710118784198,
+      "accuracy": 0.7860615883306321,
+      "baselineAccuracy": 0.6223662884927067,
+      "teacherVisitMassOfSelected": 0.5961875043672781
+    },
+    {
+      "count": 3,
+      "n": 994,
+      "crossEntropy": 0.8267143196290744,
+      "kl": 0.04524491167829755,
+      "accuracy": 0.7595573440643864,
+      "baselineAccuracy": 0.6961770623742455,
+      "teacherVisitMassOfSelected": 0.5829797240074452
+    },
+    {
+      "count": 4,
+      "n": 1242,
+      "crossEntropy": 0.7655472860935206,
+      "kl": 0.04495292183384173,
+      "accuracy": 0.78341384863124,
+      "baselineAccuracy": 0.7407407407407407,
+      "teacherVisitMassOfSelected": 0.6037369742414342
+    },
+    {
+      "count": 5,
+      "n": 1557,
+      "crossEntropy": 0.8307944311559997,
+      "kl": 0.045445251656047576,
+      "accuracy": 0.7662170841361593,
+      "baselineAccuracy": 0.7488760436737315,
+      "teacherVisitMassOfSelected": 0.5649280993896342
+    }
+  ],
+  "byPhase": [
+    {
+      "phase": "turn",
+      "n": 2543,
+      "crossEntropy": 0.6626110442536144,
+      "kl": 0.04159998012192484,
+      "accuracy": 0.8517499016909162,
+      "baselineAccuracy": 0.7546205269366889,
+      "teacherVisitMassOfSelected": 0.6606143378472058
+    },
+    {
+      "phase": "auction",
+      "n": 1865,
+      "crossEntropy": 1.0115700519273962,
+      "kl": 0.0638317579697128,
+      "accuracy": 0.6638069705093834,
+      "baselineAccuracy": 0.6659517426273458,
+      "teacherVisitMassOfSelected": 0.48025056391434345
+    },
+    {
+      "phase": "god",
+      "n": 2,
+      "crossEntropy": 0.6810278916794816,
+      "kl": 0.008375661819424174,
+      "accuracy": 1,
+      "baselineAccuracy": 0.5,
+      "teacherVisitMassOfSelected": 0.5771728849185496
+    }
+  ],
+  "byFinalRank": [
+    {
+      "winner": true,
+      "n": 1478,
+      "crossEntropy": 0.8203771455882708,
+      "kl": 0.053607847620980226,
+      "accuracy": 0.7990527740189445,
+      "baselineAccuracy": 0.6684709066305818,
+      "teacherVisitMassOfSelected": 0.593674222163958
+    },
+    {
+      "winner": false,
+      "n": 2932,
+      "crossEntropy": 0.8050623011546498,
+      "kl": 0.049665528855186554,
+      "accuracy": 0.7588676671214188,
+      "baselineAccuracy": 0.7414733969986358,
+      "teacherVisitMassOfSelected": 0.5795748322841754
+    }
+  ],
+  "history": [
+    {
+      "epoch": 0,
+      "n": 4410,
+      "crossEntropy": 0.8247648339925984,
+      "kl": 0.06555658937180626,
+      "accuracy": 0.7501133786848072,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5724478464289585
+    },
+    {
+      "epoch": 1,
+      "n": 4410,
+      "crossEntropy": 0.8196928779080945,
+      "kl": 0.06048463328730245,
+      "accuracy": 0.7532879818594105,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5741439143374918
+    },
+    {
+      "epoch": 2,
+      "n": 4410,
+      "crossEntropy": 0.817414235448119,
+      "kl": 0.058205990827326935,
+      "accuracy": 0.7596371882086168,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5755521881889677
+    },
+    {
+      "epoch": 3,
+      "n": 4410,
+      "crossEntropy": 0.8165145025407587,
+      "kl": 0.05730625791996672,
+      "accuracy": 0.7619047619047619,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5770345801061983
+    },
+    {
+      "epoch": 4,
+      "n": 4410,
+      "crossEntropy": 0.8172032804361885,
+      "kl": 0.057995035815396424,
+      "accuracy": 0.7616780045351474,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5774630296540222
+    },
+    {
+      "epoch": 5,
+      "n": 4410,
+      "crossEntropy": 0.8138564767953145,
+      "kl": 0.05464823217452241,
+      "accuracy": 0.7684807256235827,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5801572525853408
+    },
+    {
+      "epoch": 6,
+      "n": 4410,
+      "crossEntropy": 0.8149733330344364,
+      "kl": 0.05576508841364431,
+      "accuracy": 0.7630385487528345,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5805159320966689
+    },
+    {
+      "epoch": 7,
+      "n": 4410,
+      "crossEntropy": 0.8135155824200136,
+      "kl": 0.05430733779922165,
+      "accuracy": 0.7702947845804988,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5810450054069076
+    },
+    {
+      "epoch": 8,
+      "n": 4410,
+      "crossEntropy": 0.8113512382369014,
+      "kl": 0.052142993616109294,
+      "accuracy": 0.772562358276644,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.582781759634211
+    },
+    {
+      "epoch": 9,
+      "n": 4410,
+      "crossEntropy": 0.8115280291638939,
+      "kl": 0.05231978454310184,
+      "accuracy": 0.7687074829931972,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5819582557662284
+    },
+    {
+      "epoch": 10,
+      "n": 4410,
+      "crossEntropy": 0.812294885783821,
+      "kl": 0.053086641163029025,
+      "accuracy": 0.7732426303854876,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5824600347267302
+    },
+    {
+      "epoch": 11,
+      "n": 4410,
+      "crossEntropy": 0.8114960090655295,
+      "kl": 0.052287764444737476,
+      "accuracy": 0.7662131519274377,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5827223324042916
+    },
+    {
+      "epoch": 12,
+      "n": 4410,
+      "crossEntropy": 0.8110732184038604,
+      "kl": 0.05186497378306837,
+      "accuracy": 0.7757369614512472,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5838635164796041
+    },
+    {
+      "epoch": 13,
+      "n": 4410,
+      "crossEntropy": 0.8101950313299063,
+      "kl": 0.05098678670911432,
+      "accuracy": 0.7723356009070295,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5843002060352672
+    },
+    {
+      "epoch": 14,
+      "n": 4410,
+      "crossEntropy": 0.8118846969632112,
+      "kl": 0.052676452342419106,
+      "accuracy": 0.7786848072562358,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.583963403848999
+    },
+    {
+      "epoch": 15,
+      "n": 4410,
+      "crossEntropy": 0.8107884803474745,
+      "kl": 0.05158023572668244,
+      "accuracy": 0.7752834467120181,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5848488467938859
+    },
+    {
+      "epoch": 16,
+      "n": 4410,
+      "crossEntropy": 0.8119117516054308,
+      "kl": 0.05270350698463882,
+      "accuracy": 0.7712018140589569,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5830820405784618
+    },
+    {
+      "epoch": 17,
+      "n": 4410,
+      "crossEntropy": 0.8109127660483562,
+      "kl": 0.05170452142756413,
+      "accuracy": 0.7768707482993197,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5843747058013824
+    },
+    {
+      "epoch": 18,
+      "n": 4410,
+      "crossEntropy": 0.8115971608907881,
+      "kl": 0.05238891626999611,
+      "accuracy": 0.7786848072562358,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5844440212163736
+    },
+    {
+      "epoch": 19,
+      "n": 4410,
+      "crossEntropy": 0.8126985745283264,
+      "kl": 0.053490329907534384,
+      "accuracy": 0.7757369614512472,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5839811858302423
+    },
+    {
+      "epoch": 20,
+      "n": 4410,
+      "crossEntropy": 0.8105860815245464,
+      "kl": 0.05137783690375436,
+      "accuracy": 0.7755102040816326,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5846185087141654
+    },
+    {
+      "epoch": 21,
+      "n": 4410,
+      "crossEntropy": 0.81229974544002,
+      "kl": 0.05309150081922797,
+      "accuracy": 0.771655328798186,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5824337195156754
+    },
+    {
+      "epoch": 22,
+      "n": 4410,
+      "crossEntropy": 0.8116579695705054,
+      "kl": 0.05244972494971335,
+      "accuracy": 0.7721088435374149,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5845800506712993
+    },
+    {
+      "epoch": 23,
+      "n": 4410,
+      "crossEntropy": 0.8120266632705017,
+      "kl": 0.052818418649709646,
+      "accuracy": 0.7718820861678004,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5859814924683069
+    },
+    {
+      "epoch": 24,
+      "n": 4410,
+      "crossEntropy": 0.8129546713600446,
+      "kl": 0.053746426739252603,
+      "accuracy": 0.7746031746031746,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5826957162035767
+    },
+    {
+      "epoch": 25,
+      "n": 4410,
+      "crossEntropy": 0.8123608300283734,
+      "kl": 0.05315258540758145,
+      "accuracy": 0.7671201814058957,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5826336364651358
+    },
+    {
+      "epoch": 26,
+      "n": 4410,
+      "crossEntropy": 0.814448847715586,
+      "kl": 0.05524060309479392,
+      "accuracy": 0.7777777777777778,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5833306395782867
+    },
+    {
+      "epoch": 27,
+      "n": 4410,
+      "crossEntropy": 0.813701222628477,
+      "kl": 0.054492978007684996,
+      "accuracy": 0.771655328798186,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.58276309283868
+    },
+    {
+      "epoch": 28,
+      "n": 4410,
+      "crossEntropy": 0.8136910107155951,
+      "kl": 0.05448276609480313,
+      "accuracy": 0.7718820861678004,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5823610142684217
+    },
+    {
+      "epoch": 29,
+      "n": 4410,
+      "crossEntropy": 0.8124520756770701,
+      "kl": 0.05324383105627803,
+      "accuracy": 0.7723356009070295,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5837317758500696
+    },
+    {
+      "epoch": 30,
+      "n": 4410,
+      "crossEntropy": 0.813080119766335,
+      "kl": 0.053871875145542904,
+      "accuracy": 0.7741496598639456,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5845947802429685
+    },
+    {
+      "epoch": 31,
+      "n": 4410,
+      "crossEntropy": 0.8183663474036419,
+      "kl": 0.05915810278284981,
+      "accuracy": 0.7600907029478458,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.578349975036689
+    },
+    {
+      "epoch": 32,
+      "n": 4410,
+      "crossEntropy": 0.8149159389965097,
+      "kl": 0.05570769437571762,
+      "accuracy": 0.7673469387755102,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5823012935162127
+    },
+    {
+      "epoch": 33,
+      "n": 4410,
+      "crossEntropy": 0.8149541454559013,
+      "kl": 0.055745900835109254,
+      "accuracy": 0.7746031746031746,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5839123321413755
+    },
+    {
+      "epoch": 34,
+      "n": 4410,
+      "crossEntropy": 0.8150251076022904,
+      "kl": 0.055816862981498336,
+      "accuracy": 0.773922902494331,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.582384308822476
+    },
+    {
+      "epoch": 35,
+      "n": 4410,
+      "crossEntropy": 0.8138958421977334,
+      "kl": 0.05468759757694126,
+      "accuracy": 0.7750566893424037,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5843193697886229
+    },
+    {
+      "epoch": 36,
+      "n": 4410,
+      "crossEntropy": 0.8162056351296745,
+      "kl": 0.056997390508882445,
+      "accuracy": 0.763718820861678,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5799474162113744
+    },
+    {
+      "epoch": 37,
+      "n": 4410,
+      "crossEntropy": 0.8138379708659981,
+      "kl": 0.054629726245205984,
+      "accuracy": 0.7780045351473923,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.585049870034435
+    },
+    {
+      "epoch": 38,
+      "n": 4410,
+      "crossEntropy": 0.8148367436827012,
+      "kl": 0.05562849906190919,
+      "accuracy": 0.771655328798186,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5822868220812621
+    },
+    {
+      "epoch": 39,
+      "n": 4410,
+      "crossEntropy": 0.8167774736543449,
+      "kl": 0.057569229033552945,
+      "accuracy": 0.7619047619047619,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5804826545251411
+    },
+    {
+      "epoch": 40,
+      "n": 4410,
+      "crossEntropy": 0.8158220898023544,
+      "kl": 0.05661384518156237,
+      "accuracy": 0.7682539682539683,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5827842752997305
+    },
+    {
+      "epoch": 41,
+      "n": 4410,
+      "crossEntropy": 0.8159552414905515,
+      "kl": 0.05674699686975948,
+      "accuracy": 0.7746031746031746,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5832610094595815
+    },
+    {
+      "epoch": 42,
+      "n": 4410,
+      "crossEntropy": 0.8167757998605556,
+      "kl": 0.05756755523976358,
+      "accuracy": 0.7675736961451247,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5808045203697657
+    },
+    {
+      "epoch": 43,
+      "n": 4410,
+      "crossEntropy": 0.8158985242878819,
+      "kl": 0.05669027966708987,
+      "accuracy": 0.7709750566893424,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5823407747655842
+    },
+    {
+      "epoch": 44,
+      "n": 4410,
+      "crossEntropy": 0.8154198505587578,
+      "kl": 0.056211605937965745,
+      "accuracy": 0.7678004535147392,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5815788819052261
+    },
+    {
+      "epoch": 45,
+      "n": 4410,
+      "crossEntropy": 0.8157513173423216,
+      "kl": 0.05654307272152963,
+      "accuracy": 0.7693877551020408,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5809275954555844
+    },
+    {
+      "epoch": 46,
+      "n": 4410,
+      "crossEntropy": 0.8151515867974338,
+      "kl": 0.055943342176641785,
+      "accuracy": 0.7721088435374149,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5842445974734561
+    },
+    {
+      "epoch": 47,
+      "n": 4410,
+      "crossEntropy": 0.817999562134004,
+      "kl": 0.05879131751321201,
+      "accuracy": 0.7741496598639456,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5828366399009597
+    },
+    {
+      "epoch": 48,
+      "n": 4410,
+      "crossEntropy": 0.8171961005735885,
+      "kl": 0.057987855952796444,
+      "accuracy": 0.7657596371882086,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5802654032580588
+    },
+    {
+      "epoch": 49,
+      "n": 4410,
+      "crossEntropy": 0.8139465151243953,
+      "kl": 0.05473827050360329,
+      "accuracy": 0.7721088435374149,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5833859296583752
+    },
+    {
+      "epoch": 50,
+      "n": 4410,
+      "crossEntropy": 0.8153743839615077,
+      "kl": 0.056166139340715716,
+      "accuracy": 0.7646258503401361,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.582018020248518
+    },
+    {
+      "epoch": 51,
+      "n": 4410,
+      "crossEntropy": 0.8172733128312344,
+      "kl": 0.05806506821044239,
+      "accuracy": 0.7721088435374149,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5819325279129847
+    },
+    {
+      "epoch": 52,
+      "n": 4410,
+      "crossEntropy": 0.8168045050779601,
+      "kl": 0.05759626045716806,
+      "accuracy": 0.7700680272108843,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5826905906121582
+    },
+    {
+      "epoch": 53,
+      "n": 4410,
+      "crossEntropy": 0.8183555149827586,
+      "kl": 0.05914727036196652,
+      "accuracy": 0.7682539682539683,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5803774684300512
+    },
+    {
+      "epoch": 54,
+      "n": 4410,
+      "crossEntropy": 0.8155256720305508,
+      "kl": 0.05631742740975873,
+      "accuracy": 0.7759637188208617,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5823667096565365
+    },
+    {
+      "epoch": 55,
+      "n": 4410,
+      "crossEntropy": 0.8156393584029252,
+      "kl": 0.056431113782133155,
+      "accuracy": 0.7698412698412699,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5830578127205186
+    },
+    {
+      "epoch": 56,
+      "n": 4410,
+      "crossEntropy": 0.8165036370653578,
+      "kl": 0.05729539244456576,
+      "accuracy": 0.7786848072562358,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5852216938919756
+    },
+    {
+      "epoch": 57,
+      "n": 4410,
+      "crossEntropy": 0.81877391158628,
+      "kl": 0.05956566696548792,
+      "accuracy": 0.7598639455782313,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5780773920187962
+    },
+    {
+      "epoch": 58,
+      "n": 4410,
+      "crossEntropy": 0.8167966930230776,
+      "kl": 0.05758844840228554,
+      "accuracy": 0.7691609977324263,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5822805780912402
+    },
+    {
+      "epoch": 59,
+      "n": 4410,
+      "crossEntropy": 0.818434274576516,
+      "kl": 0.059226029955723895,
+      "accuracy": 0.7612244897959184,
+      "baselineAccuracy": 0.7170068027210884,
+      "teacherVisitMassOfSelected": 0.5793772793238461
+    }
+  ],
+  "training": "Shared action-conditional287→16tanh→1 logits; softmax CE against UCT200 root visits; Adam lr.002, batch32, L2.0001, 60 epochs; seed825004; choose checkpoint using dev CE only; actual rollout is argmax; no leaf evaluator training."
+}

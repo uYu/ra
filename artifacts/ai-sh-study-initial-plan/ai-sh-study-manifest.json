@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-10-27T13:35:19.630Z",
+  "identity": {
+    "groups": [
+      {
+        "id": "sh200",
+        "engine": "frozen5",
+        "time": 200,
+        "start": 810001,
+        "opponent": "uct",
+        "reward": "relative"
+      },
+      {
+        "id": "sh500",
+        "engine": "frozen5",
+        "time": 500,
+        "start": 810001,
+        "opponent": "uct",
+        "reward": "relative"
+      },
+      {
+        "id": "rank200",
+        "engine": "current",
+        "time": 200,
+        "start": 840001,
+        "opponent": "sh",
+        "reward": "future-rank"
+      }
+    ],
+    "seeds": 20,
+    "counts": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "samples": 32,
+    "hashes": {
+      "artifacts/ai-sh-confirmation-methods.md": "40c4a24c18166862894e1518307b477ee44ff61dbe3c06ab191e089c1590cc29",
+      "scripts/benchmark-tree.ts": "03dd7db41d879f2cff61d8910657ba6d031f88b4e58a605814510a2c39fad705",
+      "scripts/run-sh-study.ts": "15c953d9141c6ece3c6f230d654ff1b7602fe38e147bcaeeb2f971bfbe4e40b5",
+      "scripts/summarize-sh-study.ts": "01d7b4b9e0119256133135d8fc6ae6d0cca789da87d3c9b27bac776f7fb86f65",
+      "scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+      "src/game/ai/wasm.ts": "a2ab14655237fd4ae44421a3e37d6e63032f664247a604c278669b387a9a9d42",
+      "src/game/ai/wasm-frozen-uct5.ts": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2",
+      "src/game/ai/search.ts": "0a0066614205e51833abb3e18ce8eb7218ecf0ab293118251629027baa56e4da",
+      "src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+      "src/game/data.ts": "2629b59a63483b3dccf9c2b47170d869008d345e33362d3adb0bbd1f37e08a9e",
+      "src/game/ai.ts": "87eaea654fe80c4eae183a890d1cd06b2a84fae1f7f5ffcfb44242b9def56f95",
+      "native/ra_ai.cpp": "15adac9a6abb39113956cfde487b1d60b612048404053804e3c12fe43be637a5",
+      "src/game/ai/ra-ai.wasm": "c13f8ef47394bd4555e605e2014355b80c6a7f32eed1cd08ae905bbb395c3818",
+      "artifacts/frozen-uct5/ra_ai.cpp": "48d791de430b76648bbf3414b3671d692f07df385e866e1903e1df57db568a52",
+      "artifacts/frozen-uct5/ra-ai.wasm": "395efeaf03e65b91e41b4b003f39c45058a62dad3baee66ff6258565ec5529db"
+    }
+  },
+  "environment": {
+    "node": "v26.9.0",
+    "platform": "darwin",
+    "release": "24.1.0",
+    "cpu": "Apple M4",
+    "availableParallelism": 10,
+    "workers": 8
+  }
+}

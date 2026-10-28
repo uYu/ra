@@ -1,0 +1,30 @@
+{
+  "originalActionHistoriesSaved": false,
+  "newRecordedGames": 4,
+  "screenedDecisions": 267,
+  "initiallySuspicious": 8,
+  "heuristicRobustCase": {
+    "step": 98,
+    "path": "artifacts/decision-replays/value-2p-40001-seat1.json"
+  },
+  "strongPolicyConfirmed": false,
+  "strongPolicySummaries": [
+    {
+      "useModel": false,
+      "n": 128,
+      "mean": -1.5625,
+      "se": 1.4649258097094051,
+      "low95": -4.433754587030434,
+      "high95": 1.308754587030434
+    },
+    {
+      "useModel": true,
+      "n": 128,
+      "mean": -1.3515625,
+      "se": 1.4159780468642604,
+      "low95": -4.12687947185395,
+      "high95": 1.4237544718539503
+    }
+  ],
+  "conclusion": "No confidently identified wrong move in the targeted strong-policy check; demonstrated continuation/evaluator sensitivity and added complete future recording."
+}

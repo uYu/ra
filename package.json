@@ -1,0 +1,49 @@
+{
+  "name": "ra-sun-god",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/verify-wasm.mjs && tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node scripts/verify-wasm.mjs && node --experimental-strip-types --test tests/*.test.ts",
+    "simulate": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/simulate.ts",
+    "benchmark:ai": "node --experimental-strip-types scripts/benchmark-ai.ts",
+    "benchmark:search": "node --experimental-strip-types scripts/benchmark-search.ts",
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "verify:wasm": "node scripts/verify-wasm.mjs",
+    "benchmark:wasm": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-wasm.ts",
+    "benchmark:budget": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-search-budget.ts",
+    "benchmark:horizon": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-horizon.ts",
+    "benchmark:tree": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-tree.ts",
+    "train:value": "node --experimental-strip-types scripts/train-value.ts",
+    "benchmark:budget-control": "node --experimental-strip-types scripts/benchmark-budget-control.ts",
+    "benchmark:value": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-tree.ts --variants uct --modes time --model artifacts/ai-value-model.json",
+    "report:value": "node --experimental-strip-types scripts/summarize-value.ts",
+    "collect:policy": "node --experimental-strip-types scripts/collect-policy.ts",
+    "train:policy": "node --experimental-strip-types scripts/train-policy.ts",
+    "benchmark:policy": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/benchmark-tree.ts --variants uct --modes time --rollout-model artifacts/ai-rollout-model.json",
+    "report:policy": "node --experimental-strip-types scripts/summarize-policy.ts",
+    "report:rankings": "node --experimental-strip-types scripts/summarize-rankings.ts",
+    "benchmark:sh-study": "node scripts/verify-wasm.mjs && node --experimental-strip-types scripts/run-sh-study.ts",
+    "report:sh-study": "node --experimental-strip-types scripts/summarize-sh-study.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "prettier": "^3.9.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-26",
+  "fullSuite": {
+    "command": "npm test",
+    "passed": 62,
+    "failed": 0,
+    "durationMs": 575242.854958
+  },
+  "finalTrainedModelChecks": {
+    "command": "node --experimental-strip-types --test tests/rollout.test.ts",
+    "passed": 5,
+    "failed": 0,
+    "includes": "Trained network TS/native inference and search parity, player-rotation invariance, hidden-info checks, max combined value/rollout payload, default frozen ABI4 preservation"
+  },
+  "buildPassed": true,
+  "scriptTypecheckPassed": true,
+  "teacherGamesReplayed": 80,
+  "validationGamesReplayed": 84,
+  "validationActionsSaved": 28290,
+  "modelSha256": "c29124039d3350b6f44dd8163cdd7f76640154679cc1c39abf16a5e52c3bae19",
+  "default": {
+    "algorithm": "uct",
+    "horizon": "epoch",
+    "samples": 32,
+    "rolloutModel": false,
+    "valueModel": false
+  },
+  "notes": "Full62 suite started before the final input-buffer expansion and extra trained-network/rotation assertions; final5 rollout tests verify those additions. Final app build verified ABI5 source/binary manifest."
+}

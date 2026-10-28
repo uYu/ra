@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-26",
+  "rawResultFilesRead": 15,
+  "rawSavedResults": 1010,
+  "primaryGroups": 9,
+  "primaryGames": 756,
+  "sourceHashesVerified": true,
+  "rankCoverageAndSeatRotationsVerified": true,
+  "futureReportSmokeGames": 6,
+  "scriptTypecheckPassed": true,
+  "rawResultsModified": false,
+  "aiAlgorithmChanged": false
+}

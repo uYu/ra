@@ -1,0 +1,414 @@
+{
+  "case": {
+    "path": "artifacts/decision-replays/value-2p-40001-seat1.json",
+    "step": 98,
+    "chosen": {
+      "type": "bid",
+      "sun": 3
+    },
+    "alternative": {
+      "type": "bid",
+      "sun": null
+    }
+  },
+  "description": "Independent paired worlds 20000..20255 for leaf decomposition with balanced policy; 30000..30031 for adaptive UCT32 continuation. Results are conditional policy diagnostics, not a proof of optimal play.",
+  "decomposition": {
+    "current": {
+      "n": 256,
+      "mean": 3.45703125,
+      "se": 0.2940777620685202,
+      "low95": 2.8806388363457005,
+      "high95": 4.0334236636542995
+    },
+    "old": {
+      "n": 256,
+      "mean": -2.2295213566582213,
+      "se": 0.39596003831256776,
+      "low95": -3.005603031750854,
+      "high95": -1.4534396815655883
+    },
+    "learned": {
+      "n": 256,
+      "mean": -3.5166347031348923,
+      "se": 0.44388868194640524,
+      "low95": -4.386656519749847,
+      "high95": -2.646612886519938
+    },
+    "final": {
+      "n": 256,
+      "mean": 9.12109375,
+      "se": 1.1263557061076306,
+      "low95": 6.913436566029044,
+      "high95": 11.328750933970955
+    }
+  },
+  "searches": [
+    {
+      "horizon": "epoch",
+      "useModel": false,
+      "samples": 32,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      },
+      "simulations": 64,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -13.09271820513945,
+          "error": 0.7438894950704422,
+          "visits": 35
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -15.120745747666534,
+          "error": 0.46982006901807494,
+          "visits": 29
+        }
+      ]
+    },
+    {
+      "horizon": "epoch",
+      "useModel": false,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      },
+      "simulations": 256,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -12.977812935082774,
+          "error": 0.3288357405904296,
+          "visits": 163
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -15.527216844490193,
+          "error": 0.2567408528235134,
+          "visits": 93
+        }
+      ]
+    },
+    {
+      "horizon": "epoch",
+      "useModel": false,
+      "samples": 512,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      },
+      "simulations": 1024,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -12.954868939923925,
+          "error": 0.1544671690533243,
+          "visits": 747
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -15.46535487303931,
+          "error": 0.1473055634624005,
+          "visits": 277
+        }
+      ]
+    },
+    {
+      "horizon": "epoch",
+      "useModel": true,
+      "samples": 32,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      },
+      "simulations": 64,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -13.478162581123042,
+          "error": 0.9043324395751188,
+          "visits": 37
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -16.68578585082242,
+          "error": 0.6479530057365493,
+          "visits": 27
+        }
+      ]
+    },
+    {
+      "horizon": "epoch",
+      "useModel": true,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      },
+      "simulations": 256,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -13.239790621790304,
+          "error": 0.3868191498371208,
+          "visits": 176
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -17.199278114144782,
+          "error": 0.3493096053759305,
+          "visits": 80
+        }
+      ]
+    },
+    {
+      "horizon": "epoch",
+      "useModel": true,
+      "samples": 512,
+      "action": {
+        "type": "bid",
+        "sun": 3
+      },
+      "simulations": 1024,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -13.112712452095636,
+          "error": 0.1815815528805368,
+          "visits": 833
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -17.382813396633306,
+          "error": 0.21133560160284137,
+          "visits": 191
+        }
+      ]
+    },
+    {
+      "horizon": "game",
+      "useModel": false,
+      "samples": 32,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "simulations": 64,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -9.25,
+          "error": 1.7146417415236186,
+          "visits": 52
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -23.333333333333332,
+          "error": 2.517531124527157,
+          "visits": 12
+        }
+      ]
+    },
+    {
+      "horizon": "game",
+      "useModel": false,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "simulations": 256,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -9.290178571428571,
+          "error": 0.8063708479185926,
+          "visits": 224
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -19.75,
+          "error": 1.5417370479430013,
+          "visits": 32
+        }
+      ]
+    },
+    {
+      "horizon": "game",
+      "useModel": false,
+      "samples": 512,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "simulations": 1024,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -10.608788853161844,
+          "error": 0.4167626643085046,
+          "visits": 933
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -18.296703296703296,
+          "error": 1.1009315862323985,
+          "visits": 91
+        }
+      ]
+    },
+    {
+      "horizon": "game",
+      "useModel": true,
+      "samples": 32,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "simulations": 64,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -9.25,
+          "error": 1.7146417415236186,
+          "visits": 52
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -23.333333333333332,
+          "error": 2.517531124527157,
+          "visits": 12
+        }
+      ]
+    },
+    {
+      "horizon": "game",
+      "useModel": true,
+      "samples": 128,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "simulations": 256,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -9.290178571428571,
+          "error": 0.8063708479185926,
+          "visits": 224
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -19.75,
+          "error": 1.5417370479430013,
+          "visits": 32
+        }
+      ]
+    },
+    {
+      "horizon": "game",
+      "useModel": true,
+      "samples": 512,
+      "action": {
+        "type": "bid",
+        "sun": null
+      },
+      "simulations": 1024,
+      "candidates": [
+        {
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "value": -10.608788853161844,
+          "error": 0.4167626643085046,
+          "visits": 933
+        },
+        {
+          "action": {
+            "type": "bid",
+            "sun": 3
+          },
+          "value": -18.296703296703296,
+          "error": 1.1009315862323985,
+          "visits": 91
+        }
+      ]
+    }
+  ],
+  "strongContinuation": {
+    "n": 32,
+    "mean": -1.4375,
+    "se": 2.4813568982416885,
+    "low95": -6.300959520553709,
+    "high95": 3.4259595205537092
+  }
+}

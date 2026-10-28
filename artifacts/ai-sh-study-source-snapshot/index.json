@@ -1,0 +1,77 @@
+[
+  {
+    "source": "artifacts/ai-sh-confirmation-methods.md",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/artifacts/ai-sh-confirmation-methods.md",
+    "sha256": "8d9dc8ea6887eb0c76057d595e22c4b1f73e4bb17440cbb00b2bb32e52565e78"
+  },
+  {
+    "source": "scripts/benchmark-tree.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/scripts/benchmark-tree.ts",
+    "sha256": "03dd7db41d879f2cff61d8910657ba6d031f88b4e58a605814510a2c39fad705"
+  },
+  {
+    "source": "scripts/run-sh-study.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/scripts/run-sh-study.ts",
+    "sha256": "f0dd9459ccb32ed3fa28532bc0f2c717ae18a7c34b77951613d6d96b68c1e56d"
+  },
+  {
+    "source": "scripts/summarize-sh-study.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/scripts/summarize-sh-study.ts",
+    "sha256": "11d1bb7c7ee1370a5a314a1a73b28950c1dc9c3d637d96abcc9b89a3c3386b0e"
+  },
+  {
+    "source": "scripts/lib/decision-trace.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/scripts/lib/decision-trace.ts",
+    "sha256": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8"
+  },
+  {
+    "source": "src/game/ai/wasm.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/ai/wasm.ts",
+    "sha256": "a2ab14655237fd4ae44421a3e37d6e63032f664247a604c278669b387a9a9d42"
+  },
+  {
+    "source": "src/game/ai/wasm-frozen-uct5.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/ai/wasm-frozen-uct5.ts",
+    "sha256": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2"
+  },
+  {
+    "source": "src/game/ai/search.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/ai/search.ts",
+    "sha256": "0a0066614205e51833abb3e18ce8eb7218ecf0ab293118251629027baa56e4da"
+  },
+  {
+    "source": "src/game/engine.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/engine.ts",
+    "sha256": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f"
+  },
+  {
+    "source": "src/game/data.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/data.ts",
+    "sha256": "2629b59a63483b3dccf9c2b47170d869008d345e33362d3adb0bbd1f37e08a9e"
+  },
+  {
+    "source": "src/game/ai.ts",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/ai.ts",
+    "sha256": "87eaea654fe80c4eae183a890d1cd06b2a84fae1f7f5ffcfb44242b9def56f95"
+  },
+  {
+    "source": "native/ra_ai.cpp",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/native/ra_ai.cpp",
+    "sha256": "15adac9a6abb39113956cfde487b1d60b612048404053804e3c12fe43be637a5"
+  },
+  {
+    "source": "src/game/ai/ra-ai.wasm",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/src/game/ai/ra-ai.wasm",
+    "sha256": "c13f8ef47394bd4555e605e2014355b80c6a7f32eed1cd08ae905bbb395c3818"
+  },
+  {
+    "source": "artifacts/frozen-uct5/ra_ai.cpp",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/artifacts/frozen-uct5/ra_ai.cpp",
+    "sha256": "48d791de430b76648bbf3414b3671d692f07df385e866e1903e1df57db568a52"
+  },
+  {
+    "source": "artifacts/frozen-uct5/ra-ai.wasm",
+    "snapshot": "artifacts/ai-sh-study-source-snapshot/artifacts/frozen-uct5/ra-ai.wasm",
+    "sha256": "395efeaf03e65b91e41b4b003f39c45058a62dad3baee66ff6258565ec5529db"
+  }
+]

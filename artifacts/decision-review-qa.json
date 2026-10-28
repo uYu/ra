@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "verifiedReplays": [
+    {
+      "path": "artifacts/decision-replays/value-2p-40001-seat1.json",
+      "steps": 164
+    },
+    {
+      "path": "artifacts/decision-replays/budget-2p-15004-seat0.json",
+      "steps": 131
+    },
+    {
+      "path": "artifacts/decision-replays/budget-5p-15002-seat2.json",
+      "steps": 428
+    },
+    {
+      "path": "artifacts/decision-replays/value-5p-40004-seat1.json",
+      "steps": 452
+    }
+  ],
+  "newRecordingTest": {
+    "passed": 1,
+    "failed": 0
+  },
+  "benchmarkRecordingSmokeGames": 4,
+  "scriptTypecheckPassed": true,
+  "scriptHashes": {
+    "scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "scripts/record-decision-games.ts": "cbef9eb6ca2c53ac9f1df2f35058968a8e93ff129e5e3d9c7aff2587ebb67e70",
+    "scripts/analyze-decisions.ts": "e7585afa2d17e5510c644d785ee9579afd12e7c6e322dc97004f206fefe3aaf9",
+    "scripts/explain-decision.ts": "ff3cf644e0b87185c613d4c6e27e74f32afc2788b4a5d608c04f7c1e68a14655",
+    "scripts/check-strong-continuation.ts": "b2f60fe1fb55ff21e20e499075185f3a65239cd81786575cc048505ddd4ce3ea",
+    "scripts/summarize-decision-review.ts": "bf108ae2ae40af01aee45ea626177b38f96d80c3ec10bdea64907a46e0e74ef3"
+  }
+}

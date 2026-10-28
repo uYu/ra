@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+*.tmp
+artifacts/*.log
+
+# Large generated experiments remain local.
+artifacts/**/*.replays/
+artifacts/policy-teacher/
+artifacts/decision-replays/
+artifacts/*-dataset.json
+artifacts/decision-screen.json
+artifacts/*.before-user-stop
