@@ -3611,3 +3611,66 @@
     font-size: 14px;
   }
 }
+
+/* Desktop collections use their available row height and full column width. */
+@media (min-width: 901px) {
+  .table-fit .mat-group {
+    container-type: size;
+    --collection-piece-height: clamp(52px, calc(100cqh - 12px), 126px);
+    grid-template-columns: 60px minmax(0, 1fr);
+    padding: 5px 9px;
+    column-gap: 10px;
+  }
+  .table-fit .mat-monument {
+    --collection-piece-height: clamp(52px, calc((100cqh - 20px) / 2), 126px);
+  }
+  .table-fit .mat-body,
+  .table-fit .mat-monument .mat-body {
+    height: 100%;
+    min-height: 0;
+  }
+  .table-fit .mat-pieces,
+  .table-fit .mat-monument .mat-pieces {
+    height: 100%;
+    max-width: none;
+    justify-items: center;
+    gap: 6px 10px;
+  }
+  .table-fit .mat-monument .mat-pieces {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  .table-fit .mat-pieces .mat-piece,
+  .table-fit .table-main:has(.bidding) .mat-pieces .mat-piece {
+    width: min(100%, calc(var(--collection-piece-height) * 0.9));
+    max-width: none;
+    height: var(--collection-piece-height);
+    padding: 4px;
+    gap: 4px;
+  }
+  .table-fit .mat-pieces .mat-piece > .piece-picture {
+    width: 100%;
+    height: calc(var(--collection-piece-height) - 28px);
+    flex-basis: calc(var(--collection-piece-height) - 28px);
+  }
+  .table-fit .mat-pieces .mat-piece .tile-art {
+    height: 100%;
+  }
+  .table-fit .mat-pieces .mat-piece > .piece-label {
+    height: 16px;
+    line-height: 16px;
+    flex-basis: 16px;
+    font-size: clamp(10px, 3cqh, 13px);
+  }
+  .table-fit .mat-category button {
+    font-size: clamp(12px, 5cqh, 16px);
+  }
+  .table-fit .mat-category > b {
+    font-size: clamp(18px, 7cqh, 24px);
+    line-height: 1.2;
+  }
+  .table-fit .mat-pieces .mat-piece .piece-count {
+    min-width: 17px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

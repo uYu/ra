@@ -1,0 +1,45 @@
+{
+  "status": "deployed-verified",
+  "verifiedAt": "2026-10-31T04:17:18.898803+00:00",
+  "url": "http://162.14.123.217:8208/",
+  "scope": "CSS only, screens wider than 900px; remove monument 300px cap and tile 56px cap, size cards by category height",
+  "checks": {
+    "build": "passed",
+    "desktop2196": {
+      "horizontalOverflow": false,
+      "monumentGridWidth": 487,
+      "monumentTileHeight": 78.875,
+      "monumentTileWidth": 70.984375
+    },
+    "normalDesktop": "1280px screenshot reviewed",
+    "viewportOverride": "reset after verification"
+  },
+  "backup": "/root/app/ra/releases/backup-before-20261031-desktop-mat",
+  "files": [
+    {
+      "path": "assets/ai.worker-D1tR37sP.js",
+      "status": 200,
+      "sha256": "993d5a8ee370afb5d95e0aae3119dce2c0ff4b94b1e115f1f1d4bed1dff3131b"
+    },
+    {
+      "path": "assets/index-BG8KQjKc.js",
+      "status": 200,
+      "sha256": "1b8e5175eb29638d175f22f6320ceeafb9e0eff7a2fbd23366bf325e32bbd525"
+    },
+    {
+      "path": "assets/index-dW45Hr3x.css",
+      "status": 200,
+      "sha256": "4ee779d9d84d235b977107ef4ebcc159699d88e0fc07db398dfd189e798eafcc"
+    },
+    {
+      "path": "assets/ra-ai-BYZx9Iby.wasm",
+      "status": 200,
+      "sha256": "b840351583ee964e2387e91f8eb7d1f573419cda6dcee25467d77841660f4581"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "3edfbac99323c7cc4597efbec585a357c38712e027d92fd5e84884d0f16e2d91"
+    }
+  ]
+}
