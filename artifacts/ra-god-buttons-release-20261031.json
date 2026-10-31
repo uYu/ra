@@ -1,0 +1,33 @@
+{
+  "status": "deployed-verified",
+  "scope": "Desktop god buttons fill remaining action-panel height with at least 80px height, 18px text and 24px icons",
+  "build": "passed",
+  "backup": "/root/app/ra/releases/backup-before-20261031-god-buttons",
+  "files": [
+    {
+      "path": "assets/ai.worker-D1tR37sP.js",
+      "status": 200,
+      "sha256": "993d5a8ee370afb5d95e0aae3119dce2c0ff4b94b1e115f1f1d4bed1dff3131b"
+    },
+    {
+      "path": "assets/index-BoGrl6qA.js",
+      "status": 200,
+      "sha256": "1b8e5175eb29638d175f22f6320ceeafb9e0eff7a2fbd23366bf325e32bbd525"
+    },
+    {
+      "path": "assets/index-tYm-OSSA.css",
+      "status": 200,
+      "sha256": "d958c12e04dbc126ef29c3aee813195d49053fbaef93d5fd2aa557976e3ed9b1"
+    },
+    {
+      "path": "assets/ra-ai-BYZx9Iby.wasm",
+      "status": 200,
+      "sha256": "b840351583ee964e2387e91f8eb7d1f573419cda6dcee25467d77841660f4581"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "c7269ba765e8f114e8356e262c7cfe920dd7a73528e51dc3baaa63875f77635d"
+    }
+  ]
+}
