@@ -131,6 +131,7 @@ function App() {
     [retry, setRetry] = useState(0);
   const [importing, setImporting] = useState(false),
     [reveal, setReveal] = useState<number | null>(null);
+  const finishGodFor = useRef<number | null>(null);
   const fileRef = useRef<HTMLInputElement>(null),
     audioRef = useRef<AudioContext | null>(null);
   const viewed = useMemo(
@@ -209,10 +210,12 @@ function App() {
       /* Sound is optional. */
     }
   }
-  function commit(action: Action) {
+  function commit(action: Action, endAfterExchange = false) {
     if (!game || !save || motion) return;
     try {
       const next = advance(game, action);
+      if (action.type === "god")
+        finishGodFor.current = endAfterExchange ? game.current : null;
       const move = describeMove(game, action, next);
       setMotion({
         id: next.steps,
@@ -243,6 +246,24 @@ function App() {
       setError((e as Error).message);
     }
   }
+  useEffect(() => {
+    const player = finishGodFor.current;
+    if (player === null) return;
+    if (
+      !game ||
+      screen !== "game" ||
+      game.current !== player ||
+      !["god", "disaster"].includes(game.phase)
+    ) {
+      finishGodFor.current = null;
+      return;
+    }
+    // Keep disaster choices interactive and finish only after their animations.
+    if (game.phase === "god" && active) {
+      finishGodFor.current = null;
+      commit({ type: "finish" });
+    }
+  }, [game, screen, active]);
   useEffect(() => {
     if (!save) return;
     try {
@@ -390,6 +411,14 @@ function App() {
       a.ids.length === selectedTiles.length &&
       a.ids.every((id) => selectedTiles.includes(id)),
   );
+  const exchangeValid =
+    selectedTiles.length === 1 &&
+    available.some((a) => a.type === "god" && a.tileId === selectedTiles[0]);
+  const canContinueExchange =
+    !!actor &&
+    actor.tiles.filter((t) => t.kind === "god").length > 1 &&
+    !!viewed &&
+    viewed.market.filter((t) => t.kind !== "god").length > 1;
   const inspecting =
     viewed?.players[Math.min(inspect, viewed.players.length - 1)];
   const estimate = viewed ? scoreEpoch(viewed) : [];
@@ -398,7 +427,7 @@ function App() {
       ? `${humanName}的出价回合`
       : viewed?.phase === "disaster"
         ? `${humanName}需要处理${LABEL[viewed.pending[0].kind]}`
-        : viewed?.phase === "god"
+        : viewed?.phase === "god" || godMode
           ? `${humanName}正在使用神祇`
           : viewed?.phase === "epoch"
             ? "这个纪元，已成为历史"
@@ -409,9 +438,9 @@ function App() {
     viewed?.phase === "auction"
       ? `当前最高 ${viewed.auction!.high || "尚无出价"} · 每人仅一次机会`
       : viewed?.phase === "disaster"
-        ? `选择 ${requiredDiscards(viewed)} 块弃置${viewed.pending[0].kind === "drought" ? "，必须优先选择洪水" : ""}`
-        : viewed?.phase === "god"
-          ? "点击拍品继续交换，或结束你的回合"
+        ? `选择 ${requiredDiscards(viewed)} 块弃置${viewed.pending[0].kind === "drought" ? "，必须优先选择洪水" : ""}${finishGodFor.current === viewed.current ? "；处理后自动结束回合" : ""}`
+        : viewed?.phase === "god" || godMode
+          ? "选择拍品继续交换，或点击“结束回合”"
           : viewed?.phase === "turn"
             ? "抽取未知，或在恰好的时刻呼唤太阳神。"
             : "查看结算，见证王朝兴衰。";
@@ -675,7 +704,7 @@ function App() {
                       {active && <span className="your-turn">轮到你了</span>}
                     </div>
                     <div className="phase-actions">
-                      {viewed.phase === "turn" && (
+                      {viewed.phase === "turn" && !godMode && (
                         <div className="action-buttons">
                           <button
                             className="primary"
@@ -731,34 +760,61 @@ function App() {
                       )}
                       {(viewed.phase === "god" || godMode) && (
                         <div className="selection-action god-selection">
-                          <span>选择一块非神祇拍品，以一块神牌换取。</span>
-                          <button
-                            className="primary compact"
-                            disabled={
-                              !active ||
-                              selectedTiles.length !== 1 ||
-                              !available.some(
-                                (a) =>
-                                  a.type === "god" &&
-                                  a.tileId === selectedTiles[0],
-                              )
-                            }
-                            onClick={() =>
-                              commit({ type: "god", tileId: selectedTiles[0] })
-                            }
-                          >
-                            <Check size={16} />
-                            确认交换
-                          </button>
-                          {viewed.phase === "god" && (
+                          <span>
+                            {exchangeValid
+                              ? `已选择${tileName(viewed.market.find((t) => t.id === selectedTiles[0])!)}，以一块神祇交换。`
+                              : "点击拍品选择要换取的牌，默认换完自动结束回合。"}
+                          </span>
+                          <div className="god-selection-buttons">
                             <button
-                              className="secondary compact"
-                              disabled={!active}
-                              onClick={() => commit({ type: "finish" })}
+                              className="primary god-confirm"
+                              disabled={!active || !exchangeValid}
+                              onClick={() =>
+                                commit(
+                                  { type: "god", tileId: selectedTiles[0] },
+                                  true,
+                                )
+                              }
                             >
-                              结束回合
+                              <Check size={18} />
+                              交换并结束回合
                             </button>
-                          )}
+                            {canContinueExchange && (
+                              <button
+                                className="secondary"
+                                disabled={!active || !exchangeValid}
+                                onClick={() =>
+                                  commit({
+                                    type: "god",
+                                    tileId: selectedTiles[0],
+                                  })
+                                }
+                              >
+                                交换后继续
+                              </button>
+                            )}
+                            {viewed.phase === "god" ? (
+                              <button
+                                className={`${exchangeValid ? "secondary" : "primary"} god-finish`}
+                                disabled={!active}
+                                onClick={() => commit({ type: "finish" })}
+                              >
+                                结束回合
+                                <ArrowRight size={18} />
+                              </button>
+                            ) : (
+                              <button
+                                className="secondary"
+                                disabled={!active}
+                                onClick={() => {
+                                  setGodMode(false);
+                                  setSelectedTiles([]);
+                                }}
+                              >
+                                取消交换
+                              </button>
+                            )}
+                          </div>
                         </div>
                       )}
                       {viewed.phase === "auction" && (

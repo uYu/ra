@@ -3566,3 +3566,48 @@
   border-color: #a78442;
   color: #694322;
 }
+
+/* Keep the complete god action flow visible beside the market. */
+.table-fit .phase-turn.exchanging .phase-actions {
+  display: flex;
+}
+.table-fit .god-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+.table-fit .god-selection > span {
+  flex: none;
+}
+.god-selection-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.table-fit .god-selection-buttons > button {
+  min-height: 48px;
+  padding: 10px 16px;
+  font-size: 15px;
+  flex: 1 1 auto;
+  justify-content: center;
+  white-space: nowrap;
+}
+.table-fit .god-selection-buttons .god-finish {
+  font-weight: 700;
+}
+@media (max-width: 650px) {
+  .table-fit .god-selection-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .table-fit .god-selection-buttons .god-confirm {
+    grid-column: 1 / -1;
+  }
+  .table-fit .god-selection-buttons > button {
+    min-height: 46px;
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "deployed-verified",
+  "url": "http://162.14.123.217:8208/",
+  "verifiedAt": "2026-10-31T03:37:22.372344+00:00",
+  "change": "Default exchange-and-finish; optional continue; finish after disaster handling and animation; prominent finish action",
+  "build": "passed",
+  "regressionChecks": 27,
+  "browserChecks": [
+    "Imported valid 171-step all-human save",
+    "Selected agriculture, exchange-and-continue retained god phase",
+    "Selected funeral, exchange-and-finish waited for 2 Pharaoh discards",
+    "After discard animation auto-finish advanced from player 2 to player 3 at step 175"
+  ],
+  "backup": "/root/app/ra/releases/backup-before-20261031-god-flow",
+  "files": [
+    {
+      "path": "assets/ai.worker-D1tR37sP.js",
+      "status": 200,
+      "sha256": "993d5a8ee370afb5d95e0aae3119dce2c0ff4b94b1e115f1f1d4bed1dff3131b"
+    },
+    {
+      "path": "assets/index-BOrrD8-0.js",
+      "status": 200,
+      "sha256": "1b8e5175eb29638d175f22f6320ceeafb9e0eff7a2fbd23366bf325e32bbd525"
+    },
+    {
+      "path": "assets/index-O9eXAGTU.css",
+      "status": 200,
+      "sha256": "7c23a28ea546e9b43e0c9fdc6a054607933692c7efd500177a19ec2ca110462e"
+    },
+    {
+      "path": "assets/ra-ai-BYZx9Iby.wasm",
+      "status": 200,
+      "sha256": "b840351583ee964e2387e91f8eb7d1f573419cda6dcee25467d77841660f4581"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "b9a8d8f7123dd41fdc90f31131b9b04d6436399b4c65de8e0d941f2a4786e313"
+    }
+  ]
+}
