@@ -1,0 +1,576 @@
+{
+  "productionWasmSha256": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+  "baselineFixedReportEqual": true,
+  "rows": [
+    {
+      "innerC": 1.4,
+      "mode": 0,
+      "evaluationSamples": 4096,
+      "evaluationOffset": 100000,
+      "report": {
+        "samples": 32768,
+        "transitions": 3169727,
+        "completed": 32768,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 53077,
+        "depth": 8,
+        "scenarios": 18340,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1873,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 6.802085059978183,
+            "error": 0.051512856336286356,
+            "visits": 18340
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 6.75123895047001,
+            "error": 0.06121862123134555,
+            "visits": 14254
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.21356321839080442,
+            "error": 0.3956638398746139,
+            "visits": 174
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "mean": 8.967529296875007,
+          "stderr": 0.098852553351715,
+          "utility": 0.3897868343646293,
+          "utilityStderr": 0.003927030234069195,
+          "treeHits": 7206,
+          "fallbackPlans": 237270,
+          "truncated": 0
+        },
+        {
+          "sun": 4,
+          "mean": 8.619492187500017,
+          "stderr": 0.09471029345423909,
+          "utility": 0.3783136180512427,
+          "utilityStderr": 0.003809674492295956,
+          "treeHits": 7501,
+          "fallbackPlans": 234043,
+          "truncated": 0
+        },
+        {
+          "sun": 13,
+          "mean": -0.09336914062499949,
+          "stderr": 0.09023658673960665,
+          "utility": -0.003975156481079021,
+          "utilityStderr": 0.004193104911963449,
+          "treeHits": 1996,
+          "fallbackPlans": 245546,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.34803710937500115,
+          "stderr": 0.12958541147739921,
+          "utilityDifference": 0.011473216313386467
+        },
+        {
+          "meanDifference": 9.060898437499999,
+          "stderr": 0.13044469698313918,
+          "utilityDifference": 0.39376199084570795
+        }
+      ]
+    },
+    {
+      "innerC": 1.4,
+      "mode": 1,
+      "evaluationSamples": 4096,
+      "evaluationOffset": 100000,
+      "report": {
+        "samples": 32768,
+        "transitions": 3169727,
+        "completed": 32768,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 53077,
+        "depth": 8,
+        "scenarios": 18340,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1873,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 6.802085059978183,
+            "error": 0.051512856336286356,
+            "visits": 18340
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 6.75123895047001,
+            "error": 0.06121862123134555,
+            "visits": 14254
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.21356321839080442,
+            "error": 0.3956638398746139,
+            "visits": 174
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "mean": 8.80212890625,
+          "stderr": 0.10166774538526577,
+          "utility": 0.3820158288883025,
+          "utilityStderr": 0.004073430893465837,
+          "treeHits": 6883,
+          "fallbackPlans": 236207,
+          "truncated": 0
+        },
+        {
+          "sun": 4,
+          "mean": 8.324531250000016,
+          "stderr": 0.09693843385970882,
+          "utility": 0.36535223515501386,
+          "utilityStderr": 0.003921717394789083,
+          "treeHits": 7397,
+          "fallbackPlans": 232731,
+          "truncated": 0
+        },
+        {
+          "sun": 13,
+          "mean": -0.4200878906250001,
+          "stderr": 0.09225956365340361,
+          "utility": -0.019164603154191096,
+          "utilityStderr": 0.004274514500139749,
+          "treeHits": 2017,
+          "fallbackPlans": 245721,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.47759765625000106,
+          "stderr": 0.1332783939911841,
+          "utilityDifference": 0.01666359373328896
+        },
+        {
+          "meanDifference": 9.222216796874978,
+          "stderr": 0.13473346303685935,
+          "utilityDifference": 0.4011804320424932
+        }
+      ]
+    },
+    {
+      "innerC": 1.4,
+      "mode": 2,
+      "evaluationSamples": 4096,
+      "evaluationOffset": 100000,
+      "report": {
+        "samples": 32768,
+        "transitions": 3169727,
+        "completed": 32768,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 53077,
+        "depth": 8,
+        "scenarios": 18340,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1873,
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 6.802085059978183,
+            "error": 0.051512856336286356,
+            "visits": 18340
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 6.75123895047001,
+            "error": 0.06121862123134555,
+            "visits": 14254
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.21356321839080442,
+            "error": 0.3956638398746139,
+            "visits": 174
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "mean": 9.126035156250015,
+          "stderr": 0.0992720932461406,
+          "utility": 0.39577015784448266,
+          "utilityStderr": 0.003927137813903398,
+          "treeHits": 0,
+          "fallbackPlans": 253596,
+          "truncated": 0
+        },
+        {
+          "sun": 4,
+          "mean": 8.111835937500006,
+          "stderr": 0.09627162312513911,
+          "utility": 0.3570303518199785,
+          "utilityStderr": 0.003915822714323014,
+          "treeHits": 0,
+          "fallbackPlans": 250378,
+          "truncated": 0
+        },
+        {
+          "sun": 13,
+          "mean": -0.2833007812499991,
+          "stderr": 0.09231977076344082,
+          "utility": -0.012624980740770302,
+          "utilityStderr": 0.004273509363665479,
+          "treeHits": 0,
+          "fallbackPlans": 250785,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 1.0141992187500022,
+          "stderr": 0.13237271145665921,
+          "utilityDifference": 0.038739806024504796
+        },
+        {
+          "meanDifference": 9.409335937499979,
+          "stderr": 0.13324586669032742,
+          "utilityDifference": 0.4083951385852528
+        }
+      ]
+    },
+    {
+      "innerC": 0.35,
+      "mode": 0,
+      "evaluationSamples": 4096,
+      "evaluationOffset": 100000,
+      "report": {
+        "samples": 32768,
+        "transitions": 3192320,
+        "completed": 32768,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 54903,
+        "depth": 7,
+        "scenarios": 22496,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1915,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.850497866287343,
+            "error": 0.04526183605775618,
+            "visits": 22496
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.44607914734039,
+            "error": 0.06565300001406509,
+            "visits": 10133
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.2270503597122301,
+            "error": 0.45230200897861944,
+            "visits": 139
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "mean": 8.990429687500002,
+          "stderr": 0.09917171464066848,
+          "utility": 0.3905272702857727,
+          "utilityStderr": 0.003939149064483659,
+          "treeHits": 7841,
+          "fallbackPlans": 235339,
+          "truncated": 0
+        },
+        {
+          "sun": 4,
+          "mean": 8.517568359374998,
+          "stderr": 0.09431300260994481,
+          "utility": 0.37451598577983275,
+          "utilityStderr": 0.003801278377816357,
+          "treeHits": 7039,
+          "fallbackPlans": 235522,
+          "truncated": 0
+        },
+        {
+          "sun": 13,
+          "mean": -0.24372070312499997,
+          "stderr": 0.09040963598493816,
+          "utility": -0.01116575947795222,
+          "utilityStderr": 0.004203259694201828,
+          "treeHits": 1890,
+          "fallbackPlans": 246062,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.4728613281250018,
+          "stderr": 0.13111103895603202,
+          "utilityDifference": 0.016011284505940436
+        },
+        {
+          "meanDifference": 9.234150390624992,
+          "stderr": 0.13084096965732092,
+          "utilityDifference": 0.4016930297637241
+        }
+      ]
+    },
+    {
+      "innerC": 0.35,
+      "mode": 1,
+      "evaluationSamples": 4096,
+      "evaluationOffset": 100000,
+      "report": {
+        "samples": 32768,
+        "transitions": 3192320,
+        "completed": 32768,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 54903,
+        "depth": 7,
+        "scenarios": 22496,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1915,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.850497866287343,
+            "error": 0.04526183605775618,
+            "visits": 22496
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.44607914734039,
+            "error": 0.06565300001406509,
+            "visits": 10133
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.2270503597122301,
+            "error": 0.45230200897861944,
+            "visits": 139
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "mean": 8.831152343750004,
+          "stderr": 0.10201276000028484,
+          "utility": 0.382970083161555,
+          "utilityStderr": 0.004083269757239469,
+          "treeHits": 7518,
+          "fallbackPlans": 234452,
+          "truncated": 0
+        },
+        {
+          "sun": 4,
+          "mean": 8.19212890625001,
+          "stderr": 0.09697394032650969,
+          "utility": 0.3603931794571307,
+          "utilityStderr": 0.0039506621680970655,
+          "treeHits": 7075,
+          "fallbackPlans": 233593,
+          "truncated": 0
+        },
+        {
+          "sun": 13,
+          "mean": -0.2008691406249994,
+          "stderr": 0.09071756151292039,
+          "utility": -0.008933113514615624,
+          "utilityStderr": 0.004210313862121238,
+          "treeHits": 1887,
+          "fallbackPlans": 245667,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 0.6390234374999992,
+          "stderr": 0.1346834772694705,
+          "utilityDifference": 0.02257690370442447
+        },
+        {
+          "meanDifference": 9.032021484374994,
+          "stderr": 0.13212431136011135,
+          "utilityDifference": 0.39190319667616985
+        }
+      ]
+    },
+    {
+      "innerC": 0.35,
+      "mode": 2,
+      "evaluationSamples": 4096,
+      "evaluationOffset": 100000,
+      "report": {
+        "samples": 32768,
+        "transitions": 3192320,
+        "completed": 32768,
+        "truncated": 0,
+        "epochAdvances": 0,
+        "nodes": 54903,
+        "depth": 7,
+        "scenarios": 22496,
+        "outcomeReuses": 0,
+        "maxOutcomeBranches": 1915,
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "candidates": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 1
+            },
+            "value": 7.850497866287343,
+            "error": 0.04526183605775618,
+            "visits": 22496
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": 7.44607914734039,
+            "error": 0.06565300001406509,
+            "visits": 10133
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 13
+            },
+            "value": -0.2270503597122301,
+            "error": 0.45230200897861944,
+            "visits": 139
+          }
+        ]
+      },
+      "roots": [
+        {
+          "sun": 1,
+          "mean": 9.126035156250015,
+          "stderr": 0.0992720932461406,
+          "utility": 0.39577015784448266,
+          "utilityStderr": 0.003927137813903398,
+          "treeHits": 0,
+          "fallbackPlans": 253596,
+          "truncated": 0
+        },
+        {
+          "sun": 4,
+          "mean": 8.111835937500006,
+          "stderr": 0.09627162312513911,
+          "utility": 0.3570303518199785,
+          "utilityStderr": 0.003915822714323014,
+          "treeHits": 0,
+          "fallbackPlans": 250378,
+          "truncated": 0
+        },
+        {
+          "sun": 13,
+          "mean": -0.2833007812499991,
+          "stderr": 0.09231977076344082,
+          "utility": -0.012624980740770302,
+          "utilityStderr": 0.004273509363665479,
+          "treeHits": 0,
+          "fallbackPlans": 250785,
+          "truncated": 0
+        }
+      ],
+      "paired": [
+        {
+          "meanDifference": 1.0141992187500022,
+          "stderr": 0.13237271145665921,
+          "utilityDifference": 0.038739806024504796
+        },
+        {
+          "meanDifference": 9.409335937499979,
+          "stderr": 0.13324586669032742,
+          "utilityDifference": 0.4083951385852528
+        }
+      ]
+    }
+  ]
+}

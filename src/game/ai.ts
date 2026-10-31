@@ -7,6 +7,8 @@ import { policyAction } from "./ai/policy.ts";
 // Play through the next epoch's scoring; from epoch two this reaches game end.
 // Keep the low-level search API's historical default available to experiments.
 export const hardSearchHorizon = "next-epoch" as const;
+// Validated current-auction rollout valuation; other phases retain UCT.
+export const hardSearchSampling = "auction" as const;
 // Only public tiles and their remaining multiset are sent to the worker.
 export function observe(s: State): State {
   const copy = structuredClone(s),
@@ -97,7 +99,10 @@ export function chooseAction(
   // The public entry point sanitizes even callers outside the Web Worker.
   const s = observe(state);
   if (difficulty === "hard")
-    return searchAction(s, { horizon: hardSearchHorizon }).action;
+    return searchAction(s, {
+      horizon: hardSearchHorizon,
+      sampling: hardSearchSampling,
+    }).action;
   if (difficulty === "normal") return policyAction(s);
   const actions = legalActions(s);
   if (!actions.length) throw new Error("没有合法行动");

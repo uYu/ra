@@ -1,0 +1,17 @@
+{
+  "trajectories": 36,
+  "actionsChecked": 3708,
+  "independentRules": "TypeScript simulate, each action checked legal and actor checked, final score vector matched",
+  "trainingIterations": 32768,
+  "evaluationOffset": 100000,
+  "innerC": [
+    1.4,
+    0.35
+  ],
+  "modes": [
+    "greedy-utility",
+    "greedy-visits",
+    "original-policy"
+  ],
+  "passed": true
+}

@@ -217,6 +217,20 @@ export class WasmAi {
     );
   }
   search(state: State, options: SearchOptions = {}): SearchReport {
+    const sampling = options.sampling ?? "tree";
+    if (!["tree", "paired", "auction"].includes(sampling))
+      throw new Error("未知采样方法");
+    const paired = sampling === "paired";
+    if (
+      sampling === "auction" &&
+      ((options.variant && options.variant !== "uct") ||
+        options.valueModel ||
+        options.rolloutModel ||
+        (options.reward && options.reward !== "relative"))
+    )
+      throw new Error("拍卖续局采样仅支持无学习模型的UCT与relative奖励");
+    if (paired && options.variant && options.variant !== "uct")
+      throw new Error("配对采样仅支持UCT");
     const reward = options.reward ?? "relative";
     if (!["relative", "future-rank"].includes(reward))
       throw new Error("未知搜索奖励");
@@ -240,7 +254,7 @@ export class WasmAi {
     const horizon =
       options.horizon === "game" ? 1 : options.horizon === "next-epoch" ? 2 : 0;
     const r = this.call(
-      0,
+      sampling === "auction" ? 10 : paired ? 9 : 0,
       s,
       [
         ...encodeValueModel(options.valueModel),
@@ -264,16 +278,34 @@ export class WasmAi {
       outcomeReuses: r.number(),
       maxOutcomeBranches: r.number(),
     };
-    const candidates = Array.from({ length: r.number() }, () => ({
-      action: r.action(),
-      value: r.number(),
-      error: r.number(),
-      visits: r.number(),
-    }));
+    const candidates: SearchReport["candidates"] = Array.from(
+      { length: r.number() },
+      () => ({
+        action: r.action(),
+        value: r.number(),
+        error: r.number(),
+        visits: r.number(),
+      }),
+    );
+    const samplingReport: Partial<SearchReport> = {};
+    if (paired) {
+      samplingReport.sampling = "paired";
+      samplingReport.trainingSamples = r.number();
+      samplingReport.evaluationSamples = r.number();
+      samplingReport.evaluationRounds = r.number();
+      // Forced actions have no evaluation returns.
+      for (const c of candidates) {
+        const utility = r.number(),
+          utilityError = r.number(),
+          evaluationVisits = r.number();
+        if (evaluationVisits)
+          Object.assign(c, { utility, utilityError, evaluationVisits });
+      }
+    }
     const action = candidates[0]?.action;
     if (!action || !legalActions(s).some((a) => sameAction(a, action)))
       throw new Error("Wasm AI 返回了非法行动");
-    return { ...report, action, candidates };
+    return { ...report, ...samplingReport, action, candidates };
   }
   // Diagnostic operations preserve the supplied bag and scores to compare the
   // native rules with the TS reference. Production search always sanitizes them.

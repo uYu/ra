@@ -1,0 +1,273 @@
+{
+  "status": "complete",
+  "planPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-plan.json",
+  "planSha256": "81ded2797031f51e27eb34f0b5210ac60f834fa818b9c734c8c59064ff5988c1",
+  "completed": 4,
+  "total": 4,
+  "active": [],
+  "summary": [
+    {
+      "configuration": "auction-rollout",
+      "games": 4,
+      "rankingScore": 0,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 1,
+          "meanRank": 2,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 3,
+          "games": 1,
+          "meanRank": 3,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 4,
+          "games": 1,
+          "meanRank": 4,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 5,
+          "games": 1,
+          "meanRank": 5,
+          "rankingScore": 0,
+          "first": 0
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "seed": 1260999,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-rollout",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 62,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 28,
+          "sun": 9
+        },
+        {
+          "player": 0,
+          "score": 14,
+          "sun": 10
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 259,
+      "stats": {
+        "candidate": {
+          "decisions": 79,
+          "searched": 74,
+          "ms": 106.97583300000028,
+          "searchMs": 106.27170800000025,
+          "maxMs": 4.937624999999997,
+          "samples": 614,
+          "transitions": 57951,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 180,
+          "searched": 168,
+          "ms": 216.32729099999972,
+          "searchMs": 214.87178999999978,
+          "maxMs": 4.65620899999999,
+          "samples": 3703,
+          "transitions": 111987,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke.replays/auction-rollout/1260999-3p-0.json",
+      "replaySha256": "5482a5bb44eb4d149beb1b63c2299d10ae99d1761cfeda0bc4c6343a2bd657ac"
+    },
+    {
+      "seed": 1260999,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-rollout",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 41,
+          "sun": 7
+        },
+        {
+          "player": 0,
+          "score": 9,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 157,
+      "stats": {
+        "candidate": {
+          "decisions": 66,
+          "searched": 61,
+          "ms": 75.14820099999991,
+          "searchMs": 74.68749399999984,
+          "maxMs": 1.91050000000007,
+          "samples": 1690,
+          "transitions": 49008,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 91,
+          "searched": 83,
+          "ms": 95.38233099999991,
+          "searchMs": 94.64408299999991,
+          "maxMs": 1.2567090000000007,
+          "samples": 1865,
+          "transitions": 62735,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke.replays/auction-rollout/1260999-2p-0.json",
+      "replaySha256": "27e0d32d7532b486f59317fa8a20df38c377fd8a101e058f39e4dcb8ac5bedd2"
+    },
+    {
+      "seed": 1260999,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-rollout",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 32,
+          "sun": 13
+        },
+        {
+          "player": 4,
+          "score": 18,
+          "sun": 16
+        },
+        {
+          "player": 2,
+          "score": 15,
+          "sun": 11
+        },
+        {
+          "player": 1,
+          "score": 10,
+          "sun": 14
+        },
+        {
+          "player": 0,
+          "score": 0,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 343,
+      "stats": {
+        "candidate": {
+          "decisions": 27,
+          "searched": 25,
+          "ms": 74.87450100000015,
+          "searchMs": 74.6586670000001,
+          "maxMs": 11.23875000000001,
+          "samples": 145,
+          "transitions": 29354,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 316,
+          "searched": 286,
+          "ms": 436.20332599999983,
+          "searchMs": 432.4461619999998,
+          "maxMs": 7.400041999999999,
+          "samples": 4056,
+          "transitions": 176375,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke.replays/auction-rollout/1260999-5p-0.json",
+      "replaySha256": "a646be8691f5b36a89ef39b91f0aba13e3ebbd447106975f39ceb7cc152f3c72"
+    },
+    {
+      "seed": 1260999,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-rollout",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 35,
+          "sun": 12
+        },
+        {
+          "player": 3,
+          "score": 30,
+          "sun": 11
+        },
+        {
+          "player": 1,
+          "score": 27,
+          "sun": 13
+        },
+        {
+          "player": 0,
+          "score": 0,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 276,
+      "stats": {
+        "candidate": {
+          "decisions": 40,
+          "searched": 37,
+          "ms": 71.21950100000026,
+          "searchMs": 70.91425100000026,
+          "maxMs": 6.458500000000072,
+          "samples": 266,
+          "transitions": 36506,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 236,
+          "searched": 202,
+          "ms": 258.8440920000004,
+          "searchMs": 255.42571600000053,
+          "maxMs": 2.3776670000000877,
+          "samples": 2144,
+          "transitions": 132577,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke.replays/auction-rollout/1260999-4p-0.json",
+      "replaySha256": "cd88cab5e53e94c23e6723db91ddf544a1bc4e1556620abd1247e939d66d00a4"
+    }
+  ]
+}

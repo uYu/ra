@@ -1,0 +1,3346 @@
+{
+  "status": "complete",
+  "planPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match-plan.json",
+  "planSha256": "7f865ac5cb9696cd1d8482043ff4c537550639cc3ab648199e8e27970a66f179",
+  "completed": 56,
+  "total": 56,
+  "active": [],
+  "summary": [
+    {
+      "configuration": "dpw-slow",
+      "games": 28,
+      "rankingScore": 0.4666666666666666,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 4,
+          "meanRank": 1.75,
+          "rankingScore": 0.25,
+          "first": 1
+        },
+        {
+          "count": 3,
+          "games": 6,
+          "meanRank": 1.8333333333333333,
+          "rankingScore": 0.5833333333333334,
+          "first": 2
+        },
+        {
+          "count": 4,
+          "games": 8,
+          "meanRank": 2.25,
+          "rankingScore": 0.5833333333333333,
+          "first": 3
+        },
+        {
+          "count": 5,
+          "games": 10,
+          "meanRank": 3.2,
+          "rankingScore": 0.45,
+          "first": 3
+        }
+      ]
+    },
+    {
+      "configuration": "dpw-slow-zero",
+      "games": 28,
+      "rankingScore": 0.3,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 4,
+          "meanRank": 1.5,
+          "rankingScore": 0.5,
+          "first": 2
+        },
+        {
+          "count": 3,
+          "games": 6,
+          "meanRank": 3,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 4,
+          "games": 8,
+          "meanRank": 2.875,
+          "rankingScore": 0.375,
+          "first": 0
+        },
+        {
+          "count": 5,
+          "games": 10,
+          "meanRank": 3.7,
+          "rankingScore": 0.325,
+          "first": 0
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "seed": 1240001,
+      "count": 3,
+      "seat": 2,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 63,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 57,
+          "sun": 8
+        },
+        {
+          "player": 2,
+          "score": 34,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 277,
+      "stats": {
+        "candidate": {
+          "decisions": 82,
+          "searched": 74,
+          "ms": 15066.949835999985,
+          "searchMs": 15065.12371199999,
+          "maxMs": 249.18162500000108,
+          "samples": 637682,
+          "transitions": 3719211,
+          "truncated": 0,
+          "plannedCutoffs": 321168,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 195,
+          "searched": 181,
+          "ms": 36521.104962,
+          "searchMs": 36517.91991900001,
+          "maxMs": 296.2381250000035,
+          "samples": 381145,
+          "transitions": 13552990,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11363410
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-3p-2.json",
+      "replaySha256": "a85a1543fa1a4f1c30d05ddb5f98d68a75b6ac9504cd5709f1ee9e9b1937c90f"
+    },
+    {
+      "seed": 1240002,
+      "count": 3,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 51,
+          "sun": 9
+        },
+        {
+          "player": 2,
+          "score": 40,
+          "sun": 12
+        },
+        {
+          "player": 1,
+          "score": 38,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 294,
+      "stats": {
+        "candidate": {
+          "decisions": 77,
+          "searched": 65,
+          "ms": 13192.35650399999,
+          "searchMs": 13189.622504999988,
+          "maxMs": 209.2975409999999,
+          "samples": 566843,
+          "transitions": 3507720,
+          "truncated": 0,
+          "plannedCutoffs": 249924,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 217,
+          "searched": 195,
+          "ms": 39269.61857700002,
+          "searchMs": 39264.280411000014,
+          "maxMs": 257.1023330000007,
+          "samples": 288590,
+          "transitions": 14265455,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11617269
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-3p-1.json",
+      "replaySha256": "45f8e994b032399bb602f6c9145756db00f579457b99e1765567e577dfe7daf8"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 42,
+          "sun": 11
+        },
+        {
+          "player": 3,
+          "score": 40,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 30,
+          "sun": 6
+        },
+        {
+          "player": 0,
+          "score": 27,
+          "sun": 8
+        }
+      ],
+      "rankingScore": 0.3333333333333333,
+      "steps": 329,
+      "stats": {
+        "candidate": {
+          "decisions": 74,
+          "searched": 69,
+          "ms": 13866.653788999985,
+          "searchMs": 13865.64962199998,
+          "maxMs": 208.42799999999988,
+          "samples": 36126,
+          "transitions": 4075404,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 3667393
+        },
+        "opponent": {
+          "decisions": 255,
+          "searched": 225,
+          "ms": 45357.85016299997,
+          "searchMs": 45308.334120999956,
+          "maxMs": 233.4052909999955,
+          "samples": 243568,
+          "transitions": 14106133,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11678103
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-4p-1.json",
+      "replaySha256": "0aac5d5738607113f95481d5ff2cfd176d8cbb3d1c2715aee886517a64c74d64"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 4,
+          "score": 37,
+          "sun": 16
+        },
+        {
+          "player": 0,
+          "score": 33,
+          "sun": 6
+        },
+        {
+          "player": 1,
+          "score": 25,
+          "sun": 10
+        },
+        {
+          "player": 2,
+          "score": 24,
+          "sun": 14
+        },
+        {
+          "player": 3,
+          "score": 20,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 434,
+      "stats": {
+        "candidate": {
+          "decisions": 114,
+          "searched": 81,
+          "ms": 16483.503377000037,
+          "searchMs": 16476.31012800002,
+          "maxMs": 239.9233749999985,
+          "samples": 298069,
+          "transitions": 3770736,
+          "truncated": 0,
+          "plannedCutoffs": 269055,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 320,
+          "searched": 295,
+          "ms": 59467.27009300001,
+          "searchMs": 59458.37130100002,
+          "maxMs": 248.15412500000002,
+          "samples": 637837,
+          "transitions": 17487463,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12791669
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-5p-1.json",
+      "replaySha256": "31bc395856d58ad096eeb30d6c83015778280106dcb957204a639a91f8265f21"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 2,
+      "configuration": "dpw-slow",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 35,
+          "sun": 13
+        },
+        {
+          "player": 3,
+          "score": 26,
+          "sun": 16
+        },
+        {
+          "player": 0,
+          "score": 26,
+          "sun": 14
+        },
+        {
+          "player": 2,
+          "score": 23,
+          "sun": 9
+        },
+        {
+          "player": 4,
+          "score": 18,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0.25,
+      "steps": 435,
+      "stats": {
+        "candidate": {
+          "decisions": 136,
+          "searched": 118,
+          "ms": 23980.571071000028,
+          "searchMs": 23976.975868000012,
+          "maxMs": 272.0207919999957,
+          "samples": 548260,
+          "transitions": 6887928,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 5156385
+        },
+        "opponent": {
+          "decisions": 299,
+          "searched": 258,
+          "ms": 52112.50462300005,
+          "searchMs": 52100.20745700003,
+          "maxMs": 278.41962500000227,
+          "samples": 103904,
+          "transitions": 13256555,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11086352
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-5p-2.json",
+      "replaySha256": "ad06ff6eea641890a116783149c995af1a76e5bc2b53eec3598b3b1cc8c335d5"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 31,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 29,
+          "sun": 15
+        },
+        {
+          "player": 3,
+          "score": 29,
+          "sun": 11
+        },
+        {
+          "player": 4,
+          "score": 23,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 22,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 434,
+      "stats": {
+        "candidate": {
+          "decisions": 76,
+          "searched": 64,
+          "ms": 12892.794920000006,
+          "searchMs": 12889.679170000014,
+          "maxMs": 225.5159169999988,
+          "samples": 22309,
+          "transitions": 3225685,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 2903812
+        },
+        "opponent": {
+          "decisions": 358,
+          "searched": 322,
+          "ms": 65037.04562599999,
+          "searchMs": 65027.90221099998,
+          "maxMs": 270.6318339999998,
+          "samples": 495340,
+          "transitions": 18773332,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 14178452
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-5p-0.json",
+      "replaySha256": "a456fed044fb4317bf84b0a7a9fb6220adcbd923cde60bff423adbb642d8454e"
+    },
+    {
+      "seed": 1240001,
+      "count": 2,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 32,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 17,
+          "sun": 7
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 162,
+      "stats": {
+        "candidate": {
+          "decisions": 73,
+          "searched": 60,
+          "ms": 12254.738457999963,
+          "searchMs": 12251.73891499998,
+          "maxMs": 211.37133400000312,
+          "samples": 348761,
+          "transitions": 2787199,
+          "truncated": 0,
+          "plannedCutoffs": 325577,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 89,
+          "searched": 85,
+          "ms": 17223.655620999976,
+          "searchMs": 17222.972578999957,
+          "maxMs": 258.6028340000048,
+          "samples": 289426,
+          "transitions": 8570193,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7199983
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-2p-0.json",
+      "replaySha256": "a2b2476633b7af766ac35faa24d264c57f3b247208ab89953227437e10c9ce5b"
+    },
+    {
+      "seed": 1240001,
+      "count": 2,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 43,
+          "sun": 6
+        },
+        {
+          "player": 0,
+          "score": 34,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 168,
+      "stats": {
+        "candidate": {
+          "decisions": 62,
+          "searched": 57,
+          "ms": 11534.50420499999,
+          "searchMs": 11533.664997,
+          "maxMs": 247.70200000000477,
+          "samples": 124574,
+          "transitions": 5206502,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4533506
+        },
+        "opponent": {
+          "decisions": 106,
+          "searched": 92,
+          "ms": 18751.406162000087,
+          "searchMs": 18748.930996000097,
+          "maxMs": 298.76433399999223,
+          "samples": 369208,
+          "transitions": 9520320,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7625535
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-2p-0.json",
+      "replaySha256": "10a51164e24726d38f7b70c835bf2bcd0b7caaabdf3c269367d24474f38e4ffc"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 53,
+          "sun": 7
+        },
+        {
+          "player": 3,
+          "score": 38,
+          "sun": 11
+        },
+        {
+          "player": 0,
+          "score": 31,
+          "sun": 12
+        },
+        {
+          "player": 1,
+          "score": 26,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0.3333333333333333,
+      "steps": 353,
+      "stats": {
+        "candidate": {
+          "decisions": 90,
+          "searched": 80,
+          "ms": 16247.400169000037,
+          "searchMs": 16245.219961999996,
+          "maxMs": 248.06662500000675,
+          "samples": 447656,
+          "transitions": 4188461,
+          "truncated": 0,
+          "plannedCutoffs": 301490,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 263,
+          "searched": 235,
+          "ms": 47891.520244000036,
+          "searchMs": 47883.119122000084,
+          "maxMs": 290.1102089999913,
+          "samples": 402397,
+          "transitions": 15219233,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11898805
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-4p-0.json",
+      "replaySha256": "8db3f082396678c03bd1f2cd86fdf59503d1635f0f04ef0796bd4d6d45f2c3c1"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 4,
+          "score": 40,
+          "sun": 15
+        },
+        {
+          "player": 2,
+          "score": 37,
+          "sun": 12
+        },
+        {
+          "player": 3,
+          "score": 37,
+          "sun": 9
+        },
+        {
+          "player": 0,
+          "score": 26,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 25,
+          "sun": 14
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 446,
+      "stats": {
+        "candidate": {
+          "decisions": 103,
+          "searched": 92,
+          "ms": 18548.93762399981,
+          "searchMs": 18546.60753899983,
+          "maxMs": 219.02966700000252,
+          "samples": 362494,
+          "transitions": 4595446,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4096920
+        },
+        "opponent": {
+          "decisions": 343,
+          "searched": 298,
+          "ms": 60215.4591539999,
+          "searchMs": 60203.52707099987,
+          "maxMs": 244.42533399999957,
+          "samples": 467858,
+          "transitions": 17161632,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12646712
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-5p-1.json",
+      "replaySha256": "35957527b804a0ee5ea6c9fb8a43e81d2c67969e9744f9b1791fa0215da43c1e"
+    },
+    {
+      "seed": 1240002,
+      "count": 3,
+      "seat": 2,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 47,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 35,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 31,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 295,
+      "stats": {
+        "candidate": {
+          "decisions": 64,
+          "searched": 53,
+          "ms": 10858.012751999951,
+          "searchMs": 10855.442710999952,
+          "maxMs": 276.72004200000083,
+          "samples": 214023,
+          "transitions": 2760222,
+          "truncated": 0,
+          "plannedCutoffs": 190913,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 231,
+          "searched": 219,
+          "ms": 44416.51886900011,
+          "searchMs": 44403.60636900009,
+          "maxMs": 294.47341700000106,
+          "samples": 301528,
+          "transitions": 16010760,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13690852
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-3p-2.json",
+      "replaySha256": "45e9f0ce538324067b9cb2aa6d3b830860f02f1dc84ff98af2d8f8f8b6a51f62"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 4,
+          "score": 47,
+          "sun": 13
+        },
+        {
+          "player": 3,
+          "score": 37,
+          "sun": 15
+        },
+        {
+          "player": 2,
+          "score": 37,
+          "sun": 5
+        },
+        {
+          "player": 0,
+          "score": 21,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 15,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 432,
+      "stats": {
+        "candidate": {
+          "decisions": 73,
+          "searched": 58,
+          "ms": 11737.654419999963,
+          "searchMs": 11734.807958000034,
+          "maxMs": 224.4950830000016,
+          "samples": 199950,
+          "transitions": 2794897,
+          "truncated": 0,
+          "plannedCutoffs": 142633,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 359,
+          "searched": 316,
+          "ms": 63722.70661900034,
+          "searchMs": 63712.94174500024,
+          "maxMs": 273.369749999998,
+          "samples": 451573,
+          "transitions": 17153522,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12681734
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-5p-1.json",
+      "replaySha256": "a5df826d36ef901a6ffd3b14b5ea58804ebbe0fb0c3df9d4fcc7ff1e746b6f00"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 4,
+      "configuration": "dpw-slow-zero",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 36,
+          "sun": 15
+        },
+        {
+          "player": 3,
+          "score": 34,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 32,
+          "sun": 14
+        },
+        {
+          "player": 4,
+          "score": 23,
+          "sun": 12
+        },
+        {
+          "player": 1,
+          "score": 21,
+          "sun": 16
+        }
+      ],
+      "rankingScore": 0.25,
+      "steps": 478,
+      "stats": {
+        "candidate": {
+          "decisions": 88,
+          "searched": 67,
+          "ms": 13604.059667000052,
+          "searchMs": 13591.554041000083,
+          "maxMs": 241.08016599999974,
+          "samples": 424783,
+          "transitions": 3272351,
+          "truncated": 0,
+          "plannedCutoffs": 136511,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 390,
+          "searched": 335,
+          "ms": 67884.51700600021,
+          "searchMs": 67872.21967100026,
+          "maxMs": 262.3178340000013,
+          "samples": 215238,
+          "transitions": 17998001,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 14406821
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-5p-4.json",
+      "replaySha256": "dd5b697f0c88ee3865b04fe252a95bb777f0612cc67ad52e0b9c6ebe5f5dd254"
+    },
+    {
+      "seed": 1240002,
+      "count": 2,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 89,
+          "sun": 8
+        },
+        {
+          "player": 1,
+          "score": 14,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 184,
+      "stats": {
+        "candidate": {
+          "decisions": 74,
+          "searched": 62,
+          "ms": 12876.124749999828,
+          "searchMs": 12873.279956999831,
+          "maxMs": 272.39308300000266,
+          "samples": 419196,
+          "transitions": 3267688,
+          "truncated": 0,
+          "plannedCutoffs": 354877,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 110,
+          "searched": 100,
+          "ms": 20304.908287999817,
+          "searchMs": 20302.69891399979,
+          "maxMs": 271.3904170000169,
+          "samples": 438112,
+          "transitions": 9205037,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7215454
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-2p-1.json",
+      "replaySha256": "4dfb650ff4e1cb73bc1d000ffb2052aceadd8227ce00d1d6acee34b0fe6f1b4f"
+    },
+    {
+      "seed": 1240002,
+      "count": 3,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 62,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 50,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 12,
+          "sun": 10
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 291,
+      "stats": {
+        "candidate": {
+          "decisions": 102,
+          "searched": 83,
+          "ms": 16921.561787000086,
+          "searchMs": 16917.0258720001,
+          "maxMs": 237.65454200000386,
+          "samples": 674219,
+          "transitions": 4577963,
+          "truncated": 0,
+          "plannedCutoffs": 314409,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 189,
+          "searched": 176,
+          "ms": 35676.826665999935,
+          "searchMs": 35674.51133299997,
+          "maxMs": 265.35095799999544,
+          "samples": 372008,
+          "transitions": 13611405,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11163195
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-3p-0.json",
+      "replaySha256": "9223f9883496585dc83d928bb98753c9e337761ec19b96f580bc19034510cc1d"
+    },
+    {
+      "seed": 1240001,
+      "count": 3,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 64,
+          "sun": 11
+        },
+        {
+          "player": 1,
+          "score": 43,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 38,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 287,
+      "stats": {
+        "candidate": {
+          "decisions": 90,
+          "searched": 76,
+          "ms": 15370.817337000146,
+          "searchMs": 15367.973172000158,
+          "maxMs": 235.45416699998896,
+          "samples": 187459,
+          "transitions": 5653247,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4828385
+        },
+        "opponent": {
+          "decisions": 197,
+          "searched": 187,
+          "ms": 37750.06995600015,
+          "searchMs": 37747.65208200019,
+          "maxMs": 258.10041600000113,
+          "samples": 284904,
+          "transitions": 14360486,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12032836
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-3p-1.json",
+      "replaySha256": "514b55c8cef09c4a4fa870f0b1525ee49f8548ed2f3e9cafc1b5729036ab4cf6"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 2,
+      "configuration": "dpw-slow-zero",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 48,
+          "sun": 10
+        },
+        {
+          "player": 3,
+          "score": 36,
+          "sun": 13
+        },
+        {
+          "player": 0,
+          "score": 32,
+          "sun": 9
+        },
+        {
+          "player": 2,
+          "score": 25,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 338,
+      "stats": {
+        "candidate": {
+          "decisions": 62,
+          "searched": 55,
+          "ms": 11246.30516300007,
+          "searchMs": 11242.986998000066,
+          "maxMs": 248.32200000001467,
+          "samples": 199012,
+          "transitions": 2948004,
+          "truncated": 0,
+          "plannedCutoffs": 185307,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 276,
+          "searched": 242,
+          "ms": 48858.86324399986,
+          "searchMs": 48844.16078199979,
+          "maxMs": 300.03383299999405,
+          "samples": 406591,
+          "transitions": 16248756,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12355685
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-4p-2.json",
+      "replaySha256": "b38020d9c0f7791aef1541777cfd5196a8814489943f117ac6e8aafd3662cf45"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 42,
+          "sun": 5
+        },
+        {
+          "player": 2,
+          "score": 37,
+          "sun": 11
+        },
+        {
+          "player": 3,
+          "score": 34,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 19,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 341,
+      "stats": {
+        "candidate": {
+          "decisions": 93,
+          "searched": 82,
+          "ms": 16880.05604600004,
+          "searchMs": 16876.492253000004,
+          "maxMs": 285.2153340000077,
+          "samples": 311553,
+          "transitions": 4011405,
+          "truncated": 0,
+          "plannedCutoffs": 291663,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 248,
+          "searched": 217,
+          "ms": 43792.96000800017,
+          "searchMs": 43784.96038000012,
+          "maxMs": 230.3877499999944,
+          "samples": 263548,
+          "transitions": 14124500,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11353379
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-4p-1.json",
+      "replaySha256": "cf514b377323ae5c088ca6180ec49b6761fd7c653e51ab6c2b43acb8bebf2e35"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 48,
+          "sun": 11
+        },
+        {
+          "player": 1,
+          "score": 29,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 29,
+          "sun": 10
+        },
+        {
+          "player": 3,
+          "score": 29,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 303,
+      "stats": {
+        "candidate": {
+          "decisions": 108,
+          "searched": 94,
+          "ms": 18986.139914000058,
+          "searchMs": 18982.039207000023,
+          "maxMs": 242.88258399997721,
+          "samples": 94002,
+          "transitions": 5589992,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4867274
+        },
+        "opponent": {
+          "decisions": 195,
+          "searched": 178,
+          "ms": 35958.54651100014,
+          "searchMs": 35935.06513500004,
+          "maxMs": 250.64604200000758,
+          "samples": 344055,
+          "transitions": 12038060,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 9660944
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-4p-0.json",
+      "replaySha256": "4b726d50d9dc64acb07bb636a61f974f15935be1474d40bf242318dba7790d58"
+    },
+    {
+      "seed": 1240001,
+      "count": 3,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 64,
+          "sun": 10
+        },
+        {
+          "player": 2,
+          "score": 41,
+          "sun": 13
+        },
+        {
+          "player": 0,
+          "score": 22,
+          "sun": 11
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 268,
+      "stats": {
+        "candidate": {
+          "decisions": 79,
+          "searched": 72,
+          "ms": 14560.80929500013,
+          "searchMs": 14557.501001000084,
+          "maxMs": 239.299417000002,
+          "samples": 80711,
+          "transitions": 5048246,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4415744
+        },
+        "opponent": {
+          "decisions": 189,
+          "searched": 175,
+          "ms": 35314.212175000255,
+          "searchMs": 35311.490630000306,
+          "maxMs": 251.8801669999957,
+          "samples": 514604,
+          "transitions": 13663999,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 10932178
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-3p-0.json",
+      "replaySha256": "dcd92bab1c5135155cbc659b15f0e1f9124edfc11a3882907cb0256555b5c72d"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 3,
+      "configuration": "dpw-slow-zero",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 46,
+          "sun": 13
+        },
+        {
+          "player": 3,
+          "score": 44,
+          "sun": 5
+        },
+        {
+          "player": 2,
+          "score": 41,
+          "sun": 10
+        },
+        {
+          "player": 1,
+          "score": 39,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0.6666666666666666,
+      "steps": 327,
+      "stats": {
+        "candidate": {
+          "decisions": 116,
+          "searched": 95,
+          "ms": 19462.62666800007,
+          "searchMs": 19458.488707000128,
+          "maxMs": 298.4866669999901,
+          "samples": 483206,
+          "transitions": 4884524,
+          "truncated": 0,
+          "plannedCutoffs": 343609,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 211,
+          "searched": 197,
+          "ms": 39720.16025399996,
+          "searchMs": 39714.19762999995,
+          "maxMs": 249.05366700000013,
+          "samples": 256154,
+          "transitions": 12777290,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 10086033
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-4p-3.json",
+      "replaySha256": "0bce71db2f0c6d160b16729f3146aa06d08e7cca340c79f44041d54336468ff5"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 4,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 46,
+          "sun": 10
+        },
+        {
+          "player": 2,
+          "score": 32,
+          "sun": 16
+        },
+        {
+          "player": 4,
+          "score": 26,
+          "sun": 15
+        },
+        {
+          "player": 3,
+          "score": 20,
+          "sun": 11
+        },
+        {
+          "player": 1,
+          "score": 18,
+          "sun": 14
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 468,
+      "stats": {
+        "candidate": {
+          "decisions": 72,
+          "searched": 65,
+          "ms": 13195.339539000008,
+          "searchMs": 13187.979332000017,
+          "maxMs": 274.77329199999804,
+          "samples": 197711,
+          "transitions": 3178303,
+          "truncated": 0,
+          "plannedCutoffs": 148884,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 396,
+          "searched": 351,
+          "ms": 71225.90304200008,
+          "searchMs": 71210.78412400006,
+          "maxMs": 314.5701659999904,
+          "samples": 744381,
+          "transitions": 20319706,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 14944803
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-5p-4.json",
+      "replaySha256": "ca852c9bb0b34987790122a4c5ed0ecae52faeb15fc39cc4403a1e0d22349493"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 3,
+      "configuration": "dpw-slow-zero",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 43,
+          "sun": 9
+        },
+        {
+          "player": 3,
+          "score": 35,
+          "sun": 13
+        },
+        {
+          "player": 0,
+          "score": 23,
+          "sun": 8
+        },
+        {
+          "player": 4,
+          "score": 22,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 16,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0.75,
+      "steps": 437,
+      "stats": {
+        "candidate": {
+          "decisions": 98,
+          "searched": 84,
+          "ms": 17079.745623999857,
+          "searchMs": 17077.2447489998,
+          "maxMs": 242.62791599999764,
+          "samples": 610068,
+          "transitions": 3640108,
+          "truncated": 0,
+          "plannedCutoffs": 216398,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 339,
+          "searched": 314,
+          "ms": 63389.70816299989,
+          "searchMs": 63383.760872999934,
+          "maxMs": 252.1708750000107,
+          "samples": 378045,
+          "transitions": 17737617,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 14092955
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-5p-3.json",
+      "replaySha256": "ef1eea728125ab77d2b4922cd1680d8658ba8d9ed6081a2f1b07b0df76609b64"
+    },
+    {
+      "seed": 1240001,
+      "count": 3,
+      "seat": 2,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 49,
+          "sun": 12
+        },
+        {
+          "player": 2,
+          "score": 39,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 30,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 275,
+      "stats": {
+        "candidate": {
+          "decisions": 98,
+          "searched": 83,
+          "ms": 16851.77279100017,
+          "searchMs": 16848.987122000166,
+          "maxMs": 242.41895799999475,
+          "samples": 55729,
+          "transitions": 5614774,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 5150837
+        },
+        "opponent": {
+          "decisions": 177,
+          "searched": 167,
+          "ms": 33635.300787999906,
+          "searchMs": 33632.37237099992,
+          "maxMs": 219.68833299999824,
+          "samples": 200986,
+          "transitions": 12572424,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 10840632
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-3p-2.json",
+      "replaySha256": "41583ca5f6e2568dab82d220403930115d7b051038562c84dc431d15b6612a75"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 3,
+      "configuration": "dpw-slow",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 40,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 39,
+          "sun": 5
+        },
+        {
+          "player": 0,
+          "score": 35,
+          "sun": 12
+        },
+        {
+          "player": 3,
+          "score": 35,
+          "sun": 10
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 371,
+      "stats": {
+        "candidate": {
+          "decisions": 88,
+          "searched": 78,
+          "ms": 15863.407539999956,
+          "searchMs": 15860.897539999976,
+          "maxMs": 264.3295830000425,
+          "samples": 337081,
+          "transitions": 4480173,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 3366553
+        },
+        "opponent": {
+          "decisions": 283,
+          "searched": 247,
+          "ms": 49824.03262499973,
+          "searchMs": 49813.87333299982,
+          "maxMs": 235.31045799999265,
+          "samples": 401609,
+          "transitions": 15402976,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11836209
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-4p-3.json",
+      "replaySha256": "91678796cbb329360e411ce9e35ecfc88a51c9fd05308b1ad88bc644c2151f86"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 4,
+          "score": 41,
+          "sun": 10
+        },
+        {
+          "player": 2,
+          "score": 37,
+          "sun": 15
+        },
+        {
+          "player": 0,
+          "score": 33,
+          "sun": 9
+        },
+        {
+          "player": 3,
+          "score": 31,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 25,
+          "sun": 14
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 437,
+      "stats": {
+        "candidate": {
+          "decisions": 64,
+          "searched": 53,
+          "ms": 10760.181246000022,
+          "searchMs": 10757.045747999975,
+          "maxMs": 277.76129200001014,
+          "samples": 21482,
+          "transitions": 2373533,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 2118787
+        },
+        "opponent": {
+          "decisions": 373,
+          "searched": 330,
+          "ms": 66758.651709,
+          "searchMs": 66740.20933099999,
+          "maxMs": 295.30912499999977,
+          "samples": 437880,
+          "transitions": 16802262,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12598614
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-5p-1.json",
+      "replaySha256": "3e47f0c8c537a071e12aa08ef6391d220dbf19b35793e5441f61186ee45a42bc"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 4,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 4,
+          "score": 38,
+          "sun": 10
+        },
+        {
+          "player": 1,
+          "score": 37,
+          "sun": 11
+        },
+        {
+          "player": 0,
+          "score": 35,
+          "sun": 16
+        },
+        {
+          "player": 3,
+          "score": 34,
+          "sun": 14
+        },
+        {
+          "player": 2,
+          "score": 24,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 436,
+      "stats": {
+        "candidate": {
+          "decisions": 119,
+          "searched": 100,
+          "ms": 20346.520456999686,
+          "searchMs": 20341.69062199985,
+          "maxMs": 254.8928329999908,
+          "samples": 385039,
+          "transitions": 5513076,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4112924
+        },
+        "opponent": {
+          "decisions": 317,
+          "searched": 287,
+          "ms": 58006.87410999983,
+          "searchMs": 57997.549733999855,
+          "maxMs": 269.7302079999936,
+          "samples": 290698,
+          "transitions": 16239341,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13051727
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-5p-4.json",
+      "replaySha256": "ee3e2e1d31a7c299a49173bfecb5c6024d268de46d06a07d59ae175176e90832"
+    },
+    {
+      "seed": 1240002,
+      "count": 2,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 79,
+          "sun": 5
+        },
+        {
+          "player": 1,
+          "score": 46,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 193,
+      "stats": {
+        "candidate": {
+          "decisions": 77,
+          "searched": 70,
+          "ms": 14201.60357999982,
+          "searchMs": 14198.448204999964,
+          "maxMs": 241.9928330000257,
+          "samples": 107797,
+          "transitions": 5720545,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4962365
+        },
+        "opponent": {
+          "decisions": 116,
+          "searched": 104,
+          "ms": 21074.72191299984,
+          "searchMs": 21071.31741299972,
+          "maxMs": 246.02500000002328,
+          "samples": 326287,
+          "transitions": 9095960,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7527003
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-2p-1.json",
+      "replaySha256": "2538b17baf3e02b54cc0027f594def007479ae25da9693ba62ce7768b99c884a"
+    },
+    {
+      "seed": 1240001,
+      "count": 2,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 65,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 4,
+          "sun": 8
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 168,
+      "stats": {
+        "candidate": {
+          "decisions": 73,
+          "searched": 63,
+          "ms": 12889.049548000097,
+          "searchMs": 12881.761711000174,
+          "maxMs": 288.22804199997336,
+          "samples": 99173,
+          "transitions": 5625434,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 5019723
+        },
+        "opponent": {
+          "decisions": 95,
+          "searched": 91,
+          "ms": 18417.267956000345,
+          "searchMs": 18416.29391400033,
+          "maxMs": 284.6096660000039,
+          "samples": 420401,
+          "transitions": 9035709,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 6965267
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-2p-1.json",
+      "replaySha256": "7cbee06c797ede6f79050d138e3971582a3628a55979532ab394e7225a078f19"
+    },
+    {
+      "seed": 1240001,
+      "count": 3,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 55,
+          "sun": 6
+        },
+        {
+          "player": 0,
+          "score": 51,
+          "sun": 12
+        },
+        {
+          "player": 1,
+          "score": 20,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 258,
+      "stats": {
+        "candidate": {
+          "decisions": 74,
+          "searched": 63,
+          "ms": 12854.274203000183,
+          "searchMs": 12851.579164000228,
+          "maxMs": 234.67437500000233,
+          "samples": 411618,
+          "transitions": 3180436,
+          "truncated": 0,
+          "plannedCutoffs": 275339,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 184,
+          "searched": 170,
+          "ms": 34456.33962200006,
+          "searchMs": 34453.52528900007,
+          "maxMs": 261.43083399999887,
+          "samples": 243723,
+          "transitions": 13341591,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11417389
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-3p-1.json",
+      "replaySha256": "fdf645f54a53225122300dace7fcc7b239d1f980958fee8f73660e39fa52db32"
+    },
+    {
+      "seed": 1240002,
+      "count": 2,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 53,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 41,
+          "sun": 7
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 196,
+      "stats": {
+        "candidate": {
+          "decisions": 101,
+          "searched": 87,
+          "ms": 18011.724834999826,
+          "searchMs": 18008.26654299983,
+          "maxMs": 287.7902919999906,
+          "samples": 581444,
+          "transitions": 3962087,
+          "truncated": 0,
+          "plannedCutoffs": 437585,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 95,
+          "searched": 86,
+          "ms": 17411.810417000088,
+          "searchMs": 17409.185832000105,
+          "maxMs": 308.1405420000083,
+          "samples": 151292,
+          "transitions": 7962686,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 6639441
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-2p-0.json",
+      "replaySha256": "48875cf2f61853e2fd77025b7d4998e879eda01d4c3a4c9866aa79a6465beb11"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 53,
+          "sun": 14
+        },
+        {
+          "player": 3,
+          "score": 29,
+          "sun": 16
+        },
+        {
+          "player": 4,
+          "score": 21,
+          "sun": 11
+        },
+        {
+          "player": 1,
+          "score": 20,
+          "sun": 15
+        },
+        {
+          "player": 0,
+          "score": 11,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 425,
+      "stats": {
+        "candidate": {
+          "decisions": 65,
+          "searched": 53,
+          "ms": 10807.430291000113,
+          "searchMs": 10803.897373999993,
+          "maxMs": 261.29712499998277,
+          "samples": 147109,
+          "transitions": 2483339,
+          "truncated": 0,
+          "plannedCutoffs": 136099,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 360,
+          "searched": 326,
+          "ms": 65954.34779100068,
+          "searchMs": 65946.95691700047,
+          "maxMs": 291.62437500001397,
+          "samples": 478735,
+          "transitions": 19020353,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 15252660
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-5p-0.json",
+      "replaySha256": "3020a8b892b0af7cba655cbfab1d10f2de8ee3468d1bac6bfe86c2d158b7d414"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 2,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 48,
+          "sun": 11
+        },
+        {
+          "player": 3,
+          "score": 36,
+          "sun": 8
+        },
+        {
+          "player": 1,
+          "score": 32,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 26,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 324,
+      "stats": {
+        "candidate": {
+          "decisions": 99,
+          "searched": 86,
+          "ms": 17381.778168999765,
+          "searchMs": 17377.426169999817,
+          "maxMs": 249.47024999995483,
+          "samples": 180855,
+          "transitions": 4802078,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4240381
+        },
+        "opponent": {
+          "decisions": 225,
+          "searched": 203,
+          "ms": 41101.427382000256,
+          "searchMs": 41096.99267200043,
+          "maxMs": 280.16179099999135,
+          "samples": 362150,
+          "transitions": 13173067,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 10175819
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-4p-2.json",
+      "replaySha256": "a9d66c24f81da7476dba7aa83912c22219f23d0ae006fd1f73120c10589f202b"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 3,
+      "configuration": "dpw-slow",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 46,
+          "sun": 8
+        },
+        {
+          "player": 0,
+          "score": 34,
+          "sun": 12
+        },
+        {
+          "player": 3,
+          "score": 30,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 26,
+          "sun": 14
+        },
+        {
+          "player": 4,
+          "score": 25,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 423,
+      "stats": {
+        "candidate": {
+          "decisions": 91,
+          "searched": 80,
+          "ms": 16106.351751000038,
+          "searchMs": 16103.568958999938,
+          "maxMs": 221.42791700002272,
+          "samples": 68432,
+          "transitions": 4250872,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 3602683
+        },
+        "opponent": {
+          "decisions": 332,
+          "searched": 294,
+          "ms": 59836.64041699993,
+          "searchMs": 59828.39329399995,
+          "maxMs": 282.23770800000057,
+          "samples": 565384,
+          "transitions": 18008040,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13665330
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-5p-3.json",
+      "replaySha256": "645b8f4172cf70336e68f13358234950dce7c12f050aa1fd4ade1dc44b04ed1d"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 3,
+      "configuration": "dpw-slow-zero",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 40,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 35,
+          "sun": 13
+        },
+        {
+          "player": 4,
+          "score": 35,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 27,
+          "sun": 10
+        },
+        {
+          "player": 3,
+          "score": 22,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 445,
+      "stats": {
+        "candidate": {
+          "decisions": 73,
+          "searched": 60,
+          "ms": 12306.710918999976,
+          "searchMs": 12302.667086000089,
+          "maxMs": 285.4070420000353,
+          "samples": 176661,
+          "transitions": 2705896,
+          "truncated": 0,
+          "plannedCutoffs": 133199,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 372,
+          "searched": 331,
+          "ms": 66876.68057399895,
+          "searchMs": 66857.63999399904,
+          "maxMs": 259.3568339999765,
+          "samples": 481308,
+          "transitions": 17781371,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13282900
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-5p-3.json",
+      "replaySha256": "9785c6cc18656a1f6c9b332ccd4b2b45175761b75f7b46a0981e3ebba49e004a"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 45,
+          "sun": 12
+        },
+        {
+          "player": 2,
+          "score": 31,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 25,
+          "sun": 10
+        },
+        {
+          "player": 0,
+          "score": 22,
+          "sun": 11
+        }
+      ],
+      "rankingScore": 0.3333333333333333,
+      "steps": 342,
+      "stats": {
+        "candidate": {
+          "decisions": 89,
+          "searched": 72,
+          "ms": 14730.295418999856,
+          "searchMs": 14727.160376999935,
+          "maxMs": 254.76479099999415,
+          "samples": 359615,
+          "transitions": 3540793,
+          "truncated": 0,
+          "plannedCutoffs": 276380,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 253,
+          "searched": 233,
+          "ms": 47275.54995999974,
+          "searchMs": 47271.41333599971,
+          "maxMs": 298.08841700002085,
+          "samples": 352770,
+          "transitions": 15626196,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11837762
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-4p-1.json",
+      "replaySha256": "1a258e799a4964d5d383f13e0d9158370e1f922f21a597b6084cc3e00c00c9c7"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 2,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 45,
+          "sun": 10
+        },
+        {
+          "player": 1,
+          "score": 40,
+          "sun": 16
+        },
+        {
+          "player": 2,
+          "score": 33,
+          "sun": 11
+        },
+        {
+          "player": 4,
+          "score": 21,
+          "sun": 14
+        },
+        {
+          "player": 0,
+          "score": 20,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 449,
+      "stats": {
+        "candidate": {
+          "decisions": 79,
+          "searched": 57,
+          "ms": 11505.03854300006,
+          "searchMs": 11499.970792000124,
+          "maxMs": 210.20425000000978,
+          "samples": 248789,
+          "transitions": 2748835,
+          "truncated": 0,
+          "plannedCutoffs": 138730,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 370,
+          "searched": 312,
+          "ms": 63176.46942400001,
+          "searchMs": 63158.513673000154,
+          "maxMs": 316.9658749999944,
+          "samples": 384330,
+          "transitions": 16486699,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12703024
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-5p-2.json",
+      "replaySha256": "e0e55c4988808a294643328ac13f0d713c58b690443d35e6ce773a44b27322ba"
+    },
+    {
+      "seed": 1240001,
+      "count": 3,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 65,
+          "sun": 13
+        },
+        {
+          "player": 2,
+          "score": 38,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 19,
+          "sun": 10
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 289,
+      "stats": {
+        "candidate": {
+          "decisions": 72,
+          "searched": 62,
+          "ms": 12623.422708999773,
+          "searchMs": 12621.410331999883,
+          "maxMs": 221.77095800003735,
+          "samples": 420876,
+          "transitions": 3493275,
+          "truncated": 0,
+          "plannedCutoffs": 239682,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 217,
+          "searched": 201,
+          "ms": 40557.83295900008,
+          "searchMs": 40554.635834000015,
+          "maxMs": 238.97529199998826,
+          "samples": 238856,
+          "transitions": 15569831,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13786759
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-3p-0.json",
+      "replaySha256": "9ccd74055b450adb0e1e6060ab23d3c0b16de880e9b0055ce16586bd1f6116dd"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 4,
+      "configuration": "dpw-slow",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 36,
+          "sun": 16
+        },
+        {
+          "player": 3,
+          "score": 35,
+          "sun": 15
+        },
+        {
+          "player": 1,
+          "score": 32,
+          "sun": 10
+        },
+        {
+          "player": 4,
+          "score": 28,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 26,
+          "sun": 14
+        }
+      ],
+      "rankingScore": 0.25,
+      "steps": 424,
+      "stats": {
+        "candidate": {
+          "decisions": 69,
+          "searched": 61,
+          "ms": 12346.88445899979,
+          "searchMs": 12344.813750999805,
+          "maxMs": 235.1069579999894,
+          "samples": 20419,
+          "transitions": 2773182,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 2500643
+        },
+        "opponent": {
+          "decisions": 355,
+          "searched": 306,
+          "ms": 61933.47069200035,
+          "searchMs": 61920.64794200024,
+          "maxMs": 267.5370000000112,
+          "samples": 415008,
+          "transitions": 16444738,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12479955
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-5p-4.json",
+      "replaySha256": "92eacee489a3f0ec886cf89dafeefc02dd8ff8345deb49b3e28543537bd95f64"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 3,
+      "configuration": "dpw-slow",
+      "rank": 5,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 34,
+          "sun": 14
+        },
+        {
+          "player": 2,
+          "score": 34,
+          "sun": 8
+        },
+        {
+          "player": 0,
+          "score": 32,
+          "sun": 15
+        },
+        {
+          "player": 4,
+          "score": 27,
+          "sun": 16
+        },
+        {
+          "player": 3,
+          "score": 22,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 413,
+      "stats": {
+        "candidate": {
+          "decisions": 73,
+          "searched": 60,
+          "ms": 12075.450874999806,
+          "searchMs": 12072.953458999924,
+          "maxMs": 209.90633299999172,
+          "samples": 101013,
+          "transitions": 2983470,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 2459909
+        },
+        "opponent": {
+          "decisions": 340,
+          "searched": 296,
+          "ms": 60234.114076,
+          "searchMs": 60218.88890899997,
+          "maxMs": 291.0012080000015,
+          "samples": 438187,
+          "transitions": 15367081,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11699092
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-5p-3.json",
+      "replaySha256": "1bc2c637e75da2a3531419a732ac82d23b83bef8ae4239ddfcea3e0dfb6ec460"
+    },
+    {
+      "seed": 1240001,
+      "count": 5,
+      "seat": 2,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 40,
+          "sun": 16
+        },
+        {
+          "player": 4,
+          "score": 35,
+          "sun": 11
+        },
+        {
+          "player": 2,
+          "score": 31,
+          "sun": 9
+        },
+        {
+          "player": 0,
+          "score": 30,
+          "sun": 14
+        },
+        {
+          "player": 1,
+          "score": 20,
+          "sun": 15
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 418,
+      "stats": {
+        "candidate": {
+          "decisions": 88,
+          "searched": 68,
+          "ms": 13827.459334999905,
+          "searchMs": 13821.453835999884,
+          "maxMs": 238.51658299996052,
+          "samples": 556667,
+          "transitions": 3546882,
+          "truncated": 0,
+          "plannedCutoffs": 144573,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 330,
+          "searched": 297,
+          "ms": 60020.09512499947,
+          "searchMs": 60010.42120699951,
+          "maxMs": 263.79749999998603,
+          "samples": 190110,
+          "transitions": 15976430,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12983782
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-5p-2.json",
+      "replaySha256": "f0201c31fab7a8f7c8716153af055f60acc61a7c9dc4b50bd598570eb8224720"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 2,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 37,
+          "sun": 14
+        },
+        {
+          "player": 3,
+          "score": 33,
+          "sun": 10
+        },
+        {
+          "player": 4,
+          "score": 30,
+          "sun": 15
+        },
+        {
+          "player": 1,
+          "score": 30,
+          "sun": 11
+        },
+        {
+          "player": 0,
+          "score": 21,
+          "sun": 16
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 439,
+      "stats": {
+        "candidate": {
+          "decisions": 109,
+          "searched": 89,
+          "ms": 18031.954993999272,
+          "searchMs": 18015.35307699931,
+          "maxMs": 248.05654199997662,
+          "samples": 239293,
+          "transitions": 4003752,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 3474973
+        },
+        "opponent": {
+          "decisions": 330,
+          "searched": 292,
+          "ms": 59263.31045399944,
+          "searchMs": 59252.60770599946,
+          "maxMs": 301.6570000000065,
+          "samples": 404524,
+          "transitions": 15202000,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11455824
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-5p-2.json",
+      "replaySha256": "76b9f67373b0d04badd100898916fb690924c036b623a4a5a3c827068aaf93f7"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 2,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 45,
+          "sun": 10
+        },
+        {
+          "player": 2,
+          "score": 36,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 33,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 22,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0.6666666666666666,
+      "steps": 335,
+      "stats": {
+        "candidate": {
+          "decisions": 91,
+          "searched": 79,
+          "ms": 16030.885617999476,
+          "searchMs": 16028.27332799969,
+          "maxMs": 265.970290999976,
+          "samples": 72771,
+          "transitions": 4969271,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4363628
+        },
+        "opponent": {
+          "decisions": 244,
+          "searched": 222,
+          "ms": 44989.64142999973,
+          "searchMs": 44984.79771999986,
+          "maxMs": 256.4898750000284,
+          "samples": 327195,
+          "transitions": 14024216,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11304621
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-4p-2.json",
+      "replaySha256": "e7750316086872ac2e056378fde13ad53319d3a07c4c6057491f6e82089e2be2"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 50,
+          "sun": 13
+        },
+        {
+          "player": 0,
+          "score": 30,
+          "sun": 12
+        },
+        {
+          "player": 1,
+          "score": 24,
+          "sun": 11
+        },
+        {
+          "player": 2,
+          "score": 18,
+          "sun": 9
+        }
+      ],
+      "rankingScore": 0.6666666666666666,
+      "steps": 328,
+      "stats": {
+        "candidate": {
+          "decisions": 67,
+          "searched": 59,
+          "ms": 12063.046501000004,
+          "searchMs": 12061.215790000046,
+          "maxMs": 274.3071249999921,
+          "samples": 383942,
+          "transitions": 2877282,
+          "truncated": 0,
+          "plannedCutoffs": 142103,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 261,
+          "searched": 229,
+          "ms": 46329.30274900014,
+          "searchMs": 46320.586376000196,
+          "maxMs": 268.983041999978,
+          "samples": 168224,
+          "transitions": 13656740,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11545233
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-4p-0.json",
+      "replaySha256": "462003d7e719a95f18615c2c5f43106264109de3218f8969f7db4995629b373f"
+    },
+    {
+      "seed": 1240001,
+      "count": 2,
+      "seat": 1,
+      "configuration": "dpw-slow-zero",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 43,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 17,
+          "sun": 8
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 163,
+      "stats": {
+        "candidate": {
+          "decisions": 76,
+          "searched": 67,
+          "ms": 13717.641326000157,
+          "searchMs": 13715.86032600014,
+          "maxMs": 232.2858750000014,
+          "samples": 590174,
+          "transitions": 3281692,
+          "truncated": 0,
+          "plannedCutoffs": 340984,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 87,
+          "searched": 80,
+          "ms": 16115.838958999666,
+          "searchMs": 16114.508833999687,
+          "maxMs": 225.65974999999162,
+          "samples": 139627,
+          "transitions": 7997705,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 6922619
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-2p-1.json",
+      "replaySha256": "7085c69a66525be80987182c235eba315eab0cf3ab1fb82dab8a135e93320897"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 2,
+      "configuration": "dpw-slow-zero",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 40,
+          "sun": 9
+        },
+        {
+          "player": 2,
+          "score": 35,
+          "sun": 7
+        },
+        {
+          "player": 0,
+          "score": 30,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 28,
+          "sun": 11
+        }
+      ],
+      "rankingScore": 0.6666666666666666,
+      "steps": 323,
+      "stats": {
+        "candidate": {
+          "decisions": 76,
+          "searched": 60,
+          "ms": 12229.817211000249,
+          "searchMs": 12222.80658500013,
+          "maxMs": 266.34733399999095,
+          "samples": 232019,
+          "transitions": 3176249,
+          "truncated": 0,
+          "plannedCutoffs": 216513,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 247,
+          "searched": 219,
+          "ms": 44229.240580999525,
+          "searchMs": 44222.31712299958,
+          "maxMs": 245.31483299995307,
+          "samples": 271030,
+          "transitions": 14380519,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11437265
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-4p-2.json",
+      "replaySha256": "20269c8246b6b2b650c12ddf42263ad575427e82571aa628cf8e0e7ca80847c0"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 3,
+      "configuration": "dpw-slow-zero",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 43,
+          "sun": 12
+        },
+        {
+          "player": 0,
+          "score": 26,
+          "sun": 13
+        },
+        {
+          "player": 3,
+          "score": 24,
+          "sun": 9
+        },
+        {
+          "player": 2,
+          "score": 16,
+          "sun": 6
+        }
+      ],
+      "rankingScore": 0.3333333333333333,
+      "steps": 309,
+      "stats": {
+        "candidate": {
+          "decisions": 62,
+          "searched": 51,
+          "ms": 10328.664877999865,
+          "searchMs": 10326.401083999895,
+          "maxMs": 212.52600000001257,
+          "samples": 302008,
+          "transitions": 2651626,
+          "truncated": 0,
+          "plannedCutoffs": 150262,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 247,
+          "searched": 221,
+          "ms": 44669.119709999475,
+          "searchMs": 44661.64387799933,
+          "maxMs": 286.3487920000334,
+          "samples": 190861,
+          "transitions": 14356953,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12264446
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240001-4p-3.json",
+      "replaySha256": "1597267caebe0a55a44551d1ffb430f5eeeedd76d60517ecce4e0d2966e8c2c1"
+    },
+    {
+      "seed": 1240002,
+      "count": 3,
+      "seat": 2,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 60,
+          "sun": 7
+        },
+        {
+          "player": 1,
+          "score": 27,
+          "sun": 13
+        },
+        {
+          "player": 0,
+          "score": 24,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 279,
+      "stats": {
+        "candidate": {
+          "decisions": 117,
+          "searched": 108,
+          "ms": 21780.68578000029,
+          "searchMs": 21778.72615600028,
+          "maxMs": 239.11954099999275,
+          "samples": 268321,
+          "transitions": 7122417,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 5942863
+        },
+        "opponent": {
+          "decisions": 162,
+          "searched": 148,
+          "ms": 29805.42099699995,
+          "searchMs": 29801.775539000053,
+          "maxMs": 227.02791599999182,
+          "samples": 135372,
+          "transitions": 10233339,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 8653458
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-3p-2.json",
+      "replaySha256": "c7e600bc945b61b351fa9ce228b4bcc37a012a61855ad2449a93c97975b3e760"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 0,
+      "configuration": "dpw-slow-zero",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 41,
+          "sun": 15
+        },
+        {
+          "player": 2,
+          "score": 39,
+          "sun": 10
+        },
+        {
+          "player": 4,
+          "score": 39,
+          "sun": 6
+        },
+        {
+          "player": 0,
+          "score": 22,
+          "sun": 16
+        },
+        {
+          "player": 1,
+          "score": 21,
+          "sun": 13
+        }
+      ],
+      "rankingScore": 0.25,
+      "steps": 425,
+      "stats": {
+        "candidate": {
+          "decisions": 85,
+          "searched": 66,
+          "ms": 13390.863208000024,
+          "searchMs": 13385.910582999815,
+          "maxMs": 262.9407919999794,
+          "samples": 257346,
+          "transitions": 2808052,
+          "truncated": 0,
+          "plannedCutoffs": 158087,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 340,
+          "searched": 294,
+          "ms": 59511.288000000466,
+          "searchMs": 59498.078415000404,
+          "maxMs": 262.0628330000327,
+          "samples": 427189,
+          "transitions": 15339355,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11890761
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow-zero/1240002-5p-0.json",
+      "replaySha256": "22d7e45959bd4eb97633097a925fbeab2c2cdf2bc75c830233b6da7bfa481ef5"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 3,
+      "configuration": "dpw-slow",
+      "rank": 4,
+      "ranking": [
+        {
+          "player": 1,
+          "score": 48,
+          "sun": 11
+        },
+        {
+          "player": 0,
+          "score": 36,
+          "sun": 7
+        },
+        {
+          "player": 2,
+          "score": 32,
+          "sun": 13
+        },
+        {
+          "player": 3,
+          "score": 31,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0,
+      "steps": 330,
+      "stats": {
+        "candidate": {
+          "decisions": 59,
+          "searched": 54,
+          "ms": 10872.811623999965,
+          "searchMs": 10871.328916999977,
+          "maxMs": 220.23616600001696,
+          "samples": 35304,
+          "transitions": 3255047,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 2926608
+        },
+        "opponent": {
+          "decisions": 271,
+          "searched": 241,
+          "ms": 48679.4176640003,
+          "searchMs": 48659.9861670002,
+          "maxMs": 268.20987500000047,
+          "samples": 239804,
+          "transitions": 14438758,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 12142839
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-4p-3.json",
+      "replaySha256": "6b376cc87bfb57a48062839c2a4fc9e116342dbeafeddfe5020471bad3974a14"
+    },
+    {
+      "seed": 1240002,
+      "count": 2,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 57,
+          "sun": 9
+        },
+        {
+          "player": 1,
+          "score": 32,
+          "sun": 8
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 199,
+      "stats": {
+        "candidate": {
+          "decisions": 131,
+          "searched": 111,
+          "ms": 22463.427698999876,
+          "searchMs": 22459.71670199989,
+          "maxMs": 265.3014579999726,
+          "samples": 194766,
+          "transitions": 8535145,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7521453
+        },
+        "opponent": {
+          "decisions": 68,
+          "searched": 62,
+          "ms": 12548.825581000012,
+          "searchMs": 12547.993581000075,
+          "maxMs": 241.00116700003855,
+          "samples": 399450,
+          "transitions": 5542163,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 3474839
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-2p-0.json",
+      "replaySha256": "81dd102a79b8dcb588f8bd9396f184b7879e77db14ee26b198c0961bab041bb6"
+    },
+    {
+      "seed": 1240002,
+      "count": 3,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 45,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 36,
+          "sun": 11
+        },
+        {
+          "player": 2,
+          "score": 35,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 285,
+      "stats": {
+        "candidate": {
+          "decisions": 90,
+          "searched": 84,
+          "ms": 16945.170667999948,
+          "searchMs": 16943.471793999954,
+          "maxMs": 232.63387499999953,
+          "samples": 193456,
+          "transitions": 5382861,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4763274
+        },
+        "opponent": {
+          "decisions": 195,
+          "searched": 176,
+          "ms": 35495.235211000545,
+          "searchMs": 35490.90416900057,
+          "maxMs": 237.09179100004258,
+          "samples": 493599,
+          "transitions": 12646527,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 9538562
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-3p-1.json",
+      "replaySha256": "feb8714ebfaad69a39b826ac6cb238fcb42770164d32774f19a0dbdd9026958e"
+    },
+    {
+      "seed": 1240002,
+      "count": 3,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 52,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 36,
+          "sun": 10
+        },
+        {
+          "player": 2,
+          "score": 35,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 290,
+      "stats": {
+        "candidate": {
+          "decisions": 139,
+          "searched": 129,
+          "ms": 26016.329537000216,
+          "searchMs": 26013.909037000325,
+          "maxMs": 282.8418749999837,
+          "samples": 271746,
+          "transitions": 8401519,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7003988
+        },
+        "opponent": {
+          "decisions": 151,
+          "searched": 137,
+          "ms": 27682.941708999395,
+          "searchMs": 27679.49691999954,
+          "maxMs": 238.09712499997113,
+          "samples": 236120,
+          "transitions": 9885188,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 7577000
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-3p-0.json",
+      "replaySha256": "96901d890312ef6bdd2db3f4fc963d0e2e741d1a8ddebc48ae6b276218a02732"
+    },
+    {
+      "seed": 1240001,
+      "count": 4,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 1,
+      "ranking": [
+        {
+          "player": 0,
+          "score": 38,
+          "sun": 10
+        },
+        {
+          "player": 1,
+          "score": 37,
+          "sun": 6
+        },
+        {
+          "player": 2,
+          "score": 29,
+          "sun": 11
+        },
+        {
+          "player": 3,
+          "score": 17,
+          "sun": 12
+        }
+      ],
+      "rankingScore": 1,
+      "steps": 321,
+      "stats": {
+        "candidate": {
+          "decisions": 98,
+          "searched": 89,
+          "ms": 17904.282872999727,
+          "searchMs": 17902.70995399967,
+          "maxMs": 213.63449999992736,
+          "samples": 73595,
+          "transitions": 5486045,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 4849268
+        },
+        "opponent": {
+          "decisions": 223,
+          "searched": 200,
+          "ms": 40359.27771799959,
+          "searchMs": 40351.25330299954,
+          "maxMs": 241.83870800002478,
+          "samples": 327320,
+          "transitions": 14521332,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 11340026
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240001-4p-0.json",
+      "replaySha256": "c74835268288e42a03e3fcc3ecc025b4e0024e7434132aface05ce1887cb4491"
+    },
+    {
+      "seed": 1240002,
+      "count": 4,
+      "seat": 1,
+      "configuration": "dpw-slow",
+      "rank": 2,
+      "ranking": [
+        {
+          "player": 3,
+          "score": 51,
+          "sun": 13
+        },
+        {
+          "player": 1,
+          "score": 34,
+          "sun": 10
+        },
+        {
+          "player": 0,
+          "score": 26,
+          "sun": 8
+        },
+        {
+          "player": 2,
+          "score": 23,
+          "sun": 11
+        }
+      ],
+      "rankingScore": 0.6666666666666666,
+      "steps": 333,
+      "stats": {
+        "candidate": {
+          "decisions": 65,
+          "searched": 54,
+          "ms": 10859.366545000696,
+          "searchMs": 10857.49450400041,
+          "maxMs": 206.2937920000404,
+          "samples": 393161,
+          "transitions": 3733587,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 2725087
+        },
+        "opponent": {
+          "decisions": 268,
+          "searched": 244,
+          "ms": 49250.30762700038,
+          "searchMs": 49246.14938199986,
+          "maxMs": 279.71541699999943,
+          "samples": 410696,
+          "transitions": 17819420,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13706129
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-4p-1.json",
+      "replaySha256": "57cea12d5c32856da3c2ba9673c1ea93de2cb7f6bbf1f03f02ec84ecec035df7"
+    },
+    {
+      "seed": 1240002,
+      "count": 5,
+      "seat": 0,
+      "configuration": "dpw-slow",
+      "rank": 3,
+      "ranking": [
+        {
+          "player": 2,
+          "score": 49,
+          "sun": 15
+        },
+        {
+          "player": 1,
+          "score": 32,
+          "sun": 14
+        },
+        {
+          "player": 0,
+          "score": 32,
+          "sun": 10
+        },
+        {
+          "player": 3,
+          "score": 31,
+          "sun": 9
+        },
+        {
+          "player": 4,
+          "score": 28,
+          "sun": 16
+        }
+      ],
+      "rankingScore": 0.5,
+      "steps": 429,
+      "stats": {
+        "candidate": {
+          "decisions": 107,
+          "searched": 100,
+          "ms": 20193.48091800022,
+          "searchMs": 20188.79396000039,
+          "maxMs": 235.93954200006556,
+          "samples": 500735,
+          "transitions": 6586139,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 5281673
+        },
+        "opponent": {
+          "decisions": 322,
+          "searched": 281,
+          "ms": 56589.14542500046,
+          "searchMs": 56561.5174640005,
+          "maxMs": 238.97933299990837,
+          "samples": 460275,
+          "transitions": 18198247,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 13892512
+        }
+      },
+      "replayPath": "/Users/franzyu/Documents/script/ra/artifacts/ai-ra-literature-study-20261028/match.replays/dpw-slow/1240002-5p-0.json",
+      "replaySha256": "b20082423186d893303b3bbf6dcf38b8956f0209da174e86fbd455bf25fc4f06"
+    }
+  ]
+}

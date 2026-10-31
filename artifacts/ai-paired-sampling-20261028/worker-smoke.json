@@ -1,0 +1,52 @@
+{
+  "method": "Actual built Worker and Wasm with in-memory fetch responses; no HTTP listener. Checks native2s, fallback, easy/normal no fetch.",
+  "httpIntegrationVerified": false,
+  "results": [
+    {
+      "mode": "hard",
+      "action": {
+        "type": "draw"
+      },
+      "elapsed": 2017.7727920000002,
+      "searchElapsed": 2004.3425839999998,
+      "samples": 5166,
+      "sampling": "tree",
+      "horizon": "next-epoch",
+      "epochAdvances": 5166,
+      "completed": 0,
+      "truncated": 0,
+      "backend": "wasm",
+      "requests": 1
+    },
+    {
+      "mode": "fallback",
+      "action": {
+        "type": "draw"
+      },
+      "elapsed": 430.75979199999983,
+      "backend": "typescript",
+      "horizon": "next-epoch",
+      "sampling": "tree",
+      "fallback": "无法加载 Wasm AI（503）",
+      "requests": 1
+    },
+    {
+      "mode": "normal",
+      "action": {
+        "type": "draw"
+      },
+      "elapsed": 1.1922079999999369,
+      "backend": "typescript",
+      "requests": 0
+    },
+    {
+      "mode": "easy",
+      "action": {
+        "type": "draw"
+      },
+      "elapsed": 0.41624999999976353,
+      "backend": "typescript",
+      "requests": 0
+    }
+  ]
+}

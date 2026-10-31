@@ -1,0 +1,381 @@
+{
+  "scope": "Kuhn correctness and a separate Ra-inspired miniature. Fully public additive tile scores, 5 tiles, 2 disks/player, +2/-2 terminal disk-sum extrema, one epoch, maximum TWO auctions. No official Ra engine, collection scoring, hidden points, god/disasters choices or production MCTS comparison. No neural models. Multiplayer zero-total centered utilities do NOT imply Nash convergence.",
+  "kuhn": [
+    {
+      "seed": 271,
+      "iterations": 0,
+      "value": 0.12500000000000006,
+      "nashConv": 0.9166666666666665
+    },
+    {
+      "seed": 271,
+      "iterations": 1000,
+      "value": -0.05814511967262875,
+      "nashConv": 0.043562339839070596
+    },
+    {
+      "seed": 271,
+      "iterations": 5000,
+      "value": -0.055925074384479606,
+      "nashConv": 0.038739630134280445
+    },
+    {
+      "seed": 271,
+      "iterations": 20000,
+      "value": -0.0558380024429746,
+      "nashConv": 0.017059166919010438
+    },
+    {
+      "seed": 811,
+      "iterations": 0,
+      "value": 0.12500000000000006,
+      "nashConv": 0.9166666666666665
+    },
+    {
+      "seed": 811,
+      "iterations": 1000,
+      "value": -0.0504285103066025,
+      "nashConv": 0.043296088868130855
+    },
+    {
+      "seed": 811,
+      "iterations": 5000,
+      "value": -0.053611879194222556,
+      "nashConv": 0.02575990124735883
+    },
+    {
+      "seed": 811,
+      "iterations": 20000,
+      "value": -0.055484805608010446,
+      "nashConv": 0.0229736386677436
+    },
+    {
+      "seed": 1459,
+      "iterations": 0,
+      "value": 0.12500000000000006,
+      "nashConv": 0.9166666666666665
+    },
+    {
+      "seed": 1459,
+      "iterations": 1000,
+      "value": -0.06740887145368135,
+      "nashConv": 0.08629535403258284
+    },
+    {
+      "seed": 1459,
+      "iterations": 5000,
+      "value": -0.06030669361333435,
+      "nashConv": 0.049272211869298504
+    },
+    {
+      "seed": 1459,
+      "iterations": 20000,
+      "value": -0.056467766349409754,
+      "nashConv": 0.02325826530372599
+    }
+  ],
+  "summary": [
+    {
+      "count": 2,
+      "baseline": "uniform",
+      "trainingSeeds": 3,
+      "games": 3000,
+      "utilityDelta": 1.0326666666666666,
+      "rankDelta": 0.16333333333333333,
+      "rankScore": 0.6738333333333334,
+      "coverage": 1
+    },
+    {
+      "count": 2,
+      "baseline": "greedy",
+      "trainingSeeds": 3,
+      "games": 3000,
+      "utilityDelta": 0.7548333333333334,
+      "rankDelta": 0.11616666666666668,
+      "rankScore": 0.6321666666666667,
+      "coverage": 1
+    },
+    {
+      "count": 3,
+      "baseline": "uniform",
+      "trainingSeeds": 3,
+      "games": 4500,
+      "utilityDelta": 0.5574074074074072,
+      "rankDelta": 0.10727777777777778,
+      "rankScore": 0.6096111111111111,
+      "coverage": 0.9978233830845771
+    },
+    {
+      "count": 3,
+      "baseline": "greedy",
+      "trainingSeeds": 3,
+      "games": 4500,
+      "utilityDelta": -0.05770370370370378,
+      "rankDelta": -0.02188888888888889,
+      "rankScore": 0.47227777777777774,
+      "coverage": 0.9996244836650394
+    },
+    {
+      "count": 4,
+      "baseline": "uniform",
+      "trainingSeeds": 3,
+      "games": 6000,
+      "utilityDelta": 0.31954166666666667,
+      "rankDelta": 0.06138888888888888,
+      "rankScore": 0.5623888888888887,
+      "coverage": 0.9768169625750415
+    },
+    {
+      "count": 4,
+      "baseline": "greedy",
+      "trainingSeeds": 3,
+      "games": 6000,
+      "utilityDelta": -0.103375,
+      "rankDelta": -0.028111111111111097,
+      "rankScore": 0.46880555555555575,
+      "coverage": 0.9915492957746479
+    },
+    {
+      "count": 5,
+      "baseline": "uniform",
+      "trainingSeeds": 3,
+      "games": 7500,
+      "utilityDelta": 0.18474666666666667,
+      "rankDelta": 0.03825,
+      "rankScore": 0.5381,
+      "coverage": 0.9247691472026073
+    },
+    {
+      "count": 5,
+      "baseline": "greedy",
+      "trainingSeeds": 3,
+      "games": 7500,
+      "utilityDelta": -0.1417066666666666,
+      "rankDelta": -0.0284,
+      "rankScore": 0.47820000000000007,
+      "coverage": 0.9806812678254319
+    }
+  ],
+  "exactTwoPlayer": [
+    {
+      "seed": 271,
+      "checkpoints": [
+        {
+          "iterations": 0,
+          "nodes": 0,
+          "infosets": 0,
+          "ms": 137.856833,
+          "exact": {
+            "values": [
+              -0.7335648148148148,
+              0.7335648148148148
+            ],
+            "bestResponses": [
+              0.05833333333333335,
+              2.9819444444444443
+            ],
+            "nashConv": 3.040277777777778
+          }
+        },
+        {
+          "iterations": 1000,
+          "nodes": 103828,
+          "infosets": 3398,
+          "ms": 696.857,
+          "exact": {
+            "values": [
+              -2.469991868376881,
+              2.469991868376881
+            ],
+            "bestResponses": [
+              -1.684540437324421,
+              2.789811369222268
+            ],
+            "nashConv": 1.1052709318978469
+          }
+        },
+        {
+          "iterations": 5000,
+          "nodes": 522211,
+          "infosets": 4018,
+          "ms": 2682.0972500000003,
+          "exact": {
+            "values": [
+              -2.6381180102121107,
+              2.6381180102121107
+            ],
+            "bestResponses": [
+              -2.432982617912222,
+              2.743318145255703
+            ],
+            "nashConv": 0.31033552734348113
+          }
+        },
+        {
+          "iterations": 20000,
+          "nodes": 2090291,
+          "infosets": 4208,
+          "ms": 9006.602,
+          "exact": {
+            "values": [
+              -2.6868182876473203,
+              2.6868182876473203
+            ],
+            "bestResponses": [
+              -2.569033809527744,
+              2.7192138503784786
+            ],
+            "nashConv": 0.15018004085073455
+          }
+        }
+      ]
+    },
+    {
+      "seed": 811,
+      "checkpoints": [
+        {
+          "iterations": 0,
+          "nodes": 0,
+          "infosets": 0,
+          "ms": 130.04316599999947,
+          "exact": {
+            "values": [
+              -0.7335648148148148,
+              0.7335648148148148
+            ],
+            "bestResponses": [
+              0.05833333333333335,
+              2.9819444444444443
+            ],
+            "nashConv": 3.040277777777778
+          }
+        },
+        {
+          "iterations": 1000,
+          "nodes": 103943,
+          "infosets": 3334,
+          "ms": 642.0537079999995,
+          "exact": {
+            "values": [
+              -2.472790094400824,
+              2.472790094400824
+            ],
+            "bestResponses": [
+              -1.6780990606522694,
+              2.796710930614749
+            ],
+            "nashConv": 1.1186118699624794
+          }
+        },
+        {
+          "iterations": 5000,
+          "nodes": 523083,
+          "infosets": 3959,
+          "ms": 2405.5713749999995,
+          "exact": {
+            "values": [
+              -2.652572962783874,
+              2.652572962783874
+            ],
+            "bestResponses": [
+              -2.342922833708775,
+              2.7500676549520464
+            ],
+            "nashConv": 0.40714482124327134
+          }
+        },
+        {
+          "iterations": 20000,
+          "nodes": 2087286,
+          "infosets": 4168,
+          "ms": 8689.924624999998,
+          "exact": {
+            "values": [
+              -2.693824769462787,
+              2.693824769462787
+            ],
+            "bestResponses": [
+              -2.5237915609156985,
+              2.715383500036672
+            ],
+            "nashConv": 0.19159193912097372
+          }
+        }
+      ]
+    },
+    {
+      "seed": 1459,
+      "checkpoints": [
+        {
+          "iterations": 0,
+          "nodes": 0,
+          "infosets": 0,
+          "ms": 128.92483300000094,
+          "exact": {
+            "values": [
+              -0.7335648148148148,
+              0.7335648148148148
+            ],
+            "bestResponses": [
+              0.05833333333333335,
+              2.9819444444444443
+            ],
+            "nashConv": 3.040277777777778
+          }
+        },
+        {
+          "iterations": 1000,
+          "nodes": 101439,
+          "infosets": 3487,
+          "ms": 641.6864160000005,
+          "exact": {
+            "values": [
+              -2.41481640878466,
+              2.41481640878466
+            ],
+            "bestResponses": [
+              -1.9954769513122657,
+              2.778925293207831
+            ],
+            "nashConv": 0.7834483418955656
+          }
+        },
+        {
+          "iterations": 5000,
+          "nodes": 511076,
+          "infosets": 4081,
+          "ms": 2554.373166000001,
+          "exact": {
+            "values": [
+              -2.654557742878083,
+              2.654557742878083
+            ],
+            "bestResponses": [
+              -2.396487555709229,
+              2.75163407764495
+            ],
+            "nashConv": 0.35514652193572127
+          }
+        },
+        {
+          "iterations": 20000,
+          "nodes": 2043664,
+          "infosets": 4230,
+          "ms": 8740.296665999998,
+          "exact": {
+            "values": [
+              -2.6915749334613013,
+              2.6915749334613013
+            ],
+            "bestResponses": [
+              -2.522631986141232,
+              2.7134670943495567
+            ],
+            "nashConv": 0.19083510820832483
+          }
+        }
+      ]
+    }
+  ],
+  "sourceAndProductionHashesVerified": true
+}

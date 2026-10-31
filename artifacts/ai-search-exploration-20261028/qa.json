@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "productionChanged": false,
+  "newTournament": false,
+  "fullSuiteRerun": false,
+  "build": "passed",
+  "scriptStrictTypecheck": "passed",
+  "targetedTests": 7,
+  "prefixCheckpointsIdentical": true,
+  "frozenReportUnaffectedByEvaluation": true,
+  "pairedFrozenRanking": "bid1 preferred under original tanh in all six evaluation configurations",
+  "oracleChecks": [
+    {
+      "innerC": 1.4,
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0,
+      "truncated": 0
+    },
+    {
+      "innerC": 0.35,
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0,
+      "truncated": 0
+    },
+    {
+      "innerC": 0,
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0,
+      "truncated": 0
+    }
+  ],
+  "independentTraceChecks": {
+    "trajectories": 36,
+    "actionsChecked": 3708,
+    "independentRules": "TypeScript simulate, each action checked legal and actor checked, final score vector matched",
+    "trainingIterations": 32768,
+    "evaluationOffset": 100000,
+    "innerC": [
+      1.4,
+      0.35
+    ],
+    "modes": [
+      "greedy-utility",
+      "greedy-visits",
+      "original-policy"
+    ],
+    "passed": true
+  },
+  "hashes": {
+    "native/ra_ai.cpp": "2b70ff7340c654bdf58404f2b4a64bc0924ae35e6f958cf500426df322810320",
+    "src/game/ai/ra-ai.wasm": "08f9cfe58a99f8b2a2e1d8f3213cc86785663d268fdfc46758b1daa815920b2d",
+    "scripts/diagnose-search-exploration.ts": "b865ade1109cc5c649003999184013b2914d7eda98260da7a55e98cba564c894",
+    "scripts/audit-frozen-search.ts": "6d9b3bdc023bf5a408c1de2620737b9afa7c9a966f74f4b6a0df8f02550fb799",
+    "scripts/check-search-exploration.ts": "4edb0c3f3beab6203b8d373c58d1daf82b4d0a8bafdaa2aea3d9c5bf035fca70",
+    "scripts/check-frozen-search.ts": "35952ebe8a4bf5ea46c321d1048d1d19343742f1b4cf757dd7783d55c51931a6",
+    "artifacts/ai-search-exploration-20261028/probe.cpp": "3de48bf1e76ad6fd67a05c58d66a13ffe085b6acd5f1959d6785088d187d3ecd",
+    "artifacts/ai-search-exploration-20261028/probe.wasm": "a92ccc756f792216f6669a06317d494e80b445b5ea440cc70b2ca3b385c36b74",
+    "artifacts/ai-search-exploration-20261028/summary.json": "ea5c23cc01b9fd17e438e09578e4794acec0451efe73500cc78ec635f135c0a4",
+    "artifacts/ai-search-exploration-long-20261028/probe.cpp": "3de48bf1e76ad6fd67a05c58d66a13ffe085b6acd5f1959d6785088d187d3ecd",
+    "artifacts/ai-search-exploration-long-20261028/probe.wasm": "a92ccc756f792216f6669a06317d494e80b445b5ea440cc70b2ca3b385c36b74",
+    "artifacts/ai-search-exploration-long-20261028/summary.json": "165a0dbcc8c26dc772546ee15c8af62b82cced5e91a56302e970c96779d3535f",
+    "artifacts/ai-search-frozen-policy-20261028/probe.cpp": "d0b25d51c27b1c386cf8834bd3657bee6ce21da085983bd8a1daca0ad4cd7a6b",
+    "artifacts/ai-search-frozen-policy-20261028/probe.wasm": "d16c205e159afa7bbd899f6f053a8cd8d7faf1e51fa2f82c30c25fe252af6364",
+    "artifacts/ai-search-frozen-policy-20261028/summary.json": "423275102b84200458409c4c07e3b087f34cbeabde471ee396a566d2cdf281aa"
+  },
+  "reproduce": [
+    "node --experimental-strip-types scripts/diagnose-search-exploration.ts",
+    "node --experimental-strip-types scripts/diagnose-search-exploration.ts artifacts/ai-search-exploration-long-20261028 131072 baseline,linear",
+    "node --experimental-strip-types scripts/audit-frozen-search.ts",
+    "node --experimental-strip-types scripts/check-search-exploration.ts",
+    "node --experimental-strip-types scripts/check-frozen-search.ts"
+  ],
+  "limits": [
+    "Single real four-player diagnostic position; not proof of general playing-strength improvement.",
+    "Evaluation overhead is additional to training, not an equal-time production algorithm comparison.",
+    "Twenty synthetic exact endgames distinguish none of the three exploration settings.",
+    "No unique implementation defect or validated general repair claimed."
+  ]
+}

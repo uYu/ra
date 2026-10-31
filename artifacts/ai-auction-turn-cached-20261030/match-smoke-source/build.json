@@ -1,0 +1,28 @@
+{
+  "sourceSha256": "eb70cb7c87d04d1f52d811013f5b5200fbb61c6e09d4f9447688cc1f91316dfa",
+  "extensionSha256": "c78bacd73cfa2666905821b66d2efed7fb7fa9a6d842752730e1b4123ba43a54",
+  "turnExtensionSha256": "1e410336a99eaccde588e31a6fd7296bcca449c310b4d64b184a9c073b99d3ee",
+  "innerRounds": 8,
+  "probeSha256": "c1a4f8e5919b8f25d273ca8114e7e82cd34b51c6d34ef3132ba64eea5cf7e21c",
+  "wasmSha256": "fd4016b5c481c1793eb71e74a45f94a8e03327e9dfb6618ee6758053939c51fe",
+  "baselineSha256": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fno-exceptions",
+    "-fno-threadsafe-statics",
+    "--no-entry",
+    "-sSTANDALONE_WASM=1",
+    "-sFILESYSTEM=0",
+    "-sMALLOC=emmalloc",
+    "-sINITIAL_MEMORY=33554432",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sSTACK_SIZE=1048576",
+    "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\",\"_configure_auction_study\",\"_auction_study_metrics\",\"_auction_study_leaves\",\"_turn_auction_metrics\",\"_turn_auction_plan\"]"
+  ],
+  "scope": "Mode 1 preserves validated current-auction baseline. Mode 2 keeps UCT at turn roots, replaces only first encountered auction per outer simulation with 8 independent common-scenario continuations and own-utility backward induction. Inner horizon shares root target. Later auctions unchanged; no production changes."
+}

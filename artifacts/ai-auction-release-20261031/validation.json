@@ -1,0 +1,19 @@
+{
+  "status": "passed-scoped-release-checks",
+  "build": "npm run build passed",
+  "frozenReportComparisons": 48,
+  "regression": {
+    "passedNonWorker": 96,
+    "workerPassedWithLocalPortPermission": 4,
+    "combinedPassed": 100,
+    "command": "node --experimental-strip-types --test --test-skip-pattern=complete_AI_games tests/*.test.ts",
+    "sandboxWorkerError": "listen EPERM; same Worker suite separately passed with local port permission",
+    "notCompleted": "Unfiltered full npm test stopped during complete AI games (36-game TS self-play) due to excessive runtime; no complete-full-suite claim."
+  },
+  "notes": [
+    "Rules/estimate parity through 12 complete games passed.",
+    "Native AI complete games across 2\u20135 players passed.",
+    "Production auction matches TS across counts/epochs/all three horizons.",
+    "Production Worker downloaded hashed Wasm, used auction sampling and 2-second search; TS fallback and timeout checks passed."
+  ]
+}

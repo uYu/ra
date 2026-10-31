@@ -1,0 +1,78 @@
+{
+  "sourceSha256": "eb70cb7c87d04d1f52d811013f5b5200fbb61c6e09d4f9447688cc1f91316dfa",
+  "productionWasmSha256": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+  "paper": "https://arxiv.org/pdf/1304.6057",
+  "configurations": [
+    {
+      "name": "uct-original",
+      "variant": "uct",
+      "alpha": 0.5,
+      "exploration": 1.4,
+      "rollout": -1
+    },
+    {
+      "name": "dpw-original",
+      "variant": "dpw",
+      "alpha": 0.5,
+      "exploration": 1.4,
+      "rollout": -1
+    },
+    {
+      "name": "dpw-slow",
+      "variant": "dpw",
+      "alpha": 0.1,
+      "exploration": 1.4,
+      "rollout": -1
+    },
+    {
+      "name": "dpw-slow-zero",
+      "variant": "dpw",
+      "alpha": 0.1,
+      "exploration": 1.4,
+      "rollout": 0
+    },
+    {
+      "name": "dpw-slow-zero-c05",
+      "variant": "dpw",
+      "alpha": 0.1,
+      "exploration": 0.5,
+      "rollout": 0
+    },
+    {
+      "name": "uct-zero-c05",
+      "variant": "uct",
+      "alpha": 0.5,
+      "exploration": 0.5,
+      "rollout": 0
+    },
+    {
+      "name": "dpw-slow-eight-c05",
+      "variant": "dpw",
+      "alpha": 0.1,
+      "exploration": 0.5,
+      "rollout": 8
+    },
+    {
+      "name": "uct-full-c05",
+      "variant": "uct",
+      "alpha": 0.5,
+      "exploration": 0.5,
+      "rollout": -1
+    }
+  ],
+  "method": "Isolated ablation: retained observer-only tree, sampled opponents, original tanh, policy prior and evaluator. Not a reproduction of the paper's two-player zero-sum fully observed implementation. C=.5 is a test value, not a justified conversion of paper C=50.",
+  "fixedSamples": 128,
+  "oracleSamples": 128,
+  "oracleOffsets": [
+    0,
+    1000,
+    2000
+  ],
+  "recordedTimeMs": 2000,
+  "heldoutTimeMs": 2000,
+  "heldoutSelection": "Existing 24-position corpus: second-epoch turn position for each of 2,3,4,5 players, independent of the step255 case",
+  "positionsSha256": "b52666bd161f2735bc2dfd5ed09fdb1c9613394003cefaf50d6e2be42eb9d2b6",
+  "oracleFixturesSha256": "8ee335cc11040e8253348098d84635eebb8df763ce7adca53d65deb3a09842dd",
+  "productionChanged": false,
+  "modelsChanged": false
+}

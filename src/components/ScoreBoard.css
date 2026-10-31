@@ -1,6 +1,30 @@
 .dialog.wide.result-dialog {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   width: 1120px;
   padding: 22px 24px;
+}
+.result-dialog > header,
+.result-dialog > .result-actions {
+  flex-shrink: 0;
+}
+.result-dialog > .result-details {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 6px;
+}
+.result-dialog > .result-actions {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #d8cfb8;
+  background: #faf7ed;
+}
+.result-dialog > .result-actions > button {
+  min-height: 46px;
+  font-size: 15px;
 }
 .dialog.result-dialog > header {
   margin-bottom: 16px;

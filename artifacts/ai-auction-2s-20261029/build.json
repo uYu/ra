@@ -1,0 +1,26 @@
+{
+  "sourceSha256": "eb70cb7c87d04d1f52d811013f5b5200fbb61c6e09d4f9447688cc1f91316dfa",
+  "extensionSha256": "c78bacd73cfa2666905821b66d2efed7fb7fa9a6d842752730e1b4123ba43a54",
+  "probeSha256": "740c87b8aa433dbb1875f103c39c684f4c2c12994e8193c1a50380ff163662a1",
+  "wasmSha256": "dc6121c8dcd814788562b3ad73691eb6b17166418a8c2a38eb9d8611620799a8",
+  "baselineSha256": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fno-exceptions",
+    "-fno-threadsafe-statics",
+    "--no-entry",
+    "-sSTANDALONE_WASM=1",
+    "-sFILESYSTEM=0",
+    "-sMALLOC=emmalloc",
+    "-sINITIAL_MEMORY=33554432",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sSTACK_SIZE=1048576",
+    "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\",\"_configure_auction_study\",\"_auction_study_metrics\",\"_auction_study_leaves\"]"
+  ],
+  "scope": "Experimental current-auction exhaustive tree, shared-scenario rollout leaf values, backward induction on each bidder own mean tanh utility. Other phases preserve original UCT. Not a full MCMS reproduction. No production changes."
+}

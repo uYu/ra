@@ -1,0 +1,162 @@
+{
+  "status": "algorithm checks passed; HTTP integration unverified",
+  "playableSampling": "tree",
+  "pairedSampling": "explicit experiment only",
+  "modelsChanged": false,
+  "trainingStarted": false,
+  "tournamentStarted": false,
+  "defaultEquivalencePositions": 24,
+  "targetedTestsPassed": 64,
+  "fullSuiteRerun": false,
+  "build": "passed",
+  "wasmManifest": "passed",
+  "strictScriptAndTestTypes": "passed",
+  "pairedNativeTSMatrix": 144,
+  "fixedBudget128Oracle": [
+    {
+      "sampling": "tree",
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "sampling": "paired",
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    }
+  ],
+  "timedComparisons": [
+    {
+      "sampling": "tree",
+      "repeat": 0,
+      "ms": 2002.757458,
+      "action": {
+        "type": "bid",
+        "sun": 4
+      },
+      "samples": 7777
+    },
+    {
+      "sampling": "paired",
+      "repeat": 0,
+      "ms": 2002.5672919999997,
+      "action": {
+        "type": "bid",
+        "sun": 1
+      },
+      "samples": 7739
+    },
+    {
+      "sampling": "paired",
+      "repeat": 1,
+      "ms": 2002.4967080000006,
+      "action": {
+        "type": "bid",
+        "sun": 1
+      },
+      "samples": 7507
+    },
+    {
+      "sampling": "tree",
+      "repeat": 1,
+      "ms": 2003.0898749999997,
+      "action": {
+        "type": "bid",
+        "sun": 4
+      },
+      "samples": 7704
+    },
+    {
+      "sampling": "tree",
+      "repeat": 2,
+      "ms": 2002.5455830000028,
+      "action": {
+        "type": "bid",
+        "sun": 4
+      },
+      "samples": 7720
+    },
+    {
+      "sampling": "paired",
+      "repeat": 2,
+      "ms": 2002.4232080000002,
+      "action": {
+        "type": "bid",
+        "sun": 1
+      },
+      "samples": 7525
+    }
+  ],
+  "httpWorkerTest": {
+    "status": "unverified",
+    "initial": "sandbox EPERM opening localhost port",
+    "escalation": "Automatic permission approval review timed out twice; not an unsafe-action determination."
+  },
+  "workerInMemory": {
+    "method": "Actual built Worker and Wasm with in-memory fetch responses; no HTTP listener. Checks native2s, fallback, easy/normal no fetch.",
+    "httpIntegrationVerified": false,
+    "results": [
+      {
+        "mode": "hard",
+        "action": {
+          "type": "draw"
+        },
+        "elapsed": 2017.7727920000002,
+        "searchElapsed": 2004.3425839999998,
+        "samples": 5166,
+        "sampling": "tree",
+        "horizon": "next-epoch",
+        "epochAdvances": 5166,
+        "completed": 0,
+        "truncated": 0,
+        "backend": "wasm",
+        "requests": 1
+      },
+      {
+        "mode": "fallback",
+        "action": {
+          "type": "draw"
+        },
+        "elapsed": 430.75979199999983,
+        "backend": "typescript",
+        "horizon": "next-epoch",
+        "sampling": "tree",
+        "fallback": "无法加载 Wasm AI（503）",
+        "requests": 1
+      },
+      {
+        "mode": "normal",
+        "action": {
+          "type": "draw"
+        },
+        "elapsed": 1.1922079999999369,
+        "backend": "typescript",
+        "requests": 0
+      },
+      {
+        "mode": "easy",
+        "action": {
+          "type": "draw"
+        },
+        "elapsed": 0.41624999999976353,
+        "backend": "typescript",
+        "requests": 0
+      }
+    ]
+  },
+  "hashes": {
+    "native/ra_ai.cpp": "eb70cb7c87d04d1f52d811013f5b5200fbb61c6e09d4f9447688cc1f91316dfa",
+    "src/game/ai/ra-ai.wasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+    "src/game/ai/search.ts": "212cf7fd6067ead70aa7b214348f56b7962d7eb903c0576fdbc87e18560771b9",
+    "src/game/ai/wasm.ts": "5c5cfe9046ea58ddb1c439cf876022c39e94bf9c438a0eb97aef9201c5b91fa9",
+    "src/game/ai.ts": "bb34efaa8796d78e5aa0a0049a8c3717fe9c732c76028bcfab936dc52695a516",
+    "src/game/ai.worker.ts": "2ff327d30b277a58291195d26f654df8da3d8114f56c3ebf00d82dbc8cd9c665",
+    "tests/paired-sampling.test.ts": "3bfce4011387d5a3dc3c238e975a90d440c4b7ee44109f41d183c3fdcfeb1624",
+    "scripts/benchmark-paired-sampling.ts": "6d749ccb5dffb3d72bf49b16c4eee4b7a6c40a793ef20bbee89d139f392a00ba",
+    "artifacts/ai-value-model.json": "8e5b7b656b58030091e521956071633bd0eb5714d4e608aa543b47b59c3ef28b",
+    "artifacts/ai-rollout-model.json": "c29124039d3350b6f44dd8163cdd7f76640154679cc1c39abf16a5e52c3bae19"
+  }
+}

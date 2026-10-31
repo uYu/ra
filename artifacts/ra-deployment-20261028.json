@@ -1,0 +1,52 @@
+{
+  "url": "http://162.14.123.217:8208/",
+  "homepageUrl": "http://162.14.123.217/",
+  "container": "ra",
+  "containerHealthy": true,
+  "files": [
+    {
+      "path": "assets/ai.worker-CXbewDVa.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "sha256": "24fba4b0c173c6cae61df94454b14aa3f94066b5396966b8117b73958f0d7e38"
+    },
+    {
+      "path": "assets/index-BqcbGvRh.css",
+      "status": 200,
+      "contentType": "text/css",
+      "sha256": "4309cb84c682011fa1bc6a3c367501bf1f3fe2415a895285c76f3b571c9f6405"
+    },
+    {
+      "path": "assets/index-CyYL4Ef6.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "sha256": "af7e592edd7559f74dc39520722f33e619841c33fb54d65d950db53ed8eca0aa"
+    },
+    {
+      "path": "assets/ra-ai-B7P7NxH4.wasm",
+      "status": 200,
+      "contentType": "application/wasm",
+      "sha256": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "7c3e026d5ee85b0aa9315db7e220776841eb73c5585ab6d85fd7a0933c495ae5"
+    }
+  ],
+  "homepageEntry": {
+    "name": "太阳神 Ra",
+    "icon": "mdi-weather-sunny",
+    "href": "http://162.14.123.217:8208",
+    "description": "Ra · 2–5人拍卖与藏品收集",
+    "server": "local-docker",
+    "container": "ra",
+    "weight": 800,
+    "type": "service",
+    "widgets": []
+  },
+  "existingHomepageEntriesUnchanged": true,
+  "homepageBackup": "/root/web/homepage/config/services.yaml.bak-ra-20261028-214513",
+  "browserChecks": "External page rendered, hard2s game opened, AI completed first move, no console errors; Homepage Ra link visible."
+}

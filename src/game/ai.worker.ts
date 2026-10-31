@@ -1,4 +1,4 @@
-import { chooseAction, hardSearchHorizon } from "./ai.ts";
+import { chooseAction, hardSearchHorizon, hardSearchSampling } from "./ai.ts";
 import { loadWasmAi } from "./ai/wasm.ts";
 import type { Difficulty, State } from "./types.ts";
 
@@ -14,12 +14,17 @@ self.onmessage = async (
         const report = ai.search(e.data.state, {
           timeMs: 2000,
           horizon: hardSearchHorizon,
+          sampling: hardSearchSampling,
         });
         self.postMessage({
           action: report.action,
           elapsed: performance.now() - started,
           searchElapsed: performance.now() - searchStarted,
           samples: report.samples,
+          sampling: report.sampling ?? hardSearchSampling,
+          trainingSamples: report.trainingSamples,
+          evaluationSamples: report.evaluationSamples,
+          evaluationRounds: report.evaluationRounds,
           horizon: hardSearchHorizon,
           epochAdvances: report.epochAdvances,
           completed: report.completed,
@@ -36,6 +41,7 @@ self.onmessage = async (
           elapsed: performance.now() - started,
           backend: "typescript",
           horizon: hardSearchHorizon,
+          sampling: hardSearchSampling,
           fallback: error instanceof Error ? error.message : "Wasm 不可用",
         });
         return;

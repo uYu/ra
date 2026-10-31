@@ -1,3 +1,4 @@
+import { auctionSearch } from "./auction.ts";
 import {
   rolloutAction,
   validateRolloutModel,
@@ -20,6 +21,8 @@ import {
 export type SearchOptions = {
   /** Fixed total budget = samples × root candidates. A time budget overrides this cap. */
   samples?: number;
+  /** auction: exhaustive current auction with shared-world continuations; paired: experimental frozen-tree evaluation. */
+  sampling?: "tree" | "paired" | "auction";
   /** Experimental ranking of predicted future gains; accumulated hidden scores stay masked. */
   reward?: "relative" | "future-rank";
   /** Experimental epoch-boundary evaluator; policy and rewards stay unchanged. */
@@ -45,6 +48,10 @@ export type SearchReport = {
   scenarios: number;
   outcomeReuses: number;
   maxOutcomeBranches: number;
+  sampling?: "paired";
+  trainingSamples?: number;
+  evaluationSamples?: number;
+  evaluationRounds?: number;
   candidates: {
     action: Action;
     /** Raw reward mean. UCT uses mean transformed utilities (tanh for relative)
@@ -52,6 +59,10 @@ export type SearchReport = {
     value: number;
     error: number;
     visits: number;
+    /** Present for paired sampling; value/error use evaluation returns only. */
+    utility?: number;
+    utilityError?: number;
+    evaluationVisits?: number;
   }[];
 };
 type Edge = {
@@ -90,6 +101,31 @@ function actionKey(s: State, a: Action) {
   return a.type;
 }
 
+function observation(s: State, observer: number, complete = false) {
+  const tiles = (ts: State["market"]) =>
+    ts.map((t) => `${t.kind}/${t.variant}`).sort();
+  return JSON.stringify([
+    s.epoch,
+    s.phase,
+    s.current,
+    s.ra,
+    s.center,
+    s.auction && [
+      s.auction.caller,
+      s.auction.reason,
+      s.auction.index,
+      s.auction.high,
+      s.auction.winner,
+    ],
+    tiles(s.market),
+    tiles(s.pending),
+    tiles(s.bag),
+    s.players[observer].score,
+    s.players.map((p) => [p.suns, p.used, tiles(p.tiles)]),
+    ...(complete ? [s.resume, s.next, s.auction?.order, s.auction?.bids] : []),
+  ]);
+}
+
 // Information-set MCTS: determinize the unseen multiset each iteration, select
 // with UCT at the acting AI's decisions, expand one edge, then roll out.
 // Opponents follow sampled auction preferences rather than underexplored UCT.
@@ -100,6 +136,20 @@ export function searchAction(
 ): SearchReport {
   if (options.valueModel) validateValueModel(options.valueModel);
   if (options.rolloutModel) validateRolloutModel(options.rolloutModel);
+  const sampling = options.sampling ?? "tree";
+  if (!["tree", "paired", "auction"].includes(sampling))
+    throw new Error("未知采样方法");
+  const paired = sampling === "paired";
+  if (
+    sampling === "auction" &&
+    ((options.variant && options.variant !== "uct") ||
+      options.valueModel ||
+      options.rolloutModel ||
+      (options.reward && options.reward !== "relative"))
+  )
+    throw new Error("拍卖续局采样仅支持无学习模型的UCT与relative奖励");
+  if (paired && options.variant && options.variant !== "uct")
+    throw new Error("配对采样仅支持UCT");
   const reward = options.reward ?? "relative";
   if (!["relative", "future-rank"].includes(reward))
     throw new Error("未知搜索奖励");
@@ -118,9 +168,22 @@ export function searchAction(
       options.timeMs! > 2000)
   )
     throw new Error("思考时间应为 1–2000 毫秒");
-  const deadline = timed ? performance.now() + options.timeMs! : Infinity;
+  if (sampling === "auction" && s.phase === "auction" && candidates.length > 1)
+    return auctionSearch(s, budget, options.horizon ?? "epoch", options.timeMs);
+  const started = performance.now();
+  const deadline = timed ? started + options.timeMs! : Infinity;
+  const trainingDeadline =
+    timed && paired ? started + options.timeMs! * 0.75 : deadline;
   if (candidates.length === 1)
     return {
+      ...(paired
+        ? {
+            sampling: "paired" as const,
+            trainingSamples: 0,
+            evaluationSamples: 0,
+            evaluationRounds: 0,
+          }
+        : {}),
       action: candidates[0],
       samples: 0,
       transitions: 0,
@@ -154,7 +217,10 @@ export function searchAction(
     outcomeReuses = 0,
     maxOutcomeBranches = 0,
     samples = 0;
-  const iterations = timed ? 1_000_000 : budget * candidates.length;
+  const evaluationRounds = paired ? Math.max(1, Math.floor(budget / 4)) : 0;
+  const iterations = timed
+    ? 1_000_000
+    : (budget - evaluationRounds) * candidates.length;
   const halving =
     variant === "sh"
       ? new RootHalving(candidates.length, iterations, timed)
@@ -174,7 +240,12 @@ export function searchAction(
       state.phase === "epoch" &&
       state.epoch >= targetEpoch);
   for (let k = 0; k < iterations; k++) {
-    if (k >= candidates.length && timed && performance.now() >= deadline) break;
+    if (
+      k >= candidates.length &&
+      timed &&
+      performance.now() >= trainingDeadline
+    )
+      break;
     let next: State = {
       ...s,
       bag,
@@ -297,33 +368,7 @@ export function searchAction(
           steps++;
         }
       }
-      const tiles = (ts: State["market"]) =>
-        ts.map((t) => `${t.kind}/${t.variant}`).sort();
-      const observed = JSON.stringify([
-        next.epoch,
-        next.phase,
-        next.current,
-        next.ra,
-        next.center,
-        next.auction && [
-          next.auction.caller,
-          next.auction.reason,
-          next.auction.index,
-          next.auction.high,
-          next.auction.winner,
-        ],
-        tiles(next.market),
-        tiles(next.pending),
-        // Remaining composition is public; its sampled ORDER must never key a node.
-        tiles(next.bag),
-        next.players[s.current].score,
-        next.players.map((p) => [p.suns, p.used, tiles(p.tiles)]),
-        // A cached transition must also distinguish disaster/god resumption
-        // and pending turn/auction order. Preserve the reference UCT key.
-        ...(variant === "dpw"
-          ? [next.resume, next.next, next.auction?.order, next.auction?.bids]
-          : []),
-      ]);
+      const observed = observation(next, s.current, variant === "dpw");
       let child = edge.outcomes.get(observed);
       if (!child) {
         child = node();
@@ -399,6 +444,165 @@ export function searchAction(
     }
     samples++;
     halving?.record(rootMeans());
+  }
+  if (paired) {
+    const trainingSamples = samples;
+    const totals = candidates.map(() => ({
+      sum: 0,
+      square: 0,
+      utility: 0,
+      utilitySquare: 0,
+    }));
+    let rounds = 0;
+    // Finish complete paired rounds so every candidate sees the same worlds.
+    while (
+      timed
+        ? rounds === 0 || performance.now() < deadline
+        : rounds < evaluationRounds
+    ) {
+      const scenario = sampleScenario(s, 0x100000 + rounds, bag);
+      for (let index = 0; index < candidates.length; index++) {
+        let next: State = {
+          ...s,
+          bag: scenario.bag,
+          history: [],
+          log: [],
+          players: s.players.map((p) => ({ ...p, score: 100 })),
+        };
+        let steps = 0;
+        const apply = (action: Action) => {
+          if (next.phase === "epoch") epochAdvances++;
+          next = simulate(next, action);
+          steps++;
+          transitions++;
+        };
+        const plan = () =>
+          options.rolloutModel
+            ? [rolloutAction(next, options.rolloutModel)]
+            : next.phase === "auction"
+              ? auctionPlan(next, scenario.model).actions
+              : [policyAction(next, scenario.model)];
+        const opponents = () => {
+          while (
+            !finished(next) &&
+            next.current !== s.current &&
+            steps < stepLimit
+          ) {
+            for (const a of plan()) {
+              if (
+                finished(next) ||
+                next.current === s.current ||
+                steps >= stepLimit
+              )
+                break;
+              apply(a);
+            }
+          }
+        };
+        let edge = root.edges.get(actionKey(s, candidates[index]));
+        apply(candidates[index]);
+        opponents();
+        let branch = edge?.outcomes.get(observation(next, s.current));
+        while (!finished(next) && steps < stepLimit) {
+          let best: { action: Action; edge: Edge } | undefined;
+          let bestUtility = -Infinity;
+          if (branch)
+            for (const action of candidateActions(next)) {
+              const candidate = branch.edges.get(actionKey(next, action));
+              if (!candidate?.visits) continue;
+              const utility = candidate.utilities[s.current] / candidate.visits;
+              if (utility > bestUtility) {
+                bestUtility = utility;
+                best = { action, edge: candidate };
+              }
+            }
+          if (best) {
+            edge = best.edge;
+            apply(best.action);
+            opponents();
+            branch = edge.outcomes.get(observation(next, s.current));
+          } else {
+            branch = undefined;
+            for (const a of plan()) {
+              if (finished(next) || steps >= stepLimit) break;
+              apply(a);
+            }
+          }
+        }
+        if (next.phase === "over") completed++;
+        if (!finished(next)) truncated++;
+        const residual =
+          next.phase === "over" || next.phase === "epoch"
+            ? options.valueModel
+              ? learnedFuture(next, options.valueModel)
+              : futureValues(next)
+            : positionValues(next);
+        const scores = residual.map((v, i) => v + next.players[i].score - 100);
+        const v =
+          reward === "future-rank"
+            ? scores.reduce(
+                (n, x, i) =>
+                  n +
+                  (i === s.current
+                    ? 0
+                    : scores[s.current] > x
+                      ? 1
+                      : scores[s.current] === x
+                        ? 0.5
+                        : 0),
+                0,
+              ) /
+              (count - 1)
+            : relative(scores, s.current, count === 2 ? 1 : 0.72);
+        const u = reward === "future-rank" ? 2 * v - 1 : Math.tanh(v / 20);
+        const total = totals[index];
+        total.sum += v;
+        total.square += v * v;
+        total.utility += u;
+        total.utilitySquare += u * u;
+        samples++;
+      }
+      rounds++;
+    }
+    const results = candidates
+      .map((action, i) => {
+        const total = totals[i],
+          value = total.sum / rounds,
+          utility = total.utility / rounds;
+        return {
+          action,
+          value,
+          error: Math.sqrt(
+            Math.max(0, total.square / rounds - value * value) / rounds,
+          ),
+          visits: (root.edges.get(actionKey(s, action))?.visits ?? 0) + rounds,
+          utility,
+          utilityError: Math.sqrt(
+            Math.max(0, total.utilitySquare / rounds - utility * utility) /
+              rounds,
+          ),
+          evaluationVisits: rounds,
+        };
+      })
+      .sort((a, b) => b.utility - a.utility || b.value - a.value);
+    return {
+      action: results[0].action,
+      samples,
+      transitions,
+      completed,
+      truncated,
+      epochAdvances,
+      nodes,
+      depth,
+      scenarios: Math.max(...results.map((r) => r.visits)),
+      outcomeReuses,
+      maxOutcomeBranches,
+      candidates: results,
+      sampling: "paired",
+      trainingSamples,
+      evaluationSamples: rounds * candidates.length,
+      evaluationRounds: rounds,
+    };
   }
   const selected = halving ? candidates[halving.best(rootMeans())] : undefined;
   const results = candidates

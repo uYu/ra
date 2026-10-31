@@ -1,0 +1,44 @@
+{
+  "algorithm": "Importance-corrected external-sampling MCCFR, tabular regret matching, alternating player updates, full-support opponent proposal .9*sigma+.1*uniform; unweighted iterations and unbiased own-reach/sample-reach average strategy",
+  "trainingSeeds": [
+    271,
+    811,
+    1459
+  ],
+  "checkpoints": [
+    0,
+    1000,
+    5000,
+    20000
+  ],
+  "counts": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "evalGamesPerSeat": 500,
+  "evalSeedBase": 2300001,
+  "baselines": [
+    "uniform",
+    "greedy"
+  ],
+  "hashes": {
+    "scripts/cfr/core.ts": "799038ee3594ff5f6ec63ba60981492a8fcec6f476dca55b0d42e2127f8d8948",
+    "scripts/cfr/games.ts": "0d8de58055f3c61cf6d36753252b0b91ecbaffc933c8a3bced412e1f593ab3cd",
+    "scripts/study-ra-cfr.ts": "1863916f6704044486f763c8d018e76de78adc10aa9c0c424e34bd5eb388a5e8",
+    "tests/cfr.test.ts": "826a74a1978c21c6a91d5d011d136611542b1642c694641c92ae591e30090098"
+  },
+  "productionWasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+  "models": {
+    "artifacts/ai-value-model.json": "8e5b7b656b58030091e521956071633bd0eb5714d4e608aa543b47b59c3ef28b",
+    "artifacts/ai-rollout-model.json": "c29124039d3350b6f44dd8163cdd7f76640154679cc1c39abf16a5e52c3bae19"
+  },
+  "scope": "Kuhn correctness and a separate Ra-inspired miniature. Fully public additive tile scores, 5 tiles, 2 disks/player, +2/-2 terminal disk-sum extrema, one epoch, maximum TWO auctions. No official Ra engine, collection scoring, hidden points, god/disasters choices or production MCTS comparison. No neural models. Multiplayer zero-total centered utilities do NOT imply Nash convergence.",
+  "primary": "Two-player exact NashConv=sum_i(BR_i-profileValue_i); multiplayer paired change in own centered-score utility against each baseline, comparing trained seat versus same-seat all-baseline control. Rank-score change auxiliary. Fixed player-count-specific starting disks; all candidate seats evaluated. Three training seeds descriptive, not confirmatory.",
+  "references": [
+    "https://johanson.ca/publications/poker/2007-nips-cfr/2007-nips-cfr.pdf",
+    "https://papers.neurips.cc/paper_files/paper/2009/hash/00411460f7c92d2124a67ea0f4cb5f85-Abstract.html",
+    "https://github.com/google-deepmind/open_spiel/blob/master/open_spiel/algorithms/external_sampling_mccfr.h"
+  ]
+}

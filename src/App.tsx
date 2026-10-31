@@ -730,7 +730,7 @@ function App() {
                         </div>
                       )}
                       {(viewed.phase === "god" || godMode) && (
-                        <div className="selection-action">
+                        <div className="selection-action god-selection">
                           <span>选择一块非神祇拍品，以一块神牌换取。</span>
                           <button
                             className="primary compact"
@@ -765,8 +765,10 @@ function App() {
                         <>
                           <div
                             className="bid-history"
+                            role="group"
+                            aria-label="拍卖出价记录"
                             style={{
-                              gridTemplateColumns: `repeat(${viewed.auction!.order.length}, minmax(0, 180px))`,
+                              gridTemplateColumns: `repeat(${viewed.auction!.order.length}, minmax(0, 104px))`,
                             }}
                           >
                             {viewed.auction!.order.map((i) => {
@@ -1287,27 +1289,29 @@ function App() {
           wide
           className="result-dialog"
         >
-          <div className="result-intro">
-            <Sun />
-            {viewed.phase === "over" ? (
-              <>
-                <span className="eyebrow">THE SUN HAS CHOSEN</span>
-                <h3>
-                  {viewed.players[ranking(viewed)[0].player].name}以{" "}
-                  {ranking(viewed)[0].score} 分获得冠军
-                </h3>
-                <p>最终同分时，以持有的最大太阳圆盘决胜。</p>
-              </>
-            ) : (
-              <p>太阳落下，文明留下了自己的印记。</p>
-            )}
+          <div className="result-details">
+            <div className="result-intro">
+              <Sun />
+              {viewed.phase === "over" ? (
+                <>
+                  <span className="eyebrow">THE SUN HAS CHOSEN</span>
+                  <h3>
+                    {viewed.players[ranking(viewed)[0].player].name}以{" "}
+                    {ranking(viewed)[0].score} 分获得冠军
+                  </h3>
+                  <p>最终同分时，以持有的最大太阳圆盘决胜。</p>
+                </>
+              ) : (
+                <p>太阳落下，文明留下了自己的印记。</p>
+              )}
+            </div>
+            <ScoreBoard state={viewed} player={inspect} onPlayer={viewPlayer} />
+            <p className="muted">
+              {viewed.phase === "over"
+                ? "三个纪元已结束。可以导出存档或回放这场王朝竞逐。"
+                : "进入下纪元后保留古迹、法老和尼罗河；其他牌弃置，所有太阳圆盘重新可用。"}
+            </p>
           </div>
-          <ScoreBoard state={viewed} player={inspect} onPlayer={viewPlayer} />
-          <p className="muted">
-            {viewed.phase === "over"
-              ? "三个纪元已结束。可以导出存档或回放这场王朝竞逐。"
-              : "进入下纪元后保留古迹、法老和尼罗河；其他牌弃置，所有太阳圆盘重新可用。"}
-          </p>
           <div className="result-actions">
             <button
               className="secondary"

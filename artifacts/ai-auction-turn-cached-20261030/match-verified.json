@@ -1,0 +1,123 @@
+{
+  "status": "complete-verified",
+  "planSha256": "d3d1493d4e76a8a7c1e204548ffafc56cc0a04d8abea4d31d647192be895f4b7",
+  "games": 168,
+  "decisions": 56526,
+  "replaySteps": 56526,
+  "summaries": [
+    {
+      "configuration": "auction-turn",
+      "games": 168,
+      "rankingScore": 0.4083333333333333,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 24,
+          "meanRank": 1.2916666666666667,
+          "rankingScore": 0.7083333333333334,
+          "first": 17
+        },
+        {
+          "count": 3,
+          "games": 36,
+          "meanRank": 2.4166666666666665,
+          "rankingScore": 0.2916666666666667,
+          "first": 6
+        },
+        {
+          "count": 4,
+          "games": 48,
+          "meanRank": 3,
+          "rankingScore": 0.3333333333333333,
+          "first": 8
+        },
+        {
+          "count": 5,
+          "games": 60,
+          "meanRank": 3.8,
+          "rankingScore": 0.3,
+          "first": 3
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1280001,
+          "rankingScore": 0.4083333333333333
+        },
+        {
+          "seed": 1280002,
+          "rankingScore": 0.3625
+        },
+        {
+          "seed": 1280003,
+          "rankingScore": 0.4375
+        },
+        {
+          "seed": 1280004,
+          "rankingScore": 0.4833333333333333
+        },
+        {
+          "seed": 1280005,
+          "rankingScore": 0.3833333333333333
+        },
+        {
+          "seed": 1280006,
+          "rankingScore": 0.3333333333333333
+        },
+        {
+          "seed": 1280007,
+          "rankingScore": 0.5083333333333333
+        },
+        {
+          "seed": 1280008,
+          "rankingScore": 0.37083333333333335
+        },
+        {
+          "seed": 1280009,
+          "rankingScore": 0.525
+        },
+        {
+          "seed": 1280010,
+          "rankingScore": 0.4125
+        },
+        {
+          "seed": 1280011,
+          "rankingScore": 0.4041666666666666
+        },
+        {
+          "seed": 1280012,
+          "rankingScore": 0.2708333333333333
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 13809,
+          "searched": 12581,
+          "searchMs": 25266047.094625972,
+          "samples": 157392414,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        },
+        "opponent": {
+          "decisions": 42717,
+          "searched": 39035,
+          "searchMs": 78203145.73131804,
+          "samples": 640637543,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    }
+  ],
+  "confidenceInterval": {
+    "lower": 0.36874999999999997,
+    "upper": 0.4479166666666667,
+    "estimate": 0.4083333333333333,
+    "resamples": 100000,
+    "seed": 1280099,
+    "decision": "supports-overall-regression"
+  },
+  "reason": "Predeclared twelve-seed2s comparison; interval resamples whole seed blocks, retaining all counts and seats. No subgroup confirmatory claim.",
+  "productionChanged": false,
+  "modelsChanged": false
+}

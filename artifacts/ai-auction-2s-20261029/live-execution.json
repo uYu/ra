@@ -1,0 +1,229 @@
+{
+  "reason": "User requested live in-progress scoreboard; display-only telemetry plus completed-job resume. Original search, rules, native binary, budget, seeds, seats, planned count and original verifier unchanged. Incomplete jobs rerun from start because prior progress had no action checkpoint; no selection by result.",
+  "files": {
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/benchmark-auction-2s-live.ts": "63b4f088168d5011b3cc475e85a0de4c8748f6c02a3c4e6d451aff5758f0107f",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/run-auction-2s-live.py": "409e8969b83f1a9dca508cf58904725369af0514b3e0aae84351bedccb91a872"
+  },
+  "reloadedAt": "2026-10-29T12:57:56.586702+00:00",
+  "retainedCompleted": 3,
+  "restartedIncomplete": [
+    {
+      "job": {
+        "seed": 1270005,
+        "count": 4,
+        "seat": 2,
+        "configuration": "auction-rollout"
+      },
+      "steps": 307,
+      "epoch": 3,
+      "stats": {
+        "candidate": {
+          "decisions": 58,
+          "searched": 55,
+          "ms": 110108.14362600006,
+          "searchMs": 110106.80646000007,
+          "maxMs": 2008.488000000012,
+          "samples": 331920,
+          "transitions": 36968181,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 249,
+          "searched": 225,
+          "ms": 450603.6567089997,
+          "searchMs": 450598.2180839996,
+          "maxMs": 2010.920167000033,
+          "samples": 1245719,
+          "transitions": 146290019,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      }
+    },
+    {
+      "job": {
+        "seed": 1270008,
+        "count": 5,
+        "seat": 0,
+        "configuration": "auction-rollout"
+      },
+      "steps": 299,
+      "epoch": 2,
+      "stats": {
+        "candidate": {
+          "decisions": 62,
+          "searched": 58,
+          "ms": 116125.51858300011,
+          "searchMs": 116124.56966600014,
+          "maxMs": 2012.5598340000006,
+          "samples": 159624,
+          "transitions": 32214075,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 237,
+          "searched": 222,
+          "ms": 444395.7433820001,
+          "searchMs": 444392.5927160001,
+          "maxMs": 2007.3382090000086,
+          "samples": 590187,
+          "transitions": 121155667,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      }
+    },
+    {
+      "job": {
+        "seed": 1270010,
+        "count": 5,
+        "seat": 1,
+        "configuration": "auction-rollout"
+      },
+      "steps": 310,
+      "epoch": 3,
+      "stats": {
+        "candidate": {
+          "decisions": 50,
+          "searched": 45,
+          "ms": 90150.08349800017,
+          "searchMs": 90148.68833200005,
+          "maxMs": 2014.5795420000213,
+          "samples": 110795,
+          "transitions": 22847276,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 260,
+          "searched": 235,
+          "ms": 470403.55627699965,
+          "searchMs": 470395.0060659996,
+          "maxMs": 2009.2290829999838,
+          "samples": 577234,
+          "transitions": 115322456,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      }
+    },
+    {
+      "job": {
+        "seed": 1270001,
+        "count": 2,
+        "seat": 0,
+        "configuration": "auction-rollout"
+      },
+      "steps": 141,
+      "epoch": 3,
+      "stats": {
+        "candidate": {
+          "decisions": 65,
+          "searched": 62,
+          "ms": 124295.0342480003,
+          "searchMs": 124294.0931630003,
+          "maxMs": 2036.3555409999099,
+          "samples": 1095565,
+          "transitions": 62728572,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 76,
+          "searched": 68,
+          "ms": 136463.05924999987,
+          "searchMs": 136461.16829299997,
+          "maxMs": 2031.9716250000056,
+          "samples": 1120304,
+          "transitions": 66784704,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      }
+    },
+    {
+      "job": {
+        "seed": 1270005,
+        "count": 2,
+        "seat": 1,
+        "configuration": "auction-rollout"
+      },
+      "steps": 123,
+      "epoch": 3,
+      "stats": {
+        "candidate": {
+          "decisions": 49,
+          "searched": 44,
+          "ms": 88161.70191299997,
+          "searchMs": 88161.06949700002,
+          "maxMs": 2022.3551670000888,
+          "samples": 698067,
+          "transitions": 46597000,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 74,
+          "searched": 71,
+          "ms": 142434.11025099969,
+          "searchMs": 142433.69804199965,
+          "maxMs": 2028.6168749999488,
+          "samples": 1013012,
+          "transitions": 72966027,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      }
+    },
+    {
+      "job": {
+        "seed": 1270008,
+        "count": 4,
+        "seat": 2,
+        "configuration": "auction-rollout"
+      },
+      "steps": 121,
+      "epoch": 2,
+      "stats": {
+        "candidate": {
+          "decisions": 54,
+          "searched": 52,
+          "ms": 104111.68833700015,
+          "searchMs": 104111.30329500017,
+          "maxMs": 2006.3850000000093,
+          "samples": 233550,
+          "transitions": 32651571,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        },
+        "opponent": {
+          "decisions": 67,
+          "searched": 63,
+          "ms": 126150.26186999993,
+          "searchMs": 126149.76453799987,
+          "maxMs": 2037.3459999999614,
+          "samples": 234232,
+          "transitions": 40183086,
+          "truncated": 0,
+          "plannedCutoffs": 0,
+          "rolloutTransitions": 0
+        }
+      }
+    }
+  ],
+  "smokeVerifiedActions": 971,
+  "unchangedSearchAndTransitionLoopVerified": true
+}

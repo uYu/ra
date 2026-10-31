@@ -1,0 +1,83 @@
+{
+  "productionUnchanged": true,
+  "modelsUnchanged": true,
+  "equivalenceChecks": 48,
+  "widthBoundaryChecks": 1000000,
+  "configurationCount": 8,
+  "fixedSearches": 192,
+  "oracleSearches": 480,
+  "timedSearches": 40,
+  "probeSourceSha256": "2256af788567067d0b3480a29f85c8937ca3e68df75a6900dd6c7330225cd686",
+  "probeWasmSha256": "a563464c5448fc15102f351919733eda6fa0c2c728e7292a12b562e08ee7104f",
+  "limitations": [
+    "Not a reproduction: current sampled opponents, information-set keys, evaluator, policy prior and tanh objective retained.",
+    "Short rollout intentionally evaluates nonterminal leaves; plannedCutoffs do not count as safety-cap truncation.",
+    "Historical exact puzzles are easy and have been inspected before; not a new playing-strength test set.",
+    "Timed actions on held-out positions lack exact ground truth; sample throughput alone is not strength.",
+    "No tournament and no default configuration change."
+  ],
+  "referenceChecks": {
+    "checks": 192,
+    "hiddenInformationChecks": 192,
+    "sourceImmutable": true,
+    "metricsAgree": true,
+    "passed": true
+  },
+  "completeGamePilot": {
+    "games": 56,
+    "decisions": 18855,
+    "verified": true,
+    "summary": "match-verified.json",
+    "independentBaseSeeds": 2,
+    "timeMs": 200,
+    "configurationRankingScores": [
+      {
+        "configuration": "dpw-slow",
+        "rankingScore": 0.4666666666666666,
+        "bySeed": [
+          {
+            "seed": 1240001,
+            "rankingScore": 0.3458333333333333
+          },
+          {
+            "seed": 1240002,
+            "rankingScore": 0.5875
+          }
+        ]
+      },
+      {
+        "configuration": "dpw-slow-zero",
+        "rankingScore": 0.3,
+        "bySeed": [
+          {
+            "seed": 1240001,
+            "rankingScore": 0.3416666666666667
+          },
+          {
+            "seed": 1240002,
+            "rankingScore": 0.2583333333333333
+          }
+        ]
+      }
+    ],
+    "confidenceInterval": null
+  },
+  "smoke": {
+    "games": 4,
+    "decisions": 524,
+    "verified": true,
+    "excludedFromPilot": true
+  },
+  "scriptStrictTypes": "passed",
+  "productionHashesReverified": true,
+  "modelsHashesReverified": true,
+  "noDefaultSwitch": true,
+  "reproduce": [
+    "node --experimental-strip-types scripts/study-ra-dpw.ts NEW_OUTPUT",
+    "node --experimental-strip-types scripts/check-ra-dpw-study.ts NEW_OUTPUT",
+    "node --experimental-strip-types scripts/stress-ra-dpw.ts NEW_OUTPUT",
+    "node --experimental-strip-types scripts/benchmark-ra-study-match.ts NEW_OUTPUT --smoke",
+    "node --experimental-strip-types scripts/benchmark-ra-study-match.ts NEW_OUTPUT",
+    "node --experimental-strip-types scripts/check-ra-study-match.ts NEW_OUTPUT"
+  ]
+}

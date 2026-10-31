@@ -1,0 +1,72 @@
+{
+  "status": "complete-verified",
+  "planSha256": "8209d92b73d5c2cac127ebd19f22de3ffb4b89ea0fea090ca1161376a90b7899",
+  "games": 4,
+  "decisions": 1025,
+  "replaySteps": 1025,
+  "summaries": [
+    {
+      "configuration": "auction-rollout",
+      "games": 4,
+      "rankingScore": 0.25,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 1,
+          "meanRank": 2,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 3,
+          "games": 1,
+          "meanRank": 3,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 4,
+          "games": 1,
+          "meanRank": 4,
+          "rankingScore": 0,
+          "first": 0
+        },
+        {
+          "count": 5,
+          "games": 1,
+          "meanRank": 1,
+          "rankingScore": 1,
+          "first": 1
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1270999,
+          "rankingScore": 0.25
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 310,
+          "searched": 267,
+          "searchMs": 419.2238449999994,
+          "samples": 5164,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        },
+        "opponent": {
+          "decisions": 715,
+          "searched": 646,
+          "searchMs": 881.2374649999999,
+          "samples": 6305,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    }
+  ],
+  "confidenceInterval": null,
+  "reason": "Smoke only; excluded from playing-strength results",
+  "productionChanged": false,
+  "modelsChanged": false
+}

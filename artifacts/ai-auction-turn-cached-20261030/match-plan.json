@@ -1,0 +1,1085 @@
+{
+  "status": "frozen",
+  "smoke": false,
+  "timeMs": 2000,
+  "workers": 6,
+  "snapshot": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source",
+  "replays": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match.replays",
+  "probeSha256": "fd4016b5c481c1793eb71e74a45f94a8e03327e9dfb6618ee6758053939c51fe",
+  "configurations": [
+    {
+      "name": "auction-turn",
+      "variant": "uct",
+      "rollout": -1
+    }
+  ],
+  "baseline": {
+    "name": "auction-validated",
+    "variant": "uct",
+    "rollout": -1
+  },
+  "jobs": [
+    {
+      "seed": 1280006,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 4,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280008,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280007,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 5,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 5,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280003,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280011,
+      "count": 2,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280004,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280005,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 3,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280009,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 5,
+      "seat": 4,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 5,
+      "seat": 3,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280012,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280006,
+      "count": 4,
+      "seat": 2,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280001,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 3,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280010,
+      "count": 4,
+      "seat": 1,
+      "configuration": "auction-turn"
+    },
+    {
+      "seed": 1280002,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-turn"
+    }
+  ],
+  "hashes": {
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/probe.cpp": "c1a4f8e5919b8f25d273ca8114e7e82cd34b51c6d34ef3132ba64eea5cf7e21c",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/probe.wasm": "fd4016b5c481c1793eb71e74a45f94a8e03327e9dfb6618ee6758053939c51fe",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/auction-sampling/probe.inc": "c78bacd73cfa2666905821b66d2efed7fb7fa9a6d842752730e1b4123ba43a54",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/auction-sampling/reference.ts": "b7ac4ebf9913c92cfcca5a8e844382425c42c205facc8b12aeef7071b95211d4",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/auction-sampling/statistics.ts": "4a7222e9d7e595a09b847ebc671f40259249f42fa221f3d6a9bbf4eea237db48",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/benchmark-auction-turn-match.ts": "a56bb87e20033df5dca1de811151b0b617db9f4886199797f87fb875cf0024f0",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/check-auction-turn-match.ts": "38639b84a4a6de13d45a29c97a7fa98825a0d730e3939426ce38be70a2719f08",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/run-auction-turn-study.py": "65dccd8a3911af5d5c63171e3590595d27aae96072f1710171b7efa1ac9f7499",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/evaluation.ts": "58fdd0afa3ef0f4016a653d3845e54e88f7ef2feb08e1f8707b6deb3c0e31cd9",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/halving.ts": "fef323cf8fbf900cf128f554c3e785bea427d00e96b4148f876edd060194c7ff",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/policy.ts": "68ed44877e1056ab8edc8245a1f2f91025757208c422d586993a491ec24b0392",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/ra-ai.wasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/rollout.ts": "889fd1dd95455e46619edabf74b1161ddaba84437fbec43f64375ec03969c90b",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/sampling.ts": "e7404d153e5e7eb1956cf24003bdac64e8ec936a8a3431ac9c068fcb9676b45e",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/search.ts": "212cf7fd6067ead70aa7b214348f56b7962d7eb903c0576fdbc87e18560771b9",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/value.ts": "62ef8acb7e3377bbcec2638534e1eb509a9a2940f13521ee979564a1c06140b8",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/wasm-frozen-uct3.ts": "291c61110a3c8bac035e8df098d835d9e6445d8e6d8e320d42c39d8aefa2d8c1",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/wasm-frozen-uct4.ts": "3dff1ae4f94792bab3cdf8edfdd48878c36e1e642708f54e7f6e0ac5ca8a3a03",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/wasm-frozen-uct5.ts": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai/wasm.ts": "5c5cfe9046ea58ddb1c439cf876022c39e94bf9c438a0eb97aef9201c5b91fa9",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai.ts": "bb34efaa8796d78e5aa0a0049a8c3717fe9c732c76028bcfab936dc52695a516",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/ai.worker.ts": "2ff327d30b277a58291195d26f654df8da3d8114f56c3ebf00d82dbc8cd9c665",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/data.ts": "ec78c14ed0bc5f880e111e8a9429bd8a5150f768349cb5141e8a73d245dd3462",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/motion.ts": "b98125ded17e8d04e9ac0c1b5fa53c2eb6e588e08e89257443b56bb1d7720d41",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/preferences.ts": "6d5a5be7b3833a14d4929ef258d07c0b59296ec2f7255fbf90b6c168b1516c5e",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/presentation.ts": "67b1801bc28e267b31b8d7996e5743b5e23db0c7721f05c1d1365699474800ac",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/scoring-presentation.ts": "9bae82f86fe1b1b297d8c3e8dbd595edc5a50f0b325fdcee4cc5db4a401e4ed1",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/storage.ts": "fbe63bdaecd843ac5e882e75ea32b8374904af8d08dbc7faa626f9300a344641",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/tile-guide.ts": "a87ef1eb01c42dc52678015f1424c3641e3e5788b738343aa7347f0d6fc8cd98",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/types.ts": "e49a56903aa0db237bfd6e629a759dfd5849beac66fc3a20bac53a0ee9d06659",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/src/game/visibility.ts": "d0cc797b59e1d832e085b39c1309bc561066aead1e988f09314a8d0982094805",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/build.json": "1e34324075fe9f3f804f27b616e889e69db95fef397986f0fbbdbc2277cbba0d",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/auction-sampling/turn.inc": "1e410336a99eaccde588e31a6fd7296bcca449c310b4d64b184a9c073b99d3ee",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/build-auction-turn-study.ts": "1ab5cee69442f2c7f999e2009ac82e3d8f480b8ef507786d91a9b20116c5d74b",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-turn-cached-20261030/match-source/scripts/check-auction-turn-study.ts": "d2bc1bb21ceb73433b2ffc6ce3a3f2712c7218bc55963cc8bf1163c8d732ef33"
+  },
+  "statisticalPlan": {
+    "confidenceLevel": 0.95,
+    "method": "Percentile cluster bootstrap of complete base-seed blocks (all counts/seats together)",
+    "resamples": 100000,
+    "seed": 1280099,
+    "reference": 0.5,
+    "decision": "Lower endpoint > .5 supports overall improvement; upper endpoint < .5 supports regression; otherwise inconclusive. Player-count subgroups exploratory. No outcome-based extension."
+  },
+  "primaryMetric": "For each configuration average normalized rank (count-rank)/(count-1) within each player count, then average2/3/4/5 equally. Baseline symmetry reference50%, not a measured head-to-head win rate.",
+  "limitations": [
+    "Twelve predeclared independent base seeds, all 2–5-player seats; no intermediate selection or sample extension.",
+    "Both sides 2000ms, next-epoch horizon, no models; candidate mode 2 versus validated auction baseline mode 1.",
+    "Only turn-root UCT changes: first encountered auction per outer simulation uses eight independent shared scenarios and own-utility backward induction. Exact public-state plans cached within search; later auctions unchanged. Other phases retain validated auction baseline. Inner work and outer samples reported separately. Not full multi-round search. Complete simulations can overrun soft deadline.",
+    "All planned games run; no outcome-based stopping, replacement seeds or post-hoc sample extension."
+  ]
+}

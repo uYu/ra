@@ -1,0 +1,170 @@
+{
+  "status": "complete-verified",
+  "startedAt": "2026-10-29T12:48:32.154104+00:00",
+  "updatedAt": "2026-10-30T02:22:51.358002+00:00",
+  "supervisorPid": 59617,
+  "wrapperParentPid": 1,
+  "games": 168,
+  "verifiedActions": 56430,
+  "confidenceInterval": {
+    "lower": 0.5694444444444444,
+    "upper": 0.6673611111111111,
+    "estimate": 0.6159722222222223,
+    "resamples": 100000,
+    "seed": 1270099,
+    "decision": "supports-overall-improvement"
+  },
+  "summaries": [
+    {
+      "configuration": "auction-rollout",
+      "games": 168,
+      "rankingScore": 0.6159722222222223,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 24,
+          "meanRank": 1.375,
+          "rankingScore": 0.625,
+          "first": 15
+        },
+        {
+          "count": 3,
+          "games": 36,
+          "meanRank": 1.8611111111111112,
+          "rankingScore": 0.5694444444444444,
+          "first": 14
+        },
+        {
+          "count": 4,
+          "games": 48,
+          "meanRank": 2.0416666666666665,
+          "rankingScore": 0.6527777777777778,
+          "first": 17
+        },
+        {
+          "count": 5,
+          "games": 60,
+          "meanRank": 2.533333333333333,
+          "rankingScore": 0.6166666666666667,
+          "first": 13
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1270001,
+          "rankingScore": 0.5083333333333333
+        },
+        {
+          "seed": 1270002,
+          "rankingScore": 0.6833333333333332
+        },
+        {
+          "seed": 1270003,
+          "rankingScore": 0.8
+        },
+        {
+          "seed": 1270004,
+          "rankingScore": 0.5708333333333333
+        },
+        {
+          "seed": 1270005,
+          "rankingScore": 0.5208333333333333
+        },
+        {
+          "seed": 1270006,
+          "rankingScore": 0.65
+        },
+        {
+          "seed": 1270007,
+          "rankingScore": 0.7375
+        },
+        {
+          "seed": 1270008,
+          "rankingScore": 0.6583333333333333
+        },
+        {
+          "seed": 1270009,
+          "rankingScore": 0.5458333333333333
+        },
+        {
+          "seed": 1270010,
+          "rankingScore": 0.5833333333333333
+        },
+        {
+          "seed": 1270011,
+          "rankingScore": 0.55
+        },
+        {
+          "seed": 1270012,
+          "rankingScore": 0.5833333333333333
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 15818,
+          "searched": 14376,
+          "searchMs": 28802149.731419012,
+          "samples": 265743358,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        },
+        "opponent": {
+          "decisions": 40612,
+          "searched": 36322,
+          "searchMs": 72780251.20731804,
+          "samples": 569997249,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    }
+  ],
+  "timingCaps": [
+    {
+      "seed": 1270001,
+      "count": 4,
+      "seat": 0,
+      "step": 344,
+      "side": "opponent",
+      "elapsedMs": 1780.542916999897,
+      "samples": 1000000
+    },
+    {
+      "seed": 1270012,
+      "count": 5,
+      "seat": 3,
+      "step": 413,
+      "side": "opponent",
+      "elapsedMs": 1875.3535830001347,
+      "samples": 1000000
+    },
+    {
+      "seed": 1270002,
+      "count": 4,
+      "seat": 3,
+      "step": 374,
+      "side": "opponent",
+      "elapsedMs": 1595.5793749997392,
+      "samples": 1000000
+    },
+    {
+      "seed": 1270008,
+      "count": 3,
+      "seat": 0,
+      "step": 293,
+      "side": "opponent",
+      "elapsedMs": 1874.0851669996046,
+      "samples": 1000000
+    },
+    {
+      "seed": 1270007,
+      "count": 5,
+      "seat": 3,
+      "step": 436,
+      "side": "opponent",
+      "elapsedMs": 1349.8073750007898,
+      "samples": 1000000
+    }
+  ],
+  "productionUnchanged": true
+}

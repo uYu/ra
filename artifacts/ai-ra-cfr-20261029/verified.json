@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "sourceHashes": true,
+  "productionWasmAndModelsUnchanged": true,
+  "trainingRuns": 12,
+  "pairedEvaluationGames": 42000,
+  "individualEvaluationGames": 84000,
+  "miniTwoPlayerExactMinimaxValue": -2.7,
+  "oracleNodes": 9765,
+  "kuhnExactValue": -0.05555555555555555,
+  "scope": "Kuhn correctness and a separate Ra-inspired miniature. Fully public additive tile scores, 5 tiles, 2 disks/player, +2/-2 terminal disk-sum extrema, one epoch, maximum TWO auctions. No official Ra engine, collection scoring, hidden points, god/disasters choices or production MCTS comparison. No neural models. Multiplayer zero-total centered utilities do NOT imply Nash convergence.",
+  "limitations": [
+    "Independent metric/hash verification; official Ra engine is not involved.",
+    "Two-auction cap and public additive scores materially simplify Ra.",
+    "No comparison with production UCT or equal end-to-end training budget.",
+    "Three training seeds; descriptive results only."
+  ]
+}

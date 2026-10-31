@@ -1,0 +1,33 @@
+{
+  "status": "verified",
+  "frozenReportMatches": 48,
+  "production": {
+    "abi": 6,
+    "source": "native/ra_ai.cpp",
+    "target": "src/game/ai/ra-ai.wasm",
+    "sourceSha256": "ac5418f7840ece45a9c268e6aa36681be8fb9770e4b8d8f02c84d7561b10fec9",
+    "wasmSha256": "b840351583ee964e2387e91f8eb7d1f573419cda6dcee25467d77841660f4581",
+    "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9-git",
+    "flags": [
+      "-std=c++20",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-fno-exceptions",
+      "-fno-threadsafe-statics",
+      "--no-entry",
+      "-sSTANDALONE_WASM=1",
+      "-sFILESYSTEM=0",
+      "-sMALLOC=emmalloc",
+      "-sINITIAL_MEMORY=33554432",
+      "-sALLOW_MEMORY_GROWTH=1",
+      "-sSTACK_SIZE=1048576",
+      "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\"]"
+    ]
+  },
+  "frozenSha256": "dc6121c8dcd814788562b3ad73691eb6b17166418a8c2a38eb9d8611620799a8",
+  "selected": "auction-only mode 1, not turn expansion",
+  "browserSampling": "auction"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "complete-verified",
+  "planSha256": "8a2bb42fae7b2d3a25fcfc6b489bacc1c31d01e07f1830edea58721c69f6958a",
+  "games": 28,
+  "decisions": 9191,
+  "replaySteps": 9191,
+  "summaries": [
+    {
+      "configuration": "auction-rollout",
+      "games": 28,
+      "rankingScore": 0.5625,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 4,
+          "meanRank": 1.5,
+          "rankingScore": 0.5,
+          "first": 2
+        },
+        {
+          "count": 3,
+          "games": 6,
+          "meanRank": 1.5,
+          "rankingScore": 0.75,
+          "first": 4
+        },
+        {
+          "count": 4,
+          "games": 8,
+          "meanRank": 2.5,
+          "rankingScore": 0.5,
+          "first": 2
+        },
+        {
+          "count": 5,
+          "games": 10,
+          "meanRank": 3,
+          "rankingScore": 0.5,
+          "first": 1
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1260002,
+          "rankingScore": 0.5583333333333333
+        },
+        {
+          "seed": 1260001,
+          "rankingScore": 0.5666666666666667
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 2406,
+          "searched": 2197,
+          "searchMs": 443500.38040999987,
+          "samples": 4958182,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        },
+        "opponent": {
+          "decisions": 6785,
+          "searched": 5998,
+          "searchMs": 1208099.1681389997,
+          "samples": 7340390,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    }
+  ],
+  "confidenceInterval": null,
+  "reason": "Only two independent base seeds; pilot descriptive results, no confirmatory interval or2s strength claim",
+  "productionChanged": false,
+  "modelsChanged": false
+}

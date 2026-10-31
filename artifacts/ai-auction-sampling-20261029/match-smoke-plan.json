@@ -1,0 +1,87 @@
+{
+  "status": "frozen",
+  "smoke": true,
+  "timeMs": 1,
+  "workers": 2,
+  "snapshot": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source",
+  "replays": "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke.replays",
+  "probeSha256": "dc6121c8dcd814788562b3ad73691eb6b17166418a8c2a38eb9d8611620799a8",
+  "configurations": [
+    {
+      "name": "auction-rollout",
+      "variant": "uct",
+      "rollout": -1
+    }
+  ],
+  "baseline": {
+    "name": "uct-original",
+    "variant": "uct",
+    "rollout": -1
+  },
+  "jobs": [
+    {
+      "seed": 1260999,
+      "count": 5,
+      "seat": 0,
+      "configuration": "auction-rollout"
+    },
+    {
+      "seed": 1260999,
+      "count": 3,
+      "seat": 0,
+      "configuration": "auction-rollout"
+    },
+    {
+      "seed": 1260999,
+      "count": 2,
+      "seat": 0,
+      "configuration": "auction-rollout"
+    },
+    {
+      "seed": 1260999,
+      "count": 4,
+      "seat": 0,
+      "configuration": "auction-rollout"
+    }
+  ],
+  "hashes": {
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/probe.cpp": "740c87b8aa433dbb1875f103c39c684f4c2c12994e8193c1a50380ff163662a1",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/probe.wasm": "dc6121c8dcd814788562b3ad73691eb6b17166418a8c2a38eb9d8611620799a8",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/scripts/auction-sampling/probe.inc": "c78bacd73cfa2666905821b66d2efed7fb7fa9a6d842752730e1b4123ba43a54",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/scripts/auction-sampling/reference.ts": "b7ac4ebf9913c92cfcca5a8e844382425c42c205facc8b12aeef7071b95211d4",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/scripts/benchmark-auction-sampling-match.ts": "e7640a1e0c492bb757a32bb095dba329e65a35a8a9e2779e12e5aa4897accc52",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/scripts/check-auction-sampling-match.ts": "5536738210a95f984b20c4d4c40537be1ff114b48ecb147719d46b333f362e51",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/scripts/lib/decision-trace.ts": "80e75aefa35cafbba04ed02a48689c662e4d5b97a2d5adabb95fd6cb537ab1b8",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/evaluation.ts": "58fdd0afa3ef0f4016a653d3845e54e88f7ef2feb08e1f8707b6deb3c0e31cd9",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/halving.ts": "fef323cf8fbf900cf128f554c3e785bea427d00e96b4148f876edd060194c7ff",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/policy.ts": "68ed44877e1056ab8edc8245a1f2f91025757208c422d586993a491ec24b0392",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/ra-ai.wasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/rollout.ts": "889fd1dd95455e46619edabf74b1161ddaba84437fbec43f64375ec03969c90b",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/sampling.ts": "e7404d153e5e7eb1956cf24003bdac64e8ec936a8a3431ac9c068fcb9676b45e",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/search.ts": "212cf7fd6067ead70aa7b214348f56b7962d7eb903c0576fdbc87e18560771b9",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/value.ts": "62ef8acb7e3377bbcec2638534e1eb509a9a2940f13521ee979564a1c06140b8",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/wasm-frozen-uct3.ts": "291c61110a3c8bac035e8df098d835d9e6445d8e6d8e320d42c39d8aefa2d8c1",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/wasm-frozen-uct4.ts": "3dff1ae4f94792bab3cdf8edfdd48878c36e1e642708f54e7f6e0ac5ca8a3a03",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/wasm-frozen-uct5.ts": "845cab8e7e045ef096d654a407090a89d4212d70fd55706467f5b426551181c2",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai/wasm.ts": "5c5cfe9046ea58ddb1c439cf876022c39e94bf9c438a0eb97aef9201c5b91fa9",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai.ts": "bb34efaa8796d78e5aa0a0049a8c3717fe9c732c76028bcfab936dc52695a516",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/ai.worker.ts": "2ff327d30b277a58291195d26f654df8da3d8114f56c3ebf00d82dbc8cd9c665",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/data.ts": "ec78c14ed0bc5f880e111e8a9429bd8a5150f768349cb5141e8a73d245dd3462",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/engine.ts": "78c2ca5515237c3b76bf1bb5e1e4794fda0759e240a4623f8cf4b404b9d60a6f",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/motion.ts": "b98125ded17e8d04e9ac0c1b5fa53c2eb6e588e08e89257443b56bb1d7720d41",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/preferences.ts": "6d5a5be7b3833a14d4929ef258d07c0b59296ec2f7255fbf90b6c168b1516c5e",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/presentation.ts": "67b1801bc28e267b31b8d7996e5743b5e23db0c7721f05c1d1365699474800ac",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/scoring-presentation.ts": "9bae82f86fe1b1b297d8c3e8dbd595edc5a50f0b325fdcee4cc5db4a401e4ed1",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/storage.ts": "fbe63bdaecd843ac5e882e75ea32b8374904af8d08dbc7faa626f9300a344641",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/tile-guide.ts": "a87ef1eb01c42dc52678015f1424c3641e3e5788b738343aa7347f0d6fc8cd98",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/types.ts": "e49a56903aa0db237bfd6e629a759dfd5849beac66fc3a20bac53a0ee9d06659",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-sampling-20261029/match-smoke-source/src/game/visibility.ts": "d0cc797b59e1d832e085b39c1309bc561066aead1e988f09314a8d0982094805"
+  },
+  "primaryMetric": "For each configuration average normalized rank (count-rank)/(count-1) within each player count, then average2/3/4/5 equally. Baseline symmetry reference50%, not a measured head-to-head win rate.",
+  "limitations": [
+    "Small pilot: two independent base seeds, all seats; descriptive only, no confirmatory confidence interval.",
+    "Both sides200ms, next-epoch horizon, no models. Not a2s strength conclusion.",
+    "Single predeclared hybrid: exhaustive current auction, common-scenario rollout leaf values, each bidder backs up own mean tanh utility. Other phases unchanged UCT. No neural models. Not a full MCMS reproduction.",
+    "All planned games run; no outcome-based stopping, replacement seeds or post-hoc sample extension."
+  ]
+}

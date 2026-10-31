@@ -1,0 +1,7162 @@
+{
+  "plan": "stress-plan.json",
+  "referenceActions": 7,
+  "capped": 1,
+  "summary": [
+    {
+      "configuration": "uct-original",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "dpw-original",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "dpw-slow",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "dpw-slow-zero",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "dpw-slow-zero-c05",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "uct-zero-c05",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "dpw-slow-eight-c05",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    },
+    {
+      "configuration": "uct-full-c05",
+      "searches": 69,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0
+    }
+  ],
+  "results": [
+    {
+      "index": 0,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.1512588266037892
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.23937104005522095
+          },
+          {
+            "action": {
+              "type": "god",
+              "tileId": 135
+            },
+            "value": 0.09966799462495583
+          },
+          {
+            "action": {
+              "type": "god",
+              "tileId": 10
+            },
+            "value": 0.09966799462495583
+          }
+        ],
+        "nodes": 23407,
+        "best": 0.1512588266037892
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 2048,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": 0.2917818666142992
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 5
+            },
+            "value": 0.28447570599094246
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.7148824009950245
+          }
+        ],
+        "nodes": 4915,
+        "best": 0.7148824009950245
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.24128739570924032
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.2913126124515909
+          }
+        ],
+        "nodes": 4216,
+        "best": -0.24128739570924032
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": 0.2927486512172184
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 5
+            },
+            "value": 0.2898118000751513
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.7162978701990246
+          }
+        ],
+        "nodes": 9363,
+        "best": 0.7162978701990246
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.197375320224904
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.5357568082893475
+          }
+        ],
+        "nodes": 7307,
+        "best": -0.197375320224904
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.19858990516777858
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.21451045891589135
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.3656647759403362
+          }
+        ],
+        "nodes": 4915,
+        "best": 0.3656647759403362
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.19119197784533437
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.24110116390135375
+          },
+          {
+            "action": {
+              "type": "god",
+              "tileId": 135
+            },
+            "value": -0.19720084285776127
+          },
+          {
+            "action": {
+              "type": "god",
+              "tileId": 51
+            },
+            "value": 0.049958374957879984
+          }
+        ],
+        "nodes": 22619,
+        "best": 0.049958374957879984
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 51
+          },
+          "samples": 2048,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.29131261245159096
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.30718703630061495
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.2743465044483805
+          }
+        ],
+        "nodes": 4915,
+        "best": 0.2743465044483805
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.09966799462495582
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.48111282532030847
+          }
+        ],
+        "nodes": 1879,
+        "best": -0.09966799462495582
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.38013623923288015
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.3852166570057692
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.1914723497710819
+          }
+        ],
+        "nodes": 9363,
+        "best": 0.1914723497710819
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.5005202111902353
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.6582998568959373
+          }
+        ],
+        "nodes": 7307,
+        "best": -0.5005202111902353
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": -0.5358597949817644
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 5
+            },
+            "value": -0.5381463439729948
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.29131261245159096
+          }
+        ],
+        "nodes": 4915,
+        "best": 0.29131261245159096
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.4589736169369178
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.6022852379621464
+          },
+          {
+            "action": {
+              "type": "god",
+              "tileId": 137
+            },
+            "value": -0.5005202111902353
+          },
+          {
+            "action": {
+              "type": "god",
+              "tileId": 84
+            },
+            "value": -0.3363755443363322
+          }
+        ],
+        "nodes": 13421,
+        "best": -0.3363755443363322
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "god",
+            "tileId": 84
+          },
+          "samples": 2048,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.19734645695906972
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.20031791584524503
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.4065433659321857
+          }
+        ],
+        "nodes": 4915,
+        "best": 0.4065433659321857
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.5005202111902353
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": 0.15412889646623396
+          }
+        ],
+        "nodes": 7307,
+        "best": 0.5005202111902353
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.1443323411608604
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.18552613292891432
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.3903507064789983
+          }
+        ],
+        "nodes": 5353,
+        "best": 0.3903507064789983
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.09966799462495582
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.37294319263446696
+          }
+        ],
+        "nodes": 4228,
+        "best": -0.09966799462495582
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.5716699660851173
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.5738051015356385
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.4346474149827199
+          }
+        ],
+        "nodes": 4919,
+        "best": 0.4346474149827199
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "capped": true
+    },
+    {
+      "index": 19,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": -0.49420630433498774
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 5
+            },
+            "value": -0.5043274228891079
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.5005202111902353
+          }
+        ],
+        "nodes": 2841,
+        "best": 0.5005202111902353
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.09966799462495582
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.3291306275799169
+          }
+        ],
+        "nodes": 1895,
+        "best": 0.09966799462495582
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.4211998378667616
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.44068325871122227
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.3597563680612782
+          }
+        ],
+        "nodes": 9365,
+        "best": 0.3597563680612782
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.197375320224904
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.5345712695517054
+          }
+        ],
+        "nodes": 7955,
+        "best": -0.197375320224904
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "draw"
+          },
+          "samples": 1024,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.24508197826430309
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.27665530028023505
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.5084848858369531
+          }
+        ],
+        "nodes": 4917,
+        "best": 0.5084848858369531
+      },
+      "searches": [
+        {
+          "configuration": "uct-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-original",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-zero-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "dpw-slow-eight-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 0,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 1000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        },
+        {
+          "configuration": "uct-full-c05",
+          "offset": 2000,
+          "regret": 0,
+          "pruningRegret": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "samples": 1536,
+          "truncated": 0
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Synthetic states, not full-game strength evidence; historical reachability not proved.",
+    "Search opponents use sampled heuristic policies, oracle uses an adversarial opponent; external regret is not proof of a backup bug.",
+    "Node-capped fixtures are excluded uniformly; no conclusions on their optimal actions.",
+    "Seed offsets repeat the same state with different deterministic sampling sequences; they are not independent games."
+  ]
+}

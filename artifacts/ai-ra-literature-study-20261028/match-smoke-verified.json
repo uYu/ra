@@ -1,0 +1,89 @@
+{
+  "status": "complete-verified",
+  "planSha256": "89e1b635511ce8a9c00fab3dcc9d67375d2060a0f94ece5de39a7dad4206a786",
+  "games": 4,
+  "decisions": 524,
+  "replaySteps": 524,
+  "summaries": [
+    {
+      "configuration": "dpw-slow",
+      "games": 2,
+      "rankingScore": 0,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 2,
+          "meanRank": 2,
+          "rankingScore": 0,
+          "first": 0
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1240999,
+          "rankingScore": 0
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 104,
+          "searched": 100,
+          "searchMs": 121.18341600000005,
+          "samples": 1947,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        },
+        "opponent": {
+          "decisions": 153,
+          "searched": 141,
+          "searchMs": 168.6999530000001,
+          "samples": 3668,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    },
+    {
+      "configuration": "dpw-slow-zero",
+      "games": 2,
+      "rankingScore": 0.5,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 2,
+          "meanRank": 1.5,
+          "rankingScore": 0.5,
+          "first": 1
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1240999,
+          "rankingScore": 0.5
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 127,
+          "searched": 118,
+          "searchMs": 136.39924499999972,
+          "samples": 10092,
+          "truncated": 0,
+          "plannedCutoffs": 8810
+        },
+        "opponent": {
+          "decisions": 140,
+          "searched": 129,
+          "searchMs": 151.99304999999964,
+          "samples": 3102,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    }
+  ],
+  "confidenceInterval": null,
+  "reason": "Smoke only; excluded from playing-strength results",
+  "productionChanged": false,
+  "modelsChanged": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "startedAt": "2026-10-29T12:48:32.154104+00:00",
+  "updatedAt": "2026-10-29T15:26:41.275967+00:00",
+  "supervisorPid": 37888,
+  "wrapperParentPid": 1,
+  "error": "Command '['/opt/homebrew/bin/node', '--experimental-strip-types', '/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/benchmark-auction-2s-live.ts', '/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029']' returned non-zero exit status 1.",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/run-auction-2s-live.py\", line 28, in <module>\n    subprocess.run([node, '--experimental-strip-types',\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                    str(Path(json.loads((out / 'match-plan.json').read_text())['snapshot']) / 'scripts/benchmark-auction-2s-live.ts'), str(out)],\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                   cwd=root, check=True)\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 578, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['/opt/homebrew/bin/node', '--experimental-strip-types', '/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/benchmark-auction-2s-live.ts', '/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029']' returned non-zero exit status 1.\n"
+}

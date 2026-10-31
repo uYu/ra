@@ -334,3 +334,15 @@ node --experimental-strip-types scripts/check-endgame-oracle.ts artifacts/ai-end
 这些是目标与搜索结构敏感性的证据，**尚未定位唯一实现缺陷，也未验证通用修复**。线性回传同时改变收益尺度与探索力度，树深变化也改变续局策略，不能仅凭这一题把任何设置作为新默认。生产未改奖励、UCT参数或树深，没有新对战。
 
 探针不修改生产：固定预算完整报告与原核心一致；48条原续局的独立TS交叉验证、4754步行动和最终分数一致；撤回后的7项针对性检查与生产构建通过，未重跑全套。见 [诊断记录](../artifacts/ai-bid-search-diagnosis-20261028.json)、[配对续局与轨迹](../artifacts/ai-bid-search-audit-20261028/summary.json)、[搜索结构消融](../artifacts/ai-bid-search-structure-20261028/summary.json)。本轮跨纪元对照保持36/50局停止，6局进度保留，自动监控已删除，游戏和看板保留。
+
+
+### 显式配对评价采样实验
+
+`search(state, {sampling: "paired", samples: 128})`使用总模拟预算的约75%建UCT树，其余用于冻结树后的独立配对评价；`timeMs`同样覆盖两个阶段。默认`sampling: "tree"`和操作0保持原算法，浏览器进阶及TS回退也保持旧采样。ABI6新增操作9，输入沿用操作0的模型及奖励负载，当前只允许variant=0；旧操作输出不变。操作9在原报告后追加训练模拟数、评价模拟数、评价轮数，并按候选输出顺序追加utility、utilityError、evaluationVisits。
+
+固定预算至少留一轮评价，每个根候选使用相同的评价场景；评价场景编号从0x100000开始，与至多1000000次的建树场景不重叠。评价树不新增节点、不回传、不使用探索项，候选值只统计独立评价；未见节点按原续局策略执行。总计数覆盖两阶段，评价轮完整执行，可略超软时限。此为显式研究选项，比例未调优，尚无总体棋力提升结论。见[本轮报告](../artifacts/ai-paired-sampling-20261028/summary.json)。
+
+
+## 已验证拍卖采样发布（2026-10-31）
+
+ABI6新增操作10，输入与操作0相同，但只允许原UCT/relative/无学习模型；仅当前拍卖存在多个合法行动时调用`auctionSampleSearch`，其余阶段完全保持原`searchAction`。低层API默认操作0不变，浏览器进阶显式使用`sampling: "auction"`。实现来自`ai-auction-2s-20261029`冻结版本，48次完整报告等价核验见`artifacts/ai-auction-release-20261031/equivalence.json`；拍卖时机扩展未发布。拍卖samples统计所有不同成交结果的续局总数，不与UCT样本数直接比较吞吐。

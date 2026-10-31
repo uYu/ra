@@ -1,0 +1,262 @@
+{
+  "scope": "Experimental current-auction exhaustive tree, shared-scenario rollout leaf values, backward induction on each bidder own mean tanh utility. Other phases preserve original UCT. Not a full MCMS reproduction. No production changes.",
+  "method": "Full official Ra games, one candidate seat vs original UCT in all other seats, both 200ms/decision and next-epoch horizon, two base seeds with all 2–5-player seats. Candidate changes ONLY auction decisions with multiple legal bids. No model or reward changes. Complete legal auction tree; distinct winner/disk leaves share public random scenarios. Backward induction after averaging uses each bidder own unchanged relative/tanh utility. Future continuations retain old heuristic policy. Not full multi-auction MCMS and no general optimality claim.",
+  "validation": {
+    "defaultEquivalencePositions": 24,
+    "unchangedNonAuctionPositions": 12,
+    "independentTSComparisons": 24,
+    "hiddenInformationChecks": 12,
+    "forcedBidChecks": 7,
+    "smokeGames": 4,
+    "formalGames": 28,
+    "verifiedActions": 9191,
+    "productionUnchanged": true
+  },
+  "results": [
+    {
+      "configuration": "auction-rollout",
+      "games": 28,
+      "rankingScore": 0.5625,
+      "byCount": [
+        {
+          "count": 2,
+          "games": 4,
+          "meanRank": 1.5,
+          "rankingScore": 0.5,
+          "first": 2
+        },
+        {
+          "count": 3,
+          "games": 6,
+          "meanRank": 1.5,
+          "rankingScore": 0.75,
+          "first": 4
+        },
+        {
+          "count": 4,
+          "games": 8,
+          "meanRank": 2.5,
+          "rankingScore": 0.5,
+          "first": 2
+        },
+        {
+          "count": 5,
+          "games": 10,
+          "meanRank": 3,
+          "rankingScore": 0.5,
+          "first": 1
+        }
+      ],
+      "bySeed": [
+        {
+          "seed": 1260002,
+          "rankingScore": 0.5583333333333333
+        },
+        {
+          "seed": 1260001,
+          "rankingScore": 0.5666666666666667
+        }
+      ],
+      "stats": {
+        "candidate": {
+          "decisions": 2406,
+          "searched": 2197,
+          "searchMs": 443500.38040999987,
+          "samples": 4958182,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        },
+        "opponent": {
+          "decisions": 6785,
+          "searched": 5998,
+          "searchMs": 1208099.1681389997,
+          "samples": 7340390,
+          "truncated": 0,
+          "plannedCutoffs": 0
+        }
+      }
+    }
+  ],
+  "auctionMetrics": [
+    {
+      "count": 2,
+      "decisions": 109,
+      "meanMs": 200.64569872477063,
+      "meanPairedRounds": 1525.3577981651376,
+      "meanDistinctOutcomes": 4.5504587155963305,
+      "meanAuctionNodes": 8.990825688073395,
+      "truncated": 0
+    },
+    {
+      "count": 3,
+      "decisions": 193,
+      "meanMs": 201.9634328341968,
+      "meanPairedRounds": 403.7098445595855,
+      "meanDistinctOutcomes": 5.55440414507772,
+      "meanAuctionNodes": 17.89637305699482,
+      "truncated": 0
+    },
+    {
+      "count": 4,
+      "decisions": 274,
+      "meanMs": 202.30688733211716,
+      "meanPairedRounds": 592.7445255474453,
+      "meanDistinctOutcomes": 5.58029197080292,
+      "meanAuctionNodes": 23.82846715328467,
+      "truncated": 0
+    },
+    {
+      "count": 5,
+      "decisions": 356,
+      "meanMs": 203.44367638202266,
+      "meanPairedRounds": 368.2191011235955,
+      "meanDistinctOutcomes": 6.191011235955056,
+      "meanAuctionNodes": 34.587078651685395,
+      "truncated": 0
+    }
+  ],
+  "serial2sDiagnostics": [
+    {
+      "count": 2,
+      "enabled": 0,
+      "ms": 2004.684958,
+      "samples": 17993,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 2,
+      "enabled": 1,
+      "ms": 2000.636333,
+      "samples": 18464,
+      "truncated": 0,
+      "metrics": [
+        1,
+        4616,
+        4,
+        12,
+        2000.4743750000002,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 3,
+      "enabled": 0,
+      "ms": 2002.3184580000006,
+      "samples": 9051,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 3,
+      "enabled": 1,
+      "ms": 2000.163458,
+      "samples": 9332,
+      "truncated": 0,
+      "metrics": [
+        1,
+        2333,
+        4,
+        5,
+        2000.0017079999998,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 4,
+      "enabled": 0,
+      "ms": 2001.7860830000009,
+      "samples": 6108,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 4,
+      "enabled": 1,
+      "ms": 2001.8087079999987,
+      "samples": 6210,
+      "truncated": 0,
+      "metrics": [
+        1,
+        1035,
+        6,
+        20,
+        2001.642750000001,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 5,
+      "enabled": 0,
+      "ms": 2001.3198329999996,
+      "samples": 4303,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 5,
+      "enabled": 1,
+      "ms": 2003.016290999998,
+      "samples": 4500,
+      "truncated": 0,
+      "metrics": [
+        1,
+        375,
+        12,
+        96,
+        2002.849083000001,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "limitations": [
+    "Only two independent base seeds; no confirmatory confidence interval or2s strength conclusion.",
+    "One current auction is solved against policy-based future values; future policy bias is not removed.",
+    "Counterfactual leaf payoff uncertainty and selection effects are not equilibrium confidence intervals.",
+    "Reported samples count distinct leaf rollouts; cannot compare directly to UCT simulations on different game states."
+  ]
+}

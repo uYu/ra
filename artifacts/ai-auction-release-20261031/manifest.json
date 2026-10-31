@@ -1,0 +1,59 @@
+{
+  "url": "http://162.14.123.217:8208/",
+  "sampling": "auction",
+  "horizon": "next-epoch",
+  "timeMs": 2000,
+  "wasm": {
+    "abi": 6,
+    "source": "native/ra_ai.cpp",
+    "target": "src/game/ai/ra-ai.wasm",
+    "sourceSha256": "ac5418f7840ece45a9c268e6aa36681be8fb9770e4b8d8f02c84d7561b10fec9",
+    "wasmSha256": "b840351583ee964e2387e91f8eb7d1f573419cda6dcee25467d77841660f4581",
+    "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9-git",
+    "flags": [
+      "-std=c++20",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-fno-exceptions",
+      "-fno-threadsafe-statics",
+      "--no-entry",
+      "-sSTANDALONE_WASM=1",
+      "-sFILESYSTEM=0",
+      "-sMALLOC=emmalloc",
+      "-sINITIAL_MEMORY=33554432",
+      "-sALLOW_MEMORY_GROWTH=1",
+      "-sSTACK_SIZE=1048576",
+      "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\"]"
+    ]
+  },
+  "files": [
+    {
+      "path": "assets/ai.worker-D1tR37sP.js",
+      "sha256": "993d5a8ee370afb5d95e0aae3119dce2c0ff4b94b1e115f1f1d4bed1dff3131b",
+      "size": 39623
+    },
+    {
+      "path": "assets/index-B6sOpFva.js",
+      "sha256": "73a6df593d4b68bd3b1b5d623a0fb6cf737a8394692faabe28cadb2a428f26f3",
+      "size": 323027
+    },
+    {
+      "path": "assets/index-CXUfIvTD.css",
+      "sha256": "cf2d60427917b83e1bc2fb9704daa2e963d66fe08c5335b4ec6057c087ac94f1",
+      "size": 118116
+    },
+    {
+      "path": "assets/ra-ai-BYZx9Iby.wasm",
+      "sha256": "b840351583ee964e2387e91f8eb7d1f573419cda6dcee25467d77841660f4581",
+      "size": 174631
+    },
+    {
+      "path": "index.html",
+      "sha256": "8ab493bbb3e0a9d85009bed02bf79708be89d02c3b770b03901c5a277a9ca46f",
+      "size": 593
+    }
+  ]
+}

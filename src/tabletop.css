@@ -3085,9 +3085,26 @@
 .table-fit .phase-actions .selection-action {
   margin: 0;
 }
+.table-fit .god-selection {
+  width: 100%;
+  align-items: center;
+}
+.table-fit .god-selection > span {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+.table-fit .phase-actions .god-selection > button {
+  flex-shrink: 0;
+  min-width: 124px;
+  min-height: 46px;
+  padding: 9px 16px;
+  font-size: 15px;
+}
 .table-fit .phase-auction .phase-actions {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 248px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   grid-template-rows: minmax(0, 1fr) auto;
   gap: 4px 12px;
   align-items: center;
@@ -3098,19 +3115,42 @@
   margin: 0;
   min-width: 0;
 }
+.table-fit .phase-auction .bid-history > span {
+  height: 52px;
+  padding: 5px 8px;
+  gap: 3px;
+}
 .table-fit .phase-auction .bid-controls {
   grid-column: 2;
   grid-row: 1;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  gap: 7px;
+  gap: 10px;
 }
 .table-fit .phase-auction .sun-choices {
   justify-content: center;
+  gap: 10px;
+}
+.table-fit .phase-auction .sun-choices .disk {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+}
+.table-fit .phase-auction .sun-choices .disk span {
+  font-size: 24px;
 }
 .table-fit .phase-auction .bid-buttons {
   justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.table-fit .phase-auction .bid-buttons > button {
+  flex: 1;
+  min-height: 46px;
+  padding: 9px 14px;
+  font-size: 15px;
+  white-space: nowrap;
 }
 .table-fit .phase-auction .hint {
   grid-column: 1 / -1;
@@ -3118,6 +3158,41 @@
   margin: 0;
   font-size: 9px;
   line-height: 13px;
+}
+@media (min-width: 651px) {
+  .table-fit .action-panel.phase-auction {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-rows: 42px minmax(0, 1fr) auto;
+    gap: 4px 18px;
+  }
+  .table-fit .phase-auction > .action-heading {
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    align-items: center;
+  }
+  .table-fit .phase-auction .your-turn {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .table-fit .phase-auction .phase-actions {
+    display: contents;
+  }
+  .table-fit .phase-auction .bid-history {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 39px;
+    gap: 8px;
+  }
+  .table-fit .phase-auction .bid-controls {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  .table-fit .phase-auction .hint {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: 39px;
+  }
 }
 .table-fit .phase-disaster .phase-actions {
   display: grid;
@@ -3233,25 +3308,62 @@
     grid-template-rows: auto auto auto;
     gap: 6px;
   }
+  .table-fit .action-panel.phase-auction {
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+    grid-template-rows: 40px minmax(0, 1fr);
+    padding: 8px;
+    gap: 4px;
+  }
   .table-fit .phase-auction .bid-history {
-    grid-template-columns: repeat(3, minmax(80px, 1fr)) !important;
-    height: 52px;
-    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 4px;
+    height: 44px;
+    min-height: 44px;
+    overflow: hidden;
   }
   .table-fit .phase-auction .bid-history > span {
-    height: 52px;
-    padding: 5px 7px;
-    gap: 3px;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 44px;
+    padding: 4px;
+    gap: 2px;
+  }
+  .table-fit .phase-auction .bid-history .bid-player-name {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .table-fit .phase-auction .bid-history > span b {
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+  .table-fit .phase-auction .bid-history > span.has-bid b {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .table-fit .phase-auction .highest-bid em {
+    right: 4px;
+    bottom: 4px;
+    font-size: 9px;
   }
   .table-fit .phase-auction .bid-controls {
     grid-column: 1;
     grid-row: 2;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
   }
   .table-fit .phase-auction .sun-choices {
-    gap: 4px;
+    gap: 10px;
+  }
+  .table-fit .phase-auction .sun-choices .disk {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
   }
   .table-fit .phase-auction .bid-buttons {
     flex: 1;

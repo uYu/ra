@@ -1,0 +1,51 @@
+{
+  "application": "Ra · 太阳神",
+  "date": "2026-10-28",
+  "gitHead": "ce7a5b91195150dc30baf2299c3b9a7929c87a56",
+  "includesUncommittedChanges": true,
+  "remoteDirectory": "/root/app/ra",
+  "port": 8208,
+  "homepage": "桌游 / 太阳神 Ra",
+  "ai": {
+    "sampling": "tree",
+    "variant": "uct",
+    "timeMs": 2000,
+    "horizon": "next-epoch",
+    "modelsEnabled": false
+  },
+  "wasm": {
+    "abi": 6,
+    "source": "native/ra_ai.cpp",
+    "target": "src/game/ai/ra-ai.wasm",
+    "sourceSha256": "eb70cb7c87d04d1f52d811013f5b5200fbb61c6e09d4f9447688cc1f91316dfa",
+    "wasmSha256": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+    "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9-git",
+    "flags": [
+      "-std=c++20",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-fno-exceptions",
+      "-fno-threadsafe-statics",
+      "--no-entry",
+      "-sSTANDALONE_WASM=1",
+      "-sFILESYSTEM=0",
+      "-sMALLOC=emmalloc",
+      "-sINITIAL_MEMORY=33554432",
+      "-sALLOW_MEMORY_GROWTH=1",
+      "-sSTACK_SIZE=1048576",
+      "-sEXPORTED_FUNCTIONS=[\"_abi_version\",\"_input_ptr\",\"_output_ptr\",\"_run\"]"
+    ]
+  },
+  "files": {
+    "deploy/Caddyfile": "c81e305866a8455378413318ee2c298cde15da37b73859a868bab654ec3e9f25",
+    "deploy/compose.yaml": "7d1944d413476a7e8695fabbe1ce8965df914cd20a0f33194c78775808913cb7",
+    "dist/assets/ai.worker-CXbewDVa.js": "24fba4b0c173c6cae61df94454b14aa3f94066b5396966b8117b73958f0d7e38",
+    "dist/assets/index-BqcbGvRh.css": "4309cb84c682011fa1bc6a3c367501bf1f3fe2415a895285c76f3b571c9f6405",
+    "dist/assets/index-CyYL4Ef6.js": "af7e592edd7559f74dc39520722f33e619841c33fb54d65d950db53ed8eca0aa",
+    "dist/assets/ra-ai-B7P7NxH4.wasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+    "dist/index.html": "7c3e026d5ee85b0aa9315db7e220776841eb73c5585ab6d85fd7a0933c495ae5"
+  }
+}

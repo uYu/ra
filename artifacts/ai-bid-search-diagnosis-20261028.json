@@ -40,5 +40,13 @@
     "frozenHashesVerified": 31
   },
   "productionRewardOrTreeDepthChanged": false,
-  "noNewTournament": true
+  "noNewTournament": true,
+  "followup": {
+    "explorationAblation": "artifacts/ai-search-exploration-20261028/summary.json",
+    "longBudget": "artifacts/ai-search-exploration-long-20261028/summary.json",
+    "frozenPolicyEvaluation": "artifacts/ai-search-frozen-policy-20261028/summary.json",
+    "oracleChecks": "artifacts/ai-search-exploration-20261028/oracle-checks.json",
+    "finding": "Frozen original tree evaluated on held-out paired scenarios favors bid1 under original tanh objective, whereas exploration returns recommend bid4 at 32768 iterations. Original at 131072 recommends bid1. Linear returns alone also flip with budget. Supports finite-budget exploratory-continuation bias; no validated general production repair.",
+    "productionChanged": false
+  }
 }

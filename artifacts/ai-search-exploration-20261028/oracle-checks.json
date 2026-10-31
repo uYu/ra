@@ -1,0 +1,2511 @@
+{
+  "fixtures": "artifacts/ai-endgame-oracle-legal-deck-20261028.json",
+  "objective": "Exact two-player chance minimax of terminal tanh((score0-score1)/20), no score floor encountered from equal initial 100",
+  "caveats": [
+    "Synthetic late endgames; historical reachability is not proved.",
+    "Production opponents are sampled heuristic policies, not minimax. External regret cannot establish a search implementation bug.",
+    "Step offsets vary deterministic search seeds without changing the game position; repetitions are dependent, not independent games.",
+    "No playing-strength claim and no production parameter change."
+  ],
+  "referenceChecks": 46,
+  "equivalenceChecks": 20,
+  "summary": [
+    {
+      "innerC": 1.4,
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0,
+      "truncated": 0
+    },
+    {
+      "innerC": 0.35,
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0,
+      "truncated": 0
+    },
+    {
+      "innerC": 0,
+      "searches": 60,
+      "suboptimal": 0,
+      "meanUtilityRegret": 0,
+      "maxUtilityRegret": 0,
+      "truncated": 0
+    }
+  ],
+  "rows": [
+    {
+      "index": 1,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": -0.29131261245159085
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.15234862552343129
+          }
+        ],
+        "nodes": 22,
+        "best": 0.15234862552343129
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.15234862552343129,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.2913126124515909
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": 0
+          }
+        ],
+        "nodes": 63,
+        "best": 0.2913126124515909
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.24491866240370913
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.5005202111902353
+          }
+        ],
+        "nodes": 81,
+        "best": -0.24491866240370913
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.24491866240370913,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.12443119793318344
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.4218990052500079
+          }
+        ],
+        "nodes": 22,
+        "best": 0.4218990052500079
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.4218990052500079,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.3363755443363322
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.6043677771171637
+          }
+        ],
+        "nodes": 63,
+        "best": -0.3363755443363322
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.29131261245159085
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.5693619394793118
+          }
+        ],
+        "nodes": 1644,
+        "best": -0.29131261245159085
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                10,
+                25
+              ]
+            },
+            "value": -0.04995837495787998
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                10,
+                20
+              ]
+            },
+            "value": -0.04995837495787998
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                10,
+                5
+              ]
+            },
+            "value": -0.04995837495787998
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                25,
+                20
+              ]
+            },
+            "value": -0.04995837495787998
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                25,
+                5
+              ]
+            },
+            "value": -0.04995837495787998
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                20,
+                5
+              ]
+            },
+            "value": -0.04995837495787998
+          }
+        ],
+        "nodes": 384,
+        "best": -0.04995837495787998
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              10,
+              25
+            ]
+          },
+          "utility": -0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.3392804388642584
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.29131261245159085
+          }
+        ],
+        "nodes": 26,
+        "best": 0.29131261245159085
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.29131261245159085,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.2913126124515909
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.5760296742227236
+          }
+        ],
+        "nodes": 63,
+        "best": -0.2913126124515909
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.5370495669980353
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": 0.2687988416182927
+          }
+        ],
+        "nodes": 59,
+        "best": 0.5370495669980353
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.5370495669980353,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": -0.24491866240370913
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.21551312203849793
+          }
+        ],
+        "nodes": 22,
+        "best": 0.21551312203849793
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.21551312203849793,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.3363755443363322
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": 0.10935137247687271
+          }
+        ],
+        "nodes": 1585,
+        "best": 0.3363755443363322
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": -0.3363755443363322
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.5738498201539204
+          }
+        ],
+        "nodes": 69,
+        "best": -0.3363755443363322
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": -0.3363755443363322,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                0,
+                35
+              ]
+            },
+            "value": 0
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                0,
+                20
+              ]
+            },
+            "value": 0
+          },
+          {
+            "action": {
+              "type": "discard",
+              "ids": [
+                35,
+                20
+              ]
+            },
+            "value": 0
+          }
+        ],
+        "nodes": 192,
+        "best": 0
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "discard",
+            "ids": [
+              0,
+              35
+            ]
+          },
+          "utility": 0,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 2
+            },
+            "value": -0.4218990052500079
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.053509062076956826
+          }
+        ],
+        "nodes": 22,
+        "best": 0.053509062076956826
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.053509062076956826,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.04995837495787998
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.25110452241009334
+          }
+        ],
+        "nodes": 63,
+        "best": 0.04995837495787998
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.04995837495787998,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.2913126124515909
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.05658632424682342
+          }
+        ],
+        "nodes": 35,
+        "best": 0.2913126124515909
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.2913126124515909,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "bid",
+              "sun": 3
+            },
+            "value": -0.37994896225522495
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": 4
+            },
+            "value": -0.39696229493069574
+          },
+          {
+            "action": {
+              "type": "bid",
+              "sun": null
+            },
+            "value": 0.22194621860179814
+          }
+        ],
+        "nodes": 1357,
+        "best": 0.22194621860179814
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "bid",
+            "sun": null
+          },
+          "utility": 0.22194621860179814,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.15535040517019613
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": 0.04995837495787998
+          }
+        ],
+        "nodes": 63,
+        "best": 0.15535040517019613
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.15535040517019613,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "oracle": {
+        "rows": [
+          {
+            "action": {
+              "type": "draw"
+            },
+            "value": 0.14888503362331798
+          },
+          {
+            "action": {
+              "type": "invoke"
+            },
+            "value": -0.15535040517019613
+          }
+        ],
+        "nodes": 59,
+        "best": 0.14888503362331798
+      },
+      "searches": [
+        {
+          "innerC": 1.4,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 1.4,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0.35,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 0,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 1000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        },
+        {
+          "innerC": 0,
+          "offset": 2000,
+          "action": {
+            "type": "draw"
+          },
+          "utility": 0.14888503362331798,
+          "regret": 0,
+          "truncated": 0
+        }
+      ]
+    }
+  ]
+}

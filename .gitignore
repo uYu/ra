@@ -23,3 +23,9 @@ artifacts/ai-user-bid-[0-9]*.json
 artifacts/ai-user-bid4-state.json
 # Probe reference copies can be regenerated; retain reports and frozen engines.
 artifacts/ai-opponent-tree-*/reference/
+
+# Local experiment process state and Python bytecode.
+__pycache__/
+artifacts/**/*.log
+artifacts/**/launch.json
+artifacts/**/monitor-launch.json

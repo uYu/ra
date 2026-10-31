@@ -1,0 +1,18 @@
+name: ra
+services:
+  ra:
+    image: caddy:2
+    container_name: ra
+    restart: unless-stopped
+    ports:
+      - "${RA_PORT:-8208}:80"
+    volumes:
+      - ../dist:/srv:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3

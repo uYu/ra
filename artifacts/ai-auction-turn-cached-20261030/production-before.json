@@ -1,0 +1,7 @@
+{
+  "native/ra_ai.cpp": "eb70cb7c87d04d1f52d811013f5b5200fbb61c6e09d4f9447688cc1f91316dfa",
+  "native/wasm-build.json": "cfeb762c166afe9c9eb9ffefe33a84da3ca7a7679a0f2d599da7cc5648a08bef",
+  "src/game/ai/ra-ai.wasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+  "artifacts/ai-value-model.json": "8e5b7b656b58030091e521956071633bd0eb5714d4e608aa543b47b59c3ef28b",
+  "artifacts/ai-rollout-model.json": "c29124039d3350b6f44dd8163cdd7f76640154679cc1c39abf16a5e52c3bae19"
+}

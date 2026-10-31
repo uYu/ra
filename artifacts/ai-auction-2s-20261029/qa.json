@@ -1,0 +1,389 @@
+{
+  "defaults": 24,
+  "unchanged": 12,
+  "hidden": 12,
+  "forced": 7,
+  "comparisons": [
+    {
+      "count": 2,
+      "epoch": 1,
+      "horizon": "epoch",
+      "leaves": 6,
+      "nodes": 16,
+      "samples": 12
+    },
+    {
+      "count": 2,
+      "epoch": 1,
+      "horizon": "next-epoch",
+      "leaves": 6,
+      "nodes": 16,
+      "samples": 12
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "horizon": "epoch",
+      "leaves": 4,
+      "nodes": 12,
+      "samples": 8
+    },
+    {
+      "count": 2,
+      "epoch": 2,
+      "horizon": "next-epoch",
+      "leaves": 4,
+      "nodes": 12,
+      "samples": 8
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "horizon": "epoch",
+      "leaves": 5,
+      "nodes": 11,
+      "samples": 10
+    },
+    {
+      "count": 2,
+      "epoch": 3,
+      "horizon": "next-epoch",
+      "leaves": 5,
+      "nodes": 11,
+      "samples": 10
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "horizon": "epoch",
+      "leaves": 5,
+      "nodes": 12,
+      "samples": 10
+    },
+    {
+      "count": 3,
+      "epoch": 1,
+      "horizon": "next-epoch",
+      "leaves": 5,
+      "nodes": 12,
+      "samples": 10
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "horizon": "epoch",
+      "leaves": 4,
+      "nodes": 5,
+      "samples": 8
+    },
+    {
+      "count": 3,
+      "epoch": 2,
+      "horizon": "next-epoch",
+      "leaves": 4,
+      "nodes": 5,
+      "samples": 8
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "horizon": "epoch",
+      "leaves": 8,
+      "nodes": 41,
+      "samples": 16
+    },
+    {
+      "count": 3,
+      "epoch": 3,
+      "horizon": "next-epoch",
+      "leaves": 8,
+      "nodes": 41,
+      "samples": 16
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "horizon": "epoch",
+      "leaves": 8,
+      "nodes": 31,
+      "samples": 16
+    },
+    {
+      "count": 4,
+      "epoch": 1,
+      "horizon": "next-epoch",
+      "leaves": 8,
+      "nodes": 31,
+      "samples": 16
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "horizon": "epoch",
+      "leaves": 6,
+      "nodes": 20,
+      "samples": 12
+    },
+    {
+      "count": 4,
+      "epoch": 2,
+      "horizon": "next-epoch",
+      "leaves": 6,
+      "nodes": 20,
+      "samples": 12
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "horizon": "epoch",
+      "leaves": 4,
+      "nodes": 10,
+      "samples": 8
+    },
+    {
+      "count": 4,
+      "epoch": 3,
+      "horizon": "next-epoch",
+      "leaves": 4,
+      "nodes": 10,
+      "samples": 8
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "horizon": "epoch",
+      "leaves": 10,
+      "nodes": 68,
+      "samples": 20
+    },
+    {
+      "count": 5,
+      "epoch": 1,
+      "horizon": "next-epoch",
+      "leaves": 10,
+      "nodes": 68,
+      "samples": 20
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "horizon": "epoch",
+      "leaves": 12,
+      "nodes": 96,
+      "samples": 24
+    },
+    {
+      "count": 5,
+      "epoch": 2,
+      "horizon": "next-epoch",
+      "leaves": 12,
+      "nodes": 96,
+      "samples": 24
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "horizon": "epoch",
+      "leaves": 2,
+      "nodes": 3,
+      "samples": 4
+    },
+    {
+      "count": 5,
+      "epoch": 3,
+      "horizon": "next-epoch",
+      "leaves": 2,
+      "nodes": 3,
+      "samples": 4
+    }
+  ],
+  "timed": [
+    {
+      "count": 2,
+      "enabled": 0,
+      "ms": 2004.684958,
+      "samples": 17993,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 2,
+      "enabled": 1,
+      "ms": 2000.636333,
+      "samples": 18464,
+      "truncated": 0,
+      "metrics": [
+        1,
+        4616,
+        4,
+        12,
+        2000.4743750000002,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 3,
+      "enabled": 0,
+      "ms": 2002.3184580000006,
+      "samples": 9051,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 3,
+      "enabled": 1,
+      "ms": 2000.163458,
+      "samples": 9332,
+      "truncated": 0,
+      "metrics": [
+        1,
+        2333,
+        4,
+        5,
+        2000.0017079999998,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 4,
+      "enabled": 0,
+      "ms": 2001.7860830000009,
+      "samples": 6108,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 4,
+      "enabled": 1,
+      "ms": 2001.8087079999987,
+      "samples": 6210,
+      "truncated": 0,
+      "metrics": [
+        1,
+        1035,
+        6,
+        20,
+        2001.642750000001,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 5,
+      "enabled": 0,
+      "ms": 2001.3198329999996,
+      "samples": 4303,
+      "truncated": 0,
+      "metrics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "count": 5,
+      "enabled": 1,
+      "ms": 2003.016290999998,
+      "samples": 4500,
+      "truncated": 0,
+      "metrics": [
+        1,
+        375,
+        12,
+        96,
+        2002.849083000001,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "diagnostic": {
+    "samples": 48,
+    "transitions": 4709,
+    "completed": 48,
+    "truncated": 0,
+    "epochAdvances": 0,
+    "nodes": 4,
+    "depth": 1,
+    "scenarios": 16,
+    "outcomeReuses": 1,
+    "maxOutcomeBranches": 3,
+    "action": {
+      "type": "bid",
+      "sun": 1
+    },
+    "candidates": [
+      {
+        "action": {
+          "type": "bid",
+          "sun": 1
+        },
+        "value": 9.55,
+        "error": 1.4881175188808171,
+        "visits": 16
+      },
+      {
+        "action": {
+          "type": "bid",
+          "sun": 4
+        },
+        "value": 8.812500000000002,
+        "error": 1.357832458138705,
+        "visits": 16
+      },
+      {
+        "action": {
+          "type": "bid",
+          "sun": 13
+        },
+        "value": 1.472500000000001,
+        "error": 1.358083294343539,
+        "visits": 16
+      }
+    ]
+  },
+  "productionWasm": "e7d2356dd3d0570f462a6cad5347b7bebb3abf4b179eb9ad918a8213f8fac2e3",
+  "notes": [
+    "Complete paired rounds can slightly exceed soft time limit.",
+    "Reported candidate errors are conditional leaf standard errors, not equilibrium confidence intervals.",
+    "Only current auction decisions change; future rollouts retain original policy."
+  ]
+}

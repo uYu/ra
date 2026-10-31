@@ -1,0 +1,13 @@
+{
+  "reason": "Resume original 168-job study after timing assertion rejected legitimate original UCT 1,000,000-iteration cap. Only accept short search if non-exhaustive and samples exactly 1000000. All search binaries, frozen sources, seed jobs, budgets, ranks and bootstrap unchanged. Retain all 85 completed results; rerun incomplete jobs from original seeds.",
+  "createdAt": "2026-10-30T00:00:04.756267+00:00",
+  "retainedCompleted": 85,
+  "remaining": 83,
+  "reproduction": "timing-cap-reproduction.json",
+  "files": {
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/auction-sampling/timing-cap.ts": "8b09164e84a5b49aee4507c3a9a93dc36bb8b4a94d6f45a2cbf67d0981a4406a",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/benchmark-auction-2s-resume.ts": "5f6e37e0a6c9ac2231f3d7419c0d952e3143aa049b6084a8b16215ff3418dad2",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/check-auction-2s-resume.ts": "03c9d92e7e030647971c5c17a285f546e2ea1baf8b0b0c3671909eb6ab1cfdc5",
+    "/Users/franzyu/Documents/script/ra/artifacts/ai-auction-2s-20261029/match-source/scripts/run-auction-2s-resume.py": "6b5880cb72de1d26efcf7e458099c485a72a3cb2d83ff4fe3a568aa1965610a1"
+  }
+}

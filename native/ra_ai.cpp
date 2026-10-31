@@ -888,9 +888,12 @@ struct Candidate {
   Action action;
   double value=0,error=0;
   int visits=0;
+  double utility=0,utilityError=0;
+  int evaluationVisits=0;
 };
 struct Report {
   vector<Candidate>candidates;
+  int trainingSamples=0,evaluationSamples=0,evaluationRounds=0;
   int samples=0,transitions=0,completed=0,truncated=0,epochAdvances=0,nodes=1,depth=0,scenarios=0,outcomeReuses=0,maxOutcomeBranches=0;
 };
 struct RootHalving {
@@ -1051,7 +1054,7 @@ Action rolloutAction(const State&s,const RolloutModel&m) {
 }
 // Horizon: 0 = this epoch, 1 = game, 2 = this and the next epoch.
 // Variant: 0 = UCT, 1 = root Sequential Halving, 2 = DPW.
-Report searchAction(const State&s,int budget,int horizon,int variant,double timeMs,const ValueModel*valueModel=nullptr,const RolloutModel*rolloutModel=nullptr,int reward=0) {
+Report searchAction(const State&s,int budget,int horizon,int variant,double timeMs,const ValueModel*valueModel=nullptr,const RolloutModel*rolloutModel=nullptr,int reward=0,bool paired=false) {
   Report report;
   auto rootActions=candidates(s);
   if(rootActions.size()==1) {
@@ -1060,7 +1063,9 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
   }
   Node root;
   bool timed=timeMs>0;
-  double deadline=timed?emscripten_get_now()+timeMs:INF;
+  double started=emscripten_get_now();
+  double deadline=timed?started+timeMs:INF;
+  double trainingDeadline=timed&&paired?started+timeMs*.75:deadline;
   State searchState=s;
   searchState.recordDiscards=false;
   searchState.discarded.clear();
@@ -1068,7 +1073,8 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
   std::sort(bag.begin(),bag.end());
   Random rng((uint32_t)(s.steps+1)*7919u^(uint32_t)(s.current+1)*104729u);
   Random chanceRng(((uint32_t)(s.steps+1)*7919u^(uint32_t)(s.current+1)*104729u)^0x6a09e667u);
-  int iterations=timed?1000000:budget*(int)rootActions.size();
+  int evaluationRounds=paired?std::max(1,budget/4):0;
+  int iterations=timed?1000000:(budget-evaluationRounds)*(int)rootActions.size();
   RootHalving halving(rootActions.size(),iterations,timed);
   auto rootMeans=[&]() {
     vector<double>means;
@@ -1084,7 +1090,7 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
     return next.phase==Over||(horizon!=1&&next.phase==Epoch&&next.epoch>=targetEpoch);
   };
   for(int k=0;k<iterations;k++) {
-    if(k>=(int)rootActions.size()&&timed&&emscripten_get_now()>=deadline)break;
+    if(k>=(int)rootActions.size()&&timed&&emscripten_get_now()>=trainingDeadline)break;
     State next=searchState;
     next.bag=bag;
     for(int i=0;i<s.n;i++)next.players[i].score=100;
@@ -1254,6 +1260,84 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
     report.samples++;
     if(variant==1)halving.record(rootMeans());
   }
+  if(paired) {
+    report.trainingSamples=report.samples;
+    struct Total {double sum=0,square=0,utility=0,utilitySquare=0;};
+    vector<Total>totals(rootActions.size());
+    int rounds=0;
+    // Independent paired worlds evaluate the frozen tree without UCT exploration.
+    while(timed?(rounds==0||emscripten_get_now()<deadline):rounds<evaluationRounds) {
+      Model model;
+      auto worldBag=bag;
+      Random world((uint32_t)(s.steps+1)*7919u^(uint32_t)(s.current+1)*104729u^(uint32_t)(0x100000+rounds+1)*15485863u);
+      shuffle(worldBag,world);
+      for(int i=0;i<s.n;i++)model.cost[i]=.72+world.next()*.68;
+      model.rivalry=.45+world.next()*.45;
+      for(int index=0;index<(int)rootActions.size();index++) {
+        State next=searchState;next.bag=worldBag;
+        for(int i=0;i<s.n;i++)next.players[i].score=100;
+        int steps=0;
+        auto execute=[&](const Action&a) {
+          if(next.phase==Epoch)report.epochAdvances++;
+          apply(next,a);steps++;report.transitions++;
+        };
+        auto plan=[&]() {
+          if(!rolloutModel&&next.phase==Auction)return auctionPlan(next,model);
+          Plan p;p.actions[0]=rolloutModel?rolloutAction(next,*rolloutModel):policyAction(next,model);p.size=1;return p;
+        };
+        auto opponents=[&]() {
+          while(!finished(next)&&next.current!=s.current&&steps<stepLimit) {
+            auto p=plan();
+            for(int j=0;j<p.size&&!finished(next)&&next.current!=s.current&&steps<stepLimit;j++)execute(p.actions[j]);
+          }
+        };
+        Edge*edge=root.get(actionKey(rootActions[index]));
+        execute(rootActions[index]);opponents();
+        auto child=[&]() -> Node* {
+          if(!edge)return nullptr;
+          auto it=edge->outcomes.find(observation(next,s.current));
+          return it==edge->outcomes.end()?nullptr:it->second.get();
+        };
+        Node*branch=child();
+        while(!finished(next)&&steps<stepLimit) {
+          int best=-1;double bestUtility=-INF;auto opts=candidates(next);
+          if(branch)for(int j=0;j<(int)opts.size();j++) {
+            auto*e=branch->get(actionKey(opts[j]));if(!e||!e->visits)continue;
+            double utility=e->utilities[s.current]/e->visits;
+            if(utility>bestUtility){bestUtility=utility;best=j;}
+          }
+          if(best>=0) {
+            edge=branch->get(actionKey(opts[best]));execute(opts[best]);opponents();branch=child();
+          } else {
+            branch=nullptr;auto p=plan();
+            for(int j=0;j<p.size&&!finished(next)&&steps<stepLimit;j++)execute(p.actions[j]);
+          }
+        }
+        if(next.phase==Over)report.completed++;
+        if(!finished(next))report.truncated++;
+        auto residual=(next.phase==Over||next.phase==Epoch)?(valueModel?learnedFuture(next,*valueModel):futureValues(next)):positionValues(next);
+        Values scores{};for(int i=0;i<s.n;i++)scores[i]=residual[i]+next.players[i].score-100;
+        double v;
+        if(reward==1) {
+          double wins=0;for(int i=0;i<s.n;i++)if(i!=s.current)wins+=scores[s.current]>scores[i]?1:scores[s.current]==scores[i]?.5:0;
+          v=wins/(s.n-1);
+        } else v=relative(scores,s.n,s.current,s.n==2?1:.72);
+        double utility=reward==1?2*v-1:std::tanh(v/20);
+        auto&t=totals[index];t.sum+=v;t.square+=v*v;t.utility+=utility;t.utilitySquare+=utility*utility;
+        report.samples++;
+      }
+      rounds++;
+    }
+    report.evaluationRounds=rounds;report.evaluationSamples=rounds*rootActions.size();
+    for(int i=0;i<(int)rootActions.size();i++) {
+      auto&t=totals[i];double value=t.sum/rounds,utility=t.utility/rounds;
+      auto*edge=root.get(actionKey(rootActions[i]));int visits=(edge?edge->visits:0)+rounds;
+      report.candidates.push_back({rootActions[i],value,std::sqrt(std::max(0.,t.square/rounds-value*value)/rounds),visits,utility,std::sqrt(std::max(0.,t.utilitySquare/rounds-utility*utility)/rounds),rounds});
+      report.scenarios=std::max(report.scenarios,visits);
+    }
+    std::stable_sort(report.candidates.begin(),report.candidates.end(),[](auto&a,auto&b){return a.utility==b.utility?a.value>b.value:a.utility>b.utility;});
+    return report;
+  }
   std::string selected=variant==1?actionKey(rootActions[halving.best(rootMeans())]):"";
   for(auto&a:rootActions) {
     auto*e=root.get(actionKey(a));
@@ -1267,6 +1351,116 @@ Report searchAction(const State&s,int budget,int horizon,int variant,double time
   });
   return report;
 }
+// Isolated study only: exhaustive current auction + sampled policy continuations.
+int auctionStudyMode=0;
+double auctionStudyMetrics[8]{};
+double auctionStudyLeaves[1024]{};
+extern "C" void configure_auction_study(int mode){auctionStudyMode=mode;}
+extern "C" double* auction_study_metrics(){return auctionStudyMetrics;}
+extern "C" double* auction_study_leaves(){return auctionStudyLeaves;}
+struct AuctionStudyNode {
+  int actor=-1,leaf=-1;
+  vector<Action>actions;
+  vector<int>children;
+};
+struct AuctionStudyLeaf {
+  State state;
+  int winner=-1,sun=0;
+  Values sums{},squares{},utilities{};
+};
+Report auctionSampleSearch(const State&s,int budget,int horizon,double timeMs) {
+  Report report;
+  double started=emscripten_get_now(),deadline=timeMs>0?started+timeMs:INF;
+  vector<AuctionStudyNode>tree;
+  vector<AuctionStudyLeaf>leaves;
+  int initialSteps=s.auction.order.size()-s.auction.index;
+  auto build=[&](auto&&self,const State&state,int winner,int high)->int {
+    int id=tree.size();tree.push_back({});
+    if(state.phase!=Auction) {
+      int index=-1;
+      for(int j=0;j<(int)leaves.size();j++)if(leaves[j].winner==winner&&leaves[j].sun==high){index=j;break;}
+      if(index<0){index=leaves.size();AuctionStudyLeaf leaf;leaf.state=state;leaf.winner=winner;leaf.sun=high;leaves.push_back(std::move(leaf));}
+      tree[id].leaf=index;return id;
+    }
+    tree[id].actor=state.current;
+    auto actions=legal(state);
+    tree[id].actions=actions;
+    for(const auto&a:actions) {
+      State next=state;
+      apply(next,a);report.transitions++;
+      int w=a.arg<0?winner:state.current,h=a.arg<0?high:a.arg;
+      int child=self(self,next,w,h);
+      tree[id].children.push_back(child);
+    }
+    return id;
+  };
+  State initial=s;initial.recordDiscards=false;initial.discarded.clear();
+  build(build,initial,s.auction.winner,s.auction.high);
+  report.nodes=tree.size();report.depth=initialSteps;
+  auto bag=s.bag;std::sort(bag.begin(),bag.end());
+  const int targetEpoch=std::min(3,s.epoch+(horizon==2?1:0));
+  const int stepLimit=horizon==1?720:(horizon==2?480:240);
+  auto finished=[&](const State&state){return state.phase==Over||(horizon!=1&&state.phase==Epoch&&state.epoch>=targetEpoch);};
+  int rounds=0;
+  while(timeMs>0?(rounds==0||emscripten_get_now()<deadline):rounds<budget) {
+    Model model;auto worldBag=bag;
+    Random random((uint32_t)(s.steps+1)*7919u^(uint32_t)(s.current+1)*104729u^(uint32_t)(rounds+1)*15485863u);
+    shuffle(worldBag,random);
+    for(int i=0;i<s.n;i++)model.cost[i]=.72+random.next()*.68;
+    model.rivalry=.45+random.next()*.45;
+    // Complete one COMMON scenario for every distinct legal outcome. No bids
+    // are chosen with knowledge of that scenario; solve only after averaging.
+    for(auto&leaf:leaves) {
+      State next=leaf.state;next.bag=worldBag;
+      int steps=initialSteps;
+      while(!finished(next)&&steps<stepLimit) {
+        Plan plan;
+        if(next.phase==Auction)plan=auctionPlan(next,model);
+        else {plan.actions[0]=policyAction(next,model);plan.size=1;}
+        for(int j=0;j<plan.size;j++) {
+          if(finished(next)||steps>=stepLimit)break;
+          if(next.phase==Epoch)report.epochAdvances++;
+          apply(next,plan.actions[j]);steps++;report.transitions++;
+        }
+      }
+      if(next.phase==Over)report.completed++;
+      if(!finished(next))report.truncated++;
+      auto residual=(next.phase==Over||next.phase==Epoch)?futureValues(next):positionValues(next);
+      Values scores{};
+      for(int i=0;i<s.n;i++)scores[i]=residual[i]+next.players[i].score-100;
+      for(int i=0;i<s.n;i++) {
+        double value=relative(scores,s.n,i,s.n==2?1:.72);
+        leaf.sums[i]+=value;leaf.squares[i]+=value*value;leaf.utilities[i]+=std::tanh(value/20);
+      }
+      report.samples++;
+    }
+    rounds++;
+  }
+  auto solve=[&](auto&&self,int id)->int {
+    const auto&node=tree[id];if(node.leaf>=0)return node.leaf;
+    int best=-1;double value=-INF;
+    for(int child:node.children) {
+      int leaf=self(self,child);double v=leaves[leaf].utilities[node.actor]/rounds;
+      if(best<0||v>value+1e-12){best=leaf;value=v;}
+    }
+    return best;
+  };
+  const auto&root=tree[0];int best=0;double bestUtility=-INF;
+  for(int j=0;j<(int)root.actions.size();j++) {
+    int outcome=solve(solve,root.children[j]);auto&leaf=leaves[outcome];
+    double value=leaf.sums[s.current]/rounds,utility=leaf.utilities[s.current]/rounds;
+    report.candidates.push_back({root.actions[j],value,std::sqrt(std::max(0.,leaf.squares[s.current]/rounds-value*value)/rounds),rounds});
+    if(j==0||utility>bestUtility+1e-12){best=j;bestUtility=utility;}
+  }
+  // Only the recommended action moves; preserve legal-order tie breaking.
+  std::rotate(report.candidates.begin(),report.candidates.begin()+best,report.candidates.begin()+best+1);
+  report.scenarios=rounds;report.outcomeReuses=tree.size()-leaves.size();report.maxOutcomeBranches=leaves.size();
+  auctionStudyMetrics[0]=1;auctionStudyMetrics[1]=rounds;auctionStudyMetrics[2]=leaves.size();auctionStudyMetrics[3]=tree.size();auctionStudyMetrics[4]=emscripten_get_now()-started;
+  int offset=0;auctionStudyLeaves[offset++]=leaves.size();auctionStudyLeaves[offset++]=rounds;
+  for(auto&leaf:leaves){auctionStudyLeaves[offset++]=leaf.winner;auctionStudyLeaves[offset++]=leaf.sun;for(int i=0;i<s.n;i++){auctionStudyLeaves[offset++]=leaf.sums[i]/rounds;auctionStudyLeaves[offset++]=leaf.utilities[i]/rounds;}}
+  return report;
+}
+
 // Versioned numeric ABI, bounded and checked before native indexing.
 alignas(8) double input[16384],output[16384];
 int cursor=0,inputLength=0,out=0;
@@ -1433,14 +1627,16 @@ extern "C" {
       }
       return !bad;
     };
-    if(op==0||op==7)if(!readNetwork(model,91,48,hasModel))return -6;
-    if(op==0||op==8)if(!readNetwork(rolloutModel,287,16,hasRollout))return -6;
+    if(op==0||op==9||op==10||op==7)if(!readNetwork(model,91,48,hasModel))return -6;
+    if(op==0||op==9||op==10||op==8)if(!readNetwork(rolloutModel,287,16,hasRollout))return -6;
     int reward=0;
-    if(op==0){reward=read();if(bad||reward<0||reward>1)return -6;}
-    if((op==0||op==7||op==8)&&cursor!=length)return -6;
-    if(op==0) {
+    if(op==0||op==9||op==10){reward=read();if(bad||reward<0||reward>1)return -6;}
+    if((op==0||op==9||op==10||op==7||op==8)&&cursor!=length)return -6;
+    if(op==0||op==9||op==10) {
+      if(op==9&&variant!=0)return -3;
       if(samples<1||samples>512||s.phase==Over||horizon<0||horizon>2||variant<0||variant>2||!std::isfinite(timeMs)||timeMs<0||timeMs>2000)return -3;
-      auto r=searchAction(s,samples,horizon,variant,timeMs,hasModel?&model:nullptr,hasRollout?&rolloutModel:nullptr,reward);
+      if(op==10&&(hasModel||hasRollout||reward||variant))return -6;
+      auto r=op==10&&s.phase==Auction&&legal(s).size()>1?auctionSampleSearch(s,samples,horizon,timeMs):searchAction(s,samples,horizon,variant,timeMs,hasModel?&model:nullptr,hasRollout?&rolloutModel:nullptr,reward,op==9);
       for(int x: {
         r.samples,r.transitions,r.completed,r.truncated,r.epochAdvances,r.nodes,r.depth,r.scenarios,r.outcomeReuses,r.maxOutcomeBranches,(int)r.candidates.size()
       })put(x);
@@ -1449,6 +1645,10 @@ extern "C" {
         put(c.value);
         put(c.error);
         put(c.visits);
+      }
+      if(op==9) {
+        put(r.trainingSamples);put(r.evaluationSamples);put(r.evaluationRounds);
+        for(auto&c:r.candidates){put(c.utility);put(c.utilityError);put(c.evaluationVisits);}
       }
     }
     else if(op==1) {
