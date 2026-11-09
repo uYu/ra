@@ -1,6 +1,6 @@
 import type { Move } from "../game/presentation.ts";
 import { type ReactNode, useContext, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import type { Kind, State } from "../game/types.ts";
 import { LABEL, tileName } from "../game/data.ts";
 import { collectionProgress } from "../game/tile-guide.ts";
@@ -8,7 +8,7 @@ import { TileInfoContext } from "./Tile.tsx";
 import { useTileTooltip } from "./TileTooltip.tsx";
 import { TileArt } from "./TileArt.tsx";
 import { Sun } from "./Art.tsx";
-import { canInspectUsedSuns } from "../game/visibility.ts";
+import { canInspectUsedSuns, isOwnPlayer } from "../game/visibility.ts";
 import type { ScoreBreakdown } from "../game/scoring-presentation.ts";
 import { signedScore } from "../game/scoring-presentation.ts";
 const RULE: Partial<Record<Kind, string>> = {
@@ -59,6 +59,7 @@ export function PlayerMat({
   const p = state.players[player],
     inspect = useContext(TileInfoContext);
   const canPeek = canInspectUsedSuns(state, player);
+  const otherBoard = state.config.humans > 0 && !isOwnPlayer(state, player);
   const receiving =
     !!latest &&
     ["win", "god"].includes(latest.kind) &&
@@ -204,13 +205,18 @@ export function PlayerMat({
   }
   return (
     <section
-      className={compact ? "player-mat mobile-player-board" : "player-mat"}
+      className={`player-mat${compact ? " mobile-player-board" : ""}${otherBoard ? " is-other-board" : ""}`}
       aria-label={compact?.heading}
     >
       {hints.tooltip}
       <header>
         <div className="mat-heading">
           <h2>{compact?.heading ?? `${p.name}的玩家板`}</h2>
+          {otherBoard && (
+            <span className="mat-view-badge">
+              <Eye size={12} aria-hidden="true" /> 他人棋盘
+            </span>
+          )}
           {onHome && (
             <button className="back-to-own" onClick={onHome}>
               返回我的棋盘

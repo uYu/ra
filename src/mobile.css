@@ -239,7 +239,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background: #f5f2e9;
+    background: var(--mat-header-bg, #f5f2e9);
   }
   .game-shell .mat-mobile-score {
     display: block;
@@ -909,6 +909,13 @@
   .mobile-player-board > header h2 {
     font-size: 11px;
     line-height: 15px;
+  }
+  .mobile-player-board .mat-heading {
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+  .mobile-player-board .mat-view-badge {
+    font-size: 9px;
   }
   .game-shell .mobile-player-board .mat-board {
     grid-template:
