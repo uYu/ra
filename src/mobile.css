@@ -603,6 +603,9 @@
 
   .game-shell .action-panel {
     grid-row: 4;
+  }
+  .game-shell .action-panel,
+  .game-shell .action-panel.phase-auction {
     grid-template: auto auto / minmax(0, 1fr);
     gap: 4px;
     height: auto;
@@ -671,6 +674,7 @@
   }
   .game-shell .phase-actions .primary,
   .game-shell .phase-actions .secondary,
+  .game-shell .phase-auction .bid-buttons > button,
   .game-shell .action-panel > .mobile-phase-command {
     min-height: 42px;
     padding: 4px 7px;
@@ -701,7 +705,10 @@
   .game-shell .phase-auction .bid-history {
     display: flex;
     container-type: inline-size;
+    grid-row: 1;
     height: auto;
+    min-height: 0;
+    margin-left: 0;
     gap: 3px;
   }
   .game-shell .phase-auction .bid-history > span {
@@ -715,7 +722,7 @@
     height: 32px;
     padding: 1px 2px;
   }
-  .game-shell .bid-history > span > .bid-player-name {
+  .game-shell .phase-auction .bid-history > span > .bid-player-name {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -724,16 +731,16 @@
     font-size: clamp(8px, 2.6cqi, 9px);
     line-height: 11px;
   }
-  .game-shell .bid-history > span > b {
+  .game-shell .phase-auction .bid-history > span > b {
     font-size: 10px;
     line-height: 14px;
   }
-  .game-shell .bid-history > span.has-bid > b {
+  .game-shell .phase-auction .bid-history > span.has-bid > b {
     /* Override the larger desktop emphasis on the highest bid. */
     font-size: 12px !important;
     line-height: 14px;
   }
-  .game-shell .bid-history > span > em {
+  .game-shell .phase-auction .bid-history > span > em {
     display: none;
   }
   .game-shell .phase-auction .bid-controls {
@@ -748,12 +755,21 @@
   .game-shell .phase-auction .bid-buttons {
     gap: 3px;
   }
-  .game-shell .sun-choices .disk {
+  .game-shell .phase-auction .bid-buttons {
+    width: auto;
+    min-width: 0;
+  }
+  .game-shell .phase-auction .hint {
+    grid-row: 3;
+    margin-left: 0;
+  }
+  .game-shell .phase-auction .sun-choices .disk {
+    flex: 0 0 auto;
     width: clamp(31px, 9vw, 42px);
     height: clamp(31px, 9vw, 42px);
     border-width: 2px;
   }
-  .game-shell .sun-choices .disk span {
+  .game-shell .phase-auction .sun-choices .disk span {
     font:
       700 16px/1 system-ui,
       sans-serif;
