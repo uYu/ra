@@ -1,6 +1,6 @@
 import type { Move } from "../game/presentation.ts";
 import { type ReactNode, useContext, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { ChevronLeft, Eye, Maximize2 } from "lucide-react";
 import type { Kind, State } from "../game/types.ts";
 import { LABEL, tileName } from "../game/data.ts";
 import { collectionProgress } from "../game/tile-guide.ts";
@@ -209,54 +209,51 @@ export function PlayerMat({
       aria-label={compact?.heading}
     >
       {hints.tooltip}
-      <header>
-        <div className="mat-heading">
-          <h2>
-            {(compact || onCollapse) && (
-              <Eye className="mat-owner-icon" size={12} aria-hidden="true" />
+      {!compact && (
+        <header>
+          <div className="mat-heading">
+            <h2>
+              {onCollapse && (
+                <Eye className="mat-owner-icon" size={12} aria-hidden="true" />
+              )}
+              {`${p.name}的玩家板`}
+            </h2>
+            {otherBoard && (
+              <span className="mat-view-badge">
+                <Eye size={12} aria-hidden="true" /> 他人棋盘
+              </span>
             )}
-            {compact?.heading ?? `${p.name}的玩家板`}
-          </h2>
-          {otherBoard && (
-            <span className="mat-view-badge">
-              <Eye size={12} aria-hidden="true" /> 他人棋盘
-            </span>
-          )}
-          {onHome && (
-            <button className="back-to-own" onClick={onHome}>
-              返回我的棋盘
+            {onHome && (
+              <button className="back-to-own" onClick={onHome}>
+                返回我的棋盘
+              </button>
+            )}
+          </div>
+          {onCollapse && (
+            <button className="mat-collapse" onClick={onCollapse}>
+              <ChevronLeft size={14} /> 收起详情
             </button>
           )}
-        </div>
-        {compact && (
-          <button className="mat-open-full" onClick={compact.onDetails}>
-            完整棋盘 <ChevronRight size={14} />
-          </button>
-        )}
-        {onCollapse && (
-          <button className="mat-collapse" onClick={onCollapse}>
-            <ChevronLeft size={14} /> 收起详情
-          </button>
-        )}
-        {!scoring && onPlayer && (
-          <nav>
-            {state.players.map((q, i) => (
-              <button
-                key={i}
-                className={i === player ? "selected" : ""}
-                onClick={() => onPlayer(i)}
-              >
-                {q.name}
-                {unread[i] && (
-                  <small className="unread-acquisition" title="有新收获">
-                    ●
-                  </small>
-                )}
-              </button>
-            ))}
-          </nav>
-        )}
-      </header>
+          {!scoring && onPlayer && (
+            <nav>
+              {state.players.map((q, i) => (
+                <button
+                  key={i}
+                  className={i === player ? "selected" : ""}
+                  onClick={() => onPlayer(i)}
+                >
+                  {q.name}
+                  {unread[i] && (
+                    <small className="unread-acquisition" title="有新收获">
+                      ●
+                    </small>
+                  )}
+                </button>
+              ))}
+            </nav>
+          )}
+        </header>
+      )}
       <div
         className="mat-board"
         role={compact ? "region" : undefined}
@@ -270,7 +267,18 @@ export function PlayerMat({
           {(["monument", "pharaoh", "nile"] as Kind[]).map(group)}
         </div>
         <div className="mat-center">
-          <span>太阳圆盘</span>
+          {compact ? (
+            <button
+              type="button"
+              className="mat-open-full"
+              aria-label="打开完整棋盘"
+              onClick={compact.onDetails}
+            >
+              详情 <Maximize2 size={10} aria-hidden="true" />
+            </button>
+          ) : (
+            <span>太阳圆盘</span>
+          )}
           <div
             className="mat-suns"
             style={

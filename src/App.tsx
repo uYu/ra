@@ -738,8 +738,15 @@ function App() {
                           }
                         />
                       </div>
-                      <div>
+                      <div className="action-copy">
                         <h2>{title}</h2>
+                        {active &&
+                          viewed.phase === "auction" &&
+                          mustBid(viewed) && (
+                            <p className="mobile-forced-bid">
+                              必须选一枚圆盘出价
+                            </p>
+                          )}
                         <p>
                           {paused
                             ? "比赛已暂停，继续后恢复行动。"
