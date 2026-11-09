@@ -9,6 +9,7 @@ export function captureAnchors(): Record<string, Box> {
   const out: Record<string, Box> = {};
   document.querySelectorAll<HTMLElement>("[data-motion]").forEach((el) => {
     const r = el.getBoundingClientRect();
+    if (!r.width || !r.height) return;
     out[el.dataset.motion!] = {
       x: r.x,
       y: r.y,

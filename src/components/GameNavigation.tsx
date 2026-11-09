@@ -52,13 +52,14 @@ export function GameNavigation({
           <History />
           <span>对局记录</span>
         </button>
-        <button onClick={onSettings}>
+        <button className="nav-desktop" onClick={onSettings}>
           <Settings2 />
           <span>游戏设置</span>
         </button>
         <div className="game-navigation-divider" />
         {!replay && (
           <button
+            className="nav-desktop"
             onClick={onPause}
             aria-pressed={paused}
             aria-label={paused ? "继续比赛" : "暂停比赛"}
@@ -68,6 +69,7 @@ export function GameNavigation({
           </button>
         )}
         <button
+          className="nav-desktop"
           onClick={onSound}
           aria-pressed={sound}
           aria-label={sound ? "关闭音效" : "开启音效"}

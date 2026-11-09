@@ -1,5 +1,6 @@
 import type { Move } from "../game/presentation.ts";
-import { useContext, useEffect, useState } from "react";
+import { type ReactNode, useContext, useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Kind, State } from "../game/types.ts";
 import { LABEL, tileName } from "../game/data.ts";
 import { collectionProgress } from "../game/tile-guide.ts";
@@ -23,19 +24,25 @@ export function PlayerMat({
   state,
   player,
   onPlayer,
+  onCollapse,
+  footer,
   latest,
   unread = {},
   onHome,
   bidding,
   scoring,
+  compact,
 }: {
   state: State;
   player: number;
-  onPlayer: (i: number) => void;
+  onPlayer?: (i: number) => void;
+  onCollapse?: () => void;
+  footer?: ReactNode;
   latest?: Move;
   unread?: Record<number, Move>;
   onHome?: () => void;
   scoring?: ScoreBreakdown;
+  compact?: { heading: string; onDetails: () => void };
   bidding?: {
     enabled: boolean;
     high: number;
@@ -196,18 +203,31 @@ export function PlayerMat({
     );
   }
   return (
-    <section className="player-mat">
+    <section
+      className={compact ? "player-mat mobile-player-board" : "player-mat"}
+      aria-label={compact?.heading}
+    >
       {hints.tooltip}
       <header>
         <div className="mat-heading">
-          <h2>{p.name}的玩家板</h2>
+          <h2>{compact?.heading ?? `${p.name}的玩家板`}</h2>
           {onHome && (
             <button className="back-to-own" onClick={onHome}>
               返回我的棋盘
             </button>
           )}
         </div>
-        {!scoring && (
+        {compact && (
+          <button className="mat-open-full" onClick={compact.onDetails}>
+            完整棋盘 <ChevronRight size={14} />
+          </button>
+        )}
+        {onCollapse && (
+          <button className="mat-collapse" onClick={onCollapse}>
+            <ChevronLeft size={14} /> 收起详情
+          </button>
+        )}
+        {!scoring && onPlayer && (
           <nav>
             {state.players.map((q, i) => (
               <button
@@ -226,18 +246,29 @@ export function PlayerMat({
           </nav>
         )}
       </header>
-      <div className="mat-board">
+      <div
+        className="mat-board"
+        role={compact ? "region" : undefined}
+        tabIndex={compact ? 0 : undefined}
+        aria-label={compact ? "棋盘牌位与太阳圆盘" : undefined}
+      >
         <div className="mat-permanent">
-          <span className="mat-side-label">永久牌 · 跨纪元保留</span>
+          <span className="mat-side-label">
+            {compact ? "永久牌" : "永久牌 · 跨纪元保留"}
+          </span>
           {(["monument", "pharaoh", "nile"] as Kind[]).map(group)}
         </div>
         <div className="mat-center">
           <span>太阳圆盘</span>
           <div
             className="mat-suns"
-            style={{
-              gridTemplateRows: `repeat(${p.suns.length + p.used.length}, minmax(0, 68px))`,
-            }}
+            style={
+              compact
+                ? undefined
+                : {
+                    gridTemplateRows: `repeat(${p.suns.length + p.used.length}, minmax(0, 68px))`,
+                  }
+            }
           >
             {[...p.suns]
               .sort((a, b) => a - b)
@@ -371,10 +402,13 @@ export function PlayerMat({
           </div>
         </div>
         <div className="mat-temporary">
-          <span className="mat-side-label">临时牌 · 每纪元结算后弃置</span>
+          <span className="mat-side-label">
+            {compact ? "临时牌" : "临时牌 · 每纪元结算后弃置"}
+          </span>
           {(["god", "gold", "civilization", "flood"] as Kind[]).map(group)}
         </div>
       </div>
+      {footer && <div className="mat-mobile-score">{footer}</div>}
     </section>
   );
 }
