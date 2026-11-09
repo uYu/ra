@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef, useState } from "react";
 import type { State } from "../game/types.ts";
 import { explainScore, signedScore } from "../game/scoring-presentation.ts";
 import { PlayerMat } from "./PlayerMat.tsx";
@@ -14,6 +15,35 @@ export function ScoreBoard({
   player: number;
   onPlayer: (player: number) => void;
 }) {
+  const [reading, setReading] = useState(
+    () => window.matchMedia("(max-width: 650px)").matches,
+  );
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useLayoutEffect(() => {
+    const viewport = viewportRef.current!;
+    const content = contentRef.current!;
+    const fit = () => {
+      setScale(
+        Math.min(
+          1,
+          (viewport.clientHeight - 1) / Math.max(1, content.offsetHeight),
+        ),
+      );
+    };
+    const observer = new ResizeObserver(fit);
+    observer.observe(viewport);
+    observer.observe(content);
+    fit();
+    return () => observer.disconnect();
+  }, []);
+
+  useLayoutEffect(() => {
+    viewportRef.current!.scrollTop = 0;
+  }, [player, reading]);
+
   const rows = state.history.at(-1)!;
   const row = rows[player];
   const showTotal = (i: number) =>
@@ -104,15 +134,44 @@ export function ScoreBoard({
           ))}
         </nav>
       )}
-      <p className="score-board-guide">
-        分数直接标在对应区域；点击牌面可查看规则，点击上方玩家可切换版图。
-      </p>
-      <PlayerMat
-        state={state}
-        player={player}
-        onPlayer={onPlayer}
-        scoring={explainScore(state, player)}
-      />
+      <div className="score-board-toolbar">
+        <p className="score-board-guide">
+          点击上方玩家切换版图，点击牌面查看规则。
+          {reading ? "可滚动查看全部计分。" : "已按窗口高度展示整张版图。"}
+        </p>
+        <div
+          className="score-view-modes"
+          role="group"
+          aria-label="版图显示方式"
+        >
+          <button aria-pressed={!reading} onClick={() => setReading(false)}>
+            完整总览
+          </button>
+          <button aria-pressed={reading} onClick={() => setReading(true)}>
+            放大阅读
+          </button>
+        </div>
+      </div>
+      <div
+        ref={viewportRef}
+        className={`score-mat-viewport ${reading ? "is-reading" : ""}`}
+        tabIndex={reading ? 0 : undefined}
+        role="region"
+        aria-label="玩家计分版图"
+      >
+        <div
+          ref={contentRef}
+          className="score-mat-content"
+          style={{ transform: reading ? undefined : `scale(${scale})` }}
+        >
+          <PlayerMat
+            state={state}
+            player={player}
+            onPlayer={onPlayer}
+            scoring={explainScore(state, player)}
+          />
+        </div>
+      </div>
       <div className="score-total" role="status">
         <span>{row.name} · 本纪元合计</span>
         <strong className={row.delta < 0 ? "negative" : ""}>
