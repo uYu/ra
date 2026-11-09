@@ -698,6 +698,30 @@
   letter-spacing: 0.5px;
   margin: 0;
 }
+.player-mat.is-other-board {
+  --mat-header-bg: #e0edf0;
+}
+.player-mat.is-other-board > header {
+  border-radius: 4px;
+  background: var(--mat-header-bg);
+}
+.player-mat.is-other-board .mat-board {
+  border-color: #416778;
+}
+.mat-view-badge {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #214c60;
+  color: #fff5df;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  white-space: nowrap;
+}
 .player-mat nav {
   display: flex;
   gap: 3px;

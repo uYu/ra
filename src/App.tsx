@@ -7,6 +7,7 @@ import {
   Check,
   ChevronRight,
   Download,
+  Eye,
   History,
   Home,
   Pause,
@@ -105,6 +106,7 @@ function App() {
     >(null),
     [paused, setPaused] = useState(false),
     [error, setError] = useState(loaded.error);
+  const [mobileView, setMobileView] = useState<"board" | "collection">("board");
   const [tileInfo, setTileInfo] = useState<TileType | null>(null);
   const [motion, setMotion] = useState<Motion | null>(null);
   const [moveInfo, setMoveInfo] = useState<Move | null>(null);
@@ -354,6 +356,7 @@ function App() {
     setGame(newGame(config));
     setSave(createSave(config));
     setScreen("game");
+    setMobileView("board");
     setModal(null);
     setPaused(false);
     setInspect(0);
@@ -373,6 +376,7 @@ function App() {
       setSave(loadedSave);
       setGame(state);
       setScreen("game");
+      setMobileView("board");
       setModal(null);
       setPaused(true);
       setResultDismissed("");
@@ -394,6 +398,7 @@ function App() {
     setReplayPlaying(false);
     setModal(null);
     setScreen("replay");
+    setMobileView("board");
     setInspect(0);
     setAcquisitions({});
   }
@@ -444,6 +449,37 @@ function App() {
           : viewed?.phase === "turn"
             ? "抽取未知，或在恰好的时刻呼唤太阳神。"
             : "查看结算，见证王朝兴衰。";
+  const scoreCard = viewed && (
+    <section className="score-card">
+      <span className="eyebrow">YOUR LEGACY</span>
+      <h3>王朝的声望</h3>
+      <div className="score-big">
+        {reveal === inspect ||
+        viewed.phase === "over" ||
+        (viewed.config.humans === 1 && inspect === 0)
+          ? inspecting!.score
+          : "—"}
+        <small>分</small>
+      </div>
+      {!(viewed.config.humans === 1 && inspect === 0) &&
+        viewed.phase !== "over" && (
+          <button
+            className="text-button"
+            onClick={() => setReveal((r) => (r === inspect ? null : inspect))}
+          >
+            {reveal === inspect ? "隐藏分数" : "点击查看分数"}
+          </button>
+        )}
+      <div className="score-estimate">
+        <span>本纪元当前预计</span>
+        <b>
+          {estimate[inspect]?.delta >= 0 ? "+" : ""}
+          {estimate[inspect]?.delta}
+        </b>
+      </div>
+      <p>预计值随法老多数与新拍品变化。古迹在第三纪元计分。</p>
+    </section>
+  );
   return (
     <TileInfoContext.Provider
       value={(tile) => {
@@ -521,6 +557,7 @@ function App() {
                   onClick={() => {
                     setScreen("game");
                     setPaused(false);
+                    setMobileView("board");
                   }}
                 >
                   继续比赛 <ChevronRight size={16} />
@@ -581,7 +618,7 @@ function App() {
         </main>
       ) : (
         viewed && (
-          <div className="game-shell">
+          <div className="game-shell" data-mobile-view={mobileView}>
             <GameNavigation
               replay={screen === "replay"}
               paused={paused}
@@ -671,6 +708,20 @@ function App() {
                     selected={selectedTiles}
                     onSelect={(id) => setSelectedTiles([id])}
                   />
+                  {mobileView === "board" && (
+                    <PlayerMat
+                      state={viewed}
+                      player={inspect}
+                      latest={latestMove}
+                      compact={{
+                        heading:
+                          viewed.config.humans === 1 && inspect === 0
+                            ? "我的棋盘"
+                            : `${inspecting!.name}的棋盘`,
+                        onDetails: () => setMobileView("collection"),
+                      }}
+                    />
+                  )}
                   <section
                     className={`action-panel phase-${viewed.phase} ${godMode ? "exchanging" : ""}`}
                     aria-live="polite"
@@ -741,6 +792,7 @@ function App() {
                             onClick={() => {
                               setGodMode((g) => !g);
                               setSelectedTiles([]);
+                              setMobileView("board");
                             }}
                           >
                             <Glyph kind="god" />
@@ -961,11 +1013,24 @@ function App() {
                         </div>
                       )}
                     </div>
+                    {screen === "game" && (paused || waiting) && (
+                      <button
+                        className="primary mobile-phase-command"
+                        onClick={() =>
+                          paused ? setPaused(false) : setWaiting(false)
+                        }
+                      >
+                        {paused ? "继续比赛" : "看清了，继续"}{" "}
+                        <ArrowRight size={16} />
+                      </button>
+                    )}
                   </section>
                   <PlayerMat
                     state={viewed}
                     player={inspect}
                     onPlayer={viewPlayer}
+                    onCollapse={() => setMobileView("board")}
+                    footer={mobileView === "collection" ? scoreCard : undefined}
                     unread={unreadAcquisitions}
                     bidding={
                       viewed.phase === "auction" && inspect === viewed.current
@@ -995,6 +1060,26 @@ function App() {
                         className={`player-summary ${viewed.current === i ? "current" : ""} ${inspect === i ? "inspected" : ""} ${(latestMove?.winner ?? latestMove?.actor) === i ? "just-acted" : ""} ${viewed.auction?.caller === i ? "is-auction-caller" : ""}`}
                         onClick={() => viewPlayer(i)}
                       >
+                        <span className="mobile-player-status">
+                          {viewed.current === i && (
+                            <span
+                              role="img"
+                              aria-label="当前行动"
+                              title="当前行动"
+                            >
+                              <ArrowRight size={10} />
+                            </span>
+                          )}
+                          {inspect === i && (
+                            <span
+                              role="img"
+                              aria-label="正在查看棋盘"
+                              title="正在查看棋盘"
+                            >
+                              <Eye size={10} />
+                            </span>
+                          )}
+                        </span>
                         <AuctionCallerBadge state={viewed} player={i} />
                         <span className={`avatar avatar-${i}`}>
                           <Glyph kind="pharaoh" />
@@ -1070,37 +1155,7 @@ function App() {
                       }
                     />
                   )}
-                  <section className="score-card">
-                    <span className="eyebrow">YOUR LEGACY</span>
-                    <h3>王朝的声望</h3>
-                    <div className="score-big">
-                      {reveal === inspect ||
-                      viewed.phase === "over" ||
-                      (viewed.config.humans === 1 && inspect === 0)
-                        ? inspecting!.score
-                        : "—"}
-                      <small>分</small>
-                    </div>
-                    {!(viewed.config.humans === 1 && inspect === 0) &&
-                      viewed.phase !== "over" && (
-                        <button
-                          className="text-button"
-                          onClick={() =>
-                            setReveal((r) => (r === inspect ? null : inspect))
-                          }
-                        >
-                          {reveal === inspect ? "隐藏分数" : "点击查看分数"}
-                        </button>
-                      )}
-                    <div className="score-estimate">
-                      <span>本纪元当前预计</span>
-                      <b>
-                        {estimate[inspect]?.delta >= 0 ? "+" : ""}
-                        {estimate[inspect]?.delta}
-                      </b>
-                    </div>
-                    <p>预计值随法老多数与新拍品变化。古迹在第三纪元计分。</p>
-                  </section>
+                  {scoreCard}
                   <ActionFeed
                     moves={moves}
                     state={viewed}
