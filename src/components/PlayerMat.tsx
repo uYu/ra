@@ -211,7 +211,12 @@ export function PlayerMat({
       {hints.tooltip}
       <header>
         <div className="mat-heading">
-          <h2>{compact?.heading ?? `${p.name}的玩家板`}</h2>
+          <h2>
+            {(compact || onCollapse) && (
+              <Eye className="mat-owner-icon" size={12} aria-hidden="true" />
+            )}
+            {compact?.heading ?? `${p.name}的玩家板`}
+          </h2>
           {otherBoard && (
             <span className="mat-view-badge">
               <Eye size={12} aria-hidden="true" /> 他人棋盘

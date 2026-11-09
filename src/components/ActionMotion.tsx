@@ -105,7 +105,7 @@ export function ActionMotion({
     });
     const announcement =
       root.current.querySelector<HTMLElement>(".major-event-toast");
-    if (announcement)
+    if (announcement && getComputedStyle(announcement).display !== "none")
       running.push(
         announcement.animate(
           [
