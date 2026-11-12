@@ -20,28 +20,35 @@ export function ScoreBoard({
   );
   const viewportRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(1);
+  const [fit, setFit] = useState({ scale: 1, left: 0 });
 
   useLayoutEffect(() => {
     const viewport = viewportRef.current!;
     const content = contentRef.current!;
-    const fit = () => {
-      setScale(
-        Math.min(
-          1,
-          (viewport.clientHeight - 1) / Math.max(1, content.offsetHeight),
-        ),
+    const measure = () => {
+      const scale = Math.min(
+        1,
+        viewport.clientWidth / Math.max(1, content.offsetWidth),
+        (viewport.clientHeight - 1) / Math.max(1, content.offsetHeight),
       );
+      setFit({
+        scale,
+        left: Math.max(
+          0,
+          (viewport.clientWidth - content.offsetWidth * scale) / 2,
+        ),
+      });
     };
-    const observer = new ResizeObserver(fit);
+    const observer = new ResizeObserver(measure);
     observer.observe(viewport);
     observer.observe(content);
-    fit();
+    measure();
     return () => observer.disconnect();
   }, []);
 
   useLayoutEffect(() => {
     viewportRef.current!.scrollTop = 0;
+    viewportRef.current!.scrollLeft = 0;
   }, [player, reading]);
 
   const rows = state.history.at(-1)!;
@@ -137,7 +144,9 @@ export function ScoreBoard({
       <div className="score-board-toolbar">
         <p className="score-board-guide">
           点击上方玩家切换版图，点击牌面查看规则。
-          {reading ? "可滚动查看全部计分。" : "已按窗口高度展示整张版图。"}
+          {reading
+            ? "向下滚动查看各类拍品与计分。"
+            : "已按窗口大小展示整张版图。"}
         </p>
         <div
           className="score-view-modes"
@@ -162,7 +171,11 @@ export function ScoreBoard({
         <div
           ref={contentRef}
           className="score-mat-content"
-          style={{ transform: reading ? undefined : `scale(${scale})` }}
+          style={
+            reading
+              ? undefined
+              : { transform: `scale(${fit.scale})`, left: fit.left }
+          }
         >
           <PlayerMat
             state={state}

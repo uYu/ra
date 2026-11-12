@@ -1,3 +1,4 @@
+import "./PlayerMatDetails.css";
 import { SunDiskArt } from "./TokenIllustration.tsx";
 import type { Move } from "../game/presentation.ts";
 import { type ReactNode, useContext, useEffect, useState } from "react";
@@ -210,7 +211,7 @@ export function PlayerMat({
   }
   return (
     <section
-      className={`player-mat${compact ? " mobile-player-board" : ""}${otherBoard ? " is-other-board" : ""}`}
+      className={`player-mat${compact ? " mobile-player-board" : " expanded-player-mat"}${otherBoard ? " is-other-board" : ""}`}
       aria-label={compact?.heading}
     >
       {hints.tooltip}
@@ -287,7 +288,7 @@ export function PlayerMat({
           <div
             className="mat-suns"
             style={
-              compact
+              compact || scoring
                 ? undefined
                 : {
                     gridTemplateRows: `repeat(${p.suns.length + p.used.length}, minmax(0, 68px))`,

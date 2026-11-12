@@ -1,0 +1,250 @@
+/* Expanded mobile boards prioritize readable collections over a compressed tabletop. */
+@media (max-width: 767px),
+  (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+  .game-shell .table-fit .player-mat.expanded-player-mat > header {
+    height: auto;
+    min-height: 44px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    z-index: 3;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-heading {
+    flex: 1 1 200px;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-width: 0;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-heading h2 {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-collapse {
+    margin-left: auto;
+    min-height: 36px;
+    padding: 6px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-board {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    gap: 12px;
+    padding: 9px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-permanent,
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-temporary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-permanent {
+    order: 0;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-temporary {
+    order: 1;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-side-label {
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-group {
+    container-type: normal;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+    padding: 9px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-category {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-category button {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-category > b {
+    font-size: 18px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-group .mat-body {
+    height: auto;
+    min-height: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-group
+    .mat-pieces {
+    height: auto;
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 76px);
+    grid-template-rows: none;
+    gap: 6px;
+    justify-items: stretch;
+    align-items: start;
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-monument
+    .mat-pieces {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-civilization
+    .mat-pieces {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-pieces
+    .mat-piece {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 80px;
+    padding: 4px;
+    gap: 4px;
+    justify-content: flex-start;
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-pieces
+    .mat-piece
+    > .piece-picture {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    flex: 0 0 48px;
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-pieces
+    .mat-piece
+    .tile-art {
+    width: 100%;
+    height: 100%;
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-pieces
+    .mat-piece
+    > .piece-label {
+    height: auto;
+    min-height: 28px;
+    flex: 0 0 auto;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+    font-size: 11px;
+    line-height: 14px;
+  }
+  .game-shell
+    .table-fit
+    .player-mat.expanded-player-mat
+    .mat-pieces
+    .mat-piece
+    .piece-count {
+    min-width: 16px;
+    font-size: 11px;
+    line-height: 17px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-center {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-center > span {
+    font-size: 13px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-suns {
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 14px;
+    margin: 0;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-sun {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    border-width: 3px;
+    box-sizing: border-box;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-sun > b {
+    font-size: 22px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-sun > small {
+    font-size: 7px;
+    line-height: 9px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-sun .sun-back {
+    width: 22px;
+    height: 22px;
+  }
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-spent-hint,
+  .game-shell .table-fit .player-mat.expanded-player-mat .mat-end-score {
+    font-size: 10px;
+    line-height: 16px;
+    text-align: left;
+  }
+
+  .game-shell[data-mobile-view="collection"] .public-board {
+    display: none;
+  }
+  .game-shell[data-mobile-view="collection"]
+    > .game-screen.table-fit:has(.replay-bar) {
+    display: flex;
+  }
+  .game-shell[data-mobile-view="collection"] .replay-bar {
+    grid-area: auto;
+  }
+  .game-shell[data-mobile-view="collection"] .game-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto auto;
+  }
+  .game-shell[data-mobile-view="collection"]
+    .table-main
+    > .player-mat.expanded-player-mat {
+    grid-area: 1 / 1;
+    height: auto;
+    min-height: 0;
+  }
+  .game-shell[data-mobile-view="collection"] .table-sidebar .player-strip {
+    grid-area: 2 / 1;
+  }
+  .game-shell[data-mobile-view="collection"] .table-main .action-panel {
+    grid-area: 3 / 1;
+  }
+}

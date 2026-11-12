@@ -193,6 +193,10 @@ function App() {
     setInspect(player);
     acknowledgeAcquisition(player);
   }
+  function resumeGame() {
+    setMobileView("board");
+    setPaused(false);
+  }
   const resultKey = viewed
     ? `${viewed.config.seed}:${viewed.epoch}:${viewed.phase}`
     : "";
@@ -656,12 +660,13 @@ function App() {
               sound={sound}
               onHome={() => {
                 setScreen("menu");
+                setMobileView("board");
                 setReplayPlaying(false);
               }}
               onRules={() => setModal("rules")}
               onLog={() => setModal("log")}
               onSettings={() => setModal("settings")}
-              onPause={() => setPaused((p) => !p)}
+              onPause={() => (paused ? resumeGame() : setPaused(true))}
               onSound={() => setSound((s) => !s)}
             />
             <main className="game-screen table-fit">
@@ -749,7 +754,10 @@ function App() {
                           viewed.config.humans === 1 && inspect === 0
                             ? "我的棋盘"
                             : `${inspecting!.name}的棋盘`,
-                        onDetails: () => setMobileView("collection"),
+                        onDetails: () => {
+                          if (screen === "game") setPaused(true);
+                          setMobileView("collection");
+                        },
                       }}
                     />
                   )}
@@ -1061,7 +1069,7 @@ function App() {
                       <button
                         className="primary mobile-phase-command"
                         onClick={() =>
-                          paused ? setPaused(false) : setWaiting(false)
+                          paused ? resumeGame() : setWaiting(false)
                         }
                       >
                         {paused ? "继续比赛" : "看清了，继续"}{" "}

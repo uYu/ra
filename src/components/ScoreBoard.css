@@ -73,8 +73,11 @@
 .score-mat-content {
   position: absolute;
   width: 100%;
-  transform-origin: top center;
+  transform-origin: top left;
   padding-bottom: 4px;
+}
+.score-mat-viewport:not(.is-reading) .score-mat-content {
+  width: max(100%, 800px);
 }
 .score-mat-viewport.is-reading {
   overflow: auto;
@@ -174,61 +177,177 @@
   color: #7a7156;
   margin: 12px 0 4px;
 }
+/* Settlement pieces need readable labels and fixed disk sizes, independent of the live table. */
 .score-settlement.table-fit .player-mat > header {
   height: auto;
   margin: 8px 0;
 }
+.score-settlement.table-fit .player-mat > header h2 {
+  white-space: normal;
+  font-size: 14px;
+}
 .score-settlement.table-fit .mat-board {
-  grid-template-columns: minmax(0, 1fr) 112px minmax(0, 1fr);
-  grid-template-rows: 14px repeat(4, minmax(98px, 1fr));
-  gap: 5px 8px;
+  grid-template-columns: minmax(0, 1fr) 88px minmax(0, 1fr);
+  grid-template-rows: 16px repeat(4, minmax(118px, auto));
+  gap: 6px 8px;
+  padding: 8px;
+  background: #f5e5c3;
 }
 .score-settlement.table-fit .mat-group {
-  grid-template-rows: auto auto;
-  align-content: center;
-  gap: 5px 6px;
-  padding: 7px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  container-type: normal;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 8px;
+  padding: 9px;
+  min-height: 0;
 }
 .score-settlement.table-fit .mat-category {
   grid-row: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.score-settlement.table-fit .mat-category button {
+  font-size: 14px;
+}
+.score-settlement.table-fit .mat-category > b {
+  font-size: 17px;
+}
+.score-settlement.table-fit .mat-group .mat-body {
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+}
+.score-settlement.table-fit .mat-group .mat-pieces {
+  grid-template-columns: minmax(0, 76px);
+  grid-template-rows: none;
+  height: auto;
+  gap: 6px;
+  justify-items: stretch;
+  align-items: start;
 }
 .score-settlement.table-fit .mat-monument .mat-pieces {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  max-width: 300px;
+  max-width: 350px;
+}
+.score-settlement.table-fit .mat-civilization .mat-pieces {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 380px;
+}
+.score-settlement.table-fit .mat-pieces .mat-piece {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 80px;
+  padding: 4px;
+  gap: 4px;
+  justify-content: flex-start;
+}
+.score-settlement.table-fit .mat-pieces .mat-piece > .piece-picture {
+  width: 100%;
+  height: 48px;
+  flex: 0 0 48px;
+}
+.score-settlement.table-fit .mat-pieces .mat-piece .tile-art {
+  width: 100%;
+  height: 100%;
+}
+.score-settlement.table-fit .mat-pieces .mat-piece > .piece-label {
+  height: auto;
+  min-height: 28px;
+  flex: 0 0 auto;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  line-height: 14px;
+}
+.score-settlement.table-fit .mat-pieces .mat-piece .piece-count {
+  top: -2px;
+  right: -1px;
+  min-width: 16px;
+  font-size: 11px;
+  line-height: 17px;
 }
 .score-settlement.table-fit .mat-score-explanation {
   grid-column: 1 / -1;
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  padding-top: 6px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: start;
+  gap: 8px;
+  padding-top: 7px;
   border-top: 1px solid #cfba89;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   color: #66583c;
 }
-.mat-score-explanation > b {
-  flex-shrink: 0;
-  min-width: 39px;
-  font-size: 15px;
-  line-height: 19px;
+.score-settlement .mat-score-explanation > b {
+  font-size: 16px;
+  line-height: 20px;
   color: #245854;
 }
-.mat-score-explanation .deferred {
+.score-settlement .mat-score-explanation .deferred {
   color: #8b7951;
-  font-size: 12px;
+  font-size: 13px;
 }
 .score-settlement .negative {
   color: #ad432b !important;
 }
-.score-settlement .mat-end-score {
+.score-settlement.table-fit .mat-center {
+  gap: 12px;
+  justify-content: flex-start;
+  padding: 9px 5px;
+  background: linear-gradient(135deg, #216574, #104957);
+}
+.score-settlement.table-fit .mat-center > span {
+  font-size: 11px;
+}
+.score-settlement.table-fit .mat-suns {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+.score-settlement.table-fit .mat-sun {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-width: 3px;
+  box-sizing: border-box;
+}
+.score-settlement.table-fit .mat-sun > b {
+  font-size: 22px;
+}
+.score-settlement.table-fit .mat-sun > small {
+  font-size: 7px;
+  line-height: 9px;
+}
+.score-settlement.table-fit .mat-sun .sun-back {
+  width: 22px;
+  height: 22px;
+}
+.score-settlement.table-fit .mat-spent-hint {
+  font-size: 9px;
+  line-height: 14px;
+  text-align: center;
+}
+.score-settlement.table-fit .mat-end-score {
+  margin-top: auto;
   font-size: 10px;
-  line-height: 15px;
+  line-height: 16px;
 }
 .score-settlement .mat-end-score > b {
   display: block;
   color: #ffe5a1;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 6px;
 }
 .score-settlement .mat-end-score .negative {
@@ -267,35 +386,6 @@
   }
   .score-players > button {
     padding: 8px;
-  }
-  .score-settlement.table-fit .mat-board {
-    grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
-    grid-template-rows: 14px repeat(4, minmax(150px, 1fr));
-    gap: 4px;
-  }
-  .score-settlement.table-fit .mat-group {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 5px;
-    gap: 4px;
-  }
-  .score-settlement.table-fit .mat-category {
-    flex-direction: row;
-  }
-  .score-settlement.table-fit .mat-score-explanation {
-    flex-direction: column;
-    gap: 3px;
-    font-size: 10px;
-    line-height: 15px;
-  }
-  .score-settlement.table-fit .mat-score-explanation > b {
-    font-size: 14px;
-  }
-  .score-settlement .mat-end-score {
-    font-size: 9px;
-    line-height: 13px;
-  }
-  .score-settlement .mat-end-score > b {
-    font-size: 13px;
   }
   .score-total > span:last-child {
     margin-left: 0;
@@ -430,5 +520,72 @@
   }
   .standing-detail {
     font-size: 9px;
+  }
+}
+
+@media (max-width: 800px) {
+  .score-players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    padding-bottom: 4px;
+    scroll-snap-type: x proximity;
+  }
+  .score-players:has(> button:nth-child(4)) {
+    display: flex;
+    overflow-x: auto;
+  }
+  .score-players > button {
+    flex: 1 0 122px;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    scroll-snap-align: start;
+  }
+  .score-players > button b {
+    white-space: normal;
+  }
+  .score-settlement.table-fit .is-reading .mat-board {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .score-settlement.table-fit .is-reading .mat-permanent,
+  .score-settlement.table-fit .is-reading .mat-temporary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .score-settlement.table-fit .is-reading .mat-permanent {
+    order: 0;
+  }
+  .score-settlement.table-fit .is-reading .mat-temporary {
+    order: 1;
+  }
+  .score-settlement.table-fit .is-reading .mat-side-label {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .score-settlement.table-fit .is-reading .mat-center {
+    order: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    gap: 10px;
+    padding: 12px;
+  }
+  .score-settlement.table-fit .is-reading .mat-suns {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+  .score-settlement.table-fit .is-reading .mat-spent-hint {
+    text-align: left;
+  }
+  .score-settlement.table-fit .is-reading .mat-end-score {
+    margin-top: 0;
+  }
+  .score-settlement.table-fit .is-reading .mat-center > span {
+    font-size: 13px;
   }
 }

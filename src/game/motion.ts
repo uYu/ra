@@ -16,14 +16,14 @@ export type Journey = {
   delay: number;
 };
 export const MOTION_TIMING = {
-  draw: 2600,
-  ra: 2600,
-  tile: 1900,
-  sun: 1500,
-  reveal: 400,
-  revealDelay: 260,
-  boat: 850,
-  boatDelay: 600,
+  draw: 1500,
+  ra: 1500,
+  tile: 1100,
+  sun: 850,
+  reveal: 260,
+  revealDelay: 160,
+  boat: 600,
+  boatDelay: 350,
 } as const;
 export function journeys(
   m: Pick<Motion, "before" | "after" | "action">,
