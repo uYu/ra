@@ -4,11 +4,15 @@ import { journeys } from "../game/motion.ts";
 export type { Motion } from "../game/motion.ts";
 import { auctionNotice, describeMove } from "../game/presentation.ts";
 import { TileArt } from "./TileArt.tsx";
+import { TileBackArt } from "./TokenIllustration.tsx";
 import { Glyph } from "./Art.tsx";
 export function captureAnchors(): Record<string, Box> {
   const out: Record<string, Box> = {};
   document.querySelectorAll<HTMLElement>("[data-motion]").forEach((el) => {
-    const r = el.getBoundingClientRect();
+    const picture = el.matches(".pb-slot")
+      ? el.querySelector<HTMLElement>(".tile-illustration")
+      : null;
+    const r = (picture ?? el).getBoundingClientRect();
     if (!r.width || !r.height) return;
     out[el.dataset.motion!] = {
       x: r.x,
@@ -29,7 +33,7 @@ export function ActionMotion({
   onDone: () => void;
 }) {
   const [flights, setFlights] = useState<
-      { trip: Journey; from: Box; to: Box }[]
+      { trip: Journey; from: Box; to: Box; via?: Box }[]
     >([]),
     root = useRef<HTMLDivElement>(null),
     animations = useRef<Animation[]>([]),
@@ -62,6 +66,7 @@ export function ActionMotion({
           motion.origins[`player-${primary.actor}`] ??
           fallback,
         to: destinations[trip.to] ?? target,
+        via: trip.via ? destinations[trip.via] : undefined,
       })),
     );
   }, [motion]);
@@ -77,6 +82,51 @@ export function ActionMotion({
       const f = flights[i],
         x = f.to.x + f.to.width / 2 - (f.from.x + f.from.width / 2),
         y = f.to.y + f.to.height / 2 - (f.from.y + f.from.height / 2);
+      if (f.via) {
+        const revealX =
+          f.via.x + f.via.width / 2 - (f.from.x + f.from.width / 2);
+        const revealY =
+          f.via.y + f.via.height / 2 - (f.from.y + f.from.height / 2);
+        const reveal = `translate(${revealX}px,${revealY}px) scale(1)`;
+        const scaleX = f.from.width / node.offsetWidth;
+        const scaleY = f.from.height / node.offsetHeight;
+        return node.animate(
+          [
+            {
+              transform: `translate(0,0) scale(${scaleX},${scaleY})`,
+              opacity: 1,
+            },
+            {
+              transform: `translate(0,-10px) scale(${scaleX * 1.25},${scaleY * 1.25})`,
+              opacity: 1,
+              offset: 0.12,
+            },
+            { transform: reveal, opacity: 1, offset: 0.3 },
+            { transform: reveal, opacity: 1, offset: 0.65 },
+            { transform: `translate(${x}px,${y}px) scale(.2)`, opacity: 0 },
+          ],
+          { duration: reduced ? 1 : 1400, easing: "ease-in-out", fill: "both" },
+        );
+      }
+      if (motion.action.type === "draw" && f.trip.tile) {
+        const scaleX = f.from.width / f.to.width;
+        const scaleY = f.from.height / f.to.height;
+        return node.animate(
+          [
+            {
+              transform: `translate(0,0) scale(${scaleX},${scaleY})`,
+              opacity: 1,
+            },
+            {
+              transform: `translate(0,-10px) scale(${scaleX * 1.25},${scaleY * 1.25})`,
+              opacity: 1,
+              offset: 0.2,
+            },
+            { transform: `translate(${x}px,${y}px) scale(1)`, opacity: 1 },
+          ],
+          { duration: reduced ? 1 : 760, easing: "ease-in-out", fill: "both" },
+        );
+      }
       return node.animate(
         [
           { transform: "translate(0,0) scale(.78) rotate(-5deg)", opacity: 0 },
@@ -103,9 +153,48 @@ export function ActionMotion({
         },
       );
     });
+    if (motion.action.type === "draw") {
+      const front = root.current.querySelector<HTMLElement>(".draw-front");
+      const back = root.current.querySelector<HTMLElement>(".draw-back");
+      if (front && back) {
+        const timing = {
+          duration: reduced ? 1 : 160,
+          delay: reduced ? 0 : 140,
+          fill: "both" as const,
+        };
+        running.push(front.animate([{ opacity: 0 }, { opacity: 1 }], timing));
+        running.push(back.animate([{ opacity: 1 }, { opacity: 0 }], timing));
+      }
+    }
+    // Move the actual boat from its previous slot while the single Ra card rests.
+    if (motion.action.type === "draw" && motion.after.lastTile?.kind === "ra") {
+      const origin = motion.origins[`ra-step-${motion.before.ra}`];
+      const boat = document.querySelector<HTMLElement>(
+        `.boat [data-motion="ra-step-${motion.after.ra}"]`,
+      );
+      if (origin && boat) {
+        const target = boat.getBoundingClientRect();
+        const x = origin.x + origin.width / 2 - (target.x + target.width / 2);
+        const y = origin.y + origin.height / 2 - (target.y + target.height / 2);
+        running.push(
+          boat.animate(
+            [
+              { transform: `translate(${x}px,${y}px)` },
+              { transform: "translate(0,0)" },
+            ],
+            {
+              duration: reduced ? 1 : 420,
+              delay: reduced ? 0 : 420,
+              easing: "ease-in-out",
+              fill: "backwards",
+            },
+          ),
+        );
+      }
+    }
     const announcement =
       root.current.querySelector<HTMLElement>(".major-event-toast");
-    if (announcement)
+    if (announcement && getComputedStyle(announcement).display !== "none")
       running.push(
         announcement.animate(
           [
@@ -136,10 +225,10 @@ export function ActionMotion({
   }, [paused]);
   return (
     <div className="action-motion-layer" ref={root} aria-hidden="true">
-      {notice && (
+      {notice && notice.kind !== "ra" && (
         <div className={`major-event-toast trigger-${notice.kind}`}>
           <div className="major-event-picture">
-            {notice.kind === "ra" ? <TileArt kind="ra" /> : <Glyph kind="ra" />}
+            <Glyph kind="ra" />
           </div>
           <div>
             <strong>{notice.title}</strong>
@@ -147,22 +236,46 @@ export function ActionMotion({
           </div>
         </div>
       )}
-      {flights.map((f, i) => (
-        <div
-          key={i}
-          className={`action-flight ${f.trip.tile ? "flying-tile" : "flying-sun"}`}
-          style={{
-            left: f.from.x + f.from.width / 2 - (f.trip.tile ? 35 : 22),
-            top: f.from.y + f.from.height / 2 - (f.trip.tile ? 31 : 22),
-          }}
-        >
-          {f.trip.tile ? (
-            <TileArt kind={f.trip.tile.kind} variant={f.trip.tile.variant} />
-          ) : (
-            <span>{f.trip.sun || "☀"}</span>
-          )}
-        </div>
-      ))}
+      {flights.map((f, i) => {
+        const draw = motion.action.type === "draw" && !!f.trip.tile;
+        const width = f.trip.tile ? (draw && !f.via ? f.to.width : 70) : 44;
+        const height = f.trip.tile ? (draw && !f.via ? f.to.height : 62) : 44;
+        return (
+          <div
+            key={i}
+            className={`action-flight ${f.trip.tile ? "flying-tile" : "flying-sun"} ${draw ? "drawing-tile" : ""}`}
+            style={{
+              left: f.from.x + f.from.width / 2 - width / 2,
+              top: f.from.y + f.from.height / 2 - height / 2,
+              width,
+              height,
+            }}
+          >
+            {f.trip.tile ? (
+              draw ? (
+                <>
+                  <span className="draw-back">
+                    <TileBackArt />
+                  </span>
+                  <span className="draw-front">
+                    <TileArt
+                      kind={f.trip.tile.kind}
+                      variant={f.trip.tile.variant}
+                    />
+                  </span>
+                </>
+              ) : (
+                <TileArt
+                  kind={f.trip.tile.kind}
+                  variant={f.trip.tile.variant}
+                />
+              )
+            ) : (
+              <span>{f.trip.sun || "☀"}</span>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

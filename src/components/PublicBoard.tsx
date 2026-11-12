@@ -1,3 +1,4 @@
+import { LotusColumn, SunDiskArt, TileBackArt } from "./TokenIllustration.tsx";
 import type { State } from "../game/types.ts";
 import type { Move } from "../game/presentation.ts";
 import { auctionNotice } from "../game/presentation.ts";
@@ -62,7 +63,7 @@ export function PublicBoard({
                   <span
                     className="pb-heading-symbol"
                     data-motion={
-                      notice.kind === "ra" ? "ra-reveal" : "auction-notice"
+                      notice.kind === "ra" ? "ra-notice" : "auction-notice"
                     }
                   >
                     {notice.kind === "ra" ? (
@@ -106,6 +107,7 @@ export function PublicBoard({
             ))}
           </div>
         </header>
+        <span className="pb-ra-reveal-anchor" data-motion="ra-reveal" />
         <div
           className="pb-track"
           data-motion="ra"
@@ -125,7 +127,10 @@ export function PublicBoard({
                   className={`pb-track-space ${i < state.ra ? "passed" : ""} ${i === state.ra ? "boat" : ""} ${i === RA_LIMIT[state.config.count] ? "last" : ""}`}
                 >
                   <div className="pb-marker-slot">
-                    <span className="pb-track-marker">
+                    <span
+                      className="pb-track-marker"
+                      data-motion={`ra-step-${i}`}
+                    >
                       {i === state.ra ? (
                         <SunBoat />
                       ) : i === RA_LIMIT[state.config.count] ? (
@@ -169,7 +174,7 @@ export function PublicBoard({
                 <div
                   key={t.id}
                   data-motion={`tile-${t.id}`}
-                  className={`pb-slot ${isNew ? "is-new" : ""}`}
+                  className={`pb-slot ${isNew ? "is-new" : ""} ${isNew && moving ? "is-drawing" : ""}`}
                 >
                   <Tile
                     tile={t}
@@ -186,31 +191,7 @@ export function PublicBoard({
                   key={`empty-${i}`}
                   aria-label={`空拍卖位 ${i + 1}`}
                 >
-                  <svg
-                    width="80"
-                    height="105"
-                    viewBox="0 0 80 105"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 5h70l-7 12H12zM15 17h50v80H15z"
-                      fill="#b99358"
-                      stroke="#eed599"
-                    />
-                    <path d="M24 21v71m16-71v71m16-71v71" stroke="#ead49d" />
-                    <path
-                      d="M5 9h70M12 33h56"
-                      stroke="#789a85"
-                      strokeWidth="4"
-                    />
-                    <circle
-                      cx="40"
-                      cy="52"
-                      r="8"
-                      fill="none"
-                      stroke="#f1d89c"
-                    />
-                  </svg>
+                  <LotusColumn />
                   <small>{String(i + 1).padStart(2, "0")}</small>
                 </div>
               );
@@ -220,6 +201,7 @@ export function PublicBoard({
         <aside className="pb-dock" aria-label="拍卖信息">
           <div className="pb-center" data-motion="center">
             <span className="pb-sun">
+              <SunDiskArt />
               <b>{state.center}</b>
               <small>☼</small>
             </span>
@@ -233,8 +215,18 @@ export function PublicBoard({
             </div>
           </div>
           <div className="pb-counts">
-            <span data-motion="bag">
-              牌袋 <b>{state.bag.length}</b> 块
+            <span className="pb-bag">
+              <span
+                className={`pb-draw-pile ${moving && latest?.kind === "draw" ? "drawing" : ""}`}
+                data-motion="bag"
+                role="img"
+                aria-label="抽牌堆，所有拼块从这里抽出"
+              >
+                <TileBackArt stacked />
+              </span>
+              <span>
+                牌堆 <b>{state.bag.length}</b> 块
+              </span>
             </span>
             <span data-motion="discard">弃置 {state.discarded.length}</span>
           </div>

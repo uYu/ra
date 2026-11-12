@@ -1,3 +1,4 @@
+import { SunDiskArt } from "./components/TokenIllustration.tsx";
 import type { Tile as TileType } from "./game/types.ts";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -89,6 +90,7 @@ function Disk({
       aria-label={`太阳圆盘 ${value}${used ? "，已使用" : ""}`}
       aria-pressed={selected}
     >
+      {!used && <SunDiskArt />}
       <span>{value}</span>
       <small>{used ? "已用" : "☼"}</small>
     </button>
@@ -709,8 +711,15 @@ function App() {
                           }
                         />
                       </div>
-                      <div>
+                      <div className="action-copy">
                         <h2>{title}</h2>
+                        {active &&
+                          viewed.phase === "auction" &&
+                          mustBid(viewed) && (
+                            <p className="mobile-forced-bid">
+                              必须选一枚圆盘出价
+                            </p>
+                          )}
                         <p>
                           {paused
                             ? "比赛已暂停，继续后恢复行动。"
@@ -1054,7 +1063,8 @@ function App() {
                             .sort((a, b) => a - b)
                             .map((n) => (
                               <span key={n} data-motion={`sun-${i}-${n}`}>
-                                {n}
+                                <SunDiskArt />
+                                <b className="mini-disk-value">{n}</b>
                               </span>
                             ))}
                           {p.used.map((n) => (

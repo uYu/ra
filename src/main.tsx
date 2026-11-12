@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./style.css";
 import "./tabletop.css";
 import "./mobile.css";
+import "./artwork.css";
+import "./desktop.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

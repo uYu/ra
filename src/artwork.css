@@ -1,0 +1,259 @@
+/* Shared physical pieces: the same engraving is used on the mat and in bids. */
+.table-fit
+  :is(.disk, .mat-sun, .pb-sun, .mini-disks > span):has(> .sun-disk-art),
+.game-shell
+  .table-fit
+  :is(.disk, .mat-sun, .pb-sun, .mini-disks > span):has(> .sun-disk-art) {
+  position: relative;
+  isolation: isolate;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  overflow: visible;
+  color: #123f4b;
+}
+.sun-disk-art,
+.game-shell .table-fit .sun-disk-art {
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  max-width: none;
+  max-height: none;
+  filter: drop-shadow(0 1px 1px #79532655);
+  pointer-events: none;
+}
+.table-fit .mini-disks .sun-disk-art,
+.game-shell .table-fit .mini-disks .sun-disk-art {
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+}
+.game-shell .table-fit .mini-disk-value {
+  font: inherit;
+  text-shadow: 0 1px #fff1bb;
+}
+.game-shell .table-fit .mat-sun > b,
+.game-shell .table-fit .disk > span,
+.game-shell .table-fit .pb-sun > b {
+  text-shadow: 0 1px #fff0b2;
+  font-weight: 700;
+}
+.game-shell .table-fit .mat-sun.selected,
+.game-shell .table-fit .disk.selected {
+  outline: 2px solid #1c7281;
+  outline-offset: 3px;
+  filter: drop-shadow(0 0 3px #e9b04f);
+}
+.game-shell .table-fit .disk:disabled {
+  filter: saturate(0.45);
+}
+.game-shell .table-fit .pb-slot.empty .lotus-column {
+  opacity: 0.82;
+}
+.game-shell .table-fit .mat-piece.uncollected .tile-art {
+  opacity: 0.65;
+  filter: saturate(0.75);
+}
+.game-shell .table-fit .mat-piece.uncollected .piece-label {
+  color: #776144;
+}
+.game-shell .table-fit .mat-piece.collected .tile-art {
+  opacity: 1;
+  filter: none;
+}
+
+@media (max-width: 767px),
+  (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+  .game-shell {
+    --mobile-ink: #103e4d;
+    --mobile-gold: #cf934c;
+    --mobile-paper: #fff0d5;
+    background: radial-gradient(ellipse at 50% 35%, #fff8e9, #f9e4c2 90%);
+  }
+  .game-shell .game-navigation {
+    background: linear-gradient(#fff4e0, #f7e2bd);
+    border-color: #d6a565;
+    box-shadow:
+      inset 0 0 0 1px #fff8e9,
+      0 2px 3px #92633325;
+  }
+  .game-shell .game-navigation-links > button {
+    color: #123e4b;
+    border: 1px solid #e2bf8a;
+    background: linear-gradient(120deg, #fff7e7, #f5e3c5);
+    box-shadow: inset 0 0 0 1px #fff8eb;
+  }
+  .game-shell .game-navigation-links > .nav-home {
+    color: #fff0bf;
+    border-color: #c29753;
+    background: linear-gradient(125deg, #216470, #104854);
+    box-shadow: inset 0 0 0 1px #77a6a57a;
+  }
+  .game-shell .public-board {
+    position: relative;
+    border-color: #c58c49;
+    box-shadow:
+      inset 0 0 0 1px #fff5d8,
+      0 2px 3px #8e5b3335;
+  }
+  .game-shell .pb-sky {
+    background:
+      linear-gradient(90deg, #0f505cf2, #0e4c57c7 52%, #174b58b3),
+      url("./assets/nile-panorama.jpg") 58% 52% / cover;
+    border-bottom-color: #e1b265;
+  }
+  .game-shell .pb-journey-title,
+  .game-shell .pb-track-context {
+    text-shadow: 0 1px 2px #0b354b;
+  }
+  .game-shell .pb-journey-title > b {
+    color: #ffdb76;
+  }
+  .game-shell .pb-track-context {
+    color: #fff0c5;
+  }
+  .game-shell .pb-epochs > span {
+    border-color: #86afb3;
+    background: #114a58dc;
+    box-shadow:
+      inset 0 0 0 1px #c3d0be40,
+      0 2px 3px #052c3d50;
+  }
+  .game-shell .pb-epochs > .current {
+    border-color: #f4d48c;
+    background: linear-gradient(135deg, #ffe395, #fac355);
+    color: #123f4b;
+  }
+  .game-shell .pb-track-marker {
+    background: radial-gradient(circle at 35% 25%, #41818a, #165360);
+    border-color: #ebc16c;
+    box-shadow: 0 1px 3px #092f3b80;
+  }
+  .game-shell .boat .pb-track-marker {
+    background: radial-gradient(circle at 35% 25%, #fff0a6, #f2bf57);
+    color: #176475;
+    border-color: #a4d3ce;
+  }
+  .game-shell .last .pb-track-marker {
+    background: linear-gradient(135deg, #c56737, #a13d29);
+    border-color: #f7cf74;
+    color: #ffda6f;
+    border-radius: 6px;
+  }
+  .game-shell .pb-body {
+    background: radial-gradient(ellipse at 50% 30%, #fff2d7, #f4dbb2);
+  }
+  .game-shell .pb-slot.empty {
+    background: linear-gradient(130deg, #f9e5c2, #efd09e);
+    border-color: #daa763;
+    box-shadow:
+      inset 0 0 0 2px #fff2d3,
+      0 1px 1px #bd884338;
+  }
+  .game-shell .pb-center-copy b {
+    color: #123e4d;
+  }
+  .game-shell .pb-event {
+    background: linear-gradient(110deg, #206b76, #104650);
+    color: #ffdc83;
+    box-shadow:
+      inset 0 0 0 1px #85b0aa,
+      0 1px 2px #855b3430;
+  }
+  .game-shell .player-mat .mat-board {
+    background: radial-gradient(ellipse at 50% 35%, #fff2d4, #f6ddb1);
+    border-color: #b9793f;
+    box-shadow: inset 0 0 0 1px #ffeac3;
+  }
+  .game-shell .player-mat .mat-group {
+    background: radial-gradient(ellipse at 35% 35%, #fff6e2, #f9e4bd);
+    border-color: #dcad6c;
+    box-shadow: inset 0 0 0 1px #fff3d9;
+  }
+  .game-shell .player-mat .mat-category button {
+    color: #103e4d;
+  }
+  .game-shell .player-mat .mat-category > b {
+    color: #ac581a;
+  }
+  .game-shell
+    .mobile-player-board
+    .mat-group:not(.mat-monument):not(.mat-civilization)
+    .piece-label {
+    display: none;
+  }
+  .game-shell .player-mat:not(.mobile-player-board) .mat-monument .mat-pieces {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .game-shell .player-mat:not(.mobile-player-board) .mat-monument .piece-label {
+    font-size: 8px;
+  }
+  .game-shell .player-mat .mat-side-label {
+    width: 85%;
+    margin-inline: auto;
+    border-radius: 0 0 6px 6px;
+    background: linear-gradient(#b4783d, #94552c);
+    color: #fff1cd;
+    box-shadow: inset 0 -1px 0 #d5a362;
+    letter-spacing: 0.06em;
+  }
+  .game-shell .player-mat .mat-center {
+    background:
+      repeating-linear-gradient(45deg, transparent 0 10px, #b4c8a512 10px 11px),
+      repeating-linear-gradient(
+        -45deg,
+        transparent 0 10px,
+        #b4c8a512 10px 11px
+      ),
+      linear-gradient(120deg, #206a77, #124b5a);
+    border-color: #d5a259;
+    box-shadow: inset 0 0 0 1px #5d9190;
+  }
+  .game-shell .table-sidebar .player-summary {
+    --player-card-fill: #ffefd5;
+    border-color: #d3a05c;
+    color: #123f4d;
+    box-shadow:
+      inset 0 0 0 1px #fff8e9,
+      0 2px 2px #97652e20;
+  }
+  .game-shell .table-sidebar .player-summary.current {
+    --player-card-fill: #ffdc8a;
+    border-color: #9e4e28;
+  }
+  .game-shell .action-panel {
+    border-color: #d49a54;
+    background: radial-gradient(ellipse at 35% 20%, #fff7e7, #f7dfb7);
+    box-shadow:
+      inset 0 0 0 1px #fff4df,
+      0 2px 2px #9c683226;
+  }
+  .game-shell .action-panel .action-buttons > .primary:not(:disabled) {
+    background: linear-gradient(120deg, #216a77, #104756);
+    color: #fff3cc;
+    border-color: #247284;
+  }
+  .game-shell .action-panel .action-buttons > .invoke:not(:disabled) {
+    background: linear-gradient(125deg, #b75d2c, #973f22);
+    color: #fff0d0;
+    border-color: #cc783b;
+  }
+  .game-shell .public-board::after,
+  .game-shell .player-mat .mat-board::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    background:
+      url("./assets/egyptian-rosette.svg") left top / 12px 12px no-repeat,
+      url("./assets/egyptian-rosette.svg") right top / 12px 12px no-repeat,
+      url("./assets/egyptian-rosette.svg") left bottom / 12px 12px no-repeat,
+      url("./assets/egyptian-rosette.svg") right bottom / 12px 12px no-repeat;
+    pointer-events: none;
+  }
+}

@@ -11,6 +11,7 @@ export type Motion = {
 export type Journey = {
   from: string;
   to: string;
+  via?: string;
   tile?: Tile;
   sun?: number;
   delay: number;
@@ -27,12 +28,11 @@ export function journeys(
     const t = after.lastTile!;
     out.push({
       from: "bag",
-      to: t.kind === "ra" ? "ra-reveal" : `tile-${t.id}`,
+      to: t.kind === "ra" ? "discard" : `tile-${t.id}`,
+      ...(t.kind === "ra" ? { via: "ra-reveal" } : {}),
       tile: t,
       delay: 0,
     });
-    if (t.kind === "ra")
-      out.push({ from: "ra-reveal", to: "discard", tile: t, delay: 1350 });
   }
   if (action.type === "bid" && action.sun !== null && move.kind !== "win")
     out.push({
