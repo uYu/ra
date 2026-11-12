@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { advance, newGame } from "../src/game/engine.ts";
 import {
   auctionNotice,
+  auctionReceipt,
   describeMove,
   recentMoves,
 } from "../src/game/presentation.ts";
@@ -101,4 +102,64 @@ test("recent move reconstruction is bounded, chronological, and does not mutate 
     [16, 17, 18, 19, 20],
   );
   assert.deepEqual(save, copy);
+});
+
+test("auction receipt attributes a last-pass win to the earlier bidder and retains its entire lot", () => {
+  let state = advance(setup(), { type: "draw" });
+  state = advance(state, { type: "invoke" });
+  const winner = state.current,
+    paid = state.players[winner].suns[0],
+    received = state.center;
+  const lot = structuredClone(state.market);
+  state = advance(state, { type: "bid", sun: paid });
+  assert.equal(
+    auctionReceipt(
+      state,
+      { type: "bid", sun: null },
+      advance(state, { type: "bid", sun: null }),
+    ),
+    null,
+  );
+  state = advance(state, { type: "bid", sun: null });
+  const action = { type: "bid", sun: null } as const;
+  const after = advance(state, action);
+  assert.deepEqual(auctionReceipt(state, action, after), {
+    winner,
+    paid,
+    received,
+    tiles: lot,
+  });
+  assert.equal(after.market.length, 0);
+});
+test("auction receipt uses the final bidder when they raise and supports a disk-only auction", () => {
+  let state = advance(setup(), { type: "invoke" });
+  state = advance(state, { type: "bid", sun: null });
+  state = advance(state, { type: "bid", sun: null });
+  const action = {
+    type: "bid",
+    sun: state.players[state.current].suns[0],
+  } as const;
+  const after = advance(state, action);
+  assert.deepEqual(auctionReceipt(state, action, after), {
+    winner: state.current,
+    paid: action.sun,
+    received: state.center,
+    tiles: [],
+  });
+});
+test("an all-pass auction and non-auction actions never announce a winner", () => {
+  const before = setup(),
+    action = { type: "draw" } as const;
+  assert.equal(auctionReceipt(before, action, advance(before, action)), null);
+  before.bag.push(
+    ...before.bag.splice(
+      before.bag.findIndex((t) => t.kind === "ra"),
+      1,
+    ),
+  );
+  let state = advance(before, action);
+  state = advance(state, { type: "bid", sun: null });
+  state = advance(state, { type: "bid", sun: null });
+  const pass = { type: "bid", sun: null } as const;
+  assert.equal(auctionReceipt(state, pass, advance(state, pass)), null);
 });

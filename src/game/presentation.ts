@@ -41,6 +41,27 @@ export type Move = {
     | "next";
   winner?: number;
 };
+export type AuctionReceipt = {
+  winner: number;
+  paid: number;
+  received: number;
+  tiles: Tile[];
+};
+export function auctionReceipt(
+  before: State,
+  action: Action,
+  after: State,
+): AuctionReceipt | null {
+  if (action.type !== "bid" || !before.auction || after.auction) return null;
+  const winner = action.sun === null ? before.auction.winner : before.current;
+  if (winner < 0) return null;
+  return {
+    winner,
+    paid: action.sun ?? before.auction.high,
+    received: before.center,
+    tiles: [...before.market],
+  };
+}
 export function describeMove(
   before: State,
   action: Action,

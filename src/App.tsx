@@ -1,5 +1,6 @@
 import { SunDiskArt } from "./components/TokenIllustration.tsx";
 import { AuctionIntroduction } from "./components/AuctionIntroduction.tsx";
+import { AuctionReceiptDialog } from "./components/AuctionReceiptDialog.tsx";
 import type { Tile as TileType } from "./game/types.ts";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -42,8 +43,12 @@ import { readPreferences, writePreferences } from "./game/preferences.ts";
 import { Glyph, Landscape, Sun } from "./components/Art.tsx";
 import { Tile, TileInfoContext } from "./components/Tile.tsx";
 import { TileDetails } from "./components/TileDetails.tsx";
-import type { Move } from "./game/presentation.ts";
-import { describeMove, recentMoves } from "./game/presentation.ts";
+import type { Move, AuctionReceipt } from "./game/presentation.ts";
+import {
+  auctionReceipt,
+  describeMove,
+  recentMoves,
+} from "./game/presentation.ts";
 import { ActionFeed } from "./components/ActionFeed.tsx";
 import { ActionMotion, captureAnchors } from "./components/ActionMotion.tsx";
 import type { Motion } from "./components/ActionMotion.tsx";
@@ -113,6 +118,7 @@ function App() {
   const [tileInfo, setTileInfo] = useState<TileType | null>(null);
   const [motion, setMotion] = useState<Motion | null>(null);
   const [auctionIntro, setAuctionIntro] = useState(false);
+  const [receipt, setReceipt] = useState<AuctionReceipt | null>(null);
   const [moveInfo, setMoveInfo] = useState<Move | null>(null);
   const [acquisitions, setAcquisitions] = useState<Record<number, Move>>({});
   const [stepMode, setStepMode] = useState(false),
@@ -162,11 +168,13 @@ function App() {
     !modal &&
     !aiError &&
     !auctionIntro &&
+    !receipt &&
     !motion;
   useEffect(() => {
     if (screen !== "game") {
       setMotion(null);
       setAuctionIntro(false);
+      setReceipt(null);
     }
   }, [screen]);
   const latestMove = moves.at(-1);
@@ -194,6 +202,7 @@ function App() {
     (viewed.phase === "epoch" || viewed.phase === "over") &&
     resultDismissed !== resultKey &&
     !modal &&
+    !receipt &&
     !motion;
   const resetSelection = () => {
     setSelectedSun(null);
@@ -221,13 +230,15 @@ function App() {
     }
   }
   function commit(action: Action, endAfterExchange = false) {
-    if (!game || !save || motion) return;
+    if (!game || !save || motion || receipt) return;
     try {
       const next = advance(game, action);
       if (next.auction && !game.auction) setAuctionIntro(true);
       if (action.type === "god")
         finishGodFor.current = endAfterExchange ? game.current : null;
       const move = describeMove(game, action, next);
+      const result = auctionReceipt(game, action, next);
+      if (result) setReceipt(result);
       setMotion({
         id: next.steps,
         before: game,
@@ -298,6 +309,7 @@ function App() {
       waiting ||
       motion ||
       auctionIntro ||
+      receipt ||
       aiError
     )
       return;
@@ -346,6 +358,7 @@ function App() {
     stepMode,
     motion,
     auctionIntro,
+    receipt,
   ]);
   useEffect(() => {
     if (screen !== "replay" || !replayPlaying || !save || modal) return;
@@ -366,6 +379,7 @@ function App() {
     setWaiting(false);
     setGame(newGame(config));
     setAuctionIntro(false);
+    setReceipt(null);
     setSave(createSave(config));
     setScreen("game");
     setMobileView("board");
@@ -388,6 +402,7 @@ function App() {
       setSave(loadedSave);
       setGame(state);
       setAuctionIntro(false);
+      setReceipt(null);
       setScreen("game");
       setMobileView("board");
       setModal(null);
@@ -440,8 +455,9 @@ function App() {
   const inspecting =
     viewed?.players[Math.min(inspect, viewed.players.length - 1)];
   const estimate = viewed ? scoreEpoch(viewed) : [];
-  const title =
-    auctionIntro && viewed?.auction
+  const title = receipt
+    ? "拍卖成交 · 等待确认"
+    : auctionIntro && viewed?.auction
       ? "拍卖即将开始"
       : viewed?.phase === "auction"
         ? `${humanName}的出价回合`
@@ -1109,7 +1125,7 @@ function App() {
                                     ? motion || auctionIntro
                                       ? "待出价"
                                       : "出价中"
-                                    : motion
+                                    : motion || receipt
                                       ? "待行动"
                                       : viewed.phase === "disaster"
                                         ? "弃牌中"
@@ -1267,6 +1283,25 @@ function App() {
             }}
           />
         )}
+      {receipt && !motion && !modal && screen === "game" && viewed && (
+        <AuctionReceiptDialog
+          receipt={receipt}
+          state={viewed}
+          onContinue={() => {
+            setReceipt(null);
+            setWaiting(false);
+          }}
+          onViewWinner={() => {
+            viewPlayer(receipt.winner);
+            setPaused(true);
+            if (["epoch", "over"].includes(viewed.phase))
+              setResultDismissed(resultKey);
+            setMobileView("collection");
+            setReceipt(null);
+            setWaiting(false);
+          }}
+        />
+      )}
       {modal === "move" && moveInfo && (
         <Dialog title={moveInfo.title} onClose={() => setModal(null)}>
           <p className="move-detail-text">{moveInfo.detail}</p>
