@@ -1,0 +1,833 @@
+/* Desktop counterpart of the warm paper, turquoise enamel and gold pieces. */
+@media (min-width: 768px) and (min-height: 601px), (min-width: 1025px) {
+  .game-shell {
+    --desktop-ink: #123f4b;
+    --desktop-edge: #c38c48;
+    --desktop-paper: #fff0d5;
+    color: var(--desktop-ink);
+    background: radial-gradient(ellipse at 48% 35%, #fff9ec, #f6e1bd 95%);
+    grid-template-columns: 102px minmax(0, 1fr);
+  }
+  .game-shell .game-navigation {
+    position: sticky;
+    isolation: isolate;
+    min-height: calc(100dvh - 16px);
+    max-height: none;
+    padding: 14px 5px 10px;
+    overflow: hidden;
+    border: 2px solid #c49350;
+    border-radius: 8px;
+    background:
+      repeating-linear-gradient(45deg, transparent 0 16px, #b3c6ab05 16px 17px),
+      linear-gradient(100deg, #216975, #104653);
+    box-shadow:
+      inset 0 0 0 2px #e7c17d70,
+      1px 0 4px #774a3030;
+    color: #ffe5a1;
+  }
+  .game-shell .game-navigation::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    z-index: -1;
+    height: min(36dvh, 310px);
+    background: url("./assets/falcon-relief.svg") center bottom / 100% auto
+      no-repeat;
+    pointer-events: none;
+  }
+  .game-shell .game-navigation::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    z-index: -1;
+    background:
+      url("./assets/egyptian-rosette.svg") left top / 18px no-repeat,
+      url("./assets/egyptian-rosette.svg") right top / 18px no-repeat,
+      url("./assets/egyptian-rosette.svg") left bottom / 18px no-repeat,
+      url("./assets/egyptian-rosette.svg") right bottom / 18px no-repeat;
+    pointer-events: none;
+  }
+  .game-shell .game-navigation-brand {
+    padding-bottom: 16px;
+    gap: 4px;
+  }
+  .game-shell .game-navigation-brand b {
+    font-size: 31px;
+    line-height: 33px;
+    color: #ffdb83;
+    text-shadow: 0 1px 2px #083f50;
+  }
+  .game-shell .game-navigation-brand > span {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+  .game-shell .game-navigation-brand .sun-emblem {
+    width: 34px;
+    height: 34px;
+    color: #f9d477;
+    background: transparent;
+    border: 0;
+  }
+  .game-shell .game-navigation-links {
+    gap: 5px;
+  }
+  .game-shell .game-navigation-links > button {
+    min-height: clamp(54px, 7.2dvh, 72px);
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #c5ad735e;
+    border-radius: 9px;
+    color: #fff0c6;
+    background: linear-gradient(115deg, #26707cbb, #144b58cc);
+    box-shadow:
+      inset 0 0 0 1px #8cb0a51a,
+      0 2px 2px #07344030;
+  }
+  .game-shell .game-navigation-links > button svg {
+    width: 25px;
+    height: 25px;
+  }
+  .game-shell .game-navigation-links > .nav-home {
+    color: #173e48;
+    border-color: #edc078;
+    background: linear-gradient(125deg, #ffe49c, #f4c56a);
+    box-shadow:
+      inset 0 0 0 2px #fff0c780,
+      0 2px 3px #052f3a70;
+  }
+  .game-shell .game-navigation-links > button:hover {
+    border-color: #f0cb7d;
+    filter: brightness(1.1);
+  }
+  .game-shell .game-navigation-divider {
+    display: none;
+  }
+  .game-shell .game-navigation-save {
+    color: #f8dfad;
+    text-shadow: 0 1px 2px #0e4651;
+  }
+  .game-shell .table-heading {
+    position: relative;
+    isolation: isolate;
+    background: url("./assets/pyramid-horizon.svg") right bottom / auto 100%
+      no-repeat;
+    border-bottom: 1px solid #cca165;
+  }
+  .game-shell .table-heading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("./assets/winged-sun.svg") 53% center / auto 100% no-repeat;
+    pointer-events: none;
+  }
+  .game-shell .table-heading h1 {
+    font-size: 22px;
+    color: #123e4b;
+  }
+  .game-shell .table-heading h1 > span {
+    background: linear-gradient(#ffe6aa, #f7d68e);
+    color: #72502b;
+    border-color: #d1a15f;
+    font-size: 10px;
+  }
+  .game-shell .table-fit .public-board {
+    position: relative;
+    border: 2px solid #c18b48;
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0 0 1px #ffe7b7,
+      0 2px 3px #80552c30;
+  }
+  .game-shell .pb-sky {
+    background:
+      linear-gradient(90deg, #0c4d5bf0, #0d505980 48%, #144a5770),
+      linear-gradient(
+        0deg,
+        #0f4b59 0%,
+        #0f4b59ed 28%,
+        #104c5980 70%,
+        #104c59b3
+      ),
+      url("./assets/nile-panorama.jpg") center 51% / cover;
+    border-bottom: 3px solid #d5a357;
+    color: #ffdf8d;
+  }
+  .game-shell .pb-journey-title {
+    gap: 10px;
+    text-shadow: 0 1px 2px #0a3542;
+  }
+  .game-shell .pb-journey-title > b {
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: #ffdc81;
+  }
+  .game-shell .pb-progress-count {
+    font-size: 16px;
+    color: #ffe096;
+    border-color: #e0b769;
+    border-radius: 6px;
+    background: #114957e8;
+  }
+  .game-shell .pb-track-context {
+    color: #fff0c7;
+    font-size: 12px;
+    text-shadow: 0 1px 2px #0e3e49;
+  }
+  .game-shell .pb-remaining {
+    display: none;
+  }
+  .game-shell .pb-epochs > span {
+    border-color: #99b3aa;
+    background: #124a57dd;
+    color: #fff1cc;
+    box-shadow:
+      inset 0 0 0 2px #9ab7ac25,
+      0 2px 3px #062f3b70;
+    border-radius: 8px;
+  }
+  .game-shell .pb-epochs > .current {
+    background: linear-gradient(135deg, #ffe8a5, #fac65c);
+    border-color: #ffe3a0;
+    color: #133f4c;
+  }
+  .game-shell .pb-epochs small {
+    display: none;
+  }
+  .game-shell .pb-epochs b {
+    font-size: 25px;
+  }
+  .game-shell .pb-track-spaces::before {
+    background: #ecc374;
+    opacity: 0.9;
+  }
+  .game-shell .pb-track-marker {
+    border-color: #d3c18d;
+    background: radial-gradient(circle at 30% 25%, #3e8790, #155363);
+    box-shadow: 0 2px 3px #062f3d80;
+    color: #fff1c6;
+  }
+  .game-shell .boat .pb-track-marker {
+    border-color: #80b8ae;
+    outline-color: #f1ce80;
+    background: radial-gradient(circle at 30% 25%, #fff0b6, #f5c464);
+    color: #17606e;
+  }
+  .game-shell .last .pb-track-marker {
+    border-color: #f0c879;
+    background: linear-gradient(120deg, #bc663b, #993c29);
+    color: #ffd476;
+  }
+  .game-shell .pb-body {
+    background: radial-gradient(ellipse at 35% 30%, #fff6e2, #f6dfb8);
+  }
+  .game-shell .pb-lot-heading {
+    color: #75512f;
+    font-size: 11px;
+  }
+  .game-shell .pb-lot-heading b {
+    color: #143e4b;
+    font-size: 16px;
+  }
+  .game-shell .pb-slot.empty {
+    border-color: #d8aa6b;
+    border-radius: 8px;
+    background: linear-gradient(130deg, #f9e6c4, #f0d3a2);
+    box-shadow:
+      inset 0 0 0 3px #fff0d0,
+      0 1px 2px #91602a25;
+  }
+  .game-shell .pb-slot.empty small {
+    color: #75512f;
+    font-size: 11px;
+  }
+  .game-shell .pb-dock {
+    border-left-color: #cfaa72;
+  }
+  .game-shell .pb-center-copy b {
+    color: #133e4a;
+    font-size: 15px;
+  }
+  .game-shell .pb-center-copy span,
+  .game-shell .pb-counts,
+  .game-shell .pb-last {
+    color: #715836;
+  }
+  .game-shell .pb-counts b {
+    color: #163f49;
+  }
+  .game-shell .pb-event {
+    background: linear-gradient(120deg, #226c78, #104956);
+    color: #ffe7ae;
+    box-shadow:
+      inset 0 0 0 1px #7fa7a0,
+      0 2px 2px #8e5d3030;
+  }
+  .game-shell .table-fit .action-panel {
+    border: 1px solid #cc9955;
+    border-radius: 10px;
+    background: radial-gradient(ellipse at 45% 15%, #fff8e7, #f7dfb8);
+    box-shadow:
+      inset 0 0 0 2px #fff1d4,
+      0 2px 3px #8e5c2d20;
+  }
+  .game-shell .action-heading h2 {
+    color: #143f4b;
+    font-size: 15px;
+  }
+  .game-shell .action-heading p {
+    color: #786044;
+  }
+  .game-shell .table-fit .action-panel .action-buttons > button {
+    border-radius: 9px;
+    box-shadow:
+      inset 0 0 0 1px #fff3c850,
+      0 3px 2px #94622830;
+  }
+  .game-shell
+    .table-fit
+    .action-panel
+    .action-buttons
+    > .primary:not(:disabled) {
+    border-color: #2f8794;
+    background: linear-gradient(120deg, #226c79, #104b59);
+    color: #fff5db;
+  }
+  .game-shell
+    .table-fit
+    .action-panel
+    .action-buttons
+    > .invoke:not(:disabled) {
+    border-color: #d18b4f;
+    background: linear-gradient(125deg, #b55c2c, #983e22);
+    color: #fff1d2;
+  }
+  .game-shell
+    .table-fit
+    .action-panel
+    .action-buttons
+    > .god-action:not(:disabled) {
+    background: linear-gradient(125deg, #ffe499, #edb745);
+    color: #684725;
+    border-color: #c99443;
+  }
+  .game-shell .table-fit .action-panel .action-buttons > button:disabled {
+    background: linear-gradient(125deg, #f7ead1, #e9dcc1);
+    color: #a39b84;
+    border-color: #d0ba96;
+    opacity: 1;
+    box-shadow:
+      inset 0 0 0 1px #fff3d9,
+      0 2px 2px #93623025;
+  }
+  .game-shell .player-mat > header {
+    color: #123f4b;
+    background: transparent;
+  }
+  .game-shell .player-mat > header h2 {
+    font-size: 18px;
+  }
+  .game-shell .player-mat nav button {
+    border: 1px solid #d6b17a;
+    border-radius: 5px;
+    color: #264b54;
+    background: linear-gradient(#fff5e2, #f4dfbb);
+  }
+  .game-shell .player-mat nav .selected {
+    background: linear-gradient(#ffe39a, #f0bf5e);
+    color: #563e22;
+    border-color: #c28b42;
+  }
+  .game-shell .player-mat .mat-board {
+    border-color: #b88448;
+    border-radius: 10px;
+    background: radial-gradient(ellipse at 40% 30%, #fff3d8, #f5dcb2);
+    box-shadow:
+      inset 0 0 0 1px #fff2ce,
+      0 2px 3px #83562c30;
+  }
+  .game-shell .player-mat .mat-board::before,
+  .game-shell .player-mat .mat-board::after {
+    height: 3px;
+    background: repeating-linear-gradient(
+      90deg,
+      #c99243 0 4px,
+      #1e6170 4px 8px,
+      #e5b85f 8px 12px,
+      #aa4f32 12px 16px
+    );
+  }
+  .game-shell .player-mat .mat-group {
+    border-color: #dbad70;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at 40% 30%, #fff6e2, #f7e1bb);
+    box-shadow: inset 0 0 0 1px #fff1d1;
+  }
+  .game-shell .player-mat .mat-side-label {
+    justify-self: start;
+    min-width: 82px;
+    padding-inline: 12px;
+    margin-left: 15px;
+    border-radius: 0 0 6px 6px;
+    color: #fff0c7;
+    background: linear-gradient(#b27b40, #955b2f);
+    box-shadow: inset 0 -1px 0 #d6a65f;
+    text-align: center;
+  }
+  .game-shell .player-mat .mat-category button {
+    color: #103e4b;
+    font-size: 14px;
+  }
+  .game-shell .player-mat .mat-category > b {
+    color: #94501c;
+    font-size: 17px;
+  }
+  .game-shell .player-mat .mat-center {
+    border-color: #d4a35b;
+    border-radius: 7px;
+    background:
+      url("./assets/winged-sun.svg") center bottom 3px / 85% auto no-repeat,
+      repeating-linear-gradient(45deg, transparent 0 14px, #b4c7a910 14px 15px),
+      repeating-linear-gradient(
+        -45deg,
+        transparent 0 14px,
+        #b4c7a910 14px 15px
+      ),
+      linear-gradient(120deg, #216a78, #114959);
+    box-shadow: inset 0 0 0 1px #76a39b60;
+    color: #ffe7ae;
+  }
+  .game-shell .player-mat .mat-center > span {
+    border-bottom: 1px solid #d8bd7b80;
+    padding-bottom: 4px;
+  }
+  .game-shell .table-sidebar {
+    background: transparent;
+  }
+  .game-shell .table-fit .table-sidebar .player-strip {
+    border: 1px solid #d2ab74;
+    border-radius: 9px;
+    background: #fff4df60;
+    padding: 7px;
+    box-shadow: inset 0 0 0 1px #fff7e7;
+  }
+  .game-shell .table-fit .table-sidebar .player-summary {
+    border: 1px solid #d3b17b;
+    border-radius: 7px;
+    background: linear-gradient(125deg, #fff3dc, #f2ddb6);
+    box-shadow:
+      inset 0 0 0 1px #fff6e0,
+      0 2px 3px #85592925;
+  }
+  .game-shell .table-fit .table-sidebar .player-summary.current {
+    border-color: #9a4e2c;
+    background: linear-gradient(125deg, #ffecb6, #f5ce80);
+    box-shadow:
+      inset 3px 0 #a65c31,
+      inset 0 0 0 1px #fff1c1,
+      0 2px 3px #85592925;
+  }
+  .game-shell .table-fit .table-sidebar .avatar {
+    background: #f6e8cb;
+    border: 1px solid #cbae7a;
+    color: #3d807e;
+  }
+  .game-shell .player-meta > b {
+    color: #123e4b;
+    font-size: 13px;
+  }
+  .game-shell .table-fit .table-sidebar .mini-disks {
+    gap: 7px;
+  }
+  .game-shell .table-fit .table-sidebar .mini-disks span {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .game-shell
+    .table-fit
+    .table-sidebar
+    :is(.score-card, .action-feed, .acquisition-notice) {
+    border: 1px solid #d1a167;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at 35% 20%, #fff5e0, #f6dfb7);
+    box-shadow: inset 0 0 0 1px #fff5de;
+    color: #173f4b;
+  }
+  .game-shell .score-card h3,
+  .game-shell .action-feed h3,
+  .game-shell .latest-move h4 {
+    color: #143f4b;
+  }
+  .game-shell .public-board::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    z-index: 2;
+    background:
+      url("./assets/egyptian-rosette.svg") left top / 15px no-repeat,
+      url("./assets/egyptian-rosette.svg") right top / 15px no-repeat,
+      url("./assets/egyptian-rosette.svg") left bottom / 15px no-repeat,
+      url("./assets/egyptian-rosette.svg") right bottom / 15px no-repeat;
+    pointer-events: none;
+  }
+  .game-shell .game-screen > footer {
+    color: #796344;
+    border-top: 1px solid #d2b281;
+  }
+}
+
+/* Fit a full desktop game on screen while preserving scroll on shorter windows. */
+@media (min-width: 1100px) and (min-height: 700px) {
+  .game-shell {
+    height: 100dvh;
+    padding-block: 6px;
+  }
+  .game-shell > .game-screen.table-fit {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    gap: 7px;
+  }
+  .game-shell .game-navigation {
+    min-height: 0;
+    height: calc(100dvh - 12px);
+    top: 6px;
+  }
+  .game-shell .table-fit .table-heading {
+    flex: none;
+    height: 37px;
+    margin: 0;
+  }
+  .game-shell .table-fit .game-layout {
+    --desktop-board-height: clamp(280px, 38dvh, 385px);
+    --desktop-action-height: clamp(84px, 10dvh, 104px);
+    flex: 1;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr) clamp(218px, 17vw, 265px);
+    gap: 12px;
+  }
+  .game-shell .table-fit .table-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows:
+      var(--desktop-board-height) var(--desktop-action-height)
+      minmax(0, 1fr);
+    gap: 8px;
+    min-height: 0;
+  }
+  .game-shell .table-fit .public-board {
+    display: grid;
+    grid-template-rows: 44% minmax(0, 1fr);
+    min-height: 0;
+  }
+  .game-shell .pb-sky {
+    min-height: 0;
+    padding: 10px 15px 6px;
+  }
+  .game-shell .pb-heading {
+    height: 51px;
+  }
+  .game-shell .pb-track {
+    margin-top: 3px;
+  }
+  .game-shell .pb-marker-slot {
+    height: clamp(42px, 5.8dvh, 58px);
+  }
+  .game-shell .pb-track-spaces::before {
+    top: clamp(20px, 2.9dvh, 29px);
+  }
+  .game-shell .pb-track-marker {
+    width: clamp(29px, 4.2dvh, 42px);
+    height: clamp(29px, 4.2dvh, 42px);
+  }
+  .game-shell .boat .pb-track-marker {
+    width: clamp(39px, 5.8dvh, 58px);
+    height: auto;
+  }
+  .game-shell .pb-track-caption {
+    margin-top: 1px;
+    height: 14px;
+    line-height: 14px;
+  }
+  .game-shell .pb-body {
+    grid-template-columns: minmax(0, 1fr) 164px;
+    padding: 9px 12px;
+    gap: 10px;
+    min-height: 0;
+  }
+  .game-shell .pb-auction {
+    display: grid;
+    grid-template-rows: 24px minmax(0, 1fr);
+    min-height: 0;
+  }
+  .game-shell .pb-lot-heading {
+    margin: 0;
+    align-self: start;
+  }
+  .game-shell .pb-market {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 6px;
+    min-height: 0;
+  }
+  .game-shell .pb-slot {
+    height: auto;
+    min-height: 0;
+  }
+  .game-shell .public-board .pb-market .tile {
+    min-height: 0;
+  }
+  .game-shell .public-board .pb-market .tile-illustration {
+    flex: 1 1 60px;
+    height: auto;
+    min-height: 0;
+  }
+  .game-shell .public-board .pb-market .tile-art {
+    height: 100%;
+    min-height: 0;
+  }
+  .game-shell .public-board .pb-market .tile > b {
+    height: 20px;
+    min-height: 20px;
+    font-size: 11px;
+  }
+  .game-shell .public-board .pb-market .tile-effect {
+    height: 22px;
+    min-height: 22px;
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .game-shell .pb-dock {
+    gap: 6px;
+    min-height: 0;
+  }
+  .game-shell .pb-center {
+    gap: 8px;
+  }
+  .game-shell .pb-sun {
+    width: 44px;
+    height: 44px;
+  }
+  .game-shell .pb-sun b {
+    font-size: 25px;
+  }
+  .game-shell .pb-sun small {
+    display: none;
+  }
+  .game-shell .pb-counts {
+    min-height: 21px;
+    padding-bottom: 3px;
+  }
+  .game-shell .pb-last {
+    height: 22px;
+  }
+  .game-shell .pb-event {
+    flex: 1;
+    min-height: 30px;
+    height: auto;
+  }
+  .game-shell .table-fit .action-panel {
+    grid-template-columns: 205px minmax(0, 1fr);
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 8px 12px;
+    gap: 14px;
+  }
+  .game-shell .action-heading {
+    height: 100%;
+    align-content: center;
+    border-right: 1px solid #d0ad74;
+    padding-right: 10px;
+  }
+  .game-shell .table-fit .phase-turn .phase-actions {
+    grid-template-rows: minmax(0, 1fr);
+    gap: 0;
+  }
+  .game-shell .turn-action-hint {
+    display: none;
+  }
+  .game-shell .table-fit .phase-actions .god-selection {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+  .game-shell .god-selection > span {
+    display: none;
+  }
+  .game-shell .table-fit .god-selection-buttons {
+    min-height: 0;
+    height: 100%;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .game-shell .table-fit .god-selection-buttons > button {
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    padding: 6px 10px;
+    gap: 7px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  .game-shell .table-fit .action-panel .action-buttons > button {
+    min-height: 0;
+    height: 100%;
+    padding: 6px 9px;
+  }
+  .game-shell .table-fit .action-panel .action-buttons > button > svg {
+    width: 30px;
+    height: 30px;
+  }
+  .game-shell .table-fit .action-buttons .action-button-copy b {
+    font-size: 17px;
+  }
+  .game-shell .table-fit .action-buttons .action-button-copy small {
+    font-size: 11px;
+  }
+  .game-shell .table-fit .phase-auction .phase-actions {
+    grid-template-columns: minmax(0, 1fr) 235px;
+    grid-template-rows: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .game-shell .phase-auction .hint {
+    display: none;
+  }
+  .game-shell .table-fit .phase-auction .bid-history {
+    display: flex;
+    height: auto;
+    gap: 4px;
+  }
+  .game-shell .table-fit .phase-auction .bid-history > span {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 58px;
+    padding: 4px;
+    border-radius: 6px;
+    background: #fff1d4;
+    border-color: #d0ad71;
+  }
+  .game-shell .table-fit .phase-auction .bid-history > .now {
+    background: #f8dc96;
+    border-color: #b58136;
+  }
+  .game-shell .table-fit .phase-auction .bid-history .bid-player-name {
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .game-shell .table-fit .phase-auction .bid-controls {
+    gap: 3px;
+  }
+  .game-shell .phase-auction .sun-choices .disk {
+    width: 30px;
+    height: 30px;
+  }
+  .game-shell .phase-auction .sun-choices .disk span {
+    font-size: 16px;
+  }
+  .game-shell .phase-auction .sun-choices .disk small {
+    display: none;
+  }
+  .game-shell .phase-auction .bid-buttons > button {
+    min-height: 28px;
+    padding: 3px 14px;
+    font-size: 11px;
+  }
+  .game-shell .table-main > .player-mat:not(.mobile-player-board) {
+    display: grid;
+    grid-template-rows: 32px minmax(0, 1fr);
+    min-height: 0;
+  }
+  .game-shell .player-mat > header {
+    height: auto;
+  }
+  .game-shell .table-fit .mat-board {
+    --desktop-piece-height: clamp(36px, calc(6dvh - 6px), 54px);
+    min-height: 0;
+    height: 100%;
+    grid-template-columns: minmax(0, 1fr) 90px minmax(0, 1fr);
+    grid-template-rows: 14px repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    padding: 7px;
+  }
+  .game-shell .table-fit .mat-group {
+    min-height: 0;
+    grid-template-columns: 70px minmax(0, 1fr);
+    padding: 3px 8px;
+  }
+  .game-shell .table-fit .mat-category {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: baseline;
+    gap: 3px 7px;
+  }
+  .game-shell .table-fit .mat-category button {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  .game-shell .mat-suns {
+    grid-template-rows: none !important;
+    margin: 3px 0 14px;
+    gap: 5px;
+    grid-auto-rows: minmax(0, 1fr);
+  }
+  .game-shell .table-fit .mat-pieces .mat-piece,
+  .game-shell .table-fit .table-main:has(.bidding) .mat-pieces .mat-piece {
+    height: var(--desktop-piece-height);
+    min-height: 0;
+  }
+  .game-shell .table-fit .mat-pieces .piece-picture,
+  .game-shell .table-fit .mat-pieces .mat-piece .tile-art {
+    height: calc(var(--desktop-piece-height) - 18px);
+    flex-basis: calc(var(--desktop-piece-height) - 18px);
+  }
+  .game-shell .table-fit .phase-disaster .disaster-tiles,
+  .game-shell .table-fit .phase-disaster .disaster-tiles .tile-wrap,
+  .game-shell .table-fit .phase-disaster .disaster-tiles .tile {
+    height: calc(var(--desktop-action-height) - 18px);
+    min-height: 0;
+  }
+  .game-shell .table-fit .phase-disaster .disaster-tiles .tile-illustration,
+  .game-shell .table-fit .phase-disaster .disaster-tiles .tile-art {
+    height: 30px;
+    min-height: 0;
+  }
+  .game-shell .mat-sun {
+    width: clamp(32px, calc(8dvh - 24px), 61px);
+    height: auto;
+    max-height: 61px;
+    align-self: center;
+  }
+  .game-shell .mat-sun > b {
+    font-size: clamp(20px, calc(4dvh - 7px), 27px);
+  }
+  .game-shell .mat-sun > small {
+    display: none;
+  }
+  .game-shell .table-fit .table-sidebar {
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+  }
+  .game-shell .table-fit .table-sidebar .action-feed {
+    flex: 1;
+    min-height: 0;
+    max-height: none;
+  }
+  .game-shell .table-fit .table-sidebar .player-summary {
+    min-height: clamp(70px, 9.4dvh, 96px);
+  }
+  .game-shell .game-screen > footer {
+    flex: none;
+    height: 15px;
+    line-height: 15px;
+    margin: 0;
+    padding: 0 3px;
+    font-size: 9px;
+  }
+}

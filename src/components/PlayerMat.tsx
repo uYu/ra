@@ -1,3 +1,4 @@
+import { SunDiskArt } from "./TokenIllustration.tsx";
 import type { Move } from "../game/presentation.ts";
 import { type ReactNode, useContext, useEffect, useState } from "react";
 import { ChevronLeft, Eye, Maximize2 } from "lucide-react";
@@ -307,6 +308,7 @@ export function PlayerMat({
                     }
                     onClick={() => bidding.onSelect(n)}
                   >
+                    <SunDiskArt />
                     <b>{n}</b>
                     <small>
                       {n <= bidding.high
@@ -318,6 +320,7 @@ export function PlayerMat({
                   </button>
                 ) : (
                   <div className="mat-sun" key={n}>
+                    <SunDiskArt />
                     <b>{n}</b>
                     <small>{scoring ? "未使用" : "可出价"}</small>
                   </div>
