@@ -1,0 +1,187 @@
+/* Acting, auction ownership and the inspected board have different labels. */
+.game-shell .player-summary .player-meta > b {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+.game-shell .player-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.game-shell .player-summary .player-view-tag {
+  display: inline-flex !important;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 4px;
+  border: 1px solid #739c9c;
+  border-radius: 4px;
+  background: #e5f0e9;
+  color: #1a5965;
+  font-size: 10px;
+  line-height: 14px;
+}
+.game-shell .player-view-tag svg {
+  flex: none;
+}
+.game-shell .player-summary .turn-dot {
+  display: none;
+}
+.game-shell .mobile-player-status {
+  display: flex;
+  position: absolute;
+  inset: 5px 5px auto auto;
+  height: auto;
+  z-index: 1;
+  transform: none;
+}
+.game-shell .player-turn-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 3px 7px;
+  border: 1px solid #e6b574;
+  border-radius: 5px;
+  background: linear-gradient(120deg, #b45b2e, #8f3e25);
+  color: #fff7dc;
+  font-size: 11px;
+  line-height: 16px;
+  box-shadow: 0 1px 2px #79512c30;
+}
+.game-shell .player-turn-badge svg {
+  flex: none;
+}
+.game-shell .player-summary.current .player-meta {
+  padding-right: 59px;
+}
+.game-shell .player-summary.is-auction-caller .mobile-player-status {
+  display: none;
+}
+.game-shell .player-summary .auction-caller-badge {
+  top: 5px;
+  right: 5px;
+  width: auto;
+  min-width: 68px;
+  height: auto;
+  padding: 4px 6px;
+  border: 1px solid #d4ac64;
+  border-radius: 5px;
+  background: linear-gradient(120deg, #276c77, #164d5b);
+  color: #fff0c3;
+  gap: 1px;
+}
+.game-shell .player-summary .auction-caller-badge strong {
+  display: block;
+  font-size: 11px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+.game-shell .player-summary .auction-caller-badge small {
+  display: block;
+  font-size: 9px;
+  line-height: 12px;
+  color: #f4d899;
+}
+.game-shell .player-summary .auction-caller-badge > :is(svg, .tile-art) {
+  display: none;
+}
+.game-shell .player-summary.current .auction-caller-badge {
+  background: linear-gradient(120deg, #b45b2e, #8f3e25);
+}
+.game-shell .player-summary.is-auction-caller .player-meta {
+  padding-right: 76px;
+}
+.game-shell .table-fit .table-sidebar .player-summary.current {
+  border-color: #a24c29;
+  box-shadow:
+    inset 4px 0 #a24c29,
+    inset 0 0 0 1px #a24c29;
+}
+.game-shell .action-heading .auction-owner-copy {
+  color: #8f421f;
+  font-weight: 700;
+}
+.game-shell
+  .phase-auction
+  .action-heading
+  .action-copy
+  > p:not(.auction-owner-copy):not(.mobile-forced-bid) {
+  display: none;
+}
+
+@media (max-width: 767px),
+  (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+  .game-shell .table-sidebar .player-summary {
+    padding-top: 22px;
+    padding-bottom: 4px;
+    gap: 3px;
+  }
+  .game-shell .mobile-player-status {
+    inset: 0 0 auto;
+    height: 20px;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .game-shell .mobile-player-status .player-turn-badge {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    padding: 1px 2px;
+    gap: 2px;
+    border: 0;
+    border-radius: 6px 6px 0 0;
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .game-shell .player-summary .player-meta,
+  .game-shell .player-summary.current .player-meta,
+  .game-shell .player-summary.is-auction-caller .player-meta {
+    padding: 0 3px;
+  }
+  .game-shell .player-summary .player-meta > b {
+    justify-content: center;
+    gap: 3px;
+  }
+  .game-shell .player-summary .player-view-tag {
+    padding: 0 2px;
+    font-size: 9px;
+    line-height: 13px;
+  }
+  .game-shell .player-summary .player-view-tag svg {
+    display: none;
+  }
+  .game-shell .player-summary .auction-caller-badge {
+    inset: 0 0 auto;
+    display: flex;
+    width: auto;
+    min-width: 0;
+    height: 20px;
+    padding: 1px 2px;
+    border: 0;
+    border-radius: 6px 6px 0 0;
+    box-shadow: none;
+  }
+  .game-shell .player-summary .auction-caller-badge strong {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .game-shell .player-summary .auction-caller-badge small {
+    display: none;
+  }
+  .game-shell .table-fit .table-sidebar .player-summary.current {
+    background: linear-gradient(120deg, #ffe6a7, #f6c870);
+    border-color: #9d4827;
+    box-shadow: inset 0 0 0 2px #9d4827;
+  }
+  .game-shell
+    .table-fit
+    .table-sidebar
+    .player-summary.inspected:not(.current) {
+    border-color: #306d77;
+    box-shadow: inset 0 0 0 1px #306d77;
+  }
+}

@@ -32,9 +32,14 @@ export function Tile({
     >
       {hints.tooltip}
       <button
-        onMouseEnter={(e) => hints.show(tile, e.currentTarget)}
-        onMouseLeave={hints.hide}
-        onFocus={(e) => hints.show(tile, e.currentTarget)}
+        onPointerEnter={(e) => {
+          if (e.pointerType === "mouse") hints.show(tile, e.currentTarget);
+        }}
+        onPointerLeave={hints.hide}
+        onFocus={(e) => {
+          if (e.currentTarget.matches(":focus-visible"))
+            hints.show(tile, e.currentTarget);
+        }}
         onBlur={hints.hide}
         aria-describedby={hints.id}
         className={`tile ${small ? "small" : ""} ${selected ? "selected" : ""} ${danger ? "danger" : ""} tile-${tile.kind}`}

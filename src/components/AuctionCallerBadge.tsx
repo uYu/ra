@@ -15,6 +15,7 @@ export function AuctionCallerBadge({
   const reason = auction.reason;
   const label =
     reason === "draw" ? "抽到 RA" : reason === "full" ? "满轨拍卖" : "主动呼唤";
+  const ownerLabel = state.current === player ? "发起者出价" : "拍卖发起";
   const description = `${state.players[player].name}是本轮拍卖发起者：${reason === "draw" ? "抽到太阳神，太阳船前进" : reason === "full" ? "拍卖轨已满，呼唤 RA 发起拍卖，太阳船不前进" : "主动呼唤 RA，太阳船不前进"}；发起者最后出价。`;
   return (
     <span
@@ -30,6 +31,7 @@ export function AuctionCallerBadge({
       ) : (
         <Glyph kind="ra" />
       )}
+      <strong>{ownerLabel}</strong>
       <small>{label}</small>
     </span>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useId } from "react";
 import { X } from "lucide-react";
+import { restoreDialogFocus } from "./focus.ts";
 export function Dialog({
   title,
   onClose,
@@ -52,7 +53,7 @@ export function Dialog({
     return () => {
       document.removeEventListener("keydown", listener);
       document.body.style.overflow = overflow;
-      previous?.focus();
+      restoreDialogFocus(previous);
     };
   }, []);
   return (

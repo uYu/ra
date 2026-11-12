@@ -4,6 +4,7 @@ import type { Tile } from "../game/types.ts";
 import { tileLabel } from "../game/data.ts";
 import { TILE_GUIDE } from "../game/tile-guide.ts";
 import { TileArt } from "./TileArt.tsx";
+import { isRestoringFocus } from "./focus.ts";
 export function useTileTooltip() {
   const [hover, setHover] = useState<{
       tile: Tile;
@@ -12,13 +13,17 @@ export function useTileTooltip() {
       context?: string;
     } | null>(null),
     id = useId();
-  const show = (tile: Tile, element: HTMLElement, context?: string) =>
+  const show = (tile: Tile, element: HTMLElement, context?: string) => {
+    if (isRestoringFocus()) return;
+    const dialog = document.querySelector('[role="dialog"][aria-modal="true"]');
+    if (dialog && !dialog.contains(element)) return;
     setHover({
       tile,
       box: element.getBoundingClientRect(),
       market: element.closest(".pb-market")?.getBoundingClientRect(),
       context,
     });
+  };
   const hide = () => setHover(null);
   useEffect(() => {
     if (!hover) return;

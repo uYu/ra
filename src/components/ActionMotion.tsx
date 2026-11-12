@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { Box, Motion, Journey } from "../game/motion.ts";
-import { journeys } from "../game/motion.ts";
+import { journeys, MOTION_TIMING } from "../game/motion.ts";
 export type { Motion } from "../game/motion.ts";
 import { auctionNotice, describeMove } from "../game/presentation.ts";
 import { TileArt } from "./TileArt.tsx";
@@ -105,7 +105,11 @@ export function ActionMotion({
             { transform: reveal, opacity: 1, offset: 0.65 },
             { transform: `translate(${x}px,${y}px) scale(.2)`, opacity: 0 },
           ],
-          { duration: reduced ? 1 : 1400, easing: "ease-in-out", fill: "both" },
+          {
+            duration: reduced ? 1 : MOTION_TIMING.ra,
+            easing: "ease-in-out",
+            fill: "both",
+          },
         );
       }
       if (motion.action.type === "draw" && f.trip.tile) {
@@ -122,9 +126,18 @@ export function ActionMotion({
               opacity: 1,
               offset: 0.2,
             },
+            {
+              transform: `translate(${x}px,${y}px) scale(1)`,
+              opacity: 1,
+              offset: 0.85,
+            },
             { transform: `translate(${x}px,${y}px) scale(1)`, opacity: 1 },
           ],
-          { duration: reduced ? 1 : 760, easing: "ease-in-out", fill: "both" },
+          {
+            duration: reduced ? 1 : MOTION_TIMING.draw,
+            easing: "ease-in-out",
+            fill: "both",
+          },
         );
       }
       return node.animate(
@@ -146,7 +159,11 @@ export function ActionMotion({
           },
         ],
         {
-          duration: reduced ? 1 : f.trip.tile ? 980 : 760,
+          duration: reduced
+            ? 1
+            : f.trip.tile
+              ? MOTION_TIMING.tile
+              : MOTION_TIMING.sun,
           delay: reduced ? 0 : f.trip.delay,
           easing: "cubic-bezier(.25,.6,.3,1)",
           fill: "both",
@@ -158,8 +175,8 @@ export function ActionMotion({
       const back = root.current.querySelector<HTMLElement>(".draw-back");
       if (front && back) {
         const timing = {
-          duration: reduced ? 1 : 160,
-          delay: reduced ? 0 : 140,
+          duration: reduced ? 1 : MOTION_TIMING.reveal,
+          delay: reduced ? 0 : MOTION_TIMING.revealDelay,
           fill: "both" as const,
         };
         running.push(front.animate([{ opacity: 0 }, { opacity: 1 }], timing));
@@ -183,8 +200,8 @@ export function ActionMotion({
               { transform: "translate(0,0)" },
             ],
             {
-              duration: reduced ? 1 : 420,
-              delay: reduced ? 0 : 420,
+              duration: reduced ? 1 : MOTION_TIMING.boat,
+              delay: reduced ? 0 : MOTION_TIMING.boatDelay,
               easing: "ease-in-out",
               fill: "backwards",
             },

@@ -95,15 +95,17 @@ export function PlayerMat({
       >
         <div className="mat-category">
           <button
-            onMouseEnter={(e) =>
+            onPointerEnter={(e) =>
+              e.pointerType === "mouse" &&
               hints.show(
                 { id: -1, kind, variant: 0 },
                 e.currentTarget,
                 collectionProgress(p, kind),
               )
             }
-            onMouseLeave={hints.hide}
+            onPointerLeave={hints.hide}
             onFocus={(e) =>
+              e.currentTarget.matches(":focus-visible") &&
               hints.show(
                 { id: -1, kind, variant: 0 },
                 e.currentTarget,
@@ -143,15 +145,17 @@ export function PlayerMat({
                     key={variant}
                     data-motion={`owned-${player}-${kind}-${variant}`}
                     className={`mat-piece ${g.count ? "collected" : "uncollected"} ${newly ? "new-owned-tile" : ""}`}
-                    onMouseEnter={(e) =>
+                    onPointerEnter={(e) =>
+                      e.pointerType === "mouse" &&
                       hints.show(
                         tile,
                         e.currentTarget,
                         `${LABEL[kind]} · ${tileName(tile)} · 持有 ${g.count} 块；${collectionProgress(p, kind)}`,
                       )
                     }
-                    onMouseLeave={hints.hide}
+                    onPointerLeave={hints.hide}
                     onFocus={(e) =>
+                      e.currentTarget.matches(":focus-visible") &&
                       hints.show(
                         tile,
                         e.currentTarget,

@@ -73,9 +73,11 @@ export function PublicBoard({
                     )}
                   </span>
                   <span>
-                    {notice.kind === "ra"
-                      ? notice.title
-                      : `${state.players[notice.actor].name}发起拍卖`}
+                    {state.auction
+                      ? `${state.players[state.auction.caller].name}发起的拍卖`
+                      : notice.kind === "ra"
+                        ? notice.title
+                        : `${state.players[notice.actor].name}发起拍卖`}
                   </span>
                 </>
               ) : (

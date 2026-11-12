@@ -742,6 +742,12 @@ function App() {
                       </div>
                       <div className="action-copy">
                         <h2>{title}</h2>
+                        {viewed.auction && (
+                          <p className="auction-owner-copy">
+                            拍卖发起：
+                            {viewed.players[viewed.auction.caller].name}
+                          </p>
+                        )}
                         {active &&
                           viewed.phase === "auction" &&
                           mustBid(viewed) && (
@@ -1066,28 +1072,38 @@ function App() {
                       <button
                         key={i}
                         data-motion={`player-${i}`}
-                        className={`player-summary ${viewed.current === i ? "current" : ""} ${inspect === i ? "inspected" : ""} ${(latestMove?.winner ?? latestMove?.actor) === i ? "just-acted" : ""} ${viewed.auction?.caller === i ? "is-auction-caller" : ""}`}
+                        className={`player-summary ${viewed.current === i && !["epoch", "over"].includes(viewed.phase) ? "current" : ""} ${inspect === i ? "inspected" : ""} ${(latestMove?.winner ?? latestMove?.actor) === i ? "just-acted" : ""} ${viewed.auction?.caller === i ? "is-auction-caller" : ""}`}
+                        aria-current={
+                          viewed.current === i &&
+                          !["epoch", "over"].includes(viewed.phase)
+                            ? "true"
+                            : undefined
+                        }
                         onClick={() => viewPlayer(i)}
                       >
                         <span className="mobile-player-status">
-                          {viewed.current === i && (
-                            <span
-                              role="img"
-                              aria-label="当前行动"
-                              title="当前行动"
-                            >
-                              <ArrowRight size={10} />
-                            </span>
-                          )}
-                          {inspect === i && (
-                            <span
-                              role="img"
-                              aria-label="正在查看棋盘"
-                              title="正在查看棋盘"
-                            >
-                              <Eye size={10} />
-                            </span>
-                          )}
+                          {viewed.current === i &&
+                            !["epoch", "over"].includes(viewed.phase) && (
+                              <span
+                                className="player-turn-badge"
+                                role="img"
+                                aria-label="当前行动"
+                                title="当前行动"
+                              >
+                                <ArrowRight size={12} />
+                                <b>
+                                  {viewed.phase === "auction"
+                                    ? motion
+                                      ? "待出价"
+                                      : "出价中"
+                                    : motion
+                                      ? "待行动"
+                                      : viewed.phase === "disaster"
+                                        ? "弃牌中"
+                                        : "行动中"}
+                                </b>
+                              </span>
+                            )}
                         </span>
                         <AuctionCallerBadge state={viewed} player={i} />
                         <span className={`avatar avatar-${i}`}>
@@ -1095,7 +1111,19 @@ function App() {
                         </span>
                         <div className="player-meta">
                           <b>
-                            {p.name} <small>{p.human ? "玩家" : "AI"}</small>
+                            <span className="player-name" title={p.name}>
+                              {p.name}
+                            </span>
+                            {inspect === i && (
+                              <small
+                                className="player-view-tag"
+                                aria-label="正在查看棋盘"
+                                title="正在查看此玩家的棋盘"
+                              >
+                                <Eye size={11} /> 查看
+                              </small>
+                            )}
+                            <small>{p.human ? "玩家" : "AI"}</small>
                             {unreadAcquisitions[i] && (
                               <small className="unread-acquisition">
                                 新收获
