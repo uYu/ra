@@ -5,6 +5,7 @@ import { COLOR, isDisaster, LABEL, tileName, tileLabel } from "../game/data.ts";
 import { TILE_GUIDE } from "../game/tile-guide.ts";
 import { useTileTooltip } from "./TileTooltip.tsx";
 import { TileArt } from "./TileArt.tsx";
+import { TileBackArt } from "./TokenIllustration.tsx";
 export const TileInfoContext = createContext<(tile: TileType) => void>(
   () => {},
 );
@@ -14,12 +15,14 @@ export function Tile({
   onClick,
   disabled = false,
   small = false,
+  drawing = false,
 }: {
   tile: TileType;
   selected?: boolean;
   onClick?: () => void;
   disabled?: boolean;
   small?: boolean;
+  drawing?: boolean;
 }) {
   const hints = useTileTooltip();
   const inspect = useContext(TileInfoContext),
@@ -93,6 +96,11 @@ export function Tile({
         <span className="tile-secondary">{guide.secondary}</span>
         <span className="tile-mark">{guide.timing}</span>
       </button>
+      {drawing && (
+        <span className="pb-draw-back">
+          <TileBackArt />
+        </span>
+      )}
       {!small && (
         <button
           className="tile-help"

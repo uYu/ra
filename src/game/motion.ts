@@ -11,20 +11,19 @@ export type Motion = {
 export type Journey = {
   from: string;
   to: string;
-  via?: string;
   tile?: Tile;
   sun?: number;
   delay: number;
 };
 export const MOTION_TIMING = {
-  draw: 1350,
-  ra: 2400,
-  tile: 1450,
-  sun: 1100,
-  reveal: 260,
-  revealDelay: 180,
-  boat: 650,
-  boatDelay: 720,
+  draw: 2600,
+  ra: 2600,
+  tile: 1900,
+  sun: 1500,
+  reveal: 400,
+  revealDelay: 260,
+  boat: 850,
+  boatDelay: 600,
 } as const;
 export function journeys(
   m: Pick<Motion, "before" | "after" | "action">,
@@ -39,7 +38,6 @@ export function journeys(
     out.push({
       from: "bag",
       to: t.kind === "ra" ? "discard" : `tile-${t.id}`,
-      ...(t.kind === "ra" ? { via: "ra-reveal" } : {}),
       tile: t,
       delay: 0,
     });
@@ -87,7 +85,5 @@ export function journeys(
     move.tiles.forEach((t, i) =>
       out.push({ from: owned(t), to: "discard", tile: t, delay: i * 90 }),
     );
-  if (action.type === "invoke")
-    out.push({ from: `player-${who}`, to: "auction-notice", sun: 0, delay: 0 });
   return out;
 }

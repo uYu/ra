@@ -109,7 +109,6 @@ export function PublicBoard({
             ))}
           </div>
         </header>
-        <span className="pb-ra-reveal-anchor" data-motion="ra-reveal" />
         <div
           className="pb-track"
           data-motion="ra"
@@ -180,6 +179,7 @@ export function PublicBoard({
                 >
                   <Tile
                     tile={t}
+                    drawing={isNew && moving}
                     selected={selected.includes(t.id)}
                     onClick={
                       exchangeIds.has(t.id) ? () => onSelect(t.id) : undefined

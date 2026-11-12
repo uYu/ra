@@ -4,7 +4,7 @@ import { newGame, advance } from "../src/game/engine.ts";
 import { journeys } from "../src/game/motion.ts";
 const setup = () =>
   newGame({ count: 3, humans: 3, difficulty: "normal", seed: 100 });
-test("draw travels from bag to the revealed tile, or to Ra track", () => {
+test("draw travels from bag to its market slot or directly to discard", () => {
   const before = setup(),
     action = { type: "draw" } as const,
     after = advance(before, action),
@@ -29,7 +29,9 @@ test("a Ra draw reveals and discards a single continuous card", () => {
     [["bag", "discard"]],
   );
   assert.equal(out[0].tile?.kind, "ra");
-  assert.equal(out[0].via, "ra-reveal");
+  assert.ok(
+    out.every((trip) => trip.from !== "ra-reveal" && trip.to !== "ra-reveal"),
+  );
   assert.equal(
     after.market.some((tile) => tile.id === out[0].tile!.id),
     false,
@@ -59,14 +61,13 @@ test("every ordinary tile kind draws from the pile into its own market slot", ()
     assert.equal(out.length, 1, kind);
     assert.equal(out[0].from, "bag", kind);
     assert.equal(out[0].to, `tile-${after.lastTile!.id}`, kind);
-    assert.equal(out[0].via, undefined, kind);
     assert.ok(
       after.market.some((tile) => tile.id === out[0].tile!.id),
       kind,
     );
   }
 });
-test("the Ra card keeps its reveal path when it ends the epoch", () => {
+test("the last Ra goes directly to discard before epoch scoring", () => {
   const before = setup();
   before.ra = 7;
   const index = before.bag.findIndex((tile) => tile.kind === "ra");
@@ -76,8 +77,13 @@ test("the Ra card keeps its reveal path when it ends the epoch", () => {
   assert.equal(after.phase, "epoch");
   const out = journeys({ before, action, after });
   assert.equal(out.length, 1);
-  assert.equal(out[0].via, "ra-reveal");
   assert.equal(out[0].to, "discard");
+});
+test("invoking an auction does not invent a flying tile or disk", () => {
+  const before = setup();
+  const action = { type: "invoke" } as const;
+  const after = advance(before, action);
+  assert.deepEqual(journeys({ before, action, after }), []);
 });
 test("bid uses acting player disk and targets that player quotation", () => {
   let before = setup();

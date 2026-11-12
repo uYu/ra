@@ -14,23 +14,6 @@
   padding: 12px 16px 10px;
   border-bottom: 5px solid #a15b43;
 }
-.pb-ra-reveal-anchor {
-  position: absolute;
-  top: 8px;
-  left: 54%;
-  width: 70px;
-  height: 62px;
-  transform: translateX(-50%);
-  pointer-events: none;
-  visibility: hidden;
-}
-@media (max-width: 767px),
-  (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
-  .pb-ra-reveal-anchor {
-    top: calc(100% + 22px);
-    left: 50%;
-  }
-}
 .pb-heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -481,11 +464,33 @@
 .pb-slot.is-drawing > .pb-new-tag {
   visibility: hidden;
 }
+.pb-slot.is-drawing .tile-help {
+  visibility: hidden;
+}
+.pb-draw-back {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border: 1px solid #d9b676;
+  border-radius: 7px;
+  background: #174f5e;
+  pointer-events: none;
+}
+.pb-draw-back .tile-back-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .pb-slot.is-drawing {
   border-radius: 6px;
   outline: 1px dashed #bc8d46;
   outline-offset: -1px;
   background: #fff4d433;
+}
+.pb-slot.is-drawing > .tile-wrap {
+  z-index: 6;
+  pointer-events: none;
+  will-change: transform;
 }
 .pb-draw-pile.drawing {
   filter: drop-shadow(0 0 3px #e5b959);

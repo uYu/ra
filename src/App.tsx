@@ -1,4 +1,5 @@
 import { SunDiskArt } from "./components/TokenIllustration.tsx";
+import { AuctionIntroduction } from "./components/AuctionIntroduction.tsx";
 import type { Tile as TileType } from "./game/types.ts";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -111,6 +112,7 @@ function App() {
   const [mobileView, setMobileView] = useState<"board" | "collection">("board");
   const [tileInfo, setTileInfo] = useState<TileType | null>(null);
   const [motion, setMotion] = useState<Motion | null>(null);
+  const [auctionIntro, setAuctionIntro] = useState(false);
   const [moveInfo, setMoveInfo] = useState<Move | null>(null);
   const [acquisitions, setAcquisitions] = useState<Record<number, Move>>({});
   const [stepMode, setStepMode] = useState(false),
@@ -159,9 +161,13 @@ function App() {
     !paused &&
     !modal &&
     !aiError &&
+    !auctionIntro &&
     !motion;
   useEffect(() => {
-    if (screen !== "game") setMotion(null);
+    if (screen !== "game") {
+      setMotion(null);
+      setAuctionIntro(false);
+    }
   }, [screen]);
   const latestMove = moves.at(-1);
   const unreadAcquisitions = screen === "game" ? acquisitions : {};
@@ -218,6 +224,7 @@ function App() {
     if (!game || !save || motion) return;
     try {
       const next = advance(game, action);
+      if (next.auction && !game.auction) setAuctionIntro(true);
       if (action.type === "god")
         finishGodFor.current = endAfterExchange ? game.current : null;
       const move = describeMove(game, action, next);
@@ -290,6 +297,7 @@ function App() {
       modal ||
       waiting ||
       motion ||
+      auctionIntro ||
       aiError
     )
       return;
@@ -337,6 +345,7 @@ function App() {
     waiting,
     stepMode,
     motion,
+    auctionIntro,
   ]);
   useEffect(() => {
     if (screen !== "replay" || !replayPlaying || !save || modal) return;
@@ -356,6 +365,7 @@ function App() {
     };
     setWaiting(false);
     setGame(newGame(config));
+    setAuctionIntro(false);
     setSave(createSave(config));
     setScreen("game");
     setMobileView("board");
@@ -377,6 +387,7 @@ function App() {
       setWaiting(false);
       setSave(loadedSave);
       setGame(state);
+      setAuctionIntro(false);
       setScreen("game");
       setMobileView("board");
       setModal(null);
@@ -430,17 +441,19 @@ function App() {
     viewed?.players[Math.min(inspect, viewed.players.length - 1)];
   const estimate = viewed ? scoreEpoch(viewed) : [];
   const title =
-    viewed?.phase === "auction"
-      ? `${humanName}的出价回合`
-      : viewed?.phase === "disaster"
-        ? `${humanName}需要处理${LABEL[viewed.pending[0].kind]}`
-        : viewed?.phase === "god" || godMode
-          ? `${humanName}正在使用神祇`
-          : viewed?.phase === "epoch"
-            ? "这个纪元，已成为历史"
-            : viewed?.phase === "over"
-              ? "诸王的故事，写入永恒"
-              : `${humanName}的回合`;
+    auctionIntro && viewed?.auction
+      ? "拍卖即将开始"
+      : viewed?.phase === "auction"
+        ? `${humanName}的出价回合`
+        : viewed?.phase === "disaster"
+          ? `${humanName}需要处理${LABEL[viewed.pending[0].kind]}`
+          : viewed?.phase === "god" || godMode
+            ? `${humanName}正在使用神祇`
+            : viewed?.phase === "epoch"
+              ? "这个纪元，已成为历史"
+              : viewed?.phase === "over"
+                ? "诸王的故事，写入永恒"
+                : `${humanName}的回合`;
   const status =
     viewed?.phase === "auction"
       ? `当前最高 ${viewed.auction!.high || "尚无出价"} · 每人仅一次机会`
@@ -1093,7 +1106,7 @@ function App() {
                                 <ArrowRight size={12} />
                                 <b>
                                   {viewed.phase === "auction"
-                                    ? motion
+                                    ? motion || auctionIntro
                                       ? "待出价"
                                       : "出价中"
                                     : motion
@@ -1234,6 +1247,26 @@ function App() {
           onDone={() => setMotion(null)}
         />
       )}
+      {auctionIntro &&
+        !motion &&
+        !modal &&
+        screen === "game" &&
+        viewed?.auction && (
+          <AuctionIntroduction
+            state={viewed}
+            onContinue={() => {
+              setAuctionIntro(false);
+              setWaiting(false);
+              requestAnimationFrame(() =>
+                document
+                  .querySelector<HTMLButtonElement>(
+                    ".sun-choices .disk:not(:disabled)",
+                  )
+                  ?.focus({ preventScroll: true }),
+              );
+            }}
+          />
+        )}
       {modal === "move" && moveInfo && (
         <Dialog title={moveInfo.title} onClose={() => setModal(null)}>
           <p className="move-detail-text">{moveInfo.detail}</p>
