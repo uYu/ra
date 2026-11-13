@@ -1,56 +1,36 @@
-import { useLayoutEffect, useRef, useState } from "react";
-import type { State } from "../game/types.ts";
+import { useState } from "react";
+import type { Kind, State } from "../game/types.ts";
 import { explainScore, signedScore } from "../game/scoring-presentation.ts";
-import { PlayerMat } from "./PlayerMat.tsx";
-import { Crown } from "lucide-react";
+import { Crown, ChevronDown, Eye } from "lucide-react";
 import { ranking } from "../game/engine.ts";
+import { LABEL } from "../game/data.ts";
+import { TileArt } from "./TileArt.tsx";
+import { Sun } from "./Art.tsx";
 import "./ScoreBoard.css";
 
+const ITEMS = [
+  "monument",
+  "pharaoh",
+  "nile",
+  "flood",
+  "god",
+  "gold",
+  "civilization",
+  "sun",
+] as const;
+type Item = (typeof ITEMS)[number];
 export function ScoreBoard({
   state,
   player,
   onPlayer,
+  onBoard,
 }: {
   state: State;
   player: number;
   onPlayer: (player: number) => void;
+  onBoard: (kind?: Kind) => void;
 }) {
-  const [reading, setReading] = useState(
-    () => window.matchMedia("(max-width: 650px)").matches,
-  );
-  const viewportRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [fit, setFit] = useState({ scale: 1, left: 0 });
-
-  useLayoutEffect(() => {
-    const viewport = viewportRef.current!;
-    const content = contentRef.current!;
-    const measure = () => {
-      const scale = Math.min(
-        1,
-        viewport.clientWidth / Math.max(1, content.offsetWidth),
-        (viewport.clientHeight - 1) / Math.max(1, content.offsetHeight),
-      );
-      setFit({
-        scale,
-        left: Math.max(
-          0,
-          (viewport.clientWidth - content.offsetWidth * scale) / 2,
-        ),
-      });
-    };
-    const observer = new ResizeObserver(measure);
-    observer.observe(viewport);
-    observer.observe(content);
-    measure();
-    return () => observer.disconnect();
-  }, []);
-
-  useLayoutEffect(() => {
-    viewportRef.current!.scrollTop = 0;
-    viewportRef.current!.scrollLeft = 0;
-  }, [player, reading]);
-
+  const [expanded, setExpanded] = useState<Item | null>(null);
   const rows = state.history.at(-1)!;
   const row = rows[player];
   const showTotal = (i: number) =>
@@ -62,11 +42,32 @@ export function ScoreBoard({
     state.config.humans === 1
       ? standings.findIndex((entry) => state.players[entry.player].human) + 1
       : 0;
+  const detail = explainScore(state, player);
+  const p = state.players[player];
+  const count = (kind: Kind) => p.tiles.filter((t) => t.kind === kind).length;
+  const kinds = (kind: Kind) =>
+    new Set(p.tiles.filter((t) => t.kind === kind).map((t) => t.variant)).size;
+  const reason = (item: Item) =>
+    item === "sun" ? detail.sun : detail.groups[item]!;
+  const caption = (item: Item) => {
+    if (item === "monument") return `${count(item)} 块 · ${kinds(item)} 种`;
+    if (item === "civilization") return `${count(item)} 块 · ${kinds(item)} 种`;
+    if (item === "sun")
+      return final
+        ? `圆盘总和 ${[...p.suns, ...p.used].reduce((a, b) => a + b, 0)}`
+        : `${p.suns.length + p.used.length} 枚 · 第三纪元计分`;
+    if (item === "nile")
+      return `${count(item)} 块 · ${count("flood") ? "洪水已激活" : "没有洪水"}`;
+    if (item === "pharaoh") {
+      const all = state.players.map(
+        (q) => q.tiles.filter((t) => t.kind === "pharaoh").length,
+      );
+      return `${count(item)} 块 · ${Math.min(...all) === Math.max(...all) ? "全场持平" : count(item) === Math.max(...all) ? "全场最多" : count(item) === Math.min(...all) ? "全场最少" : "数量居中"}`;
+    }
+    return `${count(item)} 块 × ${item === "gold" ? 3 : item === "god" ? 2 : 1} 分`;
+  };
   return (
-    <section
-      className="score-settlement table-fit"
-      aria-label="结合玩家版图的结算"
-    >
+    <section className="score-settlement" aria-label="各项计分总览">
       {final ? (
         <nav
           className="final-ranking"
@@ -141,61 +142,80 @@ export function ScoreBoard({
           ))}
         </nav>
       )}
-      <div className="score-board-toolbar">
-        <p className="score-board-guide">
-          点击上方玩家切换版图，点击牌面查看规则。
-          {reading
-            ? "向下滚动查看各类拍品与计分。"
-            : "已按窗口大小展示整张版图。"}
-        </p>
-        <div
-          className="score-view-modes"
-          role="group"
-          aria-label="版图显示方式"
-        >
-          <button aria-pressed={!reading} onClick={() => setReading(false)}>
-            完整总览
+      <div className="settlement-heading">
+        <h3>{row.name}的计分</h3>
+        <button className="secondary" onClick={() => onBoard()}>
+          <Eye size={16} /> 查看玩家板
+        </button>
+      </div>
+      <div className="score-items">
+        {ITEMS.map((item) => {
+          const score = reason(item);
+          return (
+            <button
+              key={item}
+              data-score-kind={item}
+              aria-expanded={expanded === item}
+              className={`score-item ${score.points !== null && score.points < 0 ? "is-negative" : ""} ${expanded === item ? "is-expanded" : ""}`}
+              onClick={() => setExpanded(expanded === item ? null : item)}
+            >
+              <span className="score-item-art">
+                {item === "sun" ? (
+                  <Sun />
+                ) : (
+                  <TileArt kind={item} variant={item === "monument" ? 2 : 0} />
+                )}
+              </span>
+              <b>{item === "sun" ? "太阳圆盘" : LABEL[item]}</b>
+              <strong>
+                {score.points === null ? (
+                  <small>待终局</small>
+                ) : (
+                  <>
+                    {signedScore(score.points)}
+                    <small>分</small>
+                  </>
+                )}
+              </strong>
+              <span className="score-item-caption">{caption(item)}</span>
+            </button>
+          );
+        })}
+      </div>
+      {expanded && (
+        <div className="score-item-reason" role="status">
+          <b>
+            {expanded === "sun" ? "太阳圆盘" : LABEL[expanded]} ·{" "}
+            {reason(expanded).points === null
+              ? "第三纪元计分"
+              : `${signedScore(reason(expanded).points!)} 分`}
+          </b>
+          <p>{reason(expanded).reason}</p>
+          <button
+            onClick={() => onBoard(expanded === "sun" ? undefined : expanded)}
+          >
+            查看对应牌面 <Eye size={14} />
           </button>
-          <button aria-pressed={reading} onClick={() => setReading(true)}>
-            放大阅读
+          <button
+            className="score-reason-close"
+            onClick={() => setExpanded(null)}
+            aria-label="收起计算说明"
+          >
+            <ChevronDown size={16} />
           </button>
         </div>
-      </div>
-      <div
-        ref={viewportRef}
-        className={`score-mat-viewport ${reading ? "is-reading" : ""}`}
-        tabIndex={reading ? 0 : undefined}
-        role="region"
-        aria-label="玩家计分版图"
-      >
-        <div
-          ref={contentRef}
-          className="score-mat-content"
-          style={
-            reading
-              ? undefined
-              : { transform: `scale(${fit.scale})`, left: fit.left }
-          }
-        >
-          <PlayerMat
-            state={state}
-            player={player}
-            onPlayer={onPlayer}
-            scoring={explainScore(state, player)}
-          />
-        </div>
-      </div>
+      )}
       <div className="score-total" role="status">
         <span>{row.name} · 本纪元合计</span>
         <strong className={row.delta < 0 ? "negative" : ""}>
           {signedScore(row.delta)} 分
         </strong>
+        <b>{showTotal(player) ? `累计 ${row.total} 分` : "累计分数隐藏"}</b>
         {showTotal(player) && (
-          <span>
+          <small>
             此前 {previous} 分 {row.delta < 0 ? "−" : "+"} {Math.abs(row.delta)}{" "}
-            分 → 累计 <b>{row.total} 分</b>
-            {previous + row.delta < 0 && "（总分最低为 0）"}
-          </span>
+            分{previous + row.delta < 0 && "（总分最低为 0）"}
+          </small>
         )}
       </div>
     </section>

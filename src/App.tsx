@@ -1,7 +1,8 @@
 import { SunDiskArt } from "./components/TokenIllustration.tsx";
 import { AuctionIntroduction } from "./components/AuctionIntroduction.tsx";
+import { BoardInspector } from "./components/BoardInspector.tsx";
 import { AuctionReceiptDialog } from "./components/AuctionReceiptDialog.tsx";
-import type { Tile as TileType } from "./game/types.ts";
+import type { Kind, Tile as TileType } from "./game/types.ts";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -110,11 +111,13 @@ function App() {
     );
   const [screen, setScreen] = useState<"menu" | "game" | "replay">("menu"),
     [modal, setModal] = useState<
-      "rules" | "settings" | "log" | "new" | "tile" | "move" | null
+      "rules" | "settings" | "log" | "new" | "tile" | "move" | "board" | null
     >(null),
     [paused, setPaused] = useState(false),
     [error, setError] = useState(loaded.error);
   const [mobileView, setMobileView] = useState<"board" | "collection">("board");
+  const [boardFocus, setBoardFocus] = useState<Kind | null>(null);
+  const tileReturn = useRef<"board" | null>(null);
   const [tileInfo, setTileInfo] = useState<TileType | null>(null);
   const [motion, setMotion] = useState<Motion | null>(null);
   const [auctionIntro, setAuctionIntro] = useState(false);
@@ -518,6 +521,7 @@ function App() {
   return (
     <TileInfoContext.Provider
       value={(tile) => {
+        tileReturn.current = modal === "board" ? "board" : null;
         setTileInfo(tile);
         setModal("tile");
       }}
@@ -749,6 +753,7 @@ function App() {
                       state={viewed}
                       player={inspect}
                       latest={latestMove}
+                      onPlayer={viewPlayer}
                       compact={{
                         heading:
                           viewed.config.humans === 1 && inspect === 0
@@ -756,7 +761,8 @@ function App() {
                             : `${inspecting!.name}的棋盘`,
                         onDetails: () => {
                           if (screen === "game") setPaused(true);
-                          setMobileView("collection");
+                          setBoardFocus(null);
+                          setModal("board");
                         },
                       }}
                     />
@@ -1116,6 +1122,8 @@ function App() {
                             ? "true"
                             : undefined
                         }
+                        aria-pressed={inspect === i}
+                        aria-label={`查看${p.name}的棋盘${inspect === i ? "，当前正在查看" : ""}`}
                         onClick={() => viewPlayer(i)}
                       >
                         <span className="mobile-player-status">
@@ -1157,7 +1165,7 @@ function App() {
                                 aria-label="正在查看棋盘"
                                 title="正在查看此玩家的棋盘"
                               >
-                                <Eye size={11} /> 查看
+                                <Eye size={11} /> 查看中
                               </small>
                             )}
                             <small>{p.human ? "玩家" : "AI"}</small>
@@ -1302,12 +1310,20 @@ function App() {
           onViewWinner={() => {
             viewPlayer(receipt.winner);
             setPaused(true);
-            if (["epoch", "over"].includes(viewed.phase))
-              setResultDismissed(resultKey);
-            setMobileView("collection");
+            setBoardFocus(null);
+            setModal("board");
             setReceipt(null);
             setWaiting(false);
           }}
+        />
+      )}
+      {modal === "board" && viewed && (
+        <BoardInspector
+          state={viewed}
+          player={inspect}
+          focus={boardFocus}
+          onPlayer={viewPlayer}
+          onClose={() => setModal(null)}
         />
       )}
       {modal === "move" && moveInfo && (
@@ -1327,7 +1343,10 @@ function App() {
         </Dialog>
       )}
       {modal === "tile" && tileInfo && (
-        <Dialog title="牌的功能与计分" onClose={() => setModal(null)}>
+        <Dialog
+          title="牌的功能与计分"
+          onClose={() => setModal(tileReturn.current)}
+        >
           <TileDetails tile={tileInfo} state={viewed} player={inspect} />
         </Dialog>
       )}
@@ -1530,7 +1549,15 @@ function App() {
                 <p>太阳落下，文明留下了自己的印记。</p>
               )}
             </div>
-            <ScoreBoard state={viewed} player={inspect} onPlayer={viewPlayer} />
+            <ScoreBoard
+              state={viewed}
+              player={inspect}
+              onPlayer={viewPlayer}
+              onBoard={(kind) => {
+                setBoardFocus(kind ?? null);
+                setModal("board");
+              }}
+            />
             <p className="muted">
               {viewed.phase === "over"
                 ? "三个纪元已结束。可以导出存档或回放这场王朝竞逐。"

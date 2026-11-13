@@ -1,0 +1,110 @@
+.board-owner-band {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 7px 10px;
+  border: 1px solid #648e87;
+  border-left: 5px solid #246c73;
+  border-radius: 7px 7px 0 0;
+  background: linear-gradient(110deg, #1f6570, #164b59);
+  color: #fff3d1;
+}
+.board-owner-band.is-other {
+  border-color: #be8748;
+  border-left-color: #9d4927;
+  background: linear-gradient(110deg, #ffe3a5, #f7ce86);
+  color: #6c341e;
+}
+.board-owner-band > svg {
+  flex: none;
+}
+.board-owner-copy {
+  min-width: 0;
+  flex: 1;
+}
+.board-owner-copy > span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+}
+.board-owner-copy > strong {
+  display: block;
+  font-size: 17px;
+  line-height: 23px;
+  overflow-wrap: anywhere;
+}
+.board-owner-band .board-owner-return {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  gap: 5px;
+  min-height: 36px;
+  padding: 7px 9px;
+  border: 1px solid #9b5b2f;
+  border-radius: 5px;
+  background: #fff8e9;
+  color: #713d23;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.board-owner-band .board-owner-return:hover {
+  background: #fffdf5;
+}
+.board-owner-band .board-owner-return:focus-visible {
+  outline: 3px solid #267082;
+  outline-offset: 2px;
+}
+.game-shell .player-mat:has(> .board-owner-band) > header {
+  position: static;
+}
+.game-shell .player-mat:has(> .board-owner-band) > header:empty {
+  display: none;
+}
+.board-inspector > .board-owner-band {
+  border-radius: 7px;
+}
+@media (max-width: 767px),
+  (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+  .game-shell .table-fit .mobile-player-board {
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .board-owner-band {
+    min-height: 42px;
+    padding: 5px 7px;
+    gap: 7px;
+  }
+  .board-owner-band > svg {
+    width: 17px;
+    height: 17px;
+  }
+  .board-owner-copy > span {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .board-owner-copy > strong {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .board-owner-band .board-owner-return {
+    min-height: 34px;
+    padding: 5px 7px;
+    gap: 3px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+  .game-shell .table-main > .mobile-player-board {
+    height: calc(clamp(80px, 25dvh, 108px) + 44px);
+  }
+}

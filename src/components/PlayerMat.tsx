@@ -1,8 +1,9 @@
 import "./PlayerMatDetails.css";
+import { BoardOwnership } from "./BoardOwnership.tsx";
 import { SunDiskArt } from "./TokenIllustration.tsx";
 import type { Move } from "../game/presentation.ts";
 import { type ReactNode, useContext, useEffect, useState } from "react";
-import { ChevronLeft, Eye, Maximize2 } from "lucide-react";
+import { ChevronLeft, Maximize2 } from "lucide-react";
 import type { Kind, State } from "../game/types.ts";
 import { LABEL, tileName } from "../game/data.ts";
 import { collectionProgress } from "../game/tile-guide.ts";
@@ -34,6 +35,7 @@ export function PlayerMat({
   bidding,
   scoring,
   compact,
+  showOwnership = true,
 }: {
   state: State;
   player: number;
@@ -44,6 +46,7 @@ export function PlayerMat({
   unread?: Record<number, Move>;
   onHome?: () => void;
   scoring?: ScoreBreakdown;
+  showOwnership?: boolean;
   compact?: { heading: string; onDetails: () => void };
   bidding?: {
     enabled: boolean;
@@ -215,26 +218,16 @@ export function PlayerMat({
       aria-label={compact?.heading}
     >
       {hints.tooltip}
+      {showOwnership && (
+        <BoardOwnership
+          state={state}
+          player={player}
+          onPlayer={onPlayer}
+          onHome={onHome}
+        />
+      )}
       {!compact && (
         <header>
-          <div className="mat-heading">
-            <h2>
-              {onCollapse && (
-                <Eye className="mat-owner-icon" size={12} aria-hidden="true" />
-              )}
-              {`${p.name}的玩家板`}
-            </h2>
-            {otherBoard && (
-              <span className="mat-view-badge">
-                <Eye size={12} aria-hidden="true" /> 他人棋盘
-              </span>
-            )}
-            {onHome && (
-              <button className="back-to-own" onClick={onHome}>
-                返回我的棋盘
-              </button>
-            )}
-          </div>
           {onCollapse && (
             <button className="mat-collapse" onClick={onCollapse}>
               <ChevronLeft size={14} /> 收起详情

@@ -1,0 +1,303 @@
+.modal-backdrop:has(.board-inspector) {
+  padding: 8px;
+}
+.dialog.wide.board-inspector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(1120px, 100%);
+  height: calc(100dvh - 16px);
+  max-height: calc(100dvh - 16px);
+  padding: 14px;
+  overflow: hidden;
+  background: #fff4df;
+}
+.dialog.board-inspector > header {
+  flex: none;
+  margin: 0;
+  padding-bottom: 8px;
+}
+.dialog.board-inspector > header .eyebrow {
+  display: none;
+}
+.dialog.board-inspector > header h2 {
+  margin: 0;
+  font-size: 21px;
+}
+.inspection-players {
+  display: flex;
+  flex: none;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 2px;
+}
+.inspection-players > button {
+  flex: 1;
+  min-width: 76px;
+  padding: 7px;
+  border: 1px solid #ceac77;
+  border-radius: 5px;
+  background: #f6e4c0;
+  color: #28505a;
+  font-size: 12px;
+}
+.inspection-players > button[aria-pressed="true"] {
+  background: #1b5965;
+  color: #fff0c9;
+  border-color: #1b5965;
+}
+.inspection-surface {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.board-inspector .player-mat > header {
+  display: none;
+}
+.board-inspector .player-mat .mat-board {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 18px repeat(4, minmax(90px, auto)) auto;
+  gap: 5px 8px;
+  padding: 8px;
+  background: #f7e4bf;
+}
+.board-inspector .player-mat .mat-permanent,
+.board-inspector .player-mat .mat-temporary {
+  display: grid;
+  grid-row: 1 / span 5;
+  grid-template-rows: subgrid;
+  gap: 5px;
+}
+.board-inspector .player-mat .mat-permanent {
+  grid-column: 1;
+}
+.board-inspector .player-mat .mat-temporary {
+  grid-column: 2;
+}
+.board-inspector .player-mat .mat-side-label {
+  font-size: 11px;
+  line-height: 16px;
+}
+.board-inspector .player-mat .mat-group {
+  container-type: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 7px;
+  gap: 5px;
+  background: #fff3d2;
+  border-color: #c8a670;
+}
+.board-inspector .player-mat .mat-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.board-inspector .player-mat .mat-category button {
+  font-size: 13px;
+}
+.board-inspector .player-mat .mat-category > b {
+  font-size: 16px;
+}
+.board-inspector .player-mat .mat-group .mat-body {
+  height: auto;
+  min-height: 0;
+  width: 100%;
+}
+.board-inspector .player-mat .mat-group .mat-pieces {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 72px);
+  grid-template-rows: none;
+  gap: 5px;
+  justify-items: stretch;
+}
+.board-inspector .player-mat .mat-monument .mat-pieces {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.board-inspector .player-mat .mat-civilization .mat-pieces {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.board-inspector .player-mat .mat-pieces .mat-piece {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  padding: 3px;
+  gap: 3px;
+  justify-content: flex-start;
+}
+.board-inspector .player-mat .mat-pieces .mat-piece > .piece-picture {
+  width: 100%;
+  height: 48px;
+  flex: 0 0 48px;
+}
+.board-inspector .player-mat .mat-pieces .mat-piece .tile-art {
+  width: 100%;
+  height: 100%;
+}
+.board-inspector .player-mat .mat-pieces .mat-piece > .piece-label {
+  height: auto;
+  min-height: 15px;
+  line-height: 15px;
+  flex: 0 0 auto;
+  font-size: 11px;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+.board-inspector .player-mat .mat-center {
+  grid-column: 1/-1;
+  grid-row: 6;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 7px 14px;
+  padding: 9px;
+  align-items: center;
+  background: linear-gradient(125deg, #216575, #114b59);
+}
+.board-inspector .player-mat .mat-center > span {
+  font-size: 12px;
+}
+.board-inspector .player-mat .mat-suns {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: auto;
+  margin: 0;
+}
+.board-inspector .player-mat .mat-sun {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  max-width: 46px;
+  max-height: 46px;
+  border-width: 3px;
+}
+.board-inspector .player-mat .mat-sun > b {
+  font-size: 22px;
+}
+.board-inspector .player-mat .mat-sun > small {
+  font-size: 7px;
+  line-height: 9px;
+}
+.board-inspector .player-mat .mat-sun .sun-back {
+  width: 22px;
+  height: 22px;
+}
+.board-inspector .player-mat .mat-spent-hint {
+  grid-column: 1/-1;
+  text-align: left;
+  font-size: 10px;
+  line-height: 14px;
+}
+.board-inspector .player-mat .mat-spent-hint > br {
+  display: none;
+}
+.board-inspector .player-mat .mat-end-score {
+  display: none;
+}
+.inspection-footer {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #766247;
+  font-size: 11px;
+}
+.inspection-footer > button {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.board-inspector .inspection-surface[data-focus="monument"] .mat-monument,
+.board-inspector .inspection-surface[data-focus="pharaoh"] .mat-pharaoh,
+.board-inspector .inspection-surface[data-focus="nile"] .mat-nile,
+.board-inspector .inspection-surface[data-focus="flood"] .mat-flood,
+.board-inspector .inspection-surface[data-focus="god"] .mat-god,
+.board-inspector .inspection-surface[data-focus="gold"] .mat-gold,
+.board-inspector
+  .inspection-surface[data-focus="civilization"]
+  .mat-civilization {
+  outline: 2px solid #28717d;
+  outline-offset: -2px;
+  background: #f4ecc6;
+}
+@media (max-width: 650px) {
+  .dialog.wide.board-inspector {
+    padding: 10px;
+    gap: 8px;
+  }
+  .dialog.board-inspector > header h2 {
+    font-size: 18px;
+  }
+  .inspection-players > button {
+    min-width: 80px;
+    padding: 6px;
+    font-size: 11px;
+  }
+  .board-inspector .player-mat .mat-board {
+    grid-template-rows: 18px repeat(4, minmax(82px, auto)) auto;
+    padding: 5px;
+    gap: 4px;
+  }
+  .board-inspector .player-mat .mat-group {
+    padding: 5px;
+    gap: 4px;
+  }
+  .board-inspector .player-mat .mat-category button {
+    font-size: 12px;
+  }
+  .board-inspector .player-mat .mat-monument .mat-pieces {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .board-inspector .player-mat .mat-civilization .mat-pieces {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .board-inspector .player-mat .mat-pieces .mat-piece {
+    padding: 2px;
+    gap: 2px;
+  }
+  .board-inspector .player-mat .mat-pieces .mat-piece > .piece-picture {
+    height: clamp(24px, 4dvh, 34px);
+    flex-basis: clamp(24px, 4dvh, 34px);
+  }
+  .board-inspector .player-mat .mat-pieces .mat-piece > .piece-label {
+    font-size: 10px;
+    line-height: 14px;
+    min-height: 14px;
+  }
+  .board-inspector .player-mat .mat-center {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px;
+    gap: 5px;
+  }
+  .board-inspector .player-mat .mat-suns {
+    gap: 12px;
+  }
+  .board-inspector .player-mat .mat-sun {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .board-inspector .player-mat .mat-sun > b {
+    font-size: 20px;
+  }
+  .board-inspector .player-mat .mat-side-label {
+    font-size: 10px;
+    white-space: normal;
+  }
+  .board-inspector .player-mat .mat-spent-hint {
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
