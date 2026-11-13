@@ -126,7 +126,7 @@ export function PlayerMat({
           >
             {LABEL[kind]} <small>ⓘ</small>
           </button>
-          <b>{tiles.length}</b>
+          {kind !== "monument" && <b>{tiles.length}</b>}
         </div>
         <div className="mat-body">
           <div className="mat-rule">{RULE[kind]}</div>
